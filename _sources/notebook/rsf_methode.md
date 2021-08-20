@@ -212,7 +212,7 @@ On définit __l'admittance complexe__ comme l'inverse de l'impédance complexe:
 \begin{equation}
 \underline{Y} = \frac{1}{\underline{Z}} = \frac{\underline{i}}{\underline{u}} = \frac{\underline{i_m}}{\underline{u_m}}
 \end{equation}\end{defi}
-
+````
 
 __Ecriture complexe__  
 On peut écrire: $\underline{Z} = R + jX$ avec R et X réels. R est appelée la __résistance__ du dipôle et X la __réactance__.
@@ -222,7 +222,7 @@ On peut écrire: $\underline{Y} = G + jB$ où G et B sont des réels. G est appe
 On appelle impédance réelle $Z$ le module de $\underline{Z}$ et admittance réelle $Y$ le module de $\underline{Y}$.
 
 
-\begin{basic}{Interprétation de l'impédance complexe}{basic_interpretation_de_l_impedance_complexe_86}
+````{admonition} Fondamental : Interprétation de l'impédance complexe
 L'argument de l'impédance complexe définit le déphasage de la tension $u$ par rapport à l'intensité $i$.
 
 Le module de l'impédance complexe est le rapport des amplitudes réelles des deux grandeurs.
