@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travaux dirigés: Filtrage linéaire &#8212; Electrocinétique</title>
+    <title>Système linéaire &#8212; Electrocinétique</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,12 +51,11 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/td_filtrage.html" />
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/pont_wien.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Système linéaire" href="pont_wien.html" />
-    <link rel="prev" title="Mise en cascade des filtres" href="filtrage_cascade.html" />
+    <link rel="prev" title="Travaux dirigés: Filtrage linéaire" href="td_filtrage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -362,7 +361,7 @@
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
-    <a class="current reference internal" href="#">
+    <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
     <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
@@ -370,9 +369,9 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="pont_wien.html">
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        Système linéaire
       </a>
      </li>
@@ -419,14 +418,11 @@
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/notebook/td_filtrage.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+        
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebook/td_filtrage.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebook/pont_wien.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -449,7 +445,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/td_filtrage.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/pont_wien.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -466,34 +462,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etude-frequentielle">
-   Etude fréquentielle
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#integrateur-pur">
-   Intégrateur pur
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reponse-d-un-filtre-d-ordre-1">
-   Réponse d’un filtre d’ordre 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reponse-d-un-filtre-d-ordre-2">
-   Réponse d’un filtre d’ordre 2
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -502,132 +470,68 @@
         
               <div>
                 
-  <div class="section" id="travaux-diriges-filtrage-lineaire">
-<h1>Travaux dirigés: Filtrage linéaire<a class="headerlink" href="#travaux-diriges-filtrage-lineaire" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="etude-frequentielle">
-<h2>Etude fréquentielle<a class="headerlink" href="#etude-frequentielle" title="Permalink to this headline">¶</a></h2>
-<div class="attention admonition">
-<p class="admonition-title">Exercice</p>
-<p>Pour chaque filtre ci-dessous, déterminer rapidement son type puis par le calcul sa fonction de transfert. On introduira la pulsation propre et si nécessaire le facteur de qualité et l’on précisera les asymptotes haute et basse fréquence sur le diagramme de Bode.</p>
-<p>Pour les filtre d’ordre 1, on déterminera de plus la monotonie et la pulsation de coupure.</p>
-<p>Pour les filtres d’ordre 2 passe-haut et bas, on déterminera l’existence possible d’une résonance ainsi que la pulsation de résonance. On déterminera aussi les valeurs particulières de la phase.</p>
-<p>Pour les filtres passe-bande et coupe-bande, on déterminera la bande passante (ou la bande coupée) et on montrera que le produit des pulsations de coupure vaut la pulsation propre au carré.</p>
-<div class="figure align-center" id="fig-215">
-<img alt="../_images/td_elec_phaut_bas_1.png" src="../_images/td_elec_phaut_bas_1.png" />
-</div>
-<div class="figure align-center" id="fig-216">
-<img alt="../_images/td_elec_phaut_bas_2.png" src="../_images/td_elec_phaut_bas_2.png" />
-</div>
-<div class="figure align-center" id="fig-217">
-<img alt="../_images/Electronique_TD4_EX1_1.jpg" src="../_images/Electronique_TD4_EX1_1.jpg" />
-</div>
-<div class="figure align-center" id="fig-218">
-<img alt="../_images/Electronique_TD4_EX1_2.jpg" src="../_images/Electronique_TD4_EX1_2.jpg" />
-</div>
-</div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Eléments de réponse (sans justification)<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Dans l’ordre:</p>
-<ul class="simple">
-<li><p class="card-text">Passe-bas d’ordre 1. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span></p></li>
-<li><p class="card-text">Passe-haut d’ordre 1. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{RC}\)</span></p></li>
-<li><p class="card-text">Passe-bas d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span>.</p></li>
-<li><p class="card-text">Passe-haut d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span>.</p></li>
-<li><p class="card-text">Passe-bande d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = \frac{L_2}{L_1 + L_2}\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{(L_1 + L_2)C}}\)</span> et <span class="math notranslate nohighlight">\(Q = R\sqrt{\frac{C}{L_1 + L_2}}\)</span>.</p></li>
-<li><p class="card-text">Coupe-bande d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{RC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{4}\)</span>.</p></li>
-</ul>
-</div>
-</details></div>
-<div class="section" id="integrateur-pur">
-<h2>Intégrateur pur<a class="headerlink" href="#integrateur-pur" title="Permalink to this headline">¶</a></h2>
-<div class="attention admonition">
-<p class="admonition-title">Exercice</p>
-<p><strong>Cet exercice traite un montage que vous DEVEZ reconnaître et savoir étudier comme une question de cours.</strong></p>
+  <div class="section" id="systeme-lineaire">
+<h1>Système linéaire<a class="headerlink" href="#systeme-lineaire" title="Permalink to this headline">¶</a></h1>
+<p>Le but est de voir comment utiliser la méthode d’intégration d’Euler explicite pour étudier le régime transitoire d’un système d’équations. On a alors un système d’équations différentielles. On s’intéresse au pont de Wien en régime libre :</p>
+<p><img alt="Circuit de Wien" src="notebook/images/wien_circuit.png" /></p>
+<blockquote>
+<div><p><strong>Exercice :</strong></p>
 <ol class="simple">
-<li><p>Déterminer la relation entrée sortie du montage suivant en grandeur complexe puis la relation temporelle entrée-sortie. Justifier ainsi l’appelation du montage.</p></li>
-<li><p>Proposer une utilisation pratique de ce montage en sortie d’un capteur qu’on précisera. Quel problème ce montage risque-t-il de poser à basse fréquence ?</p></li>
-<li><p>Déterminer l’impédance d’entrée du montage.</p></li>
+<li><p>Montrer par le calcul que ce circuit est régit par le système d’équation suivant :</p></li>
 </ol>
-<div class="figure align-center" id="fig-219">
-<img alt="../_images/elec_integrateur.png" src="../_images/elec_integrateur.png" />
-</div>
-</div>
-</div>
-<div class="section" id="reponse-d-un-filtre-d-ordre-1">
-<h2>Réponse d’un filtre d’ordre 1<a class="headerlink" href="#reponse-d-un-filtre-d-ordre-1" title="Permalink to this headline">¶</a></h2>
-<div class="attention admonition">
-<p class="admonition-title">Exercice</p>
-<p>On considère le filtre ci-après. On prend <span class="math notranslate nohighlight">\(R=R_1=50 \rm{\Omega}\)</span> et <span class="math notranslate nohighlight">\(L = 10 \rm{mH}\)</span></p>
-<ol class="simple">
-<li><p>Déterminer le type de filtre puis la fonction de transfert.</p></li>
-<li><p>Donner une expression approchée (réfléchir au type de réponse approché le plus approprié) de <span class="math notranslate nohighlight">\(u_{S}(t)\)</span> pour:
-\begin{enumerate}1. un signal d’entrée sinusoïdal de fréquence 10kHz et d’amplitude 1V.</p></li>
-<li><p>un signal d’entrée sinusoïdal de fréquence 100Hz et d’amplitude 1V.</p></li>
-<li><p>un signal d’entrée créneau de période T=0,1ms.</p></li>
-<li><p>Représenter graphiquement <span class="math notranslate nohighlight">\(u_E(t)\)</span> et <span class="math notranslate nohighlight">\(u_S(t)\)</span> pour les trois signaux précédents et le comparer aux réponses exactes (on pourra utiliser une calculatrice graphique ou un simulateur). Commenter.</p></li>
-</ol>
-<div class="figure align-center" id="fig-220">
-<img alt="../_images/Electronique_TD4_EX3_1.jpg" src="../_images/Electronique_TD4_EX3_1.jpg" />
-</div>
-</div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Eléments de réponse (sans justification)<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Passe-bas d’orrdre 1 avec <span class="math notranslate nohighlight">\(H_0 = \frac{R_1}{R + R_1}\)</span> et <span class="math notranslate nohighlight">\(\omega_0 = \frac{R_1 + R}{L}\)</span>.</p>
-<p class="card-text">Dans l’ordre le premier signal de sortie est quasi-nul, le second non nul d’amplitude égale à l’entrée et en phase avec l’entrée et le troisième proche d’un sinusoïde.</p>
-<p class="card-text">Note: En pratique, les simulation montre que ce n’est pas tout à fair vrai car à l’ordre 1, l’assimilation à un filtre idéal n’est pas tout à fait correct.</p>
-</div>
-</details></div>
-<div class="section" id="reponse-d-un-filtre-d-ordre-2">
-<h2>Réponse d’un filtre d’ordre 2<a class="headerlink" href="#reponse-d-un-filtre-d-ordre-2" title="Permalink to this headline">¶</a></h2>
-<div class="attention admonition">
-<p class="admonition-title">Exercice</p>
-<p>On place une bobine <span class="math notranslate nohighlight">\(L_1\)</span> et un condensateur <span class="math notranslate nohighlight">\(C_1\)</span> dans le circuit collecteur d’un transistor à effet de champ de façon à réaliser un amplificateur sélectif. Le montage ainsi obtenu est équivalent à celui ci-après. On a: <span class="math notranslate nohighlight">\(\underline{I_0} = s \underline{v_e}\)</span>. <span class="math notranslate nohighlight">\(s\)</span> étant supposé constant et réel pour le domaine de fréquence étudié.</p>
-<div class="figure align-center" id="fig-221">
-<img alt="../_images/Electronique_TD4_EX4_1.jpg" src="../_images/Electronique_TD4_EX4_1.jpg" />
-</div>
-<ul class="simple">
-<li><p>Déterminer la fonction de transfert <span class="math notranslate nohighlight">\(\underline{H}\)</span> sous la forme: <span class="math notranslate nohighlight">\(\underline{H} = \frac{A_0}{1+ jQ (x - \frac{1}{x})}\)</span> en notant <span class="math notranslate nohighlight">\(x=\frac{\omega}{\omega_0}\)</span>. Quelle est la nature de ce filtre? Quelle est sa bande passante?</p></li>
-</ul>
-<p>On envoie en entrée un signal périodique de pulsation <span class="math notranslate nohighlight">\(\omega=\omega_0\)</span>. On définit le taux d’harmonique de rang n d’un signal périodique par le rapport <span class="math notranslate nohighlight">\(\tau_{n} = \frac{V_n}{V_1}\)</span> de l’amplitude <span class="math notranslate nohighlight">\(V_n\)</span> de l’harmonique de rang n à l’amplitude <span class="math notranslate nohighlight">\(V_1\)</span> du fondamental. On note <span class="math notranslate nohighlight">\(\tau_{n,s}\)</span> et <span class="math notranslate nohighlight">\(\tau_{n,e}\)</span> les taux d’harmoniques respectifs des signaux d’entrée et de sortie.</p>
-<ul class="simple">
-<li><p>Calculer le taux d’atténuation <span class="math notranslate nohighlight">\(\delta_n = \frac{\tau_{n,s}}{\tau_{n,e}}\)</span> de l’harmonique de rang n en fonction de Q et de n.</p></li>
-<li><p>On choisit alors la valeur de Q pour laquelle le taux d’atténuation est de -40dB pour l’harmonique de rang 2. Quelle valeur de Q réalise cette condition?</p></li>
-</ul>
-<p>On envoie un signal créneau d’amplitude variant entre <span class="math notranslate nohighlight">\(E_1\)</span> et <span class="math notranslate nohighlight">\(E_2\)</span> de pulsation <span class="math notranslate nohighlight">\(\omega_0\)</span> en entrée. Celui-ci peut se décomposer en séries de Fourier (<span class="math notranslate nohighlight">\(T_0 = \frac{2 \pi}{\omega_0}\)</span> est la période du créneau):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e852f85c-6621-4e9c-a6c3-2f56456531cb">
-<span class="eqno">(121)<a class="headerlink" href="#equation-e852f85c-6621-4e9c-a6c3-2f56456531cb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
-e(t) = \frac{E_1+E_2}{2} + \sum\limits_{p=0}^{+\infty}\frac{2(E_1-E_2)}{(2p+1) \pi} \sin((2p+1) \frac{2 \pi}{T_0} t)
+<p>$$ {\rm{d} \over \rm{d}t}</p>
+</div></blockquote>
+<div class="amsmath math notranslate nohighlight" id="equation-d32d8766-dda9-4baa-b687-5d140e7e9a54">
+<span class="eqno">(122)<a class="headerlink" href="#equation-d32d8766-dda9-4baa-b687-5d140e7e9a54" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+u\\
+v
+\end{pmatrix}\]</div>
+<p>=</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2f72d45e-41c4-4baa-b4a6-9b7e2a164fb1">
+<span class="eqno">(123)<a class="headerlink" href="#equation-2f72d45e-41c4-4baa-b4a6-9b7e2a164fb1" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+- {1 \over RC} v - {2 \over RC} u\\
+- {1 \over RC} v - {1 \over RC} u
+\end{pmatrix}\]</div>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}On peut alors utiliser un schéma d'Euler explicite sur le vecteur :\\\begin{split}$$ Y(t)=
+\begin{pmatrix}
+u(t)\\
+v(t)
+\end{pmatrix}
+\end{split}\end{aligned}\end{align} \]</div>
+<p>dont la dérivée s’écrit :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8bb58bb8-3495-47c8-a2c1-763439d0f1b7">
+<span class="eqno">(124)<a class="headerlink" href="#equation-8bb58bb8-3495-47c8-a2c1-763439d0f1b7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+{\rm{d}Y \over \rm{d}t} = F(Y, t)
 \end{equation}\]</div>
+<p>avec :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} F(Y, t) = 
+\begin{pmatrix}
+- {1 \over RC} v - {2 \over RC} u\\
+- {1 \over RC} v - {1 \over RC} u
+\end{pmatrix}
+\end{split}\]</div>
+<p>_On rappelle que d’un point de vue vectoriel :</p>
 <ul class="simple">
-<li><p>Représenter sur un graphique [fréquence;amplitude], le diagramme du signal puis donner l’allure du signal temporelle de sortie en le justifiant.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">u</span> <span class="pre">=</span> <span class="pre">Y[0]</span></code> et <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">Y[1]</span></code>_.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> prend comme argument un vecteur <code class="docutils literal notranslate"><span class="pre">Y</span></code> et renvoie un vecteur de taille 2.</p></li>
+<li><p>On a techniquement pas besoin du temps puisque <code class="docutils literal notranslate"><span class="pre">F</span></code> ne dépend pas explicitement du temps mais on prendra l’habitutde de le mettre comme argument même si on ne l’utilise pas (pour des fonctions comme <code class="docutils literal notranslate"><span class="pre">odeint</span></code>).</p></li>
 </ul>
-</div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Eléments de réponse (sans justification)<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><span class="math notranslate nohighlight">\(A_0 = R_1 s\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> et <span class="math notranslate nohighlight">\(Q = R\sqrt{\frac{C}{L}}\)</span></p>
-<p class="card-text"><span class="math notranslate nohighlight">\(\delta_n = \frac{1}{\sqrt{1 + Q^2 (n^2 - \frac{1}{n^2})}}\)</span></p>
-<p class="card-text">Q = 52</p>
-<p class="card-text">Le signal de sortie pour le créneau sera un sinusoïde presque parfait.</p>
-<p class="card-text">Note: L’ordre 2 permet, à la différence de l’ordre 1 d’approcher le résultat approché de manière relativement bonne. Le problème est la réalisation d’un circuit avec un aussi grand facteur de qualité. Pour contourner le problème, il faudrait utiliser un filtre d’ordre supérieur.</p>
-</div>
-</details></div>
-<div class="toctree-wrapper compound">
-</div>
+<blockquote>
+<div><p><strong>Exercice :</strong><br />
+Pour les études numériques, on prend <span class="math notranslate nohighlight">\(R=1k\Omega\)</span> et <span class="math notranslate nohighlight">\(C= 1nF\)</span>.</p>
+<ol class="simple">
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">F(Y,</span> <span class="pre">t)</span></code> qui prend comme argument le vecteur <code class="docutils literal notranslate"><span class="pre">Y</span></code> et l’instant <code class="docutils literal notranslate"><span class="pre">t</span></code> et qui renvoie un <strong>vecteur</strong> numpy de taille 2 correspondant au vecteur donné précédemment.</p></li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">euler(F,</span> <span class="pre">Y0,</span> <span class="pre">tf,</span> <span class="pre">pas)</span></code> qui prend comme argument la fonction <code class="docutils literal notranslate"><span class="pre">F</span></code>, un vecteur <code class="docutils literal notranslate"><span class="pre">Y0</span></code> donnant les conditions initiales <span class="math notranslate nohighlight">\(u(0), v(0)\)</span>, et qui réalise l’intégration d’Euler par <code class="docutils literal notranslate"><span class="pre">pas</span></code> d’intégration de <span class="math notranslate nohighlight">\(t=0\)</span> à <code class="docutils literal notranslate"><span class="pre">tf</span></code>.Elle renverra un tableaux numpy à deux colonnes contenant pour chaque lignes les valeurs de Y aux temps <span class="math notranslate nohighlight">\(t_k\)</span> et un vecteur numpy contenant les temps <span class="math notranslate nohighlight">\(t_k\)</span>.</p></li>
+<li><p>Obtenir l’expression théorique de <span class="math notranslate nohighlight">\(u(t)\)</span> et <span class="math notranslate nohighlight">\(v(t)\)</span> par le calcul pour un jeu de conditions initiales <span class="math notranslate nohighlight">\(u0, v0\)</span> puis créer deux fonctions <code class="docutils literal notranslate"><span class="pre">u_th(t,</span> <span class="pre">Y0)</span></code> et <code class="docutils literal notranslate"><span class="pre">v_th(t,</span> <span class="pre">Y0)</span></code> qui renvoie un vecteur des valeurs de u (ou v) par l’expression théorique obtenue pour un vecteur de valeurs de temps <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+<li><p>Obtenir puis tracer l’évolution temporelle de <span class="math notranslate nohighlight">\(u(t)\)</span> et <span class="math notranslate nohighlight">\(v(t)\)</span> par intégration numérique ainsi que par calcul théorique et comparer les deux tracés. On adaptera le pas d’intégration pour limiter les écarts. On prend <span class="math notranslate nohighlight">\(u(0) = 0; v(0) = v_0 = 1V\)</span>.</p></li>
+</ol>
+</div></blockquote>
+<p><em>Indications utiles</em> :</p>
+<ul class="simple">
+<li><p>Pensez à utiliser l’étude théorique pour choisir un temps <code class="docutils literal notranslate"><span class="pre">tf</span></code> adapté.</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -655,8 +559,7 @@ Eléments de réponse (sans justification)<div class="summary-down docutils">
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="filtrage_cascade.html" title="previous page">Mise en cascade des filtres</a>
-    <a class='right-next' id="next-link" href="pont_wien.html" title="next page">Système linéaire</a>
+    <a class='left-prev' id="prev-link" href="td_filtrage.html" title="previous page">Travaux dirigés: Filtrage linéaire</a>
 
         </div>
         
