@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Réponse d’un filtre linéaire" href="filtrage_reponse.html" />
-    <link rel="prev" title="Filtrage linéaire (1): Principe" href="filtrage.html" />
+    <link rel="prev" title="Filtrage linéaire" href="filtrage.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -323,7 +323,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="filtrage.html">
-   Filtrage linéaire (1): Principe
+   Filtrage linéaire
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -645,8 +645,8 @@ En général, on représente les diagrammes de Bode sur des papier semi-log qui 
 <li><p>Déterminer le type de filtre par une étude haute et basse fréquence.</p></li>
 <li><p>Déterminer la fonction de transfert du filtre et en déduire son gain réel, son gain en décibel, sa phase. On introduira la pulsation propre <span class="math notranslate nohighlight">\(\omega _0\)</span> telle que:</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-5e2b0bb5-7a51-4f92-875b-d89bc7164dc1">
-<span class="eqno">(116)<a class="headerlink" href="#equation-5e2b0bb5-7a51-4f92-875b-d89bc7164dc1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ea63479e-ca9b-467b-a4b0-c81906e0d3e0">
+<span class="eqno">(116)<a class="headerlink" href="#equation-ea63479e-ca9b-467b-a4b0-c81906e0d3e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{H} = \frac{A j\frac{\omega}{\omega_0}}{1 + j\frac{\omega}{\omega_0}} = \frac{A jx}{1 + jx}
 \end{equation}\]</div>
 <p>On veut tracer le diagramme de Bode. Montrer que:</p>
@@ -670,8 +670,8 @@ A basse fréquence la bobine est assimilable à un fil, la tension s est donc nu
 <p class="card-text">Le filtre a une fonction de transfert nulle à basse fréquence et non nulle à haute fréquence. C’est un filtre passe-haut.</p>
 <p class="card-text"><strong>Fonction de transfert</strong><br />
 La bobine et la résistance forment un pont diviseur de tension. La tension aux bornes de la bobine est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-291ad914-ffc2-4e83-9203-313da2c3395c">
-<span class="eqno">(117)<a class="headerlink" href="#equation-291ad914-ffc2-4e83-9203-313da2c3395c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b6c7a83b-975d-435e-a743-b4bf473a393e">
+<span class="eqno">(117)<a class="headerlink" href="#equation-b6c7a83b-975d-435e-a743-b4bf473a393e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s} = \frac{jL\omega}{R + jL\omega} \underline{e} \Longrightarrow \underline{H} = \frac{j \frac{L}{R}\omega}{1 + j \frac{L}{R}\omega}
 \end{equation}\]</div>
 <p class="card-text">Il vient que la pulsation propre est <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span>.</p>
@@ -684,8 +684,8 @@ G_{dB} = 20 \log A + 20 \log x - 10 \log \left (1 + x^2\right )\\
 \end{align*}\]</div>
 <p class="card-text"><strong>Diagramme de Bode</strong><br />
 Le gain réel se met sous la forme <span class="math notranslate nohighlight">\(G = \frac{1}{\sqrt{1 + \frac{1}{x^2}}}\)</span>. Il vient immédiatement que le gain réel est strictement croissant.</p>
-<p class="card-text">On en déduit la fonction atteint son maximum en <span class="math notranslate nohighlight">\(x = + \infty\)</span>. Le gain réel vaut alors 1 et le gain en décibel vaut 0. Il vient <strong>que le diagramme de Bode possède une asymptote horizontal <strong><span class="math notranslate nohighlight">\(G_{dBa,asymp__ = 0\)</span>}</strong> en  <strong><span class="math notranslate nohighlight">\(x \to + \infty\)</span></strong> (en <strong><span class="math notranslate nohighlight">\(\omega \to + \infty\)</span></strong>, c’est-à-dire à haute fréquence).</strong></p>
-<p class="card-text">A très basse fréquence (<span class="math notranslate nohighlight">\(\omega \to 0 \Longrightarrow x \to 0 \Longrightarrow \log x \to - \infty\)</span>), le gain réel se réécrit <span class="math notranslate nohighlight">\(G \approx x\)</span> soit un gain en décibel <span class="math notranslate nohighlight">\(G_{dB} \approx 20 \log x\)</span>. <strong>Le gain en décibel s’appproche donc d’une droite en fonction de <strong><span class="math notranslate nohighlight">\(\log(x)\)</span></strong> de pente +20. Le gain en décibel s’exprime en…  décibel et l’abscisse <strong><span class="math notranslate nohighlight">\(\log(x)\)</span></strong> se compte en décade.</strong> Le gain en décibel possède donc, sur un diagramme de Bode une asymptote oblique à basse fréquence de pente <span class="math notranslate nohighlight">\(+20 \rm{dB/decade}\)</span>.</p>
+<p class="card-text">On en déduit la fonction atteint son maximum en <span class="math notranslate nohighlight">\(x = + \infty\)</span>. Le gain réel vaut alors 1 et le gain en décibel vaut 0. Il vient <strong>que le diagramme de Bode possède une asymptote horizontale <span class="math notranslate nohighlight">\(G_{dBa,asymp= 0\)</span>} en  <span class="math notranslate nohighlight">\(x \to + \infty\)</span> (en <span class="math notranslate nohighlight">\(\omega \to + \infty\)</span>, c’est-à-dire à haute fréquence).</strong></p>
+<p class="card-text">A très basse fréquence (<span class="math notranslate nohighlight">\(\omega \to 0 \Longrightarrow x \to 0 \Longrightarrow \log x \to - \infty\)</span>), le gain réel se réécrit <span class="math notranslate nohighlight">\(G \approx x\)</span> soit un gain en décibel <span class="math notranslate nohighlight">\(G_{dB} \approx 20 \log x\)</span>. <strong>Le gain en décibel s’appproche donc d’une droite en fonction de <span class="math notranslate nohighlight">\(\log(x)\)</span> de pente +20. Le gain en décibel s’exprime en…  décibel et l’abscisse <span class="math notranslate nohighlight">\(\log(x)\)</span> se compte en décade.</strong> Le gain en décibel possède donc, sur un diagramme de Bode une asymptote oblique à basse fréquence de pente <span class="math notranslate nohighlight">\(+20 \rm{dB/decade}\)</span>.</p>
 <p class="card-text">La fonction arctan étant croissante, la phase est décroissante. Ses valeurs limites sont <span class="math notranslate nohighlight">\(\pi/2\)</span> et 0.</p>
 <p class="card-text">On peut donc tracer le diagramme de Bode:</p>
 <div class="figure align-center" id="fig-202">
@@ -731,7 +731,7 @@ Etudier un filtre permet de prévoir son comportement face à une réponse quelc
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="filtrage.html" title="previous page">Filtrage linéaire (1): Principe</a>
+    <a class='left-prev' id="prev-link" href="filtrage.html" title="previous page">Filtrage linéaire</a>
     <a class='right-next' id="next-link" href="filtrage_reponse.html" title="next page">Réponse d’un filtre linéaire</a>
 
         </div>

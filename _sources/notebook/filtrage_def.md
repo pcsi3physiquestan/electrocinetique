@@ -222,9 +222,9 @@ G_{dB} = 20 \log A + 20 \log x - 10 \log \left (1 + x^2\right )\\
 __Diagramme de Bode__  
 Le gain réel se met sous la forme $G = \frac{1}{\sqrt{1 + \frac{1}{x^2}}}$. Il vient immédiatement que le gain réel est strictement croissant.
 
-On en déduit la fonction atteint son maximum en $x = + \infty$. Le gain réel vaut alors 1 et le gain en décibel vaut 0. Il vient __que le diagramme de Bode possède une asymptote horizontal __$G_{dBa,asymp__ = 0$}__ en  __$x \to + \infty$__ (en __$\omega \to + \infty$__, c'est-à-dire à haute fréquence).__
+On en déduit la fonction atteint son maximum en $x = + \infty$. Le gain réel vaut alors 1 et le gain en décibel vaut 0. Il vient __que le diagramme de Bode possède une asymptote horizontale $G_{dBa,asymp= 0$} en  $x \to + \infty$ (en $\omega \to + \infty$, c'est-à-dire à haute fréquence).__
 
-A très basse fréquence ($\omega \to 0 \Longrightarrow x \to 0 \Longrightarrow \log x \to - \infty$), le gain réel se réécrit $G \approx x$ soit un gain en décibel $G_{dB} \approx 20 \log x$. __Le gain en décibel s'appproche donc d'une droite en fonction de __$\log(x)$__ de pente +20. Le gain en décibel s'exprime en...  décibel et l'abscisse __$\log(x)$__ se compte en décade.__ Le gain en décibel possède donc, sur un diagramme de Bode une asymptote oblique à basse fréquence de pente $+20 \rm{dB/decade}$.
+A très basse fréquence ($\omega \to 0 \Longrightarrow x \to 0 \Longrightarrow \log x \to - \infty$), le gain réel se réécrit $G \approx x$ soit un gain en décibel $G_{dB} \approx 20 \log x$. __Le gain en décibel s'appproche donc d'une droite en fonction de $\log(x)$ de pente +20. Le gain en décibel s'exprime en...  décibel et l'abscisse $\log(x)$ se compte en décade.__ Le gain en décibel possède donc, sur un diagramme de Bode une asymptote oblique à basse fréquence de pente $+20 \rm{dB/decade}$.
 
 La fonction arctan étant croissante, la phase est décroissante. Ses valeurs limites sont $\pi/2$ et 0.
 
