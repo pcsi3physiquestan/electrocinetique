@@ -479,24 +479,30 @@
 <ol class="simple">
 <li><p>Montrer par le calcul que ce circuit est régit par le système d’équation suivant :</p></li>
 </ol>
-<p>$$ {\rm{d} \over \rm{d}t}
-=</p>
 </div></blockquote>
-<div class="amsmath math notranslate nohighlight" id="equation-7a4759f4-153b-4809-b8ee-55148d9fe5e3">
-<span class="eqno">(122)<a class="headerlink" href="#equation-7a4759f4-153b-4809-b8ee-55148d9fe5e3" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+u\\
+v
+\end{pmatrix}
+=
+\begin{pmatrix}
 - {1 \over RC} v - {2 \over RC} u\\
 - {1 \over RC} v - {1 \over RC} u
-\end{pmatrix}\]</div>
+\end{pmatrix}
+\end{split}\]</div>
+<p>On peut alors utiliser un schéma d’Euler explicite sur le vecteur :</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}On peut alors utiliser un schéma d'Euler explicite sur le vecteur :\\\begin{split}$$ Y(t)=
+\[\begin{split} Y(t)=
 \begin{pmatrix}
 u(t)\\
 v(t)
 \end{pmatrix}
-\end{split}\end{aligned}\end{align} \]</div>
+\end{split}\]</div>
 <p>dont la dérivée s’écrit :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57e4bf72-de0d-4d71-a024-263372cd2731">
-<span class="eqno">(123)<a class="headerlink" href="#equation-57e4bf72-de0d-4d71-a024-263372cd2731" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5acaa445-16bb-4cfa-a8ef-05f47f4218c4">
+<span class="eqno">(122)<a class="headerlink" href="#equation-5acaa445-16bb-4cfa-a8ef-05f47f4218c4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 {\rm{d}Y \over \rm{d}t} = F(Y, t)
 \end{equation}\]</div>
 <p>avec :</p>
