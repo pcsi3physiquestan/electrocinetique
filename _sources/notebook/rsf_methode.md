@@ -334,7 +334,6 @@ Phase à l'origine:
 
 ```{admonition} Vérification du résultat.
 :class: hint
-{adv_verification_du_resultat__17}
 En régime sinusoïdal forcé, on peut remarquer que $C \omega$ est homogène à l'inverse d'une résistance et que $L \omega$ est homogène à une résistance. Vous pouvez vérifier aisément que les grandeurs calculées sont homogènes (on rappelle qu'une phase est sans dimension).
 
 D'autres vérification seront possibles lorsque nous aurons étudié les comportements asymptotiques.
@@ -400,7 +399,6 @@ On va écrire deux lois des noeuds en termes de potentiel: en B et en D.
 
 ```{admonition} Vérification du résultat.
 :class: hint
-{adv_verification_du_resultat__18}
 En régime sinusoïdal forcé, on peut remarquer que $C \omega$ est homogène à l'inverse d'une résistance et que $L \omega$ est homogène à une résistance. Vous pouvez vérifier aisément que les grandeurs calculées sont homogènes (on rappelle qu'une phase est sans dimension).
 
 D'autres vérification seront possible lorsque nous aurons étudié les comportements asymptotiques.

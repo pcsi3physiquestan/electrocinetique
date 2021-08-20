@@ -40,7 +40,7 @@ On désire construire un filtre d'ordre 1 permettant de mesurer la valeur moyenn
 1. Avec la fonction de transfert précédemment choisie, exprimer le rapport: $\eta = \frac{G(100Hz)}{G(10Hz)}$.
 1. On envoie sur le filtre un signal $U_E(t) = U_E(1+\cos(2 \pi f t))$ avec $f =100 \rm{Hz}$. Donner l'expression générale de la tension du sortie du filtre sans approximation.
 1. On s'arrange pour que l'angle entre la position de l'aiguille au zéro et la position de l'aiguille correspondant à la moyenne $U_E$ soit $90^{\circ}$. Déterminer l'amplitude de la vibration de l'aiguille. Que représenterait cette vibration pour l'expérimentateur. Commenter.
-1. On va donc imposer un cahier des charges plus contraignant plus contraignant: on veut que pour un signal comme celui de la question 6., l'amplitude résiduelle due à la partie variable représente moins de $1\%$ de la valeur moyenne. Représenter un diagramme de Bode en gain compatible.
+1. On va donc imposer un cahier des charges plus contraignant plus contraignant: on veut que pour un signal comme celui de la question 7., l'amplitude résiduelle due à la partie variable représente moins de $1\%$ de la valeur moyenne. Représenter un diagramme de Bode en gain compatible.
 1. Montrer qu'un filtre d'ordre 1 ne peut satisfaire une telle contrainte. Est-ce qu'il filtre d'ordre 2 est compatible ?
 
 ````

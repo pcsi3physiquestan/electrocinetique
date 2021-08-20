@@ -15,7 +15,5 @@ kernelspec:
 ---
 # Activités méthodes
 
-\begin{intro}
 Il s'agit d'activités méthode. Elle seront réalisés en classe sous forme de travaux dirigés mais les conclusions importantes devront être retenues.
-\end{intro}
 

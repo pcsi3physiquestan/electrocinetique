@@ -13,7 +13,7 @@ kernelspec:
   language: python
   name: python3
 ---
-# Filtrage linéaire (1): Principe
+# Filtrage linéaire
 
 ````{admonition} Objectifs
 :class: hint
