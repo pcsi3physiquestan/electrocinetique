@@ -204,10 +204,6 @@ Etudier le circuit précédent en régime indépendant du temps lorsque l'interr
 
 ````
 ````{dropdown} Correction
-
- 
-
-\begin{meth}{Dessiner le circuit équivalent en régime indépendant du temps.}{meth_dessiner_le_circuit_equivalent_en_regime_independant_du_temps__44}
 Tout d'abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.
 
 ```{figure} ./images/elec_circuit_quelconque_3.png

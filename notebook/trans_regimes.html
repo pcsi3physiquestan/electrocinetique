@@ -323,7 +323,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="filtrage.html">
-   Filtrage linéaire (1): Principe
+   Filtrage linéaire
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
   <label for="toctree-checkbox-8">
@@ -594,8 +594,8 @@ Un système est dit <strong>stable</strong> si les grandeurs du système ne dive
 </div>
 <p><strong>Démonstration</strong><br />
 Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de la tension est nulle. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e9021116-3e81-44c9-bf13-41cd46c5f06f">
-<span class="eqno">(28)<a class="headerlink" href="#equation-e9021116-3e81-44c9-bf13-41cd46c5f06f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ceef43c9-f947-4cd6-893a-a7d588aeb001">
+<span class="eqno">(28)<a class="headerlink" href="#equation-ceef43c9-f947-4cd6-893a-a7d588aeb001" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i = C \frac{\rm{d}u}{\rm{dt}} = 0
 \end{equation}\]</div>
 <p>L’intensité étant toujours nulle, le dipôle est assimilable à un interrupteur ouvert.</p>
@@ -608,8 +608,8 @@ i = C \frac{\rm{d}u}{\rm{dt}} = 0
 </div>
 <p><strong>Démonstration</strong><br />
 Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de l’intensité est nulle. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6906ce7-21ba-491f-8f26-dcaf031a1434">
-<span class="eqno">(29)<a class="headerlink" href="#equation-f6906ce7-21ba-491f-8f26-dcaf031a1434" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d806c067-191b-4bdd-a310-4c822f85dd3b">
+<span class="eqno">(29)<a class="headerlink" href="#equation-d806c067-191b-4bdd-a310-4c822f85dd3b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u =L \frac{\rm{d}i}{\rm{dt}} = 0
 \end{equation}\]</div>
 <p>La tension étant toujours nulle, le dipôle est assimilable à un fil.</p>
@@ -659,22 +659,21 @@ Correction<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">\begin{meth}{Dessiner le circuit équivalent en régime indépendant du temps.}{meth_dessiner_le_circuit_equivalent_en_regime_independant_du_temps__44}
-Tout d’abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.</p>
+<p class="card-text">Tout d’abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.</p>
 <div class="figure align-center" id="fig-152">
 <img alt="../_images/elec_circuit_quelconque_3.png" src="../_images/elec_circuit_quelconque_3.png" />
 </div>
 <p class="card-text">Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
 <p class="card-text">Écrivons les lois de Kirchhoff (on pourrait aussi utiliser la loi des noeuds en terme de potentiels):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ef71c05-abac-4ae9-9907-efbd5d81110c">
-<span class="eqno">(30)<a class="headerlink" href="#equation-4ef71c05-abac-4ae9-9907-efbd5d81110c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1cafd1aa-1eef-46e3-9587-d20b306fe576">
+<span class="eqno">(30)<a class="headerlink" href="#equation-1cafd1aa-1eef-46e3-9587-d20b306fe576" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + i_l &amp;= 0\\
 E - R i_e + R i_r &amp;= 0\\
 R i_r - R i_l &amp;= 0
 \end{align}\]</div>
 <p class="card-text">Il vient immédiatement <span class="math notranslate nohighlight">\(i_r = i_l\)</span> et donc <span class="math notranslate nohighlight">\(i_e = - 2 i_r\)</span>. La première loi des mailles s’écrivant alors <span class="math notranslate nohighlight">\(E + 3 R i_R = 0\)</span>, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa9b0916-3ac7-4e2d-a130-be5469ad8315">
-<span class="eqno">(31)<a class="headerlink" href="#equation-aa9b0916-3ac7-4e2d-a130-be5469ad8315" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7c731f70-e47d-4a80-81e8-5544febe4eec">
+<span class="eqno">(31)<a class="headerlink" href="#equation-7c731f70-e47d-4a80-81e8-5544febe4eec" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_r &amp;= -\frac{E}{3R}\\
 i_l &amp;= -\frac{E}{3R}\\
 i_e &amp;= \frac{2E}{3R}\\
@@ -801,8 +800,8 @@ On détermine dans un premier temps l’écart initial: on commence à 1V et on 
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le signal ci-après.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-92588202-a6cf-4752-b0c6-20e2184a1215">
-<span class="eqno">(32)<a class="headerlink" href="#equation-92588202-a6cf-4752-b0c6-20e2184a1215" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-155ade1a-a49c-42e4-8526-cafd9ed502ff">
+<span class="eqno">(32)<a class="headerlink" href="#equation-155ade1a-a49c-42e4-8526-cafd9ed502ff" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 e_m \exp (- t / \tau)
 \end{equation}\]</div>
 <p>\begin{enumerate}</p>
@@ -820,8 +819,8 @@ Correction<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>1.</strong><br />
 La valeur initiale est <span class="math notranslate nohighlight">\(e_m\)</span> et la valeur finale 0. On cherche donc un écart à la valeur finale de <span class="math notranslate nohighlight">\(\frac{N}{100}(e_m - 0)\)</span> soit :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a38fe37-2ae1-46b4-adde-e588a2ce77ac">
-<span class="eqno">(33)<a class="headerlink" href="#equation-7a38fe37-2ae1-46b4-adde-e588a2ce77ac" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2e03c391-ab59-4e9f-8058-7e2736b12989">
+<span class="eqno">(33)<a class="headerlink" href="#equation-2e03c391-ab59-4e9f-8058-7e2736b12989" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left  (\frac{N}{100} \right )
 \end{equation}\]</div>
 <p class="card-text">Pour 95%, on trouve <span class="math notranslate nohighlight">\(t = 3 \tau\)</span> etpour 99%, on trouve <span class="math notranslate nohighlight">\(t = 5 \tau\)</span>.</p>
@@ -833,8 +832,8 @@ e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left
 </details><div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le signal suivant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-22fe7f92-44f0-40fa-9279-84530c1c81cf">
-<span class="eqno">(34)<a class="headerlink" href="#equation-22fe7f92-44f0-40fa-9279-84530c1c81cf" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ca24a764-ea06-4a6c-ba08-5401682e295b">
+<span class="eqno">(34)<a class="headerlink" href="#equation-ca24a764-ea06-4a6c-ba08-5401682e295b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) + 3 e_m
 \end{equation}\]</div>
 <p>Déterminer une estimation du temps caractéristique après avoir préciser l’état final.</p>
@@ -849,13 +848,13 @@ Correction<div class="summary-down docutils">
 <p class="card-text"><strong>Ecart à l’état final</strong><br />
 Le régime forcé s’obtient en passant simplement à la limite l’expression du signal. Il vient <span class="math notranslate nohighlight">\(u_{s,force} = 3e_m\)</span></p>
 <p class="card-text">L’écart est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4c100062-939b-4d4a-9bf0-e2aaf5e069f3">
-<span class="eqno">(35)<a class="headerlink" href="#equation-4c100062-939b-4d4a-9bf0-e2aaf5e069f3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6c14423e-d5cb-421c-9770-5af9b91ffd79">
+<span class="eqno">(35)<a class="headerlink" href="#equation-6c14423e-d5cb-421c-9770-5af9b91ffd79" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \left \vert 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) \right \vert
 \end{equation}\]</div>
 <p class="card-text">L’écart initial étant de <span class="math notranslate nohighlight">\(2 e_m\)</span>, il faut analyser la fonction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7f926f1-a997-4937-a09e-11c3c3bcef49">
-<span class="eqno">(36)<a class="headerlink" href="#equation-a7f926f1-a997-4937-a09e-11c3c3bcef49" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4aac20b9-377e-4187-9e87-dd6d96473d44">
+<span class="eqno">(36)<a class="headerlink" href="#equation-4aac20b9-377e-4187-9e87-dd6d96473d44" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f(t) = \left \vert \exp(-\frac{2t}{T})  - 2 \exp(-\frac{5t}{T}) \right \vert
 \end{equation}\]</div>
 <details class="sphinx-bs dropdown card mb-3">
