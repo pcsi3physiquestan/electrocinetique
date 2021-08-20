@@ -1,0 +1,1157 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Méthodes d’analyse d’un régime transitoire &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/trans_methodes.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Stabilité des systèmes linéaires d’ordre 1 et 2" href="trans_stabilite.html" />
+    <link rel="prev" title="Régime transitoire et régime forcé" href="trans_regimes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conduction.html">
+     Décrire la conduction électrique à notre échelle : Courant et Tension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="el_lois.html">
+     Étudier un circuit : les bases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_bases.html">
+     TD Electrocinétique 1: Bases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="ci_lineaire.html">
+   Dipôles et circuits linéaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_gene.html">
+     Dipôles électriques: Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_passif.html">
+     Dipôles linéaires passifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_assoc.html">
+     Association de résistances
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_actif.html">
+     Dipôles linéaires actifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_methode.html">
+     Etude d’un circuit linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_lineaires.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_lineaires.html">
+     TD Electrocinétique 2: Circuits linéaires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="trans_gene.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_regimes.html">
+     Régime transitoire et régime forcé
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Méthodes d’analyse d’un régime transitoire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_stabilite.html">
+     Stabilité des systèmes linéaires d’ordre 1 et 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="meth_trans.html">
+     Activités méthodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_ordre.html">
+   Régime transitoire (2): Ordre 1 et 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_1.html">
+     Caractéristiques d’un système d’ordre 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_2.html">
+     Caractéristiques d’un système d’ordre 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans_o.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_trans_o.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_2.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_trans.html">
+     TD Electrocinétique 3: Régimes de fonctionnements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_interet.html">
+     Intérêt de l’étude fréquentielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_gene.html">
+     Régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_methode.html">
+     Méthode d’étude d’un régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_rsf.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbande.html">
+       Cas passe-bande
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbas.html">
+       Cas passe-bas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf_2.html">
+     Activités d’application (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_rsf.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="filtrage.html">
+   Filtrage linéaire (1): Principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_def.html">
+     Filtre: définition et caractéristiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_reponse.html">
+     Réponse d’un filtre linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_gene.html">
+     Caractéristiques générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_typo.html">
+     Typologie des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cahier.html">
+     Cahier des charges d’un filtre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cascade.html">
+     Mise en cascade des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_filtrage.html">
+     Travaux dirigés: Filtrage linéaire
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/trans_methodes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/trans_methodes.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/trans_methodes.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mise-en-equation">
+   Mise en équation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-determiner-l-equation-differentielle-lois-de-kirchhoff">
+     Méthode: Déterminer l’équation différentielle (Lois de Kirchhoff)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-determiner-l-equation-differentielle-utilisation-des-potentiels">
+     Méthode: Déterminer l’équation différentielle (utilisation des potentiels)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remarques-sur-les-equation-differentielles-obtenues">
+     Remarques sur les équation différentielles obtenues
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#determination-des-conditions-initiales">
+   Détermination des conditions initiales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combien-de-condition-initiales">
+     Combien de condition initiales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continuite-des-grandeurs">
+     Continuité des grandeurs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-determiner-des-conditions-initiales">
+     Méthode: Déterminer des conditions initiales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-de-l-evolution-temporelle">
+   Etude de l’évolution temporelle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Etude de l’évolution temporelle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-determiner-l-evolution-temporelle">
+     Méthode: Déterminer l’évolution temporelle.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-d-autres-etudes">
+     Exemple d’autres études
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyse-des-formes-des-solutions">
+     Analyse des formes des solutions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="methodes-d-analyse-d-un-regime-transitoire">
+<h1>Méthodes d’analyse d’un régime transitoire<a class="headerlink" href="#methodes-d-analyse-d-un-regime-transitoire" title="Permalink to this headline">¶</a></h1>
+<p>Nous avons vu quelques caractéristiques du régime transitoire comme son temps caractéristique ou encore l’étude de régime forcé. L’étude du régime transitoire passe par l’étude de la réponse temporelle qu’il convient de déterminer. Pour cela il faut:</p>
+<ul class="simple">
+<li><p>déterminer l’équation qui régit l’évolution de la grandeur qui nous intéresse. Nous verrons qu’il s’agit d’une équation différentielle et qu’elle possède certaines propriétés importantes</p></li>
+<li><p>déterminer les conditions initiales qui permettront de déterminer les constantes d’intégration lors de la résolution. Il faut noter que souvent, ces dernières ne sont pas données mais doivent être déterminées.</p></li>
+<li><p>Déterminer l’évolution temporelle (u(t) ou i(t) ou le deux) de la grandeur qui nous intéresse. Cela passe par la résolution de l’équation différentielle établie précédemment en utilisant les conditions initiales.</p></li>
+</ul>
+<div class="section" id="mise-en-equation">
+<h2>Mise en équation<a class="headerlink" href="#mise-en-equation" title="Permalink to this headline">¶</a></h2>
+<p>Pour déterminer analytiquement l’évolution d’une grandeur, il faut pouvoir déterminer l’équation différentielle qui régit l’évolution de cette grandeur. Nous allons voir globalement les méthodes à disposition et les informations qu’on peut tirer de telles études.</p>
+<div class="section" id="methode-determiner-l-equation-differentielle-lois-de-kirchhoff">
+<h3>Méthode: Déterminer l’équation différentielle (Lois de Kirchhoff)<a class="headerlink" href="#methode-determiner-l-equation-differentielle-lois-de-kirchhoff" title="Permalink to this headline">¶</a></h3>
+<p>On se propose ici de voir comment déterminer l’équation différentielle qui régit l’évolution d’une grandeur au moyen des lois de Kirchhoff.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le circuit suivant. L’interrupteur est ouvert depuis un temps long. A t=0, on ferme l’interrupteur.</p>
+<p>Déterminer l’équation différentielle qui régit l’évolution de la tension aux bornes du condensateur.</p>
+<div class="figure align-center" id="fig-159">
+<img alt="../_images/elec_circuit_etude_1.png" src="../_images/elec_circuit_etude_1.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Paramétrage</strong><br />
+Comme d’habitude, on commence par paramétrer le système. Les grandeurs introduites sont présentées sur le graphique.</p>
+<div class="figure align-center" id="fig-160">
+<img alt="../_images/elec_circuit_etude.png" src="../_images/elec_circuit_etude.png" />
+</div>
+<p class="card-text">Rappelons aussi que les deux noeuds du haut peuvent être “rassemblés en un seul, ce qui évite d’avoir à considérer l’intensité qui circule dans la branche du haut au milieu.</p>
+<div class="figure align-center" id="fig-161">
+<img alt="../_images/elec_circuit_etude_2.png" src="../_images/elec_circuit_etude_2.png" />
+</div>
+<p class="card-text"><strong>Mise en équation</strong><br />
+On utilise les lois de Kirchhoff. Les deux points à bien faire attention sont:</p>
+<ul class="simple">
+<li><p class="card-text">Bien déterminer quelle sont les grandeurs qui entrent en jeu dans l’utilisation de relations tension-intensité pour C et L (ce n’est pas juste i ou u, c’est l’intensité qui circule dans le condensateur (resp. dans la bobine) et la tension aux bornes du condensateur (resp. de la bobine). On cherche ensuite leur expression sur le schéma pour écrire la bonne équation d’évolution.</p></li>
+<li><p class="card-text">Bien faire attention aux conventions. Le mieux, si on a le choix, est d’orienter C et L (comme R) en convention récepteur de manière à pouvoir utiliser les équations d’évolutions sont faire de faute de signe.</p></li>
+<li><p class="card-text">Ne pas forcément vouloir éliminer toutes les tensions ou toutes les intensités. Cette fois, on ne peut pas toujours exprimer une tension en fonction d’une intensité ou vice-versa à cause des dérivées.</p></li>
+</ul>
+<p class="card-text">Il convient par contre de bien penser à faire la différence entre ce qui nous intéresse de ce qu’on veut éliminer.</p>
+<p class="card-text">On rappelle que les grandeurs connues sont E, R, L et C et que la grandeur qu’on cherche est <span class="math notranslate nohighlight">\(u_C\)</span>.</p>
+<p class="card-text">Toutes les intensités sont à éliminer, ainsi que les autres tensions.</p>
+<p class="card-text">Nous avons directement éliminer les tensions aux bornes des résistances et de la bobines car on sait qu’on ne les cherche pas ET qu’on peut les éliminer facilement à partir des équations d’évolutions.</p>
+<p class="card-text">A l’inverse, on élimine  l’intensité qui circule dans le condensateur (et pas sa tension) car elle permet d’introduire directement la grandeur (<span class="math notranslate nohighlight">\(u_C\)</span>) qu’on recherche en éliminant une grandeur inintéressante (<span class="math notranslate nohighlight">\(i_c\)</span>).</p>
+<p class="card-text">Remarquons aussi qu’au niveau du choix des mailles, on a choisi trois mailles faisant directement intervenir <span class="math notranslate nohighlight">\(u_C\)</span> plutôt que des tensions (et indirectement des intensités) qu’on voudra faire disparaître.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9de5c8bd-0b77-461f-8bd5-a1d4318ed11d">
+<span class="eqno">(37)<a class="headerlink" href="#equation-9de5c8bd-0b77-461f-8bd5-a1d4318ed11d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
+E - R i_e + u_C &amp;= 0 \\
+R i_r - u_C &amp;= 0 \\
+u_C -  L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0
+\end{align}\]</div>
+<p class="card-text">On a 4 inconnues et 4 équations. Le système peut donc être résolu.</p>
+<p class="card-text"><strong>Manipulation du système</strong><br />
+Une fois le système mis en place, <strong>il convient de réfléchir à une stratégie avant de se lancer</strong> (on rappelle que les grandeurs à éliminer sont les trois intensités). Remarquons que le choix des mailles a permis d’avoir un système simple car chacune des lois des mailles permet d’écrire une intensité (ou sa dérivée) en fonction de <span class="math notranslate nohighlight">\(u_C\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-07d88b32-95cd-4c2a-b56f-e46a0a22ed97">
+<span class="eqno">(38)<a class="headerlink" href="#equation-07d88b32-95cd-4c2a-b56f-e46a0a22ed97" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
+i_e &amp;= \frac{E + u_C}{R}\\
+i_r &amp;= \frac{u_C}{R} \\
+\frac{\rm{d}i_l}{\rm{dt}} &amp;= \frac{u_C}{L}
+\end{align}\]</div>
+<p class="card-text">Il suffit ensuire de remplacer dans la loi des noeuds (première équation) les différentes intensités.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c78818ae-d385-4795-8e1b-6bdba6f08e8f">
+<span class="eqno">(39)<a class="headerlink" href="#equation-c78818ae-d385-4795-8e1b-6bdba6f08e8f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{E + u_C}{R} + \frac{u_C}{R} + C \frac{\rm{d}u_C}{\rm{dt}} + i_l = 0
+\end{equation}\]</div>
+<p class="card-text">Dans le cas de <span class="math notranslate nohighlight">\(i_l\)</span>, puisqu’on connaît sa dérivée, on va dériver la loi des noeuds pour faire apparaître <span class="math notranslate nohighlight">\(\frac{\rm{d}i_l}{\rm{dt}}\)</span>.</p>
+<p class="card-text"><strong>Ne pas chercher à intégrer une grandeur (à cause des constantes d’intégration).</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-5ee6c262-9b21-41fb-90a2-837814f7f1ed">
+<span class="eqno">(40)<a class="headerlink" href="#equation-5ee6c262-9b21-41fb-90a2-837814f7f1ed" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{\frac{\rm{d}u_C}{\rm{dt}}}{R} + \frac{\frac{\rm{d}u_C}{\rm{dt}}}{R} + C \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{u_C}{L} = 0
+\end{equation}\]</div>
+<p class="card-text"><strong>Organisation de l’équation</strong><br />
+Il convient d’organiser (en fonction des dérivées) l’équation correctement. Nous verrons plus tard qu’il existe même une forme “canonique” sous laquelle mettre l’équation pour faire apparaître des grandeurs particulières.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-41b576ae-1c19-46a9-8e2b-9a2ff1b55698">
+<span class="eqno">(41)<a class="headerlink" href="#equation-41b576ae-1c19-46a9-8e2b-9a2ff1b55698" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+ \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = 0
+\end{equation}\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Analyse de l’équation</p>
+<p class="card-text">Homogénéité: Puisqu’une dérivée temporelle revient à diviser par un temps, on attend devant la dérivée première un facteur homogène à des <span class="math notranslate nohighlight">\(s^{-1}\)</span> (pour être homogène avec la dérivée seconde) et devant la fonction <span class="math notranslate nohighlight">\(u_C\)</span> un facteur homogène à des <span class="math notranslate nohighlight">\(s^{-2}\)</span>.</p>
+<p class="card-text">On peut montrer que le produit RC est homogène à un temps (utiliser les équations d’évolutions de R et C). et que le produit LC est homogène à un temps au carré (idem). L’expression est bien homogène.</p>
+<p class="card-text">Sens physique: Le système est d’ordre 2. C’est ce qu’on attend d’un circuit possèdant un condensateur et une bobine.</p>
+<p class="card-text">Dans le système (sans la tension d’entrée), il n’y a que des dipôles passifs. On attend donc que le système soit stable.</p>
+<p class="card-text">Nous verrons par la suite qu’on peut déterminer si un système est stable où non. Vous pourrez alors reprendre l’équation obtenue et vérifier qu’elle correspond à un système stable.</p>
+<p class="card-text">Nouveau régime forcé: Une autre vérification possible qui peut même faire l’objet d’une étude à part entière est le régime forcé. On rappelle qu’on peut en effet déterminer le régime forcé à partir du schéma. On trouve <span class="math notranslate nohighlight">\(u_{C,force} = 0\)</span> (<strong>s’entraîner à le prouver)</strong>.</p>
+<p class="card-text"><strong>On peut retrouver un régime forcé indépendant du temps en cherchant une solution constante à l’équation différentielle précédente</strong>.</p>
+<p class="card-text">Soit en cherchant <span class="math notranslate nohighlight">\(u_C(t) = U_0\)</span> l’équation <span class="math notranslate nohighlight">\(0 + 0 + \frac{1}{LC} U_0 = 0\)</span>. On trouve bien la bonne expression: l’équation est cohérente.</p>
+</div>
+</div>
+</details><div class="note admonition">
+<p class="admonition-title">Attention : Erreurs de calculs</p>
+<p>Il y a de nombreuses erreurs de calculs possibles qu’on retrouve fréquemment dans ce genre d’étude. Citons notamment le fait de ne pas annuler la dérivée de E (qui est une constante).</p>
+<p>De même à la fin, on a diviser par C. Il faut penser à diviser tous les termes de l’équation, y compris ceux de droite.</p>
+</div>
+</div>
+<div class="section" id="methode-determiner-l-equation-differentielle-utilisation-des-potentiels">
+<h3>Méthode: Déterminer l’équation différentielle (utilisation des potentiels)<a class="headerlink" href="#methode-determiner-l-equation-differentielle-utilisation-des-potentiels" title="Permalink to this headline">¶</a></h3>
+<p>La loi des noeuds en terme de potentiels peut aussi être utilisée. Elle demande simplement quelques ajustements en fonction de ce qu’on utilise.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le circuit de l’exercice précédent. Déterminer l’équation différentielle qui régit l’évolution de l’intensité qui circule dans la bobine quand on fermé l’interrupteur.</p>
+<div class="figure align-center" id="fig-162">
+<img alt="../_images/elec_circuit_etude_3.png" src="../_images/elec_circuit_etude_3.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Paramétrage</strong><br />
+Comme d’habitude, on paramètre les points de potentiels et on “choisit” une références des potentiels (elle est déjà imposée, ici M).</p>
+<p class="card-text">Au passage, on a <span class="math notranslate nohighlight">\(V_A = E\)</span></p>
+<p class="card-text">Remarque: Aviez-vous bien remarqué qu’il n’y avait que 3 points de potentiels différents ?</p>
+<p class="card-text">Il n’y a qu’une seule inconnue <span class="math notranslate nohighlight">\(V_B\)</span>. Ce n’est pas ce qu’on cherche (cette méthode aurait été beaucoup plus judicieuse pour chercher <span class="math notranslate nohighlight">\(u_C\)</span> mais nous voulons montrer que quelque soit la méthode, on peut aboutir). Il faudra établir ensuite une relation entre <span class="math notranslate nohighlight">\(V_B\)</span> et <span class="math notranslate nohighlight">\(i_l\)</span></p>
+<p class="card-text"><strong>Mise en équation</strong><br />
+On applique la loi des noeuds au point B. Il vient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-79e138b4-2146-4e38-804d-774267ed9708">
+<span class="eqno">(42)<a class="headerlink" href="#equation-79e138b4-2146-4e38-804d-774267ed9708" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i_e + i_r + i_c + i_l = 0
+\end{equation}\]</div>
+<p class="card-text">Pour la résistance et le condensateur, on peut directement utiliser la relation intensité-tension pour éliminer les intensités.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3c413dda-3167-48ca-89c5-c9c1dd764b0a">
+<span class="eqno">(43)<a class="headerlink" href="#equation-3c413dda-3167-48ca-89c5-c9c1dd764b0a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\begin{cases}
+i_e &amp;= \frac{V_A - V_B}{R} = \frac{E - V_B}{R}\\
+i_r &amp;= \frac{V_M - V_B}{R} = - \frac{V_B}{R}\\
+i_c &amp;= C \frac{\rm{d}(V_M-V_B)}{\rm{dt}} = - C \frac{\rm{d}V_B}{\rm{dt}}\\
+\end{cases}
+\Longrightarrow
+\frac{E - V_B}{R} - \frac{V_B}{R} - C \frac{\rm{d}V_B}{\rm{dt}} + i_l = 0
+\end{equation}\]</div>
+<p class="card-text">Pour la bobine, c’est différent car on relie la dérivée de l’intensité à la différence de potentiel: <span class="math notranslate nohighlight">\(V_M - V_B = L \frac{\rm{d}i_l}{\rm{dt}}\)</span>. Il va donc falloir dériver la loi des noeuds pour faire apparaître <span class="math notranslate nohighlight">\(V_B\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-6eeaf6a5-3b79-4f22-9367-936d888c8865">
+<span class="eqno">(44)<a class="headerlink" href="#equation-6eeaf6a5-3b79-4f22-9367-936d888c8865" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+- \frac{2}{R} \frac{\rm{d}V_B}{\rm{dt}} - C \frac{\rm{d^2}V_B}{\rm{dt}^2} - \frac{1}{L} V_B = 0
+\end{equation}\]</div>
+<p class="card-text">Remarquons qu’on obtient assez logiquement l’équation différentielle pour <span class="math notranslate nohighlight">\(u_C\)</span> obtenue précédemment (puisque <span class="math notranslate nohighlight">\(u_C = V_B - 0\)</span>). On voit que cette méthode pour déterminer <span class="math notranslate nohighlight">\(u_C\)</span> est de difficultés équivalente à la méthode présentée précédemment.</p>
+<p class="card-text"><strong>Du potentiel à l’intensité</strong><br />
+Il est important de noter qu’on ne peut utiliser l’équation de la bobine car elle relie le potentiel à la dérivée de l’intensité. Il faudrait donc intégrer l’équation ce qui nécessiterait des constantes d’intégration (qu’on ne connaît pas nécessairement).</p>
+<p class="card-text">On va utiliser l’équation (obtenue des équations précédentes):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b0725599-ca78-420b-bc63-de40fd4bc42c">
+<span class="eqno">(45)<a class="headerlink" href="#equation-b0725599-ca78-420b-bc63-de40fd4bc42c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i_l = C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B - \frac{E}{R}
+\end{equation}\]</div>
+<p class="card-text">On va établir une expression pour chaque terme de la somme précédente et sommer l’ensemble. Ainsi (on a simplement réorganisé puis manipulé - multiplication et dérivation - l’équation en <span class="math notranslate nohighlight">\(V_B\)</span> obtenue précédemment):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-464219bb-9199-46cb-b404-084d3dd56fea">
+<span class="eqno">(46)<a class="headerlink" href="#equation-464219bb-9199-46cb-b404-084d3dd56fea" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\frac{\rm{d^2} (\frac{2}{R}  V_B)}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} (\frac{2}{R} V_B)}{\rm{dt}} + \frac{1}{LC} (\frac{2}{R} V_B) &amp;= \frac{2}{R} \times 0 = 0\\
+\frac{\rm{d^2} (C \frac{\rm{d}V_B}{\rm{dt}})}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} (C \frac{\rm{d}V_B}{\rm{dt}})}{\rm{dt}} + \frac{1}{LC} (C \frac{\rm{d}V_B}{\rm{dt}}) &amp;= C \frac{\rm{d}0}{\rm{dt}} = 0\\
+\end{align}\]</div>
+<p class="card-text">soit en sommant:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0ad74ac0-a3f7-48e3-b280-efe0ebadaf91">
+<span class="eqno">(47)<a class="headerlink" href="#equation-0ad74ac0-a3f7-48e3-b280-efe0ebadaf91" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{\rm{d^2} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B)}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B)}{\rm{dt}} + \frac{1}{LC} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B) = 0 + 0
+\end{equation}\]</div>
+<p class="card-text">Il ne reste plus qu’à ajouter <strong>à gauche est à droite</strong> le terme <span class="math notranslate nohighlight">\(\frac{-E}{RLC}\)</span> et on obtient l’équation en <span class="math notranslate nohighlight">\(i_l\)</span> (on a rajouter aussi ce termes dans les dérivées temporelles sans modification puisqu’il s’agit d’un terme constant):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5815a446-2dfd-409d-8d59-9bd6383bb9bc">
+<span class="eqno">(48)<a class="headerlink" href="#equation-5815a446-2dfd-409d-8d59-9bd6383bb9bc" title="Permalink to this equation">¶</a></span>\[\begin{align}
+&amp;\frac{\rm{d^2} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B -\frac{E}{R})}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B -\frac{E}{R})}{\rm{dt}} + \frac{1}{LC} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B  -\frac{E}{R})=  -\frac{1}{LC} \frac{E}{R}\\
+\Longrightarrow&amp; \frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
+\end{align}\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Vérification de l’équation</p>
+<p class="card-text">{adv_verification_de_l_equation_8}
+Les vérifications sont similaires au cas précédent. On <strong>pensera</strong> à vérifier notamment le régime forcé.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Commentaire sur l’utilisation de la loi des noeuds.</p>
+<p class="card-text">{adv_commentaire_sur_l_utilisation_de_la_loi_des_noeuds__9}
+Malgré ce que laisse à penser cet exemple volontairement complexe (cf. suite), la loi des noeuds en terme de potentiel permet souvent de simplifier les problème <strong>quand on cherche à déterminer une tension ou un potentiel</strong> (on peut s’en rendre avec la détermination de <span class="math notranslate nohighlight">\(V_B\)</span>). Quand on cherche à déterminer une intensité. Il faut réfléchir. Suivant les cas, une méthode sera préférable ou pas…</p>
+</div>
+</div>
+</details></div>
+<div class="section" id="remarques-sur-les-equation-differentielles-obtenues">
+<h3>Remarques sur les équation différentielles obtenues<a class="headerlink" href="#remarques-sur-les-equation-differentielles-obtenues" title="Permalink to this headline">¶</a></h3>
+<p><strong>Equations obtenues</strong><br />
+Rappelons les deux équations obtenues. On donne aussi les équation d’évolution des trois autres intensités (s’entraîner à les déterminer est un bon exercice).</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8a803c67-fdb2-44f1-9e93-de61d04ae3ff">
+<span class="eqno">(49)<a class="headerlink" href="#equation-8a803c67-fdb2-44f1-9e93-de61d04ae3ff" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-c9db3143-824a-4817-a0fd-32b8fcd60fc7">
+<span class="eqno">(50)<a class="headerlink" href="#equation-c9db3143-824a-4817-a0fd-32b8fcd60fc7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+ \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = 0
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-b0f34570-2570-4dd1-8edd-ec7910c38ac2">
+<span class="eqno">(51)<a class="headerlink" href="#equation-b0f34570-2570-4dd1-8edd-ec7910c38ac2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+ \frac{\rm{d^2}i_r}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_r}{\rm{dt}} + \frac{1}{LC} i_r = 0
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-f40fff4f-eda6-4ea9-92b3-f7f61ed5b5ab">
+<span class="eqno">(52)<a class="headerlink" href="#equation-f40fff4f-eda6-4ea9-92b3-f7f61ed5b5ab" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+ \frac{\rm{d^2}i_c}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_c}{\rm{dt}} + \frac{1}{LC} i_c = 0
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-837ee0d0-7b8b-46e3-b4f9-923786b99753">
+<span class="eqno">(53)<a class="headerlink" href="#equation-837ee0d0-7b8b-46e3-b4f9-923786b99753" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+ \frac{\rm{d^2}i_e}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_e}{\rm{dt}} + \frac{1}{LC} i_e = \frac{E}{RLC}
+\end{equation}\]</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Equation homogène d’un circuit</strong><br />
+Dans un circuit linéaire, l’équation homogène est la même pour toute les grandeurs du circuits.</p>
+</div>
+</details><p><strong>Explications</strong><br />
+Il ne s’agit pas ici de démontrer cette propriété (<strong>qui ne peut être utilisée telle qu’elle de toute façon</strong>) mais d’en expliquer un peu les raisons et les implications.</p>
+<p>La raison est qu’on peut toujours obtenir une grandeur en fonction d’une (des autres) par des relations linéaires. Et l’on commence à faire des combinaisons linéaires d’une grandeur avec ses dérivées, elle sera toujours solution de la même équation différentielle.</p>
+<p>On a vu ce principe quand on cherché <span class="math notranslate nohighlight">\(i_l\)</span> à partir de l’équation en <span class="math notranslate nohighlight">\(V_B\)</span>. Notons qu’en pratique on le fait rarement.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Grandeurs caractéristiques d’un circuit.</strong><br />
+Il vient que l’évolution temporelle et la rapidité d’évolution (en terme de temps caractéristique) de chaque grandeur sera identique puisque ces caractéristiques font intervenir les exponentielles de <strong>la solution sans second membre</strong>, identique dans chaque cas.</p>
+<p class="card-text">C’est pourquoi on peut parler de la <strong>rapidité du système</strong> sans préciser de quelle grandeur on parle. On pourra de plus chercher une forme particulière à cette équation homogène (forme canonique) et étudier de manière générale ses caractéristiques.</p>
+<p class="card-text">Attention, les constantes d’intégration peuvent changer (elle ne sont même pas de la même unité si l’on considère une tension et une intensité). C’est la forme mathématique qui est la même et les coefficients <strong>dans</strong> les exponentielles (ou les sinusoïdes).</p>
+<p class="card-text">Ajoutons aussi que l’équation homogène ne dépend PAS de la grandeur d’entrée (que E soit nul, non nul, variable… ). Le système va réagir à des variations de E, tendre vers un régime forcé qui dépend de E mais sa rapidité à réagir ne dépend que de <strong>ses caractéristiques propres.</strong></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Second membre de l’équation</strong><br />
+A l’inverse, le second membre dépend de la grandeur considérée et de l’entrée.</p>
+</div>
+</details><p><strong>Régime forcé à partir de l’équation différentielle.</strong><br />
+Comme nous l’avons précisé dans les exercices, on peut déterminer un régime forcé indépendant du temps à partir des équations.</p>
+<p>On rappelle que cela n’a de sens que si le régime forcé EST indépendant du temps. Lorsqu’on a établi l’équation différentielle, on peut vérifier si c’est le cas en regardant si le second membre est constant. Si c’est le cas, le régime forcé le sera aussi et on peut le déterminer en cherchant une <strong>solution particulière de l’équation avec second membre sous la forme d’une constante</strong>.</p>
+<p><strong>Variation du second membre</strong><br />
+Avec la méthode présentée ci-dessus, li est évident que le second membre doit varier puisque le comportement de chaque grandeur sera a priori différent en régime forcé.</p>
+<p>Il faut donc bien noter cette différence entre l’équation homogène, qui <strong>caractérise le régime transitoire</strong> et le second membre qui va <strong>permettre de déterminer le régime forcé</strong> .</p>
+<p>Attention à ne pas confondre: il est évident que l’équation homogène (donc les caractéristiques du système) influe AUSSI sur le régime forcé. Mais le second membre n’influe pas lui sur la rapidité du régime transitoire ou le type de régime (nous les détaillerons par la suite mais on peut déjà relier ces “types” de régime à la solution mathématique de l’équation homogène).</p>
+<p>Ajoutons aussi que le second membre dépend de E et c’est logique puisque le régime <strong>forcé</strong> dépend de la grandeur d’entrée.</p>
+<p><strong>Les conditions initiales…</strong><br />
+Si l’on relie les remarques précédentes à l’étude habituelle d’une équation différentielle, on remarque que:</p>
+<ul class="simple">
+<li><p>la recherche de la solution générale ESSM - associée à l’équation homogène - ne dépend que des caractéristiques du système.</p></li>
+<li><p>la recherche du régime forcé - associée à la solution particulière de l’équation avec second membre - dépend des caractéristiques du circuit, de la grandeur d’entrée et de la grandeur considérée dans le circuit.</p></li>
+<li><p>Reste enfin les constantes d’intégration qui sont beaucoup plus “accidentelles”: elles vont dépendre de toutes les grandeurs citées précédemment mais aussi de l’état initial du système (et donc souvent de l’état dans lequel était le système AVANT de subir une perturbation).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="determination-des-conditions-initiales">
+<h2>Détermination des conditions initiales<a class="headerlink" href="#determination-des-conditions-initiales" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="combien-de-condition-initiales">
+<h3>Combien de condition initiales<a class="headerlink" href="#combien-de-condition-initiales" title="Permalink to this headline">¶</a></h3>
+<p><strong>Conditions initiales</strong><br />
+On rappelle que pour pouvoir résoudre de manière unique une équation différentielle, il faut connaître la valeur de la fonction (voire de ses dérivées) en certains points.</p>
+<p>Il faut donc déterminer (ou connaître) les valeurs des grandeurs qui nous intéressent à certains instants.</p>
+<p>Très souvent, on les détermine au moment (initial) où la perturbation se produit, c’est pourquoi on parle de <strong>conditions initiales</strong>.</p>
+<p><strong>Nombre de conditions initiales</strong><br />
+Le principe est simple. C’est l’ordre de l’équation qui va déterminer le nombre de conditions initiales nécessaires.</p>
+<p>Dans l’exemple précédent, le système est d’ordre 2. Il faut donc 2 conditions initiales (si possible la valeur de la fonction et de sa dérivée, c’est le plus simple).</p>
+</div>
+<div class="section" id="continuite-des-grandeurs">
+<h3>Continuité des grandeurs<a class="headerlink" href="#continuite-des-grandeurs" title="Permalink to this headline">¶</a></h3>
+<p><strong>Problème de continuité</strong><br />
+Comme nous l’avons évoqué précédemment, le système est souvent soumis à une brusque variation de la grandeur d’entrée, souvent modélisée par un échelon.</p>
+<p>Cela signifie que la grandeur d’entrée au temps <span class="math notranslate nohighlight">\(t_0\)</span> où se produit la perturbation est discontinue. Il vient que les autres grandeurs du système __sont a priori discontinues en <strong><span class="math notranslate nohighlight">\(t_0\)</span></strong>.</p>
+<p>C’est un gros problème car il nous faut déterminer les constantes d’intégration à partir de valeurs des signaux après la perturbation (conditions initiales). Et en général, on ne connaît bien le système <strong>qu’avant la perturbation</strong> (parce qu’il était “au repos” dans un état depuis un temps long\footnote{<strong>Temps long</strong> —La notion de temps long est important pour l’étude de régimes transitoires. Elle signifie qu’on a attendue assez longtemps pour que le régime transitoire soit terminée. On peut considérer alors qu’on est en régime forcé.</p>
+<p>Remarque: Un temps “long” signifie qu’on a attendu <strong>un temps grand devant le temps caractéristique du système considéré</strong>.</p>
+<p>Il faut noter que dans le cas de circuit électrique, le temps caractéristique est de l’ordre de quelques millisecondes voire beaucoup moins. Dans ces conditions, un dixième de seconde est…  un temps long !</p>
+<p>}).</p>
+<p>Pour résoudre ce problème, on va utiliser des grandeurs dont on sait qu’elle sont par propriété continues.</p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Grandeurs nécessairement continues</p>
+<ul class="simple">
+<li><p>La <strong>tension aux bornes d’un condensateur</strong> est une grandeur nécessairement continue.</p></li>
+<li><p><strong>L’intensité qui circule dans une bobine</strong> est une grandeur nécessairement continue.</p></li>
+</ul>
+</div>
+<p><strong>Démonstration</strong><br />
+La dérivée de ces deux grandeurs intervient dans les relations intensité tension de la bobine et du condensateur. Elles sont donc dérivables et donc nécessairement continues.</p>
+</div>
+<div class="section" id="methode-determiner-des-conditions-initiales">
+<h3>Méthode: Déterminer des conditions initiales<a class="headerlink" href="#methode-determiner-des-conditions-initiales" title="Permalink to this headline">¶</a></h3>
+<p>Cet exercice explique comment déterminer les conditions initiales nécessaires à la résolution de l’équation différentielle.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le circuit. L’interrupteur est ouvert depuis un temps long. A t=0, on ferme l’interrupteur. On rappelle qu’on a déterminé l’équation différentielle pour <span class="math notranslate nohighlight">\(u_C\)</span> et <span class="math notranslate nohighlight">\(i_l\)</span> pour t &gt; 0 (prendre les notations précédentes). Déterminer les conditions initiales nécessaires à la résolution de ces équations.</p>
+<div class="figure align-center" id="fig-163">
+<img alt="../_images/elec_circuit_etude_1.png" src="../_images/elec_circuit_etude_1.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Régime forcé et temps long</strong><br />
+Un élément important de l’énoncé est la notion de “temps long”. Elle signifie qu’on a atteint le régime forcé (ici indépendant du temps).</p>
+<p class="card-text">On peut donc considérer qu’à <span class="math notranslate nohighlight">\(t = 0^-\)</span>, le système est dans un régime forcé (avec <strong>l’interrupteur ouvert</strong>).</p>
+<p class="card-text">Par la suite nous appellerons ce régime l’ancien régime forcé en opposition avec le nouveau régime forcé qui va s’établir après fermeture de l’interrupteur…  au bout d’un temps long</p>
+</div>
+</details><p class="card-text"><strong>Quelles grandeurs déterminer dans l’ancien régime forcé</strong><br />
+Le but n’est pas de caractériser entièrement l’ancien régime forcé mais de déterminer les grandeurs qui nous permettent d’avoir des informations sur les conditions initiales, c’est-à-dire sur __l’instant <strong><span class="math notranslate nohighlight">\(t=0^+\)</span></strong>.</p>
+<p class="card-text">A cause de la discontinuité introduite par la fermeture brutale de l’interrupteur, les grandeurs peuvent être discontinue à t=0. On ne peut donc obtenir des information à <span class="math notranslate nohighlight">\(t=0^+\)</span> des informations qu’on a à <span class="math notranslate nohighlight">\(t=0^-\)</span> que <strong>des grandeurs continues par propriétés: la tension aux bornes du condensateur et l’intensité circulant dans la bobine.</strong>.</p>
+<p class="card-text">Les grandeurs qu’il convient de calculer dans l’ancien régime forcé sont donc ces grandeurs.</p>
+<p class="card-text"><strong>Grandeurs avant fermeture de l’interrupteur</strong><br />
+L’étude de l’ancien régime permanent donne <span class="math notranslate nohighlight">\(u_C(t=0^-) = 0\)</span> (la bobine assimilable à un fil impose une tension nulle aux bornes du condensateur) et <span class="math notranslate nohighlight">\(i_l(t=0^-) = -\frac{E}{R}\)</span> (loi des mailles).</p>
+<p class="card-text">Ces grandeurs étant continues, il vient <span class="math notranslate nohighlight">\(\boxed{i_l(t=0^+)=- \frac{E}{R}}\)</span> et <span class="math notranslate nohighlight">\(\boxed{u_C(t=0^+) = 0}\)</span></p>
+<div class="note admonition">
+<p class="admonition-title">Attention : Lien entre grandeurs étudiés et grandeurs continues</p>
+<p class="card-text">IL N’Y EN A AUCUN…</p>
+<p class="card-text">Le fait qu’on s’intéresse à <span class="math notranslate nohighlight">\(u_C\)</span> et <span class="math notranslate nohighlight">\(i_l\)</span> et que ce sont ces grandeurs qu’on calcule dans l’ancien régime permanent n’a aucun rapport.</p>
+<p class="card-text">On calcule ces grandeurs <strong>parce qu’elles sont continues.</strong></p>
+</div>
+<p class="card-text"><strong>Etude du circuit à t=0. Cas de la bobine.</strong><br />
+On rappelle qu’il faut les valeurs de deux grandeurs puisque le circuit est d’ordre 2 (cf. les équations établies précédemment). Techniquement, on dispose déjà de deux grandeurs. On peut donc résoudre. Cela dit, il peut être plus simple d’étudier le circuit pour obtenir la valeur de <span class="math notranslate nohighlight">\(i_l(t=0^+) = 0\)</span> et de <span class="math notranslate nohighlight">\(\frac{\rm{d}i_l}{\rm{dt}}(t=0^+)\)</span> pour résoudre l’équation différentielle comme on a l’habitude de le faire (ce n’est pas obligatoire si on sait bien manipuler les expressions ensuite).</p>
+<p class="card-text">Ici, on connaît déjà la valeur de l’intensité (<span class="math notranslate nohighlight">\(i_l(t=0^+) = 0\)</span>) et <span class="math notranslate nohighlight">\(\frac{\rm{d}i_l}{\rm{dt}}(t=0^+) = \frac{u_L}{L} = \frac{u_C}{L} = 0\)</span></p>
+<p class="card-text">On dispose donc des deux conditions initiales pour résoudre l’équation.</p>
+<p class="card-text"><strong>Etude du circuit à t=0. Cas du condensateur.</strong><br />
+Cette fois, on connaît <span class="math notranslate nohighlight">\(u_C(t=0^+) = 0\)</span> mais pas sa dérivée. Il va falloir utiliser les lois de Kirchhoff.</p>
+<p class="card-text">On a <span class="math notranslate nohighlight">\(\frac{\rm{d}u_C}{\rm{dt}}(t=0^+) = \frac{i_c(t=0^+)}{C}.\)</span> Utilisons la loi des noeuds <span class="math notranslate nohighlight">\(i_e + i_r + i_l + i_c = 0\)</span></p>
+<p class="card-text">On a déjà <span class="math notranslate nohighlight">\(i_l = 0\)</span>. Remarquons que <span class="math notranslate nohighlight">\(i_r = \frac{u_{R2}}{R} = \frac{u_{C}}{R} = 0\)</span> donc <span class="math notranslate nohighlight">\(i_c = - i_e\)</span>.</p>
+<p class="card-text">On peut de plus écrire une loi des mailles <span class="math notranslate nohighlight">\(E - R i_e + R i_r = 0\)</span> soit <span class="math notranslate nohighlight">\(i_e = \frac{E}{R}\)</span>.</p>
+<p class="card-text">Il vient: <span class="math notranslate nohighlight">\(\frac{\rm{d}u_C}{\rm{dt}}(t=0^+) = - \frac{E}{RC}\)</span></p>
+<div class="note admonition">
+<p class="admonition-title">Attention : Etude à un instant</p>
+<p class="card-text"><strong>On ne peut pas utiliser les relations des bobines et condensateurs car ces relations font intervenir des dérivées.</strong> Or on étudie le circuit en un point, pas sur une durée. On n’a pas d’information sur la fonction <span class="math notranslate nohighlight">\(u_C\)</span>, uniquement se son image en t=0.</p>
+<p class="card-text">Et ce qu’on a calculé est bien l’image de la dérivée de <span class="math notranslate nohighlight">\(u_C\)</span> à <span class="math notranslate nohighlight">\(t=0^+\)</span>.</p>
+<p class="card-text">On remarquera que cette dérivée n’est pas continue.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Pour ne pas se tromper</p>
+<p class="card-text">Il est conseillé de préciser si l’on calcule une valeur d’une fonction à un instant donné ou bien si l’on la calcule pour tout instant t sur intervalle.</p>
+<p class="card-text">Une bonne manière de ne pas se tromper est de bien écrire <span class="math notranslate nohighlight">\(u(t=0^+)\)</span> ou <span class="math notranslate nohighlight">\(u(t)\)</span> suivant les besoins.</p>
+</div>
+</div>
+</details></div>
+</div>
+<div class="section" id="etude-de-l-evolution-temporelle">
+<h2>Etude de l’évolution temporelle<a class="headerlink" href="#etude-de-l-evolution-temporelle" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Etude de l’évolution temporelle<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Rappel : Méthode de résolution</strong><br />
+On rappelle ici la méthode de résolution d’une équation différentielle. Insistons sur le fait que l’ordre de résolution est fondamental.</p>
+<ol class="simple">
+<li><p>Déterminer à partir de l’équation homogène la solution générale de l’équation sans second membre.</p></li>
+<li><p>Déterminer une solution particulière de l’équation avec second membre. En physique, on cherchera <strong>une solution particulière correspondant au régime forcé.</strong>. Ainsi, si le second membre est constant, on cherchera une solution constante. <strong>Ne pas utiliser la méthode de la variation de la constante en physique.</strong></p></li>
+<li><p>En déduire la solution générale de l’équation avec second membre en sommant les deux fonctions précédentes.</p></li>
+<li><p>Déterminer les constantes d’intégration à partir des conditions initiales.</p></li>
+</ol>
+<p><strong>Autre études</strong><br />
+A partir de la solution déterminée précédemment, on peut être amené à:</p>
+<ol class="simple">
+<li><p>Tracer l’évolution temporelle.</p></li>
+<li><p>Analyser un tracé temporel donné pour l’associer au système ou déterminer certaines caractéristiques (conditions initiales, régime forcé, type de régime pour un circuit d’ordre 2 - cf. suite - … )</p></li>
+<li><p>Faire un bilan de puissance ou un bilan énergétique en déterminant la puissance reçue/fournie ou l’énergie reçue/fournie par les différents dipôles.</p></li>
+<li><p>…</p></li>
+</ol>
+</div>
+<div class="section" id="methode-determiner-l-evolution-temporelle">
+<h3>Méthode: Déterminer l’évolution temporelle.<a class="headerlink" href="#methode-determiner-l-evolution-temporelle" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On redonne ci-dessous l’équation différentielle qui régit l’évolution de <span class="math notranslate nohighlight">\(u_C\)</span> ainsi que les conditions initiales. Déterminer <span class="math notranslate nohighlight">\(u_C(t)\)</span> pour t&gt;0 en supposant <span class="math notranslate nohighlight">\(R &gt; \sqrt{\frac{L}{C}}\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-f9b17d41-7624-4c21-bac2-bfe3a2f4ff94">
+<span class="eqno">(54)<a class="headerlink" href="#equation-f9b17d41-7624-4c21-bac2-bfe3a2f4ff94" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+ \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = 0
+\end{equation}\]</div>
+<p>Conditions initiales: <span class="math notranslate nohighlight">\(u_C(t=0^+) = 0\)</span> et <span class="math notranslate nohighlight">\(\frac{\rm{d}u_C}{\rm{dt}}(t=0^+) = -\frac{E}{RC}\)</span></p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Résolution de l’équation</strong><br />
+On commence par chercher la solution de l’équation homogène. L’équation caractéristique est: <span class="math notranslate nohighlight">\(r^2 + \frac{2}{RC} r + \frac{1}{LC} = 0\)</span> soit comme solution:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f5d4d7eb-349d-4c77-a8e3-3af6916517d4">
+<span class="eqno">(55)<a class="headerlink" href="#equation-f5d4d7eb-349d-4c77-a8e3-3af6916517d4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+r = -\frac{1}{RC} \pm j \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} 
+\end{equation}\]</div>
+<p class="card-text">La condition donnée dans l’énoncé implique un discriminant négatif, d’où l’utilisation des complexes. On rappelle qu’en physique <span class="math notranslate nohighlight">\(j^2 = -1\)</span></p>
+<p class="card-text">Il vient la solution (on sépare les parties imaginaires et parties réelles) et l’on obtient directement la solution car il n’y a pas de second membre:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fcceebd6-1115-49d9-82ff-f06fae210e2a">
+<span class="eqno">(56)<a class="headerlink" href="#equation-fcceebd6-1115-49d9-82ff-f06fae210e2a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u_{C} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right)
+\end{equation}\]</div>
+<p class="card-text">Il ne reste plus qu’à introduire les conditions initiales (Pour la seconde, on a déjà utilisé le fait que A = 0):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a2a235b9-9996-48cc-b12d-909d76aff7b4">
+<span class="eqno">(57)<a class="headerlink" href="#equation-a2a235b9-9996-48cc-b12d-909d76aff7b4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+u_{C} (t=0^+) &amp;= A = 0\\
+\frac{\rm{d}u_C}{\rm{dt}}(t=0^+) &amp;= B \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} = - \frac{E}{RC}
+\end{align}\]</div>
+<p class="card-text">Il vient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-88c75ac0-d0e0-4946-a373-97a4e368ac70">
+<span class="eqno">(58)<a class="headerlink" href="#equation-88c75ac0-d0e0-4946-a373-97a4e368ac70" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u_{C} (t) = - \frac{E}{RC \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} {\exp}^{- \frac{t}{RC}}  \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)
+\end{equation}\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Vérification du résultat</p>
+<p class="card-text">Homogénéité: on doit vérifier plusieurs points: le facteur devant l’exponentielle doit être homogène à une tension et les deux facteurs dans l’exponentielle et le sinus doivent être homogène à des inverses de temps.</p>
+<p class="card-text">On peut utiliser le fait que RC est homogène à un temps (ce qu’on attend pour l’exponentielle) et LC homogène à un temps au carré. Il vient directement que l’argument de la racine est bien une somme de terme homogène à des <span class="math notranslate nohighlight">\(s^{-2}\)</span> donc la racine est homogène à des <span class="math notranslate nohighlight">\(s^{-1}\)</span> comme on l’attend dans le sinusoïde et au dénominateur du premier facteur (E est une tension, le dénominateur doit être sans dimension).</p>
+<p class="card-text">Sens physique: Il est important de vérifier: les conditions initiales et le nouveau régime forcé</p>
+<p class="card-text">Les conditions initiales correspondent bien à la valeur de la fonction et de sa dérivée à t=0.</p>
+<p class="card-text">Quand au nouveau régime forcé, on <strong>prend la limite à l’infini</strong>. On trouve bien 0.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Remarques générales</strong><br />
+Comme nous le verrons par la suite, on introduit souvent des grandeurs intermédiaires qui permettent de caractériser le système et qu’on retrouvera à chaque dans un système d’ordre i.</p>
+<p class="card-text">Ici, on a un système d’ordre 2, on introduirait (leur définition ne sera donné que plus tard): le facteur de qualité, la pulsation propre, la pseudo-pulsation</p>
+<p class="card-text">Nous le ferons lors de l’étude générale des systèmes d’ordre 2 mais remarquons que déjà qu’il s’agit d’une fonction sinusoïdale dont l’amplitude décroit exponentiellement. On parle de régime pseudo-périodique. Le tracé peut s’effectuer assez simplement comme nous le verrons par la suite.</p>
+</div>
+</details></div>
+</details></div>
+<div class="section" id="exemple-d-autres-etudes">
+<h3>Exemple d’autres études<a class="headerlink" href="#exemple-d-autres-etudes" title="Permalink to this headline">¶</a></h3>
+<p>Nous allons voir ici l’exemple d’autres études à partir soit de l’équation différentielle, soit de la forme temporelle. On rappelle qu’on peut aussi obtenir des information du circuit même (en régime forcé par exemple). Il est conseillé d’essayer de faire cet exercice avant de regarder la réponse.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On rappelle que l’équation qui régit l’évolution de i(t) est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-dfd40937-b351-40e7-9f28-1186134cf584">
+<span class="eqno">(59)<a class="headerlink" href="#equation-dfd40937-b351-40e7-9f28-1186134cf584" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
+\end{equation}\]</div>
+<p>Conditions initiales: <span class="math notranslate nohighlight">\(i_l(t=0^+) = 0\)</span> et <span class="math notranslate nohighlight">\(\frac{\rm{d}i_l}{\rm{dt}}(t=0^+) = 0\)</span></p>
+<ol class="simple">
+<li><p>Déterminer <span class="math notranslate nohighlight">\(i_l(t)\)</span> dans l’hypothèse <span class="math notranslate nohighlight">\(R &gt; \sqrt{\frac{L}{C}}\)</span>.</p></li>
+<li><p>En déduire la puissance reçue par le bobine p(t).</p></li>
+<li><p>Déterminer l’énergie reçue par la bobine entre <span class="math notranslate nohighlight">\(t=0\)</span> et <span class="math notranslate nohighlight">\(t=+\infty\)</span>.</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Q1. Résolution de l’équation différentielle.</strong><br />
+La solution générale de l’équation homogène est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6c91fd98-564e-44a6-9ada-30b33e753385">
+<span class="eqno">(60)<a class="headerlink" href="#equation-6c91fd98-564e-44a6-9ada-30b33e753385" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i_{l,0} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right)
+\end{equation}\]</div>
+<p class="card-text">On cherche une solution particulière constante à l’équation avec second membre <span class="math notranslate nohighlight">\(i_{L,1}(t) = I_0\)</span>. L’équation à résoudre (les dérivées temporelles s’annulent):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-32f2dd49-db98-4fc6-8ca1-375489e17494">
+<span class="eqno">(61)<a class="headerlink" href="#equation-32f2dd49-db98-4fc6-8ca1-375489e17494" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{1}{LC} I_0 = - \frac{E}{RLC} \Longrightarrow I_0 = -\frac{E}{R}
+\end{equation}\]</div>
+<p class="card-text">La solution générale de l’équation avec second membre (identique à l’exercice précédent) est donc:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fddb9ad1-5d4c-47b6-a704-750a44f33928">
+<span class="eqno">(62)<a class="headerlink" href="#equation-fddb9ad1-5d4c-47b6-a704-750a44f33928" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i_{l} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}
+\end{equation}\]</div>
+<p class="card-text">Les conditions initiales donnent le système d’équations:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-18cbe379-d4ea-4726-b76d-75230400f089">
+<span class="eqno">(63)<a class="headerlink" href="#equation-18cbe379-d4ea-4726-b76d-75230400f089" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_{l} (t=0^+) = A - \frac{E}{R} = 0 &amp;\Longrightarrow A = \frac{E}{R}\\
+\frac{\rm{d}i_l}{\rm{dt}} (t=0^+) = -\frac{E}{R^2C} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} B = 0 &amp;\Longrightarrow B = \frac{E}{R^2C\frac{1}{LC} - \frac{1}{{(RC)}^2}}
+\end{align}\]</div>
+<p class="card-text">On en déduit l’expression de l’intensité <span class="math notranslate nohighlight">\(i_l(t)\)</span> et de la tension <span class="math notranslate nohighlight">\(u_L(t)\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c8c184fb-790a-4e27-96a6-62d890d7256c">
+<span class="eqno">(64)<a class="headerlink" href="#equation-c8c184fb-790a-4e27-96a6-62d890d7256c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_{l} (t) &amp;= {\exp}^{- \frac{t}{RC}} \left(\frac{E}{R} \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + \frac{E}{R^2C\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}\\
+u_{L} (t) &amp;= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} \right) \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t  \right)
+\end{align}\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Vérification du résultat</p>
+<p class="card-text">{adv_verification_du_resultat_12}
+S’entraîner comme précédemment à vérifier l’homogénéité du résultat et les informations physiques qu’on attend.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Attention : Erreur fréquentes</p>
+<p class="card-text">L’erreur fréquentes que les élèves font est de chercher les constantes d’intégration AVANT la solution particulière. C’est faux (ici on trouvera <span class="math notranslate nohighlight">\(i_l(t) =0\)</span> ce qui est évidemment incohérent).</p>
+</div>
+<p class="card-text"><strong>Puissance reçue</strong><br />
+Nous sommes en convention récepteur donc la puissance reçue est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-20ef6cd9-ddb7-4e55-975e-46a9a7770164">
+<span class="eqno">(65)<a class="headerlink" href="#equation-20ef6cd9-ddb7-4e55-975e-46a9a7770164" title="Permalink to this equation">¶</a></span>\[\begin{align}
+p(t) &amp;= i_{l}(t) \times u_L(t) \\
+&amp;= - L I_A^2 \left ({\exp}^{- \frac{2t}{\tau}} \left(\cos \left(\Omega t \right) + \frac{1}{\tau \Omega} \sin \left(\Omega t \right)\right)\left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right) - \right )\\
+&amp; \times {\exp}^{- \frac{t}{\tau}} \left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right)
+\end{align}\]</div>
+<p class="card-text">On a introduit les grandeurs suivantes : <span class="math notranslate nohighlight">\(\tau = RC\)</span> et <span class="math notranslate nohighlight">\(\Omega =\sqrt{ \frac{1}{LC} - \frac{1}{{(RC)}^2}}\)</span>. Ce dernier terme est d’ailleurs très utilisé, on l’appelle la pseudo-période. Nous en reparlerons par la suite.</p>
+<p class="card-text"><strong>Variation d’énergie dans une bobine</strong><br />
+Première méthode: intégrer l’expression précédente entre 0 et l’infini…  …  …  On attendra pas un calcul aussi lourd (bien qu’il soit faisable et très formateur !).</p>
+<p class="card-text">Il faut se rappeler que l’énergie reçue par la bobine est stockée et qu’on connaît l’expression de cette énergie stockée. Ainsi, l’énergie reçue sera la différence entre l’énergie stockée au final et l’énergie stockée initialement.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c663d9c9-43d0-4750-8c09-149e8ca36272">
+<span class="eqno">(66)<a class="headerlink" href="#equation-c663d9c9-43d0-4750-8c09-149e8ca36272" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\Delta E_L = E_L(t=+\infty) - E_L(t=0) = \frac{1}{2}L I(t=\infty)^2 - \frac{1}{2}L I(t=0)^2 = \frac{L E^2}{2R^2}
+\end{equation}\]</div>
+</div>
+</details></div>
+<div class="section" id="analyse-des-formes-des-solutions">
+<h3>Analyse des formes des solutions<a class="headerlink" href="#analyse-des-formes-des-solutions" title="Permalink to this headline">¶</a></h3>
+<p><strong>Rappel des expressions</strong><br />
+On rappelle les expressions trouvées pour la tension aux bornes du condensateur et pour l’intensité circulant dans la bobine. On pourra pour élargir encore les observations calculer les autres grandeurs du circuits.</p>
+<div class="figure align-center" id="fig-164">
+<img alt="../_images/eq_compara.png" src="../_images/eq_compara.png" />
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Similitudes</strong><br />
+Commençons par la similitude qui est la forme générale de l’équation sans second membre (parties non encadrées dans les expressions précédentes).</p>
+<p class="card-text">C’est assez logique quand on sait que les équations homogènes sont identiques. On va retrouver à chaque fois des caractéristiques générales à toutes les grandeurs, donc <strong>au système (le circuit)</strong>.</p>
+<p class="card-text">Remarquons ainsi que ces signaux sont non négligeables tant que l’exponentielle est non négligeable, soit tant que <span class="math notranslate nohighlight">\(t \ll RC\)</span>. On trouve ainsi le temps caractéristique <strong>du circuit</strong>: RC. Ce temps sera caractéristique de la durée du régime transitoire quelque soient la grandeur qui nous intéresse.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Première différence</strong><br />
+Une différence concerne la solution particulière (cadre rouge).</p>
+<p class="card-text">On rappelle qu’on se débrouille en général pour que la solution cherchée corresponde au régime forcé.</p>
+<p class="card-text">Ainsi celui-ci dépend de la grandeur considérée et comme on l’a remarqué pour le second membre des équations différentielles, il est normal qu’il dépende de l’entrée et la grandeur considérée (en plus de dépendre du circuit complet).</p>
+</div>
+</details><p><strong>Seconde différence</strong><br />
+Une seconde différence concerne les constantes d’intégration (en vert). Elles vont aussi dépendre de l’état initial (en plus de toutes les dépendances citées précédemment).</p>
+<p>Remarquons que ce sont les seules grandeurs qui vont garder trace du l’état initial: ni la forme de la solution générale ESSM, ni le régime forcé ne va dépendre de l’état initial. Ce sont les grandeurs qui donnent le moins d’information sur le comportement général du système.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="trans_regimes.html" title="previous page">Régime transitoire et régime forcé</a>
+    <a class='right-next' id="next-link" href="trans_stabilite.html" title="next page">Stabilité des systèmes linéaires d’ordre 1 et 2</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

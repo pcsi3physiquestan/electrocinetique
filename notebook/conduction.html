@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Décrire la conduction électrique à notre échelle : Courant et Tension &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/conduction.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Étudier un circuit : les bases" href="el_lois.html" />
+    <link rel="prev" title="Bases de l’électrocinétique" href="el_bases.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Décrire la conduction électrique à notre échelle : Courant et Tension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="el_lois.html">
+     Étudier un circuit : les bases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_bases.html">
+     TD Electrocinétique 1: Bases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="ci_lineaire.html">
+   Dipôles et circuits linéaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_gene.html">
+     Dipôles électriques: Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_passif.html">
+     Dipôles linéaires passifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_assoc.html">
+     Association de résistances
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_actif.html">
+     Dipôles linéaires actifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_methode.html">
+     Etude d’un circuit linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_lineaires.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_lineaires.html">
+     TD Electrocinétique 2: Circuits linéaires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_gene.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_regimes.html">
+     Régime transitoire et régime forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_methodes.html">
+     Méthodes d’analyse d’un régime transitoire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_stabilite.html">
+     Stabilité des systèmes linéaires d’ordre 1 et 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="meth_trans.html">
+     Activités méthodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_ordre.html">
+   Régime transitoire (2): Ordre 1 et 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_1.html">
+     Caractéristiques d’un système d’ordre 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_2.html">
+     Caractéristiques d’un système d’ordre 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans_o.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_trans_o.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_2.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_trans.html">
+     TD Electrocinétique 3: Régimes de fonctionnements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_interet.html">
+     Intérêt de l’étude fréquentielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_gene.html">
+     Régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_methode.html">
+     Méthode d’étude d’un régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_rsf.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbande.html">
+       Cas passe-bande
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbas.html">
+       Cas passe-bas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf_2.html">
+     Activités d’application (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_rsf.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="filtrage.html">
+   Filtrage linéaire (1): Principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_def.html">
+     Filtre: définition et caractéristiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_reponse.html">
+     Réponse d’un filtre linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_gene.html">
+     Caractéristiques générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_typo.html">
+     Typologie des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cahier.html">
+     Cahier des charges d’un filtre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cascade.html">
+     Mise en cascade des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_filtrage.html">
+     Travaux dirigés: Filtrage linéaire
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/conduction.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/conduction.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/conduction.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#charge-electrique">
+   Charge électrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conduction-et-courant">
+   Conduction et courant
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phenomene-de-conduction">
+     Phénomène de conduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intensite-et-intensite-moyenne">
+     Intensité et intensité moyenne
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-calculer-une-intensite-par-des-considerations-microscopiques">
+     Méthode : Calculer une intensité par des considérations microscopiques.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordres-de-grandeur-des-courants-electriques">
+     Ordres de grandeur des courants électriques
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potentiel-electrique-et-tension">
+   Potentiel électrique et tension
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potentiel-electrique">
+     Potentiel électrique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique">
+     Analogie entre un circuit hydraulique et un circuit électrique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordre-de-grandeurs-des-tensions">
+     Ordre de grandeurs des tensions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires">
+   Approximation des régimes quasi-stationnaires
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ondes-electriques-dans-les-circuits">
+     Ondes électriques dans les circuits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires-arqs">
+     Approximation des régimes quasi-stationnaires (ARQS)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definitions-utiles">
+     Définitions utiles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intensite-dans-une-branche-dans-l-arqs">
+     Intensité dans une branche dans l’ARQS
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension">
+<h1>Décrire la conduction électrique à notre échelle : Courant et Tension<a class="headerlink" href="#decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="charge-electrique">
+<h2>Charge électrique<a class="headerlink" href="#charge-electrique" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Charge électrique</p>
+<p>La charge électrique est une propriété fondamentale de la matière qui lui permet d’interagir avec les champs électromagnétiques.</p>
+<p>L’unité usuelle de mesure de la charge électrique est le Coulomb (C).</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Conservation de la charge</p>
+<p>La charge est une grandeur qui se conserve, c’est-à-dire qu’elle ne peut ni être détruire, ni être produite.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Quantification de la charge</p>
+<p>On observe<a class="footnote-reference brackets" href="#milikan" id="id1">1</a> que la charge Q de tout système est  un multiple entier de la charge élementaire <span class="math notranslate nohighlight">\(e = 1.609 \times 10^{-19} \rm{C}\)</span>.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice Exemple de particules chargées</p>
+<p>Les particules chargées sont:</p>
+<ul class="simple">
+<li><p>les électrons (de charge -e)</p></li>
+<li><p>les protons (charge e) et noyaux</p></li>
+<li><p>les ions (cations et anions)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="conduction-et-courant">
+<h2>Conduction et courant<a class="headerlink" href="#conduction-et-courant" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="phenomene-de-conduction">
+<h3>Phénomène de conduction<a class="headerlink" href="#phenomene-de-conduction" title="Permalink to this headline">¶</a></h3>
+<p><strong>Conduction</strong><br />
+Le phénomène de conduction correspond au déplacement de charges dans un matériau (solide ou liquide).</p>
+<div class="figure align-center" id="fig-conduction-par-lacune-electronique84">
+<img alt="../_images/elec_conduction_trou.gif" src="../_images/elec_conduction_trou.gif" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Conduction par lacune électronique</span><a class="headerlink" href="#fig-conduction-par-lacune-electronique84" title="Permalink to this image">¶</a></p>
+</div>
+<p>Les charges de conduction peuvent être de natures diverses.</p>
+<ul class="simple">
+<li><p>des électrons</p></li>
+<li><p>des ions</p></li>
+<li><p>des lacunes électroniques, c’est-à-dire le déplacement de proche en proche d’un manque d’électrons.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Courant électrique et intensité.</p>
+<p>Le courant électrique <strong>à travers</strong> une section S <strong>orienté arbitrairement</strong> correspond au passage des charges de conduction à travers cette section par unité de temps.</p>
+<p>La grandeur mesurant le courant électrique est l’<strong>intensité du courant</strong>. Elle se définit comme le débit de charge à travers la surface, c’est-à-dire la quantité de charge traversant la surface S par unité de temps.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Attention : Caractère algébrique de la charge</p>
+<p>Pour chaque charge q traversant la section S, la charge q est ajoutée au bilan de quantité de charges si elle se déplace dans le sens d’orientation de la surface S et est enlevée au bilan si elle se déplace dans l’autre sens.</p>
+<p>Mais les charges sont algébriques : elles peuvent être positives ou négatives. Donc si une charge négative traverse la surface dans le “bon sens” c’est-à-dire dans le sens d’orientation de S, elle va diminuer la valeur de l’intensité et non l’augmenter.</p>
+<p>Si l’on considère sur le schéma que toutes les charges représentées vont traverser la surface S durant 1 seconde, alors la charge <span class="math notranslate nohighlight">\(\Delta Q\)</span> qui va traverser S est :</p>
+<p><span class="math notranslate nohighlight">\(Q_{Tot} = Q_1 + Q_2 + Q_3 - Q_4 - Q_5 - Q_6\)</span></p>
+<p><span class="math notranslate nohighlight">\( = -3 + 0.25 + 1.5 - 2.5 - (-0.25) - 2 = - 5.5 C\)</span></p>
+<p>d’où une intensité <span class="math notranslate nohighlight">\(i = \frac{Q_{Tot}}{\Delta t} = - 5.5 A\)</span>.</p>
+<p>Remarque : Cette valeur est très grandeur et les charges des porteurs de charge sont en réalité beaucoup plus faibles.</p>
+<div class="figure align-center" id="fig-caractere-algebrique-des-charges85">
+<img alt="../_images/elec_i_algebrique.png" src="../_images/elec_i_algebrique.png" />
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Caractère algébrique des charges</span><a class="headerlink" href="#fig-caractere-algebrique-des-charges85" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Orientation de l’intensité</strong></p>
+<div class="figure align-center" id="fig-representation-de-l-intensite-dans-un-circuit-normalise86">
+<img alt="../_images/elec_i_micro_macro.png" src="../_images/elec_i_micro_macro.png" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Représentation de l’intensité dans un circuit normalisé</span><a class="headerlink" href="#fig-representation-de-l-intensite-dans-un-circuit-normalise86" title="Permalink to this image">¶</a></p>
+</div>
+<p class="card-text">L’orientation de la surface correspond dans les schémas électriques habituels à l’orientation de l’intensité. Cette orientation est arbitraire.</p>
+<p class="card-text">Dans ces représentations, on ne tient pas compte de l’épaisseur du fil.</p>
+</div>
+</details><div class="note admonition">
+<p class="admonition-title">Attention : Caractère algébrique</p>
+<p>L’orientation de l’intensité dans un fil est <strong>arbitraire</strong>. C’est la personne qui fait l’étude (ou qui pose la question… ) qui choisit l’orientation. Il n’est pas nécessaire qu’elle correspondent au phénomène réel de conduction. Il n’y a donc pas à réfléchir physiquement à ce qui se passe dans le circuit pour orienter i.</p>
+<p><strong>Trouver une intensité négative n’est PAS une erreur.</strong> Cela veut simplement dire que le débit de charge est positivement dans l’autre sens.</p>
+<p><em>Remarque : Comme dans la plupart des études que nous ferons la conduction sera assurée par des électrons, le débit des porteurs de charge sera en général inverse en sens d’une intensité positive.</em></p>
+</div>
+</div>
+<div class="section" id="intensite-et-intensite-moyenne">
+<h3>Intensité et intensité moyenne<a class="headerlink" href="#intensite-et-intensite-moyenne" title="Permalink to this headline">¶</a></h3>
+<p><strong>Intensité moyenne</strong><br />
+L’intensité moyenne consiste à mesurer le débit de charge pendant un temps <span class="math notranslate nohighlight">\(\Delta t\)</span> fini. On divise alors la quantité de charge (algébrique) par la durée pour obtenir l’intensité moyenne.</p>
+<p><strong>Intensité</strong><br />
+L’intensité qu’on calcule générale est l’intensité instantanée, c’est-à-dire la mesure du débit en faisant tendre la durée <span class="math notranslate nohighlight">\(\Delta t\)</span> vers 0. En utilisant les notations différentielles, on a alors :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-04ed9f18-8920-466c-8e3e-1661e79616ea">
+<span class="eqno">(1)<a class="headerlink" href="#equation-04ed9f18-8920-466c-8e3e-1661e79616ea" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i = \frac{\rm{d}q}{\rm{dt}}
+\end{equation}\]</div>
+<p>avec q la quantité de charge traversant la surface orientée.</p>
+</div>
+<div class="section" id="methode-calculer-une-intensite-par-des-considerations-microscopiques">
+<h3>Méthode : Calculer une intensité par des considérations microscopiques.<a class="headerlink" href="#methode-calculer-une-intensite-par-des-considerations-microscopiques" title="Permalink to this headline">¶</a></h3>
+<p>Cette méthode ne sera pas souvent utilisée dans ces chapitres mais est très utile pour comprendre le passage du microscopique au macroscopique.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Estimer le nombre d’électrons par unité de volume pouvant participer à la conduction électrique. On donne :</p>
+<ul class="simple">
+<li><p>Masse molaire du cuivre : <span class="math notranslate nohighlight">\(M_{Cu} = 63.5 \rm{g.mol^{-1}}\)</span></p></li>
+<li><p>Masse volumique du cuivre : <span class="math notranslate nohighlight">\(\rho_{Cu} = 9 \times 10^3 \rm{kg.m^{-3}}\)</span></p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Les atomes de cuivre qui composent le métal ne perdent en général qu’un ou deux électrons pour former des ions. On peut donc considérer qu’il y a pour un atome de cuivre, un électron de conduction. La densité d’électron de conduction est donc du même ordre de grandeur que la densité d’atomes de cuivre.</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(n_{e} = n_{Cu} = N_A \frac{\rho_{Cu}}{M_{Cu}} = 6 \times 10^{23} \times \frac{9 \times 10^3}{63.5 \times 10^{-3}} = 10^{29} \rm{electrons.m^{-3}}\)</span></p>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère un fil de cuivre de section <span class="math notranslate nohighlight">\(S = 1 \rm{mm^2}\)</span> parcourue par une intensité <span class="math notranslate nohighlight">\(I = 1 \rm{A}\)</span>. Estimer la vitesse des électrons en considérant qu’ils ont tous la même vitesse. Commenter cette vitesse.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Comptons combien d’électrons traversent une section <span class="math notranslate nohighlight">\(S\)</span> durant un temps <span class="math notranslate nohighlight">\(\Delta t\)</span></p>
+<div class="figure align-center" id="fig-quantite-de-charge87">
+<img alt="../_images/elec_i_calcul.png" src="../_images/elec_i_calcul.png" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Quantité de charge</span><a class="headerlink" href="#fig-quantite-de-charge87" title="Permalink to this image">¶</a></p>
+</div>
+<p class="card-text">Considérons l’instant initial <span class="math notranslate nohighlight">\(t\)</span> et cherchons quelles sont les caractéristiques d’un électron qui va traverser la surface S entre t et <span class="math notranslate nohighlight">\(t + \Delta t\)</span>. Il doit (avec les conventions de vitesse choisis sur le schéma - inverser la vitesse des électrons ne changerait pas la valeur de i en valeur absolue, cela ne ferait que <strong>changer le signe</strong>) :</p>
+<ul class="simple">
+<li><p class="card-text">être à droite (sur le schéma) de la section S</p></li>
+<li><p class="card-text">être à une distance inférieure à <span class="math notranslate nohighlight">\(v \Delta t\)</span> de la section S car la distance qu’il va parcourir est <span class="math notranslate nohighlight">\(v \Delta t\)</span></p></li>
+</ul>
+<p class="card-text">Si ces deux conditions sont réunis, l’électron va immanquablement traverser la section S donc <strong>tous les électrons qui se trouvent dans le cylindre de base S et de hauteur <strong><span class="math notranslate nohighlight">\(v \Delta t\)</span></strong> à l’instant t traverseront la section S</strong> entre t et <span class="math notranslate nohighlight">\(t + \Delta t\)</span>.</p>
+<p class="card-text">Utilisons la question précédente, la quantité d’électrons est : <span class="math notranslate nohighlight">\(N_{e-} = -n_{e} S v \Delta t\)</span> (le signe - vient du fait que les électrons se déplacent dans le sens inverse de l’orientation de la section) donc l’intensité est :</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(i = \frac{\Delta q}{\Delta t} = \frac{- (-e) n_{e} S v \Delta t}{\Delta t} = n_e e S v\)</span></p>
+<p class="card-text">Il vient une vitesse :</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(v = \frac{i}{n_e e S} = \frac{1}{\times 10^{29} \times 1.6 \times 10^{-19} \times 10^{-6}} = 6 \times 10^{-5} m.s^{-1}\)</span></p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On remarque que la vitesse est très faible, surtout comparée aux vitesses d’agitation thermique qui sont de l’ordre de plusieurs centaines de mètre par seconde. La conduction thermique correspond donc plutôt à une lente dérive des électrons tandis qu’ils s’agitent dans tous les sens.</p>
+</div>
+</details></div>
+<div class="section" id="ordres-de-grandeur-des-courants-electriques">
+<h3>Ordres de grandeur des courants électriques<a class="headerlink" href="#ordres-de-grandeur-des-courants-electriques" title="Permalink to this headline">¶</a></h3>
+<p>Voici l’ordre de grandeur de intensités qu’on peut rencontrer :</p>
+<ul class="simple">
+<li><p>Circuits étudiés en TP de physique : quelques mA au maximum.</p></li>
+<li><p>Courant pouvant provoquer une paralysie : 10mA</p></li>
+<li><p>Limite officielle de fuite de courant : 30mA</p></li>
+<li><p>Ampoule à incandescence : 1A</p></li>
+<li><p>Radiateur électrique: 10A</p></li>
+<li><p>Eclair : 10-100kA</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="potentiel-electrique-et-tension">
+<h2>Potentiel électrique et tension<a class="headerlink" href="#potentiel-electrique-et-tension" title="Permalink to this headline">¶</a></h2>
+<p>Sans excitation extérieur, ils n’y a pas de mouvement d’ensemble des charges, c’est-à-dire de conduction électrique. Pour ce faire, il faut mettre les charges en mouvement. Comme toujours en mécanique, la mise en mouvement nécessite une force. Ici c’est le <strong>champ électrique</strong> (créé directement ou indirectement par la source : un générateur ou une pile) qui exerce une force sur les charges de conduction.</p>
+<div class="section" id="potentiel-electrique">
+<h3>Potentiel électrique<a class="headerlink" href="#potentiel-electrique" title="Permalink to this headline">¶</a></h3>
+<p><strong>Action d’un champ électrique sur une particule chargée</strong><br />
+Lorsqu’un champ électrique<a class="footnote-reference brackets" href="#champe" id="id2">2</a> <span class="math notranslate nohighlight">\(\overrightarrow{E}\)</span> est établi dans un milieu, les charges <span class="math notranslate nohighlight">\(q\)</span> du milieu subissent une force <span class="math notranslate nohighlight">\(\overrightarrow{F} = q \overrightarrow{E}\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Potentiel électrique</p>
+<div class="figure align-center" id="fig-88">
+<img alt="../_images/elec_v_energie.png" src="../_images/elec_v_energie.png" />
+</div>
+<p>La force qu’exerce un champ électrique sur une charge <span class="math notranslate nohighlight">\(q\)</span> dérive d’une énergie potentielle. Si l’on note <span class="math notranslate nohighlight">\(E_{p,el}\)</span> l’énergie potentielle associée à cette force sur une charge q en un point A du circuit, on définit le __potentiel électrique __<span class="math notranslate nohighlight">\(V_A\)</span> du circuit au point A par <span class="math notranslate nohighlight">\(V_A = \frac{E_{p,el}}{q}\)</span>.</p>
+</div>
+<p><strong>Indépendance vis-à-vis des charges de conduction.</strong><br />
+Le potentiel électrique dépend du point du circuit considéré et évidemment des composants du circuit. Mais il ne <strong>dépend pas</strong> de la charge qui assure la conduction. Ainsi, on peut parler du potentiel électrique d’un point <em>du circuit</em> et non <em>de la charge</em>.</p>
+<p>Ce point est important car il permet de commencer à étudier un circuit grâce à deux paramètres accessibles à notre échelle (l’échelle macroscopique) <strong>sans se préoccuper des phénomènes microscopiques</strong> et de leur complexité :</p>
+<ul class="simple">
+<li><p>l’intensité du courant en chaque point du circuit.</p></li>
+<li><p>le potentiel électrique de chaque point du circuit.</p></li>
+</ul>
+<p>Comme nous le verrons par la suite, nous pourrons encore diminuer le nombre de paramètres nécessaires.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Référence des potentiels - Masse</p>
+<p>Comme l’énergie potentielle, le potentiel est défini à une constante près. On peut donc choisir le point du circuit où le potentiel électrique est nul. On parle de <strong>référence des potentiels</strong> ou <strong>masse</strong>.</p>
+<div class="figure align-center" id="fig-symbole-d-un-point-de-masse-dans-le-schema-d-un-circuit-electrique89">
+<img alt="../_images/elec_masse.png" src="../_images/elec_masse.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Symbole d’un point de masse dans le schéma d’un circuit électrique</span><a class="headerlink" href="#fig-symbole-d-un-point-de-masse-dans-le-schema-d-un-circuit-electrique89" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Tension (différence de potentiel)</p>
+<div class="figure align-center" id="fig-representation-d-une-tension-sur-un-circuit90">
+<img alt="../_images/elec_v_tension_schema.png" src="../_images/elec_v_tension_schema.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Représentation d’une tension sur un circuit</span><a class="headerlink" href="#fig-representation-d-une-tension-sur-un-circuit90" title="Permalink to this image">¶</a></p>
+</div>
+<p>On appelle tension <span class="math notranslate nohighlight">\(U_{AB}\)</span> (ou différence de potentiel entre deux points A et B) la différence <span class="math notranslate nohighlight">\(U_{AB} = V_A - V_B\)</span>.</p>
+<p>Dans un schéma de circuit électrique, elle est représentée par une fléche pointant vers le premier point (ici A).</p>
+</div>
+<p><strong>Interprétation de la tension.</strong><br />
+Pour une charge <span class="math notranslate nohighlight">\(q\)</span> passant d’un point A à un point B sa variation d’énergie potentielle est <span class="math notranslate nohighlight">\(\Delta E_p = q (V_B - V_A) = - q U_{AB}\)</span> : il s’agit de l’énergie perdue (ou gagnée suivant les signes de q et <span class="math notranslate nohighlight">\(U_{AB}\)</span>) au passage dans un composant. Ce point de vue est important pour la suite car il permettra de décrire les échanges énergétiques entre un composant (on parlera de dipôle) et le reste du circuit.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Additivité des tensions.</strong><br />
+Considérons trois points du circuit A,B et C. On peut utiliser l’additivité des tensions : <span class="math notranslate nohighlight">\(U_{AC} = U_{AB} + U_{BC}\)</span> en effet <span class="math notranslate nohighlight">\(U_{AC} = V_A - V_C = V_A - V_B + V_B - V_C\)</span></p>
+</div>
+</details></div>
+<div class="section" id="analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique">
+<h3>Analogie entre un circuit hydraulique et un circuit électrique<a class="headerlink" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique" title="Permalink to this headline">¶</a></h3>
+<p>Pour comprendre le principe général d’un circuit électrique et le rôle de l’intensité et du potentiel électrique, on peut faire l’analogie entre un circuit d’eau entièrement fermé et un circuit électrique.</p>
+<p>L’analogie est présentée sous forme d’exercices mais les méthodes utilisées ne sont pas à connaître. Il s’agit surtout de comprendre le fonctionnement physique d’un circuit électrique.</p>
+<div class="figure align-center" id="fig-analogie-circuit-hydraulique-et-circuit-electrique91">
+<img alt="../_images/elec_hydro_elec.jpg" src="../_images/elec_hydro_elec.jpg" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Analogie circuit hydraulique et circuit électrique</span><a class="headerlink" href="#fig-analogie-circuit-hydraulique-et-circuit-electrique91" title="Permalink to this image">¶</a></p>
+</div>
+<blockquote>
+<div><p><strong>Grandeurs analogue ?</strong><br />
+Questions :</p>
+<ol class="simple">
+<li><p>Comment appelle-t-on la grandeur qui caractérise le déplacement d’eau dans la conduite ?</p></li>
+<li><p>Dans un circuit hydraulique, quelle énergie est gagnée/perdue par les petits “blocs” d’eau lorsqu’ils se déplacent dans le circuit ?</p></li>
+</ol>
+<p>Réponses :</p>
+<ol class="simple">
+<li><p>Dans le circuit hydraulique, c’est le <strong>débit massique d’eau</strong> qui est analogue à <strong>l’intensité électrique</strong>.</p></li>
+<li><p>Dans le circuit hydraulique, les “blocs” d’eau (on parlera de particules de fluide) gagnent ou perdent de <strong>l’énergie potentielle de pesanteur</strong>. Elle est analogue à l’<strong>énergie potentielle électrique</strong> des charges. On pourra associer à cette énergie potentielle un potentiel de pesanteur (<span class="math notranslate nohighlight">\(E_{p,pes} / m = g z\)</span>) qui ne dépend que de la Terre (du champ de pesanteur terrestre) et de la position dans le circuit et pas de la masse d’eau considérée. Elle est analogue au potentiel électrique.</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Échanges énergétiques</strong><br />
+Questions :</p>
+<ol class="simple">
+<li><p>Quel est le rôle de la pompe ?</p></li>
+<li><p>En circuit fermé et en régime stationnaire, comment évolue le débit d’eau le long du circuit ?</p></li>
+<li><p>En déduire un bilan d’énergie pour l’eau avant et après la turbine (composant à droite). Faire l’analogie avec la traversée du récepteur.</p></li>
+</ol>
+<p>Réponses :</p>
+<ol class="simple">
+<li><p>La pompe prend de l’eau à faible hauteur pour l’amener à une hauteur importante : <strong>elle donne de l’énergie aux “blocs” d’eau</strong> mais ne crée pas de l’eau. De même un générateur ne crée pas des charges,__ il leur donne de l’énergie__. Attention quand même, les électrons libérées au pôle (-) ne sont pas les mêmes que les électrons absorbées au pôle (+) (On pourra penser à une pile électrochimique). Le bilan se fait sur l’ensemble des électrons de conduction du circuit, pas sur un électron pris tout seul (un peu comme un circuit hydraulique où la pompe prélèverait et rendrait l’eau à une rivière).</p></li>
+<li><p>Le débit d’eau ne peut varier car l’eau est incompressible. Un volume qui avance dans la conduite pousse le volume qui le précède qui avance de la même manière : dans toutes les sections de la conduite, le débit étant le même, <strong>l’énergie cinétique ne varie pas le long du circuit</strong>. Il en est de même pour les charges électrique en régime stationnaire : l’intensité du courant est la même tout au long du circuit. Attention, cela suppose un circuit à une voie, il ne doit pas y avoir de bifurcation.</p></li>
+<li><p>En passant dans la turbine, l’eau garde la même énergie cinétique mais perd de l’énergie potentielle : elle perd donc de l’énergie. Cette énergie est apportée à la turbine pour la faire tourner : <strong>la turbine reçoit de l’énergie</strong> (qu’elle transforme en une autre forme d’énergie, ici de l’énergie cinétique). Si l’échange se fait avec le fluide du circuit, on peut faire abstraction du fluide et considérer qu’il y a un échange d’énergie entre la pompe et la turbine. Il en est de même dans un circuit électrique. Les électrons, au passage dans le récepteur perdent de l’énergie (puisque leur énergie potentielle <span class="math notranslate nohighlight">\(-eV\)</span> diminue - V augmente - et que leur énergie cinétique reste identique), <strong>cette énergie est reçue par le récepteur</strong>. On peut considérer que les électrons de conduction servent de transfert : <strong>le générateur fournit de l’énergie qui est reçue par le récepteur</strong>.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="ordre-de-grandeurs-des-tensions">
+<h3>Ordre de grandeurs des tensions<a class="headerlink" href="#ordre-de-grandeurs-des-tensions" title="Permalink to this headline">¶</a></h3>
+<p>Voici quelques ordres de grandeur des tensions qu’on peut rencontrer :</p>
+<ul class="simple">
+<li><p>En TP : De quelques mV à plusieurs V</p></li>
+<li><p>Piles : Entre 1.5 et 9V et Batteries : 6 à 24V (tension indépendante du temps)</p></li>
+<li><p>Réseau de distribution EDF : Valeur efficace : 220V (tension sinusoïdale)</p></li>
+<li><p>Ligne haute tension : 150 à 500 kV</p></li>
+<li><p>Foudre : 100000 à 500000 kV</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="approximation-des-regimes-quasi-stationnaires">
+<h2>Approximation des régimes quasi-stationnaires<a class="headerlink" href="#approximation-des-regimes-quasi-stationnaires" title="Permalink to this headline">¶</a></h2>
+<p>Nous avons vu que la description d’un circuit électrique passe par un nombre restreint de paramètres :</p>
+<ul class="simple">
+<li><p>l’intensité circulant dans les branches (nous préciserons ce point dans le paragraphe)</p></li>
+<li><p>le potentiel électrique aux différents points du circuit (ou les tensions entre les différents points du circuits)</p></li>
+</ul>
+<p>Nous étudierons  des <strong>régimes indépendants du temps</strong>, c’est-à-dire dans lequel toutes les grandeurs (tensions et intensités) ne dépendant pas du temps. Néanmoins, souvent, des perturbations dans le circuit (allumage/extinction du générateur par exemple) pourront survenir et les grandeurs vont pouvoir varier dans le temps.
+\end{intro}</p>
+<div class="section" id="ondes-electriques-dans-les-circuits">
+<h3>Ondes électriques dans les circuits<a class="headerlink" href="#ondes-electriques-dans-les-circuits" title="Permalink to this headline">¶</a></h3>
+<p><strong>Propagation des perturbations dans un circuit. Célérité.</strong><br />
+Lorsqu’on perturbe un point du circuit (en modifiant par exemple le potentiel électrique ou l’intensité en un point du circuit), cette perturbation se transmet le long du circuit. On peut parler d’onde électrique.</p>
+<p>La célérité des ondes électriques dans un circuit est de l’ordre de la célérité de la lumière <span class="math notranslate nohighlight">\(c = 3 \times 10^8 m.s^{-1}\)</span>.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice Temps de propagation</p>
+<p>Question : Dans un circuit de TP, quel temps une perturbation met pour se propager à l’ensemble du circuit.<br />
+Réponse : Les circuits de TP ont une taille de l’ordre de 1m, donc la durée de propagation est <span class="math notranslate nohighlight">\(1/(3\times 10^{8}) = 3 \times 10^{-9} s\)</span>.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice Différence entre célérité de l’onde et déplacement des électrons</p>
+<p>Il faut bien faire la différence entre la célérité de l’onde (<span class="math notranslate nohighlight">\(3 \times 10^8 m.s^{-1}\)</span>) qui correspond à la vitesse de __transmission d’une information __ le long d’un circuit et la vitesse de dérive des électrons (moins d’un mm par seconde) dans le circuit.</p>
+<p>On peut faire l’analogie suivante : on lâche un petit morceau de bois dans une rivière qui s’écoule doucement. Le bois va flotter et être emporté à la même vitesse que la rivière. Au moment d’entrée dans l’eau, le bois crée des remous qui vont se propager : il naît une onde à la surface de l’eau.</p>
+<p>La célérité de l’onde à la surface (qui transporte l’information : “le bois est entré dans l’eau et a mis en mouvement la surface” comme l’onde électrique propagée de proche en proche dans le fil transporte l’information de la perturbation initiale) est en général beaucoup plus rapide que la vitesse de l’eau dans la rivière (qu’on peut matérialiser par le mouvement du bois et qui correspond au mouvement des électrons dans l’eau).</p>
+<p>Au passage, cette analogie peut continuer si l’on observe que le mouvement de l’eau se décompose en deux parties : le mouvement de dérive qui correspond à l’écoulement global de la rivière et un mouvement chaotique des petites molécules d’eau dans la rivière. Le premier est visible à l’oeil nu comme l’intensité électrique est mesurable (grâce à un ampèremètre) alors que le second est invisible à notre échelle (comme l’est l’agitation des électrons)</p>
+</div>
+</div>
+<div class="section" id="approximation-des-regimes-quasi-stationnaires-arqs">
+<h3>Approximation des régimes quasi-stationnaires (ARQS)<a class="headerlink" href="#approximation-des-regimes-quasi-stationnaires-arqs" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Approximation des régimes quasi-stationnaires (ARQS)</p>
+<p>Un circuit dans lequel le temps de propagation des perturbations est <strong>très faible devant</strong> le temps de variation des grandeurs en un point du circuit est un circuit fonctionnant dans l’approximation des régimes quasi-stationnaires.</p>
+</div>
+<p>On peut alors considérer que les phénomènes de propagation sont instantanés et que les grandeurs du circuits (potentiel et intensités) varient en même temps sous l’effet d’une perturbation.</p>
+<p>Attention : le fait qu’elles varient en même temps ne signifie pas qu’elles varient de la même manière.</p>
+<p>C’est bien la variation __spatiale __associée à la propagation de l’onde électrique qui est négligée, pas la variation <strong>temporelle</strong> des grandeurs : en un point (et donc en tout point) du circuit, tension et intensité peuvent varier.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice Analogie avec la voix</p>
+<p>Pour comprendre le principe de l’ARQS, on peut faire l’analogie avec le son. Considérons une classe dans laquelle le professeur parle près du tableau. Il s’adresse à l’ensemble de la classe : aux premiers rangs comme aux derniers rangs.</p>
+<p>Théoriquement, le son se propage à une vitesse finie (environ 340 m/s) donc les premier rangs entendent et réagissent (!!) aux paroles de l’enseignant avant les élèves du derniers rangs. Néanmoins, on peut considérer que la réaction des élèves se fera à peu près en même temps (ou du moins qu’elle dépend des caractéristiques propre à l’élève comme son temps de réaction et non sa position dans la classe). On considère donc dans cet exemple que le temps de propagation du son est très petit devant :</p>
+<ul class="simple">
+<li><p>le temps du débit de parole (les records de débit sont de l’ordre d’une dizaine de mots par seconde et si le professeur parlait à cette vitesse, personne ne comprendrait… )</p></li>
+<li><p>le temps de réaction de l’élève (… )</p></li>
+</ul>
+<p>On peut donc considérer que l’ARQS s’applique à une conversation dans une classe.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice ARQS dans un circuit de TP</p>
+<p>Question : En suivant l’analogie précédente, estimer les fréquences acceptables pour le spectre d’un signal électrique (tension, intensité) tel qu’on puisse négliger la propagation et se placer dans l’ARQS.<br />
+Réponse : On a vu que la durée de propagation dans un circuit de TP est de l’ordre de <span class="math notranslate nohighlight">\(10^{-9} \rm{s}\)</span>, donc tant que les temps caractéristiques associées à chaque composante spectrale sont grands devant ce temps, on peut considérer qu’on est dans l’ARQS. Soit des fréquences très inférieures à 1GHz.</p>
+<p>Remarque : En TP, on dépassera rarement le MHz en terme de fréquence.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice ARQS ou pas</p>
+<p>On peut considérer un autre exemple où l’ARQS s’applique et …  ne s’applique pas suivant ce qu’on considère : l’orage.</p>
+<ul class="simple">
+<li><p>Considérons l’éclair, donc la propagation d’une onde lumineuse. La vitesse de la lumière dans l’air est de l’ordre de <span class="math notranslate nohighlight">\(3 \times 10^8 \rm{m/s}\)</span>. Pour un éclair qui se produit à quelques kilomètres, le temps qu’il arrive à notre oeil est de l’ordre de <span class="math notranslate nohighlight">\(10^{-5} \rm{s}\)</span>: ce temps est très faible devant la persistance rétinienne (<span class="math notranslate nohighlight">\(10^{-1} \rm{s}\)</span>). On peut donc appliquer l’ARQS et considérer que le moment où l’éclair se produit coïncide avec le moment où on le voit.</p></li>
+<li><p>Considérons le tonnerre (qui accompagne l’éclair), donc la propagation d’une onde sonore. Cette fois, la vitesse du son est de l’ordre de <span class="math notranslate nohighlight">\(340 \rm{m/s}\)</span>. Pour le tonnerre qui se produit à quelques kilomètres, le temps de propagation du son est de l’autre de 1 à 10 secondes. Ce temps est de l’ordre (voire plus grand) que le temps de réaction humain au son. Donc cette fois, on doit tenir compte de la propagation et on ne pas se placer dans l’ARQS.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="definitions-utiles">
+<h3>Définitions utiles<a class="headerlink" href="#definitions-utiles" title="Permalink to this headline">¶</a></h3>
+<p><strong>Définitions utiles</strong><br />
+Voici quelques éléments de vocabulaire utiles quand étudie un circuit électrique.</p>
+<ul class="simple">
+<li><p>Fil de connexion : Un fil de connexion est un élément du circuit où tous les points ont le même potentiel.</p></li>
+</ul>
+<p>Exemple : <span class="math notranslate nohighlight">\(V_A = V_C = V_D\)</span></p>
+<p>Conséquence : Cela réduit énormément le nombre d’inconnues.</p>
+<p><strong>Question : Combien y a-t-il de points de potentiel différents dans le circuit ci-contre ? Combien sont inconnu ?</strong></p>
+<p><strong>Réponse : Ils y a 3 points de potentiels différents. Il y a donc 2 potentiels inconnus. En effet, le potentiel étant défini à une constante près, on peut choisir l’origine des potentiels électriques (par exemple poser <strong><span class="math notranslate nohighlight">\(v_E = 0\)</span></strong>, ce choix est arbitraire).</strong></p>
+<div class="figure align-center" id="fig-92">
+<img alt="../_images/elec_v_fil_nombre.png" src="../_images/elec_v_fil_nombre.png" />
+</div>
+<ul class="simple">
+<li><p>Bornes (ou pôles) : Point de potentiel reliant un composant électronique au circuit.</p></li>
+<li><p>Dipôles : Composants électroniques composés de deux bornes. Ce seront les composants que nous étudierons principalement.</p></li>
+<li><p>Maille : Ensemble de dipôles reliées entre eux par des fils de connexion et formant une boucle fermée.</p></li>
+<li><p>Noeud : Un noeud est un point où se rencontrent au moins trois fils : le débit d’électrons se sépare (ou converge) donc en ce point.</p></li>
+<li><p>Exemple : Sur le circuit ci-contre, il y a trois mailles différentes, quatre dipôles, trois points de potentiels différents et deux noeuds.</p></li>
+</ul>
+<div class="figure align-center" id="fig-93">
+<img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Dipôles en série et en parallèle</p>
+<ul class="simple">
+<li><p>Deux dipôles sont <strong>en série</strong> lorsqu’ils sont reliées entre eux par un fil de connexion <strong>et qu’il n’y a pas de noeud au niveau de cette liaison.</strong></p></li>
+<li><p>Deux dipôles sont <strong>en parallèle</strong> lorsque leurs bornes sont reliées deux à deux.</p></li>
+</ul>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exemple : Dipôles en série et en parallèle</p>
+<div class="figure align-center" id="fig-94">
+<img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
+</div>
+<p>Dans le circuit ci-conctre :</p>
+<ul class="simple">
+<li><p>D1 et D2 sont en série</p></li>
+<li><p>D1 et D3 ne sont pas série ni en parallèle (D2 et D3 non plus)</p></li>
+<li><p>D1 et D4 ne sont pas série ni en parallèle (D2 et D4 non plus)</p></li>
+<li><p>D3 et D4 sont en parallèle</p></li>
+</ul>
+</div>
+<p>Un ensemble de dipôles en série forme une <strong>branche</strong>.</p>
+</div>
+<div class="section" id="intensite-dans-une-branche-dans-l-arqs">
+<h3>Intensité dans une branche dans l’ARQS<a class="headerlink" href="#intensite-dans-une-branche-dans-l-arqs" title="Permalink to this headline">¶</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Intensité dans une branche dans l’ARQS</p>
+<p>Dans l’ARQS, l’intensité  est la même en tout point d’une même branche (c’est-à-dire d’un ensemble de dipôles et fils de connexion sans  noeud).</p>
+</div>
+<p><strong>Démonstration</strong><br />
+L’ARQS suppose qu’il n’y a pas de phénomène de propagation. Une conséquence est l’absence de phénomène d’accumulation de charge en un point (car sinon cela produirait un phénomène de rééquilibrage et donc une réponse du circuit différente en chaque point).</p>
+<p>Cela signifie que pour une portion de fil, le débit de charge entrant (l’intensité en entrée) égale le débit de charge sortant (l’intensité en sortie). Comme on peut prendre n’importe quelle portion de fil, il vient que l’intensité est la même en tout point du fil et par extension en tout point d’une branche.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<div class="figure align-center" id="fig-95">
+<img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
+</div>
+<p>Dans ce circuit en ARQS, il y a donc :</p>
+<ul class="simple">
+<li><p>2 potentiels inconnus (ou trois tensions à déterminer)</p></li>
+<li><p>3 intensités inconnues puisqu’il y a 3 branches</p></li>
+</ul>
+<p>Il reste à déterminer des équations reliant les différentes grandeurs (il en faut donc 5/6 a priori - à moins qu’on connaisse par hypothèse certaines de ces grandeurs) pour pouvoir résoudre le circuit, c’est-à-dire déterminer toutes les grandeurs. On distinguera deux types d’équations :</p>
+<ul class="simple">
+<li><p>les équations qui relient les grandeurs de mêmes types (tensions/potentiel ou intensité). Ce seront les lois fondamentales de l’électrocinétique : les lois de Kirchhoff.</p></li>
+<li><p>les équations qui relient l’intensité qui circule dans un dipôle à la tension à ses bornes. On parle d’équation d’évolution d’un dipôles. Elles sont propres à un type de dipôle (source de tension, résistance, bobine… ) et seront traitées dans le chapitre suivant.</p></li>
+</ul>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="milikan"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><strong>Expérience de Millikan</strong> —La quantification de la charge a été observée par Millikan (1909) en étudiant la suspension de gouttes d’huile sous l’effet d’un champ électrostatique.</p>
+</dd>
+<dt class="label" id="champe"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><strong>Origine du champ électrique</strong> —Dans un circuit électrique, une source (pile ou générateur) créé un champ électrique. Le lien entre la source et le champ électrique crée est très complexe et sa compréhension n’est pas nécessaire ici.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_bases.html" title="previous page">Bases de l’électrocinétique</a>
+    <a class='right-next' id="next-link" href="el_lois.html" title="next page">Étudier un circuit : les bases</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

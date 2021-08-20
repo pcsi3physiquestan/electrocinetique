@@ -1,0 +1,961 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Régime transitoire et régime forcé &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/trans_regimes.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Méthodes d’analyse d’un régime transitoire" href="trans_methodes.html" />
+    <link rel="prev" title="Régime transitoire (1): Caractéristiques générales" href="trans_gene.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conduction.html">
+     Décrire la conduction électrique à notre échelle : Courant et Tension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="el_lois.html">
+     Étudier un circuit : les bases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_bases.html">
+     TD Electrocinétique 1: Bases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="ci_lineaire.html">
+   Dipôles et circuits linéaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_gene.html">
+     Dipôles électriques: Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_passif.html">
+     Dipôles linéaires passifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_assoc.html">
+     Association de résistances
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_actif.html">
+     Dipôles linéaires actifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_methode.html">
+     Etude d’un circuit linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_lineaires.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_lineaires.html">
+     TD Electrocinétique 2: Circuits linéaires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="trans_gene.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Régime transitoire et régime forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_methodes.html">
+     Méthodes d’analyse d’un régime transitoire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_stabilite.html">
+     Stabilité des systèmes linéaires d’ordre 1 et 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="meth_trans.html">
+     Activités méthodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_ordre.html">
+   Régime transitoire (2): Ordre 1 et 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_1.html">
+     Caractéristiques d’un système d’ordre 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_2.html">
+     Caractéristiques d’un système d’ordre 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans_o.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_trans_o.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_2.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_trans.html">
+     TD Electrocinétique 3: Régimes de fonctionnements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_interet.html">
+     Intérêt de l’étude fréquentielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_gene.html">
+     Régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_methode.html">
+     Méthode d’étude d’un régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_rsf.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbande.html">
+       Cas passe-bande
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbas.html">
+       Cas passe-bas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf_2.html">
+     Activités d’application (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_rsf.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="filtrage.html">
+   Filtrage linéaire (1): Principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_def.html">
+     Filtre: définition et caractéristiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_reponse.html">
+     Réponse d’un filtre linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_gene.html">
+     Caractéristiques générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_typo.html">
+     Typologie des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cahier.html">
+     Cahier des charges d’un filtre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cascade.html">
+     Mise en cascade des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_filtrage.html">
+     Travaux dirigés: Filtrage linéaire
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/trans_regimes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/trans_regimes.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/trans_regimes.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regimes-de-fonctionnement-regime-transitoire-et-regime-force">
+   Régimes de fonctionnement: régime transitoire et régime forcé
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-d-un-circuit-en-regime-force-independant-du-temps">
+   Etude d’un circuit en régime forcé indépendant du temps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#condensateur-et-bobine-en-regime-independant-du-temps">
+     Condensateur et bobine en régime indépendant du temps
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-etude-d-un-regime-independant-du-temps">
+     Méthode : étude d’un régime indépendant du temps.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generalites-sur-les-caracteristiques-des-regimes-transitoires">
+   Généralités sur les caractéristiques des régimes transitoires
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etudier-un-regime-transitoire-la-reponse-indicielle">
+     Etudier un régime transitoire: la réponse indicielle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#caracteristique-d-un-regime-transitoire-depassement">
+     Caractéristique d’un régime transitoire: dépassement
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rapidite-d-un-systeme-temps-caracteristique-et-temps-de-reponse">
+     Rapidité d’un système: temps caractéristique et temps de réponse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#etude-du-temps-de-reponse-sur-une-evolution-temporelle">
+     Etude du temps de réponse sur une évolution temporelle.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-determination-d-un-temps-caracteristique">
+     Méthode : Détermination d’un temps caractéristique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-d-un-portrait-de-phase">
+   Etude d’un portrait de phase
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#portrait-de-phase">
+     Portrait de phase
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="regime-transitoire-et-regime-force">
+<h1>Régime transitoire et régime forcé<a class="headerlink" href="#regime-transitoire-et-regime-force" title="Permalink to this headline">¶</a></h1>
+<p>Comme tout système physique, un circuit électrique répond aux contraintes qu’on lui impose de l’extérieur. En général, cette contrainte est une tension d’entrée qui peut soit être créée volontairement avec une forme particulière, soit provenir d’un capteur de mesure.</p>
+<p>Dans tous les cas, le circuit va finir par se placer dans un état qu’on appellera <strong>régime forcé</strong> par le régime d’entrée.</p>
+<p>Lorsqu’un système est dans un régime forcé et qu’une perturbation se produit en entrée (modification de la tension envoyée par le capteur ou modification volontaire de la grandeur d’entrée), le système va évoluer vers un nouveau régime forcé. L’évolution entre le premier et le second régime forcé est appelé <strong>régime transitoire</strong>.</p>
+<p>Il est en général important de pouvoir distinguer le régime transitoire du régime forcé, de pouvoir analyser les caractéristiques du régime transitoire, de pouvoir déterminer quel sera le prochain régime forcé…</p>
+<div class="section" id="regimes-de-fonctionnement-regime-transitoire-et-regime-force">
+<h2>Régimes de fonctionnement: régime transitoire et régime forcé<a class="headerlink" href="#regimes-de-fonctionnement-regime-transitoire-et-regime-force" title="Permalink to this headline">¶</a></h2>
+<p><strong>Préambule: Système stable</strong><br />
+Un système est dit <strong>stable</strong> si les grandeurs du système ne divergent pas lorsqu’il est laissé à lui-même.</p>
+<p>Un système instable tend à saturer ou à se détériorer. Nous supposerons ici que nos systèmes sont toujours stables et nous verrons par la suite des méthodes pour vérifier la stabilité d’un système.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Régime forcé</p>
+<p>Lorsqu’un système <strong>stable</strong> est soumis à  une grandeur d’entrée, les grandeurs du systèmes vont tendre vers un état dépendant:</p>
+<ul class="simple">
+<li><p>du système lui-même et de la grandeur considérée</p></li>
+<li><p><strong>de la grandeur d’entrée.</strong></p></li>
+</ul>
+<p>En général, la forme mathématique des grandeurs du système tend à prendre une forme similaire à la forme mathématique de la grandeur d’entrée. On parle alors de <strong>régime forcé.</strong></p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice Exemples de régimes forcés</p>
+<p>Si la grandeur d’entrée est une tension constante, alors toutes les grandeurs d’un système stable vont tendre vers une valeur constante. Dans ce chapitre, nous nous limiterons principalement à ce type de régime forcé.</p>
+<p>Si la grandeur d’entrée est une tension sinusoïdale, alors toutes les grandeurs d’un système stable vont tendre vers une forme sinusoïdale de même pulsation. Ce sera l’objet du prochain chapitre.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Régime transitoire</p>
+<p>Lorsque la grandeur d’entrée varie brusquement pour passer d’une forme à une autre, le système (ses grandeurs) va évoluer durant un temps fini (non nul) pour tendre (s’il est stable) vers un nouveau régime forcé par la nouvelle grandeur d’entrée.</p>
+<p>L’évolution entre le régime forcé précédent et le nouveau régime forcé est appelé <strong>régime transitoire.</strong></p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice Repérer les régimes sur une évolution temporelle</p>
+<div class="figure align-center" id="fig-147">
+<img alt="../_images/elec_force_transitoire.png" src="../_images/elec_force_transitoire.png" />
+</div>
+<p>On observe sur le graphique précédent (la tension <span class="math notranslate nohighlight">\(u_s\)</span> est une des grandeurs du système) les différents régimes lors de l’évolution d’un système. Notons plusieurs points importants:</p>
+<ul class="simple">
+<li><p>On remarque une discontinuité qui correspond au moment où la grandeur d’entrée change brusquement de valeur. La présence possible de discontinuité impose la recherche de conditions initiales (valeurs à <span class="math notranslate nohighlight">\(t = 0^+\)</span>) pour pouvoir résoudre les équations mises en jeu (des équations différentielles).</p></li>
+<li><p>En général, on atteint pas mathématiquement le nouveau régime forcé car le régime transitoire est un fonction qui <strong>tend vers 0</strong>: elle ne s’annule pas rigoureusement à un moment donné.</p></li>
+</ul>
+<p>Il faut donc un critère (temps de réponse) pour décider quand l’écart au nouveau régime forcé est négligeable: ce sera le moment où l’on considère le régime transitoire comme fini. Le critère choisi dépend des besoins en précision du système par exemple. Nous verrons par la suite que l’on peut déterminer un ordre de grandeur de cette durée qu’on appellera temps caractéristique.</p>
+</div>
+</div>
+<div class="section" id="etude-d-un-circuit-en-regime-force-independant-du-temps">
+<h2>Etude d’un circuit en régime forcé indépendant du temps<a class="headerlink" href="#etude-d-un-circuit-en-regime-force-independant-du-temps" title="Permalink to this headline">¶</a></h2>
+<p>Nous allons étudier le cas du régime forcé indépendant du temps. Il s’agit là de l’un des deux types de régime forcé que nous étudierons cette année. On parlera aussi de régime permanent indépendant du temps.</p>
+<p>Dans ce régime, toutes les grandeurs ne varient plus au cours du temps.</p>
+<div class="section" id="condensateur-et-bobine-en-regime-independant-du-temps">
+<h3>Condensateur et bobine en régime indépendant du temps<a class="headerlink" href="#condensateur-et-bobine-en-regime-independant-du-temps" title="Permalink to this headline">¶</a></h3>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Condensateur en régime indépendant du temps</p>
+<div class="figure align-center" id="fig-148">
+<img alt="../_images/elec_c_equiv.png" src="../_images/elec_c_equiv.png" />
+</div>
+<p>En régime indépendant du temps, un condensateur est équivalent à un interrupteur ouvert.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de la tension est nulle. Il vient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e9021116-3e81-44c9-bf13-41cd46c5f06f">
+<span class="eqno">(28)<a class="headerlink" href="#equation-e9021116-3e81-44c9-bf13-41cd46c5f06f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i = C \frac{\rm{d}u}{\rm{dt}} = 0
+\end{equation}\]</div>
+<p>L’intensité étant toujours nulle, le dipôle est assimilable à un interrupteur ouvert.</p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Bobine en régime indépendant du temps</p>
+<div class="figure align-center" id="fig-149">
+<img alt="../_images/elec_l_equiv.png" src="../_images/elec_l_equiv.png" />
+</div>
+<p>En régime indépendant du temps, une bobine est équivalent à un fil.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de l’intensité est nulle. Il vient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f6906ce7-21ba-491f-8f26-dcaf031a1434">
+<span class="eqno">(29)<a class="headerlink" href="#equation-f6906ce7-21ba-491f-8f26-dcaf031a1434" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u =L \frac{\rm{d}i}{\rm{dt}} = 0
+\end{equation}\]</div>
+<p>La tension étant toujours nulle, le dipôle est assimilable à un fil.</p>
+<p><strong>Etude d’un circuit en régime indépendant du temps</strong><br />
+Les deux propriétés précédentes permettent d’étudier les circuits en régime forcé indépendant du temps. Il suffit de remplacer les condensateurs et bobines par des interrupteurs ouverts et par des fils puis d’étudier le circuit avec les règles des chapitres précédents.</p>
+</div>
+<div class="section" id="methode-etude-d-un-regime-independant-du-temps">
+<h3>Méthode : étude d’un régime indépendant du temps.<a class="headerlink" href="#methode-etude-d-un-regime-independant-du-temps" title="Permalink to this headline">¶</a></h3>
+<p>Cette exercice explique la méthode d’étude d’un régime indépendant du temps</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Étudier le circuit suivant en régime indépendant du temps lorsque l’interrupteur est ouvert. On déterminera toutes les intensités.</p>
+<div class="figure align-center" id="fig-150">
+<img alt="../_images/elec_circuit_quelconque.png" src="../_images/elec_circuit_quelconque.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Mise en équation</strong><br />
+On oriente toutes les intensités vers le haut dans chaque branche et on note respectivement <span class="math notranslate nohighlight">\(i_e, i_r, i_c, i_l\)</span> les intensités qui circulent dans la source, la résistance seule dans sa branche, le condensateur, la bobine.</p>
+<p class="card-text"><strong>Dessiner le circuit équivalent en régime indépendant du temps</strong><br />
+Tout d’abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.</p>
+<div class="figure align-center" id="fig-151">
+<img alt="../_images/elec_circuit_quelconque_2.png" src="../_images/elec_circuit_quelconque_2.png" />
+</div>
+<p class="card-text">Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_e = i_c = 0\)</span> à cause des interrupteurs ovuerts.</p>
+<p class="card-text">On a donc <span class="math notranslate nohighlight">\(i_r + i_l = 0\)</span> et <span class="math notranslate nohighlight">\(R i_r - R i_l = 0\)</span> soit <span class="math notranslate nohighlight">\(i_l = i_r = 0\)</span></p>
+<p class="card-text">Remarquons que seules deux tensions sont non nulles: la tension de la source (E) et la tension aux bornes de l’interrupteur de gauche (E ou -E suivant l’orientation).</p>
+<div class="note admonition">
+<p class="admonition-title">Attention : Tension aux bornes d’un condensateur</p>
+<p class="card-text">Profitons de cette remarque pour signaler que la <strong>tension aux bornes d’un interrupteur ouvert n’est a priori pas nulle.</strong></p>
+</div>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Etudier le circuit précédent en régime indépendant du temps lorsque l’interrupteur est fermé. On déterminera toutes les intensités.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">\begin{meth}{Dessiner le circuit équivalent en régime indépendant du temps.}{meth_dessiner_le_circuit_equivalent_en_regime_independant_du_temps__44}
+Tout d’abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.</p>
+<div class="figure align-center" id="fig-152">
+<img alt="../_images/elec_circuit_quelconque_3.png" src="../_images/elec_circuit_quelconque_3.png" />
+</div>
+<p class="card-text">Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
+<p class="card-text">Écrivons les lois de Kirchhoff (on pourrait aussi utiliser la loi des noeuds en terme de potentiels):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4ef71c05-abac-4ae9-9907-efbd5d81110c">
+<span class="eqno">(30)<a class="headerlink" href="#equation-4ef71c05-abac-4ae9-9907-efbd5d81110c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_e + i_r + i_l &amp;= 0\\
+E - R i_e + R i_r &amp;= 0\\
+R i_r - R i_l &amp;= 0
+\end{align}\]</div>
+<p class="card-text">Il vient immédiatement <span class="math notranslate nohighlight">\(i_r = i_l\)</span> et donc <span class="math notranslate nohighlight">\(i_e = - 2 i_r\)</span>. La première loi des mailles s’écrivant alors <span class="math notranslate nohighlight">\(E + 3 R i_R = 0\)</span>, il vient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-aa9b0916-3ac7-4e2d-a130-be5469ad8315">
+<span class="eqno">(31)<a class="headerlink" href="#equation-aa9b0916-3ac7-4e2d-a130-be5469ad8315" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_r &amp;= -\frac{E}{3R}\\
+i_l &amp;= -\frac{E}{3R}\\
+i_e &amp;= \frac{2E}{3R}\\
+\end{align}\]</div>
+<div class="hint admonition">
+<p class="admonition-title">Analyse des résultats</p>
+<p class="card-text">Homogénéité: Les intensités sont bien homogènes à des tensions sur des résistances.</p>
+<p class="card-text">Sens physique: Assez logiquement l’intensité <span class="math notranslate nohighlight">\(i_e\)</span> est positive (si E est positive car elle dans le sens de E) tandis que les deux autres sont négatives (sens inverse de E).</p>
+<p class="card-text">On a un pont diviseur de courant avec deux résistances identiques, on trouve logiquement l’égalité des intensités <span class="math notranslate nohighlight">\(i_l = i_r\)</span> et le fait que l’intensité <span class="math notranslate nohighlight">\(i_e\)</span> est le double des deux autres.</p>
+</div>
+</div>
+</details></div>
+</div>
+<div class="section" id="generalites-sur-les-caracteristiques-des-regimes-transitoires">
+<h2>Généralités sur les caractéristiques des régimes transitoires<a class="headerlink" href="#generalites-sur-les-caracteristiques-des-regimes-transitoires" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="etudier-un-regime-transitoire-la-reponse-indicielle">
+<h3>Etudier un régime transitoire: la réponse indicielle<a class="headerlink" href="#etudier-un-regime-transitoire-la-reponse-indicielle" title="Permalink to this headline">¶</a></h3>
+<p><strong>Réponse indicielle</strong><br />
+Comme nous le verrons par la suite, le régime transitoire d’un système possède:</p>
+<ul class="simple">
+<li><p>des caractéristiques qui dépendent du contexte extérieur (tension d’entrée) et de la grandeur considérée</p></li>
+<li><p>des caractéristiques qui dépendent de l’état initial du système</p></li>
+<li><p><strong>des caractéristiques qui ne dépendant que du circuit considéré</strong></p></li>
+</ul>
+<p>Un manière d’étudier un système et notamment de déterminer ces caractéristiques propres au système est d’étudier <strong>sa réponse indicielle</strong>, c’est-à-dire sa réponse <strong>à un échelon de tension</strong>.</p>
+<p><strong>Echelon de tension</strong></p>
+<div class="figure align-center" id="fig-153">
+<img alt="../_images/elec_echelon.png" src="../_images/elec_echelon.png" />
+</div>
+<p>Un échelon de tension est un passage brusque d’une tension <span class="math notranslate nohighlight">\(E_0\)</span> à une tension <span class="math notranslate nohighlight">\(E_1\)</span>.</p>
+<p>Un échelon de tension permet de simuler une brusque variation de la tension d’entrée.</p>
+<p>Très souvent les échelons étudiés correspondent à un passage de 0 à E.</p>
+<div class="note admonition">
+<p class="admonition-title">Attention : Discontinuité</p>
+<p>Un échelon de tension introduit une discontinuité à un instant t (<span class="math notranslate nohighlight">\(t=0\)</span> ou <span class="math notranslate nohighlight">\(t=t_0\)</span> plus généralement). <strong>Celà signifie qu’en ce point, les grandeurs physiques ne sont plus nécessairement continues.</strong></p>
+<p>A l’image des traitements mathématiques, cela nécessite de traiter chaque partie (avant et après la discontinuité séparément) et de procéder à des recollements. Nous verrons les méthodes d’études propres à la physique par la suite. __Il faut néanmoins déjà retenir qu’on ne peut écrire a priori <strong><span class="math notranslate nohighlight">\(u(t=t_0^-) = u (t=t_0^+)\)</span></strong> pour n’importe quelle grandeur du circuit __s’il y a une discontinuité du circuit imposée.</p>
+<p>Nous verrons que <strong>certaines (deux)</strong> grandeurs sont toujours continues par propriétés fondamentales.</p>
+</div>
+<p><strong>Simulation d’un échelon de tension</strong></p>
+<div class="figure align-center" id="fig-154">
+<img alt="../_images/elec_basculement.png" src="../_images/elec_basculement.png" />
+</div>
+<p>Pour simuler un échelon de tension, on utilise très souvent une source E (pile par exemple) et un interrupteur 3 points.</p>
+<p>Le basculement de l’interrupteur de 2 vers 1 permet de simuler un échelon.</p>
+<p>A l’inverse le basculement de 1 et vers 2 simule un <strong>régime libre</strong>, c’est-à-dire un régime <strong>dans lequel toutes les sources sont éteintes.</strong></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Simulation en entrée</strong><br />
+Nous simulons ici l’entrée par un passage d’une valeur constante à une autre valeur constante. Nous étudions donc la réponse indicielle. Cette dernière est particulièrement adaptée à l’étude du régime transitoire.</p>
+<p class="card-text">Il faut noter qu’on peut simuler d’autres entrées. Nous verrons par exemple dans le prochain chapitre l’analyse fréquentielle basée sur la simulation d’une entrée sinusoïdale. Dans ce cas, on s’intéresse moins au régime transitoire mais beaucoup plus au régime forcé qu’on finit par obtenir.</p>
+</div>
+</details></div>
+<div class="section" id="caracteristique-d-un-regime-transitoire-depassement">
+<h3>Caractéristique d’un régime transitoire: dépassement<a class="headerlink" href="#caracteristique-d-un-regime-transitoire-depassement" title="Permalink to this headline">¶</a></h3>
+<p><strong>Dépassement</strong><br />
+Si le régime forcé visé est un régime indépendant du temps, on peut s’intéresse à l’existence ou l’absence de dépassement, c’est-à-dire regarder si le signal va dépasser la valeur finale.</p>
+<p>En physique, savoir repérer graphiquement l’existence d’un dépassement est suffisant.</p>
+<div class="figure align-center" id="fig-155">
+<img alt="../_images/elec_depassement.png" src="../_images/elec_depassement.png" />
+</div>
+<p><strong>Intérêt</strong><br />
+Dans certains cas les dépassements ne sont pas souhaitables car ils peuvent détériorer le système.</p>
+</div>
+<div class="section" id="rapidite-d-un-systeme-temps-caracteristique-et-temps-de-reponse">
+<h3>Rapidité d’un système: temps caractéristique et temps de réponse<a class="headerlink" href="#rapidite-d-un-systeme-temps-caracteristique-et-temps-de-reponse" title="Permalink to this headline">¶</a></h3>
+<p><strong>Rapidité d’un système</strong><br />
+On considère qu’un système est rapide s’il atteint rapidement (!) le nouveau régime permanent après que la perturbation s’est produite…</p>
+<p>En pratique, les équations mathématiques prévoit qu’on atteint rigoureusement le nouveau régime permanent que lorsque t tend vers l’infini (nous verrons que des exponentielles tendant vers 0 interviennent dans nos systèmes).</p>
+<p>On s’intéresse donc au moment où l’écart au régime permanent reste suffisamment faible.</p>
+<p>On distinguera deux types de temps pour caractériser la rapidité d’un système:</p>
+<ul class="simple">
+<li><p>les <strong>temps de réponse</strong> basés sur des définitions précises.</p></li>
+<li><p>les <strong>temps caractéristiques</strong> donnant un ordre de grandeur de la rapidité du système.</p></li>
+</ul>
+<p><strong>Temps de réponse</strong><br />
+Un <strong>temps de réponse à N%</strong> est l’écart de temps entre l’instant de la perturbation et l’instant à l’écart entre le signal étudié et le nouveau régime permanent va rester inférieur à (100-N)% de l’écart initial entre le signal et le nouveau régime permanent.</p>
+<p>Remarque: Cette définition n’est pas à connaître, d’autant qu’il faut l’adapter à des cas où la grandeur dans l’état initial et l’état final a la même valeur. Vous pouvez être amener à calculer de tels temps si on vous donne la définition.</p>
+<p>Remarque: les temps de réponses les plus utilisés sont les temps de réponse à 95% et à 99%.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Du temps de réponse au temps caractéristique</strong><br />
+L’inconvénient du temps de réponse est qu’il peut dépendre des conditions initiales et aussi du pourcentage choisi. Néanmoins, les études montrent que pour un système donné, les temps de réponses <strong>ont toujours le même ordre de grandeur</strong> quelque soient les conditions initiales ou le pourcentage choisi (nous le verrons sur un exemple).</p>
+<p class="card-text">On peut alors, à partir des équations mathématiques, exhiber une grandeur homogène à un temps qu’on appellera <strong>temps caractéristique</strong> et qui donnera cet ordre de grandeur du temps de réponse du système.</p>
+<p class="card-text">Remarque: nous verrons sur des exemples concrets comment déterminer un temps caractéristique et comment celui-ci peut-être relié à un temps de réponse.</p>
+</div>
+</details></div>
+<div class="section" id="etude-du-temps-de-reponse-sur-une-evolution-temporelle">
+<h3>Etude du temps de réponse sur une évolution temporelle.<a class="headerlink" href="#etude-du-temps-de-reponse-sur-une-evolution-temporelle" title="Permalink to this headline">¶</a></h3>
+<p>On se propose de déterminer graphiquement un temps de réponse à 95% sur le graphique suivant:</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Déterminer le temps de réponse à 95% pour le signal dont l’évolution est représentée ci-dessous.</p>
+<div class="figure align-center" id="fig-156">
+<img alt="../_images/elec_temps_reponse.png" src="../_images/elec_temps_reponse.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Détermination du temps de réponse</strong><br />
+On détermine dans un premier temps l’écart initial: on commence à 1V et on finit à 3V. L’écart de 5% est donc de <span class="math notranslate nohighlight">\((3 - 1 ) * 0.05 \% = 0.1V\)</span> on regarde donc quand l’écart entre le signal et la valeur finale reste inférieur à 0.1V soit compris 2.9V et 3.1V</p>
+<p class="card-text">L’instant correspond est de 3.1s. La perturbation arrivant à 0s, le temps de réponse est de 3.1s</p>
+<div class="figure align-center" id="fig-157">
+<img alt="../_images/elec_temps_reponse_2.png" src="../_images/elec_temps_reponse_2.png" />
+</div>
+</div>
+</details></div>
+<div class="section" id="methode-determination-d-un-temps-caracteristique">
+<h3>Méthode : Détermination d’un temps caractéristique<a class="headerlink" href="#methode-determination-d-un-temps-caracteristique" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le signal ci-après.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-92588202-a6cf-4752-b0c6-20e2184a1215">
+<span class="eqno">(32)<a class="headerlink" href="#equation-92588202-a6cf-4752-b0c6-20e2184a1215" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+e_m \exp (- t / \tau)
+\end{equation}\]</div>
+<p>\begin{enumerate}</p>
+<ul class="simple">
+<li><p>Déterminer le temps de réponse à N%. L’exprimer pour N=95 puis pour N=99</p></li>
+<li><p>En déduire un temps donnant l’ordre de grandeur du temps caractéristique pour une exponentielle décroissante.</p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>1.</strong><br />
+La valeur initiale est <span class="math notranslate nohighlight">\(e_m\)</span> et la valeur finale 0. On cherche donc un écart à la valeur finale de <span class="math notranslate nohighlight">\(\frac{N}{100}(e_m - 0)\)</span> soit :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7a38fe37-2ae1-46b4-adde-e588a2ce77ac">
+<span class="eqno">(33)<a class="headerlink" href="#equation-7a38fe37-2ae1-46b4-adde-e588a2ce77ac" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left  (\frac{N}{100} \right )
+\end{equation}\]</div>
+<p class="card-text">Pour 95%, on trouve <span class="math notranslate nohighlight">\(t = 3 \tau\)</span> etpour 99%, on trouve <span class="math notranslate nohighlight">\(t = 5 \tau\)</span>.</p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : 2. Temps caractéristique d’une exponentielle décroissante</p>
+<p class="card-text">On voit que le temps caractéristique est toujours de l’ordre de <span class="math notranslate nohighlight">\(\tau\)</span>. __Lorsqu’on est en présence d’une exponentielle décroissante de la forme <strong><span class="math notranslate nohighlight">\(\exp(-t/\tau\)</span></strong>, on prendra comme temps caractéristique : <strong><span class="math notranslate nohighlight">\(\tau\)</span></strong>. C’est pour des temps grands devant <span class="math notranslate nohighlight">\(\tau\)</span> que l’argument de l’exponentielle devient proche de <span class="math notranslate nohighlight">\(-\infty\)</span> et donc que l’exponentielle devient proche de 0.</p>
+</div>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le signal suivant:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-22fe7f92-44f0-40fa-9279-84530c1c81cf">
+<span class="eqno">(34)<a class="headerlink" href="#equation-22fe7f92-44f0-40fa-9279-84530c1c81cf" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) + 3 e_m
+\end{equation}\]</div>
+<p>Déterminer une estimation du temps caractéristique après avoir préciser l’état final.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Ecart à l’état final</strong><br />
+Le régime forcé s’obtient en passant simplement à la limite l’expression du signal. Il vient <span class="math notranslate nohighlight">\(u_{s,force} = 3e_m\)</span></p>
+<p class="card-text">L’écart est donc:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4c100062-939b-4d4a-9bf0-e2aaf5e069f3">
+<span class="eqno">(35)<a class="headerlink" href="#equation-4c100062-939b-4d4a-9bf0-e2aaf5e069f3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\left \vert 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) \right \vert
+\end{equation}\]</div>
+<p class="card-text">L’écart initial étant de <span class="math notranslate nohighlight">\(2 e_m\)</span>, il faut analyser la fonction:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a7f926f1-a997-4937-a09e-11c3c3bcef49">
+<span class="eqno">(36)<a class="headerlink" href="#equation-a7f926f1-a997-4937-a09e-11c3c3bcef49" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+f(t) = \left \vert \exp(-\frac{2t}{T})  - 2 \exp(-\frac{5t}{T}) \right \vert
+\end{equation}\]</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Cas du temps de réponse</strong><br />
+Pour un temps de réponse à 95%, c’est la fonction f(t) précédente qu’il faudrait utiliser pour déterminer l’instant à partir duquel <span class="math notranslate nohighlight">\(f(t) &lt; 0.05\)</span> tout le temps.</p>
+<p class="card-text">De telles études analytiquement seront réalisées dans des cas plus simples, la résolution de ce cas étant hors-programme (on pourrait - dans une exercice conjoint informatique-physique - essayer de réaliser une analyse numérique pour déterminer ce temps caractéristique).</p>
+</div>
+</details><p class="card-text"><em>Rappel : Pour une exponentielle seule <span class="math notranslate nohighlight">\(\exp^{-t/\tau}\)</span>, le temps caractéristique au bout duquel on peut considérer qu’elle est négligeable devant 1 est <span class="math notranslate nohighlight">\(\tau\)</span></em></p>
+<p class="card-text"><strong>Temps caractéristique du signal considéré.</strong><br />
+Ici, il y a deux exponentielles décroissantes (si elles sont croissantes, le système diverge et il n’y a pas de temps caractéristique mais un système instable !).</p>
+<p class="card-text">On va donc considérer que l’écart devient négligeable lorsque les <strong>deux</strong> exponentielles sont négligeables.</p>
+<p class="card-text">Et le temps caractéristique du système complet sera gouverné par l’exponentielle la plus lente donc celle qui possède le temps caractéristique le plus long.</p>
+<p class="card-text">Ici la première exponentielle possède un temps caractéristique T/2 et la seconde un temps caractéristique T/5. La première est la plus lente et le temps caractéristique du signal total est donc T/2.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Étude rapide</strong><br />
+Remarquons que toute la première partie permettant de ramener la fonction à un écart relatif à l’état final est en réalité superflu <strong>pour la recherche d’un temps caractéristique.</strong> L’étude des facteurs de dilatation des exponentielles suffit.</p>
+</div>
+</details></div>
+</details></div>
+</div>
+<div class="section" id="etude-d-un-portrait-de-phase">
+<h2>Etude d’un portrait de phase<a class="headerlink" href="#etude-d-un-portrait-de-phase" title="Permalink to this headline">¶</a></h2>
+<p>Nous avons jusqu’à présent étudier les évolutions graphiquement au moyen des évolutions temporelles. On peut obtenir d’autres informations en utilisant une représentation particulière appelée <strong>portrait de phase</strong>.</p>
+<div class="section" id="portrait-de-phase">
+<h3>Portrait de phase<a class="headerlink" href="#portrait-de-phase" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Portrait de phase</p>
+<div class="figure align-center" id="fig-158">
+<img alt="../_images/elec_portrait_phase_generalite.png" src="../_images/elec_portrait_phase_generalite.png" />
+</div>
+<p>Un portrait de phase est la représentation de la dérivée de la grandeur <span class="math notranslate nohighlight">\(\dot u(t)\)</span>en ordonnée en fonction de la grandeur <span class="math notranslate nohighlight">\(u(t)\)</span>. C’est un tracé orienté (temporellement).</p>
+<p>On trace par exemple i en fonction de q pour un condensateur. On parle du portrait de phase du condensateur.</p>
+<p>Quelques fois, on représente l’intensité en fonction de la tension et l’on parle aussi de portrait de phase  lorsque l’intensité est proportiionnelle à la dérivée de la tension (condensateur).</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="trans_gene.html" title="previous page">Régime transitoire (1): Caractéristiques générales</a>
+    <a class='right-next' id="next-link" href="trans_methodes.html" title="next page">Méthodes d’analyse d’un régime transitoire</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

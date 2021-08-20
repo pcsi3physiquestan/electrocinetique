@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etude d’un circuit linéaire &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/dip_methode.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Activités d’application" href="ex_app_lineaires.html" />
+    <link rel="prev" title="Dipôles linéaires actifs" href="dip_actif.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conduction.html">
+     Décrire la conduction électrique à notre échelle : Courant et Tension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="el_lois.html">
+     Étudier un circuit : les bases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_bases.html">
+     TD Electrocinétique 1: Bases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="ci_lineaire.html">
+   Dipôles et circuits linéaires
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_gene.html">
+     Dipôles électriques: Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_passif.html">
+     Dipôles linéaires passifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_assoc.html">
+     Association de résistances
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_actif.html">
+     Dipôles linéaires actifs
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Etude d’un circuit linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_lineaires.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_lineaires.html">
+     TD Electrocinétique 2: Circuits linéaires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_gene.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_regimes.html">
+     Régime transitoire et régime forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_methodes.html">
+     Méthodes d’analyse d’un régime transitoire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_stabilite.html">
+     Stabilité des systèmes linéaires d’ordre 1 et 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="meth_trans.html">
+     Activités méthodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_ordre.html">
+   Régime transitoire (2): Ordre 1 et 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_1.html">
+     Caractéristiques d’un système d’ordre 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_2.html">
+     Caractéristiques d’un système d’ordre 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans_o.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_trans_o.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_2.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_trans.html">
+     TD Electrocinétique 3: Régimes de fonctionnements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_interet.html">
+     Intérêt de l’étude fréquentielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_gene.html">
+     Régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_methode.html">
+     Méthode d’étude d’un régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_rsf.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbande.html">
+       Cas passe-bande
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbas.html">
+       Cas passe-bas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf_2.html">
+     Activités d’application (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_rsf.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="filtrage.html">
+   Filtrage linéaire (1): Principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_def.html">
+     Filtre: définition et caractéristiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_reponse.html">
+     Réponse d’un filtre linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_gene.html">
+     Caractéristiques générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_typo.html">
+     Typologie des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cahier.html">
+     Cahier des charges d’un filtre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cascade.html">
+     Mise en cascade des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_filtrage.html">
+     Travaux dirigés: Filtrage linéaire
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/dip_methode.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/dip_methode.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/dip_methode.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-etudier-un-circuit-electrique-lineaire">
+   Méthode: Etudier un circuit électrique linéaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pont-diviseur-de-tension">
+   Pont diviseur de tension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pont-diviseur-de-courant">
+   Pont diviseur de courant
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-reperer-et-utiliser-un-pont-diviseur-de-tension">
+   Méthode: Repérer et utiliser un pont diviseur de tension
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelisation-des-appareils-complexes-resistance-d-entree-et-resistance-de-sortie">
+   Modélisation des appareils complexes : Résistance d’entrée et résistance de sortie
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utilisation-des-ponts-diviseurs-pour-etudier-l-influence-des-resistances-d-entree-et-de-sortie">
+   Utilisation des ponts diviseurs pour étudier l’influence des résistances d’entrée et de sortie.
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="etude-d-un-circuit-lineaire">
+<h1>Etude d’un circuit linéaire<a class="headerlink" href="#etude-d-un-circuit-lineaire" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="methode-etudier-un-circuit-electrique-lineaire">
+<h2>Méthode: Etudier un circuit électrique linéaire<a class="headerlink" href="#methode-etudier-un-circuit-electrique-lineaire" title="Permalink to this headline">¶</a></h2>
+<p>Le but de cet exercice est d’apprendre à mettre en application tout ce qui a été vu précédemment. Nous utiliserons ici la loi des noeuds en terme de potentiel. On pourra néanmoins s’entraîner à reprendre l’exercice en utilisant des tensions et la loi des mailles.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le circuit ci-dessous. Déterminer l’intensité i circulant dans la résistance <span class="math notranslate nohighlight">\(R_1\)</span>.</p>
+<div class="figure align-center" id="fig-129">
+<img alt="../_images/elec_circuit_etude_1.png" src="../_images/elec_circuit_etude_1.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Comme d’habitude, on commence par paramétrer le système. On a au passage choisi une référence des potentiels (masse) au point M puisqu’on compte utiliser la loi des noeuds en terme de potentiel.</p>
+<div class="figure align-center" id="fig-130">
+<img alt="../_images/elec_circuit_etude_2.png" src="../_images/elec_circuit_etude_2.png" />
+</div>
+<p class="card-text">On sait déjà que <span class="math notranslate nohighlight">\(V_A = E\)</span> et <span class="math notranslate nohighlight">\(V_D = 2E\)</span></p>
+<p class="card-text">Les lois des noeuds aux points B et C (s’entraîner à les établir <strong>impérativement</strong>) s’écrivent:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b1280d25-33a3-48b0-8bb4-f2f1d05adf98">
+<span class="eqno">(15)<a class="headerlink" href="#equation-b1280d25-33a3-48b0-8bb4-f2f1d05adf98" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\frac{V_B - E}{R}+\frac{V_B}{R}+\frac{V_B - V_C}{R_1} &amp;= 0\\
+\frac{V_C - 2E}{R}+\frac{V_C}{R}+\frac{V_C - V_B}{R_1} &amp;= 0
+\end{align}\]</div>
+<p class="card-text"><strong>Résolution du système.</strong><br />
+Ici, on doit chercher <span class="math notranslate nohighlight">\(V_C\)</span> et <span class="math notranslate nohighlight">\(V_D\)</span> puisque l’intensité recherché s’écrit <span class="math notranslate nohighlight">\(\frac{V_B - V_C}{R_1}\)</span>. Réorganisons le système pour le résoudre.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-38d22bad-22f3-4bba-a682-52e02e453e27">
+<span class="eqno">(16)<a class="headerlink" href="#equation-38d22bad-22f3-4bba-a682-52e02e453e27" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\left ( 2 R_1 + R \right ) V_B - R V_C &amp;= R_1 E\\
+\left ( 2 R_1 + R \right ) V_C - R V_C &amp;= 2 R_1 E
+\end{align}\]</div>
+<p class="card-text">soit en résolvant le système (<strong>s’entraîner impérativement à le faire</strong>):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e37fdeeb-a73e-444b-8c8a-9e530f230d19">
+<span class="eqno">(17)<a class="headerlink" href="#equation-e37fdeeb-a73e-444b-8c8a-9e530f230d19" title="Permalink to this equation">¶</a></span>\[\begin{align}
+V_B &amp;= \frac{\left (2R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}\\
+V_C &amp;= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
+\end{align}\]</div>
+<p class="card-text">d’où une intensité:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9eba795b-8774-46b8-9657-0280c2b37145">
+<span class="eqno">(18)<a class="headerlink" href="#equation-9eba795b-8774-46b8-9657-0280c2b37145" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\boxed{i = \frac{- E}{2 \left (R_1 + R\right )}}
+\end{equation}\]</div>
+<p class="card-text"><strong>Vérification du résultat</strong></p>
+<ul class="simple">
+<li><p class="card-text">Homogénéité: On a bien une tension sur une résistance, soit une intensité.</p></li>
+<li><p class="card-text">Sens physique: Les résistances étant symétriques, seules les fem sont différentes. Comme celle de droite est plus grande, on attend une intensité au centre qui est positive de droite à gauche. D’où le signe -.</p></li>
+</ul>
+</div>
+</details></div>
+<div class="section" id="pont-diviseur-de-tension">
+<h2>Pont diviseur de tension<a class="headerlink" href="#pont-diviseur-de-tension" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Pont diviseur de tension</p>
+<p>Considérons N résistances en série dont les résistances sont <span class="math notranslate nohighlight">\(\{R_i \vert i \in [\![1;n]\!]\}\)</span> aux bornes de laquelle la tension est u.</p>
+<div class="figure align-center" id="fig-131">
+<img alt="../_images/elec_resistance_serie.png" src="../_images/elec_resistance_serie.png" />
+</div>
+<p>L’intensité circulant dans l’ensemble est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b96066e1-63ae-4d88-b28a-4348aae5116e">
+<span class="eqno">(19)<a class="headerlink" href="#equation-b96066e1-63ae-4d88-b28a-4348aae5116e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i = \frac{u}{\sum_{i=1}^{i=n} R_i}
+\end{equation}\]</div>
+<p>Et la tension u se divise dans chaque dipôle. La tension aux bornes de la résistance <span class="math notranslate nohighlight">\(R_k\)</span> est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-692c629a-290f-4009-973b-0a6538738414">
+<span class="eqno">(20)<a class="headerlink" href="#equation-692c629a-290f-4009-973b-0a6538738414" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u_k = \frac{R_k}{\sum_{i=1}^{i=n} R_i} u
+\end{equation}\]</div>
+<p><strong>Démonstration</strong><br />
+On peut utiliser l’additivité des tensions: <span class="math notranslate nohighlight">\(u = \sum_{i=1}^{i=n} u_k = \sum_{i=1}^{i=n} R_k i = \)</span> d’où l’expression de l’intensité.</p>
+<p>De <span class="math notranslate nohighlight">\(u_k = R_k i\)</span>, on obtient l’expression de la tension.</p>
+</div>
+</div>
+<div class="section" id="pont-diviseur-de-courant">
+<h2>Pont diviseur de courant<a class="headerlink" href="#pont-diviseur-de-courant" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Pont diviseur de courant</p>
+<p>Considérons N résistances en parallèle dont les conductances sont <span class="math notranslate nohighlight">\(\{G_i \vert i \in [\![1;n]\!]\}\)</span> dans laquelle entre une intensité totale i.</p>
+<div class="figure align-center" id="fig-132">
+<img alt="../_images/elec_resistance_parallele.png" src="../_images/elec_resistance_parallele.png" />
+</div>
+<p>La tension aux bornes de l’ensemble est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e69e0219-de0e-442a-9fe5-fafc6328bca9">
+<span class="eqno">(21)<a class="headerlink" href="#equation-e69e0219-de0e-442a-9fe5-fafc6328bca9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u = \frac{i}{\sum_{i=1}^{i=n} G_i}
+\end{equation}\]</div>
+<p>Et le courant i se divise dans chaque branche. L’intensité aux bornes de la résistance <span class="math notranslate nohighlight">\(R_k\)</span> est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2755a08b-7d34-4e50-a0d6-b51e7e00666a">
+<span class="eqno">(22)<a class="headerlink" href="#equation-2755a08b-7d34-4e50-a0d6-b51e7e00666a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i_k = \frac{G_k}{\sum_{i=1}^{i=n} G_i} i
+\end{equation}\]</div>
+</div>
+<p><strong>Démonstration</strong><br />
+On peut écrire une loi des noeuds: <span class="math notranslate nohighlight">\(i = \sum_{i=1}^{i=n} i_k = \sum_{i=1}^{i=n} G_k u = \)</span> d’où l’expression de la tension.</p>
+<p>De <span class="math notranslate nohighlight">\(i_k = G_k u\)</span>, on obtient l’expression de l’intensité.</p>
+</div>
+<div class="section" id="methode-reperer-et-utiliser-un-pont-diviseur-de-tension">
+<h2>Méthode: Repérer et utiliser un pont diviseur de tension<a class="headerlink" href="#methode-reperer-et-utiliser-un-pont-diviseur-de-tension" title="Permalink to this headline">¶</a></h2>
+<p>Le but de cet exercice est d’apprendre à utiliser un pont diviseur de tension. La méthode peut s’appliquer aussi au cas d’un pont diviseur de courant.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Déterminer la condition reliant les résistance pour que la tension <span class="math notranslate nohighlight">\(U_{AB}\)</span> soit nulle (on dit que le pont est alors équilibré).</p>
+<div class="figure align-center" id="fig-pont-de-wheatstone133">
+<img alt="../_images/elec_pont_wheatstone.jpg" src="../_images/elec_pont_wheatstone.jpg" />
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">Pont de Wheatstone</span><a class="headerlink" href="#fig-pont-de-wheatstone133" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Analyse du problème.</strong><br />
+La grandeur qu’on doit exprimer est ici la tension <span class="math notranslate nohighlight">\(U_{AB}\)</span>. On doit l’exprimer en fonction des grandeurs connues à savoir les résistances et E.</p>
+<p class="card-text">Il n’y a pas obligation d’utiliser un pont diviseur de tension mais le but est ici de montrer comment on l’applique.</p>
+<p class="card-text">On a (on a orienté toutes les tensions <span class="math notranslate nohighlight">\(U_{Ri}\)</span> de la droite vers la gauche comme E) : <span class="math notranslate nohighlight">\(U_{AB} = U_{R4} - U_{R1}\)</span>. C’est pour calculer ces deux tensions qu’on peut utiliser des ponts diviseurs de tension.</p>
+<p class="card-text"><strong>Application d’un pont diviseur de tension.</strong><br />
+On doit :</p>
+<ol class="simple">
+<li><p class="card-text">Repérer les résistances qui sont en série et repérer la tension au bornes du pont.</p></li>
+<li><p class="card-text">Repérer la résistance dont on veut déterminer la tension et appliquer la formule du pont diviseur de tension. <strong>Attention à l’orientation des tensions car la tensions <strong><span class="math notranslate nohighlight">\(U_k\)</span></strong> doit être orientée dans le même sens que la tension globale (ici E) pour appliquer la formule du pont.</strong></p></li>
+</ol>
+<p class="card-text">Les résistance <span class="math notranslate nohighlight">\(R_1\)</span> et <span class="math notranslate nohighlight">\(R_2\)</span> sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer <span class="math notranslate nohighlight">\(U_{R1}\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5fba073d-050e-49c1-b825-9f6cf9dff126">
+<span class="eqno">(23)<a class="headerlink" href="#equation-5fba073d-050e-49c1-b825-9f6cf9dff126" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+U_{R1} = \frac{R_1}{R_1+R_2} E
+\end{equation}\]</div>
+<p class="card-text">Les résistance <span class="math notranslate nohighlight">\(R_3\)</span> et <span class="math notranslate nohighlight">\(R_4\)</span> sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer <span class="math notranslate nohighlight">\(U_{R4}\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ea456437-2aca-4d22-b0ea-f2624f4b85f3">
+<span class="eqno">(24)<a class="headerlink" href="#equation-ea456437-2aca-4d22-b0ea-f2624f4b85f3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+U_{R4} = \frac{R_4}{R_3+R_4} E
+\end{equation}\]</div>
+<p class="card-text"><strong>Équilibre du pont</strong><br />
+Il vient :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f686267b-e1bf-4d27-a840-4e52685dc2c2">
+<span class="eqno">(25)<a class="headerlink" href="#equation-f686267b-e1bf-4d27-a840-4e52685dc2c2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
+\end{equation}\]</div>
+<p class="card-text">Le pont est donc équilibré quand :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9c3aa374-d801-44f2-9140-d1aa02ab8cd4">
+<span class="eqno">(26)<a class="headerlink" href="#equation-9c3aa374-d801-44f2-9140-d1aa02ab8cd4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\boxed{R_4 R_2 = R_3 R_1}
+\end{equation}\]</div>
+</div>
+</details></div>
+<div class="section" id="modelisation-des-appareils-complexes-resistance-d-entree-et-resistance-de-sortie">
+<h2>Modélisation des appareils complexes : Résistance d’entrée et résistance de sortie<a class="headerlink" href="#modelisation-des-appareils-complexes-resistance-d-entree-et-resistance-de-sortie" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Résistance d’entrée d’un instrument de mesure</p>
+<p>Un instrument de mesure comme un multimètre ou un oscilloscope possède ses propres caractéristiques électriques. Du point de vue du reste du circuit, ce comportement, en régime indépendant du temps, peut-être <strong>modélisé</strong> par une résistance qu’on appelle <strong>résistance d’entrée de l’appareil.</strong></p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Résistance de sortie d’un générateur, d’une source</p>
+<p>Lorsqu’on utilise un générateur (GBF comme générateur basse fréquence en TP) en pratique, on règle la tension qu’il doit délivrer. Cela revient à régler la fem de la source étudiée précédemment. Néanmoins, dans une source réelle, l’intensité demandée occasionne une chute de tension qu’on <strong>modélise</strong> par une résistance en série avec la fem (modèle de Thévenin). Cette résistance est appelée <strong>résistance de sortie</strong> du générateur.</p>
+</div>
+<p><strong>Influence de la résistance d’entrée et de sortie</strong><br />
+Comme tout dipôle électrique, la résistance d’entrée d’un voltmètre ou d’un oscilloscope et la résistance de sortie d’un générateur influe sur le reste du circuit. Nous allons voir dans l’exercice à venir quelle propriété doit avoir une résistance de sortie ou une résistance d’entrée pour perturber le circuit le moins possible.</p>
+<p>D’un point de vue pratique, on peut retenir que si la tension de sortie du GBF n’est pas la tension réglée sur le GBF, c’est probablement que la résistance de sortie du GBF influe sur le circuit de manière non négligeable.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice Résistance de sortie d’un GBF</p>
+<p>La résistance de sortie d’un GBF est une donnée constructeur. Elle peut être affichée sur la face avant du générateur (comme sur la photo suivante), ou donnée dans une notice ou encore réglable.</p>
+<div class="figure align-center" id="fig-134">
+<img alt="../_images/elec_gbf_re.png" src="../_images/elec_gbf_re.png" />
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Attention : C’est une modélisation</p>
+<p>On rappelle que la constitution réelle d’un générateur et d’un oscilloscope est bien plus complexe que ne laisse penser sa modélisation. Il s’agit simplement ici de proposer un schéma électrique __simple __correspondant au comportement intensité-tension du dipôle.</p>
+<p>Autrement dit, vu du reste du circuit, le dipôle se comporte comme…</p>
+</div>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Complément : Résistance et impédance</p>
+<p>En régime variable, le comportement d’un oscilloscope (ou d’un GBF) n’est plus tout à assimilable à une résistance seule. Une modélisation plus complète utilise des condensateurs voire des bobines. L’ensemble est alors appelée <strong>impédance d’entrée</strong> (ou de sortie pour un GBF).</p>
+<p>La nécessité d’améliorer la modélisation dépend des conditions d’utilisation mais c’est la raison pour laquelle, on trouvera en général le terme d’<strong>impédance</strong> dans les notices et non de résistance (même si l’unité est toujours des <span class="math notranslate nohighlight">\(\Omega\)</span>).</p>
+</div>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Complément : Les quadripôles</p>
+<p>Comme leur non l’indique, les quadripôles sont des composants électroniques possédant 4 bornes. Ils sont en général utilisé comme des dispositifs entrée-sortie : ils reçoivent une tension (d’entrée) sur deux de leur bornes (bornes d’entrée) et fournissent une tension (de sortie) sur les deux autres bornes (bornes de sortie).</p>
+<p>Un exemple de quadripôle très fréquent est l’amplificateur : son rôle est de recevoir une tension d’entrée <span class="math notranslate nohighlight">\(U_e\)</span> et de fournir en sortie une tension <span class="math notranslate nohighlight">\(U_s = K U_e\)</span> multiple du signal d’entrée (il s’agit d’un modèle simple de l’amplificateur dont le comportement réel peut-être plus complexe).</p>
+<div class="figure align-center" id="fig-135">
+<img alt="../_images/elec_modele_quadripole.png" src="../_images/elec_modele_quadripole.png" />
+</div>
+<p>Un amplificateur est en général un dispositif relativement complexe (il nécessite souvent des transistors et une alimentation auxiliaire) mais du point de vue des circuits auxquels il est branché (circuit d’entrée (ou primaire) qui fournit <span class="math notranslate nohighlight">\(U_e\)</span> et circuit de sortie (ou secondaire) qui reçoit la tension <span class="math notranslate nohighlight">\(U_s\)</span> amplifiée) comme :</p>
+<ul class="simple">
+<li><p>une résistance (ou plus généralement impédance) d’entrée pour le circuit primaire</p></li>
+<li><p>un modèle de Thévenin composée d’une fem <span class="math notranslate nohighlight">\(K U_e\)</span> et d’une résistance (ou plus généralement impédance) de sortie pour le circuit secondaire</p></li>
+</ul>
+<p>Ainsi, et malgré la complexité du montage réel, l’amplificateur peut être <strong>modélisé</strong> dans le circuit sous la forme du circuit ci-contre.</p>
+<p>Remarque : On dit que la source <span class="math notranslate nohighlight">\(K U_e\)</span> est une source liée car sa fem est liée au reste du circuit.</p>
+<div class="figure align-center" id="fig-amplificateur-en-rouge-l-entree-en-vert-la-sortie-136">
+<img alt="../_images/elec_ampli_rs_re.jpg" src="../_images/elec_ampli_rs_re.jpg" />
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Amplificateur (en rouge : l’entrée, en vert : la sortie)</span><a class="headerlink" href="#fig-amplificateur-en-rouge-l-entree-en-vert-la-sortie-136" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="utilisation-des-ponts-diviseurs-pour-etudier-l-influence-des-resistances-d-entree-et-de-sortie">
+<h2>Utilisation des ponts diviseurs pour étudier l’influence des résistances d’entrée et de sortie.<a class="headerlink" href="#utilisation-des-ponts-diviseurs-pour-etudier-l-influence-des-resistances-d-entree-et-de-sortie" title="Permalink to this headline">¶</a></h2>
+<p>Le but est autant d’apprendre à utiliser les ponts diviseurs que d’observer théoriquement l’influence des résistances d’entrée et de sortie et d’en déduire les valeurs optimales de ces grandeurs.</p>
+<p>Dans les deux exercices posés ici, les circuits ne sont pas dessinés. <strong>Il est vivement conseillé de s’entraîner à les dessiner</strong>.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère un circuit constitué d’un générateur modélisé par la représentation de Thévenin <span class="math notranslate nohighlight">\((E ;R_S)\)</span> et d’une résistance R. L’utilisateur règle sur le générateur la tension E et attend normalement que la tension aux bornes de R soit celle qu’il a réglé.</p>
+<ol class="simple">
+<li><p>Exprimer la tension aux bornes <span class="math notranslate nohighlight">\(u_R\)</span> de la résistance R. L’utilisateur obtient ce qu’il attend en toute rigueur.</p></li>
+<li><p>A quelle condition peut-on considérer que <span class="math notranslate nohighlight">\(u_R \approx E\)</span> ? En déduire la condition que doit vérifier une impédance de sortie pour ne pas influer sur le circuit.</p></li>
+<li><p>Méthode de la tension de moitié : Si l’on suppose que R est variable, pour quelle valeur de R, la tension <span class="math notranslate nohighlight">\(u_R\)</span> vaudra E/2 ?</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Q1.</strong><br />
+R et <span class="math notranslate nohighlight">\(R_S\)</span> sont en série, elles forment un pont diviseur de tension dont la tension aux bornes est E. Il vient que : <span class="math notranslate nohighlight">\(\boxed{u_R = \frac{R}{R + R_S} E}\)</span></p>
+<p class="card-text"><strong>Q2.</strong><br />
+Il faut que <span class="math notranslate nohighlight">\(\frac{R}{R+R_S} \approx 1\)</span> soit <span class="math notranslate nohighlight">\(\boxed{R_S &lt;&lt; R}\)</span></p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Choix de la résistance de sortie</p>
+<p class="card-text">Pour qu’un GBF influe peu sur le circuit, il faut que sa résistance de sortie soit très faible devant les résistances du circuit.</p>
+<p class="card-text">Si cette condition n’est pas réalisée, la tension à la sortie du GBF ne sera pas la tension réglée (sa fem) mais elle sera plus faible.</p>
+</div>
+<p class="card-text"><strong>Q3.</strong><br />
+Il vient immédiatement <span class="math notranslate nohighlight">\(R = R_S\)</span>. Cette observation permet de mesurer <span class="math notranslate nohighlight">\(R_S\)</span>. C’est ce qu’on appelle la méthode de la tension de moitié.</p>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère une résistance R dont on veut connaître la tension à ses bornes. On branche un voltmètre de résistance d’entrée <span class="math notranslate nohighlight">\(R_e\)</span> en parallèle de R pour mesurer sa tension.</p>
+<ol class="simple">
+<li><p>Quelle la résistance équivalente <span class="math notranslate nohighlight">\(R_{eq}\)</span> de l’ensemble des deux résistances ?</p></li>
+<li><p>On peut considérer que le circuit n’est pas influencé par le voltmètre si la résistance équivalente est à peu près égale à R. A quelle condition sur <span class="math notranslate nohighlight">\(R_e\)</span>, cette approximation est valable. En déduire les bonnes caractéristiques d’une résistance d’entrée pour un voltmètre.</p></li>
+<li><p>On ne place pas dans l’approximation précédente et une intensité i arrive sur l’ensemble résistance+voltmètre. Quelle est la chute d’intensité <span class="math notranslate nohighlight">\(\Delta i = i - i_R\)</span> avec <span class="math notranslate nohighlight">\(i_R\)</span> l’intensité circulant dans la résistance ?</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Q1.</strong><br />
+On a deux résistances en parallèle donc : <span class="math notranslate nohighlight">\(\boxed{R_{eq} = \frac{R R_e}{R_e + R}}\)</span></p>
+<p class="card-text"><strong>Q2.</strong><br />
+On veut <span class="math notranslate nohighlight">\(\frac{R_e}{R_e+R} \approx 1\)</span> soit <span class="math notranslate nohighlight">\(\boxed{R_e &gt;&gt; R}\)</span>.</p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Choix de la résistance d’entrée</p>
+<p class="card-text">Pour qu’un voltmètre influe peu sur un circuit, il faut que son impédance d’entrée soit grande devant les impédances du circuit.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Attention : Cas d’un ampèremètre</p>
+<p class="card-text">Pour un ampèremètre, la résistance d’entrée doit au contraire être très faible.</p>
+</div>
+<p class="card-text"><strong>Q3.</strong><br />
+On a un pont diviseur de courant entre R et <span class="math notranslate nohighlight">\(R_e\)</span> et la chute d’intensité correspond à l’intensité qui circule (loi des noeuds) dans le voltmètre. Il vient :</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(\boxed{\Delta i = \frac{\frac{1}{R_e}}{\frac{1}{R}+\frac{1}{R_e}} i = \frac{R}{R_e+R} i}\)</span></p>
+<p class="card-text">On retrouve le fait que plus <span class="math notranslate nohighlight">\(R_e\)</span> est grande, plus la chute d’intensité sera négligeable devant i.</p>
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="dip_actif.html" title="previous page">Dipôles linéaires actifs</a>
+    <a class='right-next' id="next-link" href="ex_app_lineaires.html" title="next page">Activités d’application</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

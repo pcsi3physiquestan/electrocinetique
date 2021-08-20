@@ -1,0 +1,50 @@
+---
+jupytext:
+  encoding: '# -*- coding: utf-8 -*-'
+  formats: ipynb,md:myst
+  split_at_heading: true
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.10.3
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+# Temps caractéristique d'un système d'ordre 2
+
+````{admonition} Exercice 
+:class: attention
+
+On considère un système d'ordre 2 de facteur de qualité Q et de pulsation propre $\omega_0$.
+
+1. A quelle condition sur Q est-on en régime apériodique. Estimer la temps caractéristique de la durée du régime transitoire en fonction de Q et $\omega_0$. Interprêter l'évolution de ce temps caractéristique en fonction de Q.
+1. A quelle condition sur Q est-on en régime critique. Estimer la temps caractéristique de la durée du régime transitoire en fonction de Q et $\omega_0$.
+1. A quelle condition sur Q est-on en régime pseudo-périodique. Estimer la temps caractéristique de la durée du régime transitoire en fonction de Q et $\omega_0$. Interprêter l'évolution de ce temps caractéristique en fonction de Q.
+1. Tracer l'évolution du temps caractéristique en fonction de Q et retrouver le fait que le régime critique est le plus rapide.
+1. Commenter le rôle de $\omega_0$.
+````
+
+````{dropdown} Correction
+__Système rapide et régime critique__  
+Pour obtenir un système rapide, il faut se placer dans un régime proche du régime critique, soit avoir un facteur de qualité proche de 1/2.
+
+Il s'agit là d'une première inerprétation du facteur de qualité: on donnant une information sur l'intensité de l'amortissement, il donne aussi une idée sur la rapidité du système.
+
+* Lorsque le facteur de qualité est faible, l'amortissement est fort et l'intensité électrique (ou la vitesse en mécanique) est faible: les pertes, proportionnelles à $i^2$ sont donc faible et le système s'amortit lentement.
+* Lorsque le facteur de qualité est fort, l'amortissement est faible et le système va donc s'amortir lentement.
+* C'est pour une valeur entre les deux (autour du régime critique) que le système sera le plus rapide.
+
+````
+
+````{admonition} Fondamental : Loi d'échelle
+:class: important
+
+Quelque soit la valeur de Q, le temps caractéristique est toujours proportionnel à $\frac{1}{\omega_0}$. La pulsation propre est donc un facteur d'échelle pour la rapidité du système. Plus la pulsation propre est grande, plus le système va réagir vite.
+
+Comme nous le verrons avec l'étude fréquentielle, ce facteur d'échelle est très important aussi lorsqu'il s'agit d'étudier le comportement du système forcé par une entrée sinusoïdale.
+
+````
+

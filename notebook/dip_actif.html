@@ -1,0 +1,698 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dipôles linéaires actifs &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/dip_actif.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Etude d’un circuit linéaire" href="dip_methode.html" />
+    <link rel="prev" title="Association de résistances" href="dip_assoc.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conduction.html">
+     Décrire la conduction électrique à notre échelle : Courant et Tension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="el_lois.html">
+     Étudier un circuit : les bases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_bases.html">
+     TD Electrocinétique 1: Bases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="ci_lineaire.html">
+   Dipôles et circuits linéaires
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_gene.html">
+     Dipôles électriques: Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_passif.html">
+     Dipôles linéaires passifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_assoc.html">
+     Association de résistances
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Dipôles linéaires actifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_methode.html">
+     Etude d’un circuit linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_lineaires.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_lineaires.html">
+     TD Electrocinétique 2: Circuits linéaires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_gene.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_regimes.html">
+     Régime transitoire et régime forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_methodes.html">
+     Méthodes d’analyse d’un régime transitoire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_stabilite.html">
+     Stabilité des systèmes linéaires d’ordre 1 et 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="meth_trans.html">
+     Activités méthodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_ordre.html">
+   Régime transitoire (2): Ordre 1 et 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_1.html">
+     Caractéristiques d’un système d’ordre 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_2.html">
+     Caractéristiques d’un système d’ordre 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans_o.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_trans_o.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_2.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_trans.html">
+     TD Electrocinétique 3: Régimes de fonctionnements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_interet.html">
+     Intérêt de l’étude fréquentielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_gene.html">
+     Régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_methode.html">
+     Méthode d’étude d’un régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_rsf.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbande.html">
+       Cas passe-bande
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbas.html">
+       Cas passe-bas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf_2.html">
+     Activités d’application (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_rsf.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="filtrage.html">
+   Filtrage linéaire (1): Principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_def.html">
+     Filtre: définition et caractéristiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_reponse.html">
+     Réponse d’un filtre linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_gene.html">
+     Caractéristiques générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_typo.html">
+     Typologie des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cahier.html">
+     Cahier des charges d’un filtre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cascade.html">
+     Mise en cascade des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_filtrage.html">
+     Travaux dirigés: Filtrage linéaire
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/dip_actif.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/dip_actif.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/dip_actif.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sources-ideales">
+   Sources idéales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#source-reelle-electromoteur">
+   Source réelle: Electromoteur
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-determiner-un-modele-de-thevenin-equivalent">
+   Méthode: Déterminer un modèle de Thévenin équivalent
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="dipoles-lineaires-actifs">
+<h1>Dipôles linéaires actifs<a class="headerlink" href="#dipoles-lineaires-actifs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sources-ideales">
+<h2>Sources idéales<a class="headerlink" href="#sources-ideales" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Source idéale de tension</p>
+<div class="figure align-center" id="fig-schema-d-une-source-ideale-de-tension123">
+<img alt="../_images/elec_gem_ideale.jpg" src="../_images/elec_gem_ideale.jpg" />
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Schéma d’une source idéale de tension</span><a class="headerlink" href="#fig-schema-d-une-source-ideale-de-tension123" title="Permalink to this image">¶</a></p>
+</div>
+<p>Une source idéale de tension est un dipôle dont la tension est une caractéristique propre du dipôle et ne varie pas, quelque soit l’intensité qui la traverse.</p>
+<p>On appelle la tension à ses bornes <strong>force électromotrive (f.e.m.)</strong></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Source idéale de courant</p>
+<div class="figure align-center" id="fig-schema-d-une-source-ideale-de-courant124">
+<img alt="../_images/elec_cem_ideale.jpg" src="../_images/elec_cem_ideale.jpg" />
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Schéma d’une source idéale de courant</span><a class="headerlink" href="#fig-schema-d-une-source-ideale-de-courant124" title="Permalink to this image">¶</a></p>
+</div>
+<p>Une source idéale de courant est un dipôle dont l’intensité est une caractéristique propre du dipôle et ne varie pas, quelque soit la tensionà ses bornes.</p>
+<p>On appelle l’intensité qui la traverse <strong>courant électromoteur (c.e.m.)</strong></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Attention : Source: dipôle polarisé</p>
+<p>Les sources sont des dipôles polarisés. Il est important de préciser le sens dans lequel est orienté la f.e.m. ou le c.e.m.</p>
+</div>
+<p><strong>Caractéristique statique</strong><br />
+La caractéristique statique d’une source idéale de tension de fem E est une droite verticale d’équation u = E</p>
+<p>La caractéristique statique d’une source idéale de courant de cem I est une droite verticale d’équation i = I</p>
+</div>
+<div class="section" id="source-reelle-electromoteur">
+<h2>Source réelle: Electromoteur<a class="headerlink" href="#source-reelle-electromoteur" title="Permalink to this headline">¶</a></h2>
+<p><strong>Comportement réels des sources</strong><br />
+En pratique, une source de tension ne délivre la fem voulue E qu’à vide, c’est-à-dire quand aucun courant ne sort.</p>
+<p>Lorsqu’on commence à demander une intensité en sortie (donc de la puissance), la fem u tend à diminuer.</p>
+<p>Expérimentalement, on observe qu’on peut modéliser cette chute par un modèle linéaire: u = E - Ri. C’est le modèle des électromoteurs.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Electromoteur</p>
+<p>Un électromoteur linéaire est une <strong>modélisation</strong> d’une source donc la relation tension-intensité est:</p>
+<p><span class="math notranslate nohighlight">\(u = E - Ri\)</span> ou <span class="math notranslate nohighlight">\(i = \eta - G u\)</span></p>
+<p>E est la fem (à vide) de l’électromoteur et R sa résistance interne.</p>
+<p><span class="math notranslate nohighlight">\(\eta\)</span> est le cem (à vide) de l’électromoteur et G sa conductance interne.</p>
+</div>
+<p><strong>Lien entre les grandeurs</strong><br />
+On peut passer d’une équation à l’autre puisque les grandeurs <span class="math notranslate nohighlight">\(E, \eta, R\)</span> et G peuvent être reliées entre elles.</p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Modélisation de Thévenin d’un électromoteur</p>
+<div class="figure align-center" id="fig-125">
+<img alt="../_images/elec_electromoteur.jpg" src="../_images/elec_electromoteur.jpg" />
+</div>
+<p>Un électromoteur peut être modélisé par une source idéale de tension de fem E en série avec une résistance R</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Comme à chaque fois pour prouver/déterminer l’équivalence de deux dipôles, nous allons exprimer la relation intensité tension. Dans le cas de l’électromoteur, on a déjà <span class="math notranslate nohighlight">\(u = E - Ri\)</span></p>
+<p>La tension aux bornes du modèle proposé est (la résistance est orientée en convention générateur): <span class="math notranslate nohighlight">\(u = E + u_R = E - R i\)</span></p>
+<p>On a bien identification des équations d’évolution, donc l’électromoteur est modélisable par le modèle de Thévenin.</p>
+<div class="note admonition">
+<p class="admonition-title">Attention : C’est une modélisation</p>
+<p>Le modèle est Thévenin est comme son nom l’indique une modélisation, c’est-à-dire qu’elle permet d’étudier mathématiquement le comportement de la source réelle mais ne traduit pas la composition physique de la source (qui est bien plus complexe).</p>
+</div>
+</div>
+<div class="section" id="methode-determiner-un-modele-de-thevenin-equivalent">
+<h2>Méthode: Déterminer un modèle de Thévenin équivalent<a class="headerlink" href="#methode-determiner-un-modele-de-thevenin-equivalent" title="Permalink to this headline">¶</a></h2>
+<p>Cet exercice propose d’apprendre à montrer qu’un dispositif peut être remplacé par un modèle de Thévenin en déterminant ses caractéristiques. Nous étudierons deux méthodes: l’établissement de l’équation d’évolution comme utilisé précédemment pour la détermination d’un dipôle équivalent et le calcul de deux points particuliers.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Montrer que le circuit ci-dessous est équivalent à un modèle de Thévenin entre les bornes A et B dont on déterminera les caractéristiques.</p>
+<div class="figure align-center" id="fig-126">
+<img alt="../_images/elec_th_eq_exc_1.png" src="../_images/elec_th_eq_exc_1.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On commence par paramétrer le circuit et à bien réfléchir aux grandeurs:</p>
+<ul class="simple">
+<li><p class="card-text">qu’on doit chercher. Ici on veut exprimer la relation tension-intensité. On va donc chercher u en fonction de i ou i en fonction de u. Pour des raisons totalement arbitraires, on décide chercher u en fonction de i.</p></li>
+<li><p class="card-text">qu’on connaît: la fem E, le cem <span class="math notranslate nohighlight">\(I_0\)</span>, la valeur de résistance R. L’intensité i devient aussi une grandeur qu’on “connait” puisqu’on veut exprimer u en fonction de i.</p></li>
+<li><p class="card-text">les grandeurs qui restent doivent être éliminées (il n’est même pas utile de les déterminer en fonction des données du problème puisqu’elle ne sont pas utiles à l’étude demandée). En général, ce sont des grandeurs que nous avons introduites, ici <span class="math notranslate nohighlight">\(i_1, u_1, i_2\)</span></p></li>
+<li><p class="card-text">On a donc 4 inconnnues (<span class="math notranslate nohighlight">\(u, i_1, u_1, i_2\)</span>). Il faudra donc quatre équations.</p></li>
+</ul>
+<div class="figure align-center" id="fig-127">
+<img alt="../_images/elec_th_eq_exc_2.png" src="../_images/elec_th_eq_exc_2.png" />
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Orientation des grandeurs</strong><br />
+On a orienté i et u en convention générateur de manière à pouvoir identifier la relation u(i) à la relation attendue du modèle de Thévenin en convention <strong>générateur</strong> <span class="math notranslate nohighlight">\(u = E_{Th} - R_{Th} i\)</span></p>
+<p class="card-text">On a orienté <span class="math notranslate nohighlight">\(i_2\)</span> de cette façon pour que la résistance soit en convention récepteur. Le but est de pouvoir utiliser directement la loi d’Ohm (écrite en convention récepteur) sans se tromper dans les signes. Encore une fois, le choix de la convention étant arbitraire, on aurait pu choisir une convention générateur. Il est judicieux de choisir une convention récepteur, non pas pour des raisons physiques, mais pour ne pas se tromper dans les formules…</p>
+</div>
+</details><p class="card-text">On réalise la mise en équation (nous utilisons ici les lois des mailles et des noeuds mais il est vivement conseillé de s’entraîner à cet exercice en appliquant la loi des noeuds en terme de potentiel):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cd205efb-9b78-4d2a-b19e-afd1593e6a8f">
+<span class="eqno">(11)<a class="headerlink" href="#equation-cd205efb-9b78-4d2a-b19e-afd1593e6a8f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_1 + i_0 &amp;= i + i_2\\
+E - u_1 - u &amp;= 0
+\end{align}\]</div>
+<p class="card-text">Avec les deux lois d’Ohm <span class="math notranslate nohighlight">\(u_1 = R i_1\)</span> et <span class="math notranslate nohighlight">\(u = R i_2\)</span> on dispose de 4 équations donc d’autant d’équations que inconnues.</p>
+<p class="card-text">Remarque : <strong>Sur la loi des noeuds</strong></p>
+<div class="figure align-center" id="fig-128">
+<img alt="../_images/elec_th_eq_exc_3.png" src="../_images/elec_th_eq_exc_3.png" />
+</div>
+<p class="card-text">La loi des noeuds peut sembler à certains étranges puisque les intensités ne semble pas courir en un noeud. Néanmoins, on rappelle que sur un fil de connexion, le potentiel est identique partout et le point de raccordement du noeud importe alors peu. On a reproduit ci-contre le schéma équivalent au précédent permettant de faire apparaître le noeud où l’on applique la loi de Kirchhoff.</p>
+<p class="card-text">La <strong>règle principale est d’éliminer les grandeurs qui ne nous intéresse pas ET DE GARDER JUSQU’AU BOUT LA GRANDEUR QU’ON VEUT CALCULER.</strong>. Ici, on va éliminer <span class="math notranslate nohighlight">\(u_1\)</span> et <span class="math notranslate nohighlight">\(i_2\)</span> en utilisant les lois d’Ohm. Il vient :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f14d3522-9e6a-4371-9fcc-88a4f7168f9e">
+<span class="eqno">(12)<a class="headerlink" href="#equation-f14d3522-9e6a-4371-9fcc-88a4f7168f9e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+i_1 + i_0 &amp;= i + \frac{u}{R}\\
+E - R i_1 - u &amp;= 0
+\end{align}\]</div>
+<p class="card-text">En multipliant par R la première équation et en sommant, il vient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c0583320-e276-4ceb-9458-082a42991b19">
+<span class="eqno">(13)<a class="headerlink" href="#equation-c0583320-e276-4ceb-9458-082a42991b19" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u = \frac{E + R i_0 - R i}{2}
+\end{equation}\]</div>
+<p class="card-text">Par identification, on trouve:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-56581a9a-0293-4cbc-910c-79ebe1190b68">
+<span class="eqno">(14)<a class="headerlink" href="#equation-56581a9a-0293-4cbc-910c-79ebe1190b68" title="Permalink to this equation">¶</a></span>\[\begin{align}
+E_{Th} &amp;= \frac{E + R i_0}{2}\\
+R_{Th} &amp;= \frac{R}{2}
+\end{align}\]</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction - Autre méthode<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On propose d’utiliser une autre méthode pour déterminer les caractéristiques du modèle de Thévenin équivalent. Le principe est basé sur le fait qu’une caractéristique statique d’un dipôle linéaire est une droite. Il suffit donc de connaître deux points de la droite pour connaître ses caractéristiques.</p>
+<p class="card-text">On va choisir deux points simples à étudier:</p>
+<ul class="simple">
+<li><p class="card-text">Le cas où l’on impose i = 0 (on parle de coupe-circuit). On cherche u.</p></li>
+<li><p class="card-text">Le cas où l’on impose u = 0 (on parle de court-circuit). On cherche i.</p></li>
+</ul>
+<p class="card-text"><strong>Cas i = 0</strong><br />
+La loi des noeuds s’écrit <span class="math notranslate nohighlight">\(i_1 + i_0 = i_2 = \frac{u}{R}\)</span></p>
+<p class="card-text">La loi des mailles s’écrit: <span class="math notranslate nohighlight">\(E - R i_1 = u\)</span></p>
+<p class="card-text">Une combinaison linéaire pour éliminer <span class="math notranslate nohighlight">\(i_1\)</span> donne <span class="math notranslate nohighlight">\(E + R i_0 = 2 u\)</span></p>
+<p class="card-text"><strong>Cas u = 0</strong><br />
+La loi des noeuds s’écrit <span class="math notranslate nohighlight">\(i_1 + i_0 = i + i_2 = i\)</span></p>
+<p class="card-text">La loi des mailles s’écrit: <span class="math notranslate nohighlight">\(E - R i_1 = u = 0\)</span></p>
+<p class="card-text">Une combinaison linéaire pour éliminer <span class="math notranslate nohighlight">\(i_1\)</span> donne <span class="math notranslate nohighlight">\(E + R i_0 = R i\)</span></p>
+<p class="card-text">La droite du modèle de Thévenin doit donc passer par les points <span class="math notranslate nohighlight">\((0;\frac{E}{R} + i_0)\)</span> et <span class="math notranslate nohighlight">\((\frac{E + R i_0}{2}; 0)\)</span></p>
+<p class="card-text">On cherche une droite de la forme <span class="math notranslate nohighlight">\(u = E_{Th} - R_{Th} i\)</span> passe par les deux point précédents (attention les coordonnées sont (u ; i)).</p>
+<p class="card-text">Une recherche mathématique classique du coefficient directeur donne <span class="math notranslate nohighlight">\(R_{Th} = R / 2\)</span>.</p>
+<p class="card-text">La valeur de la fem est directement donnée au point i=0.</p>
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="dip_assoc.html" title="previous page">Association de résistances</a>
+    <a class='right-next' id="next-link" href="dip_methode.html" title="next page">Etude d’un circuit linéaire</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

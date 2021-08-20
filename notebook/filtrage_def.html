@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtre: définition et caractéristiques &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/filtrage_def.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Réponse d’un filtre linéaire" href="filtrage_reponse.html" />
+    <link rel="prev" title="Filtrage linéaire (1): Principe" href="filtrage.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conduction.html">
+     Décrire la conduction électrique à notre échelle : Courant et Tension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="el_lois.html">
+     Étudier un circuit : les bases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_bases.html">
+     TD Electrocinétique 1: Bases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="ci_lineaire.html">
+   Dipôles et circuits linéaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_gene.html">
+     Dipôles électriques: Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_passif.html">
+     Dipôles linéaires passifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_assoc.html">
+     Association de résistances
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_actif.html">
+     Dipôles linéaires actifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_methode.html">
+     Etude d’un circuit linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_lineaires.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_lineaires.html">
+     TD Electrocinétique 2: Circuits linéaires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_gene.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_regimes.html">
+     Régime transitoire et régime forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_methodes.html">
+     Méthodes d’analyse d’un régime transitoire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_stabilite.html">
+     Stabilité des systèmes linéaires d’ordre 1 et 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="meth_trans.html">
+     Activités méthodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_ordre.html">
+   Régime transitoire (2): Ordre 1 et 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_1.html">
+     Caractéristiques d’un système d’ordre 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_2.html">
+     Caractéristiques d’un système d’ordre 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans_o.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_trans_o.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_2.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_trans.html">
+     TD Electrocinétique 3: Régimes de fonctionnements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_interet.html">
+     Intérêt de l’étude fréquentielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_gene.html">
+     Régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_methode.html">
+     Méthode d’étude d’un régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_rsf.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbande.html">
+       Cas passe-bande
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbas.html">
+       Cas passe-bas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf_2.html">
+     Activités d’application (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_rsf.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="filtrage.html">
+   Filtrage linéaire (1): Principe
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Filtre: définition et caractéristiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_reponse.html">
+     Réponse d’un filtre linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_gene.html">
+     Caractéristiques générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_typo.html">
+     Typologie des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cahier.html">
+     Cahier des charges d’un filtre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cascade.html">
+     Mise en cascade des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_filtrage.html">
+     Travaux dirigés: Filtrage linéaire
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/filtrage_def.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/filtrage_def.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/filtrage_def.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtrage-principe">
+   Filtrage: Principe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-generales-d-un-filtre">
+   Caractéristiques générales d’un filtre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-de-filtres">
+   Types de filtres
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diagramme-de-bode">
+   Diagramme de Bode
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-etude-d-un-filtre">
+   Méthode: Etude d’un filtre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-frequentielle-d-un-filtre-bilan">
+   Etude fréquentielle d’un filtre: Bilan
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="filtre-definition-et-caracteristiques">
+<h1>Filtre: définition et caractéristiques<a class="headerlink" href="#filtre-definition-et-caracteristiques" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="filtrage-principe">
+<h2>Filtrage: Principe<a class="headerlink" href="#filtrage-principe" title="Permalink to this headline">¶</a></h2>
+<p><strong>Quadrupôle</strong><br />
+Un quadripôle est un composant qui présente 2 bornes d’entrée et 2 bornes de sortie.</p>
+<div class="admonition-definition-fonction-de-transfert-filtre admonition">
+<p class="admonition-title">Définition : Fonction de transfert/Filtre</p>
+<p>On définit la fonction de transfert <span class="math notranslate nohighlight">\(\underline{H}(j \omega) = \frac{\underline{s}}{\underline{e}}\)</span> comme le rapport des amplitudes complexes des tensions d’entrée <span class="math notranslate nohighlight">\(e\)</span> et de sortie <span class="math notranslate nohighlight">\(s\)</span> en régime sinusoïdal forcé de pulsation <span class="math notranslate nohighlight">\(\omega\)</span> quand la sortie est ouverte.</p>
+<p>Un filtre est un quadripôle dont la fonction de transfert dépend explicitement de la pulsation <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
+<div class="figure align-center" id="fig-198">
+<img alt="../_images/elec_quadriopole.jpg" src="../_images/elec_quadriopole.jpg" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une fonction de transfert n’a de sens que si le système est stable et linéaire.</p>
+<p class="card-text">Si la condition de linéarité est indispensable, il arrive d’étudier un système en régime sinusoïdal forcé pour ensuite vérifier sa stabilité.</p>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Exercice Exemples de filtres</p>
+<p>On peut construire un filtre artificiellement pour de multiples usages.</p>
+<ul class="simple">
+<li><p>Un système mécanique est commandé par un signal électrique. Ce système mécanique est censé fonctionner à des fréquences comprises entre 0 et 10Hz. De plus, au dessus de 100Hz, les vibrations rapides du systèmes peuvent endommager l’appareil. On se propose donc de créer un filtre passe-bas coupant les fréquence supérieures à 10Hz.</p></li>
+<li><p>Le secteur délivre une tension dont les fréquences sont autour de 50Hz (à 2 Hz) près. Pour éviter des parasites gênant dans le son délivré par un haut-parleur, on désire “couper” les fréquences comprises entre 45Hz et 55Hz.</p></li>
+</ul>
+<p>Certains systèmes peuvent avoir des effets de filtrages non désirés ou naturels:</p>
+<ul class="simple">
+<li><p>Un pont soumis au vent est un système mécanique réagissant différemment à des excitations périodiques de fréquences différentes. Il arrive ainsi qu’ils possèdent une fréquence de résonance à laquelle ils vont vibrer plus fortement (pont de Tacoma).</p></li>
+<li><p>Les atomes et molécules soumis à un rayonnement électromagnétiques réagissent différemment suivant la fréquence du rayonnement: au maximum de vibration, il absorbent un maximum d’énergie. C’est la base des analyses de spectre (IR, UV… )</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="caracteristiques-generales-d-un-filtre">
+<h2>Caractéristiques générales d’un filtre<a class="headerlink" href="#caracteristiques-generales-d-un-filtre" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Gain réel, argument et gain en décibel</p>
+<p>Les caractéristiques d’un filtre sont:</p>
+<ul class="simple">
+<li><p>son module <span class="math notranslate nohighlight">\(G = \frac{s_m}{e_m}\)</span>, appelé <strong>gain réel</strong>: il correspond au rapport des amplitudes réelles</p></li>
+<li><p>sa argument ou <strong>phase</strong>: il va correspondre au déphasage que va avoir la sortie sur l’entrée.</p></li>
+<li><p>son <strong>gain en décibel</strong> défini par <span class="math notranslate nohighlight">\(G_{db} = 20 \log \frac{s_m}{e_m}\)</span> (attention: c’est une grandeur réelle): on verra que c’est une manière plus pratique de se représenter le rôle et l’efficacité d’un filtre.</p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Intensité en sortie</strong><br />
+Par convention, la fonction de transfert d’un filtre est toujours calculée avec une intensité sortant du filtre nulle.</p>
+<p class="card-text">Il faut noter que si dans les conditions d’utilisation l’intensité en sortie n’est pas nulle, cela peut modifier le comportement du filtre. (cf. suite)</p>
+<div class="figure align-center" id="fig-199">
+<img alt="../_images/elec_quadriopole.jpg" src="../_images/elec_quadriopole.jpg" />
+</div>
+</div>
+</details></div>
+<div class="section" id="types-de-filtres">
+<h2>Types de filtres<a class="headerlink" href="#types-de-filtres" title="Permalink to this headline">¶</a></h2>
+<p>Les filtres sont de différents types suivant leur finalité. Nous ne présentons ici que les types de filtres les plus utilisés (et ceux que vous devez connaître). <strong>Dans le cadre du programme</strong>, on peut associer à chaque type de filtre des comportements haute et basse fréquence précis. C’est en étudiant ces comportements qu’on déterminera le type de filtre.</p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Types de filtres</p>
+<ul class="simple">
+<li><p>les filtres dit passe-bas: leur but est de laisser passer les basses fréquences et de couper les hautes fréquences. Normalement, on utilise ces filtres pour laisser passer une gamme de fréquence jusqu’à une fréquence voulue (qu’on appellera fréquence de coupure) et couper les fréquence plus rapides.</p></li>
+</ul>
+<p><strong>On reconnaît les filtres passe-bas par un comportement basse fréquence non-nul et un comportement haute-fréquence nul.</strong></p>
+<ul class="simple">
+<li><p>les filtres dit passe-haut: leur but est de laisser passer les hautes fréquences et de couper les basses fréquences. Normalement, on utilise ces filtres pour laisser passer une gamme de fréquence à partir une fréquence voulue (qu’on appellera fréquence de coupure) et couper les fréquence plus lentes.</p></li>
+</ul>
+<p><strong>On reconnaît les filtres passe-haut par un comportement basse fréquence nul et un comportement haute-fréquence non-nul.</strong></p>
+<ul class="simple">
+<li><p>les filtres dit passe-bande: leur but est de laisser passer une bande de fréquence entre deux fréquences choisies (qui sont appelées fréquences de coupure).</p></li>
+</ul>
+<p><strong>On reconnaît les filtres passe-bande par un comportement basse fréquence et un comportement haute-fréquence nul.</strong></p>
+<ul class="simple">
+<li><p>les filtres dit coupe-bande (ou réjecteur de bande): leur but est de couper une bande de fréquence entre deux fréquences choisies (qui sont appelées fréquences de coupure).</p></li>
+</ul>
+<p><strong>On reconnaît les filtres coupe-bande par un comportement basse fréquence et un comportement haute-fréquence non-nul et égaux. Il existe (et surtout) aussi une fréquence pour laquelle le gain s’annule.</strong></p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p>Utilisation d’un filtre passe-bas: On peut s’en servir pour extraire une valeur moyenne ou pour filtrer les parasites d’un signal (quand ils sont haute-fréquence).</p></li>
+<li><p>Utilisation d’un filtre passe-haut: On peut l’utiliser pour supprimer une valeur moyenne. Le mode AC de l’oscilloscope (et du multimètre) utilise un filtre passe-haut sur la voie où le mode est choisi.</p></li>
+<li><p>Utilisation d’un filtre passe-bande: Comme on le signalait en introduction, elle peuvent être utilisée en acoustique pour “découper” le son en plusieurs bandes de fréquence qu’on va amplifier de manière différentes. Les filtres passe-bande sont aussi utilisée en analyse spectrale, pour la sélection des radios…</p></li>
+<li><p>Utilisation d’un filtre coupe-bande: L’exemple donné en introduction: quand on veut supprimer la fréquence 50Hz du secteur qui peut bruiter un signal.</p></li>
+</ul>
+</div>
+<p><strong>Filtres idéaux</strong><br />
+Pour comprendre le principe d’un filtre, nous allons partir sur des exemples de filtres “idéaux” tel qu’on voudrait les concevoir. Un filtre idéal est en général basé sur le principe du “tout-ou-rien”. On laisse passer la fréquence, ou on la coupe.</p>
+<p>En théorie, on essaie d’avoir un filtre idéal, c’est-à-dire laissant passer les fréquences dans une gamme de fréquence voulue avec un gain constant et avoir un gain nul pour les fréquences qu’on veut filtrer. On donne ci-dessous l’allure du gain des filtres idéaux correspondants aux filtres usuels cités ci-dessous : (a) filtre passe-bas, (b) filtre passe-haut, (c) filtre passe-bande, (d) filtre coupe-bande.</p>
+<div class="figure align-center" id="fig-200">
+<img alt="../_images/elec_filtres_ideaux.jpg" src="../_images/elec_filtres_ideaux.jpg" />
+</div>
+<p>Le problème est qu’on ne peut en pratique réaliser de tels filtres (d’où le nom… ). C’est pourquoi, on va créer des filtres qui se rapprochent plus ou moins du comportement idéal. Nous allons voir comment étudier de tels filtres.</p>
+</div>
+<div class="section" id="diagramme-de-bode">
+<h2>Diagramme de Bode<a class="headerlink" href="#diagramme-de-bode" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Diagramme de Bode</p>
+<p>Le diagramme de Bode est la représentation graphique utilisée pour les filtres linéaires. Il consiste à représenter le gain en décibel et la phase du filtre en fonction de <span class="math notranslate nohighlight">\(\log(\omega)\)</span>.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Pulsation réduite</strong><br />
+Pour l’étude d’un filtre linéaire, on peut souvent faire apparaître une grandeur <span class="math notranslate nohighlight">\(\omega_0\)</span> homogène à une pulsation telle qu’on pour en comparant la pulsation d’excitation <span class="math notranslate nohighlight">\(\omega\)</span> à cette pulsation différencier les faibles pulsations (faibles fréquences) des fortes pulsations (fortes fréquences). On appelle cette grandeur une pulsation propre. On définit alors la pulsation réduite: <span class="math notranslate nohighlight">\(x= \frac{\omega}{\omega_0}\)</span>.</p>
+<p class="card-text">Lorsqu’on trace des diagrammes de Bode théoriques, on les trace souvent en fonction de <span class="math notranslate nohighlight">\(\log(x)\)</span> au lieu de <span class="math notranslate nohighlight">\(\log(\omega)\)</span>.</p>
+</div>
+</details><p><strong>Décade</strong><br />
+Une décade est un intervalle de pulsation <span class="math notranslate nohighlight">\([\omega_1;\omega_2]\)</span> (ou de pulsation réduite <span class="math notranslate nohighlight">\([x_1;x_2]\)</span>, ou encore de fréquence <span class="math notranslate nohighlight">\([f_2;f_2]\)</span>) tel que <span class="math notranslate nohighlight">\(\frac{\omega_2}{\omega_1}=\frac{x_2}{x_1}=\frac{f_2}{f_1} = 10\)</span>. Autrement dit, quand on avance d’une décade, on multiplie par dix la pulsation.</p>
+<p>Sur un diagramme de Bode, une décade correspond à un écart <span class="math notranslate nohighlight">\(\Delta(\log(x)) = 1\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Diagramme semi-logarithmique</strong><br />
+En général, on représente les diagrammes de Bode sur des papier semi-log qui représentent les valeurs de x (ou de <span class="math notranslate nohighlight">\(\omega\)</span>) en absisses et non <span class="math notranslate nohighlight">\(\log(x)\)</span>.</p>
+</div>
+</details></div>
+<div class="section" id="methode-etude-d-un-filtre">
+<h2>Méthode: Etude d’un filtre<a class="headerlink" href="#methode-etude-d-un-filtre" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<div class="figure align-center" id="fig-201">
+<img alt="../_images/elec_rl_pas_haut.png" src="../_images/elec_rl_pas_haut.png" />
+</div>
+<ol class="simple">
+<li><p>Déterminer le type de filtre par une étude haute et basse fréquence.</p></li>
+<li><p>Déterminer la fonction de transfert du filtre et en déduire son gain réel, son gain en décibel, sa phase. On introduira la pulsation propre <span class="math notranslate nohighlight">\(\omega _0\)</span> telle que:</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight" id="equation-5e2b0bb5-7a51-4f92-875b-d89bc7164dc1">
+<span class="eqno">(116)<a class="headerlink" href="#equation-5e2b0bb5-7a51-4f92-875b-d89bc7164dc1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\underline{H} = \frac{A j\frac{\omega}{\omega_0}}{1 + j\frac{\omega}{\omega_0}} = \frac{A jx}{1 + jx}
+\end{equation}\]</div>
+<p>On veut tracer le diagramme de Bode. Montrer que:</p>
+<ol class="simple">
+<li><p>Le gain réel est strictement croissant</p></li>
+<li><p>Il est maximal à haute fréquence. Préciser sa valeur.</p></li>
+<li><p>La fonction <span class="math notranslate nohighlight">\(G_{dB}(\log(x))\)</span> possède une asymptote oblique en <span class="math notranslate nohighlight">\(\log(x) \to - \infty\)</span> de pente <span class="math notranslate nohighlight">\( + 20 \rm{dB/decade}\)</span>.</p></li>
+<li><p>La phase est strictement décroissante. On déterminera ses valeurs asymptotiques.</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Type de filtre</strong><br />
+A basse fréquence la bobine est assimilable à un fil, la tension s est donc nulle.</p>
+<p class="card-text">A haute fréquence, la bobine se comporte comme un interrupteur ouvert. L’intensité circulant dans la résistance est donc nulle et la tension à ses bornes aussi. Il vient (loi des mailles) que s = e.</p>
+<p class="card-text">Le filtre a une fonction de transfert nulle à basse fréquence et non nulle à haute fréquence. C’est un filtre passe-haut.</p>
+<p class="card-text"><strong>Fonction de transfert</strong><br />
+La bobine et la résistance forment un pont diviseur de tension. La tension aux bornes de la bobine est donc:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-291ad914-ffc2-4e83-9203-313da2c3395c">
+<span class="eqno">(117)<a class="headerlink" href="#equation-291ad914-ffc2-4e83-9203-313da2c3395c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\underline{s} = \frac{jL\omega}{R + jL\omega} \underline{e} \Longrightarrow \underline{H} = \frac{j \frac{L}{R}\omega}{1 + j \frac{L}{R}\omega}
+\end{equation}\]</div>
+<p class="card-text">Il vient que la pulsation propre est <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span>.</p>
+<p class="card-text">Il vient que les caractéristiques du filtre sont:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+G = \frac{Ax}{\sqrt{1 + x^2}}\\
+G_{dB} = 20 \log A + 20 \log x - 10 \log \left (1 + x^2\right )\\
+\varphi = \frac{\pi}{2} - \arctan x
+\end{align*}\]</div>
+<p class="card-text"><strong>Diagramme de Bode</strong><br />
+Le gain réel se met sous la forme <span class="math notranslate nohighlight">\(G = \frac{1}{\sqrt{1 + \frac{1}{x^2}}}\)</span>. Il vient immédiatement que le gain réel est strictement croissant.</p>
+<p class="card-text">On en déduit la fonction atteint son maximum en <span class="math notranslate nohighlight">\(x = + \infty\)</span>. Le gain réel vaut alors 1 et le gain en décibel vaut 0. Il vient <strong>que le diagramme de Bode possède une asymptote horizontal <strong><span class="math notranslate nohighlight">\(G_{dBa,asymp__ = 0\)</span>}</strong> en  <strong><span class="math notranslate nohighlight">\(x \to + \infty\)</span></strong> (en <strong><span class="math notranslate nohighlight">\(\omega \to + \infty\)</span></strong>, c’est-à-dire à haute fréquence).</strong></p>
+<p class="card-text">A très basse fréquence (<span class="math notranslate nohighlight">\(\omega \to 0 \Longrightarrow x \to 0 \Longrightarrow \log x \to - \infty\)</span>), le gain réel se réécrit <span class="math notranslate nohighlight">\(G \approx x\)</span> soit un gain en décibel <span class="math notranslate nohighlight">\(G_{dB} \approx 20 \log x\)</span>. <strong>Le gain en décibel s’appproche donc d’une droite en fonction de <strong><span class="math notranslate nohighlight">\(\log(x)\)</span></strong> de pente +20. Le gain en décibel s’exprime en…  décibel et l’abscisse <strong><span class="math notranslate nohighlight">\(\log(x)\)</span></strong> se compte en décade.</strong> Le gain en décibel possède donc, sur un diagramme de Bode une asymptote oblique à basse fréquence de pente <span class="math notranslate nohighlight">\(+20 \rm{dB/decade}\)</span>.</p>
+<p class="card-text">La fonction arctan étant croissante, la phase est décroissante. Ses valeurs limites sont <span class="math notranslate nohighlight">\(\pi/2\)</span> et 0.</p>
+<p class="card-text">On peut donc tracer le diagramme de Bode:</p>
+<div class="figure align-center" id="fig-202">
+<img alt="../_images/filtre_rl_bode.png" src="../_images/filtre_rl_bode.png" />
+</div>
+</div>
+</details></div>
+<div class="section" id="etude-frequentielle-d-un-filtre-bilan">
+<h2>Etude fréquentielle d’un filtre: Bilan<a class="headerlink" href="#etude-frequentielle-d-un-filtre-bilan" title="Permalink to this headline">¶</a></h2>
+<p><strong>Bilan</strong><br />
+Etudier un filtre permet de prévoir son comportement face à une réponse quelconque (cf. suite) mais aussi de choisir les composants pour réaliser tel ou tel type de filtrage. Lors d’une étude fréquentielle d’un filtre peut:</p>
+<ul class="simple">
+<li><p>Déterminer le type de filtre, soit par une étude des limites de la fonction de transfert, soit par une étude rapide du circuit à haute et basse fréquence.</p></li>
+<li><p>Déterminer la fonction de transfert. On peut alors déterminer la phase du filtre ainsi que son gain réel.</p></li>
+<li><p>Etudier le gain réel pour déterminer le comportement du filtre (résonance, bande passante, type, ordre… )</p></li>
+<li><p>Tracer le diagramme de Bode pour pouvoir retrouver/obtenir les caractéristiques précédentes. On peut aussi y figurer le comportements asymptotiques (sous forme d’asymptotes horizontales ou obliques). Nous verrons que cette étude asymptotique peut être très utile pour étudier la réponse d’un filtre.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="filtrage.html" title="previous page">Filtrage linéaire (1): Principe</a>
+    <a class='right-next' id="next-link" href="filtrage_reponse.html" title="next page">Réponse d’un filtre linéaire</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

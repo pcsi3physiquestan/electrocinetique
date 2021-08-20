@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réponse d’un filtre linéaire &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/filtrage_reponse.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Caractéristiques générales" href="filtrage_gene.html" />
+    <link rel="prev" title="Filtre: définition et caractéristiques" href="filtrage_def.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conduction.html">
+     Décrire la conduction électrique à notre échelle : Courant et Tension
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="el_lois.html">
+     Étudier un circuit : les bases
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_bases.html">
+     TD Electrocinétique 1: Bases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="ci_lineaire.html">
+   Dipôles et circuits linéaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_gene.html">
+     Dipôles électriques: Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_passif.html">
+     Dipôles linéaires passifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_assoc.html">
+     Association de résistances
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_actif.html">
+     Dipôles linéaires actifs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dip_methode.html">
+     Etude d’un circuit linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_lineaires.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_lineaires.html">
+     TD Electrocinétique 2: Circuits linéaires
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_gene.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_regimes.html">
+     Régime transitoire et régime forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_methodes.html">
+     Méthodes d’analyse d’un régime transitoire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_stabilite.html">
+     Stabilité des systèmes linéaires d’ordre 1 et 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="meth_trans.html">
+     Activités méthodes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="trans_ordre.html">
+   Régime transitoire (2): Ordre 1 et 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_1.html">
+     Caractéristiques d’un système d’ordre 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="trans_ordre_2.html">
+     Caractéristiques d’un système d’ordre 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_trans_o.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_trans_o.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_2.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_trans_o_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_trans.html">
+     TD Electrocinétique 3: Régimes de fonctionnements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_interet.html">
+     Intérêt de l’étude fréquentielle
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_gene.html">
+     Régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="rsf_methode.html">
+     Méthode d’étude d’un régime sinusoïdal forcé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf.html">
+     Activités d’application
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="meth_rsf.html">
+     Activités méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbande.html">
+       Cas passe-bande
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="meth_rsf_pbas.html">
+       Cas passe-bas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ex_app_rsf_2.html">
+     Activités d’application (2)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_rsf.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="filtrage.html">
+   Filtrage linéaire (1): Principe
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_def.html">
+     Filtre: définition et caractéristiques
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Réponse d’un filtre linéaire
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_gene.html">
+     Caractéristiques générales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_typo.html">
+     Typologie des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cahier.html">
+     Cahier des charges d’un filtre
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="filtrage_cascade.html">
+     Mise en cascade des filtres
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="td_filtrage.html">
+     Travaux dirigés: Filtrage linéaire
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/filtrage_reponse.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/filtrage_reponse.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/filtrage_reponse.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-reponse-d-un-filtre-a-un-sinusoide">
+   Méthode: Réponse d’un filtre à un sinusoïde
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-d-un-signal-d-entree-periodique">
+   Cas d’un signal d’entrée périodique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-analyse-d-un-diagramme-de-bode">
+   Méthode: Analyse d’un diagramme de Bode
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="reponse-d-un-filtre-lineaire">
+<h1>Réponse d’un filtre linéaire<a class="headerlink" href="#reponse-d-un-filtre-lineaire" title="Permalink to this headline">¶</a></h1>
+<p>Nous allons étudier ici les différents méthodes pour obtenir la réponse d’un filtre à une entrée donnée. Nous verrons qu’à nouveau on utilise le principe de linéarité. Après avoir étudié la <strong>réponse exacte</strong> d’un filtre nous verrons que souvent l’étude de réponses approchées donne des informations suffisantes. Nous verrons deux types d’étude: l’assimilation à un <strong>filtre idéal</strong> et l’assimilation aux comportement <strong>asymptotique</strong></p>
+<div class="section" id="methode-reponse-d-un-filtre-a-un-sinusoide">
+<h2>Méthode: Réponse d’un filtre à un sinusoïde<a class="headerlink" href="#methode-reponse-d-un-filtre-a-un-sinusoide" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On reprend le filtre précédent dont la fonction de transfert est <span class="math notranslate nohighlight">\(\underline{H} = \frac{jx}{1 + jx}\)</span> avec <span class="math notranslate nohighlight">\(x = \frac{\omega}{\omega_0}\)</span> et <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span>.</p>
+<ol class="simple">
+<li><p>Nous allons commencer par établir la réponse exacte du filtre.</p>
+<ol class="simple">
+<li><p>Exprimer le signal de sortie <span class="math notranslate nohighlight">\(s(t)\)</span> pour un signal d’entrée sinusoïdal de pulsation <span class="math notranslate nohighlight">\(\omega\)</span> et d’amplitude <span class="math notranslate nohighlight">\(e_m\)</span>.</p></li>
+<li><p>On considère un signal d’entrée <span class="math notranslate nohighlight">\(e(t) = e_1 \cos \omega_1 t + e_2 \cos \omega_2 t\)</span> avec <span class="math notranslate nohighlight">\(\omega_1 = 0.1 \omega_0\)</span> et <span class="math notranslate nohighlight">\(\omega_2 = 10 \omega_0\)</span>. Exprimer la réponse exacte du filtre.</p></li>
+</ol>
+</li>
+<li><p>Nous allons maintenant assimiler la réponse du filtre à sa version idéale.</p>
+<ol class="simple">
+<li><p>Pour des fréquences faibles devant <span class="math notranslate nohighlight">\(\omega_0\)</span>, simplifier l’expression du gain et de la phase à l’ordre 0.</p></li>
+<li><p>Pour des fréquences hautes devant <span class="math notranslate nohighlight">\(\omega_0\)</span>, simplifier l’expression du gain et de la phase à l’ordre 0.</p></li>
+<li><p>On considère un signal d’entrée <span class="math notranslate nohighlight">\(e(t) = e_1 \cos \omega_1 t + e_2 \cos \omega_2 t\)</span> avec <span class="math notranslate nohighlight">\(\omega_1 = 0.1 \omega_0\)</span> et <span class="math notranslate nohighlight">\(\omega_2 = 10 \omega_0\)</span>. Dans le cadre d’approximation par un filtre idéal, exprimer la tension de sortie.</p></li>
+<li><p>Comparer graphiquement les représentations graphiques de la réponse exacte et de la réponse “tout-ou-rien” qui vient d’être établie.</p></li>
+</ol>
+</li>
+<li><p>Nous allons maintenant assimiler la réponse du filtre à ses comportements asymptotiques établies lors du tracé du diagramme de Bode.</p>
+<ol class="simple">
+<li><p>A basse fréquence, on rappelle qu’on a montré que la fonction de transfert peut se réécrire <span class="math notranslate nohighlight">\(\underline{H} = j x\)</span>. En déduire la relation temporelle entrée-sortie à basse-fréquence. Comment se comporte le filtre pour un signal dont le spectre est entièrement inférieur à la bande fréquence <span class="math notranslate nohighlight">\(\omega_0\)</span> ?</p></li>
+</ol>
+</li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Réponse exacte</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+s(t) &amp;= \frac{e_m \frac{\omega}{\omega_0}}{\sqrt{1 + {\left(\frac{\omega}{\omega_0}\right)}^2}}\cos \left(\omega t + \frac{\pi}{2} - \arctan \frac{\omega}{\omega_0}\right)\\
+s(t) &amp;= \frac{0.1 e_1}{\sqrt{1.01}}\cos \left(0.1 \omega_0 t + \frac{\pi}{2} - \arctan 0.1\right) + \frac{10 e_1}{\sqrt{101}}\cos \left(10 \omega_0 t + \frac{\pi}{2} - \arctan 10\right)
+\end{align*}\]</div>
+<p class="card-text"><strong>Réponse idéale</strong><br />
+A basse fréquence, la fonction de transfert est se résume à <span class="math notranslate nohighlight">\(\underline{H} = 0\)</span> d’où un gain de 0 et à haute fréquence, elle se résume à <span class="math notranslate nohighlight">\(\underline{H} = 1\)</span> d’où un gain de 1.</p>
+<p class="card-text">Dans le cadre d’approximation par un filtre idéal, on va associer le gain maximal aux fréquences conservées (ici les hautes fréquences, c’est un filtre passe haut) et un gain nul pour les autres (ici les basses fréquences). A haute fréquence la phase est aussi quasi nulle. Il vient donc que: <span class="math notranslate nohighlight">\(s(t) = e_2 \cos \left ( 100 \omega_0 t \right )\)</span>.</p>
+<p class="card-text">On a représenté ci-dessous la réponse exacte (gauche) et la réponse approchée (droite).On observe que les signaux sont à peu près identiques. L’utilisation du modèle idéal est ici plutôt valable car les fréquences sont suffisamment loin de la fréquence propre pour que la fonction de transfert soit proche de sa valeur limite HF et BF.</p>
+<div class="figure align-center" id="fig-203">
+<img alt="../_images/filtre_rl_somme.png" src="../_images/filtre_rl_somme.png" />
+</div>
+<p class="card-text"><strong>Réponse asymptotique</strong><br />
+A basse fréquence, la relation se réécrite <span class="math notranslate nohighlight">\(\underline{s} = \frac{j \omega}{\omega_0} \underline{e}\)</span> soit en temporel <span class="math notranslate nohighlight">\(s(t) = \frac{1}{\omega_0}\frac{\rm{d}e}{\rm{dt}}(t)\)</span>. Pour les basses fréquences, le filtre se comporte comme un dérivateur. (On parlera de pseudo-dérivateur car il ne se comporte comme dérivateur que pour une partie du spectre).</p>
+</div>
+</details></div>
+<div class="section" id="cas-d-un-signal-d-entree-periodique">
+<h2>Cas d’un signal d’entrée périodique<a class="headerlink" href="#cas-d-un-signal-d-entree-periodique" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le filtre ci-dessous.</p>
+<ol class="simple">
+<li><p>Déterminer rapidement le type de filtre puis la fonction de transfert. En déduire le gain réel et la phase. On mettra la fonction de transfert sous la forme <span class="math notranslate nohighlight">\(\underline{H} = \frac{A}{1 + j x}\)</span> avec x la pulsation réduite.</p></li>
+<li><p>Justifier que le gain réel est strictement décroissant. Montrer que la représentation du gain en décibel sur un diagramme de Bode <span class="math notranslate nohighlight">\(G_{dB}(\log(x))\)</span> admet une asymptote oblique à haute fréquence de pente <span class="math notranslate nohighlight">\(- 20 \rm{dB/decade}\)</span></p></li>
+<li><p>On définit la bande passante du filtre comme la gamme de fréquence où le gain réel est supérieur au gain maximal divisé par <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. Déterminer la bande passante.</p></li>
+</ol>
+<div class="figure align-center" id="fig-204">
+<img alt="../_images/elec_rc_passe_bas.jpg" src="../_images/elec_rc_passe_bas.jpg" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">A basse fréquence, le condensateur se comportant comme un interrupteur ouvert, il impose une intensité nulle. La loi des mailles donne donc s = e. A haute fréquence, le condensateur se comportant comme un fil, il vient s=0. Il s’agit donc d’un filtre passe-haut.</p>
+<p class="card-text">La résistance et le condensateur forment un pont diviseur de tension (on rappelle qu’on étudie le filtre avec une intensité sortante nulle) donc: <span class="math notranslate nohighlight">\(\underline{s} = \frac{1}{1 + j RC \omega} \underline{e}\)</span>. Il vient une pulsation propre <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{RC}\)</span>.</p>
+<p class="card-text">Le gain réel est donc <span class="math notranslate nohighlight">\(G = \frac{1}{\sqrt{1 + x^2}}\)</span> et la phase <span class="math notranslate nohighlight">\(\phi = - \arctan x\)</span></p>
+<p class="card-text">La décroissance du gain réel est triviale. A haute fréquence, la fonction de transfert devient <span class="math notranslate nohighlight">\(\underline{H} \approx \frac{1}{jx}\)</span> soit un gain en décibel <span class="math notranslate nohighlight">\(G_{dB} \approx -20 \log x\)</span>. Il vient bien une pente de <span class="math notranslate nohighlight">\(- 20 \rm{dB/decade}\)</span>.</p>
+<div class="figure align-center" id="fig-205">
+<img alt="../_images/filtre_rc_bode.png" src="../_images/filtre_rc_bode.png" />
+</div>
+<p class="card-text">Le gain réel étant strictement décroissant, le gain maximal est le gain à fréquence nulle (gain statique) soit ici 1. On cherche donc à résoudre l’inégalité:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5065a066-623c-485a-88f7-04ef2b66660c">
+<span class="eqno">(118)<a class="headerlink" href="#equation-5065a066-623c-485a-88f7-04ef2b66660c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{1}{\sqrt{1 + x^2}} \geq \frac{1}{\sqrt{2}} \Longrightarrow x\leq 1 \Longrightarrow \omega \leq \omega_0
+\end{equation}\]</div>
+<p class="card-text">Remarque: La (les) pulsation(s) réalisant l’égalité sont les limites de la bande passante, on les appelle les pulsations de coupure. <strong>Ici</strong>, la pulsation de coupure égale la pulsation propre. Ce n’est pas une généralité.</p>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère le filtre précédent et on envoie en entrée un signal créneau d’amplitude E. On admet que la décomposition spectrale du signal créneau est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e33c0196-2e21-4edc-853c-502476d0079d">
+<span class="eqno">(119)<a class="headerlink" href="#equation-e33c0196-2e21-4edc-853c-502476d0079d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+e(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{\sin \left((2k+1)2\pi f t\right)}{2k+1}
+\end{equation}\]</div>
+<ol class="simple">
+<li><p>Donner la réponse exacte du filtre pour une fréquence du créneau <span class="math notranslate nohighlight">\(f = f_0\)</span> avec <span class="math notranslate nohighlight">\(f_0\)</span> la fréquence propre associée à la pulsation propre.</p></li>
+<li><p>Donner une réponse approchée du filtre en assimilant sa réponse à celle d’un filtre idéal lorsque <span class="math notranslate nohighlight">\(f = f_0/2\)</span>.</p></li>
+<li><p>Déduire de la fonction de transfert la relation temporelle entrée-sortie à haute fréquence. Quel comportement possède le filtre dans ce domaine spectral ? En déduire une réponse approchée du filtre en utilisant ses comportements asympotiques lorsque <span class="math notranslate nohighlight">\(f = 10 f_0\)</span></p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Réponse exacte</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-95eba7b3-4127-4c88-8786-8927bbf0c26a">
+<span class="eqno">(120)<a class="headerlink" href="#equation-95eba7b3-4127-4c88-8786-8927bbf0c26a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+s(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{1}{\sqrt{1 + {\left(2k+1\right)}^2}} \frac{\sin \left((2k+1)2\pi f t - \arctan (2k+1) \right)}{2k+1}
+\end{equation}\]</div>
+<p class="card-text"><strong>Réponse idéale</strong><br />
+Nous avons trouver que la bande passante correspond aux fréquences inférieures à <span class="math notranslate nohighlight">\(f_0\)</span>. Dans un filtre idéal, le gain dans la bande passante serait le gain maximale soit ici 1. Hors de la bande passante, ce serait un gain nul. Pour <span class="math notranslate nohighlight">\(f = f_0/2\)</span>, seul le fondamental de fréquence <span class="math notranslate nohighlight">\(f_0/2\)</span> est dans la bande passante, la fréquence de l’harmonique suivant étant <span class="math notranslate nohighlight">\(3f_0/2\)</span>. Il vient que le signal de sortie approché se résume à <span class="math notranslate nohighlight">\(s(t) \approx \frac{4E}{\pi} \sin\left (\pi f_0 t\right )\)</span></p>
+<p class="card-text">On représente ci-dessous la réponse exacte (gauche) calculée pour le même signal et la réponse approchée (droite).On remarque que l’utilisation du modèle idéal n’est PAS valable ici. Celà vient du fait qu’un filtre d’ordre 1 n’attenue pas suffisamment les composantes hors de la bande passante qui son proche de la pulsation de coupure: elle influent donc sur l’allure du signal. Cela n’invalide pas l’étude demanière approchée dans le cas général. Nous l’utiliserons souvent mais il faut garder à l’esprit que pour des fréquences trop proches du passage passant-filtré et pour des ordres de filtre faible, cette approximation peut s’écarter de la réponse exacte.</p>
+<div class="figure align-center" id="fig-206">
+<img alt="../_images/filtre_rc_exact_app.png" src="../_images/filtre_rc_exact_app.png" />
+</div>
+<p class="card-text"><strong>Réponse asymptotique</strong><br />
+La fonction de transfert à haute fréquence s’écrit <span class="math notranslate nohighlight">\(\underline{H} \approx \frac{1}{j \frac{\omega}{\omega_0}}\)</span> soit en temporelle <span class="math notranslate nohighlight">\(s(t) = \omega_0 \int e(t)\)</span>. Le filtre se comporte à haute fréquence comme un intégrateur (on parlera de pseudo-intégrateur car il n’intègre pas tout le signal).</p>
+<p class="card-text">Le créneau que l’on envoie possède tout son spectre dans la partie intégrée. Il vient que le signal est intégré. Celà donnera en sortie un signal triangulaire (intégration de parties constantes).</p>
+<p class="card-text">On représente ci-dessous la réponse exacte. On observe qu’effectivement le signal est intégré. La qualité de l’approximation tient du fait qu’une approximation par les asymptotes est plus fine qu’une approximation “tout ou rien” et <strong>que les fréquences sont suffisamment éloignées de la fréquence propre pour être considérées comme haute fréquence.</strong></p>
+<div class="figure align-center" id="fig-207">
+<img alt="../_images/filtre_rc_integ.png" src="../_images/filtre_rc_integ.png" />
+</div>
+</div>
+</details></div>
+<div class="section" id="methode-analyse-d-un-diagramme-de-bode">
+<h2>Méthode: Analyse d’un diagramme de Bode<a class="headerlink" href="#methode-analyse-d-un-diagramme-de-bode" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère un filtre dont le diagramme de Bode (tracé en fonction de <span class="math notranslate nohighlight">\(\log(\omega)\)</span>)est donné ci-après.</p>
+<ol class="simple">
+<li><p>Préciser le type de filtre.</p></li>
+<li><p>On peut déterminer graphiquement la pulsation propre de deux manières: elle se trouve à l’intersection des asymptotes haute et basse fréquence du filtre et pour <strong>ce filtre</strong>, la phase à la pulsation propre vaut <span class="math notranslate nohighlight">\(- \pi/2\)</span>. Déterminer la pulsation propre par les deux méthodes et vérifier la cohérence des deux résultats.</p></li>
+<li><p>Déterminer l’équation de l’asymptote oblique à la représentation <span class="math notranslate nohighlight">\(G_{dB}(log(\omega))\)</span> sur le diagramme de Bode en gain. En déduire, dans cette zone la relation temporelle approchée entre la sortie et l’entrée.</p></li>
+<li><p>On définit une fréquence de coupure comme une fréquence pour laquelle le gain est égal au gain maximal divisé par <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>. Déterminer numériquement la valeur de la pulsation de coupure.</p></li>
+</ol>
+<div class="figure align-center" id="fig-208">
+<img alt="../_images/filtre_graphique_bode.png" src="../_images/filtre_graphique_bode.png" />
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le gain en décibel est non nul à basse fréquence (quand <span class="math notranslate nohighlight">\(\log(x)\)</span> tend vers <span class="math notranslate nohighlight">\(-\infty\)</span>) et nul à haute fréquence (le gain en décibel tend vers <span class="math notranslate nohighlight">\(-\infty\)</span>). Il s’agit donc d’un filtre passe-haut.</p>
+<p class="card-text">On trouve <span class="math notranslate nohighlight">\(\omega_0 \approx 10^3 \rm{rad.s^{-1}}.\)</span></p>
+<p class="card-text">On trouve une pente de <span class="math notranslate nohighlight">\(-40dB/decade\)</span>. L’ordonnée pour <span class="math notranslate nohighlight">\(\log(\omega) = \log(\omega_0)\)</span> est 6. L’équation de l’asymptote est donc <span class="math notranslate nohighlight">\(Asymp(\log(\omega)) = 6 - 40 \log(\omega/\omega_0)\)</span>. On peut remarquer que la phase est presque égale à <span class="math notranslate nohighlight">\(-\pi\)</span>. On peut donc considérer que la fonction de transfert est un réel négatif soit: <span class="math notranslate nohighlight">\(\underline{H} \approx - \frac{2}{{(\frac{\omega}{\omega_0})}^2}\)</span>. En temporelle, celà donne: <span class="math notranslate nohighlight">\(s(t) = 2 \omega_0^2 \int (\int (e(t)))\)</span>: c’est un comportement double intégrateur.</p>
+<p class="card-text">On veut un gain réel égal à <span class="math notranslate nohighlight">\(G_{\max}/\sqrt{2}\)</span> soit un gain en décibel égal à <span class="math notranslate nohighlight">\(G_{dB,\max} - 3dB\)</span> soit 3dB. On trouve <span class="math notranslate nohighlight">\(\omega_c = 6 * 10 ^ 3 \rm{rad.s^{-1}}\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Voici un exemple où la pulsation propre et la pulsation de coupure ne sont pas égales.</p>
+<p class="card-text">Les graduations données ici correspondent à un diagramme semi-logarithmique, c’est-à-dire que les graduations <strong>correspondent à x et non à <span class="math notranslate nohighlight">\(\log(x)\)</span></strong>.</p>
+</div>
+</details></div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="filtrage_def.html" title="previous page">Filtre: définition et caractéristiques</a>
+    <a class='right-next' id="next-link" href="filtrage_gene.html" title="next page">Caractéristiques générales</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
