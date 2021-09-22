@@ -492,29 +492,30 @@
 <ol class="simple">
 <li><p>Montrer par le calcul que ce circuit est régit par le système d’équation suivant :</p></li>
 </ol>
-<p>$$ {\rm{d} \over \rm{d}t}</p>
 </div></blockquote>
-<div class="amsmath math notranslate nohighlight" id="equation-70cd13a5-d563-4128-bd2c-e2e1218d97f8">
-<span class="eqno">(97)<a class="headerlink" href="#equation-70cd13a5-d563-4128-bd2c-e2e1218d97f8" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+<div class="math notranslate nohighlight">
+\[\begin{split} {\rm{d} \over \rm{d}t}
+\begin{pmatrix}
 u\\
 v
-\end{pmatrix}\]</div>
-<p>=</p>
-<div class="amsmath math notranslate nohighlight" id="equation-698666ba-33d2-4c07-aa85-560be13429bf">
-<span class="eqno">(98)<a class="headerlink" href="#equation-698666ba-33d2-4c07-aa85-560be13429bf" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
+\end{pmatrix}
+=
+\begin{pmatrix}
 - {1 \over RC} v - {2 \over RC} u\\
 - {1 \over RC} v - {1 \over RC} u
-\end{pmatrix}\]</div>
+\end{pmatrix}
+\end{split}\]</div>
+<p>On peut alors utiliser un schéma d’Euler explicite sur le vecteur :</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}On peut alors utiliser un schéma d'Euler explicite sur le vecteur :\\\begin{split}$$ Y(t)=
+\[\begin{split} Y(t)=
 \begin{pmatrix}
 u(t)\\
 v(t)
 \end{pmatrix}
-\end{split}\end{aligned}\end{align} \]</div>
+\end{split}\]</div>
 <p>dont la dérivée s’écrit :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-72fbfc04-d553-453f-abee-dad07e54ae7a">
-<span class="eqno">(99)<a class="headerlink" href="#equation-72fbfc04-d553-453f-abee-dad07e54ae7a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a94f18d7-e73b-4196-ad5e-a4396174f01d">
+<span class="eqno">(97)<a class="headerlink" href="#equation-a94f18d7-e73b-4196-ad5e-a4396174f01d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 {\rm{d}Y \over \rm{d}t} = F(Y, t)
 \end{equation}\]</div>
 <p>avec :</p>
