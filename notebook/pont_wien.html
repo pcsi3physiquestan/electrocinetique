@@ -55,7 +55,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Travaux dirigés: Filtrage linéaire" href="td_filtrage.html" />
+    <link rel="next" title="Régime sinusoïdal forcé" href="rsf.html" />
+    <link rel="prev" title="TD Electrocinétique 3: Régimes de fonctionnements" href="td_trans.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -202,16 +203,16 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="trans_ordre.html">
    Régime transitoire (2): Ordre 1 et 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="trans_ordre_1.html">
      Caractéristiques d’un système d’ordre 1
@@ -249,10 +250,22 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -260,8 +273,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -290,8 +303,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -324,8 +337,8 @@
   <a class="reference internal" href="filtrage.html">
    Filtrage linéaire
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -364,8 +377,8 @@
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -479,30 +492,29 @@
 <ol class="simple">
 <li><p>Montrer par le calcul que ce circuit est régit par le système d’équation suivant :</p></li>
 </ol>
+<p>$$ {\rm{d} \over \rm{d}t}</p>
 </div></blockquote>
-<div class="math notranslate nohighlight">
-\[\begin{split} {\rm{d} \over \rm{d}t}
-\begin{pmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-70cd13a5-d563-4128-bd2c-e2e1218d97f8">
+<span class="eqno">(97)<a class="headerlink" href="#equation-70cd13a5-d563-4128-bd2c-e2e1218d97f8" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 u\\
 v
-\end{pmatrix}
-=
-\begin{pmatrix}
+\end{pmatrix}\]</div>
+<p>=</p>
+<div class="amsmath math notranslate nohighlight" id="equation-698666ba-33d2-4c07-aa85-560be13429bf">
+<span class="eqno">(98)<a class="headerlink" href="#equation-698666ba-33d2-4c07-aa85-560be13429bf" title="Permalink to this equation">¶</a></span>\[\begin{pmatrix}
 - {1 \over RC} v - {2 \over RC} u\\
 - {1 \over RC} v - {1 \over RC} u
-\end{pmatrix}
-\end{split}\]</div>
-<p>On peut alors utiliser un schéma d’Euler explicite sur le vecteur :</p>
+\end{pmatrix}\]</div>
 <div class="math notranslate nohighlight">
-\[\begin{split} Y(t)=
+\[ \begin{align}\begin{aligned}On peut alors utiliser un schéma d'Euler explicite sur le vecteur :\\\begin{split}$$ Y(t)=
 \begin{pmatrix}
 u(t)\\
 v(t)
 \end{pmatrix}
-\end{split}\]</div>
+\end{split}\end{aligned}\end{align} \]</div>
 <p>dont la dérivée s’écrit :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a070add3-a74a-4fd9-afe6-8a79d0eb8500">
-<span class="eqno">(122)<a class="headerlink" href="#equation-a070add3-a74a-4fd9-afe6-8a79d0eb8500" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-72fbfc04-d553-453f-abee-dad07e54ae7a">
+<span class="eqno">(99)<a class="headerlink" href="#equation-72fbfc04-d553-453f-abee-dad07e54ae7a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 {\rm{d}Y \over \rm{d}t} = F(Y, t)
 \end{equation}\]</div>
 <p>avec :</p>
@@ -560,7 +572,8 @@ Pour les études numériques, on prend <span class="math notranslate nohighlight
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="td_filtrage.html" title="previous page">Travaux dirigés: Filtrage linéaire</a>
+    <a class='left-prev' id="prev-link" href="td_trans.html" title="previous page">TD Electrocinétique 3: Régimes de fonctionnements</a>
+    <a class='right-next' id="next-link" href="rsf.html" title="next page">Régime sinusoïdal forcé</a>
 
         </div>
         

@@ -250,10 +250,22 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -261,8 +273,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -291,8 +303,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,10 +335,10 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="filtrage.html">
-   Filtrage linéaire (1): Principe
+   Filtrage linéaire
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -361,10 +373,22 @@
      Mise en cascade des filtres
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -548,7 +572,7 @@ L’étude d’un tel circuit est basé sur plusieurs étapes (attention, on ne 
 On considère une entrée sinusoïdale <span class="math notranslate nohighlight">\(e(t) = e_m \cos \left (\omega t \right)\)</span>. On cherche le régime forcé vers lequel tend le circuit. On observe expérimentalement qu’il s’agit d’un régime <strong>sinusoïdal forcé</strong>, c’est-à-dire que toutes les grandeurs du circuit vont osciller de manière sinusoïdale à la même pulsation que l’entrée, soit une pulsation <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <p class="card-text">Une étude de ce régime forcé (elle sera expliquée par la suite, c’est le coeur du chapitre) montre que le régime forcé est alors:</p>
 <div class="amsmath math notranslate nohighlight" id="equation-b58d22c0-cee5-404e-a63f-7f95b6eb4abb">
-<span class="eqno">(97)<a class="headerlink" href="#equation-b58d22c0-cee5-404e-a63f-7f95b6eb4abb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<span class="eqno">(100)<a class="headerlink" href="#equation-b58d22c0-cee5-404e-a63f-7f95b6eb4abb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{e_m}{\sqrt{1 + {\left(RC \omega\right)}^2}} \cos\left(\omega t - \arctan \left(RC \omega\right) \right)
 \end{equation}\]</div>
 <p class="card-text"><strong>Caractéristique de la réponse.</strong><br />
