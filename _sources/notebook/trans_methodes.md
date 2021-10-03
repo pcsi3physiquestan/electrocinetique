@@ -38,7 +38,7 @@ On considère le circuit suivant. L'interrupteur est ouvert depuis un temps long
 
 Déterminer l'équation différentielle qui régit l'évolution de la tension aux bornes du condensateur.
 
-```{figure} ./images/elec_circuit_etude_1.png
+```{figure} ./images/elec_circuit_etude_t_1.png
 :name: fig_159
 :align: center
 
@@ -61,7 +61,7 @@ Comme d'habitude, on commence par paramétrer le système. Les grandeurs introdu
 
 Rappelons aussi que les deux noeuds du haut peuvent être "rassemblés en un seul, ce qui évite d'avoir à considérer l'intensité qui circule dans la branche du haut au milieu.
 
-```{figure} ./images/elec_circuit_etude_2.png
+```{figure} ./images/elec_circuit_etude_t_2.png
 :name: fig_161
 :align: center
 
