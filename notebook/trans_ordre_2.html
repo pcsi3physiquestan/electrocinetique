@@ -250,10 +250,22 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -261,8 +273,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -291,8 +303,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,10 +335,10 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="filtrage.html">
-   Filtrage linéaire (1): Principe
+   Filtrage linéaire
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -361,10 +373,22 @@
      Mise en cascade des filtres
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -554,8 +578,8 @@
 <img alt="../_images/elec_circuit_rlc_serie.png" src="../_images/elec_circuit_rlc_serie.png" />
 </div>
 <p>Cette fois, on suppose les conditions initiales connues à t=0 :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a58860b0-934e-467c-922b-630a7d73d3c7">
-<span class="eqno">(81)<a class="headerlink" href="#equation-a58860b0-934e-467c-922b-630a7d73d3c7" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-08e6a5a3-1ba8-4120-805b-8e2d7ef763ef">
+<span class="eqno">(81)<a class="headerlink" href="#equation-08e6a5a3-1ba8-4120-805b-8e2d7ef763ef" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i(t=0) &amp;= i_0\\
 u_C(t=0) &amp;= 0
 \end{align}\]</div>
@@ -566,8 +590,8 @@ u_C(t=0) &amp;= 0
 <div class="important admonition">
 <p class="admonition-title">Fondamental : Forme canonique des systèmes d’ordre 2</p>
 <p>L’équation différentielle qui régit l’évolution d’un système d’ordre 2 peut se mettre une des formes suivantes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac61400e-2eba-4273-a1e4-59235c676984">
-<span class="eqno">(82)<a class="headerlink" href="#equation-ac61400e-2eba-4273-a1e4-59235c676984" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6bec539c-35ab-4220-a7df-39eebb482bc2">
+<span class="eqno">(82)<a class="headerlink" href="#equation-6bec539c-35ab-4220-a7df-39eebb482bc2" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + \frac{\omega_0}{Q} \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)\\
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + 2 \xi \omega_0 \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)
 \end{align}\]</div>
@@ -581,8 +605,8 @@ u_C(t=0) &amp;= 0
 <div class="attention admonition">
 <p class="admonition-title">Exercice Cas du circuit RLC série: La tension uC</p>
 <p>On peut appliquer une loi des mailles: <span class="math notranslate nohighlight">\(u_L + u_R + u_C = 0\)</span> soit <span class="math notranslate nohighlight">\(L \frac{\rm{d}i}{\rm{dt}} + Ri + u_C = 0\)</span>. Il reste à utiliser <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>, il vient en organisant):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a9b8d38f-86b7-437b-b0c9-4e9eb7feba41">
-<span class="eqno">(83)<a class="headerlink" href="#equation-a9b8d38f-86b7-437b-b0c9-4e9eb7feba41" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3db3c236-ec47-4b82-8243-5ae66779735b">
+<span class="eqno">(83)<a class="headerlink" href="#equation-3db3c236-ec47-4b82-8243-5ae66779735b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L}\frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C= 0
 \end{equation}\]</div>
 <p>Il reste à identifier les facteurs:</p>
@@ -652,8 +676,8 @@ u_C(t=0) &amp;= 0
 <h3>Régime apériodique: Solution analytique<a class="headerlink" href="#regime-aperiodique-solution-analytique" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solution de l’équation homogène</strong><br />
 On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q &lt; 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi &gt; 1\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-262e9504-7052-4b0d-a99a-0235b245fc9c">
-<span class="eqno">(84)<a class="headerlink" href="#equation-262e9504-7052-4b0d-a99a-0235b245fc9c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-52adf651-30d2-4f89-be2a-9cf7357411a4">
+<span class="eqno">(84)<a class="headerlink" href="#equation-52adf651-30d2-4f89-be2a-9cf7357411a4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 X(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
 \end{equation}\]</div>
 <p>avec:</p>
@@ -702,13 +726,13 @@ i(t) = C \frac{\rm{d}u_C}{\rm{dt}} &amp;= \frac{Ci_0}{C (r_1 - r_2)} \left ( r_1
 <h3>Régime critique: Solution analytique<a class="headerlink" href="#regime-critique-solution-analytique" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solution de l’équation homogène</strong><br />
 On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta = 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q = 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi = 1\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-796e6eb3-15b8-4656-8434-7cc8b23eade0">
-<span class="eqno">(85)<a class="headerlink" href="#equation-796e6eb3-15b8-4656-8434-7cc8b23eade0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-baf6e18d-70c4-46d3-84d8-c03abaed0817">
+<span class="eqno">(85)<a class="headerlink" href="#equation-baf6e18d-70c4-46d3-84d8-c03abaed0817" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 X(t) = \exp^{r_0 t} \left ( At + B\right)
 \end{equation}\]</div>
 <p>avec:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-52e28391-6f0e-4972-9824-f92d19b009bd">
-<span class="eqno">(86)<a class="headerlink" href="#equation-52e28391-6f0e-4972-9824-f92d19b009bd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8f5de274-95d2-4b93-8158-aa76a27b92da">
+<span class="eqno">(86)<a class="headerlink" href="#equation-8f5de274-95d2-4b93-8158-aa76a27b92da" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 r_0 = - \frac{\omega_0}{2Q} = - \omega_0
 \end{equation}\]</div>
 <p><strong>Analyse des expressions</strong><br />
@@ -822,8 +846,8 @@ Dans le cas d’un régime pseudo-périodique, l’amplitude du pseudo-sinusoïd
 <div class="tip admonition">
 <p class="admonition-title">Définition : Décrément logarithmique.</p>
 <p>Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique <span class="math notranslate nohighlight">\(\delta\)</span> par:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ba36987-cf2f-4358-a8ad-82271da3d2c1">
-<span class="eqno">(87)<a class="headerlink" href="#equation-8ba36987-cf2f-4358-a8ad-82271da3d2c1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-56f26774-7eda-460e-89b2-2e7560a6d88f">
+<span class="eqno">(87)<a class="headerlink" href="#equation-56f26774-7eda-460e-89b2-2e7560a6d88f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
 \end{equation}\]</div>
 <p><strong>Interprétation</strong><br />
@@ -833,8 +857,8 @@ On calcule l’écart à la valeur finale à deux instants t et t+T (ce second �
 <div class="important admonition">
 <p class="admonition-title">Fondamental : Relation entre le décrément logarithmique et le facteur de qualité</p>
 <p>On peut montrer que:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-894a1757-f276-4097-a121-8818361d51e2">
-<span class="eqno">(88)<a class="headerlink" href="#equation-894a1757-f276-4097-a121-8818361d51e2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e9d11a5e-8ce5-4547-a5cc-4af59907e1af">
+<span class="eqno">(88)<a class="headerlink" href="#equation-e9d11a5e-8ce5-4547-a5cc-4af59907e1af" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta = \frac{2\pi}{\sqrt{4Q^2 - 1}}
 \end{equation}\]</div>
 <p><strong>Démonstration</strong></p>
@@ -915,21 +939,21 @@ On peut considérer que le nouveau régime forcé est indépendant du temps (pui
 <p class="card-text">La bobine elle se comporte comme un fil. La loi des mailles donne donc que <span class="math notranslate nohighlight">\(u_C(t=+\infty) = E\)</span></p>
 <p class="card-text"><strong>Q2. Mise en équation</strong><br />
 On peut écrire la loi des mailles <span class="math notranslate nohighlight">\(E = u_C + u_R + u_L = u_C + R i + L \frac{\rm{d}i}{\rm{dt}} = 0\)</span>. Soit avec <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-63fd6906-5cd6-48bc-83e7-78029fe7ead5">
-<span class="eqno">(89)<a class="headerlink" href="#equation-63fd6906-5cd6-48bc-83e7-78029fe7ead5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b2f9d0f7-e46d-4032-8728-281d2f8c7a98">
+<span class="eqno">(89)<a class="headerlink" href="#equation-b2f9d0f7-e46d-4032-8728-281d2f8c7a98" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = \frac{1}{LC}E
 \end{equation}\]</div>
 <p class="card-text">Il vient <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{LC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span> soit les mêmes expressions que dans le cas du régime libre. C’est normal puisqu’il s’agit du même système (RLC série) confronté à une entrée différente (nulle dans un cas et égale à E dans l’autre).</p>
 <p class="card-text"><strong>Q3. Expression temporelle - Cas pseudo-périodique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9382c498-ef21-4a66-bc64-bd6980618020">
-<span class="eqno">(90)<a class="headerlink" href="#equation-9382c498-ef21-4a66-bc64-bd6980618020" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-415a0576-467c-4b2e-9546-bdd1345beace">
+<span class="eqno">(90)<a class="headerlink" href="#equation-415a0576-467c-4b2e-9546-bdd1345beace" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right)
 \end{equation}\]</div>
 <p class="card-text">avec <span class="math notranslate nohighlight">\(\Omega = \omega_0 \sqrt{1 - \frac{1}{4Q^2}}\)</span> la pseudo-pulsation du système.</p>
 <p class="card-text">On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ff52c617-2c91-4a82-a1c0-377316fe8b5b">
-<span class="eqno">(91)<a class="headerlink" href="#equation-ff52c617-2c91-4a82-a1c0-377316fe8b5b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-25b3833e-24f3-4ffa-ad05-81a1ac4ba2f4">
+<span class="eqno">(91)<a class="headerlink" href="#equation-25b3833e-24f3-4ffa-ad05-81a1ac4ba2f4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right) + E
 \end{equation}\]</div>
 <p class="card-text">Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
@@ -942,14 +966,14 @@ i(t = 0) &amp;= C D \left(-\Omega \sin{\varphi} -\frac{\omega_0}{2Q} \cos{\varph
 \end{align*}\]</div>
 <p class="card-text"><strong>Q4. Expression temporelle - Cas apériodique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-47a7da74-83a2-47c0-9bf6-e574bbbca803">
-<span class="eqno">(92)<a class="headerlink" href="#equation-47a7da74-83a2-47c0-9bf6-e574bbbca803" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8411b117-fbe4-4a88-a6ed-3e76ec378277">
+<span class="eqno">(92)<a class="headerlink" href="#equation-8411b117-fbe4-4a88-a6ed-3e76ec378277" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
 \end{equation}\]</div>
 <p class="card-text">avec <span class="math notranslate nohighlight">\(r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})\)</span>.</p>
 <p class="card-text">On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ba1a4b2-68ee-4ceb-b42b-caf328932fe0">
-<span class="eqno">(93)<a class="headerlink" href="#equation-2ba1a4b2-68ee-4ceb-b42b-caf328932fe0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1c16bb7f-854e-4d02-8bc0-33b89c8acb07">
+<span class="eqno">(93)<a class="headerlink" href="#equation-1c16bb7f-854e-4d02-8bc0-33b89c8acb07" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = A \exp^{r_1 t} + B \exp^{r_2 t} + E
 \end{equation}\]</div>
 <p class="card-text">Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
@@ -962,14 +986,14 @@ u_{c}(t) = A r_1 + B r_2 = 0\\
 \end{align*}\]</div>
 <p class="card-text"><strong>Q5. Expression temporelle - Cas critique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2d890589-7cb3-4440-bbbf-bf42fb76f935">
-<span class="eqno">(94)<a class="headerlink" href="#equation-2d890589-7cb3-4440-bbbf-bf42fb76f935" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-88b3f4e9-5d50-4850-9108-be2e3d399355">
+<span class="eqno">(94)<a class="headerlink" href="#equation-88b3f4e9-5d50-4850-9108-be2e3d399355" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right)
 \end{equation}\]</div>
 <p class="card-text">avec <span class="math notranslate nohighlight">\(r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})\)</span>.</p>
 <p class="card-text">On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-524bd0e2-2026-42ee-a37a-49476dd9f202">
-<span class="eqno">(95)<a class="headerlink" href="#equation-524bd0e2-2026-42ee-a37a-49476dd9f202" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-01ab7b54-4b1e-40a8-b448-7b297dfb571e">
+<span class="eqno">(95)<a class="headerlink" href="#equation-01ab7b54-4b1e-40a8-b448-7b297dfb571e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right) + E
 \end{equation}\]</div>
 <p class="card-text">Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
