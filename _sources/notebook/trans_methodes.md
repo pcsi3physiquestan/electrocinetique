@@ -242,13 +242,11 @@ Il ne reste plus qu'à ajouter __à gauche est à droite__ le terme $\frac{-E}{R
 
 ```{admonition} Vérification de l'équation
 :class: hint
-{adv_verification_de_l_equation_8}
 Les vérifications sont similaires au cas précédent. On __pensera__ à vérifier notamment le régime forcé.
 ```
 
 ```{admonition} Commentaire sur l'utilisation de la loi des noeuds.
 :class: hint
-{adv_commentaire_sur_l_utilisation_de_la_loi_des_noeuds__9}
 Malgré ce que laisse à penser cet exemple volontairement complexe (cf. suite), la loi des noeuds en terme de potentiel permet souvent de simplifier les problème __quand on cherche à déterminer une tension ou un potentiel__ (on peut s'en rendre avec la détermination de $V_B$). Quand on cherche à déterminer une intensité. Il faut réfléchir. Suivant les cas, une méthode sera préférable ou pas... 
 ```
 
