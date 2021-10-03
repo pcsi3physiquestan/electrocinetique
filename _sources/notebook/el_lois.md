@@ -219,9 +219,9 @@ _On a déjà déterminé ces grandeurs. Le but est ici de le faire en utilisant 
 1. On va choisir $V_C = 0$ (c'est un choix arbitraire). Il vient directement $V_A = U_{AC} + V_C = E$. On remarque qu'il y a donc bien un seul potentiel inconnu $V_B$, une loi des noeuds devrait donc suffire.
 1. $i_2 + i_3 + i_4 = 0$
 1. On utilise les relations intensités-tensions qu'on réécrit avec des potentiels. Ainsi :
-\begin{enumerate}1. $i_2 = \frac{U_{BC}}{R} = \frac{V_B - V_C}{R} = \frac{V_B}{R}$
-1. $i_3 = - \frac{U_{AB}}{R} = - \frac{V_A - V_B}{R} = \frac{V_B - E}{R}$
-1. $i_4 = - \frac{U_{AB}}{R} = - \frac{V_A - V_B}{R} = \frac{V_B - E}{R}$
+    1. $i_2 = \frac{U_{BC}}{R} = \frac{V_B - V_C}{R} = \frac{V_B}{R}$
+    1. $i_3 = - \frac{U_{AB}}{R} = - \frac{V_A - V_B}{R} = \frac{V_B - E}{R}$
+    1. $i_4 = - \frac{U_{AB}}{R} = - \frac{V_A - V_B}{R} = \frac{V_B - E}{R}$
 1. La loi des noeuds s'écrit donc : $ \frac{V_B}{R} + \frac{V_B - E}{R} + \frac{V_B - E}{R} = 0$
 1. Il vient : $V_B = \frac{2E}{3}$. Outre les intensités, on trouve bien : $U_{BC} = V_B - V_C =  \frac{2E}{3}$ et $U_{AB} = V_A - V_B  = \frac{E}{3}$
 

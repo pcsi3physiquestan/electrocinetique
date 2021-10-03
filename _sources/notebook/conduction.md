@@ -379,7 +379,7 @@ Réponse : Les circuits de TP ont une taille de l'ordre de 1m, donc la durée de
 ````{admonition} Exercice Différence entre célérité de l'onde et déplacement des électrons
 :class: attention
 
-Il faut bien faire la différence entre la célérité de l'onde ($3 \times 10^8 m.s^{-1}$) qui correspond à la vitesse de __transmission d'une information __ le long d'un circuit et la vitesse de dérive des électrons (moins d'un mm par seconde) dans le circuit.
+Il faut bien faire la différence entre la célérité de l'onde ($3 \times 10^8 m.s^{-1}$) qui correspond à la vitesse de __transmission d'une information__ le long d'un circuit et la vitesse de dérive des électrons (moins d'un mm par seconde) dans le circuit.
 
 On peut faire l'analogie suivante : on lâche un petit morceau de bois dans une rivière qui s'écoule doucement. Le bois va flotter et être emporté à la même vitesse que la rivière. Au moment d'entrée dans l'eau, le bois crée des remous qui vont se propager : il naît une onde à la surface de l'eau.
 
@@ -402,7 +402,7 @@ On peut alors considérer que les phénomènes de propagation sont instantanés 
 
 Attention : le fait qu'elles varient en même temps ne signifie pas qu'elles varient de la même manière.
 
-C'est bien la variation __spatiale __associée à la propagation de l'onde électrique qui est négligée, pas la variation __temporelle__ des grandeurs : en un point (et donc en tout point) du circuit, tension et intensité peuvent varier.
+C'est bien la variation __spatiale__ associée à la propagation de l'onde électrique qui est négligée, pas la variation __temporelle__ des grandeurs : en un point (et donc en tout point) du circuit, tension et intensité peuvent varier.
 
 
 ````{admonition} Exercice Analogie avec la voix
@@ -435,7 +435,7 @@ Remarque : En TP, on dépassera rarement le MHz en terme de fréquence.
 On peut considérer un autre exemple où l'ARQS s'applique et ...  ne s'applique pas suivant ce qu'on considère : l'orage.
 
 * Considérons l'éclair, donc la propagation d'une onde lumineuse. La vitesse de la lumière dans l'air est de l'ordre de $3 \times 10^8 \rm{m/s}$. Pour un éclair qui se produit à quelques kilomètres, le temps qu'il arrive à notre oeil est de l'ordre de $10^{-5} \rm{s}$: ce temps est très faible devant la persistance rétinienne ($10^{-1} \rm{s}$). On peut donc appliquer l'ARQS et considérer que le moment où l'éclair se produit coïncide avec le moment où on le voit.
-* Considérons le tonnerre (qui accompagne l'éclair), donc la propagation d'une onde sonore. Cette fois, la vitesse du son est de l'ordre de $340 \rm{m/s}$. Pour le tonnerre qui se produit à quelques kilomètres, le temps de propagation du son est de l'autre de 1 à 10 secondes. Ce temps est de l'ordre (voire plus grand) que le temps de réaction humain au son. Donc cette fois, on doit tenir compte de la propagation et on ne pas se placer dans l'ARQS.
+* Considérons le tonnerre (qui accompagne l'éclair), donc la propagation d'une onde sonore. Cette fois, la vitesse du son est de l'ordre de $340 \rm{m/s}$. Pour le tonnerre qui se produit à quelques kilomètres, le temps de propagation du son est de l'autre de 1 à 10 secondes. Ce temps est de l'ordre (voire plus grand) que le temps de réaction humain au son. Donc cette fois, on doit tenir compte de la propagation et on ne peut pas se placer dans l'ARQS.
 
 ````
 

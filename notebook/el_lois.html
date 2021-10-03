@@ -250,10 +250,22 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -261,8 +273,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -291,8 +303,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,10 +335,10 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="filtrage.html">
-   Filtrage linéaire (1): Principe
+   Filtrage linéaire
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -361,10 +373,22 @@
      Mise en cascade des filtres
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -690,10 +714,13 @@ Correction<div class="summary-down docutils">
 <ol class="simple">
 <li><p class="card-text">On va choisir <span class="math notranslate nohighlight">\(V_C = 0\)</span> (c’est un choix arbitraire). Il vient directement <span class="math notranslate nohighlight">\(V_A = U_{AC} + V_C = E\)</span>. On remarque qu’il y a donc bien un seul potentiel inconnu <span class="math notranslate nohighlight">\(V_B\)</span>, une loi des noeuds devrait donc suffire.</p></li>
 <li><p class="card-text"><span class="math notranslate nohighlight">\(i_2 + i_3 + i_4 = 0\)</span></p></li>
-<li><p class="card-text">On utilise les relations intensités-tensions qu’on réécrit avec des potentiels. Ainsi :
-\begin{enumerate}1. <span class="math notranslate nohighlight">\(i_2 = \frac{U_{BC}}{R} = \frac{V_B - V_C}{R} = \frac{V_B}{R}\)</span></p></li>
+<li><p class="card-text">On utilise les relations intensités-tensions qu’on réécrit avec des potentiels. Ainsi :</p>
+<ol class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(i_2 = \frac{U_{BC}}{R} = \frac{V_B - V_C}{R} = \frac{V_B}{R}\)</span></p></li>
 <li><p class="card-text"><span class="math notranslate nohighlight">\(i_3 = - \frac{U_{AB}}{R} = - \frac{V_A - V_B}{R} = \frac{V_B - E}{R}\)</span></p></li>
 <li><p class="card-text"><span class="math notranslate nohighlight">\(i_4 = - \frac{U_{AB}}{R} = - \frac{V_A - V_B}{R} = \frac{V_B - E}{R}\)</span></p></li>
+</ol>
+</li>
 <li><p class="card-text">La loi des noeuds s’écrit donc : <span class="math notranslate nohighlight">\( \frac{V_B}{R} + \frac{V_B - E}{R} + \frac{V_B - E}{R} = 0\)</span></p></li>
 <li><p class="card-text">Il vient : <span class="math notranslate nohighlight">\(V_B = \frac{2E}{3}\)</span>. Outre les intensités, on trouve bien : <span class="math notranslate nohighlight">\(U_{BC} = V_B - V_C =  \frac{2E}{3}\)</span> et <span class="math notranslate nohighlight">\(U_{AB} = V_A - V_B  = \frac{E}{3}\)</span></p></li>
 </ol>
@@ -961,8 +988,8 @@ i_3 = ?
 \end{align*}\]</div>
 <p>Remarque : il arrive que certaines intensités ne soient pas exprimables en fonction des potentiels.</p>
 <p>Il vient :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bbbd6d8b-d8ec-4929-810f-c1ab778092f8">
-<span class="eqno">(2)<a class="headerlink" href="#equation-bbbd6d8b-d8ec-4929-810f-c1ab778092f8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c8eb431c-acac-4fe9-90d9-4be2c9bc2fbb">
+<span class="eqno">(2)<a class="headerlink" href="#equation-c8eb431c-acac-4fe9-90d9-4be2c9bc2fbb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
  \frac{U_1- U_2}{R} =\frac{U_2}{R} + i_3
 \end{equation}\]</div>
 <p>Il convient de se demander que doit-on calculer. Cette étape est fondamentale car son absence est souvent cause de beaucoup d’erreurs. Elle peut être faite avant ou après le paramétrage et souvent avant même la mise en équation. (On la fait ici pour profiter des grandeurs nommées).</p>
