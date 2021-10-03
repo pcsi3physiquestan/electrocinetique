@@ -250,10 +250,22 @@
      </li>
     </ul>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -261,8 +273,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -291,8 +303,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,10 +335,10 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="filtrage.html">
-   Filtrage linéaire (1): Principe
+   Filtrage linéaire
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -361,10 +373,22 @@
      Mise en cascade des filtres
     </a>
    </li>
-   <li class="toctree-l2">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pont_wien.html">
+       Système linéaire
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -641,8 +665,8 @@ Remarque<div class="summary-down docutils">
 L’intensité moyenne consiste à mesurer le débit de charge pendant un temps <span class="math notranslate nohighlight">\(\Delta t\)</span> fini. On divise alors la quantité de charge (algébrique) par la durée pour obtenir l’intensité moyenne.</p>
 <p><strong>Intensité</strong><br />
 L’intensité qu’on calcule générale est l’intensité instantanée, c’est-à-dire la mesure du débit en faisant tendre la durée <span class="math notranslate nohighlight">\(\Delta t\)</span> vers 0. En utilisant les notations différentielles, on a alors :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-04ed9f18-8920-466c-8e3e-1661e79616ea">
-<span class="eqno">(1)<a class="headerlink" href="#equation-04ed9f18-8920-466c-8e3e-1661e79616ea" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fadb252f-5255-4de1-969d-0ece20a8720f">
+<span class="eqno">(1)<a class="headerlink" href="#equation-fadb252f-5255-4de1-969d-0ece20a8720f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i = \frac{\rm{d}q}{\rm{dt}}
 \end{equation}\]</div>
 <p>avec q la quantité de charge traversant la surface orientée.</p>
@@ -730,7 +754,7 @@ Lorsqu’un champ électrique<a class="footnote-reference brackets" href="#champ
 <div class="figure align-center" id="fig-88">
 <img alt="../_images/elec_v_energie.png" src="../_images/elec_v_energie.png" />
 </div>
-<p>La force qu’exerce un champ électrique sur une charge <span class="math notranslate nohighlight">\(q\)</span> dérive d’une énergie potentielle. Si l’on note <span class="math notranslate nohighlight">\(E_{p,el}\)</span> l’énergie potentielle associée à cette force sur une charge q en un point A du circuit, on définit le __potentiel électrique __<span class="math notranslate nohighlight">\(V_A\)</span> du circuit au point A par <span class="math notranslate nohighlight">\(V_A = \frac{E_{p,el}}{q}\)</span>.</p>
+<p>La force qu’exerce un champ électrique sur une charge <span class="math notranslate nohighlight">\(q\)</span> dérive d’une énergie potentielle. Si l’on note <span class="math notranslate nohighlight">\(E_{p,el}\)</span> l’énergie potentielle associée à cette force sur une charge q en un point A du circuit, on définit le <strong>potentiel électrique</strong> <span class="math notranslate nohighlight">\(V_A\)</span> du circuit au point A par <span class="math notranslate nohighlight">\(V_A = \frac{E_{p,el}}{q}\)</span>.</p>
 </div>
 <p><strong>Indépendance vis-à-vis des charges de conduction.</strong><br />
 Le potentiel électrique dépend du point du circuit considéré et évidemment des composants du circuit. Mais il ne <strong>dépend pas</strong> de la charge qui assure la conduction. Ainsi, on peut parler du potentiel électrique d’un point <em>du circuit</em> et non <em>de la charge</em>.</p>

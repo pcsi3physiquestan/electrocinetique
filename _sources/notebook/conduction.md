@@ -254,7 +254,7 @@ Lorsqu'un champ électrique[^champe] $\overrightarrow{E}$ est établi dans un mi
 :align: center
 
 ```
-La force qu'exerce un champ électrique sur une charge $q$ dérive d'une énergie potentielle. Si l'on note $E_{p,el}$ l'énergie potentielle associée à cette force sur une charge q en un point A du circuit, on définit le __potentiel électrique __$V_A$ du circuit au point A par $V_A = \frac{E_{p,el}}{q}$.
+La force qu'exerce un champ électrique sur une charge $q$ dérive d'une énergie potentielle. Si l'on note $E_{p,el}$ l'énergie potentielle associée à cette force sur une charge q en un point A du circuit, on définit le __potentiel électrique__ $V_A$ du circuit au point A par $V_A = \frac{E_{p,el}}{q}$.
 
 ````
 
