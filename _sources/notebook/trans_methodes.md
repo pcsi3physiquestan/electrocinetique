@@ -399,7 +399,7 @@ Cet exercice explique comment déterminer les conditions initiales nécessaires 
 
 On considère le circuit. L'interrupteur est ouvert depuis un temps long. A t=0, on ferme l'interrupteur. On rappelle qu'on a déterminé l'équation différentielle pour $u_C$ et $i_l$ pour t > 0 (prendre les notations précédentes). Déterminer les conditions initiales nécessaires à la résolution de ces équations.
 
-```{figure} ./images/elec_circuit_etude_1.png
+```{figure} ./images/elec_circuit_etude_t_1.png
 :name: fig_163
 :align: center
 
@@ -431,9 +431,9 @@ Les grandeurs qu'il convient de calculer dans l'ancien régime forcé sont donc 
 
 
 __Grandeurs avant fermeture de l'interrupteur__  
-L'étude de l'ancien régime permanent donne $u_C(t=0^-) = 0$ (la bobine assimilable à un fil impose une tension nulle aux bornes du condensateur) et $i_l(t=0^-) = -\frac{E}{R}$ (loi des mailles).
+L'étude de l'ancien régime permanent donne $u_C(t=0^-) = 0$ (la bobine assimilable à un fil impose une tension nulle aux bornes du condensateur) et $i_l(t=0^-) = 0$ (loi des mailles).
 
-Ces grandeurs étant continues, il vient $\boxed{i_l(t=0^+)=- \frac{E}{R}}$ et $\boxed{u_C(t=0^+) = 0}$
+Ces grandeurs étant continues, il vient $\boxed{i_l(t=0^+)= 0}$ et $\boxed{u_C(t=0^+) = 0}$
 
 
 ```{admonition} Attention : Lien entre grandeurs étudiés et grandeurs continues

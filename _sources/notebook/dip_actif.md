@@ -67,7 +67,7 @@ Les sources sont des dipôles polarisés. Il est important de préciser le sens 
 __Caractéristique statique__  
 La caractéristique statique d'une source idéale de tension de fem E est une droite verticale d'équation u = E
 
-La caractéristique statique d'une source idéale de courant de cem I est une droite verticale d'équation i = I
+La caractéristique statique d'une source idéale de courant de cem I est une droite horizontale d'équation i = I
 
 
 ## Source réelle: Electromoteur

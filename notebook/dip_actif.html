@@ -537,7 +537,7 @@
 </div>
 <p><strong>Caractéristique statique</strong><br />
 La caractéristique statique d’une source idéale de tension de fem E est une droite verticale d’équation u = E</p>
-<p>La caractéristique statique d’une source idéale de courant de cem I est une droite verticale d’équation i = I</p>
+<p>La caractéristique statique d’une source idéale de courant de cem I est une droite horizontale d’équation i = I</p>
 </div>
 <div class="section" id="source-reelle-electromoteur">
 <h2>Source réelle: Electromoteur<a class="headerlink" href="#source-reelle-electromoteur" title="Permalink to this headline">¶</a></h2>
@@ -609,8 +609,8 @@ On a orienté i et u en convention générateur de manière à pouvoir identifie
 <p class="card-text">On a orienté <span class="math notranslate nohighlight">\(i_2\)</span> de cette façon pour que la résistance soit en convention récepteur. Le but est de pouvoir utiliser directement la loi d’Ohm (écrite en convention récepteur) sans se tromper dans les signes. Encore une fois, le choix de la convention étant arbitraire, on aurait pu choisir une convention générateur. Il est judicieux de choisir une convention récepteur, non pas pour des raisons physiques, mais pour ne pas se tromper dans les formules…</p>
 </div>
 </details><p class="card-text">On réalise la mise en équation (nous utilisons ici les lois des mailles et des noeuds mais il est vivement conseillé de s’entraîner à cet exercice en appliquant la loi des noeuds en terme de potentiel):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c213f6cb-027a-430b-8566-bab1827d920d">
-<span class="eqno">(11)<a class="headerlink" href="#equation-c213f6cb-027a-430b-8566-bab1827d920d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3efc786a-1f58-48d2-a9ad-06ff4047b8f1">
+<span class="eqno">(11)<a class="headerlink" href="#equation-3efc786a-1f58-48d2-a9ad-06ff4047b8f1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_1 + i_0 &amp;= i + i_2\\
 E - u_1 - u &amp;= 0
 \end{align}\]</div>
@@ -621,19 +621,19 @@ E - u_1 - u &amp;= 0
 </div>
 <p class="card-text">La loi des noeuds peut sembler à certains étranges puisque les intensités ne semble pas courir en un noeud. Néanmoins, on rappelle que sur un fil de connexion, le potentiel est identique partout et le point de raccordement du noeud importe alors peu. On a reproduit ci-contre le schéma équivalent au précédent permettant de faire apparaître le noeud où l’on applique la loi de Kirchhoff.</p>
 <p class="card-text">La <strong>règle principale est d’éliminer les grandeurs qui ne nous intéresse pas ET DE GARDER JUSQU’AU BOUT LA GRANDEUR QU’ON VEUT CALCULER.</strong>. Ici, on va éliminer <span class="math notranslate nohighlight">\(u_1\)</span> et <span class="math notranslate nohighlight">\(i_2\)</span> en utilisant les lois d’Ohm. Il vient :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-eb292fa2-5281-435d-adeb-876fdaed470e">
-<span class="eqno">(12)<a class="headerlink" href="#equation-eb292fa2-5281-435d-adeb-876fdaed470e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a2bfee55-95b2-4139-accc-394aa7a1b615">
+<span class="eqno">(12)<a class="headerlink" href="#equation-a2bfee55-95b2-4139-accc-394aa7a1b615" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_1 + i_0 &amp;= i + \frac{u}{R}\\
 E - R i_1 - u &amp;= 0
 \end{align}\]</div>
 <p class="card-text">En multipliant par R la première équation et en sommant, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-84abdf68-938f-46dc-b25f-03504606c240">
-<span class="eqno">(13)<a class="headerlink" href="#equation-84abdf68-938f-46dc-b25f-03504606c240" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f1817ce2-5b7a-483b-a377-41ea1a3efa63">
+<span class="eqno">(13)<a class="headerlink" href="#equation-f1817ce2-5b7a-483b-a377-41ea1a3efa63" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u = \frac{E + R i_0 - R i}{2}
 \end{equation}\]</div>
 <p class="card-text">Par identification, on trouve:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b9b5d4aa-4e89-4631-8adb-d01c0c98cce2">
-<span class="eqno">(14)<a class="headerlink" href="#equation-b9b5d4aa-4e89-4631-8adb-d01c0c98cce2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1fa38a92-1776-425c-b3e4-785862310748">
+<span class="eqno">(14)<a class="headerlink" href="#equation-1fa38a92-1776-425c-b3e4-785862310748" title="Permalink to this equation">¶</a></span>\[\begin{align}
 E_{Th} &amp;= \frac{E + R i_0}{2}\\
 R_{Th} &amp;= \frac{R}{2}
 \end{align}\]</div>

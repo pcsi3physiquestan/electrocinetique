@@ -549,27 +549,27 @@ Correction<div class="summary-down docutils">
 </div>
 <p class="card-text">On sait déjà que <span class="math notranslate nohighlight">\(V_A = E\)</span> et <span class="math notranslate nohighlight">\(V_D = 2E\)</span></p>
 <p class="card-text">Les lois des noeuds aux points B et C (s’entraîner à les établir <strong>impérativement</strong>) s’écrivent:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7c5bfb93-3fec-4498-92ba-82e3ad366685">
-<span class="eqno">(15)<a class="headerlink" href="#equation-7c5bfb93-3fec-4498-92ba-82e3ad366685" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-857e7d96-d4b7-476a-9662-ee2bc9f02049">
+<span class="eqno">(15)<a class="headerlink" href="#equation-857e7d96-d4b7-476a-9662-ee2bc9f02049" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{V_B - E}{R}+\frac{V_B}{R}+\frac{V_B - V_C}{R_1} &amp;= 0\\
 \frac{V_C - 2E}{R}+\frac{V_C}{R}+\frac{V_C - V_B}{R_1} &amp;= 0
 \end{align}\]</div>
 <p class="card-text"><strong>Résolution du système.</strong><br />
 Ici, on doit chercher <span class="math notranslate nohighlight">\(V_C\)</span> et <span class="math notranslate nohighlight">\(V_D\)</span> puisque l’intensité recherché s’écrit <span class="math notranslate nohighlight">\(\frac{V_B - V_C}{R_1}\)</span>. Réorganisons le système pour le résoudre.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-945471e7-3cd2-4b77-8ece-d58c3fd0d1cc">
-<span class="eqno">(16)<a class="headerlink" href="#equation-945471e7-3cd2-4b77-8ece-d58c3fd0d1cc" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-476dfc32-b874-4953-ba26-2f7567ed6fec">
+<span class="eqno">(16)<a class="headerlink" href="#equation-476dfc32-b874-4953-ba26-2f7567ed6fec" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \left ( 2 R_1 + R \right ) V_B - R V_C &amp;= R_1 E\\
 \left ( 2 R_1 + R \right ) V_C - R V_C &amp;= 2 R_1 E
 \end{align}\]</div>
 <p class="card-text">soit en résolvant le système (<strong>s’entraîner impérativement à le faire</strong>):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-094d2f80-1cee-4eb7-a844-29b3a2267241">
-<span class="eqno">(17)<a class="headerlink" href="#equation-094d2f80-1cee-4eb7-a844-29b3a2267241" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-acb292d5-43f0-4bbb-86f4-333d499e225f">
+<span class="eqno">(17)<a class="headerlink" href="#equation-acb292d5-43f0-4bbb-86f4-333d499e225f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 V_B &amp;= \frac{\left (2R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}\\
 V_C &amp;= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 \end{align}\]</div>
 <p class="card-text">d’où une intensité:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e515b837-b443-4716-94eb-837ccbe61283">
-<span class="eqno">(18)<a class="headerlink" href="#equation-e515b837-b443-4716-94eb-837ccbe61283" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d5be33fd-a80c-4cca-9b76-0c1fc0e6bcb8">
+<span class="eqno">(18)<a class="headerlink" href="#equation-d5be33fd-a80c-4cca-9b76-0c1fc0e6bcb8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \boxed{i = \frac{- E}{2 \left (R_1 + R\right )}}
 \end{equation}\]</div>
 <p class="card-text"><strong>Vérification du résultat</strong></p>
@@ -588,13 +588,13 @@ V_C &amp;= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 <img alt="../_images/elec_resistance_serie.png" src="../_images/elec_resistance_serie.png" />
 </div>
 <p>L’intensité circulant dans l’ensemble est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-886b12c7-ab00-438e-9488-9ba8e35ccc4e">
-<span class="eqno">(19)<a class="headerlink" href="#equation-886b12c7-ab00-438e-9488-9ba8e35ccc4e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8dfd910c-9c55-4e91-96f4-b9fe677a9bed">
+<span class="eqno">(19)<a class="headerlink" href="#equation-8dfd910c-9c55-4e91-96f4-b9fe677a9bed" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i = \frac{u}{\sum_{i=1}^{i=n} R_i}
 \end{equation}\]</div>
 <p>Et la tension u se divise dans chaque dipôle. La tension aux bornes de la résistance <span class="math notranslate nohighlight">\(R_k\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26d2e314-a984-4edb-9485-8606988ca178">
-<span class="eqno">(20)<a class="headerlink" href="#equation-26d2e314-a984-4edb-9485-8606988ca178" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-01abe35f-7427-4698-9650-dc363d804c7c">
+<span class="eqno">(20)<a class="headerlink" href="#equation-01abe35f-7427-4698-9650-dc363d804c7c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_k = \frac{R_k}{\sum_{i=1}^{i=n} R_i} u
 \end{equation}\]</div>
 <p><strong>Démonstration</strong><br />
@@ -611,13 +611,13 @@ On peut utiliser l’additivité des tensions: <span class="math notranslate noh
 <img alt="../_images/elec_resistance_parallele.png" src="../_images/elec_resistance_parallele.png" />
 </div>
 <p>La tension aux bornes de l’ensemble est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b781b011-a858-4801-b8d8-5207b0d809b3">
-<span class="eqno">(21)<a class="headerlink" href="#equation-b781b011-a858-4801-b8d8-5207b0d809b3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b692f81a-d1cb-462f-9650-dac5ce6400bd">
+<span class="eqno">(21)<a class="headerlink" href="#equation-b692f81a-d1cb-462f-9650-dac5ce6400bd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u = \frac{i}{\sum_{i=1}^{i=n} G_i}
 \end{equation}\]</div>
 <p>Et le courant i se divise dans chaque branche. L’intensité aux bornes de la résistance <span class="math notranslate nohighlight">\(R_k\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21981a84-a9aa-43d8-8dbf-0b5c8ef34274">
-<span class="eqno">(22)<a class="headerlink" href="#equation-21981a84-a9aa-43d8-8dbf-0b5c8ef34274" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a3414c53-64f0-4ad4-b082-25d12dcbf99c">
+<span class="eqno">(22)<a class="headerlink" href="#equation-a3414c53-64f0-4ad4-b082-25d12dcbf99c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_k = \frac{G_k}{\sum_{i=1}^{i=n} G_i} i
 \end{equation}\]</div>
 </div>
@@ -654,24 +654,24 @@ On doit :</p>
 <li><p class="card-text">Repérer la résistance dont on veut déterminer la tension et appliquer la formule du pont diviseur de tension. <strong>Attention à l’orientation des tensions car la tensions <strong><span class="math notranslate nohighlight">\(U_k\)</span></strong> doit être orientée dans le même sens que la tension globale (ici E) pour appliquer la formule du pont.</strong></p></li>
 </ol>
 <p class="card-text">Les résistance <span class="math notranslate nohighlight">\(R_1\)</span> et <span class="math notranslate nohighlight">\(R_2\)</span> sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer <span class="math notranslate nohighlight">\(U_{R1}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f6152e2-202f-43c9-aaf4-2cab028e9eed">
-<span class="eqno">(23)<a class="headerlink" href="#equation-8f6152e2-202f-43c9-aaf4-2cab028e9eed" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9ebbd87e-f366-48c8-abdd-efc5c5331aae">
+<span class="eqno">(23)<a class="headerlink" href="#equation-9ebbd87e-f366-48c8-abdd-efc5c5331aae" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 U_{R1} = \frac{R_1}{R_1+R_2} E
 \end{equation}\]</div>
 <p class="card-text">Les résistance <span class="math notranslate nohighlight">\(R_3\)</span> et <span class="math notranslate nohighlight">\(R_4\)</span> sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer <span class="math notranslate nohighlight">\(U_{R4}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c3b3f767-46ea-4f30-ac77-f36f61612072">
-<span class="eqno">(24)<a class="headerlink" href="#equation-c3b3f767-46ea-4f30-ac77-f36f61612072" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bbdd3da8-9262-4fb0-89aa-6381d7b5eaea">
+<span class="eqno">(24)<a class="headerlink" href="#equation-bbdd3da8-9262-4fb0-89aa-6381d7b5eaea" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 U_{R4} = \frac{R_4}{R_3+R_4} E
 \end{equation}\]</div>
 <p class="card-text"><strong>Équilibre du pont</strong><br />
 Il vient :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-81212857-3b1a-43aa-92d5-b74813463409">
-<span class="eqno">(25)<a class="headerlink" href="#equation-81212857-3b1a-43aa-92d5-b74813463409" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a263d9b6-8f29-40a2-8321-a86213cc06eb">
+<span class="eqno">(25)<a class="headerlink" href="#equation-a263d9b6-8f29-40a2-8321-a86213cc06eb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
 \end{equation}\]</div>
 <p class="card-text">Le pont est donc équilibré quand :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e64ee651-8c8c-4f67-b515-17f42ef2602c">
-<span class="eqno">(26)<a class="headerlink" href="#equation-e64ee651-8c8c-4f67-b515-17f42ef2602c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-83becccf-275d-469c-bd00-ec29fffbbeb4">
+<span class="eqno">(26)<a class="headerlink" href="#equation-83becccf-275d-469c-bd00-ec29fffbbeb4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \boxed{R_4 R_2 = R_3 R_1}
 \end{equation}\]</div>
 </div>
