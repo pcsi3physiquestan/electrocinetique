@@ -51,7 +51,7 @@ Les lois des noeuds aux points B et C (s'entraîner à les établir __impérativ
 
 
 __Résolution du système.__  
-Ici, on doit chercher $V_C$ et $V_D$ puisque l'intensité recherché s'écrit $\frac{V_B - V_C}{R_1}$. Réorganisons le système pour le résoudre.
+Ici, on doit chercher $V_C$ et $V_B$ puisque l'intensité recherché s'écrit $\frac{V_B - V_C}{R_1}$. Réorganisons le système pour le résoudre.
 
 \begin{align}
 \left ( 2 R_1 + R \right ) V_B - R V_C &= R_1 E\\

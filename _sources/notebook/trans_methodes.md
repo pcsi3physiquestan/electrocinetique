@@ -634,7 +634,6 @@ u_{L} (t) &= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\sqrt{
 
 ```{admonition} Vérification du résultat
 :class: hint
-{adv_verification_du_resultat_12}
 S'entraîner comme précédemment à vérifier l'homogénéité du résultat et les informations physiques qu'on attend.
 ```
 
@@ -660,7 +659,7 @@ On a introduit les grandeurs suivantes : $\tau = RC$ et $\Omega =\sqrt{ \frac{1}
 __Variation d'énergie dans une bobine__  
 Première méthode: intégrer l'expression précédente entre 0 et l'infini...  ...  ...  On attendra pas un calcul aussi lourd (bien qu'il soit faisable et très formateur !).
 
-Il faut se rappeler que l'énergie reçue par la bobine est stockée et qu'on connaît l'expression de cette énergie stockée. Ainsi, l'énergie reçue sera la différence entre l'énergie stockée au final et l'énergie stockée initialement.
+Deuxième méthode (à appliquer) : Il faut se rappeler que l'énergie reçue par la bobine est stockée et qu'on connaît l'expression de cette énergie stockée. Ainsi, l'énergie reçue sera la différence entre l'énergie stockée au final et l'énergie stockée initialement.
 
 \begin{equation}
 \Delta E_L = E_L(t=+\infty) - E_L(t=0) = \frac{1}{2}L I(t=\infty)^2 - \frac{1}{2}L I(t=0)^2 = \frac{L E^2}{2R^2}
