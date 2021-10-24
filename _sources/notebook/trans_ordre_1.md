@@ -33,8 +33,7 @@ L'interrupteur étant en position 1 depuis un temps long, il bascule à t=0 en p
 
 ## Système d'ordre 1: Forme canonique
 
-````{admonition} Fondamental : Forme canonique de l'équation différentielle.
-:class: important
+````{important} __Fondamental : Forme canonique de l'équation différentielle.__
 
 Pour une grandeur dans un système d'ordre 1, l'équation différentielle se met sous la forme canonique suivante:
 
@@ -63,8 +62,7 @@ On a donc $\tau = RC.$
 
 ### Système d'ordre 1: Evolution temporelle
 
-````{admonition} Fondamental : Forme temporelle
-:class: important
+````{important} __Fondamental : Forme temporelle__
 
 La solution générale de l'équation homogène a pour forme $A e^{-t/\tau}$
 
@@ -110,15 +108,13 @@ On remarquera que l'intensité est discontinue.
 
 ### Système d'ordre 1: Temps caractéristique
 
-````{admonition} Fondamental : Temps caractéristique d'un système d'ordre 1
-:class: important
+````{important} __Fondamental : Temps caractéristique d'un système d'ordre 1__
 
 La forme générale de la solution de l'équation homogène montre tout de suite que $\tau$ est le temps caractéristique du système.
 
 ````
 
-````{admonition} Fondamental : Evolution temporelle: tracé
-:class: important
+````{important} __Fondamental : Evolution temporelle: tracé__
 
 On a représenté ci-dessous l'évolution temporelle (t>0) vers un régime forcé indépendant du temps ainsi que le portrait de phase. On peut en tirer plusieurs informations
 

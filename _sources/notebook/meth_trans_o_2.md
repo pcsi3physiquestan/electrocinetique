@@ -39,8 +39,7 @@ Il s'agit là d'une première inerprétation du facteur de qualité: on donnant 
 
 ````
 
-````{admonition} Fondamental : Loi d'échelle
-:class: important
+````{important} __Fondamental : Loi d'échelle__
 
 Quelque soit la valeur de Q, le temps caractéristique est toujours proportionnel à $\frac{1}{\omega_0}$. La pulsation propre est donc un facteur d'échelle pour la rapidité du système. Plus la pulsation propre est grande, plus le système va réagir vite.
 

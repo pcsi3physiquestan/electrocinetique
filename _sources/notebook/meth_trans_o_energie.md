@@ -33,8 +33,7 @@ On considère un dipôle RLC série branché à une source idéale de tension E.
 
  
 
-```{admonition} Fondamental : Bilan de puissance et d'énergie.
-:class: important
+```{important} __Fondamental : Bilan de puissance et d'énergie.__
 
 Dans un dipôle RLC en régime libre, la bobine et le condensateur perdent de la puissance. Elle est intégralement dissipée par effet Joule dans la résistance. L'énergie stockée tend à diminuer jusqu'à 0
 

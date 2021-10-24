@@ -526,16 +526,18 @@ Soit une fonction <span class="math notranslate nohighlight">\(f(t) = f_1(t) + f
 <p><strong>Exemple</strong><br />
 Considérons l’équation différentielle <span class="math notranslate nohighlight">\(y' + y = t + t^2\)</span>. On peut montrer que la fonction <span class="math notranslate nohighlight">\(t - 1\)</span> est solution de l’équation différentielle <span class="math notranslate nohighlight">\(y' + y = t\)</span> et que la fonction <span class="math notranslate nohighlight">\(t^2 - 2t + 2\)</span> est solution de l’équation différentielle <span class="math notranslate nohighlight">\(y' + y = t^2\)</span>.</p>
 <p>Il vient que la fonction <span class="math notranslate nohighlight">\((t^2 - 2t + 2) + (t-1) = t^2 - t + 1\)</span> est solution de l’équation différentielle <span class="math notranslate nohighlight">\(y' + y = t + t^2\)</span>.</p>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Intérêt en physique</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Intérêt en physique</strong></p>
 <p>L’intérêt en physique est qu’on va pouvoir étudier la réponse <strong>forcée</strong> d’un système <strong>linéaire</strong> (on rappelle qu’il s’agit d’une solution particulière de l’équation avec second membre) à des entrées simples puis déduire son comportement pour des réponses plus complexes. Et comme on va le voir, on va pouvoir ramener l’étude d’un système physique <strong>linéaire</strong> à l’étude de sa réponse à une entrée sinusoïdale, on parlera d’étude <strong>fréquentielle.</strong></p>
 </div>
 </div>
 <div class="section" id="rappel-decomposition-spectrale">
 <h2>Rappel: Décomposition spectrale<a class="headerlink" href="#rappel-decomposition-spectrale" title="Permalink to this headline">¶</a></h2>
 <p>On rappelle que l’on peut décomposer un signal <span class="math notranslate nohighlight">\(s(t)\)</span> comme une somme de signaux sinusoïdaux de fréquences différentes. Si l’on a principalement traité le cas de décomposition discrète, on peut rappeler que l’on peut décomposer un signal comme une somme continue de fréquence.</p>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Etude fréquentielle.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Etude fréquentielle.</strong></p>
 <p>Si l’on étudie la réponse <strong>forcée</strong> d’un signal sinusoïdal de fréquence quelconque f et d’amplitude quelconque u pour un système <strong>linéaire</strong>, on peut déterminer la réponse <strong>forcée</strong> du système à tout signal.</p>
 <p>En effet, la réponse <strong>forcée</strong> à un signal sinusoïdal de fréquence quelconque donne la réponse <strong>forcée</strong> à tout sinusoïde (logique !).</p>
 <p>Et comme tout signal se décompose comme une somme de sinusoïdes, il vient que la <strong>réponse forcée d’un système linéaire</strong> à un tel signal sera la somme (principe de linéarité) des réponses forcées à chaque sinusoïdes (décomposition spectrale) obtenues grâce à l’étude de la réponse d’un sinusoïde quelconque.</p>
@@ -571,8 +573,8 @@ L’étude d’un tel circuit est basé sur plusieurs étapes (attention, on ne 
 <p class="card-text"><strong>1. Etude fréquentielle</strong><br />
 On considère une entrée sinusoïdale <span class="math notranslate nohighlight">\(e(t) = e_m \cos \left (\omega t \right)\)</span>. On cherche le régime forcé vers lequel tend le circuit. On observe expérimentalement qu’il s’agit d’un régime <strong>sinusoïdal forcé</strong>, c’est-à-dire que toutes les grandeurs du circuit vont osciller de manière sinusoïdale à la même pulsation que l’entrée, soit une pulsation <span class="math notranslate nohighlight">\(\omega\)</span>.</p>
 <p class="card-text">Une étude de ce régime forcé (elle sera expliquée par la suite, c’est le coeur du chapitre) montre que le régime forcé est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-05f20742-eb73-4103-a8c8-ff65f9dda7c2">
-<span class="eqno">(98)<a class="headerlink" href="#equation-05f20742-eb73-4103-a8c8-ff65f9dda7c2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e37f22e9-43a4-46b1-8a66-56d9ed16dcae">
+<span class="eqno">(98)<a class="headerlink" href="#equation-e37f22e9-43a4-46b1-8a66-56d9ed16dcae" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{e_m}{\sqrt{1 + {\left(RC \omega\right)}^2}} \cos\left(\omega t - \arctan \left(RC \omega\right) \right)
 \end{equation}\]</div>
 <p class="card-text"><strong>Caractéristique de la réponse.</strong><br />
@@ -606,8 +608,9 @@ On présente ici la méthode générale d’étude donnée précédemment. Il re
 </details></div>
 <div class="section" id="linearite-et-spectre">
 <h2>Linéarité et spectre<a class="headerlink" href="#linearite-et-spectre" title="Permalink to this headline">¶</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Linéarité et spectre</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Linéarité et spectre</strong></p>
 <p>Un système linéaire ne peut ajouter de composante spectrale à un signal, c’est-à-dire que les composantes spectrales d’un signal en sortie d’un système linéaire sont forcément celle du signal d’entrée.</p>
 </div>
 <details class="sphinx-bs dropdown card mb-3">

@@ -564,8 +564,9 @@ Remarque<div class="summary-down docutils">
 </div>
 <div class="section" id="caracteristiques-generales-d-un-filtre">
 <h2>Caractéristiques générales d’un filtre<a class="headerlink" href="#caracteristiques-generales-d-un-filtre" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Gain réel, argument et gain en décibel</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Gain réel, argument et gain en décibel</strong></p>
 <p>Les caractéristiques d’un filtre sont:</p>
 <ul class="simple">
 <li><p>son module <span class="math notranslate nohighlight">\(G = \frac{s_m}{e_m}\)</span>, appelé <strong>gain réel</strong>: il correspond au rapport des amplitudes réelles</p></li>
@@ -591,8 +592,9 @@ Par convention, la fonction de transfert d’un filtre est toujours calculée av
 <div class="section" id="types-de-filtres">
 <h2>Types de filtres<a class="headerlink" href="#types-de-filtres" title="Permalink to this headline">¶</a></h2>
 <p>Les filtres sont de différents types suivant leur finalité. Nous ne présentons ici que les types de filtres les plus utilisés (et ceux que vous devez connaître). <strong>Dans le cadre du programme</strong>, on peut associer à chaque type de filtre des comportements haute et basse fréquence précis. C’est en étudiant ces comportements qu’on déterminera le type de filtre.</p>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Types de filtres</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Types de filtres</strong></p>
 <ul class="simple">
 <li><p>les filtres dit passe-bas: leur but est de laisser passer les basses fréquences et de couper les hautes fréquences. Normalement, on utilise ces filtres pour laisser passer une gamme de fréquence jusqu’à une fréquence voulue (qu’on appellera fréquence de coupure) et couper les fréquence plus rapides.</p></li>
 </ul>
@@ -629,8 +631,9 @@ Pour comprendre le principe d’un filtre, nous allons partir sur des exemples d
 </div>
 <div class="section" id="diagramme-de-bode">
 <h2>Diagramme de Bode<a class="headerlink" href="#diagramme-de-bode" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Diagramme de Bode</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Diagramme de Bode</strong></p>
 <p>Le diagramme de Bode est la représentation graphique utilisée pour les filtres linéaires. Il consiste à représenter le gain en décibel et la phase du filtre en fonction de <span class="math notranslate nohighlight">\(\log(\omega)\)</span>.</p>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -669,8 +672,8 @@ En général, on représente les diagrammes de Bode sur des papier semi-log qui 
 <li><p>Déterminer le type de filtre par une étude haute et basse fréquence.</p></li>
 <li><p>Déterminer la fonction de transfert du filtre et en déduire son gain réel, son gain en décibel, sa phase. On introduira la pulsation propre <span class="math notranslate nohighlight">\(\omega _0\)</span> telle que:</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-4e2fd67f-59b9-498b-9e17-9110e2338f3c">
-<span class="eqno">(117)<a class="headerlink" href="#equation-4e2fd67f-59b9-498b-9e17-9110e2338f3c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d129c257-ccc0-4344-8ee8-7faba915de06">
+<span class="eqno">(117)<a class="headerlink" href="#equation-d129c257-ccc0-4344-8ee8-7faba915de06" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{H} = \frac{A j\frac{\omega}{\omega_0}}{1 + j\frac{\omega}{\omega_0}} = \frac{A jx}{1 + jx}
 \end{equation}\]</div>
 <p>On veut tracer le diagramme de Bode. Montrer que:</p>
@@ -694,8 +697,8 @@ A basse fréquence la bobine est assimilable à un fil, la tension s est donc nu
 <p class="card-text">Le filtre a une fonction de transfert nulle à basse fréquence et non nulle à haute fréquence. C’est un filtre passe-haut.</p>
 <p class="card-text"><strong>Fonction de transfert</strong><br />
 La bobine et la résistance forment un pont diviseur de tension. La tension aux bornes de la bobine est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-78ca06de-2bcc-4ddb-9bc4-43a030b91308">
-<span class="eqno">(118)<a class="headerlink" href="#equation-78ca06de-2bcc-4ddb-9bc4-43a030b91308" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5c4fc8c6-4596-4155-8f2f-7504f6e85950">
+<span class="eqno">(118)<a class="headerlink" href="#equation-5c4fc8c6-4596-4155-8f2f-7504f6e85950" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s} = \frac{jL\omega}{R + jL\omega} \underline{e} \Longrightarrow \underline{H} = \frac{j \frac{L}{R}\omega}{1 + j \frac{L}{R}\omega}
 \end{equation}\]</div>
 <p class="card-text">Il vient que la pulsation propre est <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span>.</p>

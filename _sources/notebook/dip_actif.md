@@ -18,8 +18,7 @@ kernelspec:
 
 ## Sources idéales
 
-````{admonition} Définition : Source idéale de tension
-:class: tip
+````{important} __Définition : Source idéale de tension__
 
 
 ```{figure} ./images/elec_gem_ideale.jpg
@@ -37,8 +36,7 @@ On appelle la tension à ses bornes __force électromotrive (f.e.m.)__
 
 ````
 
-````{admonition} Définition : Source idéale de courant
-:class: tip
+````{important} __Définition : Source idéale de courant__
 
 
 ```{figure} ./images/elec_cem_ideale.jpg
@@ -56,8 +54,9 @@ On appelle l'intensité qui la traverse __courant électromoteur (c.e.m.)__
 
 ````
 
-````{admonition} Attention : Source: dipôle polarisé
-:class: note
+````{attention}
+__Source: dipôle polarisé__
+
 
 Les sources sont des dipôles polarisés. Il est important de préciser le sens dans lequel est orienté la f.e.m. ou le c.e.m.
 
@@ -81,8 +80,7 @@ Lorsqu'on commence à demander une intensité en sortie (donc de la puissance), 
 Expérimentalement, on observe qu'on peut modéliser cette chute par un modèle linéaire: u = E - Ri. C'est le modèle des électromoteurs.
 
 
-````{admonition} Définition : Electromoteur
-:class: tip
+````{important} __Définition : Electromoteur__
 
 Un électromoteur linéaire est une __modélisation__ d'une source donc la relation tension-intensité est:
 
@@ -99,8 +97,7 @@ __Lien entre les grandeurs__
 On peut passer d'une équation à l'autre puisque les grandeurs $E, \eta, R$ et G peuvent être reliées entre elles.
 
 
-````{admonition} Fondamental : Modélisation de Thévenin d'un électromoteur
-:class: important
+````{important} __Fondamental : Modélisation de Thévenin d'un électromoteur__
 
 
 ```{figure} ./images/elec_electromoteur.jpg
@@ -125,8 +122,9 @@ La tension aux bornes du modèle proposé est (la résistance est orientée en c
 On a bien identification des équations d'évolution, donc l'électromoteur est modélisable par le modèle de Thévenin.
 
 
-````{admonition} Attention : C'est une modélisation
-:class: note
+````{attention}
+__C'est une modélisation__
+
 
 Le modèle est Thévenin est comme son nom l'indique une modélisation, c'est-à-dire qu'elle permet d'étudier mathématiquement le comportement de la source réelle mais ne traduit pas la composition physique de la source (qui est bien plus complexe).
 

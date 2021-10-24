@@ -18,22 +18,19 @@ kernelspec:
 
 ## Charge électrique
 
-````{admonition} Définition : Charge électrique
-:class: tip
+````{important} __Définition : Charge électrique__
 
 La charge électrique est une propriété fondamentale de la matière qui lui permet d'interagir avec les champs électromagnétiques.
 
 L'unité usuelle de mesure de la charge électrique est le Coulomb (C).
 ````
 
-````{admonition} Fondamental : Conservation de la charge
-:class: important
+````{important} __Fondamental : Conservation de la charge__
 
 La charge est une grandeur qui se conserve, c'est-à-dire qu'elle ne peut ni être détruire, ni être produite.
 ````
 
-````{admonition} Fondamental : Quantification de la charge
-:class: important
+````{important} __Fondamental : Quantification de la charge__
 
 On observe[^milikan] que la charge Q de tout système est  un multiple entier de la charge élementaire $e = 1.609 \times 10^{-19} \rm{C}$.
 ````
@@ -72,8 +69,7 @@ Les charges de conduction peuvent être de natures diverses.
 * des ions
 * des lacunes électroniques, c'est-à-dire le déplacement de proche en proche d'un manque d'électrons.
 
-````{admonition} Définition : Courant électrique et intensité.
-:class: tip
+````{important} __Définition : Courant électrique et intensité.__
 
 Le courant électrique __à travers__ une section S __orienté arbitrairement__ correspond au passage des charges de conduction à travers cette section par unité de temps.
 
@@ -81,8 +77,9 @@ La grandeur mesurant le courant électrique est l'__intensité du courant__. Ell
 
 ````
 
-````{admonition} Attention : Caractère algébrique de la charge
-:class: note
+````{attention}
+__Caractère algébrique de la charge__
+
 
 
 Pour chaque charge q traversant la section S, la charge q est ajoutée au bilan de quantité de charges si elle se déplace dans le sens d'orientation de la surface S et est enlevée au bilan si elle se déplace dans l'autre sens.
@@ -126,8 +123,9 @@ Dans ces représentations, on ne tient pas compte de l'épaisseur du fil.
 
 ````
 
-````{admonition} Attention : Caractère algébrique
-:class: note
+````{attention}
+__Caractère algébrique__
+
 
 L'orientation de l'intensité dans un fil est __arbitraire__. C'est la personne qui fait l'étude (ou qui pose la question... ) qui choisit l'orientation. Il n'est pas nécessaire qu'elle correspondent au phénomène réel de conduction. Il n'y a donc pas à réfléchir physiquement à ce qui se passe dans le circuit pour orienter i.
 
@@ -245,8 +243,7 @@ Lorsqu'un champ électrique[^champe] $\overrightarrow{E}$ est établi dans un mi
 
 [^champe]: __Origine du champ électrique__ ---Dans un circuit électrique, une source (pile ou générateur) créé un champ électrique. Le lien entre la source et le champ électrique crée est très complexe et sa compréhension n'est pas nécessaire ici.
 
-````{admonition} Définition : Potentiel électrique
-:class: tip
+````{important} __Définition : Potentiel électrique__
 
 
 ```{figure} ./images/elec_v_energie.png
@@ -269,8 +266,7 @@ Ce point est important car il permet de commencer à étudier un circuit grâce 
 Comme nous le verrons par la suite, nous pourrons encore diminuer le nombre de paramètres nécessaires.
 
 
-````{admonition} Définition : Référence des potentiels - Masse
-:class: tip
+````{important} __Définition : Référence des potentiels - Masse__
 
 Comme l'énergie potentielle, le potentiel est défini à une constante près. On peut donc choisir le point du circuit où le potentiel électrique est nul. On parle de __référence des potentiels__ ou __masse__.
 
@@ -283,8 +279,7 @@ Symbole d'un point de masse dans le schéma d'un circuit électrique
 
 ````
 
-````{admonition} Définition : Tension (différence de potentiel)
-:class: tip
+````{important} __Définition : Tension (différence de potentiel)__
 
 
 ```{figure} ./images/elec_v_tension_schema.png
@@ -391,8 +386,7 @@ Au passage, cette analogie peut continuer si l'on observe que le mouvement de l'
 
 ### Approximation des régimes quasi-stationnaires (ARQS)
 
-````{admonition} Définition : Approximation des régimes quasi-stationnaires (ARQS)
-:class: tip
+````{important} __Définition : Approximation des régimes quasi-stationnaires (ARQS)__
 
 Un circuit dans lequel le temps de propagation des perturbations est __très faible devant__ le temps de variation des grandeurs en un point du circuit est un circuit fonctionnant dans l'approximation des régimes quasi-stationnaires.
 
@@ -476,8 +470,7 @@ __Réponse : Ils y a 3 points de potentiels différents. Il y a donc 2 potentiel
 :align: center
 ```
 
-````{admonition} Définition : Dipôles en série et en parallèle
-:class: tip
+````{important} __Définition : Dipôles en série et en parallèle__
 
 * Deux dipôles sont __en série__ lorsqu'ils sont reliées entre eux par un fil de connexion __et qu'il n'y a pas de noeud au niveau de cette liaison.__
 * Deux dipôles sont __en parallèle__ lorsque leurs bornes sont reliées deux à deux.
@@ -506,8 +499,7 @@ Un ensemble de dipôles en série forme une __branche__.
 
 ### Intensité dans une branche dans l'ARQS
 
-````{admonition} Fondamental : Intensité dans une branche dans l'ARQS
-:class: important
+````{important} __Fondamental : Intensité dans une branche dans l'ARQS__
 
 Dans l'ARQS, l'intensité  est la même en tout point d'une même branche (c'est-à-dire d'un ensemble de dipôles et fils de connexion sans  noeud).
 

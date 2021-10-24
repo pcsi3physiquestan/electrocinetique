@@ -571,8 +571,9 @@
 <p><strong>Préambule: Système stable</strong><br />
 Un système est dit <strong>stable</strong> si les grandeurs du système ne divergent pas lorsqu’il est laissé à lui-même.</p>
 <p>Un système instable tend à saturer ou à se détériorer. Nous supposerons ici que nos systèmes sont toujours stables et nous verrons par la suite des méthodes pour vérifier la stabilité d’un système.</p>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Régime forcé</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Régime forcé</strong></p>
 <p>Lorsqu’un système <strong>stable</strong> est soumis à  une grandeur d’entrée, les grandeurs du systèmes vont tendre vers un état dépendant:</p>
 <ul class="simple">
 <li><p>du système lui-même et de la grandeur considérée</p></li>
@@ -585,8 +586,9 @@ Un système est dit <strong>stable</strong> si les grandeurs du système ne dive
 <p>Si la grandeur d’entrée est une tension constante, alors toutes les grandeurs d’un système stable vont tendre vers une valeur constante. Dans ce chapitre, nous nous limiterons principalement à ce type de régime forcé.</p>
 <p>Si la grandeur d’entrée est une tension sinusoïdale, alors toutes les grandeurs d’un système stable vont tendre vers une forme sinusoïdale de même pulsation. Ce sera l’objet du prochain chapitre.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Régime transitoire</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Régime transitoire</strong></p>
 <p>Lorsque la grandeur d’entrée varie brusquement pour passer d’une forme à une autre, le système (ses grandeurs) va évoluer durant un temps fini (non nul) pour tendre (s’il est stable) vers un nouveau régime forcé par la nouvelle grandeur d’entrée.</p>
 <p>L’évolution entre le régime forcé précédent et le nouveau régime forcé est appelé <strong>régime transitoire.</strong></p>
 </div>
@@ -609,8 +611,9 @@ Un système est dit <strong>stable</strong> si les grandeurs du système ne dive
 <p>Dans ce régime, toutes les grandeurs ne varient plus au cours du temps.</p>
 <div class="section" id="condensateur-et-bobine-en-regime-independant-du-temps">
 <h3>Condensateur et bobine en régime indépendant du temps<a class="headerlink" href="#condensateur-et-bobine-en-regime-independant-du-temps" title="Permalink to this headline">¶</a></h3>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Condensateur en régime indépendant du temps</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Condensateur en régime indépendant du temps</strong></p>
 <div class="figure align-center" id="fig-148">
 <img alt="../_images/elec_c_equiv.png" src="../_images/elec_c_equiv.png" />
 </div>
@@ -618,13 +621,14 @@ Un système est dit <strong>stable</strong> si les grandeurs du système ne dive
 </div>
 <p><strong>Démonstration</strong><br />
 Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de la tension est nulle. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1867fef0-e799-4643-ab02-32698428d828">
-<span class="eqno">(28)<a class="headerlink" href="#equation-1867fef0-e799-4643-ab02-32698428d828" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1fee02ab-2110-4b74-bf6c-ed597ace4f66">
+<span class="eqno">(28)<a class="headerlink" href="#equation-1fee02ab-2110-4b74-bf6c-ed597ace4f66" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i = C \frac{\rm{d}u}{\rm{dt}} = 0
 \end{equation}\]</div>
 <p>L’intensité étant toujours nulle, le dipôle est assimilable à un interrupteur ouvert.</p>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Bobine en régime indépendant du temps</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Bobine en régime indépendant du temps</strong></p>
 <div class="figure align-center" id="fig-149">
 <img alt="../_images/elec_l_equiv.png" src="../_images/elec_l_equiv.png" />
 </div>
@@ -632,8 +636,8 @@ i = C \frac{\rm{d}u}{\rm{dt}} = 0
 </div>
 <p><strong>Démonstration</strong><br />
 Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de l’intensité est nulle. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-94838bb7-a886-47aa-8f5a-893dd852272f">
-<span class="eqno">(29)<a class="headerlink" href="#equation-94838bb7-a886-47aa-8f5a-893dd852272f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-99e956e4-5b00-41ca-8bf5-a501d49cd486">
+<span class="eqno">(29)<a class="headerlink" href="#equation-99e956e4-5b00-41ca-8bf5-a501d49cd486" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u =L \frac{\rm{d}i}{\rm{dt}} = 0
 \end{equation}\]</div>
 <p>La tension étant toujours nulle, le dipôle est assimilable à un fil.</p>
@@ -667,8 +671,9 @@ Tout d’abord, on redessine le circuit en utilisant les modèles équivalents a
 <p class="card-text">Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_e = i_c = 0\)</span> à cause des interrupteurs ovuerts.</p>
 <p class="card-text">On a donc <span class="math notranslate nohighlight">\(i_r + i_l = 0\)</span> et <span class="math notranslate nohighlight">\(R i_r - R i_l = 0\)</span> soit <span class="math notranslate nohighlight">\(i_l = i_r = 0\)</span></p>
 <p class="card-text">Remarquons que seules deux tensions sont non nulles: la tension de la source (E) et la tension aux bornes de l’interrupteur de gauche (E ou -E suivant l’orientation).</p>
-<div class="note admonition">
-<p class="admonition-title">Attention : Tension aux bornes d’un condensateur</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p class="card-text"><strong>Tension aux bornes d’un condensateur</strong></p>
 <p class="card-text">Profitons de cette remarque pour signaler que la <strong>tension aux bornes d’un interrupteur ouvert n’est a priori pas nulle.</strong></p>
 </div>
 </div>
@@ -689,15 +694,15 @@ Correction<div class="summary-down docutils">
 </div>
 <p class="card-text">Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
 <p class="card-text">Écrivons les lois de Kirchhoff (on pourrait aussi utiliser la loi des noeuds en terme de potentiels):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-148ec27d-a477-4c04-9aa1-07402a14f8c9">
-<span class="eqno">(30)<a class="headerlink" href="#equation-148ec27d-a477-4c04-9aa1-07402a14f8c9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3d349ff0-d693-41e9-b084-5c73031ca369">
+<span class="eqno">(30)<a class="headerlink" href="#equation-3d349ff0-d693-41e9-b084-5c73031ca369" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + i_l &amp;= 0\\
 E - R i_e + R i_r &amp;= 0\\
 R i_r - R i_l &amp;= 0
 \end{align}\]</div>
 <p class="card-text">Il vient immédiatement <span class="math notranslate nohighlight">\(i_r = i_l\)</span> et donc <span class="math notranslate nohighlight">\(i_e = - 2 i_r\)</span>. La première loi des mailles s’écrivant alors <span class="math notranslate nohighlight">\(E + 3 R i_R = 0\)</span>, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-71c98115-c9bd-4829-8695-39d5383f3ff1">
-<span class="eqno">(31)<a class="headerlink" href="#equation-71c98115-c9bd-4829-8695-39d5383f3ff1" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3c8666d6-d7f5-462c-a21e-13ef43f94058">
+<span class="eqno">(31)<a class="headerlink" href="#equation-3c8666d6-d7f5-462c-a21e-13ef43f94058" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_r &amp;= -\frac{E}{3R}\\
 i_l &amp;= -\frac{E}{3R}\\
 i_e &amp;= \frac{2E}{3R}\\
@@ -730,8 +735,9 @@ Comme nous le verrons par la suite, le régime transitoire d’un système poss�
 <p>Un échelon de tension est un passage brusque d’une tension <span class="math notranslate nohighlight">\(E_0\)</span> à une tension <span class="math notranslate nohighlight">\(E_1\)</span>.</p>
 <p>Un échelon de tension permet de simuler une brusque variation de la tension d’entrée.</p>
 <p>Très souvent les échelons étudiés correspondent à un passage de 0 à E.</p>
-<div class="note admonition">
-<p class="admonition-title">Attention : Discontinuité</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>Discontinuité</strong></p>
 <p>Un échelon de tension introduit une discontinuité à un instant t (<span class="math notranslate nohighlight">\(t=0\)</span> ou <span class="math notranslate nohighlight">\(t=t_0\)</span> plus généralement). <strong>Celà signifie qu’en ce point, les grandeurs physiques ne sont plus nécessairement continues.</strong></p>
 <p>A l’image des traitements mathématiques, cela nécessite de traiter chaque partie (avant et après la discontinuité séparément) et de procéder à des recollements. Nous verrons les méthodes d’études propres à la physique par la suite. __Il faut néanmoins déjà retenir qu’on ne peut écrire a priori <strong><span class="math notranslate nohighlight">\(u(t=t_0^-) = u (t=t_0^+)\)</span></strong> pour n’importe quelle grandeur du circuit __s’il y a une discontinuité du circuit imposée.</p>
 <p>Nous verrons que <strong>certaines (deux)</strong> grandeurs sont toujours continues par propriétés fondamentales.</p>
@@ -824,8 +830,8 @@ On détermine dans un premier temps l’écart initial: on commence à 1V et on 
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le signal ci-après.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5781a1f5-4e2b-4718-8f88-6baddcb8793c">
-<span class="eqno">(32)<a class="headerlink" href="#equation-5781a1f5-4e2b-4718-8f88-6baddcb8793c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-446daa3e-8923-45f1-a3db-409467c21cd3">
+<span class="eqno">(32)<a class="headerlink" href="#equation-446daa3e-8923-45f1-a3db-409467c21cd3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 e_m \exp (- t / \tau)
 \end{equation}\]</div>
 <p>\begin{enumerate}</p>
@@ -843,21 +849,22 @@ Correction<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>1.</strong><br />
 La valeur initiale est <span class="math notranslate nohighlight">\(e_m\)</span> et la valeur finale 0. On cherche donc un écart à la valeur finale de <span class="math notranslate nohighlight">\(\frac{N}{100}(e_m - 0)\)</span> soit :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c6e6bcc2-ee98-44e7-aef7-0d89ad1557b2">
-<span class="eqno">(33)<a class="headerlink" href="#equation-c6e6bcc2-ee98-44e7-aef7-0d89ad1557b2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8e179b15-21b3-4dcf-8f04-bba6d7667ccc">
+<span class="eqno">(33)<a class="headerlink" href="#equation-8e179b15-21b3-4dcf-8f04-bba6d7667ccc" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left  (\frac{N}{100} \right )
 \end{equation}\]</div>
 <p class="card-text">Pour 95%, on trouve <span class="math notranslate nohighlight">\(t = 3 \tau\)</span> etpour 99%, on trouve <span class="math notranslate nohighlight">\(t = 5 \tau\)</span>.</p>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : 2. Temps caractéristique d’une exponentielle décroissante</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p class="card-text"><strong>Fondamental : 2. Temps caractéristique d’une exponentielle décroissante</strong></p>
 <p class="card-text">On voit que le temps caractéristique est toujours de l’ordre de <span class="math notranslate nohighlight">\(\tau\)</span>. __Lorsqu’on est en présence d’une exponentielle décroissante de la forme <strong><span class="math notranslate nohighlight">\(\exp(-t/\tau\)</span></strong>, on prendra comme temps caractéristique : <strong><span class="math notranslate nohighlight">\(\tau\)</span></strong>. C’est pour des temps grands devant <span class="math notranslate nohighlight">\(\tau\)</span> que l’argument de l’exponentielle devient proche de <span class="math notranslate nohighlight">\(-\infty\)</span> et donc que l’exponentielle devient proche de 0.</p>
 </div>
 </div>
 </details><div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le signal suivant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-90ea75f8-0aae-4920-b861-708d938d41c1">
-<span class="eqno">(34)<a class="headerlink" href="#equation-90ea75f8-0aae-4920-b861-708d938d41c1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a26e0244-acea-4559-ad17-c4995ff8c23f">
+<span class="eqno">(34)<a class="headerlink" href="#equation-a26e0244-acea-4559-ad17-c4995ff8c23f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) + 3 e_m
 \end{equation}\]</div>
 <p>Déterminer une estimation du temps caractéristique après avoir préciser l’état final.</p>
@@ -872,13 +879,13 @@ Correction<div class="summary-down docutils">
 <p class="card-text"><strong>Ecart à l’état final</strong><br />
 Le régime forcé s’obtient en passant simplement à la limite l’expression du signal. Il vient <span class="math notranslate nohighlight">\(u_{s,force} = 3e_m\)</span></p>
 <p class="card-text">L’écart est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-14038f3e-a10f-40ee-ad14-8ba4bc30e897">
-<span class="eqno">(35)<a class="headerlink" href="#equation-14038f3e-a10f-40ee-ad14-8ba4bc30e897" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-06d1966c-bd44-4a07-9c5a-7ea3d7fa571e">
+<span class="eqno">(35)<a class="headerlink" href="#equation-06d1966c-bd44-4a07-9c5a-7ea3d7fa571e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \left \vert 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) \right \vert
 \end{equation}\]</div>
 <p class="card-text">L’écart initial étant de <span class="math notranslate nohighlight">\(2 e_m\)</span>, il faut analyser la fonction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de1dd727-62f8-4f6f-81ed-7f1656a2e671">
-<span class="eqno">(36)<a class="headerlink" href="#equation-de1dd727-62f8-4f6f-81ed-7f1656a2e671" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e271cf55-e7c2-4c2e-bb68-0d0a926345ce">
+<span class="eqno">(36)<a class="headerlink" href="#equation-e271cf55-e7c2-4c2e-bb68-0d0a926345ce" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f(t) = \left \vert \exp(-\frac{2t}{T})  - 2 \exp(-\frac{5t}{T}) \right \vert
 \end{equation}\]</div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -916,8 +923,9 @@ Remarquons que toute la première partie permettant de ramener la fonction à un
 <p>Nous avons jusqu’à présent étudier les évolutions graphiquement au moyen des évolutions temporelles. On peut obtenir d’autres informations en utilisant une représentation particulière appelée <strong>portrait de phase</strong>.</p>
 <div class="section" id="portrait-de-phase">
 <h3>Portrait de phase<a class="headerlink" href="#portrait-de-phase" title="Permalink to this headline">¶</a></h3>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Portrait de phase</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Portrait de phase</strong></p>
 <div class="figure align-center" id="fig-158">
 <img alt="../_images/elec_portrait_phase_generalite.png" src="../_images/elec_portrait_phase_generalite.png" />
 </div>

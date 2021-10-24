@@ -17,15 +17,13 @@ kernelspec:
 
 ## Point de fonctionnement et caractéristique statique
 
-````{admonition} Définition : Point de fonctionnement
-:class: tip
+````{important} __Définition : Point de fonctionnement__
 
 Un __point de fonctionnement__ d'un dipôle est un couple $(U;I)$ de tension et intensité pouvant exister pour le dipôle en fonctionnement indépendant du temps.
 
 ````
 
-````{admonition} Définition : Caractéristique statique
-:class: tip
+````{important} __Définition : Caractéristique statique__
 
 La __caractéristiques statique__ d'un dipôle est l'ensemble des points de fonctionnement du dipôle.
 
@@ -37,8 +35,9 @@ La __caractéristiques statique__ d'un dipôle est l'ensemble des points de fonc
 
 ````
 
-````{admonition} Attention : Caractère statique
-:class: note
+````{attention}
+__Caractère statique__
+
 
 Il s'agit d'un ensemble d'états statiques possibles regroupés sur le même graphique. Le système ne passe pas dynamiquement d'un point de fonctionnement à un autre puisque ces points sont établis dans un régime indépendant du temps.
 
@@ -67,8 +66,7 @@ Exemple: Une thermistance possède une caractéristique statique qui dépend de 
 
 ## Typologie des dipôles
 
-````{admonition} Définition : Dipôle symétrique ou polarisé
-:class: tip
+````{important} __Définition : Dipôle symétrique ou polarisé__
 
 Un dipôle __symétrique__ est un dipôle dont la caractéristique statique est symétrique par rapport à l'origine (0;0).
 
@@ -80,8 +78,7 @@ Le sens de branchement d'un dipôle polarisé a son importance.
 
 ````
 
-````{admonition} Définition : Dipôle passif ou actif
-:class: tip
+````{important} __Définition : Dipôle passif ou actif__
 
 Un dipôle __passif__ est un dipôle dont la caractéristique passe par l'origine.
 
@@ -91,15 +88,15 @@ Si la caractéristique ne passe pas par l'origine, on dit que le dipôle est __a
 
 ## Equation d'évolution
 
-````{admonition} Définition : Equation d'évolution
-:class: tip
+````{important} __Définition : Equation d'évolution__
 
 L'intensité qui traverse un dipôle est relié à la tension entre ses bornes par une équation mathématique appelée __équation d'évolution du dipôle__
 
 ````
 
-````{admonition} Attention : Convention d'orientation
-:class: note
+````{attention}
+__Convention d'orientation__
+
 
 Souvent, les équations d'évolution sont données (ou à connaître) __avec une certaine convention.__
 
@@ -121,8 +118,7 @@ Pour une bobine, l'équation d'évolution est en convention récepteur: $u(i) = 
 
 ## Dipôle linéaire
 
-````{admonition} Définition : Dipôle linéaire
-:class: tip
+````{important} __Définition : Dipôle linéaire__
 
 Un dipôle est dit __linéaire__ si son équation d'évolution est une équation différentielle linéaire.
 
@@ -140,8 +136,7 @@ Un circuit linéaire est un circuit composé uniquement de composants linéaires
 
 ## Caractéristique statique des dipôles linéaires
 
-````{admonition} Fondamental : Caractéristique statique des dipôles linéaires
-:class: important
+````{important} __Fondamental : Caractéristique statique des dipôles linéaires__
 
 La caractéristique statique d'un dipôle linéaire est une droite dont l'équation s'écrit $a_0 U - b_0 I = F_0$.
 
@@ -161,8 +156,9 @@ Si $F_0 \neq 0$ il est actif (on parle de __source__).
 
 ````
 
-````{admonition} Attention : Caractéristique statique et évolution temporelle
-:class: note
+````{attention}
+__Caractéristique statique et évolution temporelle__
+
 
 Seule la caractéristique statique est une droite. On rappelle qu'il s'agit du regroupement de l'ensemble des états possibles dans __des cicuits__ en régime indépendant du temps.
 

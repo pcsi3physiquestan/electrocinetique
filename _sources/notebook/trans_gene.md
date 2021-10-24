@@ -16,7 +16,7 @@ kernelspec:
 # Régime transitoire (1): Caractéristiques générales
 
 ````{admonition} Objectifs
-:class: hint
+:class: tip
 * Distinguer, sur un relevé expérimental (évolution temporelle), régime transitoire et régime permanent.
 * Interpréter et utiliser les continuités de la tension aux bornes d'un condensateur ou de l'intensité dans une bobine.
 * Établir les conditions initiales d'un circuit.

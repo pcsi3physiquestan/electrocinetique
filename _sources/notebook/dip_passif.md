@@ -23,8 +23,7 @@ __Description physique__
 Tout conducteur dissipe de l'énergie par effet Joule (dissipation de l'énergie des électrons par interaction désordonnée avec le cristal du conducteur). Dans une résistance, on cherche à contrôler et augmenter cet effet (qui est très faible voire négligeable dans un fil de connexion).
 
 
-````{admonition} Définition : Résistance ou conducteur ohmique
-:class: tip
+````{important} __Définition : Résistance ou conducteur ohmique__
 
 Un conducteur ohmique ou résistance est un dipôle dont l'équation d'évolution est __en convention récepteur:__
 
@@ -50,8 +49,7 @@ Une capacitance ou un condensateur est un dipôle construit de la manière suiva
 Quand les électrons sont mis en mouvement, ils vont se détacher d'un conducteur (qui se charge positivement) et s'accumuler sur l'autre (qui se charge négativement): la différence de charge créé un champ électrique qui peut mettre en mouvement les charges dans l'autre sens: on crée temporairement une source d'énergie qui peut se décharger dans d'autres dipôles.
 
 
-````{admonition} Définition : Condensateur et capacité
-:class: tip
+````{important} __Définition : Condensateur et capacité__
 
 
 ```{figure} ./images/elec_condensateur.jpg
@@ -73,8 +71,7 @@ C est appelée capacité du condensateur.
 
 ````
 
-````{admonition} Fondamental : Relation intensité-tension
-:class: important
+````{important} __Fondamental : Relation intensité-tension__
 
 En __convention récepteur__, l'équation d'évolution s'écrit aussi:
 
@@ -103,8 +100,7 @@ __Description physique d'une bobine__
 Une bobine est un dipôle dont le fonctionnement est basé sur le phénomène d'induction: un champ magnétique variable engendre un champ électrique. Dans le cas d'une bobine, on enroule beaucoup de fil pour former des spires. L'intensité qui traverse ces spires crée un champ magnétique et si l'intensité est variable, le champ magnétique aussi. Il naît alors une tension aux bornes des spires.
 
 
-````{admonition} Définition : Bobine ou inductance
-:class: tip
+````{important} __Définition : Bobine ou inductance__
 
 
 ```{figure} ./images/elec_bobine.jpg
@@ -166,8 +162,7 @@ A l'inverse, dans de nombreux dispositifs électroniques, les résistances sont 
 
 ## Energie stockée dans une bobine ou condensateur
 
-````{admonition} Fondamental : Energie stockée dans un condensateur
-:class: important
+````{important} __Fondamental : Energie stockée dans un condensateur__
 
 Lorsqu'on applique une tension u à ses bornes, un condensateur stocke une énergie :
 

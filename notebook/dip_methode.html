@@ -549,27 +549,27 @@ Correction<div class="summary-down docutils">
 </div>
 <p class="card-text">On sait déjà que <span class="math notranslate nohighlight">\(V_A = E\)</span> et <span class="math notranslate nohighlight">\(V_D = 2E\)</span></p>
 <p class="card-text">Les lois des noeuds aux points B et C (s’entraîner à les établir <strong>impérativement</strong>) s’écrivent:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ace0e04d-6fb2-44b5-ac5f-e72f48c36cdc">
-<span class="eqno">(15)<a class="headerlink" href="#equation-ace0e04d-6fb2-44b5-ac5f-e72f48c36cdc" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d463f046-8857-4f16-a3ce-622c5bf2334e">
+<span class="eqno">(15)<a class="headerlink" href="#equation-d463f046-8857-4f16-a3ce-622c5bf2334e" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{V_B - E}{R}+\frac{V_B}{R}+\frac{V_B - V_C}{R_1} &amp;= 0\\
 \frac{V_C - 2E}{R}+\frac{V_C}{R}+\frac{V_C - V_B}{R_1} &amp;= 0
 \end{align}\]</div>
 <p class="card-text"><strong>Résolution du système.</strong><br />
 Ici, on doit chercher <span class="math notranslate nohighlight">\(V_C\)</span> et <span class="math notranslate nohighlight">\(V_B\)</span> puisque l’intensité recherché s’écrit <span class="math notranslate nohighlight">\(\frac{V_B - V_C}{R_1}\)</span>. Réorganisons le système pour le résoudre.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fea3b86e-6258-4f21-9577-5c36b5f005b2">
-<span class="eqno">(16)<a class="headerlink" href="#equation-fea3b86e-6258-4f21-9577-5c36b5f005b2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-61a6dad8-bc53-4334-9314-15abaf5bb214">
+<span class="eqno">(16)<a class="headerlink" href="#equation-61a6dad8-bc53-4334-9314-15abaf5bb214" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \left ( 2 R_1 + R \right ) V_B - R V_C &amp;= R_1 E\\
 \left ( 2 R_1 + R \right ) V_C - R V_C &amp;= 2 R_1 E
 \end{align}\]</div>
 <p class="card-text">soit en résolvant le système (<strong>s’entraîner impérativement à le faire</strong>):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6a06529c-cbb0-473f-92af-51b4c654c73c">
-<span class="eqno">(17)<a class="headerlink" href="#equation-6a06529c-cbb0-473f-92af-51b4c654c73c" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0ee9b4d8-b04a-40d3-a51d-1419f17714c6">
+<span class="eqno">(17)<a class="headerlink" href="#equation-0ee9b4d8-b04a-40d3-a51d-1419f17714c6" title="Permalink to this equation">¶</a></span>\[\begin{align}
 V_B &amp;= \frac{\left (2R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}\\
 V_C &amp;= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 \end{align}\]</div>
 <p class="card-text">d’où une intensité:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf177745-bb56-4384-a68b-7722a58517cd">
-<span class="eqno">(18)<a class="headerlink" href="#equation-bf177745-bb56-4384-a68b-7722a58517cd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-00254128-28e6-42ec-adfb-a537c13ba242">
+<span class="eqno">(18)<a class="headerlink" href="#equation-00254128-28e6-42ec-adfb-a537c13ba242" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \boxed{i = \frac{- E}{2 \left (R_1 + R\right )}}
 \end{equation}\]</div>
 <p class="card-text"><strong>Vérification du résultat</strong></p>
@@ -581,20 +581,21 @@ V_C &amp;= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 </details></div>
 <div class="section" id="pont-diviseur-de-tension">
 <h2>Pont diviseur de tension<a class="headerlink" href="#pont-diviseur-de-tension" title="Permalink to this headline">¶</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Pont diviseur de tension</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Pont diviseur de tension</strong></p>
 <p>Considérons N résistances en série dont les résistances sont <span class="math notranslate nohighlight">\(\{R_i \vert i \in [\![1;n]\!]\}\)</span> aux bornes de laquelle la tension est u.</p>
 <div class="figure align-center" id="fig-131">
 <img alt="../_images/elec_resistance_serie.png" src="../_images/elec_resistance_serie.png" />
 </div>
 <p>L’intensité circulant dans l’ensemble est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5caa4447-04cb-4ebb-8c76-4d7fcd6319ed">
-<span class="eqno">(19)<a class="headerlink" href="#equation-5caa4447-04cb-4ebb-8c76-4d7fcd6319ed" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ead93a77-a870-4126-a7da-ade4bf26a173">
+<span class="eqno">(19)<a class="headerlink" href="#equation-ead93a77-a870-4126-a7da-ade4bf26a173" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i = \frac{u}{\sum_{i=1}^{i=n} R_i}
 \end{equation}\]</div>
 <p>Et la tension u se divise dans chaque dipôle. La tension aux bornes de la résistance <span class="math notranslate nohighlight">\(R_k\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-301c2840-6eb4-4c4f-82dc-8d10ebb2f2fc">
-<span class="eqno">(20)<a class="headerlink" href="#equation-301c2840-6eb4-4c4f-82dc-8d10ebb2f2fc" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-eeb26521-3d42-4e08-9291-660c709b7095">
+<span class="eqno">(20)<a class="headerlink" href="#equation-eeb26521-3d42-4e08-9291-660c709b7095" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_k = \frac{R_k}{\sum_{i=1}^{i=n} R_i} u
 \end{equation}\]</div>
 <p><strong>Démonstration</strong><br />
@@ -604,20 +605,21 @@ On peut utiliser l’additivité des tensions: <span class="math notranslate noh
 </div>
 <div class="section" id="pont-diviseur-de-courant">
 <h2>Pont diviseur de courant<a class="headerlink" href="#pont-diviseur-de-courant" title="Permalink to this headline">¶</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Pont diviseur de courant</p>
-<p>Considérons N résistances en parallèle dont les conductances sont <span class="math notranslate nohighlight">\(\{G_i \vert i \in [\![1;n]\!]\}\)</span> dans laquelle entre une intensité totale i.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Pont diviseur de courant</strong>
+Considérons N résistances en parallèle dont les conductances sont <span class="math notranslate nohighlight">\(\{G_i \vert i \in [\![1;n]\!]\}\)</span> dans laquelle entre une intensité totale i.</p>
 <div class="figure align-center" id="fig-132">
 <img alt="../_images/elec_resistance_parallele.png" src="../_images/elec_resistance_parallele.png" />
 </div>
 <p>La tension aux bornes de l’ensemble est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b43c0f2-11f1-4af0-82b6-fc0940ff9f9a">
-<span class="eqno">(21)<a class="headerlink" href="#equation-0b43c0f2-11f1-4af0-82b6-fc0940ff9f9a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fd6c99bb-3721-4375-afd7-9a8e225c4c29">
+<span class="eqno">(21)<a class="headerlink" href="#equation-fd6c99bb-3721-4375-afd7-9a8e225c4c29" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u = \frac{i}{\sum_{i=1}^{i=n} G_i}
 \end{equation}\]</div>
 <p>Et le courant i se divise dans chaque branche. L’intensité aux bornes de la résistance <span class="math notranslate nohighlight">\(R_k\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a939ce7-c5b3-4c12-9811-ded4d75ec26d">
-<span class="eqno">(22)<a class="headerlink" href="#equation-3a939ce7-c5b3-4c12-9811-ded4d75ec26d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b5a72a50-4305-43a2-9edd-bd2e9ae2f444">
+<span class="eqno">(22)<a class="headerlink" href="#equation-b5a72a50-4305-43a2-9edd-bd2e9ae2f444" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_k = \frac{G_k}{\sum_{i=1}^{i=n} G_i} i
 \end{equation}\]</div>
 </div>
@@ -654,37 +656,39 @@ On doit :</p>
 <li><p class="card-text">Repérer la résistance dont on veut déterminer la tension et appliquer la formule du pont diviseur de tension. <strong>Attention à l’orientation des tensions car la tensions <strong><span class="math notranslate nohighlight">\(U_k\)</span></strong> doit être orientée dans le même sens que la tension globale (ici E) pour appliquer la formule du pont.</strong></p></li>
 </ol>
 <p class="card-text">Les résistance <span class="math notranslate nohighlight">\(R_1\)</span> et <span class="math notranslate nohighlight">\(R_2\)</span> sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer <span class="math notranslate nohighlight">\(U_{R1}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-225481ba-19f2-4f34-8cf2-98c89b939495">
-<span class="eqno">(23)<a class="headerlink" href="#equation-225481ba-19f2-4f34-8cf2-98c89b939495" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7e558353-a6de-48f5-af9d-a316f177c9e9">
+<span class="eqno">(23)<a class="headerlink" href="#equation-7e558353-a6de-48f5-af9d-a316f177c9e9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 U_{R1} = \frac{R_1}{R_1+R_2} E
 \end{equation}\]</div>
 <p class="card-text">Les résistance <span class="math notranslate nohighlight">\(R_3\)</span> et <span class="math notranslate nohighlight">\(R_4\)</span> sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer <span class="math notranslate nohighlight">\(U_{R4}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ec6d9a60-015d-4317-bd62-53740dc12ccb">
-<span class="eqno">(24)<a class="headerlink" href="#equation-ec6d9a60-015d-4317-bd62-53740dc12ccb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-af4cac4f-9b94-4d26-9231-3fa5bbf7f607">
+<span class="eqno">(24)<a class="headerlink" href="#equation-af4cac4f-9b94-4d26-9231-3fa5bbf7f607" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 U_{R4} = \frac{R_4}{R_3+R_4} E
 \end{equation}\]</div>
 <p class="card-text"><strong>Équilibre du pont</strong><br />
 Il vient :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac23f32c-6fc9-4c2d-a974-c7c0389c79f4">
-<span class="eqno">(25)<a class="headerlink" href="#equation-ac23f32c-6fc9-4c2d-a974-c7c0389c79f4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-626d6abc-73b4-4104-b177-988a76d85a63">
+<span class="eqno">(25)<a class="headerlink" href="#equation-626d6abc-73b4-4104-b177-988a76d85a63" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
 \end{equation}\]</div>
 <p class="card-text">Le pont est donc équilibré quand :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4c2370b0-a3d6-4b8b-9f3a-446543c54c89">
-<span class="eqno">(26)<a class="headerlink" href="#equation-4c2370b0-a3d6-4b8b-9f3a-446543c54c89" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-055f345a-1a4c-42a2-808a-c4a77dc3ee49">
+<span class="eqno">(26)<a class="headerlink" href="#equation-055f345a-1a4c-42a2-808a-c4a77dc3ee49" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \boxed{R_4 R_2 = R_3 R_1}
 \end{equation}\]</div>
 </div>
 </details></div>
 <div class="section" id="modelisation-des-appareils-complexes-resistance-d-entree-et-resistance-de-sortie">
 <h2>Modélisation des appareils complexes : Résistance d’entrée et résistance de sortie<a class="headerlink" href="#modelisation-des-appareils-complexes-resistance-d-entree-et-resistance-de-sortie" title="Permalink to this headline">¶</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Résistance d’entrée d’un instrument de mesure</p>
-<p>Un instrument de mesure comme un multimètre ou un oscilloscope possède ses propres caractéristiques électriques. Du point de vue du reste du circuit, ce comportement, en régime indépendant du temps, peut-être <strong>modélisé</strong> par une résistance qu’on appelle <strong>résistance d’entrée de l’appareil.</strong></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Résistance d’entrée d’un instrument de mesure</strong>
+Un instrument de mesure comme un multimètre ou un oscilloscope possède ses propres caractéristiques électriques. Du point de vue du reste du circuit, ce comportement, en régime indépendant du temps, peut-être <strong>modélisé</strong> par une résistance qu’on appelle <strong>résistance d’entrée de l’appareil.</strong></p>
 </div>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Résistance de sortie d’un générateur, d’une source</p>
-<p>Lorsqu’on utilise un générateur (GBF comme générateur basse fréquence en TP) en pratique, on règle la tension qu’il doit délivrer. Cela revient à régler la fem de la source étudiée précédemment. Néanmoins, dans une source réelle, l’intensité demandée occasionne une chute de tension qu’on <strong>modélise</strong> par une résistance en série avec la fem (modèle de Thévenin). Cette résistance est appelée <strong>résistance de sortie</strong> du générateur.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Résistance de sortie d’un générateur, d’une source</strong>
+Lorsqu’on utilise un générateur (GBF comme générateur basse fréquence en TP) en pratique, on règle la tension qu’il doit délivrer. Cela revient à régler la fem de la source étudiée précédemment. Néanmoins, dans une source réelle, l’intensité demandée occasionne une chute de tension qu’on <strong>modélise</strong> par une résistance en série avec la fem (modèle de Thévenin). Cette résistance est appelée <strong>résistance de sortie</strong> du générateur.</p>
 </div>
 <p><strong>Influence de la résistance d’entrée et de sortie</strong><br />
 Comme tout dipôle électrique, la résistance d’entrée d’un voltmètre ou d’un oscilloscope et la résistance de sortie d’un générateur influe sur le reste du circuit. Nous allons voir dans l’exercice à venir quelle propriété doit avoir une résistance de sortie ou une résistance d’entrée pour perturber le circuit le moins possible.</p>
@@ -696,8 +700,9 @@ Comme tout dipôle électrique, la résistance d’entrée d’un voltmètre ou 
 <img alt="../_images/elec_gbf_re.png" src="../_images/elec_gbf_re.png" />
 </div>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Attention : C’est une modélisation</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>C’est une modélisation</strong></p>
 <p>On rappelle que la constitution réelle d’un générateur et d’un oscilloscope est bien plus complexe que ne laisse penser sa modélisation. Il s’agit simplement ici de proposer un schéma électrique __simple __correspondant au comportement intensité-tension du dipôle.</p>
 <p>Autrement dit, vu du reste du circuit, le dipôle se comporte comme…</p>
 </div>
@@ -750,8 +755,9 @@ Correction<div class="summary-down docutils">
 R et <span class="math notranslate nohighlight">\(R_S\)</span> sont en série, elles forment un pont diviseur de tension dont la tension aux bornes est E. Il vient que : <span class="math notranslate nohighlight">\(\boxed{u_R = \frac{R}{R + R_S} E}\)</span></p>
 <p class="card-text"><strong>Q2.</strong><br />
 Il faut que <span class="math notranslate nohighlight">\(\frac{R}{R+R_S} \approx 1\)</span> soit <span class="math notranslate nohighlight">\(\boxed{R_S &lt;&lt; R}\)</span></p>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Choix de la résistance de sortie</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p class="card-text"><strong>Fondamental : Choix de la résistance de sortie</strong></p>
 <p class="card-text">Pour qu’un GBF influe peu sur le circuit, il faut que sa résistance de sortie soit très faible devant les résistances du circuit.</p>
 <p class="card-text">Si cette condition n’est pas réalisée, la tension à la sortie du GBF ne sera pas la tension réglée (sa fem) mais elle sera plus faible.</p>
 </div>
@@ -778,12 +784,14 @@ Correction<div class="summary-down docutils">
 On a deux résistances en parallèle donc : <span class="math notranslate nohighlight">\(\boxed{R_{eq} = \frac{R R_e}{R_e + R}}\)</span></p>
 <p class="card-text"><strong>Q2.</strong><br />
 On veut <span class="math notranslate nohighlight">\(\frac{R_e}{R_e+R} \approx 1\)</span> soit <span class="math notranslate nohighlight">\(\boxed{R_e &gt;&gt; R}\)</span>.</p>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Choix de la résistance d’entrée</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p class="card-text"><strong>Fondamental : Choix de la résistance d’entrée</strong></p>
 <p class="card-text">Pour qu’un voltmètre influe peu sur un circuit, il faut que son impédance d’entrée soit grande devant les impédances du circuit.</p>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Attention : Cas d’un ampèremètre</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p class="card-text"><strong>Cas d’un ampèremètre</strong></p>
 <p class="card-text">Pour un ampèremètre, la résistance d’entrée doit au contraire être très faible.</p>
 </div>
 <p class="card-text"><strong>Q3.</strong><br />

@@ -17,15 +17,13 @@ kernelspec:
 
 ## Bande passante et fréquence de coupure
 
-````{admonition} Définition : Bande passante
-:class: tip
+````{important} __Définition : Bande passante__
 
 La __bande passante__ d'un filtre est l'intervalle de fréquence pour lesquelles le gain réel est supérieur au gain maximal divisé par $\sqrt{2}$.
 
 ````
 
-````{admonition} Définition : Fréquence de coupure
-:class: tip
+````{important} __Définition : Fréquence de coupure__
 
 Les __fréquences de coupure__ sont les fréquences telles que le gain réel soit égal au gain maximal divisé par $\sqrt{2}$.
 
@@ -39,8 +37,7 @@ En général, on choisit la bande passante comme la bande de fréquence qu'on d�
 
 ### Comportement dérivateur
 
-````{admonition} Fondamental : Comportement dérivateur
-:class: important
+````{important} __Fondamental : Comportement dérivateur__
 
 Un système dérivateur est un système dont la relation temporelle s'écrit $s(t) = \frac{K}{\omega_0}\frac{\rm{d}e}{\rm{dt}}(t)$. La fonction de transfert d'un tel système s'écrit: $\underline{H} = jK \frac{\omega}{\omega_0}$.
 
@@ -55,8 +52,7 @@ Considérons un filtre dont la fonction de transfert est $\underline{H} = \frac{
 
 ````
 
-````{admonition} Fondamental : Asymptote sur un diagramme de Bode
-:class: important
+````{important} __Fondamental : Asymptote sur un diagramme de Bode__
 
 Un comportement pseudo dérivateur se traduit sur un diagramme de Bode par une asymptote oblique de pente $+20 \rm{dB/decade}$
 
@@ -74,8 +70,7 @@ On pourra généraliser cette étude à une double dérivation et lui associer u
 
 ### Comportement intégrateur
 
-````{admonition} Fondamental : Comportement intégrateur
-:class: important
+````{important} __Fondamental : Comportement intégrateur__
 
 Un système intégrateur est un système dont la relation temporelle s'écrit $s(t) = K \omega_0 \int e(t)$. La fonction de transfert d'un tel système s'écrit: $\underline{H} = \frac{K}{j \omega / \omega_0}$.
 
@@ -90,8 +85,7 @@ Considérons un filtre dont la fonction de transfert est $\underline{H} = \frac{
 
 ````
 
-````{admonition} Fondamental : Asymptote sur un diagramme de Bode
-:class: important
+````{important} __Fondamental : Asymptote sur un diagramme de Bode__
 
 Un comportement pseudo intégrateur se traduit sur un diagramme de Bode par une asymptote oblique de pente $-20 \rm{dB/decade}$
 

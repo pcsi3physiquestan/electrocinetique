@@ -59,8 +59,7 @@ Certains systèmes peuvent avoir des effets de filtrages non désirés ou nature
 
 ## Caractéristiques générales d'un filtre
 
-````{admonition} Définition : Gain réel, argument et gain en décibel
-:class: tip
+````{important} __Définition : Gain réel, argument et gain en décibel__
 
 Les caractéristiques d'un filtre sont:
 
@@ -91,8 +90,7 @@ Il faut noter que si dans les conditions d'utilisation l'intensité en sortie n'
 Les filtres sont de différents types suivant leur finalité. Nous ne présentons ici que les types de filtres les plus utilisés (et ceux que vous devez connaître). __Dans le cadre du programme__, on peut associer à chaque type de filtre des comportements haute et basse fréquence précis. C'est en étudiant ces comportements qu'on déterminera le type de filtre.
 
 
-````{admonition} Fondamental : Types de filtres
-:class: important
+````{important} __Fondamental : Types de filtres__
 
 * les filtres dit passe-bas: leur but est de laisser passer les basses fréquences et de couper les hautes fréquences. Normalement, on utilise ces filtres pour laisser passer une gamme de fréquence jusqu'à une fréquence voulue (qu'on appellera fréquence de coupure) et couper les fréquence plus rapides.
 
@@ -139,8 +137,7 @@ Le problème est qu'on ne peut en pratique réaliser de tels filtres (d'où le n
 
 ## Diagramme de Bode
 
-````{admonition} Définition : Diagramme de Bode
-:class: tip
+````{important} __Définition : Diagramme de Bode__
 
 Le diagramme de Bode est la représentation graphique utilisée pour les filtres linéaires. Il consiste à représenter le gain en décibel et la phase du filtre en fonction de $\log(\omega)$.
 

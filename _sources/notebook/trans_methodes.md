@@ -145,8 +145,9 @@ __On peut retrouver un régime forcé indépendant du temps en cherchant une sol
 Soit en cherchant $u_C(t) = U_0$ l'équation $0 + 0 + \frac{1}{LC} U_0 = 0$. On trouve bien la bonne expression: l'équation est cohérente.
 ````
 
-````{admonition} Attention : Erreurs de calculs
-:class: note
+````{attention}
+__Erreurs de calculs__
+
 
 Il y a de nombreuses erreurs de calculs possibles qu'on retrouve fréquemment dans ce genre d'étude. Citons notamment le fait de ne pas annuler la dérivée de E (qui est une constante).
 
@@ -375,8 +376,7 @@ Il faut noter que dans le cas de circuit électrique, le temps caractéristique 
 Pour résoudre ce problème, on va utiliser des grandeurs dont on sait qu'elle sont par propriété continues.
 
 
-````{admonition} Fondamental : Grandeurs nécessairement continues
-:class: important
+````{important} __Fondamental : Grandeurs nécessairement continues__
 
 * La __tension aux bornes d'un condensateur__ est une grandeur nécessairement continue.
 * __L'intensité qui circule dans une bobine__ est une grandeur nécessairement continue.
@@ -436,8 +436,9 @@ L'étude de l'ancien régime permanent donne $u_C(t=0^-) = 0$ (la bobine assimil
 Ces grandeurs étant continues, il vient $\boxed{i_l(t=0^+)= 0}$ et $\boxed{u_C(t=0^+) = 0}$
 
 
-```{admonition} Attention : Lien entre grandeurs étudiés et grandeurs continues
-:class: note
+```{attention}
+__Lien entre grandeurs étudiés et grandeurs continues__
+
 
 IL N'Y EN A AUCUN... 
 
@@ -467,8 +468,9 @@ On peut de plus écrire une loi des mailles $E - R i_e + R i_r = 0$ soit $i_e = 
 Il vient: $\frac{\rm{d}u_C}{\rm{dt}}(t=0^+) = - \frac{E}{RC}$
 
 
-```{admonition} Attention : Etude à un instant
-:class: note
+```{attention}
+__Etude à un instant__
+
 
 __On ne peut pas utiliser les relations des bobines et condensateurs car ces relations font intervenir des dérivées.__ Or on étudie le circuit en un point, pas sur une durée. On n'a pas d'information sur la fonction $u_C$, uniquement se son image en t=0.
 
@@ -637,8 +639,9 @@ u_{L} (t) &= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\sqrt{
 S'entraîner comme précédemment à vérifier l'homogénéité du résultat et les informations physiques qu'on attend.
 ```
 
-```{admonition} Attention : Erreur fréquentes
-:class: note
+```{attention}
+__Erreur fréquentes__
+
 
 L'erreur fréquentes que les élèves font est de chercher les constantes d'intégration AVANT la solution particulière. C'est faux (ici on trouvera $i_l(t) =0$ ce qui est évidemment incohérent).
 

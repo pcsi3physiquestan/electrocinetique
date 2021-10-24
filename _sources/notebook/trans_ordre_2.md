@@ -42,8 +42,7 @@ u_C(t=0) &= 0
 
 ### Système d'ordre 2: Forme canonique
 
-````{admonition} Fondamental : Forme canonique des systèmes d'ordre 2
-:class: important
+````{important} __Fondamental : Forme canonique des systèmes d'ordre 2__
 
 L'équation différentielle qui régit l'évolution d'un système d'ordre 2 peut se mettre une des formes suivantes:
 
@@ -84,8 +83,7 @@ Il est aussi conseillé de vérifier l'homogénéité des résultats et leur coh
 
 ### Système d'ordre 2: type de régime
 
-````{admonition} Fondamental : Type de régimes
-:class: important
+````{important} __Fondamental : Type de régimes__
 
 La forme mathématique correspondant à la solution dépend de la valeur du facteur de qualité Q (ou du coefficient d'amortissement $\xi$) car ce dernier influe sur la valeur du discriminant de l'équation caractéristique $\Delta$. A chaque expression différente correspond un type de régime:
 |  | $\Delta$ | Q | $\xi$ | Forme ESSM |
@@ -306,8 +304,9 @@ Pour représenter X(t), il faut d'abord représenter son __enveloppe exponentiel
 ```
 
 
-````{admonition} Attention : Pseudo-période et période propre
-:class: note
+````{attention}
+__Pseudo-période et période propre__
+
 
 Il ne faut pas confondre la pseudo-période qu'on peut obtenir d'un tracé temporel et qui est reliée à la pseudo-pulsation et la période propre, reliée à la pulsation propre et qui n'apparaît pas directement dans les tracés temporel.
 
@@ -333,8 +332,7 @@ Dans le cas d'un régime pseudo-périodique, l'amplitude du pseudo-sinusoïde d�
 Comme cette décroissance est exponentielle, nous allons utiliser un indicateur particulier pour quantifier l'amortissement.
 
 
-````{admonition} Définition : Décrément logarithmique.
-:class: tip
+````{important} __Définition : Décrément logarithmique.__
 
 Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique $\delta$ par:
 
@@ -349,8 +347,7 @@ On calcule l'écart à la valeur finale à deux instants t et t+T (ce second éc
 Le fait que la décroissance soit exponentielle explique que l'on prenne le logarithmique du rapport. Nous allons voir que cela simplifie l'expression.
 ````
 
-````{admonition} Fondamental : Relation entre le décrément logarithmique et le facteur de qualité
-:class: important
+````{important} __Fondamental : Relation entre le décrément logarithmique et le facteur de qualité__
 
 On peut montrer que:
 
@@ -390,8 +387,9 @@ On peut analyser l'expression précédente en remarquant que plus Q augmente, pl
 ```
 ````
 
-````{admonition} Attention : Portée de l'étude précédente
-:class: note
+````{attention}
+__Portée de l'étude précédente__
+
 
 Tout ce qui est établi ici (définition du décrément logarithmique, son expression en fonction de Q, sens à donner à Q) n'est vrai que __si le régime est un régime pseudo-périodique.__. Sinon, on ne peut pas faire une telle analyse (on ne peut d'ailleurs pas définit de pseudo-période.
 

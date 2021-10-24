@@ -15,8 +15,7 @@ kernelspec:
 ---
 # Régime sinusoïdal forcé
 
-````{admonition} Fondamental : Régime sinusoïdal forcé
-:class: important
+````{important} __Fondamental : Régime sinusoïdal forcé__
 
 Lorsqu'un circuit __linéaire stable__ est soumis __à une excitation sinusoïdale__, le régime transitoire s'atténue au bout d'un temps et il s'établit un régime forcé appelé régime sinusoïdal forcé. Toutes les grandeurs variables du circuit __ont alors la forme mathématique d'un sinusoïde de même pulsation que l'excitation.__
 

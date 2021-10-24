@@ -17,8 +17,7 @@ kernelspec:
 
 ## Filtre passe-bas d'ordre 1
 
-````{admonition} Fondamental : Forme canonique
-:class: important
+````{important} __Fondamental : Forme canonique__
 
 Un filtre passe bas d'ordre 1 peut se mettre sous la forme:
 
@@ -59,8 +58,7 @@ On retrouve les caractéristiques précédentes sur le diagramme de Bode.
 
 ## Filtre passe-haut d'ordre 1
 
-````{admonition} Fondamental : Forme canonique
-:class: important
+````{important} __Fondamental : Forme canonique__
 
 Un filtre passe haut d'ordre 1 peut se mettre sous la forme:
 
@@ -101,8 +99,7 @@ On retrouve les caractéristiques précédentes sur le diagramme de Bode.
 
 ## Filtre passe-bas d'ordre 2
 
-````{admonition} Fondamental : Forme canonique
-:class: important
+````{important} __Fondamental : Forme canonique__
 
 Un filtre passe bas d'ordre 2 peut se mettre sous la forme:
 
@@ -141,8 +138,7 @@ On retrouve les caractéristiques précédentes sur le diagramme de Bode. Plusie
 
 ## Filtre passe-haut d'ordre 2
 
-````{admonition} Fondamental : Forme canonique
-:class: important
+````{important} __Fondamental : Forme canonique__
 
 Un filtre passe haut d'ordre 2 peut se mettre sous la forme:
 
@@ -181,8 +177,7 @@ On retrouve les caractéristiques précédentes sur le diagramme de Bode. Plusie
 
 ## Filtre passe-bande d'ordre 2
 
-````{admonition} Fondamental : Forme canonique
-:class: important
+````{important} __Fondamental : Forme canonique__
 
 Un filtre passe bande d'ordre 2 peut se mettre sous la forme:
 
@@ -224,8 +219,7 @@ On retrouve les caractéristiques précédentes sur le diagramme de Bode. Plusie
 
 ## Filtre coupe-bande d'ordre 2
 
-````{admonition} Fondamental : Forme canonique
-:class: important
+````{important} __Fondamental : Forme canonique__
 
 Un filtre coupe bande d'ordre 2 peut se mettre sous la forme:
 

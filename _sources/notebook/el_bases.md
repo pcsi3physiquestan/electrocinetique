@@ -16,7 +16,7 @@ kernelspec:
 # Bases de l'électrocinétique
 
 ````{admonition} Objectifs
-:class: hint
+:class: tip
 * Savoir que la charge est quantifiée.
 * Exprimer l'intensité du courant électrique en termes de débit de charges
 * Exprimer la condition d'ARQS en fonction de la taille du circuit et de la fréquence

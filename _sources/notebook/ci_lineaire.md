@@ -16,7 +16,7 @@ kernelspec:
 # Dipôles et circuits linéaires
 
 ````{admonition} Objectifs
-:class: hint
+:class: tip
 * Étudier la caractéristique statique d'un dipôle pouvant être non linéaire.
 * Utiliser les relations entre l'intensité et la tension
 * Connaître les relations intensité-tension dans les cas usuels (résistance, bobine, condensateur, source)

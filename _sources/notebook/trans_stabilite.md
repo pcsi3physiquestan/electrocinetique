@@ -22,15 +22,15 @@ __Stabilité des circuits__
 Comme nous l'avons évoqué précédemment, le régime forcé n'est atteint que si le système est stable, c'est-à-dire si le régime transitoire finit par disparaître.
 
 
-````{admonition} Fondamental : Condition de stabilité des systèmes linéaires d'ordre 1 et 2
-:class: important
+````{important} __Fondamental : Condition de stabilité des systèmes linéaires d'ordre 1 et 2__
 
 Un système linéaire d'ordre 1 ou 2 est stable si et seulement si les coefficients de __l'équation homogène__ sont tous de même signe.
 
 ````
 
-````{admonition} Attention : Précaution sur cette propriété
-:class: note
+````{attention}
+__Précaution sur cette propriété__
+
 
 Cette propriété n'est valable que pour __des systèmes linéaires d'ordre 1 et 2__. Pour des ordres supérieurs ou pour des systèmes non linéaires, on ne peut conclure.
 

@@ -520,12 +520,14 @@
 <h1>Caractéristiques générales<a class="headerlink" href="#caracteristiques-generales" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="bande-passante-et-frequence-de-coupure">
 <h2>Bande passante et fréquence de coupure<a class="headerlink" href="#bande-passante-et-frequence-de-coupure" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Bande passante</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Bande passante</strong></p>
 <p>La <strong>bande passante</strong> d’un filtre est l’intervalle de fréquence pour lesquelles le gain réel est supérieur au gain maximal divisé par <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Fréquence de coupure</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Fréquence de coupure</strong></p>
 <p>Les <strong>fréquences de coupure</strong> sont les fréquences telles que le gain réel soit égal au gain maximal divisé par <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
 </div>
 <p>En général, on choisit la bande passante comme la bande de fréquence qu’on désire conserver (ou pour fixer la bande filtrée). Mais les filtres n’est pas idéal (la chute du gain n’est pas brutal à la fréquence de coupure), il est souvent nécessaire de garder une marge.</p>
@@ -534,8 +536,9 @@
 <h2>Caractère pseudo-dérivateur et pseudo-intégrateur<a class="headerlink" href="#caractere-pseudo-derivateur-et-pseudo-integrateur" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="comportement-derivateur">
 <h3>Comportement dérivateur<a class="headerlink" href="#comportement-derivateur" title="Permalink to this headline">¶</a></h3>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Comportement dérivateur</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Comportement dérivateur</strong></p>
 <p>Un système dérivateur est un système dont la relation temporelle s’écrit <span class="math notranslate nohighlight">\(s(t) = \frac{K}{\omega_0}\frac{\rm{d}e}{\rm{dt}}(t)\)</span>. La fonction de transfert d’un tel système s’écrit: <span class="math notranslate nohighlight">\(\underline{H} = jK \frac{\omega}{\omega_0}\)</span>.</p>
 <p>En pratique, on ne peut réaliser un dérivateur pur stable (à cause des hautes fréquences). On réalise donc un circuit possèdant un <strong>comportement dérivateur</strong>, c’est-à-dire que la fonction de transfert sera égale (approximativement)à celle d’un dérivateur sur une gamme de fréquence (<strong>les basses fréquences</strong>). On parle de <strong>pseudo-dérivateur</strong>.</p>
 </div>
@@ -543,8 +546,9 @@
 <p class="admonition-title">Exercice Exemple de filtre pseudo-dérivateur</p>
 <p>Considérons un filtre dont la fonction de transfert est <span class="math notranslate nohighlight">\(\underline{H} = \frac{j \frac{\omega}{\omega_0}}{1 + j \frac{\omega}{\omega_0}}\)</span>. A basse fréquence (<span class="math notranslate nohighlight">\(\omega \ll \omega_0\)</span>), la fonction de transfert devient <span class="math notranslate nohighlight">\(\underline{H} \approx j \frac{\omega}{\omega_0}\)</span> soit une relation temporelle de type dérivateur.</p>
 </div>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Asymptote sur un diagramme de Bode</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Asymptote sur un diagramme de Bode</strong></p>
 <p>Un comportement pseudo dérivateur se traduit sur un diagramme de Bode par une asymptote oblique de pente <span class="math notranslate nohighlight">\(+20 \rm{dB/decade}\)</span></p>
 </div>
 <p><strong>Démonstration</strong><br />
@@ -554,8 +558,9 @@ On pourra généraliser cette étude à une double dérivation et lui associer u
 </div>
 <div class="section" id="comportement-integrateur">
 <h3>Comportement intégrateur<a class="headerlink" href="#comportement-integrateur" title="Permalink to this headline">¶</a></h3>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Comportement intégrateur</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Comportement intégrateur</strong></p>
 <p>Un système intégrateur est un système dont la relation temporelle s’écrit <span class="math notranslate nohighlight">\(s(t) = K \omega_0 \int e(t)\)</span>. La fonction de transfert d’un tel système s’écrit: <span class="math notranslate nohighlight">\(\underline{H} = \frac{K}{j \omega / \omega_0}\)</span>.</p>
 <p>En pratique, on ne peut réaliser un intégrateur pur stable (à cause des basses fréquences). On réalise donc un circuit possèdant un <strong>comportement intégrateur</strong>, c’est-à-dire que la fonction de transfert sera égale (approximativement)à celle d’un intégrateur sur une gamme de fréquence (les hautes fréquences). On parle de <strong>pseudo-intégrateur</strong>.</p>
 </div>
@@ -563,8 +568,9 @@ On pourra généraliser cette étude à une double dérivation et lui associer u
 <p class="admonition-title">Exercice Exemple de filtre pseudo-intégrateur</p>
 <p>Considérons un filtre dont la fonction de transfert est <span class="math notranslate nohighlight">\(\underline{H} = \frac{1}{1 + j \frac{\omega}{\omega_0}}\)</span>. A haute fréquence (<span class="math notranslate nohighlight">\(\omega \gg \omega_0\)</span>), la fonction de transfert devient <span class="math notranslate nohighlight">\(\underline{H} \approx \frac{1}{j \frac{\omega}{\omega_0}}\)</span> soit une relation temporelle de type intégrateur.</p>
 </div>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Asymptote sur un diagramme de Bode</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Asymptote sur un diagramme de Bode</strong></p>
 <p>Un comportement pseudo intégrateur se traduit sur un diagramme de Bode par une asymptote oblique de pente <span class="math notranslate nohighlight">\(-20 \rm{dB/decade}\)</span></p>
 </div>
 <p><strong>Démonstration</strong><br />

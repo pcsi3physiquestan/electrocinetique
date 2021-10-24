@@ -31,8 +31,7 @@ Un système est dit __stable__ si les grandeurs du système ne divergent pas lor
 Un système instable tend à saturer ou à se détériorer. Nous supposerons ici que nos systèmes sont toujours stables et nous verrons par la suite des méthodes pour vérifier la stabilité d'un système.
 
 
-````{admonition} Définition : Régime forcé
-:class: tip
+````{important} __Définition : Régime forcé__
 
 Lorsqu'un système __stable__ est soumis à  une grandeur d'entrée, les grandeurs du systèmes vont tendre vers un état dépendant:
 
@@ -52,8 +51,7 @@ Si la grandeur d'entrée est une tension sinusoïdale, alors toutes les grandeur
 
 ````
 
-````{admonition} Définition : Régime transitoire
-:class: tip
+````{important} __Définition : Régime transitoire__
 
 Lorsque la grandeur d'entrée varie brusquement pour passer d'une forme à une autre, le système (ses grandeurs) va évoluer durant un temps fini (non nul) pour tendre (s'il est stable) vers un nouveau régime forcé par la nouvelle grandeur d'entrée.
 
@@ -87,8 +85,7 @@ Dans ce régime, toutes les grandeurs ne varient plus au cours du temps.
 
 ### Condensateur et bobine en régime indépendant du temps
 
-````{admonition} Fondamental : Condensateur en régime indépendant du temps
-:class: important
+````{important} __Fondamental : Condensateur en régime indépendant du temps__
 
 
 ```{figure} ./images/elec_c_equiv.png
@@ -114,8 +111,7 @@ i = C \frac{\rm{d}u}{\rm{dt}} = 0
 L'intensité étant toujours nulle, le dipôle est assimilable à un interrupteur ouvert.
 
 
-````{admonition} Fondamental : Bobine en régime indépendant du temps
-:class: important
+````{important} __Fondamental : Bobine en régime indépendant du temps__
 
 
 ```{figure} ./images/elec_l_equiv.png
@@ -188,8 +184,9 @@ On a donc $i_r + i_l = 0$ et $R i_r - R i_l = 0$ soit $i_l = i_r = 0$
 Remarquons que seules deux tensions sont non nulles: la tension de la source (E) et la tension aux bornes de l'interrupteur de gauche (E ou -E suivant l'orientation).
 
 
-```{admonition} Attention : Tension aux bornes d'un condensateur
-:class: note
+```{attention}
+__Tension aux bornes d'un condensateur__
+
 
 Profitons de cette remarque pour signaler que la __tension aux bornes d'un interrupteur ouvert n'est a priori pas nulle.__
 
@@ -274,8 +271,9 @@ Très souvent les échelons étudiés correspondent à un passage de 0 à E.
 
 
 
-````{admonition} Attention : Discontinuité
-:class: note
+````{attention}
+__Discontinuité__
+
 
 Un échelon de tension introduit une discontinuité à un instant t ($t=0$ ou $t=t_0$ plus généralement). __Celà signifie qu'en ce point, les grandeurs physiques ne sont plus nécessairement continues.__
 
@@ -436,8 +434,7 @@ e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left
 Pour 95\%, on trouve $t = 3 \tau$ etpour 99\%, on trouve $t = 5 \tau$.
 
 
-````{admonition} Fondamental : 2. Temps caractéristique d'une exponentielle décroissante
-:class: important
+````{important} __Fondamental : 2. Temps caractéristique d'une exponentielle décroissante__
 
 On voit que le temps caractéristique est toujours de l'ordre de $\tau$. __Lorsqu'on est en présence d'une exponentielle décroissante de la forme __$\exp(-t/\tau$__, on prendra comme temps caractéristique : __$\tau$__. C'est pour des temps grands devant $\tau$ que l'argument de l'exponentielle devient proche de $-\infty$ et donc que l'exponentielle devient proche de 0.
 
@@ -511,8 +508,7 @@ Nous avons jusqu'à présent étudier les évolutions graphiquement au moyen des
 
 ### Portrait de phase
 
-````{admonition} Définition : Portrait de phase
-:class: tip
+````{important} __Définition : Portrait de phase__
 
 
 ```{figure} ./images/elec_portrait_phase_generalite.png

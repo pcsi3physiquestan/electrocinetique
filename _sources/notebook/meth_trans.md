@@ -46,8 +46,7 @@ On considère le circuit suivant (la bobine est idéale). A $t=0$, le condensate
 ````
 
 ````{dropdown} Correction
-```{admonition} Fondamental : Equation d'un oscillateur harmonique
-:class: important
+```{important} __Fondamental : Equation d'un oscillateur harmonique__
 
 Un oscillateur harmonique est un système dont les grandeurs suivent une équation d'évolution sous la forme:
 
@@ -58,8 +57,7 @@ $\omega_0$ est appelée la __pulsation propre__ de l'oscillateur.
 
 ```
 
-```{admonition} Fondamental : Evolution temporelle
-:class: important
+```{important} __Fondamental : Evolution temporelle__
 
 Un oscillateur harmonique est une oscillateur non amorti sinusoïdal: sans excitation extérieure (solution de l'équation homogène), ses grandeurs ont une évolution temporelle décrite par __un sinusoïde qui ne s'atténue pas__. La pulsation des oscillations est la pulsation propre.
 
@@ -72,8 +70,7 @@ Attention: s'il y a un second membre, il faut lui rajouter la solution particuli
 
 ```
 
-```{admonition} Fondamental : Etude énergétique
-:class: important
+```{important} __Fondamental : Etude énergétique__
 
 Un oscillateur harmonique est en général constitué de __deux réservoirs d'énergie qui s'échange l'énergie__ de manière périodique.
 

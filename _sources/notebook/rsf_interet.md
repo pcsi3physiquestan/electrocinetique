@@ -31,8 +31,7 @@ Considérons l'équation différentielle $y' + y = t + t^2$. On peut montrer que
 Il vient que la fonction $(t^2 - 2t + 2) + (t-1) = t^2 - t + 1$ est solution de l'équation différentielle $y' + y = t + t^2$.
 
 
-````{admonition} Fondamental : Intérêt en physique
-:class: important
+````{important} __Fondamental : Intérêt en physique__
 
 L'intérêt en physique est qu'on va pouvoir étudier la réponse __forcée__ d'un système __linéaire__ (on rappelle qu'il s'agit d'une solution particulière de l'équation avec second membre) à des entrées simples puis déduire son comportement pour des réponses plus complexes. Et comme on va le voir, on va pouvoir ramener l'étude d'un système physique __linéaire__ à l'étude de sa réponse à une entrée sinusoïdale, on parlera d'étude __fréquentielle.__
 
@@ -42,8 +41,7 @@ L'intérêt en physique est qu'on va pouvoir étudier la réponse __forcée__ d'
 
 On rappelle que l'on peut décomposer un signal $s(t)$ comme une somme de signaux sinusoïdaux de fréquences différentes. Si l'on a principalement traité le cas de décomposition discrète, on peut rappeler que l'on peut décomposer un signal comme une somme continue de fréquence.
 
-````{admonition} Fondamental : Etude fréquentielle.
-:class: important
+````{important} __Fondamental : Etude fréquentielle.__
 
 Si l'on étudie la réponse __forcée__ d'un signal sinusoïdal de fréquence quelconque f et d'amplitude quelconque u pour un système __linéaire__, on peut déterminer la réponse __forcée__ du système à tout signal.
 
@@ -135,8 +133,7 @@ On présente ici la méthode générale d'étude donnée précédemment. Il rest
 
 ## Linéarité et spectre
 
-````{admonition} Fondamental : Linéarité et spectre
-:class: important
+````{important} __Fondamental : Linéarité et spectre__
 
 Un système linéaire ne peut ajouter de composante spectrale à un signal, c'est-à-dire que les composantes spectrales d'un signal en sortie d'un système linéaire sont forcément celle du signal d'entrée.
 

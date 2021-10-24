@@ -57,8 +57,7 @@ Pour le circuit de sortie, la fem équivalente est $\frac{\underline{e}}{1 + j R
 
 ## Mise en cascade des filtre et impédances
 
-````{admonition} Fondamental : Mise en cascade
-:class: important
+````{important} __Fondamental : Mise en cascade__
 
 Deux filtres mis en cascade auront des comportement indépendants si __l'impédance de sortie du premier est très faible devant l'impédance d'entrée du second.__
 

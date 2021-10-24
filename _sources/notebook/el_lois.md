@@ -19,8 +19,7 @@ kernelspec:
 
 ### Lois de mailles
 
-````{admonition} Fondamental : 
-:class: important
+````{important} __Fondamental : __
 
 La somme des tensions d'une maille est nulle en orientant les tensions dans le même sens.
 
@@ -48,8 +47,7 @@ $U_{AD} + U_{DB} + U_{BE} + U_{EA} = 0$
 
 ### Loi des noeuds
 
-````{admonition} Fondamental : 
-:class: important
+````{important} __Fondamental : __
 
 L'ensemble des courants entrant dans un noeud est égale à l'ensemble des courant sortant du même noeud.
 
@@ -106,8 +104,7 @@ Si l'on compte N le nombre de noeuds, alors on ne peut alors établir plus de N-
 Ici on peut réaliser deux mailles qui ne "coupent" pas de fils (D1+D2+D3) et (D3+D4), c'est le nombre de lois des mailles indépendantes qu'on peut écrire. Ici il n'y en a deux.
 
 
-```{admonition} Attention : 
-:class: note
+```{attention}
 
 Ce n'est pas parce qu'on peut écrire 3 lois de Kirchhoff indépendantes que les trois seront utiles. Le principe est toujours le même : il faut autant d'équations que d'inconnues pour résoudre un système.
 
@@ -251,8 +248,7 @@ Une telle étude demande:
 
 ### Convention générateur et récepteur pour un dipôle
 
-````{admonition} Définition : Convention générateur
-:class: tip
+````{important} __Définition : Convention générateur__
 
 Pour un dipôle D, si l'on oriente l'intensité $I_1$ qui le traverse et la tension $U_1$ à ses bornes dans le même sens, on dit qu'il est orienté __en convention générateur.__
 
@@ -263,8 +259,7 @@ Pour un dipôle D, si l'on oriente l'intensité $I_1$ qui le traverse et la tens
 ```
 ````
 
-````{admonition} Définition : Convention récepteur
-:class: tip
+````{important} __Définition : Convention récepteur__
 Pour un dipôle D, si l'on oriente l'intensité $I_1$ qui le traverse et la tension $U_1$ à ses bornes en sens contraire, on dit qu'il est orienté __en convention récepteur.__
 
 
@@ -274,8 +269,9 @@ Pour un dipôle D, si l'on oriente l'intensité $I_1$ qui le traverse et la tens
 ```
 ````
 
-````{admonition} Attention : Il s'agit d'une convention !
-:class: note
+````{attention}
+__Il s'agit d'une convention !__
+
 
 Il s'agit d'une convention (très mal nommée!), c'est-à-dire qu'on définit arbitrairement l'orientation du dipôle __peu importe qu'il soit réellement un récepteur ou un générateur__. D'ailleurs, nous rencontrerons des dipôles qui se comporteront alternativement comme des générateurs et des récepteurs (source de tension, condensateur, bobine).
 
@@ -287,8 +283,7 @@ D'ailleurs, on rappelle que les intensités et les tensions sont des grandeurs _
 
 ### Puissance échangée entre un dipôle et le reste du circuit
 
-````{admonition} Fondamental : Puissance instantanée échangée entre un dipôle et le reste du circuit
-:class: important
+````{important} __Fondamental : Puissance instantanée échangée entre un dipôle et le reste du circuit__
 
 La puissance instantanée échangée entre un dipôle et le reste du circuit a pour expression :
 
@@ -336,8 +331,9 @@ __En convention générateur__, l'énergie perdue est toujours $E_1 = q (V_A - V
 
 
 
-````{admonition} Attention : Caractère algébrique de la puissance échangée
-:class: note
+````{attention}
+__Caractère algébrique de la puissance échangée__
+
 
 La puissance échangée, comme toutes les grandeurs en électricité est algébrique. Ainsi, on peut se placer
 

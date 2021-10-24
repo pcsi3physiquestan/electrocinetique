@@ -76,8 +76,7 @@ __Vérification du résultat__
 
 ## Pont diviseur de tension
 
-````{admonition} Fondamental : Pont diviseur de tension
-:class: important
+````{important} __Fondamental : Pont diviseur de tension__
 
 Considérons N résistances en série dont les résistances sont $\{R_i \vert i \in [\![1;n]\!]\}$ aux bornes de laquelle la tension est u.
 
@@ -106,8 +105,7 @@ De $u_k = R_k i$, on obtient l'expression de la tension.
 ````
 
 ## Pont diviseur de courant
-````{admonition} Fondamental : Pont diviseur de courant
-:class: important
+````{important} __Fondamental : Pont diviseur de courant__
 Considérons N résistances en parallèle dont les conductances sont $\{G_i \vert i \in [\![1;n]\!]\}$ dans laquelle entre une intensité totale i.
 
 ```{figure} ./images/elec_resistance_parallele.png
@@ -199,14 +197,12 @@ Le pont est donc équilibré quand :
 ````
 
 ## Modélisation des appareils complexes : Résistance d'entrée et résistance de sortie
-````{admonition} Fondamental : Résistance d'entrée d'un instrument de mesure
-:class: important
+````{important} __Fondamental : Résistance d'entrée d'un instrument de mesure__
 Un instrument de mesure comme un multimètre ou un oscilloscope possède ses propres caractéristiques électriques. Du point de vue du reste du circuit, ce comportement, en régime indépendant du temps, peut-être __modélisé__ par une résistance qu'on appelle __résistance d'entrée de l'appareil.__
 ````
 
 
-````{admonition} Fondamental : Résistance de sortie d'un générateur, d'une source
-:class: important
+````{important} __Fondamental : Résistance de sortie d'un générateur, d'une source__
 Lorsqu'on utilise un générateur (GBF comme générateur basse fréquence en TP) en pratique, on règle la tension qu'il doit délivrer. Cela revient à régler la fem de la source étudiée précédemment. Néanmoins, dans une source réelle, l'intensité demandée occasionne une chute de tension qu'on __modélise__ par une résistance en série avec la fem (modèle de Thévenin). Cette résistance est appelée __résistance de sortie__ du générateur.
 
 ````
@@ -230,8 +226,9 @@ La résistance de sortie d'un GBF est une donnée constructeur. Elle peut être 
 
 ````
 
-````{admonition} Attention : C'est une modélisation
-:class: note
+````{attention}
+__C'est une modélisation__
+
 
 On rappelle que la constitution réelle d'un générateur et d'un oscilloscope est bien plus complexe que ne laisse penser sa modélisation. Il s'agit simplement ici de proposer un schéma électrique __simple __correspondant au comportement intensité-tension du dipôle.
 
@@ -306,8 +303,7 @@ __Q2.__
 Il faut que $\frac{R}{R+R_S} \approx 1$ soit $\boxed{R_S << R}$
 
 
-```{admonition} Fondamental : Choix de la résistance de sortie
-:class: important
+```{important} __Fondamental : Choix de la résistance de sortie__
 
 Pour qu'un GBF influe peu sur le circuit, il faut que sa résistance de sortie soit très faible devant les résistances du circuit.
 
@@ -340,15 +336,15 @@ __Q2.__
 On veut $\frac{R_e}{R_e+R} \approx 1$ soit $\boxed{R_e >> R}$.
 
 
-```{admonition} Fondamental : Choix de la résistance d'entrée
-:class: important
+```{important} __Fondamental : Choix de la résistance d'entrée__
 
 Pour qu'un voltmètre influe peu sur un circuit, il faut que son impédance d'entrée soit grande devant les impédances du circuit.
 
 ```
 
-```{admonition} Attention : Cas d'un ampèremètre
-:class: note
+```{attention}
+__Cas d'un ampèremètre__
+
 
 Pour un ampèremètre, la résistance d'entrée doit au contraire être très faible.
 

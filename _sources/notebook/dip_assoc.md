@@ -32,8 +32,7 @@ Nous verrons aussi des cas d'équivalence à connaître qui peuvent être utilis
 
 ## Résistances en série
 
-````{admonition} Fondamental : Résistance équivalente à deux résistances en série
-:class: important
+````{important} __Fondamental : Résistance équivalente à deux résistances en série__
 Deux résistances $R_1$ et $R_2$ en série sont équivalentes à une seule résistance de valeur $R_{eq} = R_1 + R_2$
 ```{figure} ./images/elec_resistance_serie.png
 :name: fig_118
@@ -54,8 +53,7 @@ N résistances de valeurs $\{R_i \vert i \in [\![1;n]\!]\}$ en série sont équi
 
 ## Résistances en parallèle
 
-````{admonition} Fondamental : Résistance équivalente à deux résistances en parallèle
-:class: important
+````{important} __Fondamental : Résistance équivalente à deux résistances en parallèle__
 
 
 Deux résistances $R_1$ et $R_2$ en parallèle sont équivalentes à une seule résistance de valeur $R_{eq} = \frac{1}{\frac{1}{R_1} + \frac{1}{R_2}}$ (soit de conduction $G_{eq} = G_1 + G_2$)

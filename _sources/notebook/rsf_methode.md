@@ -36,8 +36,7 @@ On définit aussi l'amplitude complexe $\underline{s_m}$ du signal $s(t)$ par la
 \end{equation}
 ````
 
-````{admonition} Fondamental : Relation complexe-réel
-:class: important
+````{important} __Fondamental : Relation complexe-réel__
 
 On a les relations suivantes:
 
@@ -52,8 +51,7 @@ Ces relations sont fondamentales car elles permettent de déduire les caractéri
 
 ### Opérations sur les grandeurs complexes
 
-````{admonition} Fondamental : Combinaison linéaire
-:class: important
+````{important} __Fondamental : Combinaison linéaire__
 
 La représentation complexe de la combinaison linéaire de deux signaux __de même pulsation__ est égale à la même combinaison linéaire des représentations complexes de deux mêmes signaux:
 
@@ -62,8 +60,7 @@ s = \lambda_1 s_1 + \lambda_2 s_2 \Longrightarrow \underline{s} = \lambda_1 \und
 \end{equation}
 ````
 
-````{admonition} Fondamental : Dérivation et intégration
-:class: important
+````{important} __Fondamental : Dérivation et intégration__
 
 La représentation complexe de la dérivée d'un signal sinusoïdal de pulsation $\omega$ est égale à la représentation complexe du même signal sinusoïdal multiplié par $j \omega$:
 
@@ -204,8 +201,7 @@ Elle ne dépend pas du temps mais peut dépendre de la pulsation du circuit.
 
 ````
 
-````{admonition} Définition : Admittance complexe
-:class: tip
+````{important} __Définition : Admittance complexe__
 
 On définit __l'admittance complexe__ comme l'inverse de l'impédance complexe:
 
@@ -229,15 +225,13 @@ Le module de l'impédance complexe est le rapport des amplitudes réelles des de
 
 ````
 
-````{admonition} Attention : 
-:class: note
+````{attention}
 
 On a $\underline{Y} = \frac{1}{\underline{Z}}$ mais a priori $R \neq \frac{1}{G}$ et $X \neq\frac{1}{B}$
 
 ````
 
-````{admonition} Fondamental : Intérêt des impédances
-:class: important
+````{important} __Fondamental : Intérêt des impédances__
 
 L'intérêt des impédances est qu'on peut traiter un circuit électrique en appliquant les lois de Kirchhoff directement avec les représentations complexes (car les lois de Kirchhoff sont linéaires) et en y introduisant des relations intensités-tension sous la forme $\underline{u} = \underline{Z} \underline{i}$.
 
@@ -247,8 +241,7 @@ On pourra de même écrire: la loi des noeuds en terme de potentiels avec les re
 
 ### Impédances des dipôles usuels
 
-````{admonition} Fondamental : Impédances usuelles
-:class: important
+````{important} __Fondamental : Impédances usuelles__
 
 * Cas d'une résistance: $\underline{Z} = R$
 * Cas d'une bobine: $\underline{Z} = j L \omega$
@@ -426,8 +419,7 @@ On peut aussi faire l'inverse et déduire d'une étude des grandeurs complexes, 
 1. Remplacer chaque facteur $(j\omega)^n$ par la dérivée $\frac{\rm{d^n}}{\rm{dt^n}}$
 ````
 
-````{admonition} Attention : 
-:class: note
+````{attention}
 
 Attention aux signes lorsqu'on passe du fréquentiel au temporel. En effet, le signe - pour le monôme de degré 2 vient en de $j^2$ et doit disparaître (cf. exercice).
 
@@ -489,8 +481,7 @@ Il est important de pouvoir analyser le comportement asymptotique d'un système,
 * Analyser directement le circuit en remplçant les condensateurs et bobines par des équivalents haute et basse fréquence. On parle d'étude rapide et l'on va préciser cette méthode.
 
 
-````{admonition} Fondamental : Comportements basse fréquence de C et L
-:class: important
+````{important} __Fondamental : Comportements basse fréquence de C et L__
 
 A basse fréquence, un condensateur se comporte comme un interrupteur ouvert et une bobine comme un fil.
 
@@ -501,8 +492,7 @@ A basse fréquence, un condensateur se comporte comme un interrupteur ouvert et 
 >A haute fréquence, l'impédance du condensateur tend vers l'infini et celle de la bobine tend vers 0.
 
 
-````{admonition} Fondamental : Comportements haute fréquence de C et L
-:class: important
+````{important} __Fondamental : Comportements haute fréquence de C et L__
 
 A haute fréquence, un condensateur se comporte comme un fil ouvert et une bobine comme un interrupteur.
 
@@ -584,8 +574,7 @@ Nous présenterons ici deux formes canoniques qui seront complétées par les fo
 Il faut pouvoir déterminer quelle forme est applicable à la grandeur étudié puis mettre l'expression calculée sous la forme en identifiant les élements caractéristiques (pulsation propre et facteur de qualité). Pour choisir la forme à appliquer, il faut connaître __l'ordre du système__ et __les comportements haute et basse fréquence__.
 
 
-````{admonition} Fondamental : Comportement passe-bas d'ordre 2
-:class: important
+````{important} __Fondamental : Comportement passe-bas d'ordre 2__
 
 Pour une grandeur d'un système d'ordre 2 dont le comportement haute fréquence est nul et le comportement basse fréquence non nul, sa représentation complexe peut se mettre sous la forme:
 
@@ -596,8 +585,7 @@ où $x = \frac{\omega}{\omega_0} $ est appelée pulsation réduite (attention, e
 
 ````
 
-````{admonition} Fondamental : Comportement passe-bande d'ordre 2
-:class: important
+````{important} __Fondamental : Comportement passe-bande d'ordre 2__
 
 Pour une grandeur d'un système d'ordre 2 dont le comportement haute et basse fréquence est nul, sa représentation complexe peut se mettre sous la forme:
 

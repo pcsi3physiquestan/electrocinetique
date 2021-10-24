@@ -16,7 +16,7 @@ kernelspec:
 # Régime transitoire (2): Ordre 1 et 2
 
 ````{admonition} Objectifs
-:class: hint
+:class: tip
 * Ecrire sous forme canonique l'équation différentielle pour un système d'ordre 1 ou 2
 * Déterminer un ordre de grandeur de la durée d'un régime transitoire suivant la typologie du système.
 * Réaliser des bilans énergétiques et des bilans de puissances sur des systèmes d'ordre 1 ou 2.
