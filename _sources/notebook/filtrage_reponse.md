@@ -193,7 +193,7 @@ On trouve $\omega_0 \approx 10^3 \rm{rad.s^{-1}}.$
 
 On trouve une pente de $-40dB/decade$. L'ordonnée pour $\log(\omega) = \log(\omega_0)$ est 6. L'équation de l'asymptote est donc $Asymp(\log(\omega)) = 6 - 40 \log(\omega/\omega_0)$. On peut remarquer que la phase est presque égale à $-\pi$. On peut donc considérer que la fonction de transfert est un réel négatif soit: $\underline{H} \approx - \frac{2}{{(\frac{\omega}{\omega_0})}^2}$. En temporelle, celà donne: $s(t) = 2 \omega_0^2 \int (\int (e(t)))$: c'est un comportement double intégrateur.
 
-On veut un gain réel égal à $G_{\max}/\sqrt{2}$ soit un gain en décibel égal à $G_{dB,\max} - 3dB$ soit 3dB. On trouve $\omega_c = 6 * 10 ^ 3 \rm{rad.s^{-1}}$.
+On veut un gain réel égal à $G_{\max}/\sqrt{2}$ soit un gain en décibel égal à $G_{dB,\max} - 3dB$ soit 3dB. On trouve $\omega_c = 6 * 10 ^ 2 \rm{rad.s^{-1}}$.
 
 
 ```{dropdown} Remarque
