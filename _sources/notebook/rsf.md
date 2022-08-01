@@ -15,7 +15,7 @@ kernelspec:
 ---
 # Régime sinusoïdal forcé
 
-````{admonition} Objectifs
+````{admonition} Compétences
 :class: tip
 * Savoir que la réponse forcée d'un système linéaire à une excitation sinusoïdale est sinusoïdale de même fréquence
 * Réaliser une étude fréquentielle pour étudier les caractéristiques d'un système ou sa réponse à une excitation sinusoïdale

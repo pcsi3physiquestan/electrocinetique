@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Régime transitoire et régime forcé &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/trans_regimes.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,7 +58,10 @@
     <link rel="next" title="Méthodes d’analyse d’un régime transitoire" href="trans_methodes.html" />
     <link rel="prev" title="Régime transitoire (1): Caractéristiques générales" href="trans_gene.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -76,13 +79,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -102,67 +106,74 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conduction.html">
-     Décrire la conduction électrique à notre échelle : Courant et Tension
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="el_lois.html">
-     Étudier un circuit : les bases
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_meth_r.html">
+     Activité : Résistance d’entrée et résistance de sortie
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="td_bases.html">
-     TD Electrocinétique 1: Bases
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ci_lineaire.html">
-   Dipôles et circuits linéaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_gene.html">
-     Dipôles électriques: Généralités
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_passif.html">
-     Dipôles linéaires passifs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_assoc.html">
-     Association de résistances
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_actif.html">
-     Dipôles linéaires actifs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_methode.html">
-     Etude d’un circuit linéaire
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ex_app_lineaires.html">
-     Activités d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="td_lineaires.html">
-     TD Electrocinétique 2: Circuits linéaires
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -170,8 +181,8 @@
   <a class="reference internal" href="trans_gene.html">
    Régime transitoire (1): Caractéristiques générales
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,8 +218,8 @@
   <a class="reference internal" href="trans_ordre.html">
    Régime transitoire (2): Ordre 1 et 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -232,8 +243,8 @@
     <a class="reference internal" href="meth_trans_o.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -254,8 +265,8 @@
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -273,8 +284,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -303,8 +314,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -337,8 +348,8 @@
   <a class="reference internal" href="filtrage.html">
    Filtrage linéaire
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -377,8 +388,8 @@
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -481,7 +492,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#regimes-de-fonctionnement-regime-transitoire-et-regime-force">
@@ -560,7 +571,7 @@
         
               <div>
                 
-  <div class="section" id="regime-transitoire-et-regime-force">
+  <div class="tex2jax_ignore mathjax_ignore section" id="regime-transitoire-et-regime-force">
 <h1>Régime transitoire et régime forcé<a class="headerlink" href="#regime-transitoire-et-regime-force" title="Permalink to this headline">¶</a></h1>
 <p>Comme tout système physique, un circuit électrique répond aux contraintes qu’on lui impose de l’extérieur. En général, cette contrainte est une tension d’entrée qui peut soit être créée volontairement avec une forme particulière, soit provenir d’un capteur de mesure.</p>
 <p>Dans tous les cas, le circuit va finir par se placer dans un état qu’on appellera <strong>régime forcé</strong> par le régime d’entrée.</p>
@@ -621,8 +632,8 @@ Un système est dit <strong>stable</strong> si les grandeurs du système ne dive
 </div>
 <p><strong>Démonstration</strong><br />
 Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de la tension est nulle. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1fee02ab-2110-4b74-bf6c-ed597ace4f66">
-<span class="eqno">(28)<a class="headerlink" href="#equation-1fee02ab-2110-4b74-bf6c-ed597ace4f66" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c8cb10df-db69-4d86-afc1-558f64658dcb">
+<span class="eqno">(17)<a class="headerlink" href="#equation-c8cb10df-db69-4d86-afc1-558f64658dcb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i = C \frac{\rm{d}u}{\rm{dt}} = 0
 \end{equation}\]</div>
 <p>L’intensité étant toujours nulle, le dipôle est assimilable à un interrupteur ouvert.</p>
@@ -636,8 +647,8 @@ i = C \frac{\rm{d}u}{\rm{dt}} = 0
 </div>
 <p><strong>Démonstration</strong><br />
 Comme étudié dans le chapitre précédent, remarquons qu’en régime indépendant du temps, la dérivée de l’intensité est nulle. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-99e956e4-5b00-41ca-8bf5-a501d49cd486">
-<span class="eqno">(29)<a class="headerlink" href="#equation-99e956e4-5b00-41ca-8bf5-a501d49cd486" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-33b90720-0954-4aa2-a642-1ad16048331e">
+<span class="eqno">(18)<a class="headerlink" href="#equation-33b90720-0954-4aa2-a642-1ad16048331e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u =L \frac{\rm{d}i}{\rm{dt}} = 0
 \end{equation}\]</div>
 <p>La tension étant toujours nulle, le dipôle est assimilable à un fil.</p>
@@ -694,15 +705,15 @@ Correction<div class="summary-down docutils">
 </div>
 <p class="card-text">Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
 <p class="card-text">Écrivons les lois de Kirchhoff (on pourrait aussi utiliser la loi des noeuds en terme de potentiels):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3d349ff0-d693-41e9-b084-5c73031ca369">
-<span class="eqno">(30)<a class="headerlink" href="#equation-3d349ff0-d693-41e9-b084-5c73031ca369" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c2cf6582-9b11-47d0-8b5f-fe3b42a201e2">
+<span class="eqno">(19)<a class="headerlink" href="#equation-c2cf6582-9b11-47d0-8b5f-fe3b42a201e2" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + i_l &amp;= 0\\
 E - R i_e + R i_r &amp;= 0\\
 R i_r - R i_l &amp;= 0
 \end{align}\]</div>
 <p class="card-text">Il vient immédiatement <span class="math notranslate nohighlight">\(i_r = i_l\)</span> et donc <span class="math notranslate nohighlight">\(i_e = - 2 i_r\)</span>. La première loi des mailles s’écrivant alors <span class="math notranslate nohighlight">\(E + 3 R i_R = 0\)</span>, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c8666d6-d7f5-462c-a21e-13ef43f94058">
-<span class="eqno">(31)<a class="headerlink" href="#equation-3c8666d6-d7f5-462c-a21e-13ef43f94058" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d97cfaa0-1f8a-49ee-b645-04a40fa47702">
+<span class="eqno">(20)<a class="headerlink" href="#equation-d97cfaa0-1f8a-49ee-b645-04a40fa47702" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_r &amp;= -\frac{E}{3R}\\
 i_l &amp;= -\frac{E}{3R}\\
 i_e &amp;= \frac{2E}{3R}\\
@@ -830,8 +841,8 @@ On détermine dans un premier temps l’écart initial: on commence à 1V et on 
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le signal ci-après.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-446daa3e-8923-45f1-a3db-409467c21cd3">
-<span class="eqno">(32)<a class="headerlink" href="#equation-446daa3e-8923-45f1-a3db-409467c21cd3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7916c622-488e-43be-b5e5-46bc01f476e1">
+<span class="eqno">(21)<a class="headerlink" href="#equation-7916c622-488e-43be-b5e5-46bc01f476e1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 e_m \exp (- t / \tau)
 \end{equation}\]</div>
 <p>\begin{enumerate}</p>
@@ -849,8 +860,8 @@ Correction<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>1.</strong><br />
 La valeur initiale est <span class="math notranslate nohighlight">\(e_m\)</span> et la valeur finale 0. On cherche donc un écart à la valeur finale de <span class="math notranslate nohighlight">\(\frac{N}{100}(e_m - 0)\)</span> soit :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e179b15-21b3-4dcf-8f04-bba6d7667ccc">
-<span class="eqno">(33)<a class="headerlink" href="#equation-8e179b15-21b3-4dcf-8f04-bba6d7667ccc" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f165711d-b5ee-4d80-bcde-ae996cb1a4ed">
+<span class="eqno">(22)<a class="headerlink" href="#equation-f165711d-b5ee-4d80-bcde-ae996cb1a4ed" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left  (\frac{N}{100} \right )
 \end{equation}\]</div>
 <p class="card-text">Pour 95%, on trouve <span class="math notranslate nohighlight">\(t = 3 \tau\)</span> etpour 99%, on trouve <span class="math notranslate nohighlight">\(t = 5 \tau\)</span>.</p>
@@ -863,8 +874,8 @@ e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left
 </details><div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le signal suivant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a26e0244-acea-4559-ad17-c4995ff8c23f">
-<span class="eqno">(34)<a class="headerlink" href="#equation-a26e0244-acea-4559-ad17-c4995ff8c23f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-633d03a9-f9ea-49fd-ab43-5e6e82de1206">
+<span class="eqno">(23)<a class="headerlink" href="#equation-633d03a9-f9ea-49fd-ab43-5e6e82de1206" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) + 3 e_m
 \end{equation}\]</div>
 <p>Déterminer une estimation du temps caractéristique après avoir préciser l’état final.</p>
@@ -879,13 +890,13 @@ Correction<div class="summary-down docutils">
 <p class="card-text"><strong>Ecart à l’état final</strong><br />
 Le régime forcé s’obtient en passant simplement à la limite l’expression du signal. Il vient <span class="math notranslate nohighlight">\(u_{s,force} = 3e_m\)</span></p>
 <p class="card-text">L’écart est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-06d1966c-bd44-4a07-9c5a-7ea3d7fa571e">
-<span class="eqno">(35)<a class="headerlink" href="#equation-06d1966c-bd44-4a07-9c5a-7ea3d7fa571e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-26908835-6669-4122-a1db-8e86a7d16037">
+<span class="eqno">(24)<a class="headerlink" href="#equation-26908835-6669-4122-a1db-8e86a7d16037" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \left \vert 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) \right \vert
 \end{equation}\]</div>
 <p class="card-text">L’écart initial étant de <span class="math notranslate nohighlight">\(2 e_m\)</span>, il faut analyser la fonction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e271cf55-e7c2-4c2e-bb68-0d0a926345ce">
-<span class="eqno">(36)<a class="headerlink" href="#equation-e271cf55-e7c2-4c2e-bb68-0d0a926345ce" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-742f612e-0229-4eb8-be5b-0318ba6c3f70">
+<span class="eqno">(25)<a class="headerlink" href="#equation-742f612e-0229-4eb8-be5b-0318ba6c3f70" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 f(t) = \left \vert \exp(-\frac{2t}{T})  - 2 \exp(-\frac{5t}{T}) \right \vert
 \end{equation}\]</div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -960,16 +971,27 @@ Remarquons que toute la première partie permettant de ramener la fonction à un
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="trans_gene.html" title="previous page">Régime transitoire (1): Caractéristiques générales</a>
-    <a class='right-next' id="next-link" href="trans_methodes.html" title="next page">Méthodes d’analyse d’un régime transitoire</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="trans_gene.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Régime transitoire (1): Caractéristiques générales</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="trans_methodes.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Méthodes d’analyse d’un régime transitoire</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -985,8 +1007,7 @@ Remarquons que toute la première partie permettant de ramener la fonction à un
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

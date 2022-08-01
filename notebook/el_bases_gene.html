@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dipôles électriques: Généralités &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_gene.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dipôles linéaires passifs" href="el_bases_passif.html" />
+    <link rel="prev" title="Étudier un circuit : les bases" href="el_bases_lois.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_exemples.html">
+       Méthodes d’étude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_meth_r.html">
+       Activité : Résistance d’entrée et résistance de sortie
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_trans.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_regimes.html">
+       Régime transitoire et régime forcé
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_methodes.html">
+       Méthodes d’analyse d’un régime transitoire
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_stabilite.html">
+       Stabilité des systèmes linéaires d’ordre 1 et 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_1.html">
+       Caractéristiques d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_2.html">
+       Caractéristiques d’un système d’ordre 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o1.html">
+       Exemple : Etude d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o2.html">
+       Exemple : Etude d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_exemples.html">
+       Exemples d’étude
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_trans_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_eq.html">
+         Equations dans un même circuit.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_oh.html">
+         Oscillateur harmonique
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_tps.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_app.html">
+       Applications
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_td.html">
+       Entrainement : Régimes de fonctionnements
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_interet.html">
+       Intérêt de l’étude fréquentielle (en ligne)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_gene.html">
+       Régime sinusoïdal forcé
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_methodes.html">
+       Méthodes : Etudier un circuit en RSF
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_rsf_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbande.html">
+         Cas passe-bande
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbas.html">
+         Cas passe-bas
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_app.html">
+       Application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_td.html">
+       Entrainement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_filtrage.html">
+   Filtrage linéaire
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_def.html">
+       Filtre: définition et caractéristiques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_gene.html">
+       Caractéristiques générales
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_cascade.html">
+       Mise en cascade des filtres
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_methodes.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_meth_typo.html">
+       Activités : Typologie des filtres
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_td.html">
+       Entrainement : Filtrage linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/el_bases_gene.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/el_bases_gene.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_bases_gene.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#point-de-fonctionnement-et-caracteristique-statique">
+   Point de fonctionnement et caractéristique statique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#typologie-des-dipoles">
+   Typologie des dipôles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equation-d-evolution">
+   Equation d’évolution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dipole-lineaire">
+   Dipôle linéaire
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="dipoles-electriques-generalites">
+<h1>Dipôles électriques: Généralités<a class="headerlink" href="#dipoles-electriques-generalites" title="Permalink to this headline">¶</a></h1>
+<p><em>Les lois de Kichhoff sont insuffisantes. Il faut aussi pouvoir relier tension et intensité.Ces relations dépendront du type de dipôle dans le circuit.</em></p>
+<div class="section" id="point-de-fonctionnement-et-caracteristique-statique">
+<h2>Point de fonctionnement et caractéristique statique<a class="headerlink" href="#point-de-fonctionnement-et-caracteristique-statique" title="Permalink to this headline">¶</a></h2>
+<div class="sidebar">
+<p class="sidebar-title"><strong>Caractère statique</strong></p>
+<p>Il s’agit d’un ensemble d’états statiques possibles regroupés sur le même graphique. Le système ne passe pas dynamiquement d’un point de fonctionnement à un autre puisque ces points sont établis dans un régime indépendant du temps.</p>
+<p>Une caractéristique statique permet simplement de visualiser l’ensemble des états <strong>statiques</strong> possibles d’un dipôles.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Point de fonctionnement</strong></p>
+<ul class="simple">
+<li><p>Un <strong>point de fonctionnement</strong> d’un dipôle est un couple <span class="math notranslate nohighlight">\((U;I)\)</span> de tension et intensité pouvant exister pour le dipôle en fonctionnement indépendant du temps.</p></li>
+<li><p>La <strong>caractéristiques statique</strong> d’un dipôle est l’ensemble des points de fonctionnement du dipôle.</p></li>
+</ul>
+<div class="figure align-center" id="fig-112">
+<img alt="../_images/elec_carac_statique.png" src="../_images/elec_carac_statique.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Caractéristique statique d’un dipôle</span><a class="headerlink" href="#fig-112" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Dépendance vis-à-vis d’un paramètre  </p>
+<p><em>La caractéristique statique peut dépendre d’un paramètre extérieur.</em></p>
+<div class="figure align-center" id="fig-caracteristique-statique-d-une-photodiode-113">
+<img alt="../_images/elec_photodiode.png" src="../_images/elec_photodiode.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Caractéristique statique d’une photodiode.</span><a class="headerlink" href="#fig-caracteristique-statique-d-une-photodiode-113" title="Permalink to this image">¶</a></p>
+</div>
+<p>Exemple: Une thermistance possède une caractéristique statique qui dépend de sa température et une photodiode possède une caractéristique qui dépend de l’éclairement (E). Souvent de tels dipôles sont utilisés comme capteur (de température pour le cas de la thermistance, de luminosité pour la photodiode… )</p>
+</div>
+</div>
+<div class="section" id="typologie-des-dipoles">
+<h2>Typologie des dipôles<a class="headerlink" href="#typologie-des-dipoles" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Dipôle symétrique ou polarisé</strong></p>
+<ul class="simple">
+<li><p>Un dipôle <strong>symétrique</strong> est un dipôle dont la caractéristique statique est symétrique par rapport à l’origine (0;0).</p>
+<ul>
+<li><p>En conséquence, un dipôle symétrique peut-être branché dans les deux sens sans changer son fonctionnement.</p></li>
+</ul>
+</li>
+<li><p>Un dipôle qui n’est pas symétrique est un dipôle <strong>polarisé</strong></p>
+<ul>
+<li><p>Le sens de branchement d’un dipôle polarisé a son importance.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Dipôle passif ou actif</strong></p>
+<ul class="simple">
+<li><p>Un dipôle <strong>passif</strong> est un dipôle dont la caractéristique passe par l’origine.</p></li>
+<li><p>Si la caractéristique ne passe pas par l’origine, on dit que le dipôle est <strong>actif.</strong></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="equation-d-evolution">
+<h2>Equation d’évolution<a class="headerlink" href="#equation-d-evolution" title="Permalink to this headline">¶</a></h2>
+<div class="margin sidebar">
+<p class="sidebar-title"><strong>Convention d’orientation</strong></p>
+<p>Souvent, les équations d’évolution sont données (ou à connaître) <strong>avec une certaine convention.</strong></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Equation d’évolution</strong>
+L’intensité qui traverse un dipôle est relié à la tension entre ses bornes par une équation mathématique appelée <strong>équation d’évolution du dipôle</strong></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Exemples d’équation d’évolution</p>
+<ul class="simple">
+<li><p>Pour une diode, l’équation d’évolution est en convention récepteur: <span class="math notranslate nohighlight">\(i(u) = I_0 \left ( \exp ^{u/V_S} - 1\right )\)</span></p></li>
+<li><p>Pour une bobine, l’équation d’évolution est en convention récepteur: <span class="math notranslate nohighlight">\(u(i) = L \frac{di}{dt}\)</span></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="dipole-lineaire">
+<h2>Dipôle linéaire<a class="headerlink" href="#dipole-lineaire" title="Permalink to this headline">¶</a></h2>
+<div class="full-width admonition important">
+<p class="admonition-title">Important</p>
+<p>Un dipôle est dit <strong>linéaire</strong> si son équation d’évolution est une équation différentielle linéaire.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2e7299e6-66e6-41d3-9be6-16ff5410e19f">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2e7299e6-66e6-41d3-9be6-16ff5410e19f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+a_n \frac{d^n u(t)}{dt^n} + a_{n-1} \frac{d^{n-1} u(t)}{dt^{n-1}} + ... + a_1 \frac{d u(t)}{dt} + a_0 u(t)= b_n \frac{d^n i(t)}{dt^n} + ... + b_1 \frac{d i(t)}{dt} + b_0 i(t) + F(t)
+\end{equation}\]</div>
+<p><em>L’ordre de l’équation différentielle est le rang de la dérivée la plus grande.</em></p>
+<ul class="simple">
+<li><p><strong>Circuit linéaire</strong>
+Un circuit linéaire est un circuit composé uniquement de composants linéaires.</p></li>
+</ul>
+</div>
+<div class="sidebar">
+<p class="sidebar-title"><strong>Caractéristique statique et évolution temporelle</strong></p>
+<p>Seule la caractéristique statique est une droite. On rappelle qu’il s’agit du regroupement de l’ensemble des états possibles dans <strong>des cicuits</strong> en régime indépendant du temps.</p>
+<p>On peut aussi tracer l’évolution (u(t);i(t)) (on parle de caractéristique dynamique) pour un dipôle <strong>dans un circuit donné.</strong> Il ne s’agit alors pas nécessairement d’une droite.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Caractéristique statique des dipôles linéaires</strong>
+La caractéristique statique d’un dipôle linéaire est une droite dont l’équation s’écrit <span class="math notranslate nohighlight">\(a_0 U - b_0 I = F_0\)</span>.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Démonstration</p>
+<p>Pour déterminer la caractéristique statique, il faut éliminer toute variation temporelle de l’équation d’évolution. Dans l’équation d’évolution d’évolution d’un dipôle linéaire, cela revient à annuler toutes les dérivées temporelles (il ne reste que <span class="math notranslate nohighlight">\(a_0 u(t)\)</span> et <span class="math notranslate nohighlight">\(b_0 i(t)\)</span>) et ne garder que le terme constant de F(t) noté ici <span class="math notranslate nohighlight">\(F_0\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Dipôles linéaires passifs et actifs</strong></p>
+<ul class="simple">
+<li><p class="card-text">Si <span class="math notranslate nohighlight">\(F_0 = 0\)</span> le dipôle est passif. Il est alors aussi symétrique.</p></li>
+<li><p class="card-text">Si <span class="math notranslate nohighlight">\(F_0 \neq 0\)</span> il est actif (on parle de <strong>source</strong>).</p></li>
+</ul>
+</div>
+</details></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="el_bases_lois.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Étudier un circuit : les bases</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="el_bases_passif.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dipôles linéaires passifs</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

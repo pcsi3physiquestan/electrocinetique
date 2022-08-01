@@ -1,0 +1,69 @@
+---
+jupytext:
+  encoding: '# -*- coding: utf-8 -*-'
+  formats: ipynb,md:myst
+  split_at_heading: true
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.10.3
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+# Mise en cascade des filtres
+
+## Mise en cascade. Généralités
+
+````{topic} __Rappel : Hypothèse d'étude des filtres__  
+On rappelle qu'on étudie toujours les filtres en supposant que l'intensité de sortie est nulle. Ce n'est pas forcément vrai si la sortie est branchée sur un dispositif résistif ou __si l'on place deux filtres en cascade__.
+
+Une conséquence est que si l'on met deux filtres en cascade, __les calculs des fonctions de transfert des filtres séparés ne sont a priori plus valables.__
+```{admonition} Exemple 
+:class: attention
+* Si l'on considère un filtre RC passe-bas, la fonction de transfert est $\underline{H} = \frac{1}{1 + j RC \omega}$.
+    * Si l'on place à la suite deux filtre RC passe-bas identique, la fonction de transfert ne sera pas $\underline{H}^2$.
+```
+````
+
+## Quadripôle et impédances
+
+````{topic} __Modélisation d'un quadripôle__  
+Un quadripôle fait le lien entre un premier et une second circuit. Du point du vue du premier circuit, il est assimilable à une résistance (résistance d'entrée). Du point de vue du circuit de sortie, il est assmilable à un modèle de Thévenin de fem $\underline{H}\underline{e}$ et de résistance $R_S$ appelée résistance de sortie.
+
+En toute rigueur, les résistances sont parfois remplacées par des impédances pour affiner le modèle. En général, une modélisation en terme de résistance suffira.
+
+```{figure} ./images/elec_quadripole_model.jpg
+:name: fig_214
+:align: center
+```
+```{admonition} Exemple 
+:class: attention
+* Considérons à nouveau un filtre RC passe-bas. Si l'on annule l'intensité de sortie, l'impédance équivalente présentée au circuit d'entrée est $\underline{Z_e} = R + \frac{1}{jC \omega}$.
+* Pour le circuit de sortie, la fem équivalente est $\frac{\underline{e}}{1 + j RC \omega}$ et d'impédance de sortie $\underline{Z_s} = \frac{R}{1 + j RC \omega}$
+```
+````
+
+## Mise en cascade des filtre et impédances
+
+````{important} 
+__Mise en cascade__
+
+* Deux filtres mis en cascade auront des comportement indépendants si __l'impédance de sortie du premier est très faible devant l'impédance d'entrée du second.__
+* Dans ces conditions, on peut étudier les deux filtres séparément et obtenir la fonction de transfert complète par multiplication.
+
+````
+
+````{topic} __Démonstration__  
+La principale problématique est de pouvoir utiliser la fonction de transfert du premier filtre. Pour celà, il faut que la chute de tension occasionnée par la résistance de sortie du premier filtre soit nulle (ou quasi-nulle). Un calcul de cette chute de tension (par un pont diviseur de tension par exemple) donne $\underline{i} = \frac{R_{s1}\underline{H}\underline{e}}{R_{s1} + R_{e2}}$ avec $R_{s1}$ la résistance de sortie du premier filtre et $R_{e2}$ la résistance d'entrée du second filtre. La chute de tension sera nulle si $R_{s1} \ll R_{e2}$
+````
+
+
+````{topic} Mise en pratique: utilisation d'un suiveur.
+Lorsqu'on veut mettre en cascade deux filtres qui ne vérifient la condition précédente, on va intercaler un __suiveur__. Un suiveur est un montage de gain unitaire (s = e) mais qui possède une impédance d'entrée très grande et une impédance de sortie très faible. Celà permet de réaliser la condition de mise en cascade.
+
+Rappel : Un suiveur est un montage simple utilisant un amplificateur linéaire intégré.
+````
+

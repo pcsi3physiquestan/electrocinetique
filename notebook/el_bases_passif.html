@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dipôles linéaires passifs &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_passif.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Association de résistances" href="el_bases_assoc.html" />
+    <link rel="prev" title="Dipôles électriques: Généralités" href="el_bases_gene.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_exemples.html">
+       Méthodes d’étude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_meth_r.html">
+       Activité : Résistance d’entrée et résistance de sortie
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_trans.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_regimes.html">
+       Régime transitoire et régime forcé
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_methodes.html">
+       Méthodes d’analyse d’un régime transitoire
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_stabilite.html">
+       Stabilité des systèmes linéaires d’ordre 1 et 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_1.html">
+       Caractéristiques d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_2.html">
+       Caractéristiques d’un système d’ordre 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o1.html">
+       Exemple : Etude d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o2.html">
+       Exemple : Etude d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_exemples.html">
+       Exemples d’étude
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_trans_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_eq.html">
+         Equations dans un même circuit.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_oh.html">
+         Oscillateur harmonique
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_tps.html">
+         Temps caractéristique d’un système d’ordre 2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_energie.html">
+         Etude énergétique
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_app.html">
+       Applications
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_td.html">
+       Entrainement : Régimes de fonctionnements
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_interet.html">
+       Intérêt de l’étude fréquentielle (en ligne)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_gene.html">
+       Régime sinusoïdal forcé
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_methodes.html">
+       Méthodes : Etudier un circuit en RSF
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_rsf_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbande.html">
+         Cas passe-bande
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbas.html">
+         Cas passe-bas
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_app.html">
+       Application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_td.html">
+       Entrainement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_filtrage.html">
+   Filtrage linéaire
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_def.html">
+       Filtre: définition et caractéristiques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_gene.html">
+       Caractéristiques générales
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_cascade.html">
+       Mise en cascade des filtres
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_methodes.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_meth_typo.html">
+       Activités : Typologie des filtres
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_td.html">
+       Entrainement : Filtrage linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/el_bases_passif.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/el_bases_passif.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_bases_passif.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resistance-ou-conducteur-ohmique">
+   Résistance ou conducteur ohmique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#puissance-perdue-par-effet-joule-en-ligne">
+     Puissance perdue par effet Joule (en ligne)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condensateur">
+   Condensateur
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bobine-ideale-et-inductance">
+   Bobine idéale et inductance
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="dipoles-lineaires-passifs">
+<h1>Dipôles linéaires passifs<a class="headerlink" href="#dipoles-lineaires-passifs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="resistance-ou-conducteur-ohmique">
+<h2>Résistance ou conducteur ohmique<a class="headerlink" href="#resistance-ou-conducteur-ohmique" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Description physique  </p>
+<p>Tout conducteur dissipe de l’énergie par effet Joule (dissipation de l’énergie des électrons par interaction désordonnée avec le cristal du conducteur). Dans une résistance, on cherche à contrôler et augmenter cet effet (qui est très faible voire négligeable dans un fil de connexion).</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Résistance ou conducteur ohmique</strong></p>
+<p>Un conducteur ohmique ou résistance est un dipôle dont l’équation d’évolution est <strong>en convention récepteur:</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-91619b6c-c252-4a8e-b105-2ffd0299c05f">
+<span class="eqno">(3)<a class="headerlink" href="#equation-91619b6c-c252-4a8e-b105-2ffd0299c05f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u(t) = R i(t)
+\end{equation}\]</div>
+<p>où R est appelée <strong>résistance</strong>. Son inverse <span class="math notranslate nohighlight">\(G = 1 / R\)</span> est appelée <strong>conductance</strong></p>
+<div class="figure align-center" id="fig-schema-d-une-resistance114">
+<img alt="../_images/elec_resistor.jpg" src="../_images/elec_resistor.jpg" />
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Schéma d’une résistance</span><a class="headerlink" href="#fig-schema-d-une-resistance114" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="puissance-perdue-par-effet-joule-en-ligne">
+<h3>Puissance perdue par effet Joule (en ligne)<a class="headerlink" href="#puissance-perdue-par-effet-joule-en-ligne" title="Permalink to this headline">¶</a></h3>
+<div class="topic">
+<p class="topic-title first">Effet Joule</p>
+<p>Dans une résistance, la puissance reçue est toujours positive: <span class="math notranslate nohighlight">\(p(t) = R i^2(t) = \frac{u^2(t)}{R}\)</span>. Cette puissance est <strong>irrémédiablement</strong> perdue par le circuit. On parle d’effet Joule.</p>
+<p><strong>Utilisation et problèmes</strong></p>
+<ul class="simple">
+<li><p>L’effet Joule est autant un problème qu’un intérêt. Dans les chauffages électriques par exemple, il est le principe même de fonctionnement du système.</p></li>
+<li><p>A l’inverse, dans de nombreux dispositifs électroniques, les résistances sont utilisées pour contrôler les caractéristiques du circuit et l’effet Joule est une effet supplémentaire non voulu qui tend à chauffer les composants au risque de les dégrader.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="condensateur">
+<h2>Condensateur<a class="headerlink" href="#condensateur" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Description physique  </p>
+<p>Une capacitance ou un condensateur est un dipôle construit de la manière suivant: deux conducteurs (des plans, des cylindres… ) se font face. Entre les deux, un isolant empêchent le passage des électrons.</p>
+<p>Quand les électrons sont mis en mouvement, ils vont se détacher d’un conducteur (qui se charge positivement) et s’accumuler sur l’autre (qui se charge négativement): la différence de charge créé un champ électrique qui peut mettre en mouvement les charges dans l’autre sens: on crée temporairement une source d’énergie qui peut se décharger dans d’autres dipôles.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title"><strong>Relation intensité-tension</strong></p>
+<p>En <strong>convention récepteur</strong>, l’équation d’évolution s’écrit aussi:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-763a98c9-b425-40f2-9e81-51f77150afbe">
+<span class="eqno">(4)<a class="headerlink" href="#equation-763a98c9-b425-40f2-9e81-51f77150afbe" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+i(t) = C \frac{du}{dt}(t)
+\end{equation}\]</div>
+<p>Il suffit de remarque que la quantité de charge ajoutée dq à l’armature où entre l’intensité pendant un temps dt est la quantité de charge qui a transité dans le fil durant le même temps dt (conservation de la charge et ARQS) soit <span class="math notranslate nohighlight">\(i(t) = \frac{dq}{dt}(t) = C  \frac{du}{dt}(t)\)</span></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Condensateur et capacité</strong></p>
+<div class="figure align-center" id="fig-schema-d-un-condensateur115">
+<img alt="../_images/elec_condensateur.jpg" src="../_images/elec_condensateur.jpg" />
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Schéma d’un condensateur</span><a class="headerlink" href="#fig-schema-d-un-condensateur115" title="Permalink to this image">¶</a></p>
+</div>
+<p>Un condensateur (ou capacitance) est un dipôle linéaire passif constitué de deux armatures métalliques dont l’équation d’évolution est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-13bf8a88-7c9d-4c04-8de6-645cc71614d8">
+<span class="eqno">(5)<a class="headerlink" href="#equation-13bf8a88-7c9d-4c04-8de6-645cc71614d8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+q(t) = C u(t)
+\end{equation}\]</div>
+<p>où q(t) est la chargée portée par l’armature où pointe la flèche de la tension u(t).</p>
+<p>C est appelée capacité du condensateur.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Caractéristique statique</p>
+<p>La caractéristique statique d’un condensateur est la droite horizontale i = 0.</p>
+<p>Le condensateur est donc assimilable à un <strong>interrupteur ouvert</strong> en régime indépendant du temps.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Energie stockée dans un condensateur</strong></p>
+<p>Lorsqu’on applique une tension u à ses bornes, un condensateur stocke une énergie :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e2d87c28-f330-4748-b759-c654b226f194">
+<span class="eqno">(6)<a class="headerlink" href="#equation-e2d87c28-f330-4748-b759-c654b226f194" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+E_{el} = \frac{1}{2} C u^2
+\end{equation}\]</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>C’est la méthode générale pour associer une énergie à une puissance.</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Justification</p>
+<p>Nous allons montrer que la puissance reçue par le condensateur peut se mettre sous la forme <span class="math notranslate nohighlight">\(P = \frac{dE}{dt}\)</span>. On observe ainsi qu’on peut exprimer la puissance échangée comme une variation d’énergie. Celle-ci correspondra à la variation d’énergie du dipôle.</p>
+<p>La puissance reçue par un condensateur s’écrit (on l’oriente en convention récepteur):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3cfd5750-c404-4c34-8072-0fc4daa57c87">
+<span class="eqno">(7)<a class="headerlink" href="#equation-3cfd5750-c404-4c34-8072-0fc4daa57c87" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+p(t) = u(t) i(t) = C u(t) \frac{du}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} C u^2(t)\right)
+\end{equation}\]</div>
+<p>(on a cherche une primitive à la fonction u(t) u’(t)).</p>
+</div>
+</div>
+<div class="section" id="bobine-ideale-et-inductance">
+<h2>Bobine idéale et inductance<a class="headerlink" href="#bobine-ideale-et-inductance" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title first">Description physique</p>
+<p>Une bobine est un dipôle dont le fonctionnement est basé sur le phénomène d’induction: un champ magnétique variable engendre un champ électrique. Dans le cas d’une bobine, on enroule beaucoup de fil pour former des spires. L’intensité qui traverse ces spires crée un champ magnétique et si l’intensité est variable, le champ magnétique aussi. Il naît alors une tension aux bornes des spires.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Complément : Bobine réelle</p>
+<div class="figure align-center" id="fig-117">
+<img alt="../_images/elec_bobine_reelle.png" src="../_images/elec_bobine_reelle.png" />
+</div>
+<p>Dans les bobines, la longueur des fils et l’utilisation de noyau de fer implique des effets résistifs.</p>
+<p>On modélise ces effets par une résistance en série avec l’inductance. On trouvera quelque fois une référence à cette modélisation par une valeur de résistance associée à la valeur de l’inductance.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Bobine ou inductance</strong></p>
+<div class="figure align-center" id="fig-schema-d-une-bobine116">
+<img alt="../_images/elec_bobine.jpg" src="../_images/elec_bobine.jpg" />
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Schéma d’une bobine</span><a class="headerlink" href="#fig-schema-d-une-bobine116" title="Permalink to this image">¶</a></p>
+</div>
+<p>Une inductance (ou bobine) est un dipôle dont l’équation d’évolution <strong>en convention récepteur</strong> est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-200cf240-2752-426b-b040-2a5dff7e8bdf">
+<span class="eqno">(8)<a class="headerlink" href="#equation-200cf240-2752-426b-b040-2a5dff7e8bdf" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+u(t) = L \frac{di}{dt}(t)
+\end{equation}\]</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Caractéristique statique</p>
+<p>La caractéristique statique d’une bobine est une droite d’équation u(t) = 0</p>
+<p>En régime indépendant du temps, une bobine est donc <strong>assimilable à un fil</strong>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Energie stockée dans une bobine</strong></p>
+<p>Lorsqu’un courant i circule dans une bobine, celle-ci stocke une énergie :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b89a0d1a-f984-4fc2-b8fb-a80bf92c2aaf">
+<span class="eqno">(9)<a class="headerlink" href="#equation-b89a0d1a-f984-4fc2-b8fb-a80bf92c2aaf" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+E_{mag} = \frac{1}{2} L i^2
+\end{equation}\]</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Justification</p>
+<p>Nous allons montrer que la puissance reçue par la bobine peut se mettre sous la forme <span class="math notranslate nohighlight">\(P = \frac{dE}{dt}\)</span>. On observe ainsi qu’on peut exprimer la puissance échangée comme une variation d’énergie. Celle-ci correspondra à la variation d’énergie du dipôle.</p>
+<p>La puissance reçue par une bobine s’écrit (on l’oriente en convention récepteur):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-721bb075-4425-4441-bed3-8fedc787b397">
+<span class="eqno">(10)<a class="headerlink" href="#equation-721bb075-4425-4441-bed3-8fedc787b397" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+p(t) = u(t) i(t) = L i(t) \frac{di}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} L i^2(t)\right)
+\end{equation}\]</div>
+<p>(on a cherche une primitive à la fonction i(t) i’(t)).</p>
+</div>
+<div class="topic">
+<p class="topic-title first">Différence entre effet Joule et énergie stockée  </p>
+<p>Il est important de comprendre la différence de traitement entre la résistance et le condensateur (la bobine). Dans le premier cas, l’énergie est perdue et ne peut plus être récupérée par le même processus physique. Dans le cas du condensateur (de la bobine), l’énergie est stockée est peut-être redonnée au circuit.</p>
+<p>On pourra faire une analogie avec la différence entre l’énergie perdue par frottements et l’énergie stockée (ou rendue) sous forme d’énergie potentielle de pesanteur.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="el_bases_gene.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Dipôles électriques: Généralités</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="el_bases_assoc.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Association de résistances</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

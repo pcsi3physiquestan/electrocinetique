@@ -1,0 +1,911 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caractéristiques d’un système d’ordre 2 &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_trans_ordre_2.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Maitriser les méthodes" href="el_trans_ex.html" />
+    <link rel="prev" title="Caractéristiques d’un système d’ordre 1" href="el_trans_ordre_1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_exemples.html">
+       Méthodes d’étude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_meth_r.html">
+       Activité : Résistance d’entrée et résistance de sortie
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="el_trans.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="el_trans_contxt.html">
+     Connaître le contexte
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_regimes.html">
+       Régime transitoire et régime forcé
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_methodes.html">
+       Méthodes d’analyse d’un régime transitoire
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_stabilite.html">
+       Stabilité des systèmes linéaires d’ordre 1 et 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_1.html">
+       Caractéristiques d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Caractéristiques d’un système d’ordre 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o1.html">
+       Exemple : Etude d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o2.html">
+       Exemple : Etude d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_exemples.html">
+       Exemples d’étude
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_trans_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_eq.html">
+         Equations dans un même circuit.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_oh.html">
+         Oscillateur harmonique
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_tps.html">
+       Temps caractéristique d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_energie.html">
+       Etude énergétique
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_app.html">
+       Applications
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_td.html">
+       Entrainement : Régimes de fonctionnements
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_interet.html">
+       Intérêt de l’étude fréquentielle (en ligne)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_gene.html">
+       Régime sinusoïdal forcé
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_methodes.html">
+       Méthodes : Etudier un circuit en RSF
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_rsf_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbande.html">
+         Cas passe-bande
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbas.html">
+         Cas passe-bas
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_app.html">
+       Application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_td.html">
+       Entrainement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_filtrage.html">
+   Filtrage linéaire
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_def.html">
+       Filtre: définition et caractéristiques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_gene.html">
+       Caractéristiques générales
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_cascade.html">
+       Mise en cascade des filtres
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_methodes.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_meth_typo.html">
+       Activités : Typologie des filtres
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_td.html">
+       Entrainement : Filtrage linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/el_trans_ordre_2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/el_trans_ordre_2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_trans_ordre_2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#systeme-d-ordre-2-forme-canonique">
+   Système d’ordre 2: Forme canonique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differents-regimes-de-fonctionnement">
+   Différents régimes de fonctionnement
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regime-aperiodique">
+     Régime apériodique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regime-critique">
+   Régime critique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regime-pseudo-periodique">
+   Régime pseudo-périodique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#solution-analytique">
+     Solution analytique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trace-temporelle">
+     Tracé temporelle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regime-pseudo-periodique-decrement-logarithmique">
+     Régime pseudo-périodique: Décrément logarithmique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#portrait-de-phase-en-ligne">
+     Portrait de phase (en ligne)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="caracteristiques-d-un-systeme-d-ordre-2">
+<h1>Caractéristiques d’un système d’ordre 2<a class="headerlink" href="#caracteristiques-d-un-systeme-d-ordre-2" title="Permalink to this headline">¶</a></h1>
+<p><em>Un exemple d’étude sur un RLC série est donné <span class="xref myst">ici</span>.</em></p>
+<div class="section" id="systeme-d-ordre-2-forme-canonique">
+<h2>Système d’ordre 2: Forme canonique<a class="headerlink" href="#systeme-d-ordre-2-forme-canonique" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Forme canonique des systèmes d’ordre 2</strong></p>
+<p>L’équation différentielle qui régit l’évolution d’un système d’ordre 2 peut se mettre une des formes suivantes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5a416f68-dbe1-45a0-b0e2-36386f9e1977">
+<span class="eqno">(36)<a class="headerlink" href="#equation-5a416f68-dbe1-45a0-b0e2-36386f9e1977" title="Permalink to this equation">¶</a></span>\[\begin{align}
+\frac{\rm{d^2}X}{\rm{dt^2}}(t) + \frac{\omega_0}{Q} \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)\\
+\frac{\rm{d^2}X}{\rm{dt^2}}(t) + 2 \xi \omega_0 \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)
+\end{align}\]</div>
+<p>On appelle</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Q\)</span>: le facteur de qualité du système</p></li>
+<li><p><span class="math notranslate nohighlight">\(\xi\)</span>: le coefficient d’amortissement du système</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega_0\)</span>: la pulsation propre du système</p></li>
+</ul>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">Relation entre les paramètres</p>
+<p>Il est conseillé de s’entraîner à exprimer les paramètres précédents en fonction de <span class="math notranslate nohighlight">\(\omega_0\)</span> et Q (ou <span class="math notranslate nohighlight">\(\omega_0\)</span> et <span class="math notranslate nohighlight">\(\xi\)</span>).</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Type de régimes</strong></p>
+<p>La forme mathématique correspondant à la solution dépend de la valeur du facteur de qualité Q (ou du coefficient d’amortissement <span class="math notranslate nohighlight">\(\xi\)</span>) car ce dernier influe sur la valeur du discriminant de l’équation caractéristique <span class="math notranslate nohighlight">\(\Delta\)</span>. A chaque expression différente correspond un type de régime:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\Delta\)</span></p></th>
+<th class="text-align:center head"><p>Q</p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\xi\)</span></p></th>
+<th class="text-align:right head"><p>Forme ESSM</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Régime apériodique</p></td>
+<td class="text-align:center"><p>&gt; 0</p></td>
+<td class="text-align:center"><p>&lt; 1/2</p></td>
+<td class="text-align:center"><p>&gt; 1</p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(A \exp{r_1 t} + B \exp{r_2 t}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Régime critique</p></td>
+<td class="text-align:center"><p>= 0</p></td>
+<td class="text-align:center"><p>= 1/2</p></td>
+<td class="text-align:center"><p>= 1</p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(\exp{r_0 t} \left ( A t + B\right )\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Régime pseudo-périodique</p></td>
+<td class="text-align:center"><p>&lt; 0</p></td>
+<td class="text-align:center"><p>&gt; 1/2</p></td>
+<td class="text-align:center"><p>&lt; 1</p></td>
+<td class="text-align:right"><p><span class="math notranslate nohighlight">\(\exp{\lambda t} \left ( A \cos(\Omega t ) + B \sin(\Omega t ) \right )\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>On rappelle que :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r_1\)</span> et <span class="math notranslate nohighlight">\(r_2\)</span> sont les solutions de l’équation caractéristiques</p></li>
+<li><p><span class="math notranslate nohighlight">\(r_0\)</span> est la solution double lorsque le discriminant est nul</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> et <span class="math notranslate nohighlight">\(\Omega\)</span> sont respectivement la partie réelle de <span class="math notranslate nohighlight">\(r_1\)</span> et <span class="math notranslate nohighlight">\(r_2\)</span> et la partie imaginaire (en valeur absolue) de <span class="math notranslate nohighlight">\(r_1\)</span> et <span class="math notranslate nohighlight">\(r_2\)</span> lorsque le discriminant est négatif. On appelle <span class="math notranslate nohighlight">\(\Omega\)</span> <strong>la pseudo-pulsation</strong> du système.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="differents-regimes-de-fonctionnement">
+<h2>Différents régimes de fonctionnement<a class="headerlink" href="#differents-regimes-de-fonctionnement" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="regime-aperiodique">
+<h3>Régime apériodique<a class="headerlink" href="#regime-aperiodique" title="Permalink to this headline">¶</a></h3>
+<p><strong>Solution de l’équation homogène</strong><br />
+On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q &lt; 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi &gt; 1\)</span> est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-998e7f48-1d29-4215-8e30-c134e4513b21">
+<span class="eqno">(37)<a class="headerlink" href="#equation-998e7f48-1d29-4215-8e30-c134e4513b21" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+X(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
+\end{equation}\]</div>
+<p>avec:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+r_1 = - \frac{\omega_0}{2Q} + \sqrt{\frac{\omega_0^2}{4Q^2} - \omega_0^2}\\
+r_2 = - \frac{\omega_0}{2Q} - \sqrt{\frac{\omega_0^2}{4Q^2} - \omega_0^2}
+\end{align*}\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>On pourrait montrer (HP) qu’une telle expression ne peut avoir qu’un seul extremum local (ou 0).</p>
+</div>
+<p><strong>Analyse des expressions</strong><br />
+Remarquons que dans le cas où les coefficients sont positifs, les deux racines sont négatives: on retrouve le principe de stabilité du système.</p>
+<div class="note admonition">
+<p class="admonition-title">Tracés temporels et portrait de phase</p>
+<div class="figure align-center" id="fig-171">
+<img alt="../_images/elec_ordre2_aperiodique.png" src="../_images/elec_ordre2_aperiodique.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="regime-critique">
+<h2>Régime critique<a class="headerlink" href="#regime-critique" title="Permalink to this headline">¶</a></h2>
+<p><strong>Solution de l’équation homogène</strong><br />
+On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta = 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q = 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi = 1\)</span> est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b28773db-1711-4a10-8fbe-4dbe55cbade3">
+<span class="eqno">(38)<a class="headerlink" href="#equation-b28773db-1711-4a10-8fbe-4dbe55cbade3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+X(t) = \exp^{r_0 t} \left ( At + B\right)
+\end{equation}\]</div>
+<p>avec:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e50d89fe-4bf9-4d0c-9272-7e429738b070">
+<span class="eqno">(39)<a class="headerlink" href="#equation-e50d89fe-4bf9-4d0c-9272-7e429738b070" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+r_0 = - \frac{\omega_0}{2Q} = - \omega_0
+\end{equation}\]</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>On pourrait montrer (HP) qu’une telle expression ne peut avoir qu’un seul extremum local (ou 0).</p>
+</div>
+<p><strong>Analyse des expressions</strong><br />
+Remarquons que dans le cas où les coefficients sont positifs, la racine double est négative: on retrouve le principe de stabilité du système.</p>
+<div class="note admonition">
+<p class="admonition-title">Tracés temporels et portrait de phase</p>
+<p>Remarquons qu’il y a beaucoup de similarités avec le régime apériodique en terme de tracé. Pris séparément, on ne peut pas savoir si un tel tracé vient d’un régime apériodique ou critique.</p>
+<p>Nous verrons en activité un moyen de comparer les deux tracés (quand on a les deux).</p>
+<div class="figure align-center" id="fig-172">
+<img alt="../_images/elec_ordre2_critique.png" src="../_images/elec_ordre2_critique.png" />
+</div>
+</div>
+</div>
+<div class="section" id="regime-pseudo-periodique">
+<h2>Régime pseudo-périodique<a class="headerlink" href="#regime-pseudo-periodique" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="solution-analytique">
+<h3>Solution analytique<a class="headerlink" href="#solution-analytique" title="Permalink to this headline">¶</a></h3>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Les signaux étant réels, on n’utilise pas la forme complexe de la solution.</p>
+</div>
+<p><strong>Solution de l’équation homogène</strong><br />
+On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta &lt; 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q &gt; 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi &lt; 1\)</span> est:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+X(t) &amp;= \exp^{-\lambda t}\left( A \sin{\Omega t} + B \cos{\Omega t}\right)\\
+&amp;= \exp^{-\lambda t}\left( C \sin{(\Omega t + \phi)} \right)\\
+\end{align*}\]</div>
+<p>avec:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\lambda &amp;= Re(r_{1,2}) = - \frac{\omega_0}{2Q}\\
+\Omega &amp;= \left\vert Im(r_{1,2}) \right\vert = \omega_0 \sqrt{1 - \frac{1}{4Q^2}}
+\end{align*}\]</div>
+<p><strong>Analyse des expressions</strong><br />
+Remarquons que dans le cas où les coefficients sont positifs, le coefficient de l’exponentielle (issue de la partie réelle des racines) est négatif: on retrouve le principe de stabilité du système.</p>
+</div>
+<div class="section" id="trace-temporelle">
+<h3>Tracé temporelle<a class="headerlink" href="#trace-temporelle" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">Pseudo-période et période propre</p>
+<p>Il ne faut pas confondre la pseudo-période qu’on peut obtenir d’un tracé temporel et qui est reliée à la pseudo-pulsation et la période propre, reliée à la pulsation propre et qui n’apparaît pas directement dans les tracés temporel.</p>
+<p>La période propre, comme la pulsation propre est un élément caractéristique issu de la forme canonique de l’équation : <span class="math notranslate nohighlight">\(T_0 = \frac{2\pi}{\omega_0}\)</span>.</p>
+<p>A l’inverse, la pseudo-période n’intervient pas dans la mise sous forme canonique mais apparaît dans les mesures expérimentales qu’on peut être amené à faire sur un système en régime pseudo-périodique.</p>
+<p>Pour relier les deux, il faut le facteur de qualité.</p>
+</div>
+<p><strong>Tracé temporelle</strong><br />
+L’expression <span class="math notranslate nohighlight">\(X(t) = \exp^{-\lambda t}\left( D \sin^{\Omega t + \phi} \right)\)</span> permet de dessiner facilement l’évolution de X(t) en régime pseudo-périodique.</p>
+<p>En effet, on remarque qu’il s’agit d’un signal sinsoïdal de pulsation <span class="math notranslate nohighlight">\(\Omega\)</span> ou plutôt <strong>pseudo-sinusoïdal</strong> car l’amplitude décroît de manière exponentielle.</p>
+<p>Pour représenter X(t), il faut d’abord représenter son <strong>enveloppe exponentielle</strong>: <span class="math notranslate nohighlight">\(D \exp^{- \frac{\omega_0 t}{2Q}}\)</span>. On représente alors à l’intérieur de l’enveloppe un sinusoïde (dont l’amplitude décroît) de <strong>pseudo-période</strong> <span class="math notranslate nohighlight">\(T = \frac{2 \pi}{\Omega}\)</span>.</p>
+<div class="figure align-center" id="fig-173">
+<img alt="../_images/elec_ordre2_pseudoperiodique_temporel.png" src="../_images/elec_ordre2_pseudoperiodique_temporel.png" />
+</div>
+</div>
+<div class="section" id="regime-pseudo-periodique-decrement-logarithmique">
+<h3>Régime pseudo-périodique: Décrément logarithmique<a class="headerlink" href="#regime-pseudo-periodique-decrement-logarithmique" title="Permalink to this headline">¶</a></h3>
+<div class="sidebar">
+<p class="sidebar-title">Amortissement et décroissance exponentielle</p>
+<p>Dans le cas d’un régime pseudo-périodique, l’amplitude du pseudo-sinusoïde décroît de manière exponentielle. C’est la vitesse de décroissance qui va déterminer dans ce régime la force de l’amortissement.</p>
+<p>Comme cette décroissance est exponentielle, nous utilisons un indicateur particulier pour quantifier l’amortissement.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Décrément logarithmique.</strong>
+Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique <span class="math notranslate nohighlight">\(\delta\)</span> par:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fa895a0a-1f30-49e9-ad71-7a7478a69f80">
+<span class="eqno">(40)<a class="headerlink" href="#equation-fa895a0a-1f30-49e9-ad71-7a7478a69f80" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
+\end{equation}\]</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Interprétation</strong><br />
+On calcule l’écart à la valeur finale à deux instants t et t+T (ce second écart est plus faible pour un système stable). En faisant le rapport, on obtient un nombre d’autant plus grand que l’amortissement est fort. Le décrément est donc une mesure l’amortissement <strong>en régime pseudo-périodique</strong>.</p>
+<p>Le fait que la décroissance soit exponentielle explique que l’on prenne le logarithmique du rapport. Nous allons voir que cela simplifie l’expression.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Analyse</p>
+<p>On peut analyser l’expression précédente en remarquant que plus Q augmente, plus <span class="math notranslate nohighlight">\(\delta\)</span> diminue. Il vient que <strong>en régime pseudo-périodique</strong>, plus Q est grand, plus l’amortissement est faible. On retrouve d’ailleurs ce principe avec le temps caractéristique qu’on a calculer précédemment.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Relation entre le décrément logarithmique et le facteur de qualité</strong>
+On peut montrer que (‘sentraîner à le faire - correction en ligne):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6eb3658c-0db7-4c1f-9186-86c8095d7c4d">
+<span class="eqno">(41)<a class="headerlink" href="#equation-6eb3658c-0db7-4c1f-9186-86c8095d7c4d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\delta = \frac{2\pi}{\sqrt{4Q^2 - 1}}
+\end{equation}\]</div>
+</div>
+<div class="topic">
+<p class="topic-title first"><strong>Démonstration</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\delta &amp;= \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)\\
+&amp;= \ln \left( \frac{e^{-\lambda t} \left(C \cos{\Omega t + \varphi} \right)}{e^{-\lambda (t+T)} \left(C \cos{\Omega (t + T) + \varphi} \right)}\right)\\
+&amp;= \ln \left( \frac{e^{-\lambda t} \left(\cos{\Omega t + \varphi} \right)}{e^{-\lambda (t+T)} \left(\cos{\Omega t + \Omega T + \varphi} \right)}\right)\\
+&amp;= \ln \left( \frac{e^{-\lambda t} \left(\cos{\Omega t + \varphi} \right)}{e^{-\lambda (t+T)} \left(\cos{\Omega t + 2\pi + \varphi} \right)}\right)\\
+\end{align*}\]</div>
+<p>soit :</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\delta &amp;= \ln \left( \frac{e^{-\lambda t} \left(\cos{\Omega t + \varphi} \right)}{e^{-\lambda (t+T)} \left(\cos{\Omega t + \varphi} \right)}\right)\\
+&amp;= \ln \left( \frac{e^{-\lambda t}}{e^{-\lambda (t+T)}}\right)\\
+&amp;= \ln \left( e^{\lambda T}\right)\\
+&amp;= \lambda T\\
+\end{align*}\]</div>
+<p>soit :</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\delta &amp;= \frac{\omega_0}{2Q} \frac{2\pi}{\omega_0 \sqrt{1 - \frac{1}{4Q^2}}}\\
+&amp;= \frac{2\pi}{2Q\sqrt{1 - \frac{1}{4Q^2}}}\\
+&amp;= \frac{2\pi}{\sqrt{4Q^2 - 1}}
+\end{align*}\]</div>
+</div>
+</div>
+<div class="section" id="portrait-de-phase-en-ligne">
+<h3>Portrait de phase (en ligne)<a class="headerlink" href="#portrait-de-phase-en-ligne" title="Permalink to this headline">¶</a></h3>
+<div class="topic">
+<p class="topic-title first"><strong>Allure du portrait de phase</strong>  </p>
+<p>Le portrait de phase en régime pseudo-périodique est une spirale elliptique convergeant vers le régime forcé.</p>
+<p>Si l’on représente la dérivée <span class="math notranslate nohighlight">\(\dot X(t)\)</span> en fonction de la fonction X(t), la spirale tourne dans le sens horaire.</p>
+<div class="figure align-center" id="fig-174">
+<img alt="../_images/elec_ordre2_pseudo_p_phase.png" src="../_images/elec_ordre2_pseudo_p_phase.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="el_trans_ordre_1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Caractéristiques d’un système d’ordre 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="el_trans_ex.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Maitriser les méthodes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

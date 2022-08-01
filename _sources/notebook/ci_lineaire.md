@@ -15,7 +15,7 @@ kernelspec:
 ---
 # Dipôles et circuits linéaires
 
-````{admonition} Objectifs
+````{admonition} Compétences
 :class: tip
 * Étudier la caractéristique statique d'un dipôle pouvant être non linéaire.
 * Utiliser les relations entre l'intensité et la tension

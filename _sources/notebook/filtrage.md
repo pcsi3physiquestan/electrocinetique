@@ -15,7 +15,7 @@ kernelspec:
 ---
 # Filtrage linéaire
 
-````{admonition} Objectifs
+````{admonition} Compétences
 :class: tip
 * Comprendre l'intérêt et la typologie des filtres basé sur __leur fonction de transfert.__
 * Utiliser une fonction de transfert d'ordre 1 ou 2 et ses représentations graphiques pour conduire l'étude d'une réponse d'un système linéaire à une excitation sinusoïdale, à une somme finie d'excitation sinusoïdales, à un signal périodique.

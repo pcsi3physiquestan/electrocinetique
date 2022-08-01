@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caractéristiques d’un système d’ordre 2 &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/trans_ordre_2.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,7 +58,10 @@
     <link rel="next" title="Activités d’application" href="ex_app_trans_o.html" />
     <link rel="prev" title="Caractéristiques d’un système d’ordre 1" href="trans_ordre_1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -76,13 +79,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -102,67 +106,74 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conduction.html">
-     Décrire la conduction électrique à notre échelle : Courant et Tension
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="el_lois.html">
-     Étudier un circuit : les bases
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_meth_r.html">
+     Activité : Résistance d’entrée et résistance de sortie
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="td_bases.html">
-     TD Electrocinétique 1: Bases
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ci_lineaire.html">
-   Dipôles et circuits linéaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_gene.html">
-     Dipôles électriques: Généralités
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_passif.html">
-     Dipôles linéaires passifs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_assoc.html">
-     Association de résistances
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_actif.html">
-     Dipôles linéaires actifs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_methode.html">
-     Etude d’un circuit linéaire
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ex_app_lineaires.html">
-     Activités d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="td_lineaires.html">
-     TD Electrocinétique 2: Circuits linéaires
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -170,8 +181,8 @@
   <a class="reference internal" href="trans_gene.html">
    Régime transitoire (1): Caractéristiques générales
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,8 +218,8 @@
   <a class="reference internal" href="trans_ordre.html">
    Régime transitoire (2): Ordre 1 et 2
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -232,8 +243,8 @@
     <a class="reference internal" href="meth_trans_o.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -254,8 +265,8 @@
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -273,8 +284,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -303,8 +314,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -337,8 +348,8 @@
   <a class="reference internal" href="filtrage.html">
    Filtrage linéaire
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -377,8 +388,8 @@
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -481,7 +492,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systeme-d-ordre-2-differents-regimes-de-fonctionnement">
@@ -567,7 +578,7 @@
         
               <div>
                 
-  <div class="section" id="caracteristiques-d-un-systeme-d-ordre-2">
+  <div class="tex2jax_ignore mathjax_ignore section" id="caracteristiques-d-un-systeme-d-ordre-2">
 <h1>Caractéristiques d’un système d’ordre 2<a class="headerlink" href="#caracteristiques-d-un-systeme-d-ordre-2" title="Permalink to this headline">¶</a></h1>
 <p>On rappelle que dans un système d’ordre 2, les dérivées sont au maximum des dérivées secondes des grandeurs. Nous allons voir que le régime transitoire possède trois régimes possibles suivant les valeurs des composantes du circuit. On pourra se ramener pour déterminer le type de régime (<strong>apériodique, pseudo-périodique ou critique</strong>) à étudier la valeur d’un paramètre : <strong>le facteur de qualité</strong> (ou de manière équivalente le coefficient d’amortissement).</p>
 <p>L’étude de la réponse temporelle permettra de montrer qu’il peut y avoir des <strong>dépassement</strong> et que cette fois <strong>la rapidité du système dépend du type de régime</strong>. Nous verrons notamment dans une activité que les régimes les plus rapides sont les régimes <strong>proches du régime critique</strong>.</p>
@@ -578,8 +589,8 @@
 <img alt="../_images/elec_circuit_rlc_serie.png" src="../_images/elec_circuit_rlc_serie.png" />
 </div>
 <p>Cette fois, on suppose les conditions initiales connues à t=0 :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4ae6f534-941b-4b19-90c9-c7aed3019e8d">
-<span class="eqno">(81)<a class="headerlink" href="#equation-4ae6f534-941b-4b19-90c9-c7aed3019e8d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8c579e45-a10c-4157-8dfe-1822be467bfa">
+<span class="eqno">(70)<a class="headerlink" href="#equation-8c579e45-a10c-4157-8dfe-1822be467bfa" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i(t=0) &amp;= i_0\\
 u_C(t=0) &amp;= 0
 \end{align}\]</div>
@@ -591,8 +602,8 @@ u_C(t=0) &amp;= 0
 <p class="admonition-title">Important</p>
 <p><strong>Fondamental : Forme canonique des systèmes d’ordre 2</strong></p>
 <p>L’équation différentielle qui régit l’évolution d’un système d’ordre 2 peut se mettre une des formes suivantes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d3086bae-7c38-4d9b-95a5-5019682f6e48">
-<span class="eqno">(82)<a class="headerlink" href="#equation-d3086bae-7c38-4d9b-95a5-5019682f6e48" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fa0587ef-22b4-4ed9-8bf7-1c5ae4f3d6d4">
+<span class="eqno">(71)<a class="headerlink" href="#equation-fa0587ef-22b4-4ed9-8bf7-1c5ae4f3d6d4" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + \frac{\omega_0}{Q} \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)\\
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + 2 \xi \omega_0 \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)
 \end{align}\]</div>
@@ -606,8 +617,8 @@ u_C(t=0) &amp;= 0
 <div class="attention admonition">
 <p class="admonition-title">Exercice Cas du circuit RLC série: La tension uC</p>
 <p>On peut appliquer une loi des mailles: <span class="math notranslate nohighlight">\(u_L + u_R + u_C = 0\)</span> soit <span class="math notranslate nohighlight">\(L \frac{\rm{d}i}{\rm{dt}} + Ri + u_C = 0\)</span>. Il reste à utiliser <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>, il vient en organisant):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-60927e60-a172-4f28-980d-e6825d00e3da">
-<span class="eqno">(83)<a class="headerlink" href="#equation-60927e60-a172-4f28-980d-e6825d00e3da" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-19891578-b823-4b66-b9f2-945c11efdbfe">
+<span class="eqno">(72)<a class="headerlink" href="#equation-19891578-b823-4b66-b9f2-945c11efdbfe" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L}\frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C= 0
 \end{equation}\]</div>
 <p>Il reste à identifier les facteurs:</p>
@@ -678,8 +689,8 @@ u_C(t=0) &amp;= 0
 <h3>Régime apériodique: Solution analytique<a class="headerlink" href="#regime-aperiodique-solution-analytique" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solution de l’équation homogène</strong><br />
 On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q &lt; 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi &gt; 1\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3f39c038-32da-4b8e-b678-46b6eef1c1b3">
-<span class="eqno">(84)<a class="headerlink" href="#equation-3f39c038-32da-4b8e-b678-46b6eef1c1b3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b976d280-cd31-4d52-a259-b2840aaedbcb">
+<span class="eqno">(73)<a class="headerlink" href="#equation-b976d280-cd31-4d52-a259-b2840aaedbcb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 X(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
 \end{equation}\]</div>
 <p>avec:</p>
@@ -728,13 +739,13 @@ i(t) = C \frac{\rm{d}u_C}{\rm{dt}} &amp;= \frac{Ci_0}{C (r_1 - r_2)} \left ( r_1
 <h3>Régime critique: Solution analytique<a class="headerlink" href="#regime-critique-solution-analytique" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solution de l’équation homogène</strong><br />
 On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta = 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q = 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi = 1\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8bc26408-fc8a-45b5-97bf-b175e7c239ec">
-<span class="eqno">(85)<a class="headerlink" href="#equation-8bc26408-fc8a-45b5-97bf-b175e7c239ec" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-282427e6-c831-4aa3-8992-56b5ba724242">
+<span class="eqno">(74)<a class="headerlink" href="#equation-282427e6-c831-4aa3-8992-56b5ba724242" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 X(t) = \exp^{r_0 t} \left ( At + B\right)
 \end{equation}\]</div>
 <p>avec:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9db0b54a-fcc3-4049-b77b-4eba520c211e">
-<span class="eqno">(86)<a class="headerlink" href="#equation-9db0b54a-fcc3-4049-b77b-4eba520c211e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-54d94324-cd06-4495-8864-4443dc19952c">
+<span class="eqno">(75)<a class="headerlink" href="#equation-54d94324-cd06-4495-8864-4443dc19952c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 r_0 = - \frac{\omega_0}{2Q} = - \omega_0
 \end{equation}\]</div>
 <p><strong>Analyse des expressions</strong><br />
@@ -850,8 +861,8 @@ Dans le cas d’un régime pseudo-périodique, l’amplitude du pseudo-sinusoïd
 <p class="admonition-title">Important</p>
 <p><strong>Définition : Décrément logarithmique.</strong></p>
 <p>Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique <span class="math notranslate nohighlight">\(\delta\)</span> par:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7cde69a8-ae5d-4464-814c-ed56535f601f">
-<span class="eqno">(87)<a class="headerlink" href="#equation-7cde69a8-ae5d-4464-814c-ed56535f601f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1d2bb1e2-3be2-4a9d-a363-ca6652d1cd72">
+<span class="eqno">(76)<a class="headerlink" href="#equation-1d2bb1e2-3be2-4a9d-a363-ca6652d1cd72" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
 \end{equation}\]</div>
 <p><strong>Interprétation</strong><br />
@@ -862,8 +873,8 @@ On calcule l’écart à la valeur finale à deux instants t et t+T (ce second �
 <p class="admonition-title">Important</p>
 <p><strong>Fondamental : Relation entre le décrément logarithmique et le facteur de qualité</strong></p>
 <p>On peut montrer que:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f40e35aa-51c6-4a36-a1e8-455e0769c137">
-<span class="eqno">(88)<a class="headerlink" href="#equation-f40e35aa-51c6-4a36-a1e8-455e0769c137" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-27d2e475-b856-4d5c-a6d6-c8c2998e9631">
+<span class="eqno">(77)<a class="headerlink" href="#equation-27d2e475-b856-4d5c-a6d6-c8c2998e9631" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta = \frac{2\pi}{\sqrt{4Q^2 - 1}}
 \end{equation}\]</div>
 <p><strong>Démonstration</strong></p>
@@ -945,21 +956,21 @@ On peut considérer que le nouveau régime forcé est indépendant du temps (pui
 <p class="card-text">La bobine elle se comporte comme un fil. La loi des mailles donne donc que <span class="math notranslate nohighlight">\(u_C(t=+\infty) = E\)</span></p>
 <p class="card-text"><strong>Q2. Mise en équation</strong><br />
 On peut écrire la loi des mailles <span class="math notranslate nohighlight">\(E = u_C + u_R + u_L = u_C + R i + L \frac{\rm{d}i}{\rm{dt}} = 0\)</span>. Soit avec <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f9d841d-0bbd-4db1-9f10-f979f6540916">
-<span class="eqno">(89)<a class="headerlink" href="#equation-7f9d841d-0bbd-4db1-9f10-f979f6540916" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-76e30993-a444-4075-8441-464e0b79cf09">
+<span class="eqno">(78)<a class="headerlink" href="#equation-76e30993-a444-4075-8441-464e0b79cf09" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = \frac{1}{LC}E
 \end{equation}\]</div>
 <p class="card-text">Il vient <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{LC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span> soit les mêmes expressions que dans le cas du régime libre. C’est normal puisqu’il s’agit du même système (RLC série) confronté à une entrée différente (nulle dans un cas et égale à E dans l’autre).</p>
 <p class="card-text"><strong>Q3. Expression temporelle - Cas pseudo-périodique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7103de9e-d3eb-4818-87ff-198a8b730eaf">
-<span class="eqno">(90)<a class="headerlink" href="#equation-7103de9e-d3eb-4818-87ff-198a8b730eaf" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-73b455b3-6d9a-4a61-b929-5345472fd661">
+<span class="eqno">(79)<a class="headerlink" href="#equation-73b455b3-6d9a-4a61-b929-5345472fd661" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right)
 \end{equation}\]</div>
 <p class="card-text">avec <span class="math notranslate nohighlight">\(\Omega = \omega_0 \sqrt{1 - \frac{1}{4Q^2}}\)</span> la pseudo-pulsation du système.</p>
 <p class="card-text">On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-27795aab-fbbe-4109-9144-a4d6c63f0e9c">
-<span class="eqno">(91)<a class="headerlink" href="#equation-27795aab-fbbe-4109-9144-a4d6c63f0e9c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b8e8e66e-b0af-4038-8458-004e91482bcd">
+<span class="eqno">(80)<a class="headerlink" href="#equation-b8e8e66e-b0af-4038-8458-004e91482bcd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right) + E
 \end{equation}\]</div>
 <p class="card-text">Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
@@ -972,14 +983,14 @@ i(t = 0) &amp;= C D \left(-\Omega \sin{\varphi} -\frac{\omega_0}{2Q} \cos{\varph
 \end{align*}\]</div>
 <p class="card-text"><strong>Q4. Expression temporelle - Cas apériodique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa67cb6f-fc56-4f2e-9015-b3684028dc9f">
-<span class="eqno">(92)<a class="headerlink" href="#equation-aa67cb6f-fc56-4f2e-9015-b3684028dc9f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-91790c7c-6d52-4ac1-b971-68db50e1bb8b">
+<span class="eqno">(81)<a class="headerlink" href="#equation-91790c7c-6d52-4ac1-b971-68db50e1bb8b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
 \end{equation}\]</div>
 <p class="card-text">avec <span class="math notranslate nohighlight">\(r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})\)</span>.</p>
 <p class="card-text">On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-48ef0587-8e5d-43fe-ae13-e99b90f0e291">
-<span class="eqno">(93)<a class="headerlink" href="#equation-48ef0587-8e5d-43fe-ae13-e99b90f0e291" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-148a57c8-bbd7-4768-81a6-5ef4d301f08a">
+<span class="eqno">(82)<a class="headerlink" href="#equation-148a57c8-bbd7-4768-81a6-5ef4d301f08a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = A \exp^{r_1 t} + B \exp^{r_2 t} + E
 \end{equation}\]</div>
 <p class="card-text">Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
@@ -992,14 +1003,14 @@ u_{c}(t) = A r_1 + B r_2 = 0\\
 \end{align*}\]</div>
 <p class="card-text"><strong>Q5. Expression temporelle - Cas critique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a599609-2258-48d5-8987-5562295161a4">
-<span class="eqno">(94)<a class="headerlink" href="#equation-3a599609-2258-48d5-8987-5562295161a4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d4d2ced5-00d1-4b23-b22d-c0fa2430a92b">
+<span class="eqno">(83)<a class="headerlink" href="#equation-d4d2ced5-00d1-4b23-b22d-c0fa2430a92b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right)
 \end{equation}\]</div>
 <p class="card-text">avec <span class="math notranslate nohighlight">\(r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})\)</span>.</p>
 <p class="card-text">On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d86e8d2e-b454-41a6-ac8b-e6b657a77e7a">
-<span class="eqno">(95)<a class="headerlink" href="#equation-d86e8d2e-b454-41a6-ac8b-e6b657a77e7a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-85e7b817-59f1-4c34-a8c5-3796502a2e97">
+<span class="eqno">(84)<a class="headerlink" href="#equation-85e7b817-59f1-4c34-a8c5-3796502a2e97" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right) + E
 \end{equation}\]</div>
 <p class="card-text">Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
@@ -1040,16 +1051,27 @@ u_{c}(t) = -\frac{\omega_0 }{2Q} B + A = 0 \Longrightarrow A =  -\frac{\omega_0 
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="trans_ordre_1.html" title="previous page">Caractéristiques d’un système d’ordre 1</a>
-    <a class='right-next' id="next-link" href="ex_app_trans_o.html" title="next page">Activités d’application</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="trans_ordre_1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Caractéristiques d’un système d’ordre 1</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="ex_app_trans_o.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Activités d’application</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -1065,8 +1087,7 @@ u_{c}(t) = -\frac{\omega_0 }{2Q} B + A = 0 \Longrightarrow A =  -\frac{\omega_0 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

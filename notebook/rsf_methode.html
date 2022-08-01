@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Méthode d’étude d’un régime sinusoïdal forcé &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/rsf_methode.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,7 +58,10 @@
     <link rel="next" title="Activités d’application" href="ex_app_rsf.html" />
     <link rel="prev" title="Régime sinusoïdal forcé" href="rsf_gene.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -76,13 +79,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -102,67 +106,74 @@
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conduction.html">
-     Décrire la conduction électrique à notre échelle : Courant et Tension
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="el_lois.html">
-     Étudier un circuit : les bases
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_meth_r.html">
+     Activité : Résistance d’entrée et résistance de sortie
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="td_bases.html">
-     TD Electrocinétique 1: Bases
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ci_lineaire.html">
-   Dipôles et circuits linéaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_gene.html">
-     Dipôles électriques: Généralités
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_passif.html">
-     Dipôles linéaires passifs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_assoc.html">
-     Association de résistances
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_actif.html">
-     Dipôles linéaires actifs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dip_methode.html">
-     Etude d’un circuit linéaire
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ex_app_lineaires.html">
-     Activités d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="td_lineaires.html">
-     TD Electrocinétique 2: Circuits linéaires
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -170,8 +181,8 @@
   <a class="reference internal" href="trans_gene.html">
    Régime transitoire (1): Caractéristiques générales
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -207,8 +218,8 @@
   <a class="reference internal" href="trans_ordre.html">
    Régime transitoire (2): Ordre 1 et 2
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -232,8 +243,8 @@
     <a class="reference internal" href="meth_trans_o.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -254,8 +265,8 @@
     <a class="reference internal" href="td_trans.html">
      TD Electrocinétique 3: Régimes de fonctionnements
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -273,8 +284,8 @@
   <a class="reference internal" href="rsf.html">
    Régime sinusoïdal forcé
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -303,8 +314,8 @@
     <a class="reference internal" href="meth_rsf.html">
      Activités méthodes
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -337,8 +348,8 @@
   <a class="reference internal" href="filtrage.html">
    Filtrage linéaire
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -377,8 +388,8 @@
     <a class="reference internal" href="td_filtrage.html">
      Travaux dirigés: Filtrage linéaire
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -481,7 +492,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#representation-complexe-des-signaux-sinusoidaux">
@@ -587,7 +598,7 @@
         
               <div>
                 
-  <div class="section" id="methode-d-etude-d-un-regime-sinusoidal-force">
+  <div class="tex2jax_ignore mathjax_ignore section" id="methode-d-etude-d-un-regime-sinusoidal-force">
 <h1>Méthode d’étude d’un régime sinusoïdal forcé<a class="headerlink" href="#methode-d-etude-d-un-regime-sinusoidal-force" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="representation-complexe-des-signaux-sinusoidaux">
 <h2>Représentation complexe des signaux sinusoïdaux<a class="headerlink" href="#representation-complexe-des-signaux-sinusoidaux" title="Permalink to this headline">¶</a></h2>
@@ -597,13 +608,13 @@
 <div class="hint admonition">
 <p class="admonition-title">Définition : Représentation complexe d’un signal sinusoïdal</p>
 <p>Considérons un signal sinusoïdal de la forme <span class="math notranslate nohighlight">\(s(t) = s_m \cos (\omega t + \varphi)\)</span>. On définit la représentation complexe <span class="math notranslate nohighlight">\(\underline s(t)\)</span> du signal <span class="math notranslate nohighlight">\(s(t)\)</span> par la grandeur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8deec0df-7aa4-456a-8fda-05742eaea431">
-<span class="eqno">(99)<a class="headerlink" href="#equation-8deec0df-7aa4-456a-8fda-05742eaea431" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0732385a-da66-4bb9-b135-408c05b51d54">
+<span class="eqno">(88)<a class="headerlink" href="#equation-0732385a-da66-4bb9-b135-408c05b51d54" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s}(t) = s_m \exp j\left(\omega t + \varphi\right)
 \end{equation}\]</div>
 <p>On définit aussi l’amplitude complexe <span class="math notranslate nohighlight">\(\underline{s_m}\)</span> du signal <span class="math notranslate nohighlight">\(s(t)\)</span> par la grandeur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-40211406-ae8c-48e8-b335-5e319abaddfc">
-<span class="eqno">(100)<a class="headerlink" href="#equation-40211406-ae8c-48e8-b335-5e319abaddfc" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-03de474e-24bb-4531-9170-7ffe2228dfa5">
+<span class="eqno">(89)<a class="headerlink" href="#equation-03de474e-24bb-4531-9170-7ffe2228dfa5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s}(t) = s_m \exp \left(j \varphi\right) = \frac{\underline{s}(t)}{\exp j \omega t}
 \end{equation}\]</div>
 </div>
@@ -626,8 +637,8 @@
 <p class="admonition-title">Important</p>
 <p><strong>Fondamental : Combinaison linéaire</strong></p>
 <p>La représentation complexe de la combinaison linéaire de deux signaux <strong>de même pulsation</strong> est égale à la même combinaison linéaire des représentations complexes de deux mêmes signaux:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44de748e-b7fc-4f45-84be-2e999956d170">
-<span class="eqno">(101)<a class="headerlink" href="#equation-44de748e-b7fc-4f45-84be-2e999956d170" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-42e32c17-49dd-4e1e-ae69-dc0c338eee70">
+<span class="eqno">(90)<a class="headerlink" href="#equation-42e32c17-49dd-4e1e-ae69-dc0c338eee70" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 s = \lambda_1 s_1 + \lambda_2 s_2 \Longrightarrow \underline{s} = \lambda_1 \underline{s_1} + \lambda_2 \underline{s_2} \textrm{ avec } (\lambda_1;\lambda_2) \in \mathbb{R}^2
 \end{equation}\]</div>
 </div>
@@ -635,13 +646,13 @@ s = \lambda_1 s_1 + \lambda_2 s_2 \Longrightarrow \underline{s} = \lambda_1 \und
 <p class="admonition-title">Important</p>
 <p><strong>Fondamental : Dérivation et intégration</strong></p>
 <p>La représentation complexe de la dérivée d’un signal sinusoïdal de pulsation <span class="math notranslate nohighlight">\(\omega\)</span> est égale à la représentation complexe du même signal sinusoïdal multiplié par <span class="math notranslate nohighlight">\(j \omega\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-00e2b7a5-716c-431c-a9c4-e216808f4d1c">
-<span class="eqno">(102)<a class="headerlink" href="#equation-00e2b7a5-716c-431c-a9c4-e216808f4d1c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-73ff9fde-eca4-4329-b721-cc728bc41494">
+<span class="eqno">(91)<a class="headerlink" href="#equation-73ff9fde-eca4-4329-b721-cc728bc41494" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{\frac{\rm{d}s}{\rm{dt}}} = j \omega \underline{s}
 \end{equation}\]</div>
 <p>La représentation complexe de la primitive - de valeur moyenne nulle - d’un signal sinusoïdal de pulsation <span class="math notranslate nohighlight">\(\omega\)</span> est égale à la représentation complexe du même signal sinusoïdal divisé par <span class="math notranslate nohighlight">\(j \omega\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ca3b5269-4422-48c7-a9ef-c30e4a8383e6">
-<span class="eqno">(103)<a class="headerlink" href="#equation-ca3b5269-4422-48c7-a9ef-c30e4a8383e6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d80969b1-58da-40d8-b333-8a11b3430482">
+<span class="eqno">(92)<a class="headerlink" href="#equation-d80969b1-58da-40d8-b333-8a11b3430482" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{\int_s dt} = \frac{\underline{s}}{j \omega}
 \end{equation}\]</div>
 </div>
@@ -661,8 +672,8 @@ On pose <span class="math notranslate nohighlight">\(u(t) = A \cos \omega t + \p
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On rappelle qu’on étudie le circuit ci-après. Le point qui reste à prouver est l’étude fréquentielle, c’est-à-dire l’étude du régime sinusoïdal forcé par un sinusoïde quelconque de pulsation <span class="math notranslate nohighlight">\(\omega\)</span>. On rappelle que le but est prouver que la tension aux bornes du condensateur pour une entrée de la forme <span class="math notranslate nohighlight">\(e(t) = e_m \cos \omega t\)</span>est de la forme:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c71a9b3-5b93-4099-93e4-aae3c86df21e">
-<span class="eqno">(104)<a class="headerlink" href="#equation-3c71a9b3-5b93-4099-93e4-aae3c86df21e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e8b87859-5165-45f3-91a8-2bc3ff5669e3">
+<span class="eqno">(93)<a class="headerlink" href="#equation-e8b87859-5165-45f3-91a8-2bc3ff5669e3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{e_m}{\sqrt{1 + {\left(RC \omega\right)}^2}} \cos\left(\omega t - \arctan \left(RC \omega\right) \right)
 \end{equation}\]</div>
 <div class="figure align-center" id="fig-185">
@@ -701,13 +712,13 @@ On a pris comme “origine des phases”, c’est-à-dire comme signal dont la p
 </details><p class="card-text"><strong>Non-méthode: Utilisation des réelles.</strong><br />
 Insistons sur le fait que cette méthode n’est PAS à utiliser. Elle est présentée ici pour montrer que la résolution avec les complexes est plus simple.</p>
 <p class="card-text">On cherche un régime forcé sous la forme <span class="math notranslate nohighlight">\(s(t) = s_m \cos \omega t + \varphi\)</span>. On l’introduit dans l’équation différentielle, ce qui donne:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-742111fb-8eeb-40a6-b3f6-910b90d9ecfd">
-<span class="eqno">(105)<a class="headerlink" href="#equation-742111fb-8eeb-40a6-b3f6-910b90d9ecfd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8f5d6bbd-79c4-41d6-8f69-0a1325dcaf80">
+<span class="eqno">(94)<a class="headerlink" href="#equation-8f5d6bbd-79c4-41d6-8f69-0a1325dcaf80" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 - RC \omega s_m \sin (\omega t + \varphi) + s_m \cos \omega t + \varphi = e_m \cos \omega t
 \end{equation}\]</div>
 <p class="card-text">soit en linéarisant:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-67b4a935-74ad-4840-bfb6-45e1d2150ff7">
-<span class="eqno">(106)<a class="headerlink" href="#equation-67b4a935-74ad-4840-bfb6-45e1d2150ff7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ad272c19-b165-4793-bf30-429bff861176">
+<span class="eqno">(95)<a class="headerlink" href="#equation-ad272c19-b165-4793-bf30-429bff861176" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 s_m \left(- RC \omega \cos \varphi - \sin \varphi\right) \sin \omega t  + s_m \left(\omega \cos \varphi - RC \sin \varphi\right) \cos \omega t = e_m \cos \omega t
 \end{equation}\]</div>
 <p class="card-text">L’égalité étant vraie pour tout t, il vient que les coefficients devant chaque sinus et cosinus doivent être les mêmes:</p>
@@ -746,8 +757,8 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 <div class="hint admonition">
 <p class="admonition-title">Définition : Impédance complexe</p>
 <p>On définit l’<strong>impédance complexe</strong> d’un dipôle par la grandeur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-98c68171-400b-4438-aed0-17d52ad9c322">
-<span class="eqno">(107)<a class="headerlink" href="#equation-98c68171-400b-4438-aed0-17d52ad9c322" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-dc930e0b-db23-4535-b69a-1bdab840239c">
+<span class="eqno">(96)<a class="headerlink" href="#equation-dc930e0b-db23-4535-b69a-1bdab840239c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{Z} = \frac{\underline{u}}{\underline{i}} = \frac{\underline{u_m}}{\underline{i_m}}
 \end{equation}\]</div>
 <p>Elle ne dépend pas du temps mais peut dépendre de la pulsation du circuit.</p>
@@ -756,8 +767,8 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 <p class="admonition-title">Important</p>
 <p><strong>Définition : Admittance complexe</strong></p>
 <p>On définit <strong>l’admittance complexe</strong> comme l’inverse de l’impédance complexe:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3cf30a92-717f-4d70-b379-3bd159975250">
-<span class="eqno">(108)<a class="headerlink" href="#equation-3cf30a92-717f-4d70-b379-3bd159975250" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1d61c21a-7761-4f54-bf2d-07599226ef31">
+<span class="eqno">(97)<a class="headerlink" href="#equation-1d61c21a-7761-4f54-bf2d-07599226ef31" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{Y} = \frac{1}{\underline{Z}} = \frac{\underline{i}}{\underline{u}} = \frac{\underline{i_m}}{\underline{u_m}}
 \end{equation}\]</div>
 </div>
@@ -829,13 +840,13 @@ Correction<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>Méthode 1: Utilisation des lois de Kirchoff</strong><br />
 La lois des mailles s’écrit: <span class="math notranslate nohighlight">\(u_R + u_L + u_C = e\)</span> et reste vraie avec les représentations complexes. En régime sinusoïdal forcé, on utilise les impédances: <span class="math notranslate nohighlight">\(\underline{u_R} = R \underline{i}; \underline{u_L} = j L \omega \underline{i}; \underline{u_C} = \frac{\underline{i}}{jC \omega}\)</span>. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-13bf0c49-fa7f-4021-bfd2-238899a64bf0">
-<span class="eqno">(109)<a class="headerlink" href="#equation-13bf0c49-fa7f-4021-bfd2-238899a64bf0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2fb418e0-633b-4c03-8741-afda450be5ba">
+<span class="eqno">(98)<a class="headerlink" href="#equation-2fb418e0-633b-4c03-8741-afda450be5ba" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \left(R + j L \omega + \frac{1}{j C \omega}\right) \underline{i} = \underline{e} \Longrightarrow \underline{i} = \frac{\underline{e}}{R + j L \omega + \frac{1}{j C \omega}}
 \end{equation}\]</div>
 <p class="card-text">On déduite la tension <span class="math notranslate nohighlight">\(u_C\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-62a92413-068c-429b-aad4-cafcd535c7db">
-<span class="eqno">(110)<a class="headerlink" href="#equation-62a92413-068c-429b-aad4-cafcd535c7db" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b7666489-4fe6-4fdd-9574-6ff691b9b7d3">
+<span class="eqno">(99)<a class="headerlink" href="#equation-b7666489-4fe6-4fdd-9574-6ff691b9b7d3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{u_C} = \frac{\underline{i}}{jC \omega} = \frac{\underline{e}}{jRC \omega - LC \omega^2 + 1}
 \end{equation}\]</div>
 <p class="card-text"><strong>Méthode 2: Pont diviseur</strong><br />
@@ -848,13 +859,13 @@ R, L et C forment un pont diviseur de tension, il vient que:</p>
 <p class="card-text"><strong>Passage aux grandeurs réelles</strong><br />
 On ne va travailler ici que sur l’intensité.</p>
 <p class="card-text">Amplitude réelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8cdb3efc-a82c-4284-b75a-32bad768c6ab">
-<span class="eqno">(111)<a class="headerlink" href="#equation-8cdb3efc-a82c-4284-b75a-32bad768c6ab" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bc1b5601-7f85-4efa-a2e5-2503c86584a7">
+<span class="eqno">(100)<a class="headerlink" href="#equation-bc1b5601-7f85-4efa-a2e5-2503c86584a7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_m = \left\vert \underline{i} \right\vert = \frac{e_m}{\sqrt{R^2 + {\left(L \omega - \frac{1}{C \omega}\right)}^2}}
 \end{equation}\]</div>
 <p class="card-text">Phase à l’origine:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-564daf6b-a950-4e77-8c9c-42a2ba235dee">
-<span class="eqno">(112)<a class="headerlink" href="#equation-564daf6b-a950-4e77-8c9c-42a2ba235dee" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2f6f2533-8c32-4930-b1b1-ee3396af60b2">
+<span class="eqno">(101)<a class="headerlink" href="#equation-2f6f2533-8c32-4930-b1b1-ee3396af60b2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \phi_i = \arg \underline{i} = \arg \underline{e} - \arg \left(R + j \left(L \omega - \frac{1}{C \omega}\right)\right) = - \arctan \frac{1}{R}\left(L \omega - \frac{1}{C \omega}\right)
 \end{equation}\]</div>
 <div class="hint admonition">
@@ -941,8 +952,8 @@ On rappelle que si l’on a établit une équation différentielle reliant des g
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère un système dont la relation entrée sortie entre les grandeurs complexes (on parle de fréquentiel) est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0eaf107c-d8da-4bf5-b94d-5d6b5958d0e4">
-<span class="eqno">(113)<a class="headerlink" href="#equation-0eaf107c-d8da-4bf5-b94d-5d6b5958d0e4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-83821fd6-cf9a-4972-ad6c-d7695c822a7a">
+<span class="eqno">(102)<a class="headerlink" href="#equation-83821fd6-cf9a-4972-ad6c-d7695c822a7a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\underline{s}}{\underline{e}} = \frac{1 - jRC \omega}{1 - LC \omega^2 + j RC \omega}
 \end{equation}\]</div>
 <p>Déterminer l’équation différentielle qui relie les grandeurs <span class="math notranslate nohighlight">\(s(t)\)</span> à <span class="math notranslate nohighlight">\(e(t)\)</span>.</p>
@@ -955,13 +966,13 @@ Correction<div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">On commence par exprimer l’équation sous forme <span class="math notranslate nohighlight">\(P(j\omega) \underline{s} = Q(j \omega) \underline{e}\)</span> où P et Q sous des polynômes en <span class="math notranslate nohighlight">\(j \omega\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2c4b5b0c-83e3-45ee-88cc-a8e367b40e3d">
-<span class="eqno">(114)<a class="headerlink" href="#equation-2c4b5b0c-83e3-45ee-88cc-a8e367b40e3d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f4968edc-00a2-4a4e-9e3d-3a686c729547">
+<span class="eqno">(103)<a class="headerlink" href="#equation-f4968edc-00a2-4a4e-9e3d-3a686c729547" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s} - LC \omega^2 \underline{s} + j RC \omega \underline{s} = \underline{e} - jRC \omega \underline{e}
 \end{equation}\]</div>
 <p class="card-text">On remplacer chaque terme en <span class="math notranslate nohighlight">\(j \omega\)</span> par une dérivée temporelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-61675700-9515-4237-b878-7155bf00d03d">
-<span class="eqno">(115)<a class="headerlink" href="#equation-61675700-9515-4237-b878-7155bf00d03d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0146f46c-0a91-4ffb-aec2-97bea054d049">
+<span class="eqno">(104)<a class="headerlink" href="#equation-0146f46c-0a91-4ffb-aec2-97bea054d049" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 s + LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} = e - RC \frac{\rm{d}e}{\rm{dt}}
 \end{equation}\]</div>
 </div>
@@ -1062,8 +1073,8 @@ Nous allons voir que l’étude des comportements haute et basse fréquence perm
 <p class="admonition-title">Important</p>
 <p><strong>Fondamental : Comportement passe-bas d’ordre 2</strong></p>
 <p>Pour une grandeur d’un système d’ordre 2 dont le comportement haute fréquence est nul et le comportement basse fréquence non nul, sa représentation complexe peut se mettre sous la forme:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-285d8a41-916c-4916-a172-63422c31208c">
-<span class="eqno">(116)<a class="headerlink" href="#equation-285d8a41-916c-4916-a172-63422c31208c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4d491914-0223-47ee-bca3-01b922a904ab">
+<span class="eqno">(105)<a class="headerlink" href="#equation-4d491914-0223-47ee-bca3-01b922a904ab" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s} = \frac{A}{1 - {\left(\frac{\omega}{\omega_0}\right)}^2 + j \frac{\omega}{Q\omega_0}} = \frac{A}{1 - x^2 +  j\frac{x}{Q}}
 \end{equation}\]</div>
 <p>où <span class="math notranslate nohighlight">\(x = \frac{\omega}{\omega_0} \)</span> est appelée pulsation réduite (attention, elle est sans dimension!).</p>
@@ -1108,16 +1119,27 @@ Les termes passe-bas et passe-bande seront expliqué plus en détail au prochain
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="rsf_gene.html" title="previous page">Régime sinusoïdal forcé</a>
-    <a class='right-next' id="next-link" href="ex_app_rsf.html" title="next page">Activités d’application</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="rsf_gene.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Régime sinusoïdal forcé</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="ex_app_rsf.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Activités d’application</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -1133,8 +1155,7 @@ Les termes passe-bas et passe-bande seront expliqué plus en détail au prochain
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

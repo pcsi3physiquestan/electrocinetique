@@ -1,0 +1,708 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrainement : Filtrage linéaire &#8212; Electrocinétique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_filtrage_td.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Activités : Typologie des filtres" href="el_filtrage_meth_typo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../electrocinetique.html">
+   Electrocinétique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_exemples.html">
+       Méthodes d’étude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_meth_r.html">
+       Activité : Résistance d’entrée et résistance de sortie
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_trans.html">
+   Régime transitoire (1): Caractéristiques générales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_regimes.html">
+       Régime transitoire et régime forcé
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_methodes.html">
+       Méthodes d’analyse d’un régime transitoire
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_stabilite.html">
+       Stabilité des systèmes linéaires d’ordre 1 et 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_1.html">
+       Caractéristiques d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_2.html">
+       Caractéristiques d’un système d’ordre 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o1.html">
+       Exemple : Etude d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o2.html">
+       Exemple : Etude d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_exemples.html">
+       Exemples d’étude
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_trans_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_eq.html">
+         Equations dans un même circuit.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_oh.html">
+         Oscillateur harmonique
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_tps.html">
+         Temps caractéristique d’un système d’ordre 2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_energie.html">
+         Etude énergétique
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_app.html">
+       Applications
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_td.html">
+       Entrainement : Régimes de fonctionnements
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_interet.html">
+       Intérêt de l’étude fréquentielle (en ligne)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_gene.html">
+       Régime sinusoïdal forcé
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_methodes.html">
+       Méthodes : Etudier un circuit en RSF
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_rsf_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbande.html">
+         Cas passe-bande
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbas.html">
+         Cas passe-bas
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_app.html">
+       Application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_td.html">
+       Entrainement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="el_filtrage.html">
+   Filtrage linéaire
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_def.html">
+       Filtre: définition et caractéristiques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_gene.html">
+       Caractéristiques générales
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_cascade.html">
+       Mise en cascade des filtres
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="el_filtrage_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_methodes.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_meth_typo.html">
+       Activités : Typologie des filtres
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Entrainement : Filtrage linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/el_filtrage_td.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/el_filtrage_td.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_filtrage_td.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="entrainement-filtrage-lineaire">
+<h1>Entrainement : Filtrage linéaire<a class="headerlink" href="#entrainement-filtrage-lineaire" title="Permalink to this headline">¶</a></h1>
+<div class="attention admonition">
+<p class="admonition-title">Etude fréquentielle </p>
+<p>Pour chaque filtre ci-dessous, déterminer rapidement son type puis par le calcul sa fonction de transfert. On introduira la pulsation propre et si nécessaire le facteur de qualité et l’on précisera les asymptotes haute et basse fréquence sur le diagramme de Bode.</p>
+<p>Pour les filtre d’ordre 1, on déterminera de plus la monotonie et la pulsation de coupure.</p>
+<p>Pour les filtres d’ordre 2 passe-haut et bas, on déterminera l’existence possible d’une résonance ainsi que la pulsation de résonance. On déterminera aussi les valeurs particulières de la phase.</p>
+<p>Pour les filtres passe-bande et coupe-bande, on déterminera la bande passante (ou la bande coupée) et on montrera que le produit des pulsations de coupure vaut la pulsation propre au carré.</p>
+<div class="figure align-center" id="fig-215">
+<img alt="../_images/td_elec_phaut_bas_1.png" src="../_images/td_elec_phaut_bas_1.png" />
+</div>
+<div class="figure align-center" id="fig-216">
+<img alt="../_images/td_elec_phaut_bas_2.png" src="../_images/td_elec_phaut_bas_2.png" />
+</div>
+<div class="figure align-center" id="fig-217">
+<img alt="../_images/Electronique_TD4_EX1_1.jpg" src="../_images/Electronique_TD4_EX1_1.jpg" />
+</div>
+<div class="figure align-center" id="fig-218">
+<img alt="../_images/Electronique_TD4_EX1_2.jpg" src="../_images/Electronique_TD4_EX1_2.jpg" />
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p>Dans l’ordre:</p>
+<ul class="simple">
+<li><p>Passe-bas d’ordre 1. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span></p></li>
+<li><p>Passe-haut d’ordre 1. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{RC}\)</span></p></li>
+<li><p>Passe-bas d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span>.</p></li>
+<li><p>Passe-haut d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span>.</p></li>
+<li><p>Passe-bande d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = \frac{L_2}{L_1 + L_2}\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{(L_1 + L_2)C}}\)</span> et <span class="math notranslate nohighlight">\(Q = R\sqrt{\frac{C}{L_1 + L_2}}\)</span>.</p></li>
+<li><p>Coupe-bande d’ordre 2. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{RC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{4}\)</span>.</p></li>
+</ul>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Intégrateur pur  </p>
+<p><strong>Cet exercice traite un montage que vous DEVEZ reconnaître et savoir étudier comme une question de cours.</strong></p>
+<ol class="simple">
+<li><p>Déterminer la relation entrée sortie du montage suivant en grandeur complexe puis la relation temporelle entrée-sortie. Justifier ainsi l’appelation du montage.</p></li>
+<li><p>Proposer une utilisation pratique de ce montage en sortie d’un capteur qu’on précisera. Quel problème ce montage risque-t-il de poser à basse fréquence ?</p></li>
+<li><p>Déterminer l’impédance d’entrée du montage.</p></li>
+</ol>
+<div class="figure align-center" id="fig-219">
+<a class="reference internal image-reference" href="../_images/elec_integrateur.png"><img alt="../_images/elec_integrateur.png" src="../_images/elec_integrateur.png" style="width: 50%;" /></a>
+</div>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Réponse d’un filtre d’ordre 1 </p>
+<p>On considère le filtre ci-après. On prend <span class="math notranslate nohighlight">\(R=R_1=50 \rm{\Omega}\)</span> et <span class="math notranslate nohighlight">\(L = 10 \rm{mH}\)</span></p>
+<ol class="simple">
+<li><p>Déterminer le type de filtre puis la fonction de transfert.</p></li>
+<li><p>Donner une expression approchée (réfléchir au type de réponse approché le plus approprié) de <span class="math notranslate nohighlight">\(u_{S}(t)\)</span> pour:
+\begin{enumerate}1. un signal d’entrée sinusoïdal de fréquence 10kHz et d’amplitude 1V.</p></li>
+<li><p>un signal d’entrée sinusoïdal de fréquence 100Hz et d’amplitude 1V.</p></li>
+<li><p>un signal d’entrée créneau de période T=0,1ms.</p></li>
+<li><p>Représenter graphiquement <span class="math notranslate nohighlight">\(u_E(t)\)</span> et <span class="math notranslate nohighlight">\(u_S(t)\)</span> pour les trois signaux précédents et le comparer aux réponses exactes (on pourra utiliser une calculatrice graphique ou un simulateur). Commenter.</p></li>
+</ol>
+<div class="figure align-center" id="fig-220">
+<img alt="../_images/Electronique_TD4_EX3_1.jpg" src="../_images/Electronique_TD4_EX3_1.jpg" />
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<ul class="simple">
+<li><p>Passe-bas d’orrdre 1 avec <span class="math notranslate nohighlight">\(H_0 = \frac{R_1}{R + R_1}\)</span> et <span class="math notranslate nohighlight">\(\omega_0 = \frac{R_1 + R}{L}\)</span>.</p></li>
+<li><p>Dans l’ordre le premier signal de sortie est quasi-nul, le second non nul d’amplitude égale à l’entrée et en phase avec l’entrée et le troisième proche d’un sinusoïde.</p></li>
+</ul>
+<p><em>Note: En pratique, les simulation montre que ce n’est pas tout à fait vrai car à l’ordre 1, l’assimilation à un filtre idéal n’est pas tout à fait correct.</em></p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Réponse d’un filtre d’ordre 2 </p>
+<p>On place une bobine <span class="math notranslate nohighlight">\(L_1\)</span> et un condensateur <span class="math notranslate nohighlight">\(C_1\)</span> dans le circuit collecteur d’un transistor à effet de champ de façon à réaliser un amplificateur sélectif. Le montage ainsi obtenu est équivalent à celui ci-après. On a: <span class="math notranslate nohighlight">\(\underline{I_0} = s \underline{v_e}\)</span>. <span class="math notranslate nohighlight">\(s\)</span> étant supposé constant et réel pour le domaine de fréquence étudié.</p>
+<div class="figure align-center" id="fig-221">
+<img alt="../_images/Electronique_TD4_EX4_1.jpg" src="../_images/Electronique_TD4_EX4_1.jpg" />
+</div>
+<ol class="simple">
+<li><p>Déterminer la fonction de transfert <span class="math notranslate nohighlight">\(\underline{H}\)</span> sous la forme: <span class="math notranslate nohighlight">\(\underline{H} = \frac{A_0}{1+ jQ (x - \frac{1}{x})}\)</span> en notant <span class="math notranslate nohighlight">\(x=\frac{\omega}{\omega_0}\)</span>. Quelle est la nature de ce filtre? Quelle est sa bande passante?</p></li>
+</ol>
+<p>On envoie en entrée un signal périodique de pulsation <span class="math notranslate nohighlight">\(\omega=\omega_0\)</span>. On définit le taux d’harmonique de rang n d’un signal périodique par le rapport <span class="math notranslate nohighlight">\(\tau_{n} = \frac{V_n}{V_1}\)</span> de l’amplitude <span class="math notranslate nohighlight">\(V_n\)</span> de l’harmonique de rang n à l’amplitude <span class="math notranslate nohighlight">\(V_1\)</span> du fondamental. On note <span class="math notranslate nohighlight">\(\tau_{n,s}\)</span> et <span class="math notranslate nohighlight">\(\tau_{n,e}\)</span> les taux d’harmoniques respectifs des signaux d’entrée et de sortie.</p>
+<ol class="simple">
+<li><p>Calculer le taux d’atténuation <span class="math notranslate nohighlight">\(\delta_n = \frac{\tau_{n,s}}{\tau_{n,e}}\)</span> de l’harmonique de rang n en fonction de Q et de n.</p></li>
+<li><p>On choisit alors la valeur de Q pour laquelle le taux d’atténuation est de -40dB pour l’harmonique de rang 2. Quelle valeur de Q réalise cette condition?</p></li>
+</ol>
+<p>On envoie un signal créneau d’amplitude variant entre <span class="math notranslate nohighlight">\(E_1\)</span> et <span class="math notranslate nohighlight">\(E_2\)</span> de pulsation <span class="math notranslate nohighlight">\(\omega_0\)</span> en entrée. Celui-ci peut se décomposer en séries de Fourier (<span class="math notranslate nohighlight">\(T_0 = \frac{2 \pi}{\omega_0}\)</span> est la période du créneau):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-463e9b28-502b-403c-9b22-ddd8c309fc9b">
+<span class="eqno">(106)<a class="headerlink" href="#equation-463e9b28-502b-403c-9b22-ddd8c309fc9b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+e(t) = \frac{E_1+E_2}{2} + \sum\limits_{p=0}^{+\infty}\frac{2(E_1-E_2)}{(2p+1) \pi} \sin((2p+1) \frac{2 \pi}{T_0} t)
+\end{equation}\]</div>
+<ol class="simple">
+<li><p>Représenter sur un graphique [fréquence;amplitude], le diagramme du signal puis donner l’allure du signal temporelle de sortie en le justifiant.</p></li>
+</ol>
+</div>
+<div class="topic">
+<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A_0 = R_1 s\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> et <span class="math notranslate nohighlight">\(Q = R\sqrt{\frac{C}{L}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\delta_n = \frac{1}{\sqrt{1 + Q^2 (n^2 - \frac{1}{n^2})}}\)</span></p></li>
+<li><p>Q = 52</p></li>
+<li><p>Le signal de sortie pour le créneau sera un sinusoïde presque parfait.</p></li>
+</ul>
+<p><em>Note: L’ordre 2 permet, à la différence de l’ordre 1 d’approcher le résultat approché de manière relativement bonne. Le problème est la réalisation d’un circuit avec un aussi grand facteur de qualité. Pour contourner le problème, il faudrait utiliser un filtre d’ordre supérieur.</em></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="el_filtrage_meth_typo.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Activités : Typologie des filtres</p>
+        </div>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
