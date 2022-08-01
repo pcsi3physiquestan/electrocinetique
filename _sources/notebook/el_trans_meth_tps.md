@@ -27,7 +27,7 @@ On considère un système d'ordre 2 de facteur de qualité Q et de pulsation pro
 1. Commenter le rôle de $\omega_0$.
 ````
 
-````{admonition} Système rapide et régime critique
+````{admonition} A retenir - Système rapide et régime critique
 :class: important
 Pour obtenir un système rapide, il faut se placer dans un régime proche du régime critique, soit avoir un facteur de qualité proche de 1/2.
 
@@ -39,7 +39,7 @@ Il s'agit là d'une première inerprétation du facteur de qualité: on donnant 
 
 ````
 
-````{admonition} Loi d'échelle
+````{admonition} A retenir - Loi d'échelle
 :class: important
 Quelque soit la valeur de Q, le temps caractéristique est toujours proportionnel à $\frac{1}{\omega_0}$. La pulsation propre est donc un facteur d'échelle pour la rapidité du système. Plus la pulsation propre est grande, plus le système va réagir vite.
 

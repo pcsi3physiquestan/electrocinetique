@@ -15,7 +15,7 @@ kernelspec:
 ---
 # Activités : Typologie des filtres
 
-__Pour chaque filtre, démontrer les caractéristiques - qui sont aussi  à connaître par coeur - à partir de la forme canonique.__
+__Pour chaque filtre, démontrer les caractéristiques - qui sont aussi à connaitre par coeur - à partir de la forme canonique.__
 ## Filtre passe-bas d'ordre 1
 
 ````{important} 

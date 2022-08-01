@@ -279,17 +279,17 @@
          Oscillateur harmonique
         </a>
        </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_tps.html">
+         Temps caractéristique d’un système d’ordre 2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_energie.html">
+         Etude énergétique
+        </a>
+       </li>
       </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_meth_tps.html">
-       Temps caractéristique d’un système d’ordre 2
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_meth_energie.html">
-       Etude énergétique
-      </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="el_trans_app.html">
@@ -575,8 +575,8 @@
 <img alt="../_images/elec_circuit_rlc_serie.png" src="../_images/elec_circuit_rlc_serie.png" />
 </div>
 <p>Cette fois, on suppose les conditions initiales connues à t=0 :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1e466b20-5b37-4032-87e4-f197f8c0f1f2">
-<span class="eqno">(53)<a class="headerlink" href="#equation-1e466b20-5b37-4032-87e4-f197f8c0f1f2" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-795019c9-09bd-4c24-b740-b181ea151791">
+<span class="eqno">(53)<a class="headerlink" href="#equation-795019c9-09bd-4c24-b740-b181ea151791" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i(t=0) &amp;= i_0\\
 u_C(t=0) &amp;= 0
 \end{align}\]</div>
@@ -588,8 +588,8 @@ u_C(t=0) &amp;= 0
 <p class="topic-title first">Correction</p>
 <blockquote>
 <div><p>On peut appliquer une loi des mailles: <span class="math notranslate nohighlight">\(u_L + u_R + u_C = 0\)</span> soit <span class="math notranslate nohighlight">\(L \frac{\rm{d}i}{\rm{dt}} + Ri + u_C = 0\)</span>. Il reste à utiliser <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>, il vient en organisant):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0c9f8153-b466-4de8-af5c-641b9a83a15d">
-<span class="eqno">(54)<a class="headerlink" href="#equation-0c9f8153-b466-4de8-af5c-641b9a83a15d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-423b2be5-e811-408b-aa40-c8a7fdcbf7af">
+<span class="eqno">(54)<a class="headerlink" href="#equation-423b2be5-e811-408b-aa40-c8a7fdcbf7af" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L}\frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C= 0
 \end{equation}\]</div>
 <p>Il reste à identifier les facteurs:</p>
@@ -684,8 +684,8 @@ i(t) &amp;= \exp^{-\lambda t}\left( -\lambda \frac{i_0}{\Omega} \sin^{\Omega t} 
 \end{align*}\]</div>
 <p><strong>Q2.</strong> C’est le facteur <span class="math notranslate nohighlight">\(\exp{-\frac{\omega_0 t}{2Q}}\)</span> qui gouverne la décroissance en amplitude, le temps caractéristique est donc <span class="math notranslate nohighlight">\(\tau_{carac} = \frac{2Q}{\omega_0}\)</span> et l’exponentielle aura décru de 95% pour <span class="math notranslate nohighlight">\(3 \tau_{carac}\)</span>.</p>
 <p>La pseudo période a pour expression <span class="math notranslate nohighlight">\(T = \frac{2\pi}{\Omega} = \frac{2 \pi}{\frac{\omega_0}{Q}\sqrt{4Q^2 - 1}}\)</span>. Il vient qu’on pourra observer un nombre de périodes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-79486fde-374b-4d72-8374-778396c03d20">
-<span class="eqno">(55)<a class="headerlink" href="#equation-79486fde-374b-4d72-8374-778396c03d20" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9994123c-6d0c-49bf-8cdd-bd70a9331f8e">
+<span class="eqno">(55)<a class="headerlink" href="#equation-9994123c-6d0c-49bf-8cdd-bd70a9331f8e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 N_P = \frac{3 \tau_{carac}}{T} = \frac{3}{\pi}\sqrt{4Q^2 - 1}
 \end{equation}\]</div>
 <p>Pour <span class="math notranslate nohighlight">\(Q\)</span> grand, il vient <span class="math notranslate nohighlight">\(N_P \approx Q\)</span>. On observe que plus le facteur de qualité est grand, plus on observe de pseudo-périodes car le régime transitoire dure plus longtemps.</p>
@@ -716,21 +716,21 @@ On peut considérer que le nouveau régime forcé est indépendant du temps (pui
 <p>La bobine elle se comporte comme un fil. La loi des mailles donne donc que <span class="math notranslate nohighlight">\(u_C(t=+\infty) = E\)</span></p>
 <p><strong>Q2. Mise en équation</strong><br />
 On peut écrire la loi des mailles <span class="math notranslate nohighlight">\(E = u_C + u_R + u_L = u_C + R i + L \frac{\rm{d}i}{\rm{dt}} = 0\)</span>. Soit avec <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f87209e-2799-41dc-8ad6-491f7628fcee">
-<span class="eqno">(56)<a class="headerlink" href="#equation-9f87209e-2799-41dc-8ad6-491f7628fcee" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0c6e948d-6d2c-47ef-9d08-5253ef8701e0">
+<span class="eqno">(56)<a class="headerlink" href="#equation-0c6e948d-6d2c-47ef-9d08-5253ef8701e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = \frac{1}{LC}E
 \end{equation}\]</div>
 <p>Il vient <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{LC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{R}\sqrt{\frac{L}{C}}\)</span> soit les mêmes expressions que dans le cas du régime libre. C’est normal puisqu’il s’agit du même système (RLC série) confronté à une entrée différente (nulle dans un cas et égale à E dans l’autre).</p>
 <p><strong>Q3. Expression temporelle - Cas pseudo-périodique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d768b328-e71e-4bb5-9a83-9661e24cdbf2">
-<span class="eqno">(57)<a class="headerlink" href="#equation-d768b328-e71e-4bb5-9a83-9661e24cdbf2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d3a31177-0d6c-46b5-9f2e-ae5bb7156450">
+<span class="eqno">(57)<a class="headerlink" href="#equation-d3a31177-0d6c-46b5-9f2e-ae5bb7156450" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right)
 \end{equation}\]</div>
 <p>avec <span class="math notranslate nohighlight">\(\Omega = \omega_0 \sqrt{1 - \frac{1}{4Q^2}}\)</span> la pseudo-pulsation du système.</p>
 <p>On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-096f7fc4-783a-4d51-89e6-6cdb33c2df7e">
-<span class="eqno">(58)<a class="headerlink" href="#equation-096f7fc4-783a-4d51-89e6-6cdb33c2df7e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-bf602048-21f5-44c3-81a1-749fd356a1ba">
+<span class="eqno">(58)<a class="headerlink" href="#equation-bf602048-21f5-44c3-81a1-749fd356a1ba" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right) + E
 \end{equation}\]</div>
 <p>Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
@@ -743,14 +743,14 @@ i(t = 0) &amp;= C D \left(-\Omega \sin{\varphi} -\frac{\omega_0}{2Q} \cos{\varph
 \end{align*}\]</div>
 <p><strong>Q4. Expression temporelle - Cas apériodique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-567d7b20-4a33-4763-8405-bb8c72ce54d9">
-<span class="eqno">(59)<a class="headerlink" href="#equation-567d7b20-4a33-4763-8405-bb8c72ce54d9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-eec90c40-def9-4fd5-aa88-cece22397008">
+<span class="eqno">(59)<a class="headerlink" href="#equation-eec90c40-def9-4fd5-aa88-cece22397008" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
 \end{equation}\]</div>
 <p>avec <span class="math notranslate nohighlight">\(r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})\)</span>.</p>
 <p>On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ef8fe3a-de5e-4025-ad16-bd24f8181e9a">
-<span class="eqno">(60)<a class="headerlink" href="#equation-2ef8fe3a-de5e-4025-ad16-bd24f8181e9a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d7017ac7-2185-416b-9360-6b9d7afca6f8">
+<span class="eqno">(60)<a class="headerlink" href="#equation-d7017ac7-2185-416b-9360-6b9d7afca6f8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = A \exp^{r_1 t} + B \exp^{r_2 t} + E
 \end{equation}\]</div>
 <p>Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
@@ -763,14 +763,14 @@ u_{c}(t) = A r_1 + B r_2 = 0\\
 \end{align*}\]</div>
 <p><strong>Q5. Expression temporelle - Cas critique</strong><br />
 La solution générale ESSM est alors:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d3bfeb37-9a7f-4a2f-8986-77312875cf37">
-<span class="eqno">(61)<a class="headerlink" href="#equation-d3bfeb37-9a7f-4a2f-8986-77312875cf37" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f9508434-3273-4619-a378-8e8fc3cffcf3">
+<span class="eqno">(61)<a class="headerlink" href="#equation-f9508434-3273-4619-a378-8e8fc3cffcf3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c,0}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right)
 \end{equation}\]</div>
 <p>avec <span class="math notranslate nohighlight">\(r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})\)</span>.</p>
 <p>On recherche une solution particulière de l’équation avec second membre. On la cherche sous forme constante <span class="math notranslate nohighlight">\(u_C = U_0\)</span>. Les dérivées étant nulles, on trouve directement <span class="math notranslate nohighlight">\(U_0 = E\)</span>. La solution complète est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b9a345b9-f10f-4585-b4b4-9d8b6fdedcc8">
-<span class="eqno">(62)<a class="headerlink" href="#equation-b9a345b9-f10f-4585-b4b4-9d8b6fdedcc8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cc756e0b-03dc-49bd-81f6-a5724571dcc6">
+<span class="eqno">(62)<a class="headerlink" href="#equation-cc756e0b-03dc-49bd-81f6-a5724571dcc6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_{c}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right) + E
 \end{equation}\]</div>
 <p>Il reste à utiliser les conditions initiales en utilisant le fait que <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>

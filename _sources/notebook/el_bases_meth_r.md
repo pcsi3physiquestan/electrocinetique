@@ -27,10 +27,12 @@ La résistance de sortie d'un GBF est une donnée constructeur. Elle peut être 
 
 _La résistance d'entrée d'un voltmètre est en général donnée par le constructeur._
 ````
-````{important} __Résistance d'entrée d'un instrument de mesure__
+````{important} 
+__A retenir - Résistance d'entrée d'un instrument de mesure__  
 Un instrument de mesure comme un multimètre ou un oscilloscope possède ses propres caractéristiques électriques. Du point de vue du reste du circuit, ce comportement, en régime indépendant du temps, peut-être __modélisé__ par une résistance qu'on appelle __résistance d'entrée de l'appareil.__
 ````
-````{important} __Résistance de sortie d'un générateur, d'une source__
+````{important} 
+__A retenir - Résistance de sortie d'un générateur, d'une source__  
 Lorsqu'on utilise un générateur (GBF comme générateur basse fréquence en TP) en pratique, on règle la tension qu'il doit délivrer. Cela revient à régler la fem de la source étudiée précédemment. Néanmoins, dans une source réelle, l'intensité demandée occasionne une chute de tension qu'on __modélise__ par une résistance en série avec la fem (modèle de Thévenin). Cette résistance est appelée __résistance de sortie__ du générateur.
 ````
 
