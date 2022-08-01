@@ -37,9 +37,9 @@ L'interrupteur étant en position 1 depuis un temps long, il bascule à t=0 en p
 
 Pour une grandeur dans un système d'ordre 1, l'équation différentielle se met sous la forme canonique suivante:
 
-\begin{equation}
+$$
 \frac{\rm{d}X}{\rm{dt}}(t) + \frac{1}{\tau} X(t) = F(t)
-\end{equation}
+$$
 Comme on le verra, $\tau$ est le temps caractéristique du système.
 
 ````
@@ -51,9 +51,9 @@ La loi des mailles s'écrit: $u_R + u_C = 0 = R i + u_C$.
 
 En utilisant l'équation d'évolution du condensateur, il vient:
 
-\begin{equation}
+$$
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = 0
-\end{equation}
+$$
 On a donc $\tau = RC.$
 
 ````
@@ -87,17 +87,17 @@ Par continuité $u_C(t=0^+) = E$.
 
 La condition initiale permet d'écrire A = E soit:
 
-\begin{equation}
+$$
 u_C(t) = E \exp^{-t/\tau}
-\end{equation}\end{ex}
+$$\end{ex}
 ````
 
 ````{admonition} Cas du circuit RC: Evolution temporelle de l'intensité
 Pas besoin de tout réétudier. Il suffit d'utiliser la relation $i = C \frac{\rm{d}u_C}{\rm{dt}}$:
 
-\begin{equation}
+$$
 i(t) = -\frac{E}{R} \exp^{-t/\tau}
-\end{equation}\end{ex}
+$$\end{ex}
 
 ```{dropdown} Remarque
 
@@ -163,17 +163,17 @@ On peut calculer l'énergie fournie par le condensateur de deux manières: en in
 
 S'il faut savoir faire les deux dans un cas simple comme un circuit d'ordre 1, il vaut mieux privilégier l'utilisation de l'énergie stockée si on a le choix. Ici, l'énergie fournie par le condensateur est:
 
-\begin{equation}
+$$
 \Delta E_C = E_L(0) - E_L(t=+\infty) = \frac{1}{2}C u_C(t=0)^2 - \frac{1}{2}C u_C(t=+\infty)^2 = \frac{C E^2}{2}
-\end{equation}
+$$
 
 
 __Energie dissipée par effet Joule dans R__  
 Pour la résistance, on a pas le choix, l'énergie dissipée ne peut se calculer qu'en intégrant la puissance reçue soit:
 
-\begin{equation}
+$$
 E_J = \int_{t=0}^{t=+\infty} \frac{u_R^2(t)}{R} dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
-\end{equation}
+$$
 
 
 __Bilan énergétique__  
@@ -212,9 +212,9 @@ Le condensateur se comporte alors comme un interrupteur ouvert et i=0. Il vient 
 __Q2. Mise en équation__  
 Cette fois la loi des mailles s'écrit: $E - R i(t) - u_C(t) = 0$. On utilise à nouveau la relation tension-intensité du condensateur, il vient:
 
-\begin{equation}
+$$
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = \frac{E}{RC}
-\end{equation}
+$$
 On doit déterminer les conditions initiales. Dans le régime forcé indépendant du temps avant t=0, on cherche la grandeur continue, ici la tension aux bornes du condensateur. Le condensateur se comporte comme un interrupteur ouvert donc l'intensité est nulle et donc $u_C(t=0^-) = u_R(t=0^-) = 0$
 
 Par continuité $u_C(t=0^+) = 0$
@@ -227,17 +227,17 @@ La solution est donc: $A \exp^{-t/RC} + E$
 
 On utilise la condition initiale qui donne A = -E donc:
 
-\begin{equation}
+$$
 u_C(t) = E (1 - \exp^{-t/\tau})
-\end{equation}
+$$
 
 
 __Q3. Intensité__  
 Il suffit de dériver et de multiplier par C:
 
-\begin{equation}
+$$
 i(t) = \frac{E}{R} \exp^{-t/\tau}
-\end{equation}
+$$
 
 
 __Q4. Etude énergétique__  
@@ -249,19 +249,19 @@ Bilan énergétique:
 
 On commence par l'énergie fournie par le générateur: 
 
-\begin{equation}
+$$
 E_E= \int_{t=0}^{t=+\infty} Ei(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{t}{RC}} dt = CE^2
-\end{equation}
+$$
 Ensuite l'énergie dissipée par la résistance: 
 
-\begin{equation}
+$$
 E_J = \int_{t=0}^{t=+\infty} R i^2(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
-\end{equation}
+$$
 Enfin l'énergie stockée par le condensateur: 
 
-\begin{equation}
+$$
 \Delta E_C = E_C(t=+\infty) - E_C(t=0) = \frac{1}{2}C u_C(t=\infty)^2 - \frac{1}{2}C u_C(t=0)^2 = \frac{C E^2}{2}
-\end{equation}
+$$
 
 ```{dropdown} Remarque
 

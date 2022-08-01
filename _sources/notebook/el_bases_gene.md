@@ -80,9 +80,9 @@ L'intensité qui traverse un dipôle est relié à la tension entre ses bornes p
 :class: full-width
 Un dipôle est dit __linéaire__ si son équation d'évolution est une équation différentielle linéaire.
 
-\begin{equation}
+$$
 a_n \frac{d^n u(t)}{dt^n} + a_{n-1} \frac{d^{n-1} u(t)}{dt^{n-1}} + ... + a_1 \frac{d u(t)}{dt} + a_0 u(t)= b_n \frac{d^n i(t)}{dt^n} + ... + b_1 \frac{d i(t)}{dt} + b_0 i(t) + F(t)
-\end{equation}
+$$
 _L'ordre de l'équation différentielle est le rang de la dérivée la plus grande._
 
 * __Circuit linéaire__

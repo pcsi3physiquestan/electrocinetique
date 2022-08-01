@@ -50,9 +50,9 @@ On considère le circuit suivant (la bobine est idéale). A $t=0$, le condensate
 
 Un oscillateur harmonique est un système dont les grandeurs suivent une équation d'évolution sous la forme:
 
-\begin{equation}
+$$
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + \omega_0^2 X(t) = F(t)
-\end{equation}
+$$
 $\omega_0$ est appelée la __pulsation propre__ de l'oscillateur.
 
 ```
@@ -63,9 +63,9 @@ Un oscillateur harmonique est une oscillateur non amorti sinusoïdal: sans excit
 
 On rappelle que l'expression temporelle peut alors se mettre sous la forme:
 
-\begin{equation}
+$$
 X(t) = D \cos{\left(\omega_0 t + \varphi\right)} = A \cos{\omega_0 t} + B \sin{\omega_0 t}
-\end{equation}
+$$
 Attention: s'il y a un second membre, il faut lui rajouter la solution particulière associée.
 
 ```

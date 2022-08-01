@@ -142,9 +142,9 @@ V_C &= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 \end{align}
 d'où une tension:
 
-\begin{equation}
+$$
 \boxed{U_{BC} = \frac{- E R_1}{2 \left (R_1 + R\right )}}
-\end{equation}
+$$
 
 __Vérification du résultat__  
 * Homogénéité: On a bien une tension multipliée par un rapport de résistances, soit une tension.
@@ -181,9 +181,10 @@ E - U_1 + U_2 &= 0\\
 \end{cases}
 \end{equation}
 Il reste à éliminer successivement __les tensions qui ne nous intéressent pas__ pour avoir à la fin une équation en $U_{BC}$ seule. On trouve (s'entrainer à le faire):
-\begin{equation}
+
+$$
 \boxed{U_{BC} = \frac{- E R_1}{2 \left (R_1 + R\right )}}
-\end{equation}
+$$
 ````
 
 (pont_div)=
@@ -216,27 +217,27 @@ On doit :
 
 Les résistance $R_1$ et $R_2$ sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer $U_{R1}$:
 
-\begin{equation}
+$$
 U_{R1} = \frac{R_1}{R_1+R_2} E
-\end{equation}
+$$
 Les résistance $R_3$ et $R_4$ sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer $U_{R4}$:
 
-\begin{equation}
+$$
 U_{R4} = \frac{R_4}{R_3+R_4} E
-\end{equation}
+$$
 
 
 __Équilibre du pont__  
 Il vient :
 
-\begin{equation}
+$$
 U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
-\end{equation}
+$$
 Le pont est donc équilibré quand :
 
-\begin{equation}
+$$
 \boxed{R_4 R_2 = R_3 R_1}
-\end{equation}
+$$
 ````
 
 ## Dipôles équivalents
@@ -333,9 +334,10 @@ E - R i_1 - u &= 0
 \end{align}
 >En multipliant par R la première équation et en sommant, il vient:
 >
-\begin{equation}
+
+$$
 u = \frac{E + R i_0 - R i}{2}
-\end{equation}
+$$
 >Par identification, on trouve:
 >
 >\begin{align}

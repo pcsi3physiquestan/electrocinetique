@@ -151,9 +151,9 @@ On peut aussi faire l'inverse et déduire d'une étude des grandeurs complexes, 
 
 On considère un système dont la relation entrée sortie entre les grandeurs complexes (on parle de fréquentiel) est:
 
-\begin{equation}
+$$
 \frac{\underline{s}}{\underline{e}} = \frac{1 - jRC \omega}{1 - LC \omega^2 + j RC \omega}
-\end{equation}
+$$
 Déterminer l'équation différentielle qui relie les grandeurs $s(t)$ à $e(t)$.
 ````
 

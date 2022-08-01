@@ -112,9 +112,10 @@ On supposera dans tout l'exercice que la valeur finale est $u(t=\infty) = 0$.
 :class: attention
 
 * Question préliminaire. Montrer que (n est une entier):
-\begin{equation}
+
+$$
 \delta = \frac{1}{n}\ln \left( \frac{u(t)}{u(t+nT)}\right)
-\end{equation}
+$$
 
 * Mesurer pour le signal $u(t)$ ci-dessous les valeurs successives des maxima (au moins 6)
 * En déduire des valeurs de $\delta$ pour n allant de 1 à 6 puis une valeur moyenne de $\delta$.

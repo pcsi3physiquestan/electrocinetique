@@ -37,14 +37,14 @@ Considérons N résistances en série dont les résistances sont $\{R_i \vert i 
 
 L'intensité circulant dans l'ensemble est:
 
-\begin{equation}
+$$
 i = \frac{u}{\sum_{i=1}^{i=n} R_i}
-\end{equation}
+$$
 Et la tension u se divise dans chaque dipôle. La tension aux bornes de la résistance $R_k$ est:
 
-\begin{equation}
+$$
 u_k = \frac{R_k}{\sum_{i=1}^{i=n} R_i} u
-\end{equation}\end{basic}
+$$\end{basic}
 ````
 
 ````{topic} Démonstration  
@@ -67,14 +67,14 @@ Considérons N résistances en parallèle dont les conductances sont $\{G_i \ver
 
 La tension aux bornes de l'ensemble est:
 
-\begin{equation}
+$$
 u = \frac{i}{\sum_{i=1}^{i=n} G_i}
-\end{equation}
+$$
 Et le courant i se divise dans chaque branche. L'intensité aux bornes de la résistance $R_k$ est:
 
-\begin{equation}
+$$
 i_k = \frac{G_k}{\sum_{i=1}^{i=n} G_i} i
-\end{equation}
+$$
 ````
 
 ````{topic} Démonstration  

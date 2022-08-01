@@ -260,9 +260,9 @@ Nous allons voir ici l'exemple d'autres études à partir soit de l'équation di
 
 On traaille avec le même système que précédemment. On rappelle que l'équation qui régit l'évolution de i_L(t) est:
 
-\begin{equation}
+$$
 \frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
-\end{equation}
+$$
 Conditions initiales: $i_l(t=0^+) = 0$ et $\frac{\rm{d}i_l}{\rm{dt}}(t=0^+) = 0$
 
 1. Déterminer $i_l(t)$ dans l'hypothèse $R > \sqrt{\frac{L}{C}}$.

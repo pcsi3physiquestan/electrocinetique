@@ -75,9 +75,10 @@ __1. Etude fréquentielle__
 On considère une entrée sinusoïdale $e(t) = e_m \cos \left (\omega t \right)$. On cherche le régime forcé vers lequel tend le circuit. On observe expérimentalement qu'il s'agit d'un régime __sinusoïdal forcé__, c'est-à-dire que toutes les grandeurs du circuit vont osciller de manière sinusoïdale à la même pulsation que l'entrée, soit une pulsation $\omega$.
 
 Une étude de ce régime forcé (_elle sera expliquée par la suite, c'est le coeur du chapitre_) montre que le régime forcé est alors:
-\begin{equation}
+
+$$
 \frac{e_m}{\sqrt{1 + {\left(RC \omega\right)}^2}} \cos\left(\omega t - \arctan \left(RC \omega\right) \right)
-\end{equation}
+$$
 
 ```{note}
 On observe ici les deux grandeurs importantes qu'on cherchera à déterminer lors d'une étude fréquentielle - on rappelle étude de la réponse forcée à un sinusoïde: l'amplitude de la sortie et le déphasage entrée-sortie. Ces deux grandeurs dépendent de la fréquence et l'étude __fréquentielle__ consiste en général à étude cette dépendance.

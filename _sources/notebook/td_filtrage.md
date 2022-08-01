@@ -141,9 +141,9 @@ On envoie en entrée un signal périodique de pulsation $\omega=\omega_0$. On d�
 
 On envoie un signal créneau d'amplitude variant entre $E_1$ et $E_2$ de pulsation $\omega_0$ en entrée. Celui-ci peut se décomposer en séries de Fourier ($T_0 = \frac{2 \pi}{\omega_0}$ est la période du créneau):
 
-\begin{equation}
+$$
 e(t) = \frac{E_1+E_2}{2} + \sum\limits_{p=0}^{+\infty}\frac{2(E_1-E_2)}{(2p+1) \pi} \sin((2p+1) \frac{2 \pi}{T_0} t)
-\end{equation}
+$$
 
 * Représenter sur un graphique [fréquence;amplitude], le diagramme du signal puis donner l'allure du signal temporelle de sortie en le justifiant. 
 ````

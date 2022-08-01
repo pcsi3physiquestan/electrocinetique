@@ -26,9 +26,9 @@ kernelspec:
 1. Déterminer le type de filtre par une étude haute et basse fréquence.
 1. Déterminer la fonction de transfert du filtre et en déduire son gain réel, son gain en décibel, sa phase. On introduira la pulsation propre $\omega _0$ telle que:
 
-\begin{equation}
+$$
 \underline{H} = \frac{A j\frac{\omega}{\omega_0}}{1 + j\frac{\omega}{\omega_0}} = \frac{A jx}{1 + jx}
-\end{equation}
+$$
 On veut tracer le diagramme de Bode. Montrer que:
 
 3. Le gain réel est strictement croissant
@@ -48,9 +48,9 @@ Le filtre a une fonction de transfert nulle à basse fréquence et non nulle à 
 __Fonction de transfert__  
 La bobine et la résistance forment un pont diviseur de tension. La tension aux bornes de la bobine est donc:
 
-\begin{equation}
+$$
 \underline{s} = \frac{jL\omega}{R + jL\omega} \underline{e} \Longrightarrow \underline{H} = \frac{j \frac{L}{R}\omega}{1 + j \frac{L}{R}\omega}
-\end{equation}
+$$
 Il vient que la pulsation propre est $\omega_0 = \frac{R}{L}$.
 
 Il vient que les caractéristiques du filtre sont:
@@ -193,9 +193,9 @@ On considère le filtre ci-dessous.
 
 On considère le filtre précédent et on envoie en entrée un signal créneau d'amplitude E. On admet que la décomposition spectrale du signal créneau est:
 
-\begin{equation}
+$$
 e(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{\sin \left((2k+1)2\pi f t\right)}{2k+1}
-\end{equation}
+$$
 
 1. Donner la réponse exacte du filtre pour une fréquence du créneau $f = f_0$ avec $f_0$ la fréquence propre associée à la pulsation propre.
 1. Donner une réponse approchée du filtre en assimilant sa réponse à celle d'un filtre idéal lorsque $f = f_0/2$.

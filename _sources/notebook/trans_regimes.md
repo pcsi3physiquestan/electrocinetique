@@ -105,9 +105,9 @@ En régime indépendant du temps, un condensateur est équivalent à un interrup
 __Démonstration__  
 Comme étudié dans le chapitre précédent, remarquons qu'en régime indépendant du temps, la dérivée de la tension est nulle. Il vient:
 
-\begin{equation}
+$$
 i = C \frac{\rm{d}u}{\rm{dt}} = 0
-\end{equation}
+$$
 L'intensité étant toujours nulle, le dipôle est assimilable à un interrupteur ouvert.
 
 
@@ -131,9 +131,9 @@ En régime indépendant du temps, une bobine est équivalent à un fil.
 __Démonstration__  
 Comme étudié dans le chapitre précédent, remarquons qu'en régime indépendant du temps, la dérivée de l'intensité est nulle. Il vient:
 
-\begin{equation}
+$$
 u =L \frac{\rm{d}i}{\rm{dt}} = 0
-\end{equation}
+$$
 La tension étant toujours nulle, le dipôle est assimilable à un fil.
 
 
@@ -411,9 +411,9 @@ L'instant correspond est de 3.1s. La perturbation arrivant à 0s, le temps de r�
 
 On considère le signal ci-après.
 
-\begin{equation}
+$$
 e_m \exp (- t / \tau)
-\end{equation}
+$$
 \begin{enumerate}
 * Déterminer le temps de réponse à N\%. L'exprimer pour N=95 puis pour N=99
 * En déduire un temps donnant l'ordre de grandeur du temps caractéristique pour une exponentielle décroissante.
@@ -428,9 +428,9 @@ e_m \exp (- t / \tau)
 __1.__  
 La valeur initiale est $e_m$ et la valeur finale 0. On cherche donc un écart à la valeur finale de $\frac{N}{100}(e_m - 0)$ soit :
 
-\begin{equation}
+$$
 e_m \exp (- t / \tau) - 0 = \frac{N}{100} e_m \Longrightarrow t = \tau \ln \left  (\frac{N}{100} \right )
-\end{equation}
+$$
 Pour 95\%, on trouve $t = 3 \tau$ etpour 99\%, on trouve $t = 5 \tau$.
 
 
@@ -446,9 +446,9 @@ On voit que le temps caractéristique est toujours de l'ordre de $\tau$. __Lorsq
 
 On considère le signal suivant:
 
-\begin{equation}
+$$
 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) + 3 e_m
-\end{equation}
+$$
 Déterminer une estimation du temps caractéristique après avoir préciser l'état final.
 ````
 
@@ -462,14 +462,14 @@ Le régime forcé s'obtient en passant simplement à la limite l'expression du s
 
 L'écart est donc:
 
-\begin{equation}
+$$
 \left \vert 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) \right \vert
-\end{equation}
+$$
 L'écart initial étant de $2 e_m$, il faut analyser la fonction:
 
-\begin{equation}
+$$
 f(t) = \left \vert \exp(-\frac{2t}{T})  - 2 \exp(-\frac{5t}{T}) \right \vert
-\end{equation}
+$$
 
 ```{dropdown} Remarque
 

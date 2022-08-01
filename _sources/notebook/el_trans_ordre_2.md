@@ -61,9 +61,9 @@ On rappelle que :
 __Solution de l'équation homogène__  
 On rappelle que la solution de l'équation homogène dans le cas où $\Delta > 0$, c'est-à-dire $Q < 1/2$ (ou $\xi > 1$ est:
 
-\begin{equation}
+$$
 X(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
-\end{equation}
+$$
 avec:
 
 \begin{align*}
@@ -91,14 +91,14 @@ Remarquons que dans le cas où les coefficients sont positifs, les deux racines 
 __Solution de l'équation homogène__  
 On rappelle que la solution de l'équation homogène dans le cas où $\Delta = 0$, c'est-à-dire $Q = 1/2$ (ou $\xi = 1$ est:
 
-\begin{equation}
+$$
 X(t) = \exp^{r_0 t} \left ( At + B\right)
-\end{equation}
+$$
 avec:
 
-\begin{equation}
+$$
 r_0 = - \frac{\omega_0}{2Q} = - \omega_0
-\end{equation}
+$$
 
 
 ```{margin}
@@ -175,9 +175,10 @@ Comme cette décroissance est exponentielle, nous utilisons un indicateur partic
 ````
 ````{important} __Décrément logarithmique.__
 Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique $\delta$ par:
-\begin{equation}
+
+$$
 \delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
-\end{equation}\end{defi}
+$$\end{defi}
 ````
 ````{important} __Interprétation__  
 On calcule l'écart à la valeur finale à deux instants t et t+T (ce second écart est plus faible pour un système stable). En faisant le rapport, on obtient un nombre d'autant plus grand que l'amortissement est fort. Le décrément est donc une mesure l'amortissement __en régime pseudo-périodique__. 
@@ -191,9 +192,9 @@ On peut analyser l'expression précédente en remarquant que plus Q augmente, pl
 ````{important} __Relation entre le décrément logarithmique et le facteur de qualité__
 On peut montrer que ('sentraîner à le faire - correction en ligne):
 
-\begin{equation}
+$$
 \delta = \frac{2\pi}{\sqrt{4Q^2 - 1}}
-\end{equation}\end{basic}
+$$\end{basic}
 ````
 
 ````{topic} __Démonstration__  

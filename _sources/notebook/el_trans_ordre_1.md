@@ -20,9 +20,9 @@ __Dans cette partie et la partie suivante, les résultats sont données mais il 
 ````{important} __Forme canonique de l'équation différentielle.__
 Pour une grandeur dans un système d'ordre 1, l'équation différentielle se met sous la forme canonique suivante:
 
-\begin{equation}
+$$
 \frac{\rm{d}X}{\rm{dt}}(t) + \frac{1}{\tau} X(t) = F(t)
-\end{equation}
+$$
 Comme on le verra, $\tau$ est le temps caractéristique du système.
 ````
 ## Evolution temporelle

@@ -44,9 +44,9 @@ On considère le circuit suivant (la bobine est idéale). A $t=0$, le condensate
 :class: tip
 * __Equation d'un oscillateur harmonique.__ Un oscillateur harmonique est un système dont les grandeurs suivent une équation d'évolution sous la forme:
 
-\begin{equation}
+$$
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + \omega_0^2 X(t) = F(t)
-\end{equation}
+$$
 $\omega_0$ est appelée la __pulsation propre__ de l'oscillateur.
 
 * __Evolution temporelle.__ Un oscillateur harmonique est une oscillateur non amorti sinusoïdal: sans excitation extérieure (solution de l'équation homogène), ses grandeurs ont une évolution temporelle décrite par __un sinusoïde qui ne s'atténue pas__. La pulsation des oscillations est la pulsation propre.

@@ -63,9 +63,9 @@ On appelle
 
 On peut appliquer une loi des mailles: $u_L + u_R + u_C = 0$ soit $L \frac{\rm{d}i}{\rm{dt}} + Ri + u_C = 0$. Il reste à utiliser $i = C \frac{\rm{d}u_C}{\rm{dt}}$, il vient en organisant):
 
-\begin{equation}
+$$
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L}\frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C= 0
-\end{equation}
+$$
 Il reste à identifier les facteurs:
 
 \begin{align*}
@@ -113,9 +113,9 @@ Il est conseillé de s'entraîner à exprimer les paramètres précédents en fo
 __Solution de l'équation homogène__  
 On rappelle que la solution de l'équation homogène dans le cas où $\Delta > 0$, c'est-à-dire $Q < 1/2$ (ou $\xi > 1$ est:
 
-\begin{equation}
+$$
 X(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
-\end{equation}
+$$
 avec:
 
 \begin{align*}
@@ -175,14 +175,14 @@ i(t) = C \frac{\rm{d}u_C}{\rm{dt}} &= \frac{Ci_0}{C (r_1 - r_2)} \left ( r_1 \ex
 __Solution de l'équation homogène__  
 On rappelle que la solution de l'équation homogène dans le cas où $\Delta = 0$, c'est-à-dire $Q = 1/2$ (ou $\xi = 1$ est:
 
-\begin{equation}
+$$
 X(t) = \exp^{r_0 t} \left ( At + B\right)
-\end{equation}
+$$
 avec:
 
-\begin{equation}
+$$
 r_0 = - \frac{\omega_0}{2Q} = - \omega_0
-\end{equation}
+$$
 
 
 __Analyse des expressions__  
@@ -336,9 +336,9 @@ Comme cette décroissance est exponentielle, nous allons utiliser un indicateur 
 
 Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique $\delta$ par:
 
-\begin{equation}
+$$
 \delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
-\end{equation}\end{defi}
+$$\end{defi}
 
 
 __Interprétation__  
@@ -351,9 +351,9 @@ Le fait que la décroissance soit exponentielle explique que l'on prenne le loga
 
 On peut montrer que:
 
-\begin{equation}
+$$
 \delta = \frac{2\pi}{\sqrt{4Q^2 - 1}}
-\end{equation}\end{basic}
+$$\end{basic}
 
 
 __Démonstration__  
@@ -449,9 +449,9 @@ La bobine elle se comporte comme un fil. La loi des mailles donne donc que $u_C(
 __Q2. Mise en équation__  
 On peut écrire la loi des mailles $E = u_C + u_R + u_L = u_C + R i + L \frac{\rm{d}i}{\rm{dt}} = 0$. Soit avec $i = C \frac{\rm{d}u_C}{\rm{dt}}$:
 
-\begin{equation}
+$$
 \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{R}{L} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = \frac{1}{LC}E
-\end{equation}
+$$
 Il vient $\omega_0 = \frac{1}{LC}$ et $Q = \frac{1}{R}\sqrt{\frac{L}{C}}$ soit les mêmes expressions que dans le cas du régime libre. C'est normal puisqu'il s'agit du même système (RLC série) confronté à une entrée différente (nulle dans un cas et égale à E dans l'autre).
 
 
@@ -459,16 +459,16 @@ Il vient $\omega_0 = \frac{1}{LC}$ et $Q = \frac{1}{R}\sqrt{\frac{L}{C}}$ soit l
 __Q3. Expression temporelle - Cas pseudo-périodique__  
 La solution générale ESSM est alors:
 
-\begin{equation}
+$$
 u_{c,0}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right)
-\end{equation}
+$$
 avec $\Omega = \omega_0 \sqrt{1 - \frac{1}{4Q^2}}$ la pseudo-pulsation du système.
 
 On recherche une solution particulière de l'équation avec second membre. On la cherche sous forme constante $u_C = U_0$. Les dérivées étant nulles, on trouve directement $U_0 = E$. La solution complète est donc:
 
-\begin{equation}
+$$
 u_{c}(t) = D \exp^{-\frac{\omega_0 t}{2Q}} \left(\cos{\Omega t + \varphi} \right) + E
-\end{equation}
+$$
 Il reste à utiliser les conditions initiales en utilisant le fait que $i = C \frac{\rm{d}u_C}{\rm{dt}}$:
 
 \begin{align*}
@@ -483,16 +483,16 @@ i(t = 0) &= C D \left(-\Omega \sin{\varphi} -\frac{\omega_0}{2Q} \cos{\varphi} \
 __Q4. Expression temporelle - Cas apériodique__  
 La solution générale ESSM est alors:
 
-\begin{equation}
+$$
 u_{c,0}(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
-\end{equation}
+$$
 avec $r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})$.
 
 On recherche une solution particulière de l'équation avec second membre. On la cherche sous forme constante $u_C = U_0$. Les dérivées étant nulles, on trouve directement $U_0 = E$. La solution complète est donc:
 
-\begin{equation}
+$$
 u_{c}(t) = A \exp^{r_1 t} + B \exp^{r_2 t} + E
-\end{equation}
+$$
 Il reste à utiliser les conditions initiales en utilisant le fait que $i = C \frac{\rm{d}u_C}{\rm{dt}}$:
 
 \begin{align*}
@@ -506,16 +506,16 @@ u_{c}(t) = A r_1 + B r_2 = 0\\
 __Q5. Expression temporelle - Cas critique__  
 La solution générale ESSM est alors:
 
-\begin{equation}
+$$
 u_{c,0}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right)
-\end{equation}
+$$
 avec $r_{1,2} = -\frac{\omega_0}{2Q}(1 - \sqrt{1 - 4Q^2})$.
 
 On recherche une solution particulière de l'équation avec second membre. On la cherche sous forme constante $u_C = U_0$. Les dérivées étant nulles, on trouve directement $U_0 = E$. La solution complète est donc:
 
-\begin{equation}
+$$
 u_{c}(t) = \exp^{-\frac{\omega_0 t}{2Q}} \left(A t + B\right) + E
-\end{equation}
+$$
 Il reste à utiliser les conditions initiales en utilisant le fait que $i = C \frac{\rm{d}u_C}{\rm{dt}}$:
 
 \begin{align*}

@@ -106,9 +106,9 @@ La décroissance du gain réel est triviale. A haute fréquence, la fonction de 
 
 Le gain réel étant strictement décroissant, le gain maximal est le gain à fréquence nulle (gain statique) soit ici 1. On cherche donc à résoudre l'inégalité:
 
-\begin{equation}
+$$
 \frac{1}{\sqrt{1 + x^2}} \geq \frac{1}{\sqrt{2}} \Longrightarrow x\leq 1 \Longrightarrow \omega \leq \omega_0
-\end{equation}
+$$
 Remarque: La (les) pulsation(s) réalisant l'égalité sont les limites de la bande passante, on les appelle les pulsations de coupure. __Ici__, la pulsation de coupure égale la pulsation propre. Ce n'est pas une généralité.
 
 
@@ -119,9 +119,9 @@ Remarque: La (les) pulsation(s) réalisant l'égalité sont les limites de la ba
 
 On considère le filtre précédent et on envoie en entrée un signal créneau d'amplitude E. On admet que la décomposition spectrale du signal créneau est:
 
-\begin{equation}
+$$
 e(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{\sin \left((2k+1)2\pi f t\right)}{2k+1}
-\end{equation}
+$$
 
 1. Donner la réponse exacte du filtre pour une fréquence du créneau $f = f_0$ avec $f_0$ la fréquence propre associée à la pulsation propre.
 1. Donner une réponse approchée du filtre en assimilant sa réponse à celle d'un filtre idéal lorsque $f = f_0/2$.
@@ -132,9 +132,10 @@ e(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{\sin \left((2k+1)2\pi f t\r
 
 
 __Réponse exacte__  
-\begin{equation}
+
+$$
 s(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{1}{\sqrt{1 + {\left(2k+1\right)}^2}} \frac{\sin \left((2k+1)2\pi f t - \arctan (2k+1) \right)}{2k+1}
-\end{equation}
+$$
 
 
 __Réponse idéale__  

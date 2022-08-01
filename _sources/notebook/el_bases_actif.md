@@ -62,9 +62,10 @@ En pratique, une source de tension ne délivre la fem voulue E qu'à vide, c'est
 __Electromoteur__
 
 Un électromoteur linéaire est une __modélisation__ d'une source donc la relation tension-intensité est:
-\begin{equation}
+
+$$
 u = E - Ri
-\end{equation}
+$$
 où E est la fem (à vide) de l'électromoteur et R sa résistance interne.
 ````
 

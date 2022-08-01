@@ -34,14 +34,14 @@ __Représentation complexe d'un signal sinusoïdal__
 
 Considérons un signal sinusoïdal de la forme $s(t) = s_m \cos (\omega t + \varphi)$. On définit la représentation complexe $\underline s(t)$ du signal $s(t)$ par la grandeur:
 
-\begin{equation}
+$$
 \underline{s}(t) = s_m \exp j\left(\omega t + \varphi\right)
-\end{equation}
+$$
 On définit aussi l'amplitude complexe $\underline{s_m}$ du signal $s(t)$ par la grandeur:
 
-\begin{equation}
+$$
 \underline{s_m} = s_m \exp \left(j \varphi\right) = \frac{\underline{s}(t)}{\exp j \omega t}
-\end{equation}
+$$
 ````
 
 ````{important} 
@@ -60,9 +60,9 @@ Ces relations sont fondamentales car elles permettent de déduire les caractéri
 ````{important} __Combinaison linéaire__
 La représentation complexe de la combinaison linéaire de deux signaux __de même pulsation__ est égale à la même combinaison linéaire des représentations complexes de deux mêmes signaux:
 
-\begin{equation}
+$$
 s = \lambda_1 s_1 + \lambda_2 s_2 \Longrightarrow \underline{s} = \lambda_1 \underline{s_1} + \lambda_2 \underline{s_2} \textrm{ avec } (\lambda_1;\lambda_2) \in \mathbb{R}^2
-\end{equation}
+$$
 ````
 
 ```{margin}
@@ -71,14 +71,14 @@ Ces dernières relations sont très utiles car nous allons pouvoir transformer l
 ````{important} __Dérivation et intégration__
 La représentation complexe de la dérivée d'un signal sinusoïdal de pulsation $\omega$ est égale à la représentation complexe du même signal sinusoïdal multiplié par $j \omega$:
 
-\begin{equation}
+$$
 \underline{\frac{\rm{d}s}{\rm{dt}}} = j \omega \underline{s}
-\end{equation}
+$$
 La représentation complexe de la primitive - de valeur moyenne nulle - d'un signal sinusoïdal de pulsation $\omega$ est égale à la représentation complexe du même signal sinusoïdal divisé par $j \omega$:
 
-\begin{equation}
+$$
 \underline{\int_s dt} = \frac{\underline{s}}{j \omega}
-\end{equation}
+$$
 ````
 
 ````{topic} __Démonstration (pour l'intégration)__  
@@ -100,9 +100,9 @@ Nous allons voir à travers l'étude du cas présenté précédemment l'intérê
 
 On rappelle qu'on étudie le circuit ci-après. Le point qui reste à prouver est l'étude fréquentielle, c'est-à-dire l'étude du régime sinusoïdal forcé par un sinusoïde quelconque de pulsation $\omega$. On rappelle que le but est prouver que la tension aux bornes du condensateur pour une entrée de la forme $e(t) = e_m \cos \omega t$est de la forme:
 
-\begin{equation}
+$$
 \frac{e_m}{\sqrt{1 + {\left(RC \omega\right)}^2}} \cos\left(\omega t - \arctan \left(RC \omega\right) \right)
-\end{equation}
+$$
 
 ```{figure} ./images/elec_rc_passe_bas.jpg
 :name: fig_185
@@ -133,14 +133,14 @@ Insistons sur le fait que cette méthode n'est PAS à utiliser. Elle est présen
 
 On cherche un régime forcé sous la forme $s(t) = s_m \cos \omega t + \varphi$. On l'introduit dans l'équation différentielle, ce qui donne:
 
-\begin{equation}
+$$
 - RC \omega s_m \sin (\omega t + \varphi) + s_m \cos \omega t + \varphi = e_m \cos \omega t
-\end{equation}
+$$
 soit en linéarisant:
 
-\begin{equation}
+$$
 s_m \left(- RC \omega \cos \varphi - \sin \varphi\right) \sin \omega t  + s_m \left(\omega \cos \varphi - RC \sin \varphi\right) \cos \omega t = e_m \cos \omega t
-\end{equation}
+$$
 L'égalité étant vraie pour tout t, il vient que les coefficients devant chaque sinus et cosinus doivent être les mêmes:
 
 \begin{align*}
@@ -189,16 +189,16 @@ On a $\underline{Y} = \frac{1}{\underline{Z}}$ mais a priori $R \neq \frac{1}{G}
 :class: important
 *On définit l'__impédance complexe__ d'un dipôle par la grandeur:
 
-\begin{equation}
+$$
 \underline{Z} = \frac{\underline{u}}{\underline{i}} = \frac{\underline{u_m}}{\underline{i_m}}
-\end{equation}
+$$
 Elle ne dépend pas du temps mais peut dépendre de la pulsation du signal d'entrée.
 
 *On définit __l'admittance complexe__ comme l'inverse de l'impédance complexe:
 
-\begin{equation}
+$$
 \underline{Y} = \frac{1}{\underline{Z}} = \frac{\underline{i}}{\underline{u}} = \frac{\underline{i_m}}{\underline{u_m}}
-\end{equation}
+$$
 ````
 ````{topic} Interprétation et intérêt de l'impédance complexe
 * L'argument de l'impédance complexe définit le déphasage de la tension $u$ par rapport à l'intensité $i$.
@@ -270,9 +270,9 @@ Il faut pouvoir déterminer quelle forme est applicable à la grandeur étudié 
 ````{important} __Comportement passe-bas d'ordre 2__
 Pour une grandeur d'un système d'ordre 2 dont le comportement haute fréquence est nul et le comportement basse fréquence non nul, sa représentation complexe peut se mettre sous la forme:
 
-\begin{equation}
+$$
 \underline{s} = \frac{A}{1 - {\left(\frac{\omega}{\omega_0}\right)}^2 + j \frac{\omega}{Q\omega_0}} = \frac{A}{1 - x^2 +  j\frac{x}{Q}}
-\end{equation}
+$$
 où $x = \frac{\omega}{\omega_0} $ est appelée pulsation réduite (attention, elle est sans dimension!).
 ````
 

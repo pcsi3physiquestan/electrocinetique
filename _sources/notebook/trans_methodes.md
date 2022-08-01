@@ -107,24 +107,24 @@ i_r &= \frac{u_C}{R} \\
 \end{align}
 Il suffit ensuire de remplacer dans la loi des noeuds (première équation) les différentes intensités.
 
-\begin{equation}
+$$
 \frac{E + u_C}{R} + \frac{u_C}{R} + C \frac{\rm{d}u_C}{\rm{dt}} + i_l = 0
-\end{equation}
+$$
 Dans le cas de $i_l$, puisqu'on connaît sa dérivée, on va dériver la loi des noeuds pour faire apparaître $\frac{\rm{d}i_l}{\rm{dt}}$.
 
 __Ne pas chercher à intégrer une grandeur (à cause des constantes d'intégration).__  
 
-\begin{equation}
+$$
 \frac{\frac{\rm{d}u_C}{\rm{dt}}}{R} + \frac{\frac{\rm{d}u_C}{\rm{dt}}}{R} + C \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{u_C}{L} = 0
-\end{equation}
+$$
 
 
 __Organisation de l'équation__  
 Il convient d'organiser (en fonction des dérivées) l'équation correctement. Nous verrons plus tard qu'il existe même une forme "canonique" sous laquelle mettre l'équation pour faire apparaître des grandeurs particulières.
 
-\begin{equation}
+$$
  \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = 0
-\end{equation}
+$$
 
 ````{admonition} Analyse de l'équation
 :class: hint
@@ -191,9 +191,9 @@ Il n'y a qu'une seule inconnue $V_B$. Ce n'est pas ce qu'on cherche (cette méth
 __Mise en équation__  
 On applique la loi des noeuds au point B. Il vient:
 
-\begin{equation}
+$$
 i_e + i_r + i_c + i_l = 0
-\end{equation}
+$$
 Pour la résistance et le condensateur, on peut directement utiliser la relation intensité-tension pour éliminer les intensités.
 
 \begin{equation}
@@ -207,9 +207,9 @@ i_c &= C \frac{\rm{d}(V_M-V_B)}{\rm{dt}} = - C \frac{\rm{d}V_B}{\rm{dt}}\\
 \end{equation}
 Pour la bobine, c'est différent car on relie la dérivée de l'intensité à la différence de potentiel: $V_M - V_B = L \frac{\rm{d}i_l}{\rm{dt}}$. Il va donc falloir dériver la loi des noeuds pour faire apparaître $V_B$
 
-\begin{equation}
+$$
 - \frac{2}{R} \frac{\rm{d}V_B}{\rm{dt}} - C \frac{\rm{d^2}V_B}{\rm{dt}^2} - \frac{1}{L} V_B = 0
-\end{equation}
+$$
 Remarquons qu'on obtient assez logiquement l'équation différentielle pour $u_C$ obtenue précédemment (puisque $u_C = V_B - 0$). On voit que cette méthode pour déterminer $u_C$ est de difficultés équivalente à la méthode présentée précédemment.
 
 
@@ -219,9 +219,9 @@ Il est important de noter qu'on ne peut utiliser l'équation de la bobine car el
 
 On va utiliser l'équation (obtenue des équations précédentes):
 
-\begin{equation}
+$$
 i_l = C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B - \frac{E}{R}
-\end{equation}
+$$
 On va établir une expression pour chaque terme de la somme précédente et sommer l'ensemble. Ainsi (on a simplement réorganisé puis manipulé - multiplication et dérivation - l'équation en $V_B$ obtenue précédemment):
 
 \begin{align}
@@ -231,9 +231,9 @@ On va établir une expression pour chaque terme de la somme précédente et somm
 
 soit en sommant:
 
-\begin{equation}
+$$
 \frac{\rm{d^2} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B)}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B)}{\rm{dt}} + \frac{1}{LC} (C \frac{\rm{d}V_B}{\rm{dt}} + \frac{2}{R} V_B) = 0 + 0
-\end{equation}
+$$
 Il ne reste plus qu'à ajouter __à gauche est à droite__ le terme $\frac{-E}{RLC}$ et on obtient l'équation en $i_l$ (on a rajouter aussi ce termes dans les dérivées temporelles sans modification puisqu'il s'agit d'un terme constant):
 
 \begin{align}
@@ -259,21 +259,25 @@ Malgré ce que laisse à penser cet exemple volontairement complexe (cf. suite),
 __Equations obtenues__  
 Rappelons les deux équations obtenues. On donne aussi les équation d'évolution des trois autres intensités (s'entraîner à les déterminer est un bon exercice).
 
-\begin{equation}
+$$
 \frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
-\end{equation}
-\begin{equation}
+$$
+
+$$
  \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = 0
-\end{equation}
-\begin{equation}
+$$
+
+$$
  \frac{\rm{d^2}i_r}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_r}{\rm{dt}} + \frac{1}{LC} i_r = 0
-\end{equation}
-\begin{equation}
+$$
+
+$$
  \frac{\rm{d^2}i_c}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_c}{\rm{dt}} + \frac{1}{LC} i_c = 0
-\end{equation}
-\begin{equation}
+$$
+
+$$
  \frac{\rm{d^2}i_e}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_e}{\rm{dt}} + \frac{1}{LC} i_e = \frac{E}{RLC}
-\end{equation}
+$$
 
 ````{dropdown} Remarque
 
@@ -518,9 +522,9 @@ A partir de la solution déterminée précédemment, on peut être amené à:
 
 On redonne ci-dessous l'équation différentielle qui régit l'évolution de $u_C$ ainsi que les conditions initiales. Déterminer $u_C(t)$ pour t>0 en supposant $R > \sqrt{\frac{L}{C}}$
 
-\begin{equation}
+$$
  \frac{\rm{d^2}u_C}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}u_C}{\rm{dt}} + \frac{1}{LC} u_C = 0
-\end{equation}
+$$
 Conditions initiales: $u_C(t=0^+) = 0$ et $\frac{\rm{d}u_C}{\rm{dt}}(t=0^+) = -\frac{E}{RC}$
 ````
 
@@ -532,16 +536,16 @@ Conditions initiales: $u_C(t=0^+) = 0$ et $\frac{\rm{d}u_C}{\rm{dt}}(t=0^+) = -\
 __Résolution de l'équation__  
 On commence par chercher la solution de l'équation homogène. L'équation caractéristique est: $r^2 + \frac{2}{RC} r + \frac{1}{LC} = 0$ soit comme solution:
 
-\begin{equation}
+$$
 r = -\frac{1}{RC} \pm j \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} 
-\end{equation}
+$$
 La condition donnée dans l'énoncé implique un discriminant négatif, d'où l'utilisation des complexes. On rappelle qu'en physique $j^2 = -1$
 
 Il vient la solution (on sépare les parties imaginaires et parties réelles) et l'on obtient directement la solution car il n'y a pas de second membre:
 
-\begin{equation}
+$$
 u_{C} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right)
-\end{equation}
+$$
 Il ne reste plus qu'à introduire les conditions initiales (Pour la seconde, on a déjà utilisé le fait que A = 0):
 
 \begin{align}
@@ -550,9 +554,9 @@ u_{C} (t=0^+) &= A = 0\\
 \end{align}
 Il vient:
 
-\begin{equation}
+$$
 u_{C} (t) = - \frac{E}{RC \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} {\exp}^{- \frac{t}{RC}}  \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)
-\end{equation}
+$$
 
 ```{admonition} Vérification du résultat
 :class: hint
@@ -591,9 +595,9 @@ Nous allons voir ici l'exemple d'autres études à partir soit de l'équation di
 
 On rappelle que l'équation qui régit l'évolution de i(t) est:
 
-\begin{equation}
+$$
 \frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
-\end{equation}
+$$
 Conditions initiales: $i_l(t=0^+) = 0$ et $\frac{\rm{d}i_l}{\rm{dt}}(t=0^+) = 0$
 
 1. Déterminer $i_l(t)$ dans l'hypothèse $R > \sqrt{\frac{L}{C}}$.
@@ -608,19 +612,19 @@ Conditions initiales: $i_l(t=0^+) = 0$ et $\frac{\rm{d}i_l}{\rm{dt}}(t=0^+) = 0$
 __Q1. Résolution de l'équation différentielle.__  
 La solution générale de l'équation homogène est:
 
-\begin{equation}
+$$
 i_{l,0} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right)
-\end{equation}
+$$
 On cherche une solution particulière constante à l'équation avec second membre $i_{L,1}(t) = I_0$. L'équation à résoudre (les dérivées temporelles s'annulent):
 
-\begin{equation}
+$$
 \frac{1}{LC} I_0 = - \frac{E}{RLC} \Longrightarrow I_0 = -\frac{E}{R}
-\end{equation}
+$$
 La solution générale de l'équation avec second membre (identique à l'exercice précédent) est donc:
 
-\begin{equation}
+$$
 i_{l} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}
-\end{equation}
+$$
 Les conditions initiales donnent le système d'équations:
 
 \begin{align}
@@ -664,9 +668,9 @@ Première méthode: intégrer l'expression précédente entre 0 et l'infini...  
 
 Deuxième méthode (à appliquer) : Il faut se rappeler que l'énergie reçue par la bobine est stockée et qu'on connaît l'expression de cette énergie stockée. Ainsi, l'énergie reçue sera la différence entre l'énergie stockée au final et l'énergie stockée initialement.
 
-\begin{equation}
+$$
 \Delta E_L = E_L(t=+\infty) - E_L(t=0) = \frac{1}{2}L I(t=\infty)^2 - \frac{1}{2}L I(t=0)^2 = \frac{L E^2}{2R^2}
-\end{equation}
+$$
 
 ````
 

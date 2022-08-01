@@ -638,15 +638,15 @@ Tout d’abord, on redessine le circuit en utilisant les modèles équivalents a
 <blockquote>
 <div><p>Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
 <p>Écrivons les lois de Kirchhoff (on pourrait aussi utiliser la loi des noeuds en terme de potentiels):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a2cae3d5-547d-4bb2-a97f-aa8e3518df46">
-<span class="eqno">(63)<a class="headerlink" href="#equation-a2cae3d5-547d-4bb2-a97f-aa8e3518df46" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f73a0629-3fb4-4d5e-97b3-d96bb9a9fd43">
+<span class="eqno">(35)<a class="headerlink" href="#equation-f73a0629-3fb4-4d5e-97b3-d96bb9a9fd43" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + i_l &amp;= 0\\
 E - R i_e + R i_r &amp;= 0\\
 R i_r - R i_l &amp;= 0
 \end{align}\]</div>
 <p>Il vient immédiatement <span class="math notranslate nohighlight">\(i_r = i_l\)</span> et donc <span class="math notranslate nohighlight">\(i_e = - 2 i_r\)</span>. La première loi des mailles s’écrivant alors <span class="math notranslate nohighlight">\(E + 3 R i_R = 0\)</span>, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-02701d22-cc58-4e99-96ca-2be2e6baaeb3">
-<span class="eqno">(64)<a class="headerlink" href="#equation-02701d22-cc58-4e99-96ca-2be2e6baaeb3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-eaab80c6-7a5d-4913-a964-3ee2761bb6c1">
+<span class="eqno">(36)<a class="headerlink" href="#equation-eaab80c6-7a5d-4913-a964-3ee2761bb6c1" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_r &amp;= -\frac{E}{3R}\\
 i_l &amp;= -\frac{E}{3R}\\
 i_e &amp;= \frac{2E}{3R}\\
@@ -727,8 +727,8 @@ On utilise les lois de Kirchhoff. Les deux points à bien faire attention sont:<
 <p>Remarquons aussi qu’on a choisi trois mailles faisant directement intervenir <span class="math notranslate nohighlight">\(u_L\)</span> qui est facilement éliminé.</p>
 </div>
 <blockquote>
-<div><div class="amsmath math notranslate nohighlight" id="equation-aaec19bb-0a7b-4307-968c-4fb839d83ca6">
-<span class="eqno">(65)<a class="headerlink" href="#equation-aaec19bb-0a7b-4307-968c-4fb839d83ca6" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div><div class="amsmath math notranslate nohighlight" id="equation-c32347cd-d9c3-44fb-ab97-e10b1d41a566">
+<span class="eqno">(37)<a class="headerlink" href="#equation-c32347cd-d9c3-44fb-ab97-e10b1d41a566" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
 E - R i_e + L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0 \\
 R i_r - L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0 \\
@@ -737,27 +737,27 @@ u_C -  L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0
 <p>On a 4 inconnues et 4 équations. Le système peut donc être résolu.</p>
 <p><strong>Manipulation du système</strong><br />
 Une fois le système mis en place, <strong>il convient de réfléchir à une stratégie avant de se lancer</strong> (on rappelle que les grandeurs à éliminer sont les deux intensités ert <span class="math notranslate nohighlight">\(u_C\)</span>). Remarquons que le choix des mailles a permis d’avoir un système simple car chacune des lois des mailles permet d’élminer une grandeurs:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c8be507-2e61-4fb4-b3fc-aa60c10bfd52">
-<span class="eqno">(66)<a class="headerlink" href="#equation-3c8be507-2e61-4fb4-b3fc-aa60c10bfd52" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-245ea0ec-0fe0-4566-932f-998444fdbaff">
+<span class="eqno">(38)<a class="headerlink" href="#equation-245ea0ec-0fe0-4566-932f-998444fdbaff" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
 i_e &amp;= \frac{E + L \frac{\rm{d}i_l}{\rm{dt}}}{R}\\
 i_r &amp;= \frac{L \frac{\rm{d}i_l}{\rm{dt}}}{R} \\
 u_C &amp;= L\frac{\rm{d}i_l}{\rm{dt}}
 \end{align}\]</div>
 <p>Il suffit ensuire de remplacer dans la loi des noeuds (première équation) les différentes grandeurs.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bca48c1e-40f7-4a47-ac05-7722eb0eda64">
-<span class="eqno">(67)<a class="headerlink" href="#equation-bca48c1e-40f7-4a47-ac05-7722eb0eda64" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-19e7bb95-0424-47d8-988e-486b0aefb350">
+<span class="eqno">(39)<a class="headerlink" href="#equation-19e7bb95-0424-47d8-988e-486b0aefb350" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{E}{R} \frac{L}{R}\frac{\rm{d}i_L}{\rm{dt}}+ \frac{L}{R}\frac{\rm{d}i_L}{\rm{dt}} + LC \frac{\rm{d^2}i}{\rm{dt^2}} + i_l = 0
 \end{equation}\]</div>
 <p><strong>Organisation de l’équation</strong><br />
 Il convient d’organiser (en fonction des dérivées) l’équation correctement sous sa forme canonique.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4f67739f-1dc4-49e5-8e15-0851adf48a14">
-<span class="eqno">(68)<a class="headerlink" href="#equation-4f67739f-1dc4-49e5-8e15-0851adf48a14" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f75962c7-24b5-4ccb-b0c7-e21efef8f225">
+<span class="eqno">(40)<a class="headerlink" href="#equation-f75962c7-24b5-4ccb-b0c7-e21efef8f225" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}i_L}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_L}{\rm{dt}} + \frac{1}{LC} i_L = -\frac{E}{RLC}
 \end{equation}\]</div>
 <p>Par identification avec la forme canonique, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de25c0bf-f07b-4b7a-8b87-773aa5cce658">
-<span class="eqno">(69)<a class="headerlink" href="#equation-de25c0bf-f07b-4b7a-8b87-773aa5cce658" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ba92051f-9b1e-4122-b162-08a0b8a7f8cc">
+<span class="eqno">(41)<a class="headerlink" href="#equation-ba92051f-9b1e-4122-b162-08a0b8a7f8cc" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{cases}
 \omega_0 &amp;= \sqrt{\frac{1}{LC}}\\
 \frac{\omega_0}{Q} = \frac{2}{RC} \Longrightarrow Q &amp;= \frac{R}{2}\sqrt{\frac{C}{L}}
@@ -827,10 +827,10 @@ On chercher à obtenir la valeur de <span class="math notranslate nohighlight">\
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On traaille avec le même système que précédemment. On rappelle que l’équation qui régit l’évolution de i_L(t) est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-12db2162-ec38-418c-a0eb-400d0a0b797f">
-<span class="eqno">(70)<a class="headerlink" href="#equation-12db2162-ec38-418c-a0eb-400d0a0b797f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 \frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
-\end{equation}\]</div>
+\]</div>
 <p>Conditions initiales: <span class="math notranslate nohighlight">\(i_l(t=0^+) = 0\)</span> et <span class="math notranslate nohighlight">\(\frac{\rm{d}i_l}{\rm{dt}}(t=0^+) = 0\)</span></p>
 <ol class="simple">
 <li><p>Déterminer <span class="math notranslate nohighlight">\(i_l(t)\)</span> dans l’hypothèse <span class="math notranslate nohighlight">\(R &gt; \sqrt{\frac{L}{C}}\)</span>.</p></li>
@@ -843,29 +843,29 @@ On chercher à obtenir la valeur de <span class="math notranslate nohighlight">\
 <blockquote>
 <div><p><strong>Q1. Résolution de l’équation différentielle.</strong><br />
 La solution générale de l’équation homogène est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc3b9d83-6762-4ca9-9bd8-19d7042afcc0">
-<span class="eqno">(71)<a class="headerlink" href="#equation-bc3b9d83-6762-4ca9-9bd8-19d7042afcc0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b2b92a6b-d3fa-4d8f-8ed3-595b946279f4">
+<span class="eqno">(42)<a class="headerlink" href="#equation-b2b92a6b-d3fa-4d8f-8ed3-595b946279f4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_{l,0} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right)
 \end{equation}\]</div>
 <p>On cherche une solution particulière constante à l’équation avec second membre <span class="math notranslate nohighlight">\(i_{L,1}(t) = I_0\)</span>. L’équation à résoudre (les dérivées temporelles s’annulent):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ec6a6674-dba8-47fc-a215-51506ad75d47">
-<span class="eqno">(72)<a class="headerlink" href="#equation-ec6a6674-dba8-47fc-a215-51506ad75d47" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-35cb6096-d5b2-4c94-9458-b7eb13b3604f">
+<span class="eqno">(43)<a class="headerlink" href="#equation-35cb6096-d5b2-4c94-9458-b7eb13b3604f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{1}{LC} I_0 = - \frac{E}{RLC} \Longrightarrow I_0 = -\frac{E}{R}
 \end{equation}\]</div>
 <p>La solution générale de l’équation avec second membre (identique à l’exercice précédent) est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c548ef74-997b-411f-90ff-5933a8930ffd">
-<span class="eqno">(73)<a class="headerlink" href="#equation-c548ef74-997b-411f-90ff-5933a8930ffd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-59a49e2c-c6ee-4416-9c77-8fe97d19ee99">
+<span class="eqno">(44)<a class="headerlink" href="#equation-59a49e2c-c6ee-4416-9c77-8fe97d19ee99" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_{l} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}
 \end{equation}\]</div>
 <p>Les conditions initiales donnent le système d’équations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9206a383-72dc-4a2d-b5c8-7f12b14a55c5">
-<span class="eqno">(74)<a class="headerlink" href="#equation-9206a383-72dc-4a2d-b5c8-7f12b14a55c5" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1a18681b-11ee-47f1-b126-88327fc06b7c">
+<span class="eqno">(45)<a class="headerlink" href="#equation-1a18681b-11ee-47f1-b126-88327fc06b7c" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_{l} (t=0^+) = A - \frac{E}{R} = 0 &amp;\Longrightarrow A = \frac{E}{R}\\
 \frac{\rm{d}i_l}{\rm{dt}} (t=0^+) = -\frac{E}{R^2C} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} B = 0 &amp;\Longrightarrow B = \frac{E}{R^2C\frac{1}{LC} - \frac{1}{{(RC)}^2}}
 \end{align}\]</div>
 <p>On en déduit l’expression de l’intensité <span class="math notranslate nohighlight">\(i_l(t)\)</span> et de la tension <span class="math notranslate nohighlight">\(u_L(t)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-608e8980-10e8-4015-8b46-b48441563e01">
-<span class="eqno">(75)<a class="headerlink" href="#equation-608e8980-10e8-4015-8b46-b48441563e01" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8bb9f1d3-a3fe-4696-8f6e-8da768e2e8a7">
+<span class="eqno">(46)<a class="headerlink" href="#equation-8bb9f1d3-a3fe-4696-8f6e-8da768e2e8a7" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_{l} (t) &amp;= {\exp}^{- \frac{t}{RC}} \left(\frac{E}{R} \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + \frac{E}{R^2C\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}\\
 u_{L} (t) &amp;= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} \right) \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t  \right)
 \end{align}\]</div>
@@ -877,8 +877,8 @@ u_{L} (t) &amp;= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\s
 <blockquote>
 <div><p><strong>Q2. Puissance reçue</strong><br />
 Nous sommes en convention récepteur donc la puissance reçue est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f3a829fd-9d47-42d6-b27e-2c39a2efcfd8">
-<span class="eqno">(76)<a class="headerlink" href="#equation-f3a829fd-9d47-42d6-b27e-2c39a2efcfd8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bdae3dde-cbf8-4b3f-97c6-278c3644fe4d">
+<span class="eqno">(47)<a class="headerlink" href="#equation-bdae3dde-cbf8-4b3f-97c6-278c3644fe4d" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p(t) &amp;= i_{l}(t) \times u_L(t) \\
 &amp;= - L I_A^2 \left ({\exp}^{- \frac{2t}{\tau}} \left(\cos \left(\Omega t \right) + \frac{1}{\tau \Omega} \sin \left(\Omega t \right)\right)\left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right) - \right )\\
 &amp; \times {\exp}^{- \frac{t}{\tau}} \left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right)
@@ -893,8 +893,8 @@ p(t) &amp;= i_{l}(t) \times u_L(t) \\
 <div><p><strong>Q3. Variation d’énergie dans une bobine</strong><br />
 <em>Première méthode (mauvaise idée): intégrer l’expression précédente entre 0 et l’infini…  …  …  On attendra pas un calcul aussi lourd (bien qu’il soit faisable et très formateur !).</em></p>
 <p>Deuxième méthode (à appliquer) : Il faut se rappeler que l’énergie reçue par la bobine est stockée et qu’on connaît l’expression de cette énergie stockée. Ainsi, l’énergie reçue sera la différence entre l’énergie stockée au final et l’énergie stockée initialement.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3ee83b0f-7f4f-48c6-8aa5-a5dfbe4baca7">
-<span class="eqno">(77)<a class="headerlink" href="#equation-3ee83b0f-7f4f-48c6-8aa5-a5dfbe4baca7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b8603a2f-d68d-4b5d-80e1-2ebb2d0b7500">
+<span class="eqno">(48)<a class="headerlink" href="#equation-b8603a2f-d68d-4b5d-80e1-2ebb2d0b7500" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \Delta E_L = E_L(t=+\infty) - E_L(t=0) = \frac{1}{2}L I(t=\infty)^2 - \frac{1}{2}L I(t=0)^2 = \frac{L E^2}{2R^2}
 \end{equation}\]</div>
 </div></blockquote>

@@ -26,9 +26,9 @@ Tout conducteur dissipe de l'énergie par effet Joule (dissipation de l'énergie
 
 Un conducteur ohmique ou résistance est un dipôle dont l'équation d'évolution est __en convention récepteur:__
 
-\begin{equation}
+$$
 u(t) = R i(t)
-\end{equation}
+$$
 où R est appelée __résistance__. Son inverse $G = 1 / R$ est appelée __conductance__
 
 ```{figure} ./images/elec_resistor.jpg
@@ -60,9 +60,9 @@ Quand les électrons sont mis en mouvement, ils vont se détacher d'un conducteu
 
 En __convention récepteur__, l'équation d'évolution s'écrit aussi:
 
-\begin{equation}
+$$
 i(t) = C \frac{du}{dt}(t)
-\end{equation}
+$$
 
 Il suffit de remarque que la quantité de charge ajoutée dq à l'armature où entre l'intensité pendant un temps dt est la quantité de charge qui a transité dans le fil durant le même temps dt (conservation de la charge et ARQS) soit $i(t) = \frac{dq}{dt}(t) = C  \frac{du}{dt}(t)$
 ````
@@ -77,9 +77,9 @@ Schéma d'un condensateur
 
 Un condensateur (ou capacitance) est un dipôle linéaire passif constitué de deux armatures métalliques dont l'équation d'évolution est:
 
-\begin{equation}
+$$
 q(t) = C u(t)
-\end{equation}
+$$
 
 où q(t) est la chargée portée par l'armature où pointe la flèche de la tension u(t).
 
@@ -97,9 +97,9 @@ __Energie stockée dans un condensateur__
 
 Lorsqu'on applique une tension u à ses bornes, un condensateur stocke une énergie :
 
-\begin{equation}
+$$
 E_{el} = \frac{1}{2} C u^2
-\end{equation}
+$$
 ````
 
 ````{margin}
@@ -110,9 +110,9 @@ Nous allons montrer que la puissance reçue par le condensateur peut se mettre s
 
 La puissance reçue par un condensateur s'écrit (on l'oriente en convention récepteur):
 
-\begin{equation}
+$$
 p(t) = u(t) i(t) = C u(t) \frac{du}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} C u^2(t)\right)
-\end{equation}
+$$
 (on a cherche une primitive à la fonction u(t) u'(t)).
 ````
 ## Bobine idéale et inductance
@@ -139,9 +139,10 @@ On modélise ces effets par une résistance en série avec l'inductance. On trou
 Schéma d'une bobine
 ```
 Une inductance (ou bobine) est un dipôle dont l'équation d'évolution __en convention récepteur__ est:
-\begin{equation}
+
+$$
 u(t) = L \frac{di}{dt}(t)
-\end{equation}
+$$
 ````
 ```{topic} Caractéristique statique
 La caractéristique statique d'une bobine est une droite d'équation u(t) = 0
@@ -154,9 +155,9 @@ __Energie stockée dans une bobine__
 
 Lorsqu'un courant i circule dans une bobine, celle-ci stocke une énergie :
 
-\begin{equation}
+$$
 E_{mag} = \frac{1}{2} L i^2
-\end{equation}\end{basic}
+$$\end{basic}
 ````
 
 ````{topic} Justification  
@@ -164,9 +165,9 @@ Nous allons montrer que la puissance reçue par la bobine peut se mettre sous la
 
 La puissance reçue par une bobine s'écrit (on l'oriente en convention récepteur):
 
-\begin{equation}
+$$
 p(t) = u(t) i(t) = L i(t) \frac{di}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} L i^2(t)\right)
-\end{equation}
+$$
 (on a cherche une primitive à la fonction i(t) i'(t)).
 ````
 

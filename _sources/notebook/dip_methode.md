@@ -65,9 +65,9 @@ V_C &= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 \end{align}
 d'où une intensité:
 
-\begin{equation}
+$$
 \boxed{i = \frac{- E}{2 \left (R_1 + R\right )}}
-\end{equation}
+$$
 
 __Vérification du résultat__  
 * Homogénéité: On a bien une tension sur une résistance, soit une intensité.
@@ -88,14 +88,14 @@ Considérons N résistances en série dont les résistances sont $\{R_i \vert i 
 
 L'intensité circulant dans l'ensemble est:
 
-\begin{equation}
+$$
 i = \frac{u}{\sum_{i=1}^{i=n} R_i}
-\end{equation}
+$$
 Et la tension u se divise dans chaque dipôle. La tension aux bornes de la résistance $R_k$ est:
 
-\begin{equation}
+$$
 u_k = \frac{R_k}{\sum_{i=1}^{i=n} R_i} u
-\end{equation}\end{basic}
+$$\end{basic}
 
 
 __Démonstration__  
@@ -116,14 +116,14 @@ Considérons N résistances en parallèle dont les conductances sont $\{G_i \ver
 
 La tension aux bornes de l'ensemble est:
 
-\begin{equation}
+$$
 u = \frac{i}{\sum_{i=1}^{i=n} G_i}
-\end{equation}
+$$
 Et le courant i se divise dans chaque branche. L'intensité aux bornes de la résistance $R_k$ est:
 
-\begin{equation}
+$$
 i_k = \frac{G_k}{\sum_{i=1}^{i=n} G_i} i
-\end{equation}
+$$
 ````
 
 
@@ -172,27 +172,27 @@ On doit :
 
 Les résistance $R_1$ et $R_2$ sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer $U_{R1}$:
 
-\begin{equation}
+$$
 U_{R1} = \frac{R_1}{R_1+R_2} E
-\end{equation}
+$$
 Les résistance $R_3$ et $R_4$ sont en série : elles forment un pont diviseur de tension dont la tension aux bornes est E. Cela nous permet de calculer $U_{R4}$:
 
-\begin{equation}
+$$
 U_{R4} = \frac{R_4}{R_3+R_4} E
-\end{equation}
+$$
 
 
 __Équilibre du pont__  
 Il vient :
 
-\begin{equation}
+$$
 U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
-\end{equation}
+$$
 Le pont est donc équilibré quand :
 
-\begin{equation}
+$$
 \boxed{R_4 R_2 = R_3 R_1}
-\end{equation}
+$$
 
 ````
 

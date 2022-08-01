@@ -614,8 +614,8 @@
 <p class="admonition-title">Important</p>
 <p><strong>Forme canonique des systèmes d’ordre 2</strong></p>
 <p>L’équation différentielle qui régit l’évolution d’un système d’ordre 2 peut se mettre une des formes suivantes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c9ae2c39-a7d2-425e-b5c9-1d07ac1d7eca">
-<span class="eqno">(36)<a class="headerlink" href="#equation-c9ae2c39-a7d2-425e-b5c9-1d07ac1d7eca" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9c42ccd3-86dc-4f34-ab49-43204f11fee9">
+<span class="eqno">(13)<a class="headerlink" href="#equation-9c42ccd3-86dc-4f34-ab49-43204f11fee9" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + \frac{\omega_0}{Q} \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)\\
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + 2 \xi \omega_0 \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)
 \end{align}\]</div>
@@ -678,10 +678,10 @@
 <h3>Régime apériodique<a class="headerlink" href="#regime-aperiodique" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solution de l’équation homogène</strong><br />
 On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta &gt; 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q &lt; 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi &gt; 1\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f17a9a43-561d-4e26-9368-89ed2e7bc3e9">
-<span class="eqno">(37)<a class="headerlink" href="#equation-f17a9a43-561d-4e26-9368-89ed2e7bc3e9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 X(t) = A \exp^{r_1 t} + B \exp^{r_2 t}
-\end{equation}\]</div>
+\]</div>
 <p>avec:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -706,15 +706,15 @@ Remarquons que dans le cas où les coefficients sont positifs, les deux racines 
 <h2>Régime critique<a class="headerlink" href="#regime-critique" title="Permalink to this headline">¶</a></h2>
 <p><strong>Solution de l’équation homogène</strong><br />
 On rappelle que la solution de l’équation homogène dans le cas où <span class="math notranslate nohighlight">\(\Delta = 0\)</span>, c’est-à-dire <span class="math notranslate nohighlight">\(Q = 1/2\)</span> (ou <span class="math notranslate nohighlight">\(\xi = 1\)</span> est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-46690869-d325-4fcf-ab6f-ebb249bdbba2">
-<span class="eqno">(38)<a class="headerlink" href="#equation-46690869-d325-4fcf-ab6f-ebb249bdbba2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 X(t) = \exp^{r_0 t} \left ( At + B\right)
-\end{equation}\]</div>
+\]</div>
 <p>avec:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-513e188a-6537-4890-952b-65b153e76663">
-<span class="eqno">(39)<a class="headerlink" href="#equation-513e188a-6537-4890-952b-65b153e76663" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 r_0 = - \frac{\omega_0}{2Q} = - \omega_0
-\end{equation}\]</div>
+\]</div>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>On pourrait montrer (HP) qu’une telle expression ne peut avoir qu’un seul extremum local (ou 0).</p>
@@ -782,10 +782,9 @@ L’expression <span class="math notranslate nohighlight">\(X(t) = \exp^{-\lambd
 <p class="admonition-title">Important</p>
 <p><strong>Décrément logarithmique.</strong>
 Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique <span class="math notranslate nohighlight">\(\delta\)</span> par:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0c56a041-1d71-4635-b3a7-1faf515c8e5d">
-<span class="eqno">(40)<a class="headerlink" href="#equation-0c56a041-1d71-4635-b3a7-1faf515c8e5d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<p>$<span class="math notranslate nohighlight">\(
 \delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
-\end{equation}\]</div>
+\)</span>$\end{defi}</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -801,10 +800,9 @@ On calcule l’écart à la valeur finale à deux instants t et t+T (ce second �
 <p class="admonition-title">Important</p>
 <p><strong>Relation entre le décrément logarithmique et le facteur de qualité</strong>
 On peut montrer que (‘sentraîner à le faire - correction en ligne):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a511b5f0-2466-450f-8df0-939a2831dbb3">
-<span class="eqno">(41)<a class="headerlink" href="#equation-a511b5f0-2466-450f-8df0-939a2831dbb3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<p>$<span class="math notranslate nohighlight">\(
 \delta = \frac{2\pi}{\sqrt{4Q^2 - 1}}
-\end{equation}\]</div>
+\)</span>$\end{basic}</p>
 </div>
 <div class="topic">
 <p class="topic-title first"><strong>Démonstration</strong></p>

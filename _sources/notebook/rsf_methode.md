@@ -26,14 +26,14 @@ Comme nous allons le voir, l'étude d'un régime sinusoïdal forcé est largemen
 
 Considérons un signal sinusoïdal de la forme $s(t) = s_m \cos (\omega t + \varphi)$. On définit la représentation complexe $\underline s(t)$ du signal $s(t)$ par la grandeur:
 
-\begin{equation}
+$$
 \underline{s}(t) = s_m \exp j\left(\omega t + \varphi\right)
-\end{equation}
+$$
 On définit aussi l'amplitude complexe $\underline{s_m}$ du signal $s(t)$ par la grandeur:
 
-\begin{equation}
+$$
 \underline{s}(t) = s_m \exp \left(j \varphi\right) = \frac{\underline{s}(t)}{\exp j \omega t}
-\end{equation}
+$$
 ````
 
 ````{important} __Fondamental : Relation complexe-réel__
@@ -55,23 +55,23 @@ Ces relations sont fondamentales car elles permettent de déduire les caractéri
 
 La représentation complexe de la combinaison linéaire de deux signaux __de même pulsation__ est égale à la même combinaison linéaire des représentations complexes de deux mêmes signaux:
 
-\begin{equation}
+$$
 s = \lambda_1 s_1 + \lambda_2 s_2 \Longrightarrow \underline{s} = \lambda_1 \underline{s_1} + \lambda_2 \underline{s_2} \textrm{ avec } (\lambda_1;\lambda_2) \in \mathbb{R}^2
-\end{equation}
+$$
 ````
 
 ````{important} __Fondamental : Dérivation et intégration__
 
 La représentation complexe de la dérivée d'un signal sinusoïdal de pulsation $\omega$ est égale à la représentation complexe du même signal sinusoïdal multiplié par $j \omega$:
 
-\begin{equation}
+$$
 \underline{\frac{\rm{d}s}{\rm{dt}}} = j \omega \underline{s}
-\end{equation}
+$$
 La représentation complexe de la primitive - de valeur moyenne nulle - d'un signal sinusoïdal de pulsation $\omega$ est égale à la représentation complexe du même signal sinusoïdal divisé par $j \omega$:
 
-\begin{equation}
+$$
 \underline{\int_s dt} = \frac{\underline{s}}{j \omega}
-\end{equation}
+$$
 ````
 
 
@@ -99,9 +99,9 @@ Nous allons voir à travers l'étude du cas présenté précédemment l'intérê
 
 On rappelle qu'on étudie le circuit ci-après. Le point qui reste à prouver est l'étude fréquentielle, c'est-à-dire l'étude du régime sinusoïdal forcé par un sinusoïde quelconque de pulsation $\omega$. On rappelle que le but est prouver que la tension aux bornes du condensateur pour une entrée de la forme $e(t) = e_m \cos \omega t$est de la forme:
 
-\begin{equation}
+$$
 \frac{e_m}{\sqrt{1 + {\left(RC \omega\right)}^2}} \cos\left(\omega t - \arctan \left(RC \omega\right) \right)
-\end{equation}
+$$
 ```{figure} ./images/elec_rc_passe_bas.jpg
 :name: fig_185
 :align: center
@@ -139,14 +139,14 @@ Insistons sur le fait que cette méthode n'est PAS à utiliser. Elle est présen
 
 On cherche un régime forcé sous la forme $s(t) = s_m \cos \omega t + \varphi$. On l'introduit dans l'équation différentielle, ce qui donne:
 
-\begin{equation}
+$$
 - RC \omega s_m \sin (\omega t + \varphi) + s_m \cos \omega t + \varphi = e_m \cos \omega t
-\end{equation}
+$$
 soit en linéarisant:
 
-\begin{equation}
+$$
 s_m \left(- RC \omega \cos \varphi - \sin \varphi\right) \sin \omega t  + s_m \left(\omega \cos \varphi - RC \sin \varphi\right) \cos \omega t = e_m \cos \omega t
-\end{equation}
+$$
 L'égalité étant vraie pour tout t, il vient que les coefficients devant chaque sinus et cosinus doivent être les mêmes:
 
 \begin{align*}
@@ -194,9 +194,9 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 :class: hint
 On définit l'__impédance complexe__ d'un dipôle par la grandeur:
 
-\begin{equation}
+$$
 \underline{Z} = \frac{\underline{u}}{\underline{i}} = \frac{\underline{u_m}}{\underline{i_m}}
-\end{equation}
+$$
 Elle ne dépend pas du temps mais peut dépendre de la pulsation du circuit.
 
 ````
@@ -205,9 +205,9 @@ Elle ne dépend pas du temps mais peut dépendre de la pulsation du circuit.
 
 On définit __l'admittance complexe__ comme l'inverse de l'impédance complexe:
 
-\begin{equation}
+$$
 \underline{Y} = \frac{1}{\underline{Z}} = \frac{\underline{i}}{\underline{u}} = \frac{\underline{i_m}}{\underline{u_m}}
-\end{equation}\end{defi}
+$$\end{defi}
 ````
 
 __Ecriture complexe__  
@@ -293,14 +293,14 @@ On considère un dipôle RLC série relié à une source idéale de tension dél
 __Méthode 1: Utilisation des lois de Kirchoff__  
 La lois des mailles s'écrit: $u_R + u_L + u_C = e$ et reste vraie avec les représentations complexes. En régime sinusoïdal forcé, on utilise les impédances: $\underline{u_R} = R \underline{i}; \underline{u_L} = j L \omega \underline{i}; \underline{u_C} = \frac{\underline{i}}{jC \omega}$. Il vient:
 
-\begin{equation}
+$$
 \left(R + j L \omega + \frac{1}{j C \omega}\right) \underline{i} = \underline{e} \Longrightarrow \underline{i} = \frac{\underline{e}}{R + j L \omega + \frac{1}{j C \omega}}
-\end{equation}
+$$
 On déduite la tension $u_C$:
 
-\begin{equation}
+$$
 \underline{u_C} = \frac{\underline{i}}{jC \omega} = \frac{\underline{e}}{jRC \omega - LC \omega^2 + 1}
-\end{equation}
+$$
 
 __Méthode 2: Pont diviseur__  
 R, L et C forment un pont diviseur de tension, il vient que:
@@ -316,14 +316,14 @@ On ne va travailler ici que sur l'intensité.
 
 Amplitude réelle: 
 
-\begin{equation}
+$$
 i_m = \left\vert \underline{i} \right\vert = \frac{e_m}{\sqrt{R^2 + {\left(L \omega - \frac{1}{C \omega}\right)}^2}}
-\end{equation}
+$$
 Phase à l'origine:
 
-\begin{equation}
+$$
 \phi_i = \arg \underline{i} = \arg \underline{e} - \arg \left(R + j \left(L \omega - \frac{1}{C \omega}\right)\right) = - \arctan \frac{1}{R}\left(L \omega - \frac{1}{C \omega}\right)
-\end{equation}
+$$
 
 ```{admonition} Vérification du résultat.
 :class: hint
@@ -432,9 +432,9 @@ Attention aux signes lorsqu'on passe du fréquentiel au temporel. En effet, le s
 
 On considère un système dont la relation entrée sortie entre les grandeurs complexes (on parle de fréquentiel) est:
 
-\begin{equation}
+$$
 \frac{\underline{s}}{\underline{e}} = \frac{1 - jRC \omega}{1 - LC \omega^2 + j RC \omega}
-\end{equation}
+$$
 Déterminer l'équation différentielle qui relie les grandeurs $s(t)$ à $e(t)$.
 ````
 
@@ -442,14 +442,14 @@ Déterminer l'équation différentielle qui relie les grandeurs $s(t)$ à $e(t)$
 
 On commence par exprimer l'équation sous forme $P(j\omega) \underline{s} = Q(j \omega) \underline{e}$ où P et Q sous des polynômes en $j \omega$:
 
-\begin{equation}
+$$
 \underline{s} - LC \omega^2 \underline{s} + j RC \omega \underline{s} = \underline{e} - jRC \omega \underline{e}
-\end{equation}
+$$
 On remplacer chaque terme en $j \omega$ par une dérivée temporelle:
 
-\begin{equation}
+$$
 s + LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} = e - RC \frac{\rm{d}e}{\rm{dt}}
-\end{equation}
+$$
 
 ````
 
@@ -578,9 +578,9 @@ Il faut pouvoir déterminer quelle forme est applicable à la grandeur étudié 
 
 Pour une grandeur d'un système d'ordre 2 dont le comportement haute fréquence est nul et le comportement basse fréquence non nul, sa représentation complexe peut se mettre sous la forme:
 
-\begin{equation}
+$$
 \underline{s} = \frac{A}{1 - {\left(\frac{\omega}{\omega_0}\right)}^2 + j \frac{\omega}{Q\omega_0}} = \frac{A}{1 - x^2 +  j\frac{x}{Q}}
-\end{equation}
+$$
 où $x = \frac{\omega}{\omega_0} $ est appelée pulsation réduite (attention, elle est sans dimension!).
 
 ````

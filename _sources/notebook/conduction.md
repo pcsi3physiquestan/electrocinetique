@@ -146,9 +146,9 @@ L'intensité moyenne consiste à mesurer le débit de charge pendant un temps $\
 __Intensité__  
 L'intensité qu'on calcule générale est l'intensité instantanée, c'est-à-dire la mesure du débit en faisant tendre la durée $\Delta t$ vers 0. En utilisant les notations différentielles, on a alors :
 
-\begin{equation}
+$$
 i = \frac{\rm{d}q}{\rm{dt}}
-\end{equation}
+$$
 avec q la quantité de charge traversant la surface orientée.
 
 

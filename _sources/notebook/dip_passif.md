@@ -27,9 +27,9 @@ Tout conducteur dissipe de l'énergie par effet Joule (dissipation de l'énergie
 
 Un conducteur ohmique ou résistance est un dipôle dont l'équation d'évolution est __en convention récepteur:__
 
-\begin{equation}
+$$
 u(t) = R i(t)
-\end{equation}
+$$
 où R est appelée __résistance__. Son inverse $G = 1 / R$ est appelée __conductance__
 
 ```{figure} ./images/elec_resistor.jpg
@@ -75,9 +75,9 @@ C est appelée capacité du condensateur.
 
 En __convention récepteur__, l'équation d'évolution s'écrit aussi:
 
-\begin{equation}
+$$
 i(t) = C \frac{du}{dt}(t)
-\end{equation}\end{basic}
+$$\end{basic}
 
 
 __Démonstration__  
@@ -114,9 +114,9 @@ Une inductance (ou bobine) est un dipôle dont l'équation d'évolution __en con
 
 
 
-\begin{equation}
+$$
 u(t) = L \frac{di}{dt}(t)
-\end{equation}\end{defi}
+$$\end{defi}
 ````
 ```{dropdown} Remarque
 
@@ -166,17 +166,17 @@ A l'inverse, dans de nombreux dispositifs électroniques, les résistances sont 
 
 Lorsqu'on applique une tension u à ses bornes, un condensateur stocke une énergie :
 
-\begin{equation}
+$$
 E_{el} = \frac{1}{2} C u^2
-\end{equation}
+$$
 ````
 
 ````{admonition} Fondamental : Energie stockée dans une bobine
 Lorsqu'un courant i circule dans une bobine, celle-ci stocke une énergie :
 
-\begin{equation}
+$$
 E_{mag} = \frac{1}{2} L i^2
-\end{equation}\end{basic}
+$$\end{basic}
 ````
 
 __Justification__  
@@ -184,16 +184,16 @@ Nous allons montrer que la puissance reçue par la bobine et le condensateur peu
 
 La puissance reçue par un condensateur s'écrit (on l'oriente en convention récepteur):
 
-\begin{equation}
+$$
 p(t) = u(t) i(t) = C u(t) \frac{du}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} C u^2(t)\right)
-\end{equation}
+$$
 (on a cherche une primitive à la fonction u(t) u'(t)).
 
 La puissance reçue par une bobine s'écrit (on l'oriente en convention récepteur):
 
-\begin{equation}
+$$
 p(t) = u(t) i(t) = L i(t) \frac{di}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} L i^2(t)\right)
-\end{equation}
+$$
 (on a cherche une primitive à la fonction i(t) i'(t)).
 
 On trouve bien les expressions des deux énergies données précédemment.

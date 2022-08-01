@@ -579,10 +579,10 @@
 <li><p>Déterminer le type de filtre par une étude haute et basse fréquence.</p></li>
 <li><p>Déterminer la fonction de transfert du filtre et en déduire son gain réel, son gain en décibel, sa phase. On introduira la pulsation propre <span class="math notranslate nohighlight">\(\omega _0\)</span> telle que:</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-09844fac-02a6-4e48-8232-a30ee554d6f4">
-<span class="eqno">(101)<a class="headerlink" href="#equation-09844fac-02a6-4e48-8232-a30ee554d6f4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 \underline{H} = \frac{A j\frac{\omega}{\omega_0}}{1 + j\frac{\omega}{\omega_0}} = \frac{A jx}{1 + jx}
-\end{equation}\]</div>
+\]</div>
 <p>On veut tracer le diagramme de Bode. Montrer que:</p>
 <ol class="simple">
 <li><p>Le gain réel est strictement croissant</p></li>
@@ -602,10 +602,10 @@
 <p>Le filtre a une fonction de transfert nulle à basse fréquence et non nulle à haute fréquence. C’est un filtre passe-haut.</p>
 <p><strong>Fonction de transfert</strong><br />
 La bobine et la résistance forment un pont diviseur de tension. La tension aux bornes de la bobine est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0c912107-d967-437b-9edb-dae1052a930f">
-<span class="eqno">(102)<a class="headerlink" href="#equation-0c912107-d967-437b-9edb-dae1052a930f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 \underline{s} = \frac{jL\omega}{R + jL\omega} \underline{e} \Longrightarrow \underline{H} = \frac{j \frac{L}{R}\omega}{1 + j \frac{L}{R}\omega}
-\end{equation}\]</div>
+\]</div>
 <p>Il vient que la pulsation propre est <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span>.</p>
 <p>Il vient que les caractéristiques du filtre sont:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -741,8 +741,8 @@ A basse fréquence, la relation se réécrite <span class="math notranslate nohi
 </div>
 <blockquote>
 <div><p>Le gain réel étant strictement décroissant, le gain maximal est le gain à fréquence nulle (gain statique) soit ici 1. On cherche donc à résoudre l’inégalité:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b14c5f20-dd58-4545-b3fa-7325202d229f">
-<span class="eqno">(103)<a class="headerlink" href="#equation-b14c5f20-dd58-4545-b3fa-7325202d229f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-08593b32-5f2f-4c71-8b21-2425333e5f77">
+<span class="eqno">(55)<a class="headerlink" href="#equation-08593b32-5f2f-4c71-8b21-2425333e5f77" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{1}{\sqrt{1 + x^2}} \geq \frac{1}{\sqrt{2}} \Longrightarrow x\leq 1 \Longrightarrow \omega \leq \omega_0
 \end{equation}\]</div>
 </div></blockquote>
@@ -750,10 +750,10 @@ A basse fréquence, la relation se réécrite <span class="math notranslate nohi
 <div class="attention admonition">
 <p class="admonition-title">Cas d’un signal d’entrée périodique </p>
 <p>On considère le filtre précédent et on envoie en entrée un signal créneau d’amplitude E. On admet que la décomposition spectrale du signal créneau est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-29480349-6a12-41f9-ae6c-6d15ca00fe2c">
-<span class="eqno">(104)<a class="headerlink" href="#equation-29480349-6a12-41f9-ae6c-6d15ca00fe2c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 e(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{\sin \left((2k+1)2\pi f t\right)}{2k+1}
-\end{equation}\]</div>
+\]</div>
 <ol class="simple">
 <li><p>Donner la réponse exacte du filtre pour une fréquence du créneau <span class="math notranslate nohighlight">\(f = f_0\)</span> avec <span class="math notranslate nohighlight">\(f_0\)</span> la fréquence propre associée à la pulsation propre.</p></li>
 <li><p>Donner une réponse approchée du filtre en assimilant sa réponse à celle d’un filtre idéal lorsque <span class="math notranslate nohighlight">\(f = f_0/2\)</span>.</p></li>
@@ -764,8 +764,8 @@ e(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{\sin \left((2k+1)2\pi f t\r
 <p class="topic-title first">Correction</p>
 <blockquote>
 <div><p><strong>Réponse exacte</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-09ea7d45-3856-4873-9430-0f407f5b3be4">
-<span class="eqno">(105)<a class="headerlink" href="#equation-09ea7d45-3856-4873-9430-0f407f5b3be4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e6914504-0947-45a3-8936-64bfebe7117b">
+<span class="eqno">(56)<a class="headerlink" href="#equation-e6914504-0947-45a3-8936-64bfebe7117b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 s(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{1}{\sqrt{1 + {\left(2k+1\right)}^2}} \frac{\sin \left((2k+1)2\pi f t - \arctan (2k+1) \right)}{2k+1}
 \end{equation}\]</div>
 <p><strong>Réponse idéale</strong><br />

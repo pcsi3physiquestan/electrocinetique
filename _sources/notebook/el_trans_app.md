@@ -22,9 +22,9 @@ kernelspec:
 :class: attention
 On considère le signal ci-après.
 
-\begin{equation}
+$$
 e_m \exp (- t / \tau)
-\end{equation}
+$$
 1. D'après vos connaissances de terminales, quel est le temps caractéristiques ?
 2. Déterminer le temps de réponse à N\%. L'exprimer pour N=95 puis pour N=99 et montrer qu'ils sont proportionnels âu temps caractéristiques. Retrouver ainsi une interprétation de ce dernier.
 ````
@@ -33,9 +33,9 @@ e_m \exp (- t / \tau)
 :class: attention
 On considère le signal suivant:
 
-\begin{equation}
+$$
 2 * e_m \exp(-\frac{2t}{T})  - 4 * e_m \exp(-\frac{5t}{T}) + 3 e_m
-\end{equation}
+$$
 En comparant les temps caractéristiques des deux exponentielles, déterminer une estimation du temps caractéristique su signal total après avoir préciser l'état final.
 ````
 
@@ -127,9 +127,10 @@ Pour les graphiques ci-dessous, déterminer:
 ````{admonition} Décrément logarirthmique 
 :class: attention
 * Question préliminaire. Montrer que (n est une entier):
-\begin{equation}
+
+$$
 \delta = \frac{1}{n}\ln \left( \frac{u(t)}{u(t+nT)}\right)
-\end{equation}
+$$
 
 * Mesurer pour le signal $u(t)$ ci-dessous les valeurs successives des maxima (au moins 6)
 * En déduire des valeurs de $\delta$ pour n allant de 1 à 6 puis une valeur moyenne de $\delta$.

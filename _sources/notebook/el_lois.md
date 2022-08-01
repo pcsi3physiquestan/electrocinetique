@@ -533,9 +533,9 @@ Remarque : il arrive que certaines intensités ne soient pas exprimables en fonc
 
 Il vient :
 
-\begin{equation}
+$$
  \frac{U_1- U_2}{R} =\frac{U_2}{R} + i_3
-\end{equation}
+$$
 
 Il convient de se demander que doit-on calculer. Cette étape est fondamentale car son absence est souvent cause de beaucoup d'erreurs. Elle peut être faite avant ou après le paramétrage et souvent avant même la mise en équation. (On la fait ici pour profiter des grandeurs nommées).
 

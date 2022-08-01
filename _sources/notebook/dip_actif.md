@@ -198,9 +198,9 @@ E - R i_1 - u &= 0
 \end{align}
 En multipliant par R la première équation et en sommant, il vient:
 
-\begin{equation}
+$$
 u = \frac{E + R i_0 - R i}{2}
-\end{equation}
+$$
 Par identification, on trouve:
 
 \begin{align}

@@ -118,9 +118,10 @@ Exprimer le rendement $\eta$ du diviseur de tension représenté sur le circuit 
 ````{dropdown} Correction
 
 __Réponse (sans justification)__  
-\begin{equation}
+
+$$
 R\frac{{\left(\frac{r_1 }{r_1 + R}\right)}^2}{\frac{r_1 R}{r_1 + R} + r_2}
-\end{equation}
+$$
 
 ````
 
