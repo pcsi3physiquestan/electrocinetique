@@ -40,8 +40,9 @@ On considère le circuit suivant (la bobine est idéale). A $t=0$, le condensate
 1. Calculer l'énergie moyenne stockée dans le condensateur puis l'énergie moyenne stockée dans la bobine.
 ````
 
-```{admonition} A retenir
-:class: tip
+```{important} 
+__A retenir__
+
 * __Equation d'un oscillateur harmonique.__ Un oscillateur harmonique est un système dont les grandeurs suivent une équation d'évolution sous la forme:
 
 $$

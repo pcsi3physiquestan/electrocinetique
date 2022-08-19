@@ -13,7 +13,7 @@ kernelspec:
   language: python
   name: python3
 ---
-# Mise en cascade des filtres
+# Mise en cascade des filtres (en ligne)
 
 ## Mise en cascade. Généralités
 

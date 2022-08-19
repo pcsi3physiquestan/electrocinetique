@@ -13,7 +13,7 @@ kernelspec:
   language: python
   name: python3
 ---
-# Régime transitoire (1): Caractéristiques générales
+# Régime transitoire
 
 ````{admonition} Compétences
 :class: tip

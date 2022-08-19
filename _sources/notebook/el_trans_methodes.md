@@ -31,10 +31,10 @@ Le nombre de conditions initiales nécessaire est égale à l'ordre du système.
 ````
 ### Continuité des grandeurs
 
-````{topic} __Problème de continuité__  
+````{topic} Problème de continuité
 Comme nous l'avons évoqué précédemment, le système est souvent soumis à une brusque variation de la grandeur d'entrée, souvent modélisée par un échelon.
 
-Cela signifie que la grandeur d'entrée au temps $t_0$ où se produit la perturbation est discontinue. Il vient que les autres grandeurs du système __sont a priori discontinues en __$t_0$__.
+Cela signifie que la grandeur d'entrée au temps $t_0$ où se produit la perturbation est discontinue. Il vient que les autres grandeurs du système __sont a priori discontinues en $t_0$__.
 
 Pour résoudre ce problème, on va utiliser des grandeurs dont on sait qu'elle sont continues __par propriété__.
 ````

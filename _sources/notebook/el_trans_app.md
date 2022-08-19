@@ -88,7 +88,7 @@ On considère le circuit ci-après. L'interrupteur est depuis un temps long ferm
 1. Déterminer l'énergie perdue par la bobine de $t=0$ à $t= + \infty$ et l'énergie perdue par effet Joule dans la résistance. Commenter.
 ````
 
-````{dropdown} Eléments de réponse
+````{topic} Eléments de réponse
 >$\tau = \frac{L}{R}$
 ````
 

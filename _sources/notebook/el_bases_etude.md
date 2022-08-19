@@ -32,7 +32,6 @@ Considérons N résistances en série dont les résistances sont $\{R_i \vert i 
 ```{figure} ./images/elec_resistance_serie.png
 :name: fig_131
 :align: center
-
 ```
 
 L'intensité circulant dans l'ensemble est:
@@ -44,7 +43,7 @@ Et la tension u se divise dans chaque dipôle. La tension aux bornes de la rési
 
 $$
 u_k = \frac{R_k}{\sum_{i=1}^{i=n} R_i} u
-$$\end{basic}
+$$
 ````
 
 ````{topic} Démonstration  

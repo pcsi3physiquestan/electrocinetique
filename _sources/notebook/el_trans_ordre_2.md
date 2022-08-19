@@ -158,13 +158,14 @@ Pour relier les deux, il faut le facteur de qualité.
 __Tracé temporelle__  
 L'expression $X(t) = \exp^{-\lambda t}\left( D \sin^{\Omega t + \phi} \right)$ permet de dessiner facilement l'évolution de X(t) en régime pseudo-périodique.
 
-En effet, on remarque qu'il s'agit d'un signal sinsoïdal de pulsation $\Omega$ ou plutôt __pseudo-sinusoïdal__ car l'amplitude décroît de manière exponentielle.
+En effet, on remarque qu'il s'agit d'un signal sinsoïdal de pulsation $\Omega$ ou plutôt __pseudo-sinusoïdal__ car l'amplitude décroît de [manière exponentielle](fig_173).
 
 Pour représenter X(t), il faut d'abord représenter son __enveloppe exponentielle__: $D \exp^{- \frac{\omega_0 t}{2Q}}$. On représente alors à l'intérieur de l'enveloppe un sinusoïde (dont l'amplitude décroît) de __pseudo-période__ $T = \frac{2 \pi}{\Omega}$.
 
 ```{figure} ./images/elec_ordre2_pseudoperiodique_temporel.png
 :name: fig_173
 :align: center
+:width: 40%
 ```
 ### Régime pseudo-périodique: Décrément logarithmique
 
@@ -174,13 +175,14 @@ Dans le cas d'un régime pseudo-périodique, l'amplitude du pseudo-sinusoïde d�
 Comme cette décroissance est exponentielle, nous utilisons un indicateur particulier pour quantifier l'amortissement.
 ````
 ````{important} __Décrément logarithmique.__
+
 Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique $\delta$ par:
 
 $$
 \delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
-$$\end{defi}
+$$
 ````
-````{important} __Interprétation__  
+````{topic} Interprétation
 On calcule l'écart à la valeur finale à deux instants t et t+T (ce second écart est plus faible pour un système stable). En faisant le rapport, on obtient un nombre d'autant plus grand que l'amortissement est fort. Le décrément est donc une mesure l'amortissement __en régime pseudo-périodique__. 
 
 Le fait que la décroissance soit exponentielle explique que l'on prenne le logarithmique du rapport. Nous allons voir que cela simplifie l'expression.

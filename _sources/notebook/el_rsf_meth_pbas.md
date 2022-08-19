@@ -25,8 +25,9 @@ kernelspec:
 1. Déterminer les valeurs du déphasage à haute et basse fréquence et représentation le daphasage en fonction de la fréquence.
 ````
 
-````{admonition} Bilan : A retenir
-:class: important
+````{important} 
+__Bilan : A retenir__
+
 On retiendra:
 * les caractéristiques hautes et basses fréquences nécessaires et la forme canonique associées lorsque le système est d'ordre 2.
 * la forme générale de la réponse fréquentielle (allure en fonction de la fréquence) en amplitude réelle et en déphasage.

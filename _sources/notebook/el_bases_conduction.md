@@ -70,7 +70,7 @@ La grandeur mesurant le courant électrique est l'__intensité du courant__. Ell
 :align: center
 Représentation de l'intensité dans un circuit normalisé
 ```
-L'orientation de la surface correspond dans les schémas électriques habituels à l'orientation de l'intensité. Cette orientation est __arbitraire__. C'est la personne qui fait l'étude (ou qui pose la question... ) qui choisit l'orientation. Il n'est pas nécessaire qu'elle correspondent au phénomène réel de conduction. Il n'y a donc pas à réfléchir physiquement à ce qui se passe dans le circuit pour orienter i. __Trouver une intensité négative n'est PAS une erreur.__ Cela veut simplement dire que le débit de charge est positivement dans l'autre sens.
+L'orientation de la surface correspond dans les schémas électriques habituels à l'orientation de l'intensité. Cette orientation est __arbitraire__. C'est la personne qui fait l'étude (ou qui pose la question... ) qui choisit l'orientation. Il n'est pas nécessaire qu'elle correspondent au phénomène réel de conduction. Il n'y a donc pas à réfléchir physiquement à ce qui se passe dans le circuit pour orienter i. __Trouver une intensité négative n'est PAS une erreur.__ Cela veut simplement dire que le débit de charge est positif dans l'autre sens.
 
 Dans ces représentations, on ne tient pas compte de l'épaisseur du fil.
 ````
@@ -225,7 +225,7 @@ Analogie circuit hydraulique et circuit électrique
 >1. En déduire un bilan d'énergie pour l'eau avant et après la turbine (composant à droite). Faire l'analogie avec la traversée du récepteur.
 >
 >Réponses :
->1. La pompe prend de l'eau à faible hauteur pour l'amener à une hauteur importante : __elle donne de l'énergie aux "blocs" d'eau__ mais ne crée pas de l'eau. De même un générateur ne crée pas des charges,__ il leur donne de l'énergie__. Attention quand même, les électrons libérées au pôle (-) ne sont pas les mêmes que les électrons absorbées au pôle (+) (On pourra penser à une pile électrochimique). Le bilan se fait sur l'ensemble des électrons de conduction du circuit, pas sur un électron pris tout seul (un peu comme un circuit hydraulique où la pompe prélèverait et rendrait l'eau à une rivière).
+>1. La pompe prend de l'eau à faible hauteur pour l'amener à une hauteur importante : __elle donne de l'énergie aux "blocs" d'eau__ mais ne crée pas de l'eau. De même un générateur ne crée pas des charges, __il leur donne de l'énergie__. Attention quand même, les électrons libérées au pôle (-) ne sont pas les mêmes que les électrons absorbées au pôle (+) (On pourra penser à une pile électrochimique). Le bilan se fait sur l'ensemble des électrons de conduction du circuit, pas sur un électron pris tout seul (un peu comme un circuit hydraulique où la pompe prélèverait et rendrait l'eau à une rivière).
 >1. Le débit d'eau ne peut varier car l'eau est incompressible. Un volume qui avance dans la conduite pousse le volume qui le précède qui avance de la même manière : dans toutes les sections de la conduite, le débit étant le même, __l'énergie cinétique ne varie pas le long du circuit__. Il en est de même pour les charges électrique en régime stationnaire : l'intensité du courant est la même tout au long du circuit. Attention, cela suppose un circuit à une voie, il ne doit pas y avoir de bifurcation.
 >1. En passant dans la turbine, l'eau garde la même énergie cinétique mais perd de l'énergie potentielle : elle perd donc de l'énergie. Cette énergie est apportée à la turbine pour la faire tourner : __la turbine reçoit de l'énergie__ (qu'elle transforme en une autre forme d'énergie, ici de l'énergie cinétique). Si l'échange se fait avec le fluide du circuit, on peut faire abstraction du fluide et considérer qu'il y a un échange d'énergie entre la pompe et la turbine. Il en est de même dans un circuit électrique. Les électrons, au passage dans le récepteur perdent de l'énergie (puisque leur énergie potentielle $-eV$ diminue - V augmente - et que leur énergie cinétique reste identique), __cette énergie est reçue par le récepteur__. On peut considérer que les électrons de conduction servent de transfert : __le générateur fournit de l'énergie qui est reçue par le récepteur__.
 ````
@@ -342,9 +342,11 @@ Voici quelques éléments de vocabulaire utiles quand étudie un circuit électr
 * Dipôles : Composants électroniques composés de deux bornes. Ce seront les composants que nous étudierons principalement.
 * Maille : Ensemble de dipôles reliées entre eux par des fils de connexion et formant une boucle fermée.
 * Noeud : Un noeud est un point où se rencontrent au moins trois fils : le débit d'électrons se sépare (ou converge) donc en ce point.
-* Exemple : Sur le circuit ci-contre, il y a trois mailles différentes, quatre dipôles, trois points de potentiels différents et deux noeuds.
 ````
 ````{topic} Exemple  
+
+Sur le circuit [ci-après](fig_93), il y a trois mailles différentes, quatre dipôles, trois points de potentiels différents et deux noeuds.
+
 ```{figure} ./images/elec_maille.png
 :name: fig_93
 :align: center

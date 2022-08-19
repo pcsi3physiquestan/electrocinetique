@@ -189,7 +189,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="el_trans.html">
-   Régime transitoire (1): Caractéristiques générales
+   Régime transitoire
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -420,7 +420,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="el_filtrage_cascade.html">
-       Mise en cascade des filtres
+       Mise en cascade des filtres (en ligne)
       </a>
      </li>
     </ul>
@@ -685,7 +685,7 @@
 <img alt="../_images/elec_i_micro_macro.png" src="../_images/elec_i_micro_macro.png" />
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Représentation de l’intensité dans un circuit normalisé</span><a class="headerlink" href="#fig-representation-de-l-intensite-dans-un-circuit-normalise86" title="Permalink to this image">¶</a></p>
 </div>
-<p>L’orientation de la surface correspond dans les schémas électriques habituels à l’orientation de l’intensité. Cette orientation est <strong>arbitraire</strong>. C’est la personne qui fait l’étude (ou qui pose la question… ) qui choisit l’orientation. Il n’est pas nécessaire qu’elle correspondent au phénomène réel de conduction. Il n’y a donc pas à réfléchir physiquement à ce qui se passe dans le circuit pour orienter i. <strong>Trouver une intensité négative n’est PAS une erreur.</strong> Cela veut simplement dire que le débit de charge est positivement dans l’autre sens.</p>
+<p>L’orientation de la surface correspond dans les schémas électriques habituels à l’orientation de l’intensité. Cette orientation est <strong>arbitraire</strong>. C’est la personne qui fait l’étude (ou qui pose la question… ) qui choisit l’orientation. Il n’est pas nécessaire qu’elle correspondent au phénomène réel de conduction. Il n’y a donc pas à réfléchir physiquement à ce qui se passe dans le circuit pour orienter i. <strong>Trouver une intensité négative n’est PAS une erreur.</strong> Cela veut simplement dire que le débit de charge est positif dans l’autre sens.</p>
 <p>Dans ces représentations, on ne tient pas compte de l’épaisseur du fil.</p>
 </div>
 <div class="topic">
@@ -828,7 +828,7 @@ Questions :</p>
 </ol>
 <p>Réponses :</p>
 <ol class="simple">
-<li><p>La pompe prend de l’eau à faible hauteur pour l’amener à une hauteur importante : <strong>elle donne de l’énergie aux “blocs” d’eau</strong> mais ne crée pas de l’eau. De même un générateur ne crée pas des charges,__ il leur donne de l’énergie__. Attention quand même, les électrons libérées au pôle (-) ne sont pas les mêmes que les électrons absorbées au pôle (+) (On pourra penser à une pile électrochimique). Le bilan se fait sur l’ensemble des électrons de conduction du circuit, pas sur un électron pris tout seul (un peu comme un circuit hydraulique où la pompe prélèverait et rendrait l’eau à une rivière).</p></li>
+<li><p>La pompe prend de l’eau à faible hauteur pour l’amener à une hauteur importante : <strong>elle donne de l’énergie aux “blocs” d’eau</strong> mais ne crée pas de l’eau. De même un générateur ne crée pas des charges, <strong>il leur donne de l’énergie</strong>. Attention quand même, les électrons libérées au pôle (-) ne sont pas les mêmes que les électrons absorbées au pôle (+) (On pourra penser à une pile électrochimique). Le bilan se fait sur l’ensemble des électrons de conduction du circuit, pas sur un électron pris tout seul (un peu comme un circuit hydraulique où la pompe prélèverait et rendrait l’eau à une rivière).</p></li>
 <li><p>Le débit d’eau ne peut varier car l’eau est incompressible. Un volume qui avance dans la conduite pousse le volume qui le précède qui avance de la même manière : dans toutes les sections de la conduite, le débit étant le même, <strong>l’énergie cinétique ne varie pas le long du circuit</strong>. Il en est de même pour les charges électrique en régime stationnaire : l’intensité du courant est la même tout au long du circuit. Attention, cela suppose un circuit à une voie, il ne doit pas y avoir de bifurcation.</p></li>
 <li><p>En passant dans la turbine, l’eau garde la même énergie cinétique mais perd de l’énergie potentielle : elle perd donc de l’énergie. Cette énergie est apportée à la turbine pour la faire tourner : <strong>la turbine reçoit de l’énergie</strong> (qu’elle transforme en une autre forme d’énergie, ici de l’énergie cinétique). Si l’échange se fait avec le fluide du circuit, on peut faire abstraction du fluide et considérer qu’il y a un échange d’énergie entre la pompe et la turbine. Il en est de même dans un circuit électrique. Les électrons, au passage dans le récepteur perdent de l’énergie (puisque leur énergie potentielle <span class="math notranslate nohighlight">\(-eV\)</span> diminue - V augmente - et que leur énergie cinétique reste identique), <strong>cette énergie est reçue par le récepteur</strong>. On peut considérer que les électrons de conduction servent de transfert : <strong>le générateur fournit de l’énergie qui est reçue par le récepteur</strong>.</p></li>
 </ol>
@@ -940,11 +940,11 @@ Réponse : On a vu que la durée de propagation dans un circuit de TP est de l�
 <li><p>Dipôles : Composants électroniques composés de deux bornes. Ce seront les composants que nous étudierons principalement.</p></li>
 <li><p>Maille : Ensemble de dipôles reliées entre eux par des fils de connexion et formant une boucle fermée.</p></li>
 <li><p>Noeud : Un noeud est un point où se rencontrent au moins trois fils : le débit d’électrons se sépare (ou converge) donc en ce point.</p></li>
-<li><p>Exemple : Sur le circuit ci-contre, il y a trois mailles différentes, quatre dipôles, trois points de potentiels différents et deux noeuds.</p></li>
 </ul>
 </div>
 <div class="topic">
 <p class="topic-title first">Exemple</p>
+<p>Sur le circuit <a class="reference internal" href="#fig-93"><span class="std std-ref">ci-après</span></a>, il y a trois mailles différentes, quatre dipôles, trois points de potentiels différents et deux noeuds.</p>
 <div class="figure align-center" id="fig-93">
 <img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
 <p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Dans ce circuit : On peut dessiner 3 mailles différentes. Il y a 2 noeuds et trois points de potentiel différents.</span><a class="headerlink" href="#fig-93" title="Permalink to this image">¶</a></p>

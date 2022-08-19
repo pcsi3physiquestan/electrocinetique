@@ -189,7 +189,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="el_trans.html">
-   Régime transitoire (1): Caractéristiques générales
+   Régime transitoire
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -420,7 +420,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="el_filtrage_cascade.html">
-       Mise en cascade des filtres
+       Mise en cascade des filtres (en ligne)
       </a>
      </li>
     </ul>
@@ -582,8 +582,8 @@
 <blockquote>
 <div><p>La loi des mailles s’écrit: <span class="math notranslate nohighlight">\(u_R + u_C = 0 = R i + u_C\)</span>.</p>
 <p>En utilisant l’équation d’évolution du condensateur, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ff48304f-0bab-44cb-886a-331779b89b42">
-<span class="eqno">(14)<a class="headerlink" href="#equation-ff48304f-0bab-44cb-886a-331779b89b42" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-44c3ea50-6dc5-410e-bdbd-bad3acaa9a0b">
+<span class="eqno">(14)<a class="headerlink" href="#equation-44c3ea50-6dc5-410e-bdbd-bad3acaa9a0b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = 0
 \end{equation}\]</div>
 <p>On a donc <span class="math notranslate nohighlight">\(\tau = RC\)</span></p>
@@ -605,8 +605,8 @@
 <p>Le condensateur étant assmilable à un interrupteur ouvert, l’intensite i est nulle donc la tension aux bornes de la résistance aussi. Il vient <span class="math notranslate nohighlight">\(u_C(t=0^-) = E\)</span></p>
 <p>Par continuité <span class="math notranslate nohighlight">\(u_C(t=0^+) = E\)</span>.</p>
 <p>La condition initiale permet d’écrire A = E soit:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-86f4af73-9a25-4e3a-a87a-72a5a56ebabc">
-<span class="eqno">(15)<a class="headerlink" href="#equation-86f4af73-9a25-4e3a-a87a-72a5a56ebabc" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3202d3e5-570b-4524-a1d2-1d1742d3823e">
+<span class="eqno">(15)<a class="headerlink" href="#equation-3202d3e5-570b-4524-a1d2-1d1742d3823e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_C(t) = E \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
@@ -615,8 +615,8 @@ u_C(t) = E \exp^{-t/\tau}
 <p class="topic-title first">Correction - i(t)</p>
 <blockquote>
 <div><p>Pas besoin de tout réétudier. Il suffit d’utiliser la relation <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-556fe0a7-6afd-4594-9185-cc23f8203ab5">
-<span class="eqno">(16)<a class="headerlink" href="#equation-556fe0a7-6afd-4594-9185-cc23f8203ab5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-08b0dbce-381e-4331-b315-06d99974eef6">
+<span class="eqno">(16)<a class="headerlink" href="#equation-08b0dbce-381e-4331-b315-06d99974eef6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i(t) = -\frac{E}{R} \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
@@ -666,16 +666,16 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 On peut calculer l’énergie fournie par le condensateur de deux manières: en intégrant la puissance qu’il fournit ou en utilisant la variation d’énergie stockée.</p></li>
 </ul>
 <p>S’il faut savoir faire les deux dans un cas simple comme un circuit d’ordre 1, il vaut mieux privilégier l’utilisation de l’énergie stockée si on a le choix. Ici, l’énergie fournie par le condensateur est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1d3373d-c6a7-4987-9ccb-4e8e4efd743c">
-<span class="eqno">(17)<a class="headerlink" href="#equation-f1d3373d-c6a7-4987-9ccb-4e8e4efd743c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f105c0d0-2aef-446a-8504-1c57acd3c689">
+<span class="eqno">(17)<a class="headerlink" href="#equation-f105c0d0-2aef-446a-8504-1c57acd3c689" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \Delta E_C = E_L(0) - E_L(t=+\infty) = \frac{1}{2}C u_C(t=0)^2 - \frac{1}{2}C u_C(t=+\infty)^2 = \frac{C E^2}{2}
 \end{equation}\]</div>
 <ul class="simple">
 <li><p><strong>Energie dissipée par effet Joule dans R</strong><br />
 Pour la résistance, on n’a pas le choix, l’énergie dissipée ne peut se calculer qu’en intégrant la puissance reçue soit:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-e4ad6ce2-4419-4994-ae1d-c673763f5f7f">
-<span class="eqno">(18)<a class="headerlink" href="#equation-e4ad6ce2-4419-4994-ae1d-c673763f5f7f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ea7779fc-e908-4d91-9199-1c2aef9b66f5">
+<span class="eqno">(18)<a class="headerlink" href="#equation-ea7779fc-e908-4d91-9199-1c2aef9b66f5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E_J = \int_{t=0}^{t=+\infty} \frac{u_R^2(t)}{R} dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
 \end{equation}\]</div>
 <ul class="simple">
@@ -706,8 +706,8 @@ On peut considérer le système comme stable et le régime forcé sera indépend
 <p>Le condensateur se comporte alors comme un interrupteur ouvert et i=0. Il vient <span class="math notranslate nohighlight">\(u_C = E\)</span></p>
 <p><strong>Q2. Mise en équation</strong><br />
 Cette fois la loi des mailles s’écrit: <span class="math notranslate nohighlight">\(E - R i(t) - u_C(t) = 0\)</span>. On utilise à nouveau la relation tension-intensité du condensateur, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1240ad0f-26f4-47c3-921e-54dbe456d140">
-<span class="eqno">(19)<a class="headerlink" href="#equation-1240ad0f-26f4-47c3-921e-54dbe456d140" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-26774107-b981-4252-a240-7f15e110378d">
+<span class="eqno">(19)<a class="headerlink" href="#equation-26774107-b981-4252-a240-7f15e110378d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = \frac{E}{RC}
 \end{equation}\]</div>
 <p>On doit déterminer les conditions initiales. Dans le régime forcé indépendant du temps avant t=0, on cherche la grandeur continue, ici la tension aux bornes du condensateur. Le condensateur se comporte comme un interrupteur ouvert donc l’intensité est nulle et donc <span class="math notranslate nohighlight">\(u_C(t=0^-) = u_R(t=0^-) = 0\)</span></p>
@@ -716,14 +716,14 @@ Cette fois la loi des mailles s’écrit: <span class="math notranslate nohighli
 <p>On cherche une solution particulière constante <span class="math notranslate nohighlight">\(U_0\)</span>. En l’introduisant dans l’équation différentielle, il vient <span class="math notranslate nohighlight">\(0 + \frac{U_0}{RC} = \frac{E}{RC}\)</span> soit <span class="math notranslate nohighlight">\(U_0 = E\)</span></p>
 <p>La solution est donc: <span class="math notranslate nohighlight">\(A \exp^{-t/RC} + E\)</span></p>
 <p>On utilise la condition initiale qui donne A = -E donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6366d993-503a-46bf-b693-daad8ac604a3">
-<span class="eqno">(20)<a class="headerlink" href="#equation-6366d993-503a-46bf-b693-daad8ac604a3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6719c3e8-d396-43a9-b901-dad602bf7849">
+<span class="eqno">(20)<a class="headerlink" href="#equation-6719c3e8-d396-43a9-b901-dad602bf7849" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_C(t) = E (1 - \exp^{-t/\tau})
 \end{equation}\]</div>
 <p><strong>Q3. Intensité</strong><br />
 Il suffit de dériver et de multiplier par C:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e942ae24-e801-4405-b56d-5ac7313941d9">
-<span class="eqno">(21)<a class="headerlink" href="#equation-e942ae24-e801-4405-b56d-5ac7313941d9" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a819a65a-8791-4719-bcd6-e8bdc7babfa1">
+<span class="eqno">(21)<a class="headerlink" href="#equation-a819a65a-8791-4719-bcd6-e8bdc7babfa1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i(t) = \frac{E}{R} \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
@@ -738,18 +738,18 @@ Bilan de puissance: la loi des mailles <span class="math notranslate nohighlight
 <p>On observe que la puissance fournie par le générateur va en partie est stockée par le condensateur et en partie dissipée par la résistance.</p>
 <p>Bilan énergétique:</p>
 <p>On commence par l’énergie fournie par le générateur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e56dfa84-ec7f-484d-a91e-41c54ce8870c">
-<span class="eqno">(22)<a class="headerlink" href="#equation-e56dfa84-ec7f-484d-a91e-41c54ce8870c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8c5fadb9-bba4-402e-934b-e3283dca5800">
+<span class="eqno">(22)<a class="headerlink" href="#equation-8c5fadb9-bba4-402e-934b-e3283dca5800" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E_E= \int_{t=0}^{t=+\infty} Ei(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{t}{RC}} dt = CE^2
 \end{equation}\]</div>
 <p>Ensuite l’énergie dissipée par la résistance:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-43956f72-2bb3-466d-854a-be7f474a0b04">
-<span class="eqno">(23)<a class="headerlink" href="#equation-43956f72-2bb3-466d-854a-be7f474a0b04" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7c485aa3-73ee-4176-b01c-741f4ea6d284">
+<span class="eqno">(23)<a class="headerlink" href="#equation-7c485aa3-73ee-4176-b01c-741f4ea6d284" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E_J = \int_{t=0}^{t=+\infty} R i^2(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
 \end{equation}\]</div>
 <p>Enfin l’énergie stockée par le condensateur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-05071964-9163-4483-9b40-39d80ab7a05c">
-<span class="eqno">(24)<a class="headerlink" href="#equation-05071964-9163-4483-9b40-39d80ab7a05c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-979eaaf6-b0d2-4001-9a8b-4c5ebf43f277">
+<span class="eqno">(24)<a class="headerlink" href="#equation-979eaaf6-b0d2-4001-9a8b-4c5ebf43f277" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \Delta E_C = E_C(t=+\infty) - E_C(t=0) = \frac{1}{2}C u_C(t=\infty)^2 - \frac{1}{2}C u_C(t=0)^2 = \frac{C E^2}{2}
 \end{equation}\]</div>
 </div></blockquote>

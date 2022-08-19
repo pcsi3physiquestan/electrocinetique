@@ -189,7 +189,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="el_trans.html">
-   Régime transitoire (1): Caractéristiques générales
+   Régime transitoire
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -420,7 +420,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="el_filtrage_cascade.html">
-       Mise en cascade des filtres
+       Mise en cascade des filtres (en ligne)
       </a>
      </li>
     </ul>
@@ -606,13 +606,13 @@
 <div><p><strong>Méthode 1: Utilisation des lois de Kirchoff</strong><br />
 La lois des mailles s’écrit: <span class="math notranslate nohighlight">\(u_R + u_L + u_C = e\)</span> et reste vraie avec les représentations complexes.<br />
 En régime sinusoïdal forcé, on utilise les impédances: <span class="math notranslate nohighlight">\(\underline{u_R} = R \underline{i}; \underline{u_L} = j L \omega \underline{i}; \underline{u_C} = \frac{\underline{i}}{jC \omega}\)</span>. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a00b4241-3c23-47da-9f4d-f2a567df3777">
-<span class="eqno">(49)<a class="headerlink" href="#equation-a00b4241-3c23-47da-9f4d-f2a567df3777" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-950260da-9379-4e2e-b439-ebbc0ed42854">
+<span class="eqno">(49)<a class="headerlink" href="#equation-950260da-9379-4e2e-b439-ebbc0ed42854" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \left(R + j L \omega + \frac{1}{j C \omega}\right) \underline{i} = \underline{e} \Longrightarrow \underline{i} = \frac{\underline{e}}{R + j L \omega + \frac{1}{j C \omega}}
 \end{equation}\]</div>
 <p>On déduite la tension <span class="math notranslate nohighlight">\(u_C\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cb2df87c-45db-4d75-9dc9-98069d16f479">
-<span class="eqno">(50)<a class="headerlink" href="#equation-cb2df87c-45db-4d75-9dc9-98069d16f479" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a7170b1a-f6a2-44bc-adce-1431d24e0af1">
+<span class="eqno">(50)<a class="headerlink" href="#equation-a7170b1a-f6a2-44bc-adce-1431d24e0af1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{u_C} = \frac{\underline{i}}{jC \omega} = \frac{\underline{e}}{jRC \omega - LC \omega^2 + 1}
 \end{equation}\]</div>
 <p><strong>Méthode 2: Pont diviseur</strong><br />
@@ -632,13 +632,13 @@ On ne va travailler ici que sur l’intensité.</p>
 </div>
 <blockquote>
 <div><p>Amplitude réelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d6d9d5cc-2fb1-4f73-ad16-1b23b2db6d05">
-<span class="eqno">(51)<a class="headerlink" href="#equation-d6d9d5cc-2fb1-4f73-ad16-1b23b2db6d05" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fb774ef4-31fa-4992-89a7-c4e7b35e5d4f">
+<span class="eqno">(51)<a class="headerlink" href="#equation-fb774ef4-31fa-4992-89a7-c4e7b35e5d4f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_m = \left\vert \underline{i} \right\vert = \frac{e_m}{\sqrt{R^2 + {\left(L \omega - \frac{1}{C \omega}\right)}^2}}
 \end{equation}\]</div>
 <p>Phase à l’origine:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f945e09-8cec-413e-b053-581eccaf57a3">
-<span class="eqno">(52)<a class="headerlink" href="#equation-9f945e09-8cec-413e-b053-581eccaf57a3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-88db88cb-d9c0-45de-bddd-9f747d93588e">
+<span class="eqno">(52)<a class="headerlink" href="#equation-88db88cb-d9c0-45de-bddd-9f747d93588e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \phi_i = \arg \underline{i} = \arg \underline{e} - \arg \left(R + j \left(L \omega - \frac{1}{C \omega}\right)\right) = - \arctan \frac{1}{R}\left(L \omega - \frac{1}{C \omega}\right)
 \end{equation}\]</div>
 </div></blockquote>
@@ -726,13 +726,13 @@ On va écrire deux lois des noeuds en termes de potentiel: en B et en D.</p>
 <p class="topic-title first">Correction</p>
 <blockquote>
 <div><p>On commence par exprimer l’équation sous forme <span class="math notranslate nohighlight">\(P(j\omega) \underline{s} = Q(j \omega) \underline{e}\)</span> où P et Q sous des polynômes en <span class="math notranslate nohighlight">\(j \omega\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6976da7e-765d-447c-bda0-c1a6aeb33383">
-<span class="eqno">(53)<a class="headerlink" href="#equation-6976da7e-765d-447c-bda0-c1a6aeb33383" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ffcaeaca-2bc2-42ec-b839-da227e3ad913">
+<span class="eqno">(53)<a class="headerlink" href="#equation-ffcaeaca-2bc2-42ec-b839-da227e3ad913" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s} - LC \omega^2 \underline{s} + j RC \omega \underline{s} = \underline{e} - jRC \omega \underline{e}
 \end{equation}\]</div>
 <p>On remplacer chaque terme en <span class="math notranslate nohighlight">\(j \omega\)</span> par une dérivée temporelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de9c03fb-c10c-42ba-a027-fe456d449355">
-<span class="eqno">(54)<a class="headerlink" href="#equation-de9c03fb-c10c-42ba-a027-fe456d449355" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fb3fb732-fe76-4989-859b-fdf2ca8b787c">
+<span class="eqno">(54)<a class="headerlink" href="#equation-fb3fb732-fe76-4989-859b-fdf2ca8b787c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 s + LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} = e - RC \frac{\rm{d}e}{\rm{dt}}
 \end{equation}\]</div>
 </div></blockquote>

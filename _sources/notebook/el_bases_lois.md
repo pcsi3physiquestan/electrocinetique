@@ -87,7 +87,7 @@ La puissance échangée, comme toutes les grandeurs en électricité est algébr
 1. calculer la puissance échangée $P = ui$
 1. trouver une puissance échangée négative
 
-Cela signifie que physiquement, le dipôle fournit l'énergie $\vert P \vert = - ui$ au reste du circuit. Il se __comporte __donc comme un __générateur__.
+Cela signifie que physiquement, le dipôle fournit l'énergie $\vert P \vert = - ui$ au reste du circuit. Il se __comporte__ donc comme un __générateur__.
 
 Mais avoir choisi une convention récepteur en premier n'est pas faux, puisqu'il s'agit d'un choix arbitraire. __L'important c'est que l'analyse physique soit correcte.__
 ````

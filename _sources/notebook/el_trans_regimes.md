@@ -79,7 +79,7 @@ Cf. [cet exercice](etude_rpit) pour utiliser ces propriétés
 
 
 
-## Caractéristiques des régimes transitoires
+## Caractéristiques des régimes transitoires (en ligne)
 
 ### Etude expérimentale
 

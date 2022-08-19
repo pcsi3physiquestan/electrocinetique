@@ -157,7 +157,7 @@ Lorsqu'un courant i circule dans une bobine, celle-ci stocke une énergie :
 
 $$
 E_{mag} = \frac{1}{2} L i^2
-$$\end{basic}
+$$
 ````
 
 ````{topic} Justification  
@@ -172,7 +172,7 @@ $$
 ````
 
 ````{topic} Différence entre effet Joule et énergie stockée  
-Il est important de comprendre la différence de traitement entre la résistance et le condensateur (la bobine). Dans le premier cas, l'énergie est perdue et ne peut plus être récupérée par le même processus physique. Dans le cas du condensateur (de la bobine), l'énergie est stockée est peut-être redonnée au circuit.
+Il est important de comprendre la différence de traitement entre la résistance et le condensateur (la bobine). Dans le premier cas, l'énergie est perdue et ne peut plus être récupérée par le même processus physique. Dans le cas du condensateur (de la bobine), l'énergie est stockée et peut être redonnée au circuit.
 
 On pourra faire une analogie avec la différence entre l'énergie perdue par frottements et l'énergie stockée (ou rendue) sous forme d'énergie potentielle de pesanteur.
 ````

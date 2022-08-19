@@ -30,6 +30,7 @@ Une caractéristique statique permet simplement de visualiser l'ensemble des ét
 ```{figure} ./images/elec_carac_statique.png
 :name: fig_112
 :align: center
+:width: 40%
 Caractéristique statique d'un dipôle
 ```
 ````

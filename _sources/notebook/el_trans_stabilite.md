@@ -27,8 +27,8 @@ Un système linéaire d'ordre 1 ou 2 est stable si et seulement si les coefficie
 * Ils doivent être de même signe mais pas forcément positifs. Ils peuvent être tous négatifs.
 ````
 
-````{admonition} Démonstration: Ordre 1
-:class: tip
+````{topic} Démonstration: Ordre 1
+
 Considérons un système d'ordre 1 dont l'équation s'écrit: $a \frac{\rm{d}X}{\rm{dt}}(t) + b X(t) = F(t)$.
 
 On rappelle que la solution se décomposer en deux parties: une solution générale de l'équation sans second membre et une solution particulière de l'équation avec second membre. On choisit comme solution particulière le régime forcé (par exemple la solution constante si F(t) est une constante). Notons que ce régime forcé ne sera atteint que si le reste de l'expression tend vers 0, soit si la solution générale de l'équation homogène tend vers 0.
@@ -38,8 +38,8 @@ Cette solution générale est $A \exp^{- \frac{b}{a}t}$. Elle ne tendra vers 0 (
 La réciproque est triviale puisque l'exponentielle tendra vers 0.
 ````
 
-````{admonition} Démonstration: Ordre 2
-:class: tip
+````{topic} Démonstration: Ordre 2
+
 Considérons un système d'ordre 2 dont l'équation s'écrit: $a \frac{\rm{d^2}X}{\rm{dt^2}}(t) + b \frac{\rm{d}X}{\rm{dt}}(t) + c X(t) = F(t)$. On rappelle que la stabilité du système nécessite que la solution générale ESSM tend vers 0.
 
 Les solutions de l'équation caractéristiques sont: $r_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$. Distinguons les cas suivant le signe de $\Delta = b^2 - 4ac$.

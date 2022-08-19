@@ -189,7 +189,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="el_trans.html">
-   Régime transitoire (1): Caractéristiques générales
+   Régime transitoire
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -420,7 +420,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="el_filtrage_cascade.html">
-       Mise en cascade des filtres
+       Mise en cascade des filtres (en ligne)
       </a>
      </li>
     </ul>
@@ -614,8 +614,8 @@
 <p class="admonition-title">Important</p>
 <p><strong>Forme canonique des systèmes d’ordre 2</strong></p>
 <p>L’équation différentielle qui régit l’évolution d’un système d’ordre 2 peut se mettre une des formes suivantes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9c42ccd3-86dc-4f34-ab49-43204f11fee9">
-<span class="eqno">(13)<a class="headerlink" href="#equation-9c42ccd3-86dc-4f34-ab49-43204f11fee9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c85cdd23-5fb3-45b5-a77b-98a2e473cb8b">
+<span class="eqno">(13)<a class="headerlink" href="#equation-c85cdd23-5fb3-45b5-a77b-98a2e473cb8b" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + \frac{\omega_0}{Q} \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)\\
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + 2 \xi \omega_0 \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)
 \end{align}\]</div>
@@ -765,10 +765,10 @@ Remarquons que dans le cas où les coefficients sont positifs, le coefficient de
 </div>
 <p><strong>Tracé temporelle</strong><br />
 L’expression <span class="math notranslate nohighlight">\(X(t) = \exp^{-\lambda t}\left( D \sin^{\Omega t + \phi} \right)\)</span> permet de dessiner facilement l’évolution de X(t) en régime pseudo-périodique.</p>
-<p>En effet, on remarque qu’il s’agit d’un signal sinsoïdal de pulsation <span class="math notranslate nohighlight">\(\Omega\)</span> ou plutôt <strong>pseudo-sinusoïdal</strong> car l’amplitude décroît de manière exponentielle.</p>
+<p>En effet, on remarque qu’il s’agit d’un signal sinsoïdal de pulsation <span class="math notranslate nohighlight">\(\Omega\)</span> ou plutôt <strong>pseudo-sinusoïdal</strong> car l’amplitude décroît de <a class="reference internal" href="#fig-173"><span class="std std-ref">manière exponentielle</span></a>.</p>
 <p>Pour représenter X(t), il faut d’abord représenter son <strong>enveloppe exponentielle</strong>: <span class="math notranslate nohighlight">\(D \exp^{- \frac{\omega_0 t}{2Q}}\)</span>. On représente alors à l’intérieur de l’enveloppe un sinusoïde (dont l’amplitude décroît) de <strong>pseudo-période</strong> <span class="math notranslate nohighlight">\(T = \frac{2 \pi}{\Omega}\)</span>.</p>
 <div class="figure align-center" id="fig-173">
-<img alt="../_images/elec_ordre2_pseudoperiodique_temporel.png" src="../_images/elec_ordre2_pseudoperiodique_temporel.png" />
+<a class="reference internal image-reference" href="../_images/elec_ordre2_pseudoperiodique_temporel.png"><img alt="../_images/elec_ordre2_pseudoperiodique_temporel.png" src="../_images/elec_ordre2_pseudoperiodique_temporel.png" style="width: 40%;" /></a>
 </div>
 </div>
 <div class="section" id="regime-pseudo-periodique-decrement-logarithmique">
@@ -780,16 +780,16 @@ L’expression <span class="math notranslate nohighlight">\(X(t) = \exp^{-\lambd
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Décrément logarithmique.</strong>
-Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique <span class="math notranslate nohighlight">\(\delta\)</span> par:</p>
-<p>$<span class="math notranslate nohighlight">\(
+<p><strong>Décrément logarithmique.</strong></p>
+<p>Pour un régime pseudo-périodique de pseudo-période T, on définit le décrément logarithmique <span class="math notranslate nohighlight">\(\delta\)</span> par:</p>
+<div class="math notranslate nohighlight">
+\[
 \delta = \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)
-\)</span>$\end{defi}</p>
+\]</div>
 </div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p><strong>Interprétation</strong><br />
-On calcule l’écart à la valeur finale à deux instants t et t+T (ce second écart est plus faible pour un système stable). En faisant le rapport, on obtient un nombre d’autant plus grand que l’amortissement est fort. Le décrément est donc une mesure l’amortissement <strong>en régime pseudo-périodique</strong>.</p>
+<div class="topic">
+<p class="topic-title first">Interprétation</p>
+<p>On calcule l’écart à la valeur finale à deux instants t et t+T (ce second écart est plus faible pour un système stable). En faisant le rapport, on obtient un nombre d’autant plus grand que l’amortissement est fort. Le décrément est donc une mesure l’amortissement <strong>en régime pseudo-périodique</strong>.</p>
 <p>Le fait que la décroissance soit exponentielle explique que l’on prenne le logarithmique du rapport. Nous allons voir que cela simplifie l’expression.</p>
 </div>
 <div class="sidebar">
