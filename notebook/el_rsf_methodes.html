@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Méthodes : Etudier un circuit en RSF &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_rsf_methodes.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Activités" href="el_rsf_meth.html" />
     <link rel="prev" title="Maitriser les méthodes" href="el_rsf_ex.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etude-d-un-circuit-rlc-serie">
@@ -588,7 +584,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="methodes-etudier-un-circuit-en-rsf">
+  <div class="section" id="methodes-etudier-un-circuit-en-rsf">
 <span id="rsf-meth"></span><h1>Méthodes : Etudier un circuit en RSF<a class="headerlink" href="#methodes-etudier-un-circuit-en-rsf" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="etude-d-un-circuit-rlc-serie">
 <h2>Etude d’un circuit RLC série<a class="headerlink" href="#etude-d-un-circuit-rlc-serie" title="Permalink to this headline">¶</a></h2>
@@ -601,18 +597,18 @@
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Méthode 1: Utilisation des lois de Kirchoff</strong><br />
 La lois des mailles s’écrit: <span class="math notranslate nohighlight">\(u_R + u_L + u_C = e\)</span> et reste vraie avec les représentations complexes.<br />
 En régime sinusoïdal forcé, on utilise les impédances: <span class="math notranslate nohighlight">\(\underline{u_R} = R \underline{i}; \underline{u_L} = j L \omega \underline{i}; \underline{u_C} = \frac{\underline{i}}{jC \omega}\)</span>. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-950260da-9379-4e2e-b439-ebbc0ed42854">
-<span class="eqno">(49)<a class="headerlink" href="#equation-950260da-9379-4e2e-b439-ebbc0ed42854" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-35398424-c6d8-46ec-b2c5-99a3c9812bab">
+<span class="eqno">(49)<a class="headerlink" href="#equation-35398424-c6d8-46ec-b2c5-99a3c9812bab" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \left(R + j L \omega + \frac{1}{j C \omega}\right) \underline{i} = \underline{e} \Longrightarrow \underline{i} = \frac{\underline{e}}{R + j L \omega + \frac{1}{j C \omega}}
 \end{equation}\]</div>
 <p>On déduite la tension <span class="math notranslate nohighlight">\(u_C\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7170b1a-f6a2-44bc-adce-1431d24e0af1">
-<span class="eqno">(50)<a class="headerlink" href="#equation-a7170b1a-f6a2-44bc-adce-1431d24e0af1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-730debcd-ab9e-4084-8c7c-f308054f54f3">
+<span class="eqno">(50)<a class="headerlink" href="#equation-730debcd-ab9e-4084-8c7c-f308054f54f3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{u_C} = \frac{\underline{i}}{jC \omega} = \frac{\underline{e}}{jRC \omega - LC \omega^2 + 1}
 \end{equation}\]</div>
 <p><strong>Méthode 2: Pont diviseur</strong><br />
@@ -632,13 +628,13 @@ On ne va travailler ici que sur l’intensité.</p>
 </div>
 <blockquote>
 <div><p>Amplitude réelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb774ef4-31fa-4992-89a7-c4e7b35e5d4f">
-<span class="eqno">(51)<a class="headerlink" href="#equation-fb774ef4-31fa-4992-89a7-c4e7b35e5d4f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b16759fa-7c8f-44b8-9a43-f8bbd0503ce4">
+<span class="eqno">(51)<a class="headerlink" href="#equation-b16759fa-7c8f-44b8-9a43-f8bbd0503ce4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_m = \left\vert \underline{i} \right\vert = \frac{e_m}{\sqrt{R^2 + {\left(L \omega - \frac{1}{C \omega}\right)}^2}}
 \end{equation}\]</div>
 <p>Phase à l’origine:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-88db88cb-d9c0-45de-bddd-9f747d93588e">
-<span class="eqno">(52)<a class="headerlink" href="#equation-88db88cb-d9c0-45de-bddd-9f747d93588e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2e262a99-99ce-49e0-8ed9-52d48d38f70c">
+<span class="eqno">(52)<a class="headerlink" href="#equation-2e262a99-99ce-49e0-8ed9-52d48d38f70c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \phi_i = \arg \underline{i} = \arg \underline{e} - \arg \left(R + j \left(L \omega - \frac{1}{C \omega}\right)\right) = - \arctan \frac{1}{R}\left(L \omega - \frac{1}{C \omega}\right)
 \end{equation}\]</div>
 </div></blockquote>
@@ -654,7 +650,7 @@ i_m = \left\vert \underline{i} \right\vert = \frac{e_m}{\sqrt{R^2 + {\left(L \om
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Paramétrage du problème.</strong><br />
 On va utiliser la loi des noeuds en terme de potentiel donc on va nommer les potentiels et choisir une référence des potentiels. Remarquons qu’on sait que <span class="math notranslate nohighlight">\(\underline{V_A} = \underline{E}\)</span> et on cherche <span class="math notranslate nohighlight">\(\underline{V_D} = \underline{u_C} + 0\)</span>.</p>
@@ -723,16 +719,16 @@ On va écrire deux lois des noeuds en termes de potentiel: en B et en D.</p>
 <p>Déterminer l’équation différentielle qui relie les grandeurs <span class="math notranslate nohighlight">\(s(t)\)</span> à <span class="math notranslate nohighlight">\(e(t)\)</span>.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p>On commence par exprimer l’équation sous forme <span class="math notranslate nohighlight">\(P(j\omega) \underline{s} = Q(j \omega) \underline{e}\)</span> où P et Q sous des polynômes en <span class="math notranslate nohighlight">\(j \omega\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ffcaeaca-2bc2-42ec-b839-da227e3ad913">
-<span class="eqno">(53)<a class="headerlink" href="#equation-ffcaeaca-2bc2-42ec-b839-da227e3ad913" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-825264fb-91c9-4a84-ac8a-f0c8849922aa">
+<span class="eqno">(53)<a class="headerlink" href="#equation-825264fb-91c9-4a84-ac8a-f0c8849922aa" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \underline{s} - LC \omega^2 \underline{s} + j RC \omega \underline{s} = \underline{e} - jRC \omega \underline{e}
 \end{equation}\]</div>
 <p>On remplacer chaque terme en <span class="math notranslate nohighlight">\(j \omega\)</span> par une dérivée temporelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb3fb732-fe76-4989-859b-fdf2ca8b787c">
-<span class="eqno">(54)<a class="headerlink" href="#equation-fb3fb732-fe76-4989-859b-fdf2ca8b787c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0e1a1a09-6639-4fd2-b2bf-018432b557c5">
+<span class="eqno">(54)<a class="headerlink" href="#equation-0e1a1a09-6639-4fd2-b2bf-018432b557c5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 s + LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} = e - RC \frac{\rm{d}e}{\rm{dt}}
 \end{equation}\]</div>
 </div></blockquote>
@@ -750,7 +746,7 @@ s + LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} = e - RC \frac{\
 <p>Etudier la réponse haute et basse fréquence de l’intensité circulant dans le circuit et de la tension aux bornes du condensateur pour le circuit RLC série.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Etude basse fréquence</strong><br />
 A basse fréquence, le condensateur se comporte comme un interrupteur ouvert et la bobine comme un fil. Le circuit est donc assimilable au circuit suivant:</p>
@@ -796,27 +792,16 @@ A haute fréquence, le condensateur se comporte comme un fil et la bobine comme 
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_rsf_ex.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Maitriser les méthodes</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_rsf_ex.html" title="previous page">Maitriser les méthodes</a>
+    <a class='right-next' id="next-link" href="el_rsf_meth.html" title="next page">Activités</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_rsf_meth.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Activités</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -832,7 +817,8 @@ A haute fréquence, le condensateur se comporte comme un fil et la bobine comme 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

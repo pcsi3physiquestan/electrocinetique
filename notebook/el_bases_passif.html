@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dipôles linéaires passifs &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_passif.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Association de résistances" href="el_bases_assoc.html" />
     <link rel="prev" title="Dipôles électriques: Généralités" href="el_bases_gene.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#resistance-ou-conducteur-ohmique">
@@ -578,12 +574,12 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="dipoles-lineaires-passifs">
+  <div class="section" id="dipoles-lineaires-passifs">
 <h1>Dipôles linéaires passifs<a class="headerlink" href="#dipoles-lineaires-passifs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="resistance-ou-conducteur-ohmique">
 <h2>Résistance ou conducteur ohmique<a class="headerlink" href="#resistance-ou-conducteur-ohmique" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
-<p class="topic-title first">Description physique  </p>
+<p class="topic-title">Description physique</p>
 <p>Tout conducteur dissipe de l’énergie par effet Joule (dissipation de l’énergie des électrons par interaction désordonnée avec le cristal du conducteur). Dans une résistance, on cherche à contrôler et augmenter cet effet (qui est très faible voire négligeable dans un fil de connexion).</p>
 </div>
 <div class="admonition important">
@@ -603,7 +599,7 @@ u(t) = R i(t)
 <div class="section" id="puissance-perdue-par-effet-joule-en-ligne">
 <h3>Puissance perdue par effet Joule (en ligne)<a class="headerlink" href="#puissance-perdue-par-effet-joule-en-ligne" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Effet Joule</p>
+<p class="topic-title">Effet Joule</p>
 <p>Dans une résistance, la puissance reçue est toujours positive: <span class="math notranslate nohighlight">\(p(t) = R i^2(t) = \frac{u^2(t)}{R}\)</span>. Cette puissance est <strong>irrémédiablement</strong> perdue par le circuit. On parle d’effet Joule.</p>
 <p><strong>Utilisation et problèmes</strong></p>
 <ul class="simple">
@@ -616,7 +612,7 @@ u(t) = R i(t)
 <div class="section" id="condensateur">
 <h2>Condensateur<a class="headerlink" href="#condensateur" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
-<p class="topic-title first">Description physique  </p>
+<p class="topic-title">Description physique</p>
 <p>Une capacitance ou un condensateur est un dipôle construit de la manière suivant: deux conducteurs (des plans, des cylindres… ) se font face. Entre les deux, un isolant empêchent le passage des électrons.</p>
 <p>Quand les électrons sont mis en mouvement, ils vont se détacher d’un conducteur (qui se charge positivement) et s’accumuler sur l’autre (qui se charge négativement): la différence de charge créé un champ électrique qui peut mettre en mouvement les charges dans l’autre sens: on crée temporairement une source d’énergie qui peut se décharger dans d’autres dipôles.</p>
 </div>
@@ -645,7 +641,7 @@ q(t) = C u(t)
 <p>C est appelée capacité du condensateur.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Caractéristique statique</p>
+<p class="topic-title">Caractéristique statique</p>
 <p>La caractéristique statique d’un condensateur est la droite horizontale i = 0.</p>
 <p>Le condensateur est donc assimilable à un <strong>interrupteur ouvert</strong> en régime indépendant du temps.</p>
 </div>
@@ -663,7 +659,7 @@ E_{el} = \frac{1}{2} C u^2
 <p>C’est la méthode générale pour associer une énergie à une puissance.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Justification</p>
+<p class="topic-title">Justification</p>
 <p>Nous allons montrer que la puissance reçue par le condensateur peut se mettre sous la forme <span class="math notranslate nohighlight">\(P = \frac{dE}{dt}\)</span>. On observe ainsi qu’on peut exprimer la puissance échangée comme une variation d’énergie. Celle-ci correspondra à la variation d’énergie du dipôle.</p>
 <p>La puissance reçue par un condensateur s’écrit (on l’oriente en convention récepteur):</p>
 <div class="math notranslate nohighlight">
@@ -676,7 +672,7 @@ p(t) = u(t) i(t) = C u(t) \frac{du}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} C u
 <div class="section" id="bobine-ideale-et-inductance">
 <h2>Bobine idéale et inductance<a class="headerlink" href="#bobine-ideale-et-inductance" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
-<p class="topic-title first">Description physique</p>
+<p class="topic-title">Description physique</p>
 <p>Une bobine est un dipôle dont le fonctionnement est basé sur le phénomène d’induction: un champ magnétique variable engendre un champ électrique. Dans le cas d’une bobine, on enroule beaucoup de fil pour former des spires. L’intensité qui traverse ces spires crée un champ magnétique et si l’intensité est variable, le champ magnétique aussi. Il naît alors une tension aux bornes des spires.</p>
 </div>
 <div class="sidebar">
@@ -701,7 +697,7 @@ u(t) = L \frac{di}{dt}(t)
 \]</div>
 </div>
 <div class="topic">
-<p class="topic-title first">Caractéristique statique</p>
+<p class="topic-title">Caractéristique statique</p>
 <p>La caractéristique statique d’une bobine est une droite d’équation u(t) = 0</p>
 <p>En régime indépendant du temps, une bobine est donc <strong>assimilable à un fil</strong>.</p>
 </div>
@@ -715,7 +711,7 @@ E_{mag} = \frac{1}{2} L i^2
 \]</div>
 </div>
 <div class="topic">
-<p class="topic-title first">Justification</p>
+<p class="topic-title">Justification</p>
 <p>Nous allons montrer que la puissance reçue par la bobine peut se mettre sous la forme <span class="math notranslate nohighlight">\(P = \frac{dE}{dt}\)</span>. On observe ainsi qu’on peut exprimer la puissance échangée comme une variation d’énergie. Celle-ci correspondra à la variation d’énergie du dipôle.</p>
 <p>La puissance reçue par une bobine s’écrit (on l’oriente en convention récepteur):</p>
 <div class="math notranslate nohighlight">
@@ -725,7 +721,7 @@ p(t) = u(t) i(t) = L i(t) \frac{di}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} L i
 <p>(on a cherche une primitive à la fonction i(t) i’(t)).</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Différence entre effet Joule et énergie stockée  </p>
+<p class="topic-title">Différence entre effet Joule et énergie stockée</p>
 <p>Il est important de comprendre la différence de traitement entre la résistance et le condensateur (la bobine). Dans le premier cas, l’énergie est perdue et ne peut plus être récupérée par le même processus physique. Dans le cas du condensateur (de la bobine), l’énergie est stockée et peut être redonnée au circuit.</p>
 <p>On pourra faire une analogie avec la différence entre l’énergie perdue par frottements et l’énergie stockée (ou rendue) sous forme d’énergie potentielle de pesanteur.</p>
 </div>
@@ -755,27 +751,16 @@ p(t) = u(t) i(t) = L i(t) \frac{di}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} L i
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_bases_gene.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Dipôles électriques: Généralités</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_bases_gene.html" title="previous page">Dipôles électriques: Généralités</a>
+    <a class='right-next' id="next-link" href="el_bases_assoc.html" title="next page">Association de résistances</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_bases_assoc.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Association de résistances</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -791,7 +776,8 @@ p(t) = u(t) i(t) = L i(t) \frac{di}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} L i
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

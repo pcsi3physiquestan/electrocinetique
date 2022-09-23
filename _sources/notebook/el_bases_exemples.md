@@ -132,7 +132,7 @@ Réorganisons le système pour le résoudre.
 
 \begin{align}
 \left ( 2 R_1 + R \right ) V_B - R V_C &= R_1 E\\
-\left ( 2 R_1 + R \right ) V_C - R V_C &= 2 R_1 E
+\left ( 2 R_1 + R \right ) V_C - R V_B &= 2 R_1 E
 \end{align}
 soit en résolvant le système (__s'entraîner impérativement à le faire__):
 

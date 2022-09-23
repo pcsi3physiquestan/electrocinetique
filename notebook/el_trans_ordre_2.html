@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caractéristiques d’un système d’ordre 2 &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_trans_ordre_2.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Maitriser les méthodes" href="el_trans_ex.html" />
     <link rel="prev" title="Caractéristiques d’un système d’ordre 1" href="el_trans_ordre_1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#systeme-d-ordre-2-forme-canonique">
@@ -605,7 +601,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="caracteristiques-d-un-systeme-d-ordre-2">
+  <div class="section" id="caracteristiques-d-un-systeme-d-ordre-2">
 <h1>Caractéristiques d’un système d’ordre 2<a class="headerlink" href="#caracteristiques-d-un-systeme-d-ordre-2" title="Permalink to this headline">¶</a></h1>
 <p><em>Un exemple d’étude sur un RLC série est donné <span class="xref myst">ici</span>.</em></p>
 <div class="section" id="systeme-d-ordre-2-forme-canonique">
@@ -614,8 +610,8 @@
 <p class="admonition-title">Important</p>
 <p><strong>Forme canonique des systèmes d’ordre 2</strong></p>
 <p>L’équation différentielle qui régit l’évolution d’un système d’ordre 2 peut se mettre une des formes suivantes:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c85cdd23-5fb3-45b5-a77b-98a2e473cb8b">
-<span class="eqno">(13)<a class="headerlink" href="#equation-c85cdd23-5fb3-45b5-a77b-98a2e473cb8b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8d3f6ebe-b0fd-4618-9e17-3baae2186fe5">
+<span class="eqno">(13)<a class="headerlink" href="#equation-8d3f6ebe-b0fd-4618-9e17-3baae2186fe5" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + \frac{\omega_0}{Q} \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)\\
 \frac{\rm{d^2}X}{\rm{dt^2}}(t) + 2 \xi \omega_0 \frac{\rm{d}X}{\rm{dt}}(t) + \omega_0^2 X(t) = F(t)
 \end{align}\]</div>
@@ -788,7 +784,7 @@ L’expression <span class="math notranslate nohighlight">\(X(t) = \exp^{-\lambd
 \]</div>
 </div>
 <div class="topic">
-<p class="topic-title first">Interprétation</p>
+<p class="topic-title">Interprétation</p>
 <p>On calcule l’écart à la valeur finale à deux instants t et t+T (ce second écart est plus faible pour un système stable). En faisant le rapport, on obtient un nombre d’autant plus grand que l’amortissement est fort. Le décrément est donc une mesure l’amortissement <strong>en régime pseudo-périodique</strong>.</p>
 <p>Le fait que la décroissance soit exponentielle explique que l’on prenne le logarithmique du rapport. Nous allons voir que cela simplifie l’expression.</p>
 </div>
@@ -805,7 +801,7 @@ On peut montrer que (‘sentraîner à le faire - correction en ligne):</p>
 \)</span>$\end{basic}</p>
 </div>
 <div class="topic">
-<p class="topic-title first"><strong>Démonstration</strong></p>
+<p class="topic-title"><strong>Démonstration</strong></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \delta &amp;= \ln \left( \frac{u(t) - u(t=+\infty)}{u(t+T) - u(t=+\infty)}\right)\\
@@ -833,7 +829,7 @@ On peut montrer que (‘sentraîner à le faire - correction en ligne):</p>
 <div class="section" id="portrait-de-phase-en-ligne">
 <h3>Portrait de phase (en ligne)<a class="headerlink" href="#portrait-de-phase-en-ligne" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first"><strong>Allure du portrait de phase</strong>  </p>
+<p class="topic-title"><strong>Allure du portrait de phase</strong></p>
 <p>Le portrait de phase en régime pseudo-périodique est une spirale elliptique convergeant vers le régime forcé.</p>
 <p>Si l’on représente la dérivée <span class="math notranslate nohighlight">\(\dot X(t)\)</span> en fonction de la fonction X(t), la spirale tourne dans le sens horaire.</p>
 <div class="figure align-center" id="fig-174">
@@ -867,27 +863,16 @@ On peut montrer que (‘sentraîner à le faire - correction en ligne):</p>
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_trans_ordre_1.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Caractéristiques d’un système d’ordre 1</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_trans_ordre_1.html" title="previous page">Caractéristiques d’un système d’ordre 1</a>
+    <a class='right-next' id="next-link" href="el_trans_ex.html" title="next page">Maitriser les méthodes</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_trans_ex.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Maitriser les méthodes</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -903,7 +888,8 @@ On peut montrer que (‘sentraîner à le faire - correction en ligne):</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

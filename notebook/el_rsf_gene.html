@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Régime sinusoïdal forcé &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_rsf_gene.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Maitriser les méthodes" href="el_rsf_ex.html" />
     <link rel="prev" title="Intérêt de l’étude fréquentielle (en ligne)" href="el_rsf_interet.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#representation-complexe-des-signaux-sinusoidaux">
@@ -607,7 +603,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="regime-sinusoidal-force">
+  <div class="section" id="regime-sinusoidal-force">
 <h1>Régime sinusoïdal forcé<a class="headerlink" href="#regime-sinusoidal-force" title="Permalink to this headline">¶</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -615,7 +611,7 @@
 Lorsqu’un circuit <strong>linéaire stable</strong> est soumis <strong>à une excitation sinusoïdale</strong>, le régime transitoire s’atténue au bout d’un temps et il s’établit un régime forcé appelé régime sinusoïdal forcé. Toutes les grandeurs variables du circuit <strong>ont alors la forme mathématique d’un sinusoïde de même pulsation que l’excitation.</strong></p>
 </div>
 <div class="topic">
-<p class="topic-title first">Système stable et instable</p>
+<p class="topic-title">Système stable et instable</p>
 <div class="figure align-center" id="fig-184">
 <img alt="../_images/stable_instable.png" src="../_images/stable_instable.png" />
 </div>
@@ -678,7 +674,7 @@ La représentation complexe de la dérivée d’un signal sinusoïdal de pulsati
 \]</div>
 </div>
 <div class="topic">
-<p class="topic-title first"><strong>Démonstration (pour l’intégration)</strong>  </p>
+<p class="topic-title"><strong>Démonstration (pour l’intégration)</strong></p>
 <p>On pose <span class="math notranslate nohighlight">\(u(t) = A \cos \omega t + \phi\)</span></p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -703,7 +699,7 @@ La représentation complexe de la dérivée d’un signal sinusoïdal de pulsati
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <p><strong>Méthode: Passer l’équation différentielle en représentation complexe</strong><br />
 Nous verrons par la suite qu’on peut directement étudier le circuit au moyen des représentations complexes. Pour l’instant, nous allons voir une première méthode, pas la plus efficace mais déjà plus performante que de rester avec les grandeurs réelles. Les méthodes plus directes seront présentées par la suite.</p>
 <div class="sidebar">
@@ -767,7 +763,7 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 <li><p>la tension à ses bornes est <span class="math notranslate nohighlight">\(u(t) = u_m \cos(\omega t +\phi_u)\)</span> dont la représentation complexe est: <span class="math notranslate nohighlight">\(\underline{u}(t)=u_m e^{j \phi_u} e^{j \omega t}\)</span>.</p></li>
 </ul>
 <div class="sidebar">
-<p class="sidebar-title"><strong>Ecriture complexe</strong>  </p>
+<p class="sidebar-title"><strong>Ecriture complexe</strong></p>
 <p>On peut écrire: <span class="math notranslate nohighlight">\(\underline{Z} = R + jX\)</span> avec R et X réels. R est appelée la <strong>résistance</strong> du dipôle et X la <strong>réactance</strong>.</p>
 <p>On peut écrire: <span class="math notranslate nohighlight">\(\underline{Y} = G + jB\)</span> où G et B sont des réels. G est appelé la <strong>conductance</strong> et B la <strong>susceptance</strong>.</p>
 <p>On appelle impédance réelle <span class="math notranslate nohighlight">\(Z\)</span> le module de <span class="math notranslate nohighlight">\(\underline{Z}\)</span> et admittance réelle <span class="math notranslate nohighlight">\(Y\)</span> le module de <span class="math notranslate nohighlight">\(\underline{Y}\)</span>.</p>
@@ -791,7 +787,7 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 \]</div>
 </div>
 <div class="topic">
-<p class="topic-title first">Interprétation et intérêt de l’impédance complexe</p>
+<p class="topic-title">Interprétation et intérêt de l’impédance complexe</p>
 <ul class="simple">
 <li><p>L’argument de l’impédance complexe définit le déphasage de la tension <span class="math notranslate nohighlight">\(u\)</span> par rapport à l’intensité <span class="math notranslate nohighlight">\(i\)</span>.</p></li>
 <li><p>Le module de l’impédance complexe est le rapport des amplitudes réelles des deux grandeurs.</p></li>
@@ -820,7 +816,7 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 </ul>
 </div>
 <div class="topic">
-<p class="topic-title first"><strong>Démonstration</strong></p>
+<p class="topic-title"><strong>Démonstration</strong></p>
 <blockquote>
 <div><p>Le cas de la résistance est triviale.</p>
 <p>Pour la bobine, l’équation d’évolution s’écrit: <span class="math notranslate nohighlight">\(u = L \frac{\rm{d}i}{\rm{dt}}\)</span> soit en complexe <span class="math notranslate nohighlight">\(\underline{u} = j L \omega \underline{i}\)</span></p>
@@ -840,7 +836,7 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 <li><p>Analyser directement le circuit en remplçant les condensateurs et bobines par des équivalents haute et basse fréquence. On parle d’étude rapide et l’on va préciser cette méthode.</p></li>
 </ul>
 <div class="sidebar">
-<p class="sidebar-title"><strong>Quantifier HF et BF.</strong>  </p>
+<p class="sidebar-title"><strong>Quantifier HF et BF.</strong></p>
 <p>En général dans les systèmes en physique, on arrive à exhiber une pulsation (et donc une fréquence) caractéristique appelée <strong>pulsation (fréquence) propre</strong>. Elle apparaît en général lorsqu’on veut mettre l’expression d’une grandeur sous une forme canonique (cf. suite).</p>
 <ul class="simple">
 <li><p>On considère généralement qu’une haute fréquence est une fréquence grande devant la fréquence propre.</p></li>
@@ -853,7 +849,7 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 <p>A basse fréquence, un condensateur se comporte comme un interrupteur ouvert et une bobine comme un fil.</p>
 </div>
 <div class="topic">
-<p class="topic-title first"><strong>Démonstration</strong></p>
+<p class="topic-title"><strong>Démonstration</strong></p>
 <blockquote>
 <div><p>A haute fréquence, l’impédance du condensateur tend vers l’infini et celle de la bobine tend vers 0.</p>
 </div></blockquote>
@@ -864,7 +860,7 @@ Soit un dipôle linéaire passif. Dans un circuit en régime permanent sinusoïd
 <p>A haute fréquence, un condensateur se comporte comme un fil ouvert et une bobine comme un interrupteur.</p>
 </div>
 <div class="topic">
-<p class="topic-title first"><strong>Démonstration</strong></p>
+<p class="topic-title"><strong>Démonstration</strong></p>
 <blockquote>
 <div><p>A haute fréquence, l’impédance du condensateur tend vers 0 et celle de la bobine tend vers l’infini.</p>
 </div></blockquote>
@@ -923,27 +919,16 @@ Pour une grandeur d’un système d’ordre 2 dont le comportement haute et bass
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_rsf_interet.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Intérêt de l’étude fréquentielle (en ligne)</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_rsf_interet.html" title="previous page">Intérêt de l’étude fréquentielle (en ligne)</a>
+    <a class='right-next' id="next-link" href="el_rsf_ex.html" title="next page">Maitriser les méthodes</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_rsf_ex.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Maitriser les méthodes</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -959,7 +944,8 @@ Pour une grandeur d’un système d’ordre 2 dont le comportement haute et bass
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

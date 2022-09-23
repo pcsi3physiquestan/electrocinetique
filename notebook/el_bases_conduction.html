@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Décrire la conduction électrique à notre échelle : Courant et Tension &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_conduction.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Étudier un circuit : les bases" href="el_bases_lois.html" />
     <link rel="prev" title="Connaître le contexte" href="el_bases_contxt.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#charge-electrique">
@@ -632,7 +628,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension">
+  <div class="section" id="decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension">
 <h1>Décrire la conduction électrique à notre échelle : Courant et Tension<a class="headerlink" href="#decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="charge-electrique">
 <h2>Charge électrique<a class="headerlink" href="#charge-electrique" title="Permalink to this headline">¶</a></h2>
@@ -661,7 +657,7 @@
 <h3>Phénomène de conduction<a class="headerlink" href="#phenomene-de-conduction" title="Permalink to this headline">¶</a></h3>
 <p><strong>Conduction</strong> : Le phénomène de conduction correspond au déplacement de charges dans un matériau (solide ou liquide).</p>
 <div class="topic">
-<p class="topic-title first">Charges de conduction</p>
+<p class="topic-title">Charges de conduction</p>
 <p>Les charges de conduction peuvent être de natures diverses.</p>
 <ul class="simple">
 <li><p>des électrons</p></li>
@@ -680,7 +676,7 @@
 <p>La grandeur mesurant le courant électrique est l’<strong>intensité du courant</strong>. Elle se définit comme le débit de charge à travers la surface, c’est-à-dire la quantité de charge traversant la surface S par unité de temps.</p>
 </div>
 <div class="sidebar">
-<p class="sidebar-title"><strong>Orientation de l’intensité</strong>  </p>
+<p class="sidebar-title"><strong>Orientation de l’intensité</strong></p>
 <div class="figure align-center" id="fig-representation-de-l-intensite-dans-un-circuit-normalise86">
 <img alt="../_images/elec_i_micro_macro.png" src="../_images/elec_i_micro_macro.png" />
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Représentation de l’intensité dans un circuit normalisé</span><a class="headerlink" href="#fig-representation-de-l-intensite-dans-un-circuit-normalise86" title="Permalink to this image">¶</a></p>
@@ -689,7 +685,7 @@
 <p>Dans ces représentations, on ne tient pas compte de l’épaisseur du fil.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Caractère algébrique de la charge</p>
+<p class="topic-title">Caractère algébrique de la charge</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Pour chaque charge q traversant la section S, la charge q est ajoutée au bilan de quantité de charges si elle se déplace dans le sens d’orientation de la surface S et est enlevée au bilan si elle se déplace dans l’autre sens.</p>
@@ -709,7 +705,7 @@
 <div class="section" id="intensite-et-intensite-moyenne">
 <h3>Intensité et intensité moyenne<a class="headerlink" href="#intensite-et-intensite-moyenne" title="Permalink to this headline">¶</a></h3>
 <div class="margin sidebar">
-<p class="sidebar-title"><strong>Intensité moyenne</strong>  </p>
+<p class="sidebar-title"><strong>Intensité moyenne</strong></p>
 <p>L’intensité moyenne consiste à mesurer le débit de charge pendant un temps <span class="math notranslate nohighlight">\(\Delta t\)</span> fini. On divise alors la quantité de charge (algébrique) par la durée pour obtenir l’intensité moyenne.</p>
 </div>
 <div class="admonition important">
@@ -726,7 +722,7 @@ i = \frac{\rm{d}q}{\rm{dt}}
 <div class="section" id="ordres-de-grandeur-des-courants-electriques-en-ligne">
 <h3>Ordres de grandeur des courants électriques (en ligne)<a class="headerlink" href="#ordres-de-grandeur-des-courants-electriques-en-ligne" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Ordre de grandeur</p>
+<p class="topic-title">Ordre de grandeur</p>
 <p>Voici l’ordre de grandeur de intensités qu’on peut rencontrer :</p>
 <ul class="simple">
 <li><p>Circuits étudiés en TP de physique : quelques mA au maximum.</p></li>
@@ -742,17 +738,17 @@ i = \frac{\rm{d}q}{\rm{dt}}
 <div class="section" id="potentiel-electrique-et-tension">
 <h2>Potentiel électrique et tension<a class="headerlink" href="#potentiel-electrique-et-tension" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
-<p class="topic-title first">Cause du mouvement des charges</p>
+<p class="topic-title">Cause du mouvement des charges</p>
 <p>Sans excitation extérieur, ils n’y a pas de mouvement d’ensemble des charges, c’est-à-dire de conduction électrique. Pour ce faire, il faut mettre les charges en mouvement. Comme toujours en mécanique, la mise en mouvement nécessite une force. Ici c’est le <strong>champ électrique</strong> (créé directement ou indirectement par la source : un générateur ou une pile) qui exerce une force sur les charges de conduction.</p>
 </div>
 <div class="section" id="potentiel-electrique">
 <h3>Potentiel électrique<a class="headerlink" href="#potentiel-electrique" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Action d’un champ électrique sur une particule chargée  </p>
+<p class="topic-title">Action d’un champ électrique sur une particule chargée</p>
 <p>Lorsqu’un champ électrique<a class="footnote-reference brackets" href="#champe" id="id2">2</a> <span class="math notranslate nohighlight">\(\overrightarrow{E}\)</span> est établi dans un milieu, les charges <span class="math notranslate nohighlight">\(q\)</span> du milieu subissent une force <span class="math notranslate nohighlight">\(\overrightarrow{F} = q \overrightarrow{E}\)</span>.</p>
 </div>
 <div class="sidebar">
-<p class="sidebar-title"><strong>Indépendance vis-à-vis des charges.</strong>  </p>
+<p class="sidebar-title"><strong>Indépendance vis-à-vis des charges.</strong></p>
 <p>Le potentiel électrique dépend du point du circuit considéré et évidemment des composants du circuit. Mais il ne <strong>dépend pas</strong> de la charge qui assure la conduction. Ainsi, on peut parler du potentiel électrique d’un point <em>du circuit</em> et non <em>de la charge</em>.</p>
 <p>Ce point est important car il permet de commencer à étudier un circuit grâce à deux paramètres accessibles à notre échelle (l’échelle macroscopique) <strong>sans se préoccuper des phénomènes microscopiques</strong> et de leur complexité :</p>
 <ul class="simple">
@@ -779,7 +775,7 @@ i = \frac{\rm{d}q}{\rm{dt}}
 </div>
 </div>
 <div class="sidebar">
-<p class="sidebar-title"><strong>Interprétation de la tension.</strong>  </p>
+<p class="sidebar-title"><strong>Interprétation de la tension.</strong></p>
 <p>Pour une charge <span class="math notranslate nohighlight">\(q\)</span> passant d’un point A à un point B sa variation d’énergie potentielle est <span class="math notranslate nohighlight">\(\Delta E_p = q (V_B - V_A) = - q U_{AB}\)</span> : il s’agit de l’énergie perdue (ou gagnée suivant les signes de q et <span class="math notranslate nohighlight">\(U_{AB}\)</span>) au passage dans un composant. Ce point de vue est important pour la suite car il permettra de décrire les échanges énergétiques entre un composant (on parlera de dipôle) et le reste du circuit.</p>
 </div>
 <div class="admonition important">
@@ -793,14 +789,14 @@ i = \frac{\rm{d}q}{\rm{dt}}
 <p>Dans un schéma de circuit électrique, elle est représentée par une fléche pointant vers le premier point (ici A).</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Additivité des tensions.  </p>
+<p class="topic-title">Additivité des tensions.</p>
 <p>Considérons trois points du circuit A,B et C. On peut utiliser l’additivité des tensions : <span class="math notranslate nohighlight">\(U_{AC} = U_{AB} + U_{BC}\)</span> en effet <span class="math notranslate nohighlight">\(U_{AC} = V_A - V_C = V_A - V_B + V_B - V_C\)</span></p>
 </div>
 </div>
 <div class="section" id="analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne">
 <h3>Analogie entre un circuit hydraulique et un circuit électrique (en ligne)<a class="headerlink" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Analogie</p>
+<p class="topic-title">Analogie</p>
 <p>Pour comprendre le principe général d’un circuit électrique et le rôle de l’intensité et du potentiel électrique, on peut faire l’analogie entre un circuit d’eau entièrement fermé et un circuit électrique. Il ne s’agit poas d’un exercice à savoir refaire mais à comprendre.</p>
 <p>L’analogie est présentée sous forme d’exercices mais les méthodes utilisées ne sont pas à connaître. Il s’agit surtout de comprendre le fonctionnement physique d’un circuit électrique.</p>
 <div class="figure align-center" id="fig-analogie-circuit-hydraulique-et-circuit-electrique91">
@@ -838,7 +834,7 @@ Questions :</p>
 <div class="section" id="ordre-de-grandeurs-des-tensions-en-ligne">
 <h3>Ordre de grandeurs des tensions (en ligne)<a class="headerlink" href="#ordre-de-grandeurs-des-tensions-en-ligne" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Ordres de grandeurs</p>
+<p class="topic-title">Ordres de grandeurs</p>
 <p>Voici quelques ordres de grandeur des tensions qu’on peut rencontrer :</p>
 <ul class="simple">
 <li><p>En TP : De quelques mV à plusieurs V</p></li>
@@ -853,7 +849,7 @@ Questions :</p>
 <div class="section" id="approximation-des-regimes-quasi-stationnaires">
 <h2>Approximation des régimes quasi-stationnaires<a class="headerlink" href="#approximation-des-regimes-quasi-stationnaires" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
-<p class="topic-title first">Régimes</p>
+<p class="topic-title">Régimes</p>
 <p>Nous avons vu que la description d’un circuit électrique passe par un nombre restreint de paramètres :</p>
 <ul class="simple">
 <li><p>l’intensité circulant dans les branches</p></li>
@@ -864,7 +860,7 @@ Questions :</p>
 <div class="section" id="ondes-electriques-dans-les-circuits-en-ligne">
 <h3>Ondes électriques dans les circuits (en ligne)<a class="headerlink" href="#ondes-electriques-dans-les-circuits-en-ligne" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Propagation des perturbations dans un circuit. Célérité.  </p>
+<p class="topic-title">Propagation des perturbations dans un circuit. Célérité.</p>
 <p>Lorsqu’on perturbe un point du circuit (en modifiant par exemple le potentiel électrique ou l’intensité en un point du circuit), cette perturbation se transmet le long du circuit. On peut parler d’onde électrique.</p>
 <p>La célérité des ondes électriques dans un circuit est de l’ordre de la célérité de la lumière <span class="math notranslate nohighlight">\(c = 3 \times 10^8 m.s^{-1}\)</span>.</p>
 <div class="attention admonition">
@@ -894,7 +890,7 @@ Réponse : Les circuits de TP ont une taille de l’ordre de 1m, donc la durée 
 <p>C’est bien la variation <strong>spatiale</strong> associée à la propagation de l’onde électrique qui est négligée, pas la variation <strong>temporelle</strong> des grandeurs : en un point (et donc en tout point) du circuit, tension et intensité peuvent varier.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Analogie avec la voix</p>
+<p class="topic-title">Analogie avec la voix</p>
 <p>Pour comprendre le principe de l’ARQS, on peut faire l’analogie avec le son. Considérons une classe dans laquelle le professeur parle près du tableau. Il s’adresse à l’ensemble de la classe : aux premiers rangs comme aux derniers rangs.</p>
 <p>Théoriquement, le son se propage à une vitesse finie (environ 340 m/s) donc les premier rangs entendent et réagissent (!!) aux paroles de l’enseignant avant les élèves du derniers rangs. Néanmoins, on peut considérer que la réaction des élèves se fera à peu près en même temps (ou du moins qu’elle dépend des caractéristiques propre à l’élève comme son temps de réaction et non sa position dans la classe). On considère donc dans cet exemple que le temps de propagation du son est très petit devant :</p>
 <ul class="simple">
@@ -904,13 +900,13 @@ Réponse : Les circuits de TP ont une taille de l’ordre de 1m, donc la durée 
 <p>On peut donc considérer que l’ARQS s’applique à une conversation dans une classe.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">ARQS dans un circuit de TP</p>
+<p class="topic-title">ARQS dans un circuit de TP</p>
 <p>Question : En suivant l’analogie précédente, estimer les fréquences acceptables pour le spectre d’un signal électrique (tension, intensité) tel qu’on puisse négliger la propagation et se placer dans l’ARQS.<br />
 Réponse : On a vu que la durée de propagation dans un circuit de TP est de l’ordre de <span class="math notranslate nohighlight">\(10^{-9} \rm{s}\)</span>, donc tant que les temps caractéristiques associées à chaque composante spectrale sont grands devant ce temps, on peut considérer qu’on est dans l’ARQS. Soit des fréquences très inférieures à 1GHz.</p>
 <p>Remarque : En TP, on dépassera rarement le MHz en terme de fréquence.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Exercice ARQS ou pas</p>
+<p class="topic-title">Exercice ARQS ou pas</p>
 <p>On peut considérer un autre exemple où l’ARQS s’applique et …  ne s’applique pas suivant ce qu’on considère : l’orage.</p>
 <ul class="simple">
 <li><p>Considérons l’éclair, donc la propagation d’une onde lumineuse. La vitesse de la lumière dans l’air est de l’ordre de <span class="math notranslate nohighlight">\(3 \times 10^8 \rm{m/s}\)</span>. Pour un éclair qui se produit à quelques kilomètres, le temps qu’il arrive à notre oeil est de l’ordre de <span class="math notranslate nohighlight">\(10^{-5} \rm{s}\)</span>: ce temps est très faible devant la persistance rétinienne (<span class="math notranslate nohighlight">\(10^{-1} \rm{s}\)</span>). On peut donc appliquer l’ARQS et considérer que le moment où l’éclair se produit coïncide avec le moment où on le voit.</p></li>
@@ -943,7 +939,7 @@ Réponse : On a vu que la durée de propagation dans un circuit de TP est de l�
 </ul>
 </div>
 <div class="topic">
-<p class="topic-title first">Exemple</p>
+<p class="topic-title">Exemple</p>
 <p>Sur le circuit <a class="reference internal" href="#fig-93"><span class="std std-ref">ci-après</span></a>, il y a trois mailles différentes, quatre dipôles, trois points de potentiels différents et deux noeuds.</p>
 <div class="figure align-center" id="fig-93">
 <img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
@@ -960,7 +956,7 @@ Réponse : On a vu que la durée de propagation dans un circuit de TP est de l�
 </ul>
 </div>
 <div class="topic">
-<p class="topic-title first">Exemple : Dipôles en série et en parallèle</p>
+<p class="topic-title">Exemple : Dipôles en série et en parallèle</p>
 <div class="figure align-center" id="fig-94">
 <img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
 </div>
@@ -981,14 +977,14 @@ Réponse : On a vu que la durée de propagation dans un circuit de TP est de l�
 Dans l’ARQS, l’intensité  est la même en tout point d’une même branche (c’est-à-dire d’un ensemble de dipôles et fils de connexion sans  noeud).</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Démonstration</p>
+<p class="topic-title">Démonstration</p>
 <blockquote>
 <div><p>L’ARQS suppose qu’il n’y a pas de phénomène de propagation. Une conséquence est l’absence de phénomène d’accumulation de charge en un point (car sinon cela produirait un phénomène de rééquilibrage et donc une réponse du circuit différente en chaque point).</p>
 <p>Cela signifie que pour une portion de fil, le débit de charge entrant (l’intensité en entrée) égale le débit de charge sortant (l’intensité en sortie). Comme on peut prendre n’importe quelle portion de fil, il vient que l’intensité est la même en tout point du fil et par extension en tout point d’une branche.</p>
 </div></blockquote>
 </div>
 <div class="attention topic">
-<p class="topic-title first">Exemple</p>
+<p class="topic-title">Exemple</p>
 <div class="figure align-center" id="fig-95">
 <img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
 </div>
@@ -1039,27 +1035,16 @@ Dans l’ARQS, l’intensité  est la même en tout point d’une même branche 
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_bases_contxt.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Connaître le contexte</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_bases_contxt.html" title="previous page">Connaître le contexte</a>
+    <a class='right-next' id="next-link" href="el_bases_lois.html" title="next page">Étudier un circuit : les bases</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_bases_lois.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Étudier un circuit : les bases</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -1075,7 +1060,8 @@ Dans l’ARQS, l’intensité  est la même en tout point d’une même branche 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

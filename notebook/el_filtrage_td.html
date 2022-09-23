@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entrainement : Filtrage linéaire &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,36 +31,33 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_filtrage_td.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Activités : Typologie des filtres" href="el_filtrage_meth_typo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -78,14 +75,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -547,10 +543,10 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="entrainement-filtrage-lineaire">
+  <div class="section" id="entrainement-filtrage-lineaire">
 <h1>Entrainement : Filtrage linéaire<a class="headerlink" href="#entrainement-filtrage-lineaire" title="Permalink to this headline">¶</a></h1>
 <div class="attention admonition">
-<p class="admonition-title">Etude fréquentielle </p>
+<p class="admonition-title">Etude fréquentielle</p>
 <p>Pour chaque filtre ci-dessous, déterminer rapidement son type puis par le calcul sa fonction de transfert. On introduira la pulsation propre et si nécessaire le facteur de qualité et l’on précisera les asymptotes haute et basse fréquence sur le diagramme de Bode.</p>
 <p>Pour les filtre d’ordre 1, on déterminera de plus la monotonie et la pulsation de coupure.</p>
 <p>Pour les filtres d’ordre 2 passe-haut et bas, on déterminera l’existence possible d’une résonance ainsi que la pulsation de résonance. On déterminera aussi les valeurs particulières de la phase.</p>
@@ -569,7 +565,7 @@
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <p>Dans l’ordre:</p>
 <ul class="simple">
 <li><p>Passe-bas d’ordre 1. <span class="math notranslate nohighlight">\(H_0 = 1\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span></p></li>
@@ -581,7 +577,7 @@
 </ul>
 </div>
 <div class="attention admonition">
-<p class="admonition-title">Intégrateur pur  </p>
+<p class="admonition-title">Intégrateur pur</p>
 <p><strong>Cet exercice traite un montage que vous DEVEZ reconnaître et savoir étudier comme une question de cours.</strong></p>
 <ol class="simple">
 <li><p>Déterminer la relation entrée sortie du montage suivant en grandeur complexe puis la relation temporelle entrée-sortie. Justifier ainsi l’appelation du montage.</p></li>
@@ -593,7 +589,7 @@
 </div>
 </div>
 <div class="attention admonition">
-<p class="admonition-title">Réponse d’un filtre d’ordre 1 </p>
+<p class="admonition-title">Réponse d’un filtre d’ordre 1</p>
 <p>On considère le filtre ci-après. On prend <span class="math notranslate nohighlight">\(R=R_1=50 \rm{\Omega}\)</span> et <span class="math notranslate nohighlight">\(L = 10 \rm{mH}\)</span></p>
 <ol class="simple">
 <li><p>Déterminer le type de filtre puis la fonction de transfert.</p></li>
@@ -608,7 +604,7 @@
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <ul class="simple">
 <li><p>Passe-bas d’orrdre 1 avec <span class="math notranslate nohighlight">\(H_0 = \frac{R_1}{R + R_1}\)</span> et <span class="math notranslate nohighlight">\(\omega_0 = \frac{R_1 + R}{L}\)</span>.</p></li>
 <li><p>Dans l’ordre le premier signal de sortie est quasi-nul, le second non nul d’amplitude égale à l’entrée et en phase avec l’entrée et le troisième proche d’un sinusoïde.</p></li>
@@ -616,7 +612,7 @@
 <p><em>Note: En pratique, les simulation montre que ce n’est pas tout à fait vrai car à l’ordre 1, l’assimilation à un filtre idéal n’est pas tout à fait correct.</em></p>
 </div>
 <div class="attention admonition">
-<p class="admonition-title">Réponse d’un filtre d’ordre 2 </p>
+<p class="admonition-title">Réponse d’un filtre d’ordre 2</p>
 <p>On place une bobine <span class="math notranslate nohighlight">\(L_1\)</span> et un condensateur <span class="math notranslate nohighlight">\(C_1\)</span> dans le circuit collecteur d’un transistor à effet de champ de façon à réaliser un amplificateur sélectif. Le montage ainsi obtenu est équivalent à celui ci-après. On a: <span class="math notranslate nohighlight">\(\underline{I_0} = s \underline{v_e}\)</span>. <span class="math notranslate nohighlight">\(s\)</span> étant supposé constant et réel pour le domaine de fréquence étudié.</p>
 <div class="figure align-center" id="fig-221">
 <img alt="../_images/Electronique_TD4_EX4_1.jpg" src="../_images/Electronique_TD4_EX4_1.jpg" />
@@ -639,7 +635,7 @@ e(t) = \frac{E_1+E_2}{2} + \sum\limits_{p=0}^{+\infty}\frac{2(E_1-E_2)}{(2p+1) \
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(A_0 = R_1 s\)</span>, <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span> et <span class="math notranslate nohighlight">\(Q = R\sqrt{\frac{C}{L}}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\delta_n = \frac{1}{\sqrt{1 + Q^2 (n^2 - \frac{1}{n^2})}}\)</span></p></li>
@@ -673,20 +669,15 @@ e(t) = \frac{E_1+E_2}{2} + \sum\limits_{p=0}^{+\infty}\frac{2(E_1-E_2)}{(2p+1) \
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_filtrage_meth_typo.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Activités : Typologie des filtres</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_filtrage_meth_typo.html" title="previous page">Activités : Typologie des filtres</a>
+
         </div>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -702,7 +693,8 @@ e(t) = \frac{E_1+E_2}{2} + \sum\limits_{p=0}^{+\infty}\frac{2(E_1-E_2)}{(2p+1) \
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

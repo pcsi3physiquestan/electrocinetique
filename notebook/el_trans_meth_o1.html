@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemple : Etude d’un système d’ordre 1 &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_trans_meth_o1.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Exemple : Etude d’un système d’ordre 2" href="el_trans_meth_o2.html" />
     <link rel="prev" title="Maitriser les méthodes" href="el_trans_ex.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etude-energetique">
@@ -566,7 +562,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="exemple-etude-d-un-systeme-d-ordre-1">
+  <div class="section" id="exemple-etude-d-un-systeme-d-ordre-1">
 <span id="ex-o1"></span><h1>Exemple : Etude d’un système d’ordre 1<a class="headerlink" href="#exemple-etude-d-un-systeme-d-ordre-1" title="Permalink to this headline">¶</a></h1>
 <p>On se propose de retrouver les caractéristiques précédentes sur l’exemple suivant:</p>
 <div class="figure align-center" id="fig-167">
@@ -578,12 +574,12 @@
 <p>Déterminer l’équation différentielle qui régit l’évolution de <span class="math notranslate nohighlight">\(u_C\)</span> pour <span class="math notranslate nohighlight">\(t&gt;0\)</span>.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p>La loi des mailles s’écrit: <span class="math notranslate nohighlight">\(u_R + u_C = 0 = R i + u_C\)</span>.</p>
 <p>En utilisant l’équation d’évolution du condensateur, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-44c3ea50-6dc5-410e-bdbd-bad3acaa9a0b">
-<span class="eqno">(14)<a class="headerlink" href="#equation-44c3ea50-6dc5-410e-bdbd-bad3acaa9a0b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ab9d62af-afee-4ebd-b285-2cb53beb380f">
+<span class="eqno">(14)<a class="headerlink" href="#equation-ab9d62af-afee-4ebd-b285-2cb53beb380f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = 0
 \end{equation}\]</div>
 <p>On a donc <span class="math notranslate nohighlight">\(\tau = RC\)</span></p>
@@ -594,7 +590,7 @@
 <p>Déterminer <span class="math notranslate nohighlight">\(u_C(t)\)</span> et <span class="math notranslate nohighlight">\(i(t)\)</span> pour <span class="math notranslate nohighlight">\(t&gt;0\)</span> et tracé leur allure temporelle.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction - uC(t)</p>
+<p class="topic-title">Correction - uC(t)</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>La solution générale est donc <span class="math notranslate nohighlight">\(A e^{-t/\tau}\)</span> avec <span class="math notranslate nohighlight">\(\tau = RC\)</span>.</p></li>
@@ -605,18 +601,18 @@
 <p>Le condensateur étant assmilable à un interrupteur ouvert, l’intensite i est nulle donc la tension aux bornes de la résistance aussi. Il vient <span class="math notranslate nohighlight">\(u_C(t=0^-) = E\)</span></p>
 <p>Par continuité <span class="math notranslate nohighlight">\(u_C(t=0^+) = E\)</span>.</p>
 <p>La condition initiale permet d’écrire A = E soit:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3202d3e5-570b-4524-a1d2-1d1742d3823e">
-<span class="eqno">(15)<a class="headerlink" href="#equation-3202d3e5-570b-4524-a1d2-1d1742d3823e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-38f553bb-9159-4f89-b849-160b2db9f28a">
+<span class="eqno">(15)<a class="headerlink" href="#equation-38f553bb-9159-4f89-b849-160b2db9f28a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_C(t) = E \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction - i(t)</p>
+<p class="topic-title">Correction - i(t)</p>
 <blockquote>
 <div><p>Pas besoin de tout réétudier. Il suffit d’utiliser la relation <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08b0dbce-381e-4331-b315-06d99974eef6">
-<span class="eqno">(16)<a class="headerlink" href="#equation-08b0dbce-381e-4331-b315-06d99974eef6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-93dffa61-d874-441a-91d7-f1f7097d96a7">
+<span class="eqno">(16)<a class="headerlink" href="#equation-93dffa61-d874-441a-91d7-f1f7097d96a7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i(t) = -\frac{E}{R} \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
@@ -626,7 +622,7 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Allures temporelles</p>
+<p class="topic-title">Allures temporelles</p>
 <div class="figure align-center" id="fig-169">
 <img alt="../_images/elec_ordre1_rc_trans.png" src="../_images/elec_ordre1_rc_trans.png" />
 </div>
@@ -644,7 +640,7 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first"><strong>Bilan de puissance</strong>  </p>
+<p class="topic-title"><strong>Bilan de puissance</strong></p>
 <p><em>Faire un bilan de puisance revient à trouver une relations entre les différentes puissance mise en jeu à un instant. Il suffit en général de partir d’une des équations (loi des noeuds ou des mailles).</em></p>
 <blockquote>
 <div><ul class="simple">
@@ -658,7 +654,7 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 </div></blockquote>
 </div>
 <div class="topic">
-<p class="topic-title first">Bilan d’énergie</p>
+<p class="topic-title">Bilan d’énergie</p>
 <p><em>Il s’agit de calculer les énergies reçue/fournie par chaque dipôle pour les comparer.</em></p>
 <blockquote>
 <div><ul class="simple">
@@ -666,16 +662,16 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 On peut calculer l’énergie fournie par le condensateur de deux manières: en intégrant la puissance qu’il fournit ou en utilisant la variation d’énergie stockée.</p></li>
 </ul>
 <p>S’il faut savoir faire les deux dans un cas simple comme un circuit d’ordre 1, il vaut mieux privilégier l’utilisation de l’énergie stockée si on a le choix. Ici, l’énergie fournie par le condensateur est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f105c0d0-2aef-446a-8504-1c57acd3c689">
-<span class="eqno">(17)<a class="headerlink" href="#equation-f105c0d0-2aef-446a-8504-1c57acd3c689" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-70eceec4-bde7-4ad7-aa6a-b9dc1aa72cb0">
+<span class="eqno">(17)<a class="headerlink" href="#equation-70eceec4-bde7-4ad7-aa6a-b9dc1aa72cb0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \Delta E_C = E_L(0) - E_L(t=+\infty) = \frac{1}{2}C u_C(t=0)^2 - \frac{1}{2}C u_C(t=+\infty)^2 = \frac{C E^2}{2}
 \end{equation}\]</div>
 <ul class="simple">
 <li><p><strong>Energie dissipée par effet Joule dans R</strong><br />
 Pour la résistance, on n’a pas le choix, l’énergie dissipée ne peut se calculer qu’en intégrant la puissance reçue soit:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-ea7779fc-e908-4d91-9199-1c2aef9b66f5">
-<span class="eqno">(18)<a class="headerlink" href="#equation-ea7779fc-e908-4d91-9199-1c2aef9b66f5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ac6474af-3783-4425-a9a0-b91a52ee61f0">
+<span class="eqno">(18)<a class="headerlink" href="#equation-ac6474af-3783-4425-a9a0-b91a52ee61f0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E_J = \int_{t=0}^{t=+\infty} \frac{u_R^2(t)}{R} dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
 \end{equation}\]</div>
 <ul class="simple">
@@ -699,15 +695,15 @@ On observe que l’énergie fournie par le condensateur est entièrement dissip�
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Q1. Nouveau régime forcé</strong><br />
 On peut considérer le système comme stable et le régime forcé sera indépendant du temps car E est constant.</p>
 <p>Le condensateur se comporte alors comme un interrupteur ouvert et i=0. Il vient <span class="math notranslate nohighlight">\(u_C = E\)</span></p>
 <p><strong>Q2. Mise en équation</strong><br />
 Cette fois la loi des mailles s’écrit: <span class="math notranslate nohighlight">\(E - R i(t) - u_C(t) = 0\)</span>. On utilise à nouveau la relation tension-intensité du condensateur, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26774107-b981-4252-a240-7f15e110378d">
-<span class="eqno">(19)<a class="headerlink" href="#equation-26774107-b981-4252-a240-7f15e110378d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ba4cae2a-3b19-46cc-b008-4f575e2192df">
+<span class="eqno">(19)<a class="headerlink" href="#equation-ba4cae2a-3b19-46cc-b008-4f575e2192df" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = \frac{E}{RC}
 \end{equation}\]</div>
 <p>On doit déterminer les conditions initiales. Dans le régime forcé indépendant du temps avant t=0, on cherche la grandeur continue, ici la tension aux bornes du condensateur. Le condensateur se comporte comme un interrupteur ouvert donc l’intensité est nulle et donc <span class="math notranslate nohighlight">\(u_C(t=0^-) = u_R(t=0^-) = 0\)</span></p>
@@ -716,19 +712,19 @@ Cette fois la loi des mailles s’écrit: <span class="math notranslate nohighli
 <p>On cherche une solution particulière constante <span class="math notranslate nohighlight">\(U_0\)</span>. En l’introduisant dans l’équation différentielle, il vient <span class="math notranslate nohighlight">\(0 + \frac{U_0}{RC} = \frac{E}{RC}\)</span> soit <span class="math notranslate nohighlight">\(U_0 = E\)</span></p>
 <p>La solution est donc: <span class="math notranslate nohighlight">\(A \exp^{-t/RC} + E\)</span></p>
 <p>On utilise la condition initiale qui donne A = -E donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6719c3e8-d396-43a9-b901-dad602bf7849">
-<span class="eqno">(20)<a class="headerlink" href="#equation-6719c3e8-d396-43a9-b901-dad602bf7849" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0d05b791-d9e7-478c-94cb-f1917ee590cd">
+<span class="eqno">(20)<a class="headerlink" href="#equation-0d05b791-d9e7-478c-94cb-f1917ee590cd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 u_C(t) = E (1 - \exp^{-t/\tau})
 \end{equation}\]</div>
 <p><strong>Q3. Intensité</strong><br />
 Il suffit de dériver et de multiplier par C:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a819a65a-8791-4719-bcd6-e8bdc7babfa1">
-<span class="eqno">(21)<a class="headerlink" href="#equation-a819a65a-8791-4719-bcd6-e8bdc7babfa1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1b72f896-4988-4800-b1e1-ee2c026d3e44">
+<span class="eqno">(21)<a class="headerlink" href="#equation-1b72f896-4988-4800-b1e1-ee2c026d3e44" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i(t) = \frac{E}{R} \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
 <div class="margin sidebar">
-<p class="sidebar-title"><strong>Charge et décharge du condensateur</strong>  </p>
+<p class="sidebar-title"><strong>Charge et décharge du condensateur</strong></p>
 <p>Dans un tel montage, le condensateur reçoit de l’énergie. On parle de <strong>charge</strong> du condensateur.</p>
 <p>Lors d’un nouveau basculement de l’interrupteur vers le régime libre, le condensateur va, comme on l’a vu, perdre son énergie: on parlera de <strong>décharge</strong> du condensateur.</p>
 </div>
@@ -738,18 +734,18 @@ Bilan de puissance: la loi des mailles <span class="math notranslate nohighlight
 <p>On observe que la puissance fournie par le générateur va en partie est stockée par le condensateur et en partie dissipée par la résistance.</p>
 <p>Bilan énergétique:</p>
 <p>On commence par l’énergie fournie par le générateur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8c5fadb9-bba4-402e-934b-e3283dca5800">
-<span class="eqno">(22)<a class="headerlink" href="#equation-8c5fadb9-bba4-402e-934b-e3283dca5800" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d48057d9-7cb8-49aa-a0ce-67184c7735c8">
+<span class="eqno">(22)<a class="headerlink" href="#equation-d48057d9-7cb8-49aa-a0ce-67184c7735c8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E_E= \int_{t=0}^{t=+\infty} Ei(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{t}{RC}} dt = CE^2
 \end{equation}\]</div>
 <p>Ensuite l’énergie dissipée par la résistance:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7c485aa3-73ee-4176-b01c-741f4ea6d284">
-<span class="eqno">(23)<a class="headerlink" href="#equation-7c485aa3-73ee-4176-b01c-741f4ea6d284" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e7fcc853-df9f-4bda-805a-e0f57b316e76">
+<span class="eqno">(23)<a class="headerlink" href="#equation-e7fcc853-df9f-4bda-805a-e0f57b316e76" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E_J = \int_{t=0}^{t=+\infty} R i^2(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
 \end{equation}\]</div>
 <p>Enfin l’énergie stockée par le condensateur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-979eaaf6-b0d2-4001-9a8b-4c5ebf43f277">
-<span class="eqno">(24)<a class="headerlink" href="#equation-979eaaf6-b0d2-4001-9a8b-4c5ebf43f277" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2f2707a3-3879-4ecd-81dd-f830bba448fb">
+<span class="eqno">(24)<a class="headerlink" href="#equation-2f2707a3-3879-4ecd-81dd-f830bba448fb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \Delta E_C = E_C(t=+\infty) - E_C(t=0) = \frac{1}{2}C u_C(t=\infty)^2 - \frac{1}{2}C u_C(t=0)^2 = \frac{C E^2}{2}
 \end{equation}\]</div>
 </div></blockquote>
@@ -780,27 +776,16 @@ E_J = \int_{t=0}^{t=+\infty} R i^2(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} 
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_trans_ex.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Maitriser les méthodes</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_trans_ex.html" title="previous page">Maitriser les méthodes</a>
+    <a class='right-next' id="next-link" href="el_trans_meth_o2.html" title="next page">Exemple : Etude d’un système d’ordre 2</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_trans_meth_o2.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exemple : Etude d’un système d’ordre 2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -816,7 +801,8 @@ E_J = \int_{t=0}^{t=+\infty} R i^2(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

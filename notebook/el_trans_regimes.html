@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Régime transitoire et régime forcé &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_trans_regimes.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Méthodes d’analyse d’un régime transitoire" href="el_trans_methodes.html" />
     <link rel="prev" title="Connaître le contexte" href="el_trans_contxt.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#regimes-de-fonctionnement-regime-transitoire-et-regime-force">
@@ -600,7 +596,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="regime-transitoire-et-regime-force">
+  <div class="section" id="regime-transitoire-et-regime-force">
 <h1>Régime transitoire et régime forcé<a class="headerlink" href="#regime-transitoire-et-regime-force" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="regimes-de-fonctionnement-regime-transitoire-et-regime-force">
 <h2>Régimes de fonctionnement: régime transitoire et régime forcé<a class="headerlink" href="#regimes-de-fonctionnement-regime-transitoire-et-regime-force" title="Permalink to this headline">¶</a></h2>
@@ -622,14 +618,14 @@
 <p>En général, la forme mathématique des grandeurs du système tend à prendre une forme similaire à la forme mathématique de la grandeur d’entrée.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Exemples de régimes forcés</p>
+<p class="topic-title">Exemples de régimes forcés</p>
 <ul class="simple">
 <li><p>Si la grandeur d’entrée est une tension constante, alors toutes les grandeurs d’un système stable vont tendre vers une valeur constante. Dans ce chapitre, nous nous limiterons principalement à ce type de régime forcé.</p></li>
 <li><p>Si la grandeur d’entrée est une tension sinusoïdale, alors toutes les grandeurs d’un système stable vont tendre vers une forme sinusoïdale de même pulsation. Ce sera l’objet du prochain chapitre.</p></li>
 </ul>
 </div>
 <div class="topic">
-<p class="topic-title first">Observations supplémentaires</p>
+<p class="topic-title">Observations supplémentaires</p>
 <ul class="simple">
 <li><p>On remarque une discontinuité qui correspond au moment où la grandeur d’entrée change brusquement de valeur. La présence possible de discontinuité impose la recherche de conditions initiales (valeurs à <span class="math notranslate nohighlight">\(t = 0^+\)</span>) pour pouvoir résoudre les équations mises en jeu (des équations différentielles).</p></li>
 <li><p>En général, on atteint pas mathématiquement le nouveau régime forcé car le régime transitoire est un fonction qui <strong>tend vers 0</strong>: elle ne s’annule pas rigoureusement à un moment donné.</p>
@@ -676,7 +672,7 @@
 <div class="section" id="etude-experimentale">
 <h3>Etude expérimentale<a class="headerlink" href="#etude-experimentale" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first"><strong>Réponse indicielle</strong>  </p>
+<p class="topic-title"><strong>Réponse indicielle</strong></p>
 <p>Comme nous le verrons par la suite, le régime transitoire d’un système possède:</p>
 <ul class="simple">
 <li><p>des caractéristiques qui dépendent du contexte extérieur (tension d’entrée) et de la grandeur considérée</p></li>
@@ -708,7 +704,7 @@
 <div class="section" id="depassement">
 <h3>Dépassement<a class="headerlink" href="#depassement" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Dépassement</p>
+<p class="topic-title">Dépassement</p>
 <p>Si le régime forcé visé est un régime indépendant du temps, on peut s’intéresse à l’existence ou l’absence de dépassement, c’est-à-dire regarder si le signal va dépasser la valeur finale.</p>
 <p>En physique, savoir repérer graphiquement l’existence d’un dépassement est suffisant.</p>
 <div class="figure align-center" id="fig-155">
@@ -719,7 +715,7 @@
 <div class="section" id="temps-caracteristique-et-temps-de-reponse">
 <h3>Temps caractéristique et temps de réponse<a class="headerlink" href="#temps-caracteristique-et-temps-de-reponse" title="Permalink to this headline">¶</a></h3>
 <div class="topic">
-<p class="topic-title first">Rapidité d’un système</p>
+<p class="topic-title">Rapidité d’un système</p>
 <p>En pratique, les équations mathématiques prévoit qu’on atteint rigoureusement le nouveau régime permanent que lorsque t tend vers l’infini (nous verrons que des exponentielles tendant vers 0 interviennent dans nos systèmes).</p>
 <p>On s’intéresse donc au moment où l’écart au régime permanent reste suffisamment faible pour quantifier la rapidité d’un système. On distinguera deux types de temps pour caractériser la rapidité d’un système:</p>
 <ul class="simple">
@@ -733,7 +729,7 @@
 <p>On peut alors, à partir des équations mathématiques, exhiber une grandeur homogène à un temps qu’on appellera <strong>temps caractéristique</strong> et qui donnera cet ordre de grandeur du temps de réponse du système.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Temps de réponse (à titre informatif)</p>
+<p class="topic-title">Temps de réponse (à titre informatif)</p>
 <p>Un <strong>temps de réponse à N%</strong> est l’écart de temps entre l’instant de la perturbation et l’instant à l’écart entre le signal étudié et le nouveau régime permanent va rester inférieur à (100-N)% de l’écart initial entre le signal et le nouveau régime permanent.</p>
 <p><em>Les temps de réponses les plus utilisés sont les temps de réponse à 95% et à 99%.</em></p>
 </div>
@@ -743,7 +739,7 @@
 <div class="section" id="etude-d-un-portrait-de-phase-en-ligne">
 <h2>Etude d’un portrait de phase (en ligne)<a class="headerlink" href="#etude-d-un-portrait-de-phase-en-ligne" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
-<p class="topic-title first">Portrait de phase</p>
+<p class="topic-title">Portrait de phase</p>
 <p>Nous avons jusqu’à présent étudier les évolutions graphiquement au moyen des évolutions temporelles. On peut obtenir d’autres informations en utilisant une représentation particulière appelée <strong>portrait de phase</strong>.</p>
 <div class="figure align-center" id="fig-158">
 <img alt="../_images/elec_portrait_phase_generalite.png" src="../_images/elec_portrait_phase_generalite.png" />
@@ -777,27 +773,16 @@
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_trans_contxt.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Connaître le contexte</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_trans_contxt.html" title="previous page">Connaître le contexte</a>
+    <a class='right-next' id="next-link" href="el_trans_methodes.html" title="next page">Méthodes d’analyse d’un régime transitoire</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_trans_methodes.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Méthodes d’analyse d’un régime transitoire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -813,7 +798,8 @@
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemples d’étude &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_trans_exemples.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Activités" href="el_trans_meth.html" />
     <link rel="prev" title="Exemple : Etude d’un système d’ordre 2" href="el_trans_meth_o2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etude-d-un-regime-independant-du-temps">
@@ -588,7 +584,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="exemples-d-etude">
+  <div class="section" id="exemples-d-etude">
 <h1>Exemples d’étude<a class="headerlink" href="#exemples-d-etude" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="etude-d-un-regime-independant-du-temps">
 <span id="etude-rpit"></span><h2>Etude d’un régime indépendant du temps.<a class="headerlink" href="#etude-d-un-regime-independant-du-temps" title="Permalink to this headline">¶</a></h2>
@@ -601,7 +597,7 @@
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Mise en équation</strong><br />
 On oriente toutes les intensités vers le haut dans chaque branche et on note respectivement <span class="math notranslate nohighlight">\(i_e, i_r, i_c, i_l\)</span> les intensités qui circulent dans la source, la résistance seule dans sa branche, le condensateur, la bobine.</p>
@@ -628,7 +624,7 @@ Tout d’abord, on redessine le circuit en utilisant les modèles équivalents a
 <p>Etudier le circuit précédent en régime indépendant du temps lorsque l’interrupteur est fermé. On déterminera toutes les intensités.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p>Tout d’abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.</p>
 </div></blockquote>
@@ -638,15 +634,15 @@ Tout d’abord, on redessine le circuit en utilisant les modèles équivalents a
 <blockquote>
 <div><p>Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
 <p>Écrivons les lois de Kirchhoff (on pourrait aussi utiliser la loi des noeuds en terme de potentiels):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-31ce1fb6-4bc8-46b1-9f3d-e3ea10a19918">
-<span class="eqno">(35)<a class="headerlink" href="#equation-31ce1fb6-4bc8-46b1-9f3d-e3ea10a19918" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1ca64de0-8397-4601-959e-934862f6d876">
+<span class="eqno">(35)<a class="headerlink" href="#equation-1ca64de0-8397-4601-959e-934862f6d876" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + i_l &amp;= 0\\
 E - R i_e + R i_r &amp;= 0\\
 R i_r - R i_l &amp;= 0
 \end{align}\]</div>
 <p>Il vient immédiatement <span class="math notranslate nohighlight">\(i_r = i_l\)</span> et donc <span class="math notranslate nohighlight">\(i_e = - 2 i_r\)</span>. La première loi des mailles s’écrivant alors <span class="math notranslate nohighlight">\(E + 3 R i_R = 0\)</span>, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-94728e93-3f95-40ef-a791-5b31d0664c99">
-<span class="eqno">(36)<a class="headerlink" href="#equation-94728e93-3f95-40ef-a791-5b31d0664c99" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-59cd57e0-479e-461b-96d0-843207ac0d77">
+<span class="eqno">(36)<a class="headerlink" href="#equation-59cd57e0-479e-461b-96d0-843207ac0d77" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_r &amp;= -\frac{E}{3R}\\
 i_l &amp;= -\frac{E}{3R}\\
 i_e &amp;= \frac{2E}{3R}\\
@@ -672,7 +668,7 @@ i_e &amp;= \frac{2E}{3R}\\
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Détermination du temps de réponse</strong><br />
 On détermine dans un premier temps l’écart initial: on commence à 1V et on finit à 3V. L’écart de 5% est donc de <span class="math notranslate nohighlight">\((3 - 1 ) * 0.05 \% = 0.1V\)</span> on regarde donc quand l’écart entre le signal et la valeur finale reste inférieur à 0.1V soit compris 2.9V et 3.1V</p>
@@ -697,7 +693,7 @@ On détermine dans un premier temps l’écart initial: on commence à 1V et on 
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Paramétrage</strong><br />
 Comme d’habitude, on commence par paramétrer le système. Les grandeurs introduites sont présentées sur le graphique.</p>
@@ -727,8 +723,8 @@ On utilise les lois de Kirchhoff. Les deux points à bien faire attention sont:<
 <p>Remarquons aussi qu’on a choisi trois mailles faisant directement intervenir <span class="math notranslate nohighlight">\(u_L\)</span> qui est facilement éliminé.</p>
 </div>
 <blockquote>
-<div><div class="amsmath math notranslate nohighlight" id="equation-017a240e-9114-4a8b-8fa5-45b1b08b74d4">
-<span class="eqno">(37)<a class="headerlink" href="#equation-017a240e-9114-4a8b-8fa5-45b1b08b74d4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div><div class="amsmath math notranslate nohighlight" id="equation-a7c5e53c-64ba-40ec-80a4-a09270ed90f9">
+<span class="eqno">(37)<a class="headerlink" href="#equation-a7c5e53c-64ba-40ec-80a4-a09270ed90f9" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
 E - R i_e + L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0 \\
 R i_r - L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0 \\
@@ -737,27 +733,27 @@ u_C -  L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0
 <p>On a 4 inconnues et 4 équations. Le système peut donc être résolu.</p>
 <p><strong>Manipulation du système</strong><br />
 Une fois le système mis en place, <strong>il convient de réfléchir à une stratégie avant de se lancer</strong> (on rappelle que les grandeurs à éliminer sont les deux intensités ert <span class="math notranslate nohighlight">\(u_C\)</span>). Remarquons que le choix des mailles a permis d’avoir un système simple car chacune des lois des mailles permet d’élminer une grandeurs:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76c12bec-bd98-4b51-aa83-af816ce19d58">
-<span class="eqno">(38)<a class="headerlink" href="#equation-76c12bec-bd98-4b51-aa83-af816ce19d58" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e91153b6-a622-4dcd-bfa6-04867f4da35a">
+<span class="eqno">(38)<a class="headerlink" href="#equation-e91153b6-a622-4dcd-bfa6-04867f4da35a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
 i_e &amp;= \frac{E + L \frac{\rm{d}i_l}{\rm{dt}}}{R}\\
 i_r &amp;= \frac{L \frac{\rm{d}i_l}{\rm{dt}}}{R} \\
 u_C &amp;= L\frac{\rm{d}i_l}{\rm{dt}}
 \end{align}\]</div>
 <p>Il suffit ensuire de remplacer dans la loi des noeuds (première équation) les différentes grandeurs.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb9f0b3c-471d-418b-9657-c26919fd530c">
-<span class="eqno">(39)<a class="headerlink" href="#equation-fb9f0b3c-471d-418b-9657-c26919fd530c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-aee711dd-5dba-4021-abaa-ccba87df2dce">
+<span class="eqno">(39)<a class="headerlink" href="#equation-aee711dd-5dba-4021-abaa-ccba87df2dce" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{E}{R} \frac{L}{R}\frac{\rm{d}i_L}{\rm{dt}}+ \frac{L}{R}\frac{\rm{d}i_L}{\rm{dt}} + LC \frac{\rm{d^2}i}{\rm{dt^2}} + i_l = 0
 \end{equation}\]</div>
 <p><strong>Organisation de l’équation</strong><br />
 Il convient d’organiser (en fonction des dérivées) l’équation correctement sous sa forme canonique.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-42d3ad03-eade-475b-ad1f-e9a81eb3765b">
-<span class="eqno">(40)<a class="headerlink" href="#equation-42d3ad03-eade-475b-ad1f-e9a81eb3765b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d6f77ee7-531c-4bf5-bc71-3df1b7b60e2f">
+<span class="eqno">(40)<a class="headerlink" href="#equation-d6f77ee7-531c-4bf5-bc71-3df1b7b60e2f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{\rm{d^2}i_L}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_L}{\rm{dt}} + \frac{1}{LC} i_L = -\frac{E}{RLC}
 \end{equation}\]</div>
 <p>Par identification avec la forme canonique, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-05b5a2bb-29f5-4b25-8120-558c5ac9b5b4">
-<span class="eqno">(41)<a class="headerlink" href="#equation-05b5a2bb-29f5-4b25-8120-558c5ac9b5b4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-5c5624d6-ab7a-4d30-b2e1-b5442838e6ad">
+<span class="eqno">(41)<a class="headerlink" href="#equation-5c5624d6-ab7a-4d30-b2e1-b5442838e6ad" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \begin{cases}
 \omega_0 &amp;= \sqrt{\frac{1}{LC}}\\
 \frac{\omega_0}{Q} = \frac{2}{RC} \Longrightarrow Q &amp;= \frac{R}{2}\sqrt{\frac{C}{L}}
@@ -798,7 +794,7 @@ Il convient d’organiser (en fonction des dérivées) l’équation correctemen
 <p>Un élément important de l’énoncé est la notion de “temps long”. Elle signifie qu’on a atteint le régime forcé (ici indépendant du temps).</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p>On peut considérer qu’à <span class="math notranslate nohighlight">\(t = 0^-\)</span>, le système est dans un régime forcé (avec <strong>l’interrupteur ouvert</strong>).</p>
 <p><strong>Quelles grandeurs déterminer dans l’ancien régime forcé (t&lt;0)?</strong><br />
@@ -839,33 +835,33 @@ On chercher à obtenir la valeur de <span class="math notranslate nohighlight">\
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Correction</p>
+<p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Q1. Résolution de l’équation différentielle.</strong><br />
 La solution générale de l’équation homogène est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7b313b6b-f88b-4aba-8af0-41e36bc77b8b">
-<span class="eqno">(42)<a class="headerlink" href="#equation-7b313b6b-f88b-4aba-8af0-41e36bc77b8b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-063a1893-a9e2-4a08-83aa-e5ef18d537bd">
+<span class="eqno">(42)<a class="headerlink" href="#equation-063a1893-a9e2-4a08-83aa-e5ef18d537bd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_{l,0} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right)
 \end{equation}\]</div>
 <p>On cherche une solution particulière constante à l’équation avec second membre <span class="math notranslate nohighlight">\(i_{L,1}(t) = I_0\)</span>. L’équation à résoudre (les dérivées temporelles s’annulent):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-74344247-4ef7-4ce3-b3eb-485cc4d04e2d">
-<span class="eqno">(43)<a class="headerlink" href="#equation-74344247-4ef7-4ce3-b3eb-485cc4d04e2d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-14548857-ffe3-442d-ab93-41f3d15dfd85">
+<span class="eqno">(43)<a class="headerlink" href="#equation-14548857-ffe3-442d-ab93-41f3d15dfd85" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{1}{LC} I_0 = - \frac{E}{RLC} \Longrightarrow I_0 = -\frac{E}{R}
 \end{equation}\]</div>
 <p>La solution générale de l’équation avec second membre (identique à l’exercice précédent) est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a1c4333a-95b1-4530-a895-1a159aab95fe">
-<span class="eqno">(44)<a class="headerlink" href="#equation-a1c4333a-95b1-4530-a895-1a159aab95fe" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4bc78a5f-6419-42f6-a283-e0ad559ad8be">
+<span class="eqno">(44)<a class="headerlink" href="#equation-4bc78a5f-6419-42f6-a283-e0ad559ad8be" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 i_{l} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}
 \end{equation}\]</div>
 <p>Les conditions initiales donnent le système d’équations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26b74fbf-1b55-4f0d-bcb7-febb72aea776">
-<span class="eqno">(45)<a class="headerlink" href="#equation-26b74fbf-1b55-4f0d-bcb7-febb72aea776" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4431b2ed-99ca-44db-b3bb-99d08161cbba">
+<span class="eqno">(45)<a class="headerlink" href="#equation-4431b2ed-99ca-44db-b3bb-99d08161cbba" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_{l} (t=0^+) = A - \frac{E}{R} = 0 &amp;\Longrightarrow A = \frac{E}{R}\\
 \frac{\rm{d}i_l}{\rm{dt}} (t=0^+) = -\frac{E}{R^2C} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} B = 0 &amp;\Longrightarrow B = \frac{E}{R^2C\frac{1}{LC} - \frac{1}{{(RC)}^2}}
 \end{align}\]</div>
 <p>On en déduit l’expression de l’intensité <span class="math notranslate nohighlight">\(i_l(t)\)</span> et de la tension <span class="math notranslate nohighlight">\(u_L(t)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c8e884f8-eaed-415d-94c3-75e1e809f601">
-<span class="eqno">(46)<a class="headerlink" href="#equation-c8e884f8-eaed-415d-94c3-75e1e809f601" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3f7f0a59-28fc-4ecc-ac38-74ec2f97579a">
+<span class="eqno">(46)<a class="headerlink" href="#equation-3f7f0a59-28fc-4ecc-ac38-74ec2f97579a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 i_{l} (t) &amp;= {\exp}^{- \frac{t}{RC}} \left(\frac{E}{R} \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + \frac{E}{R^2C\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}\\
 u_{L} (t) &amp;= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} \right) \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t  \right)
 \end{align}\]</div>
@@ -877,8 +873,8 @@ u_{L} (t) &amp;= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\s
 <blockquote>
 <div><p><strong>Q2. Puissance reçue</strong><br />
 Nous sommes en convention récepteur donc la puissance reçue est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8a5a5d49-81d5-4c82-b9b0-8d31d7f3e6ce">
-<span class="eqno">(47)<a class="headerlink" href="#equation-8a5a5d49-81d5-4c82-b9b0-8d31d7f3e6ce" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3762318f-b042-427d-8b08-129f25558c77">
+<span class="eqno">(47)<a class="headerlink" href="#equation-3762318f-b042-427d-8b08-129f25558c77" title="Permalink to this equation">¶</a></span>\[\begin{align}
 p(t) &amp;= i_{l}(t) \times u_L(t) \\
 &amp;= - L I_A^2 \left ({\exp}^{- \frac{2t}{\tau}} \left(\cos \left(\Omega t \right) + \frac{1}{\tau \Omega} \sin \left(\Omega t \right)\right)\left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right) - \right )\\
 &amp; \times {\exp}^{- \frac{t}{\tau}} \left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right)
@@ -893,8 +889,8 @@ p(t) &amp;= i_{l}(t) \times u_L(t) \\
 <div><p><strong>Q3. Variation d’énergie dans une bobine</strong><br />
 <em>Première méthode (mauvaise idée): intégrer l’expression précédente entre 0 et l’infini…  …  …  On attendra pas un calcul aussi lourd (bien qu’il soit faisable et très formateur !).</em></p>
 <p>Deuxième méthode (à appliquer) : Il faut se rappeler que l’énergie reçue par la bobine est stockée et qu’on connaît l’expression de cette énergie stockée. Ainsi, l’énergie reçue sera la différence entre l’énergie stockée au final et l’énergie stockée initialement.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e25c6858-1df6-4859-96ff-983df1bc1b30">
-<span class="eqno">(48)<a class="headerlink" href="#equation-e25c6858-1df6-4859-96ff-983df1bc1b30" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-69329f22-59b6-412c-8112-826e0e8161e7">
+<span class="eqno">(48)<a class="headerlink" href="#equation-69329f22-59b6-412c-8112-826e0e8161e7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \Delta E_L = E_L(t=+\infty) - E_L(t=0) = \frac{1}{2}L I(t=\infty)^2 - \frac{1}{2}L I(t=0)^2 = \frac{L E^2}{2R^2}
 \end{equation}\]</div>
 </div></blockquote>
@@ -926,27 +922,16 @@ p(t) &amp;= i_{l}(t) \times u_L(t) \\
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_trans_meth_o2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Exemple : Etude d’un système d’ordre 2</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_trans_meth_o2.html" title="previous page">Exemple : Etude d’un système d’ordre 2</a>
+    <a class='right-next' id="next-link" href="el_trans_meth.html" title="next page">Activités</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_trans_meth.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Activités</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -962,7 +947,8 @@ p(t) &amp;= i_{l}(t) \times u_L(t) \\
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

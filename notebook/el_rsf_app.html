@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Application &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_rsf_app.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Entrainement" href="el_rsf_td.html" />
     <link rel="prev" title="Cas passe-bas" href="el_rsf_meth_pbas.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#generalites">
@@ -571,13 +567,13 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="application">
+  <div class="section" id="application">
 <h1>Application<a class="headerlink" href="#application" title="Permalink to this headline">¶</a></h1>
 <p>Ces exercices d’application directe sont à faire à la suite du cours pour vérifier votre compréhension des méthodes. Vous pourrez confronter votre travail avec celui de vos camarades et poser des questions sur cet exercice en classe mais il ne sera pas donné de correction complète.</p>
 <div class="section" id="generalites">
 <h2>Généralités<a class="headerlink" href="#generalites" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
-<p class="admonition-title">Manipulation des complexes </p>
+<p class="admonition-title">Manipulation des complexes</p>
 <p>Déterminer le module et la phase à l’origine des grandeurs réelles associées aux représentations complexes suivantes puis tracer leur représentation de Fresnel. (Les grandeurs non soulignées sont des réels positifs.)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -598,7 +594,7 @@
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <ul class="simple">
 <li><p>Si X est positif, <span class="math notranslate nohighlight">\(R_{eq} = R\)</span> et <span class="math notranslate nohighlight">\(L_{eq} = X / \omega\)</span></p></li>
 <li><p>Si X est négatif, <span class="math notranslate nohighlight">\(R_{eq} = R + \frac{X^2}{R}\)</span> et <span class="math notranslate nohighlight">\(C_{eq} = -\frac{1}{\omega}\frac{X}{R^2 + X^2}\)</span></p></li>
@@ -615,7 +611,7 @@
 \end{align*}\]</div>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 \left(-\omega^2 + 3j \frac{R}{L}\omega + \frac{4}{{\left(RC\right)}^2}\right) \underline{s}&amp;= 2j RC \omega \underline{e}\\
@@ -624,7 +620,7 @@
 \end{align*}\]</div>
 </div>
 <div class="attention admonition">
-<p class="admonition-title">Passage fréquentiel-temporel </p>
+<p class="admonition-title">Passage fréquentiel-temporel</p>
 <p>Déduire des équations ci-dessous les équations différentielles qui relient s et e. Discuter alors de la stabilité de chaque système</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -636,7 +632,7 @@
 \end{align*}\]</div>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification) </p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <p>Piège ! La première fraction n’est pas assimilable à un système linéaire réel, elle ne le serait que s’il y avait un j dans le troisième terme du dénominateur: <span class="math notranslate nohighlight">\(3jRC \omega\)</span>, l’équation temporelle serait alors:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -651,7 +647,7 @@ LC \frac{\rm{d^2}s}{\rm{dt^2}} - RC \frac{\rm{d}s}{\rm{dt}} + s &amp;= -\frac{\r
 <div class="section" id="etude-d-une-reponse">
 <h2>Etude d’une réponse<a class="headerlink" href="#etude-d-une-reponse" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
-<p class="admonition-title">Circuit RL </p>
+<p class="admonition-title">Circuit RL</p>
 <p>On considère un dipôle constitué d’une résistance R et d’une bobine d’inductance L en série. Il est branchée aux bornes d’une tension d’entrée e. Exprimer la tension aux bornes de la bobine en régime forcé lorsque la tension d’entrée est:</p>
 <ol class="simple">
 <li><p>Cas 1 : <span class="math notranslate nohighlight">\(e(t) = e_1 \cos{\omega_1 t} + e_2 \cos{(\omega_2 t + \varphi)} \)</span></p></li>
@@ -666,7 +662,7 @@ LC \frac{\rm{d^2}s}{\rm{dt^2}} - RC \frac{\rm{d}s}{\rm{dt}} + s &amp;= -\frac{\r
 </ul>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <p><span class="math notranslate nohighlight">\(s(t) = \frac{\frac{\omega_1}{\omega_0}e_1}{\sqrt{1 + {\left ( \frac{\omega_1}{\omega_0}\right )}^2}} \cos {\left ( \omega_1 t - \arctan \frac{\omega_1}{\omega_0} + \frac{\pi}{2}\right )} + \frac{\frac{\omega_2}{\omega_0}e_1}{\sqrt{1 + {\left ( \frac{\omega_2}{\omega_0}\right )}^2}} \cos {\left ( \omega_2 t - \arctan \frac{\omega_2}{\omega_0} + \frac{\pi}{2} + \varphi\right )}\)</span></p>
 <p><span class="math notranslate nohighlight">\(s(t) = \frac{\frac{\omega_1}{\omega_0}e_1}{\sqrt{1 + {\left ( \frac{\omega_1}{\omega_0}\right )}^2}} \sin {\left ( \omega_1 t - \arctan \frac{\omega_1}{\omega_0} + \frac{\pi}{2}\right )} + \frac{\frac{\omega_2}{\omega_0}e_1}{\sqrt{1 + {\left ( \frac{\omega_2}{\omega_0}\right )}^2}} \sin {\left ( \omega_2 t - \arctan \frac{\omega_2}{\omega_0} + \frac{\pi}{2} + \varphi\right )}\)</span></p>
 <p>avec <span class="math notranslate nohighlight">\(\omega_0 = \frac{R}{L}\)</span></p>
@@ -675,12 +671,12 @@ LC \frac{\rm{d^2}s}{\rm{dt^2}} - RC \frac{\rm{d}s}{\rm{dt}} + s &amp;= -\frac{\r
 <div class="section" id="etude-frequentielle">
 <h2>Etude fréquentielle<a class="headerlink" href="#etude-frequentielle" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
-<p class="admonition-title">RLC parallèlle </p>
+<p class="admonition-title">RLC parallèlle</p>
 <p>On considère trois dipôles R, L et C branchés en parallèle. On alimente le dipôle ainsi formé par un source modélisée par un modèle de Thévenin de résistance r et de force électromotrice E sinusoïdale. On étudie le régime sinusoïdal forcée.</p>
 <p>Étudier la réponse fréquentielle pour l’intensité circulant dans la bobine et la tension aux bornes du dipôle RLC.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Eléments de réponse (sans justification)</p>
+<p class="topic-title">Eléments de réponse (sans justification)</p>
 <p>Vous devez trouver un comportement “passe-bas” pour l’intensité dans la bobine et un comportement passe-bande pour la tension.</p>
 </div>
 </div>
@@ -709,27 +705,16 @@ LC \frac{\rm{d^2}s}{\rm{dt^2}} - RC \frac{\rm{d}s}{\rm{dt}} + s &amp;= -\frac{\r
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_rsf_meth_pbas.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Cas passe-bas</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_rsf_meth_pbas.html" title="previous page">Cas passe-bas</a>
+    <a class='right-next' id="next-link" href="el_rsf_td.html" title="next page">Entrainement</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_rsf_td.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Entrainement</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -745,7 +730,8 @@ LC \frac{\rm{d^2}s}{\rm{dt^2}} - RC \frac{\rm{d}s}{\rm{dt}} + s &amp;= -\frac{\r
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

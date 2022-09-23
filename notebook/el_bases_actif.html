@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dipôles linéaires actifs &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_actif.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Etude d’un circuit linéaire" href="el_bases_etude.html" />
     <link rel="prev" title="Association de résistances" href="el_bases_assoc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sources-ideales">
@@ -566,7 +562,7 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="dipoles-lineaires-actifs">
+  <div class="section" id="dipoles-lineaires-actifs">
 <h1>Dipôles linéaires actifs<a class="headerlink" href="#dipoles-lineaires-actifs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sources-ideales">
 <h2>Sources idéales<a class="headerlink" href="#sources-ideales" title="Permalink to this headline">¶</a></h2>
@@ -595,7 +591,7 @@
 <p>On appelle l’intensité qui la traverse <strong>courant électromoteur (c.e.m.)</strong></p>
 </div>
 <div class="topic">
-<p class="topic-title first">Caractéristique statique  </p>
+<p class="topic-title">Caractéristique statique</p>
 <ul class="simple">
 <li><p>La caractéristique statique d’une source idéale de tension de fem E est une droite verticale d’équation u = E</p></li>
 <li><p>La caractéristique statique d’une source idéale de courant de cem I est une droite horizontale d’équation i = I</p></li>
@@ -605,7 +601,7 @@
 <div class="section" id="source-reelle-electromoteur">
 <h2>Source réelle: Electromoteur<a class="headerlink" href="#source-reelle-electromoteur" title="Permalink to this headline">¶</a></h2>
 <div class="topic">
-<p class="topic-title first">Comportement réels des sources  </p>
+<p class="topic-title">Comportement réels des sources</p>
 <p>En pratique, une source de tension ne délivre la fem voulue E qu’à vide, c’est-à-dire quand aucun courant ne sort. Lorsqu’on commence à demander une intensité en sortie (donc de la puissance), la fem u tend à diminuer. Expérimentalement, on observe qu’on peut modéliser cette chute par un modèle linéaire: <span class="math notranslate nohighlight">\(u = E - Ri\)</span>. C’est le modèle des électromoteurs.</p>
 </div>
 <div class="admonition important">
@@ -631,7 +627,7 @@ u = E - Ri
 <p>Un électromoteur peut être modélisé par une source idéale de tension de fem E en série avec une résistance R</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Démonstration</p>
+<p class="topic-title">Démonstration</p>
 <p>Comme à chaque fois pour prouver/déterminer l’équivalence de deux dipôles, nous allons exprimer la relation intensité tension. Dans le cas de l’électromoteur, on a déjà <span class="math notranslate nohighlight">\(u = E - Ri\)</span></p>
 <p>La tension aux bornes du modèle proposé est (la résistance est orientée en convention générateur): <span class="math notranslate nohighlight">\(u = E + u_R = E - R i\)</span></p>
 <p>On a bien identification des équations d’évolution, donc l’électromoteur est modélisable par le modèle de Thévenin.</p>
@@ -662,27 +658,16 @@ u = E - Ri
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_bases_assoc.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Association de résistances</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_bases_assoc.html" title="previous page">Association de résistances</a>
+    <a class='right-next' id="next-link" href="el_bases_etude.html" title="next page">Etude d’un circuit linéaire</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_bases_etude.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Etude d’un circuit linéaire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -698,7 +683,8 @@ u = E - Ri
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entrainement : Bases &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,26 +31,26 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_td.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,7 @@
     <link rel="next" title="Régime transitoire" href="el_trans.html" />
     <link rel="prev" title="Activités d’application" href="el_bases_app.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -79,14 +76,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -543,7 +539,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#puissance-et-energie">
@@ -576,12 +572,12 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="entrainement-bases">
+  <div class="section" id="entrainement-bases">
 <h1>Entrainement : Bases<a class="headerlink" href="#entrainement-bases" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="puissance-et-energie">
 <h2>Puissance et énergie<a class="headerlink" href="#puissance-et-energie" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
-<p class="admonition-title">Dipôles linéaires passifs </p>
+<p class="admonition-title">Dipôles linéaires passifs</p>
 <p>Calculer la puissance instantanée reçue puis l’énergie emmagasinée durant une période pour:</p>
 <ol class="simple">
 <li><p>un condensateur C dont la tension à ses bornes est <span class="math notranslate nohighlight">\(u(t) = u_m \cos (\omega t + \phi)\)</span></p></li>
@@ -590,7 +586,7 @@
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Réponse (sans justification)  </p>
+<p class="topic-title">Réponse (sans justification)</p>
 <p>On trouve que la variation d’énergie sur une période pour la bobine et le condensateur sont toutes les deux nulle (propriété importante de C et L en régime périodique).</p>
 <p>Pour la résistance, c’est un piège: elle n’emmagasine pas d’énergie…</p>
 </div>
@@ -602,14 +598,14 @@
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Réponse (sans justification)  </p>
+<p class="topic-title">Réponse (sans justification)</p>
 <p>Valeur critique de R: <span class="math notranslate nohighlight">\(R_{eq} = \frac{R_1 E_1}{E_1 - E_2}\)</span>. Pour <span class="math notranslate nohighlight">\(R_{eq} &lt; R\)</span>, <span class="math notranslate nohighlight">\(E_2\)</span> a un comportement récepteur et pour <span class="math notranslate nohighlight">\(R_{eq} &gt; R\)</span>, <span class="math notranslate nohighlight">\(E_2\)</span> a un comportement générateur. <span class="math notranslate nohighlight">\(E_1\)</span> a toujours un comportement générateur.</p>
 </div>
 </div>
 <div class="section" id="applications-des-lois-de-kirchoff">
 <h2>Applications des lois de Kirchoff<a class="headerlink" href="#applications-des-lois-de-kirchoff" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
-<p class="admonition-title">Circuit divers </p>
+<p class="admonition-title">Circuit divers</p>
 <p>On considère le circuit ci-dessous. Déterminer l’intensité i qui traverse la résistance R (de la gauche vers la droite) en utilisant</p>
 <ol class="simple">
 <li><p>les lois des noeuds et des mailles</p></li>
@@ -620,11 +616,11 @@
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Réponse (sans justification)  </p>
+<p class="topic-title">Réponse (sans justification)</p>
 <p><span class="math notranslate nohighlight">\(i = \frac{R_1 E_2 + R_1 R_0 I_0 + (R_0 + R_2)E_1}{(R_0 + R_2) (R_1 + R) + R R_1}\)</span></p>
 </div>
 <div class="attention admonition">
-<p class="admonition-title">Ohmètre à tarage shunt </p>
+<p class="admonition-title">Ohmètre à tarage shunt</p>
 <p>On considère le montage suivant qui modélise un ohmmètre à tarage shunt. Il comporte un générateur de f.e.m. E (de résistance interne négligeable), un milliampèremètre de résistance interne r, un rhéostat de résistance variable <span class="math notranslate nohighlight">\(R_h\)</span> et des résistors <span class="math notranslate nohighlight">\(R_1, R_2\)</span>. La résistance X est la résistance à mesurer.</p>
 <div class="figure align-center" id="fig-143">
 <img alt="../_images/elec_resistance_shunt.jpg" src="../_images/elec_resistance_shunt.jpg" />
@@ -636,7 +632,7 @@
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title first">Réponse (sans justification)  </p>
+<p class="topic-title">Réponse (sans justification)</p>
 <p><span class="math notranslate nohighlight">\(i = \frac{R R_h}{(R_2 + X)(rR_1 + R_1 R_h + r R_h) + rR_1 R_h} E\)</span></p>
 <p><span class="math notranslate nohighlight">\(k = \frac{R}{R_1 + r}\)</span></p>
 <p><span class="math notranslate nohighlight">\(R = R_2 + \frac{R_1 r}{R_1 + r}\)</span></p>
@@ -646,7 +642,7 @@
 <div class="section" id="dipoles-equivalents">
 <h2>Dipôles équivalents<a class="headerlink" href="#dipoles-equivalents" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
-<p class="admonition-title">Générateur équivalent </p>
+<p class="admonition-title">Générateur équivalent</p>
 <p>On considère le circuit suivant.</p>
 <ol class="simple">
 <li><p>Déterminer le générateur de Thévenin du circuit équivalent entre les bornes A et B.</p></li>
@@ -657,19 +653,19 @@
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Réponse (sans justification)  </p>
+<p class="topic-title">Réponse (sans justification)</p>
 <p><span class="math notranslate nohighlight">\(E_{eq} = \frac{E_1 - E_2 -2E}{3}\)</span></p>
 <p><span class="math notranslate nohighlight">\(R_{eq} = \frac{3R}{2}\)</span></p>
 </div>
 <div class="attention admonition">
-<p class="admonition-title">Maillage carré </p>
+<p class="admonition-title">Maillage carré</p>
 <p>On considère le maillage suivant où chaque segment est une résistance R. Déterminer la résistance équivalente pour le dipôle pris entre <span class="math notranslate nohighlight">\(B_1\)</span> et <span class="math notranslate nohighlight">\(B_2\)</span> puis entre <span class="math notranslate nohighlight">\(O\)</span> et <span class="math notranslate nohighlight">\(B_2\)</span>.</p>
 <div class="figure align-center" id="fig-145">
 <img alt="../_images/elec_maillage_carre.jpg" src="../_images/elec_maillage_carre.jpg" />
 </div>
 </div>
 <div class="topic">
-<p class="topic-title first">Réponse (sans justification)  </p>
+<p class="topic-title">Réponse (sans justification)</p>
 <p><span class="math notranslate nohighlight">\(R_{B_1 B_2} = \frac{3}{2}R\)</span></p>
 <p><span class="math notranslate nohighlight">\(R_{O B_2} = \frac{7}{8}R\)</span></p>
 </div>
@@ -677,7 +673,7 @@
 <div class="section" id="resistances-d-entree-et-de-sortie">
 <h2>Résistances d’entrée et de sortie<a class="headerlink" href="#resistances-d-entree-et-de-sortie" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
-<p class="admonition-title">Transistor bipolaire </p>
+<p class="admonition-title">Transistor bipolaire</p>
 <p>Un transistor bipolaire est un tripôle qui est toujours utilisé comme un quadripôle en rendant une de ses électrodes communes à l’entrée et la sortie. En régime linéaire basse fréquence, les équations d’un transistor bipolaire en émetteur commun E sont: <span class="math notranslate nohighlight">\(u_{be} = r i_B + \mu u_{ce}\)</span> et <span class="math notranslate nohighlight">\(i_C = \beta i_B + \frac{u_{ce}}{\rho}\)</span>. On désire déterminer les valeurs des différentes grandeurs données dans l’équation.</p>
 <ol class="simple">
 <li><p>*Modéliser ce composant à l’aide de composants fondamentaux.</p></li>
@@ -717,27 +713,16 @@
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="el_bases_app.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Activités d’application</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="el_bases_app.html" title="previous page">Activités d’application</a>
+    <a class='right-next' id="next-link" href="el_trans.html" title="next page">Régime transitoire</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="el_trans.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Régime transitoire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -753,7 +738,8 @@
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
