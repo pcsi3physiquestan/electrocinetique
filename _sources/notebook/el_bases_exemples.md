@@ -452,8 +452,8 @@ p(t) &= i_m u_m \sin(\pi t - \frac{\pi}{3}) \sin(\pi t + \frac{\pi}{2})\\
 >On rappelle la relation $p = \frac{dE}{dt}$ où p est la puissance instantanée et E l'énergie (ici l'énergie échangée avec le circuit). On obtient donc l'énergie échangée par intégration de $p(t)$ sur une période ($T = 1s$):
 >
 >\begin{align*}
-E = \int_{t=0}^{t=T} p(t) dt =  \int_{t=0}^{t=T}  \frac{i_m u_m}{2} \left (- \cos(2 \pi t + \frac{\pi}{6}) + \cos(\frac{5 \pi}{6}) \right )dt 
-E =  \frac{i_m u_m}{2} \left [ -\frac{1}{2 \pi} \sin(\cos(2 \pi t + \frac{\pi}{6})  \right ]_{t=0}^{t=T} + \frac{i_m u_m}{2}  \cos(\frac{5 \pi}{6}) T
+E = \int_{t=0}^{t=T} p(t) dt =  \int_{t=0}^{t=T}  \frac{i_m u_m}{2} \left (- \cos(2 \pi t + \frac{\pi}{6}) + \cos(\frac{5 \pi}{6}) \right )dt\\ 
+E =  \frac{i_m u_m}{2} \left [ -\frac{1}{2 \pi} \cos(2 \pi t + \frac{\pi}{6})  \right ]_{t=0}^{t=T} + \frac{i_m u_m}{2}  \cos(\frac{5 \pi}{6}) T\\
 E = \frac{i_m u_m}{2} \cos(\frac{5 \pi}{6}) T < 0
 \end{align*}
 >Le dipôle fournit globalement une énergie négative, c'est-à-dire qu'il reçoit une énergie $\vert E \vert$: il est donc globalement récepteur.
