@@ -64,7 +64,7 @@ On considère le circuit ci-dessous. Déterminer l'intensité i qui traverse la 
 ```
 ````
 ````{topic} Réponse (sans justification)  
-$i = \frac{R_1 E_2 + R_1 R_0 I_0 + (R_0 + R_2)E_1}{(R_0 + R_2) (R_1 + R) + R R_1}$
+$i = -\frac{R_1 E_2 + R_1 R_0 I_0 + (R_0 + R_2)E_1}{(R_0 + R_2) (R_1 + R) + R R_1}$
 
 ````
 
