@@ -111,7 +111,7 @@ Pour l'étude d'un filtre linéaire, on peut souvent faire apparaître une grand
 
 Lorsqu'on trace des diagrammes de Bode théoriques, on les trace souvent en fonction de $\log(x)$ au lieu de $\log(\omega)$.
 ````
-````{sidebar} __Diagramme semi-logarithmique__  
+````{margin} __Diagramme semi-logarithmique__  
 En général, on représente les diagrammes de Bode sur des papier semi-log qui représentent les valeurs de x (ou de $\omega$) en absisses et non $\log(x)$.
 ````
 ````{important} __Diagramme de Bode__
