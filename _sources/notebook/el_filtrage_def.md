@@ -17,12 +17,12 @@ kernelspec:
 
 ## Filtrage: Principe
 
-````{margin} __Quadripôle__  
-Un quadripôle est un composant qui présente 2 bornes d'entrée et 2 bornes de sortie.
-````
 ````{sidebar} Remarque
 * Une fonction de transfert n'a de sens que si le système est stable et linéaire.
 * Si la condition de linéarité est indispensable, il arrive d'étudier un système en régime sinusoïdal forcé pour ensuite vérifier sa stabilité.
+````
+````{margin} __Quadripôle__  
+Un quadripôle est un composant qui présente 2 bornes d'entrée et 2 bornes de sortie.
 ````
 ````{important} 
 __Fonction de transfert/Filtre__
