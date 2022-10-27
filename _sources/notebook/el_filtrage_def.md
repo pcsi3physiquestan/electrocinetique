@@ -17,7 +17,7 @@ kernelspec:
 
 ## Filtrage: Principe
 
-````{sidebar} __Quadripôle__  
+````{margin} __Quadripôle__  
 Un quadripôle est un composant qui présente 2 bornes d'entrée et 2 bornes de sortie.
 ````
 ````{sidebar} Remarque
