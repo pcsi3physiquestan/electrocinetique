@@ -85,8 +85,8 @@ Piège ! La première fraction n'est pas assimilable à un système linéaire r�
 
 \begin{align*}
 LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} + s &= e + RC \frac{\rm{d}e}{\rm{dt}}\\
-LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} + s &= \frac{\rm{d^2}e}{\rm{dt^2}}\\
-LC \frac{\rm{d^2}s}{\rm{dt^2}} - RC \frac{\rm{d}s}{\rm{dt}} + s &= -\frac{\rm{d^2}e}{\rm{dt^2}}\\
+LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} + s &= {(RC)}^2\frac{\rm{d^2}e}{\rm{dt^2}}\\
+LC \frac{\rm{d^2}s}{\rm{dt^2}} - RC \frac{\rm{d}s}{\rm{dt}} + s &= -{(RC)}^2\frac{\rm{d^2}e}{\rm{dt^2}}\\
 -3  RC \frac{\rm{d}s}{\rm{dt}} + s &= Ke \textrm{ On notera qu'il s'agit d'un système instable.}\\
 3  RC \frac{\rm{d}s}{\rm{dt}} + s &= K RC \frac{\rm{d}e}{\rm{dt}}
 \end{align*}
