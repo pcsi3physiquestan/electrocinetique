@@ -638,7 +638,7 @@ G_{dB} = 20 \log A + 20 \log x - 10 \log \left (1 + x^2\right )\\
 <div class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
-<div><p>Le gain en décibel est non nul à basse fréquence (quand <span class="math notranslate nohighlight">\(\log(x)\)</span> tend vers <span class="math notranslate nohighlight">\(-\infty\)</span>) et nul à haute fréquence (le gain en décibel tend vers <span class="math notranslate nohighlight">\(-\infty\)</span>). Il s’agit donc d’un filtre passe-haut.</p>
+<div><p>Le gain en décibel est non nul à basse fréquence (quand <span class="math notranslate nohighlight">\(\log(x)\)</span> tend vers <span class="math notranslate nohighlight">\(-\infty\)</span>) et nul à haute fréquence (le gain en décibel tend vers <span class="math notranslate nohighlight">\(-\infty\)</span>). Il s’agit donc d’un filtre passe-bas.</p>
 <p>On trouve <span class="math notranslate nohighlight">\(\omega_0 \approx 10^3 \rm{rad.s^{-1}}.\)</span></p>
 <p>On trouve une pente de <span class="math notranslate nohighlight">\(-40dB/decade\)</span>. L’ordonnée pour <span class="math notranslate nohighlight">\(\log(\omega) = \log(\omega_0)\)</span> est 6. L’équation de l’asymptote est donc <span class="math notranslate nohighlight">\(Asymp(\log(\omega)) = 6 - 40 \log(\omega/\omega_0)\)</span>. On peut remarquer que la phase est presque égale à <span class="math notranslate nohighlight">\(-\pi\)</span>. On peut donc considérer que la fonction de transfert est un réel négatif soit: <span class="math notranslate nohighlight">\(\underline{H} \approx - \frac{2}{{(\frac{\omega}{\omega_0})}^2}\)</span>. En temporelle, celà donne: <span class="math notranslate nohighlight">\(s(t) = 2 \omega_0^2 \int (\int (e(t)))\)</span>: c’est un comportement double intégrateur.</p>
 </div></blockquote>
@@ -737,8 +737,8 @@ A basse fréquence, la relation se réécrite <span class="math notranslate nohi
 </div>
 <blockquote>
 <div><p>Le gain réel étant strictement décroissant, le gain maximal est le gain à fréquence nulle (gain statique) soit ici 1. On cherche donc à résoudre l’inégalité:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac1a4fdc-a370-433d-a3ad-db29d10e6b84">
-<span class="eqno">(55)<a class="headerlink" href="#equation-ac1a4fdc-a370-433d-a3ad-db29d10e6b84" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-08de6050-6f71-4a78-a71f-feeaba68da87">
+<span class="eqno">(55)<a class="headerlink" href="#equation-08de6050-6f71-4a78-a71f-feeaba68da87" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \frac{1}{\sqrt{1 + x^2}} \geq \frac{1}{\sqrt{2}} \Longrightarrow x\leq 1 \Longrightarrow \omega \leq \omega_0
 \end{equation}\]</div>
 </div></blockquote>
@@ -760,8 +760,8 @@ e(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{\sin \left((2k+1)2\pi f t\r
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Réponse exacte</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ec76ee47-ed0a-4ccb-9587-0204de63e0d2">
-<span class="eqno">(56)<a class="headerlink" href="#equation-ec76ee47-ed0a-4ccb-9587-0204de63e0d2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-00edd253-c36e-44fe-9e86-ec9f28de6ed8">
+<span class="eqno">(56)<a class="headerlink" href="#equation-00edd253-c36e-44fe-9e86-ec9f28de6ed8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 s(t) =\frac{4E}{\pi} \sum\limits_{k=0}^{\infty}\frac{1}{\sqrt{1 + {\left(2k+1\right)}^2}} \frac{\sin \left((2k+1)2\pi f t - \arctan (2k+1) \right)}{2k+1}
 \end{equation}\]</div>
 <p><strong>Réponse idéale</strong><br />

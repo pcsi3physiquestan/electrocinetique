@@ -91,7 +91,7 @@ On considère un filtre dont le diagramme de Bode (tracé en fonction de $\log(\
 ```
 ````
 ````{topic} Correction
->Le gain en décibel est non nul à basse fréquence (quand $\log(x)$ tend vers $-\infty$) et nul à haute fréquence (le gain en décibel tend vers $-\infty$). Il s'agit donc d'un filtre passe-haut.
+>Le gain en décibel est non nul à basse fréquence (quand $\log(x)$ tend vers $-\infty$) et nul à haute fréquence (le gain en décibel tend vers $-\infty$). Il s'agit donc d'un filtre passe-bas.
 >
 >On trouve $\omega_0 \approx 10^3 \rm{rad.s^{-1}}.$
 >
