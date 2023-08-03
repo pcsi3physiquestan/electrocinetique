@@ -14,7 +14,6 @@ kernelspec:
   name: python3
 ---
 # Caractéristiques d'un système d'ordre 2
-_Un exemple d'étude sur un RLC série est donné [ici](ex_o2)._
 
 ## Système d'ordre 2: Forme canonique
 

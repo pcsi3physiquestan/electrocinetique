@@ -157,7 +157,7 @@ On notera l'intérêt d'orientation les tensions et intensité de sorte que les 
 ````{topic} Correction - Lois des mailles et des noeuds
 On va travailler avec des tensions. On paramètre les intensités et tensions.
 ```{figure} ./images/elec_circuit_etude_2ter.png
-:name: fig_130
+:name: fig_130a
 :align: center
 ```
 On a théoriquement 10 inconnues, mais on peut remarquer que chaque intensité est reliée à une tension par une relation $i_i = U_i / R$ (ou $R_1$). Il reste donc 5 inconnues les 5 tensions. Il faut donc 5 équations : 3 lois des mailles et 2 lois de noeuds. Il vient (s'entraîner repérer de quel/le maille/noeud il est question et établir la loi correspondante):
