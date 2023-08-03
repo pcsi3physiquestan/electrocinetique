@@ -28,6 +28,10 @@ kernelspec:
 1. Tracer i et $i_1$ en fonction du temps.
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Conditions initiales](ci)._
+* _$\Longrightarrow$ [Mise en équation](mise_eq)._
+
 ````{topic} Eléments de réponse (sans justification)
 >$i(t) = \frac{R_1}{R_1 + R}\eta\left ( 1 - e^{- \frac{(R_1 + R)t}{L}}\right )$
 ````
@@ -41,6 +45,11 @@ On considère le circuit électrique de la figure ci-après. A t=0, $q_1 = Q_1$ 
 :align: center
 ```
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Conditions initiales](ci)._
+* _$\Longrightarrow$ [Mise en équation](mise_eq)._
+
 
 ````{topic} Eléments de réponse (sans justification)
 >$q_1(t) = Q_1 \frac{C_1}{C_1 + C_2} + Q_1 \frac{C_2}{C_1 + C_2}e^{-\frac{(C_1 + C_2)t}{RC_1 C_2}}$
@@ -59,6 +68,11 @@ On branche en parallèle une bobine d'inductance $L=10 \rm{mH}$ (non parcourue p
 1. On prend $\lambda = 1 \rm{A.s^{-1}}$, quelle approximation peut-on faire? Que vaut $i(t_0)$? En déduire l'évolution de $i(t)$ après $t=t_0$.
 1. Calculer l'énergie délivrée par le générateur pendant les deux périodes $\left[0;t_0\right]$ et $\left[t_0;+\infty\right]$. La comparer avec l'énergie délivrée par un générateur délivrant un échelon de courant $I_0$ branché en parallèle à R et L. Commenter.
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Conditions initiales](ci)._
+* _$\Longrightarrow$ [Mise en équation](mise_eq)._
+
 
 ````{topic} Eléments de réponse (sans justification)
 >Toutes les intensités sont orientées vers le bas.
@@ -84,6 +98,11 @@ On suppose de plus que $RC \ll \frac{L}{R}$.
 1. Déterminer l'expression complète de q(t).
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Conditions initiales](ci)._
+* _$\Longrightarrow$ [Mise en équation](mise_eq)._
+
+
 ````{topic} Eléménts de réponse (sans justification)
 >C'est un régime pseudo-périodique et la pseudo-pulsation est à peu près égale à la pulsation propre. Le temps caractéristique $\frac{2Q}{\omega_0}$ est donc grand devant la pseudo-période (Q grand) donc on observe de nombreuses oscillations et une enveloppe exponentielle qui décroit lentement.
 ````
@@ -101,6 +120,11 @@ Dans le circuit ci-dessous, l'interrupteur K est fermé et à t=0, on l'ouvre.
 :align: center
 ```
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Conditions initiales](ci)._
+* _$\Longrightarrow$ [Mise en équation](mise_eq)._
+
 
 ````{topic} Eléments de réponse (sans justification)
 >* $u(t) \approx e^{\frac{-\omega_0 t}{2Q}} (- E \cos(\omega_0 t) + QE\sin \omega_0 t) + E$ (à fort facteur de qualité, on doit trouver que la pseudo-pulsation égale la pulsation propre en première approximation).

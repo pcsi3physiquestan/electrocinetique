@@ -49,6 +49,7 @@ En général, la forme mathématique des grandeurs du système tend à prendre u
 
 ````
 
+(rpit)=
 ## Etude d'un circuit en régime forcé indépendant du temps
 
 ### Condensateur et bobine en régime indépendant du temps

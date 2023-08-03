@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Méthodes d’étude &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,39 +19,38 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_exemples.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,27 @@
     <link rel="next" title="Activité : Résistance d’entrée et résistance de sortie" href="el_bases_meth_r.html" />
     <link rel="prev" title="Maitriser les méthodes" href="el_bases_ex.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -70,10 +87,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
@@ -82,16 +101,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../electrocinetique.html">
-   Electrocinétique
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../electrocinetique.html">
+                    Electrocinétique
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="el_bases.html">
    Bases de l’électrocinétique
@@ -177,6 +197,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="el_bases_td.html">
        Entrainement : Bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_num.html">
+       Capacités numériques
       </a>
      </li>
     </ul>
@@ -453,94 +478,181 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/notebook/el_bases_exemples.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebook/el_bases_exemples.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_bases_exemples.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_bases_exemples.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebook/el_bases_exemples.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/notebook/el_bases_exemples.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#calculer-une-intensite-par-des-considerations-microscopiques">
    Calculer une intensité par des considérations microscopiques.
@@ -609,20 +721,104 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Méthodes d’étude</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculer-une-intensite-par-des-considerations-microscopiques">
+   Calculer une intensité par des considérations microscopiques.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etudier-un-circuit-electrique-lineaire">
+   Etudier un circuit électrique linéaire
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#par-les-lois-de-kirchhoff">
+     Par les lois de Kirchhoff
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reperer-et-utiliser-un-pont-diviseur-de-tension">
+     Repérer et utiliser un pont diviseur de tension
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dipoles-equivalents">
+   Dipôles équivalents
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dipole-equivalent-par-les-equations-d-evolution">
+     Dipôle équivalent par les équations d’évolution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dipole-equivalent-par-manipulation-des-schemas">
+     Dipôle équivalent par manipulation des schémas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determiner-un-modele-de-thevenin-equivalent">
+     Déterminer un modèle de Thévenin équivalent
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etudes-energetiques">
+   Etudes énergétiques
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determiner-les-comportements-recepteurs-generateurs-graphiquement">
+     Déterminer les comportements récepteurs/générateurs graphiquement.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determiner-analytiquement-les-comportements-generateurs-recepteurs">
+     Déterminer analytiquement les comportements générateurs/récepteurs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#determiner-les-comportements-de-dipoles-dans-un-circuit">
+     Déterminer les comportements de dipôles dans un circuit
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="methodes-d-etude">
-<h1>Méthodes d’étude<a class="headerlink" href="#methodes-d-etude" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="methodes-d-etude">
+<h1>Méthodes d’étude<a class="headerlink" href="#methodes-d-etude" title="Permalink to this headline">#</a></h1>
 <p><em>Les corrections sont en ligne.</em></p>
 <div class="section" id="calculer-une-intensite-par-des-considerations-microscopiques">
-<h2>Calculer une intensité par des considérations microscopiques.<a class="headerlink" href="#calculer-une-intensite-par-des-considerations-microscopiques" title="Permalink to this headline">¶</a></h2>
+<h2>Calculer une intensité par des considérations microscopiques.<a class="headerlink" href="#calculer-une-intensite-par-des-considerations-microscopiques" title="Permalink to this headline">#</a></h2>
 <p>Cette méthode ne sera pas souvent utilisée dans ces chapitres mais est très utile pour comprendre le passage du microscopique au macroscopique.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -650,7 +846,7 @@
 </div></blockquote>
 <div class="figure align-center" id="fig-quantite-de-charge87">
 <img alt="../_images/elec_i_calcul.png" src="../_images/elec_i_calcul.png" />
-<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Quantité de charge</span><a class="headerlink" href="#fig-quantite-de-charge87" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text">Quantité de charge</span><a class="headerlink" href="#fig-quantite-de-charge87" title="Permalink to this image">#</a></p>
 </div>
 <blockquote>
 <div><p>Considérons l’instant initial <span class="math notranslate nohighlight">\(t\)</span> et cherchons quelles sont les caractéristiques d’un électron qui va traverser la surface S entre t et <span class="math notranslate nohighlight">\(t + \Delta t\)</span>. Il doit (avec les conventions de vitesse choisis sur le schéma - inverser la vitesse des électrons ne changerait pas la valeur de i en valeur absolue, cela ne ferait que <strong>changer le signe</strong>) :</p>
@@ -668,9 +864,9 @@
 </div>
 </div>
 <div class="section" id="etudier-un-circuit-electrique-lineaire">
-<span id="etude-lois"></span><h2>Etudier un circuit électrique linéaire<a class="headerlink" href="#etudier-un-circuit-electrique-lineaire" title="Permalink to this headline">¶</a></h2>
+<span id="etude-lois"></span><h2>Etudier un circuit électrique linéaire<a class="headerlink" href="#etudier-un-circuit-electrique-lineaire" title="Permalink to this headline">#</a></h2>
 <div class="section" id="par-les-lois-de-kirchhoff">
-<h3>Par les lois de Kirchhoff<a class="headerlink" href="#par-les-lois-de-kirchhoff" title="Permalink to this headline">¶</a></h3>
+<h3>Par les lois de Kirchhoff<a class="headerlink" href="#par-les-lois-de-kirchhoff" title="Permalink to this headline">#</a></h3>
 <p>Le but de cet exercice est d’apprendre à mettre en application tout ce qui a été vu précédemment. Nous utiliserons deus méthodes :
 la loi des noeuds en terme de potentiel. On pourra néanmoins s’entraîner à reprendre l’exercice en utilisant des tensions et la loi des mailles.</p>
 <div class="attention admonition">
@@ -691,8 +887,8 @@ la loi des noeuds en terme de potentiel. On pourra néanmoins s’entraîner à 
 <ul class="simple">
 <li><p>On écrit les lois des noeuds en différents points (<em>il y a ici 3 noeuds car les deux du bas peuvent être regroupés, on écrit donc deux loi des noeuds</em>):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-766a63ce-c6ba-4ffe-aaeb-a3e0fe4579cc">
-<span class="eqno">(1)<a class="headerlink" href="#equation-766a63ce-c6ba-4ffe-aaeb-a3e0fe4579cc" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c174f98b-7532-4976-9d41-27bc65fb025d">
+<span class="eqno">(1)<a class="headerlink" href="#equation-c174f98b-7532-4976-9d41-27bc65fb025d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{cases}
 i_1 + i_2 - i_3 &amp;= 0\\
 i_3 + i_4 + i_5 &amp;= 0
@@ -701,8 +897,8 @@ i_3 + i_4 + i_5 &amp;= 0
 <ul class="simple">
 <li><p>On exprime les intensités en fonction des potentiels en utilisant les équations des dipôles:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-41d76a92-f50a-44fa-be40-349e10ba6845">
-<span class="eqno">(2)<a class="headerlink" href="#equation-41d76a92-f50a-44fa-be40-349e10ba6845" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1e2c9c17-1c96-4333-8c92-2cd38cfa6470">
+<span class="eqno">(2)<a class="headerlink" href="#equation-1e2c9c17-1c96-4333-8c92-2cd38cfa6470" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{cases}
 i_1 &amp;= \frac{V_A - V_B}{R}\\
 i_2 &amp;= \frac{V_M - V_B}{R}\\
@@ -714,8 +910,8 @@ i_5 &amp;= \frac{V_D - V_C}{R}
 <ul class="simple">
 <li><p>On élimine les potentiels non recherchés (<em>ici, on cherche <span class="math notranslate nohighlight">\(U_{BC} = V_B - V_C\)</span>, on va donc éliminer <span class="math notranslate nohighlight">\(V_A, V_D\)</span> et <span class="math notranslate nohighlight">\(V_M\)</span></em>):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-fb5e9f4e-43ca-4d27-b358-c26e68418a16">
-<span class="eqno">(3)<a class="headerlink" href="#equation-fb5e9f4e-43ca-4d27-b358-c26e68418a16" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fbe52aae-3dad-4975-aca1-10b5c136640b">
+<span class="eqno">(3)<a class="headerlink" href="#equation-fbe52aae-3dad-4975-aca1-10b5c136640b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{cases}
 V_A &amp;= E\\
 V_D &amp;= 2E\\
@@ -723,20 +919,20 @@ V_M &amp;= 0
 \end{cases}
 \end{equation}\]</div>
 <p>Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6b3a6976-4e84-4968-9d8e-8983bcab717e">
-<span class="eqno">(4)<a class="headerlink" href="#equation-6b3a6976-4e84-4968-9d8e-8983bcab717e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-176a2660-ebd1-479d-8aab-96a70b9ddec9">
+<span class="eqno">(4)<a class="headerlink" href="#equation-176a2660-ebd1-479d-8aab-96a70b9ddec9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{V_B - E}{R}+\frac{V_B}{R}+\frac{V_B - V_C}{R_1} &amp;= 0\\
 \frac{V_C - 2E}{R}+\frac{V_C}{R}+\frac{V_C - V_B}{R_1} &amp;= 0
 \end{align}\]</div>
 <p>Réorganisons le système pour le résoudre.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5ff1ad76-86f4-4551-9e59-94bf0718618e">
-<span class="eqno">(5)<a class="headerlink" href="#equation-5ff1ad76-86f4-4551-9e59-94bf0718618e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c67afcef-bcb3-4f35-a341-b7bd7748ce63">
+<span class="eqno">(5)<a class="headerlink" href="#equation-c67afcef-bcb3-4f35-a341-b7bd7748ce63" title="Permalink to this equation">#</a></span>\[\begin{align}
 \left ( 2 R_1 + R \right ) V_B - R V_C &amp;= R_1 E\\
 \left ( 2 R_1 + R \right ) V_C - R V_B &amp;= 2 R_1 E
 \end{align}\]</div>
 <p>soit en résolvant le système (<strong>s’entraîner impérativement à le faire</strong>):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6b2b7e10-379a-4398-8a6b-5689102525ee">
-<span class="eqno">(6)<a class="headerlink" href="#equation-6b2b7e10-379a-4398-8a6b-5689102525ee" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-783d4a3a-7dfb-4b92-91b2-ea3cab01e6df">
+<span class="eqno">(6)<a class="headerlink" href="#equation-783d4a3a-7dfb-4b92-91b2-ea3cab01e6df" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_B &amp;= \frac{\left (2R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}\\
 V_C &amp;= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 \end{align}\]</div>
@@ -761,8 +957,8 @@ V_C &amp;= \frac{\left (4R_1^2 + 3 R_1 R \right ) E}{4 R_1^2 + 4 R_1 R}
 <img alt="../_images/elec_circuit_etude_2ter.png" src="../_images/elec_circuit_etude_2ter.png" />
 </div>
 <p>On a théoriquement 10 inconnues, mais on peut remarquer que chaque intensité est reliée à une tension par une relation <span class="math notranslate nohighlight">\(i_i = U_i / R\)</span> (ou <span class="math notranslate nohighlight">\(R_1\)</span>). Il reste donc 5 inconnues les 5 tensions. Il faut donc 5 équations : 3 lois des mailles et 2 lois de noeuds. Il vient (s’entraîner repérer de quel/le maille/noeud il est question et établir la loi correspondante):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c11bc465-ec66-4aa9-b8d1-86b8ac8f6de8">
-<span class="eqno">(7)<a class="headerlink" href="#equation-c11bc465-ec66-4aa9-b8d1-86b8ac8f6de8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-19b1a594-766e-4b68-bfd2-14da7ec45cb1">
+<span class="eqno">(7)<a class="headerlink" href="#equation-19b1a594-766e-4b68-bfd2-14da7ec45cb1" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{cases}
 i_1 + i_2 - i_3 &amp;= 0\\
 i_3 + i_4 + i_5 &amp;= 0\\
@@ -772,8 +968,8 @@ E - U_1 + U_2 &amp;= 0\\
 \end{cases}
 \end{equation}\]</div>
 <p>soit en éliminant les intensités:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5640a1ee-dacf-4e28-9b70-c1962d884d08">
-<span class="eqno">(8)<a class="headerlink" href="#equation-5640a1ee-dacf-4e28-9b70-c1962d884d08" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4bceabf8-7f39-4563-a5af-040bbdf20c4a">
+<span class="eqno">(8)<a class="headerlink" href="#equation-4bceabf8-7f39-4563-a5af-040bbdf20c4a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{cases}
 \frac{U_1}{R} + \frac{U_2}{R} - \frac{U_{BC}}{R_1} &amp;= 0\\
 \frac{U_{BC}}{R_1} + \frac{U_4}{R} + \frac{U_5}{R} &amp;= 0\\
@@ -790,14 +986,14 @@ E - U_1 + U_2 &amp;= 0\\
 </div>
 </div>
 <div class="section" id="reperer-et-utiliser-un-pont-diviseur-de-tension">
-<span id="pont-div"></span><h3>Repérer et utiliser un pont diviseur de tension<a class="headerlink" href="#reperer-et-utiliser-un-pont-diviseur-de-tension" title="Permalink to this headline">¶</a></h3>
+<span id="pont-div"></span><h3>Repérer et utiliser un pont diviseur de tension<a class="headerlink" href="#reperer-et-utiliser-un-pont-diviseur-de-tension" title="Permalink to this headline">#</a></h3>
 <p>Le but de cet exercice est d’apprendre à utiliser un pont diviseur de tension. La méthode peut s’appliquer aussi au cas d’un pont diviseur de courant.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice (très classique)</p>
 <p>Déterminer la condition reliant les résistance pour que la tension <span class="math notranslate nohighlight">\(U_{AB}\)</span> soit nulle (on dit que le pont est alors équilibré).</p>
 <div class="figure align-center" id="fig-pont-de-wheatstone133">
 <img alt="../_images/elec_pont_wheatstone.jpg" src="../_images/elec_pont_wheatstone.jpg" />
-<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Pont de Wheatstone</span><a class="headerlink" href="#fig-pont-de-wheatstone133" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text">Pont de Wheatstone</span><a class="headerlink" href="#fig-pont-de-wheatstone133" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="topic">
@@ -837,9 +1033,9 @@ U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
 </div>
 </div>
 <div class="section" id="dipoles-equivalents">
-<h2>Dipôles équivalents<a class="headerlink" href="#dipoles-equivalents" title="Permalink to this headline">¶</a></h2>
+<span id="dip-equiv"></span><h2>Dipôles équivalents<a class="headerlink" href="#dipoles-equivalents" title="Permalink to this headline">#</a></h2>
 <div class="section" id="dipole-equivalent-par-les-equations-d-evolution">
-<h3>Dipôle équivalent par les équations d’évolution<a class="headerlink" href="#dipole-equivalent-par-les-equations-d-evolution" title="Permalink to this headline">¶</a></h3>
+<h3>Dipôle équivalent par les équations d’évolution<a class="headerlink" href="#dipole-equivalent-par-les-equations-d-evolution" title="Permalink to this headline">#</a></h3>
 <p>On se propose ici de voir comment déterminer un dipôle équivalent plus simple (une résistance ) à partir d’un maillage. On verra aussi l’utilisation des symétries.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -860,7 +1056,7 @@ U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
 </div>
 </div>
 <div class="section" id="dipole-equivalent-par-manipulation-des-schemas">
-<h3>Dipôle équivalent par manipulation des schémas<a class="headerlink" href="#dipole-equivalent-par-manipulation-des-schemas" title="Permalink to this headline">¶</a></h3>
+<h3>Dipôle équivalent par manipulation des schémas<a class="headerlink" href="#dipole-equivalent-par-manipulation-des-schemas" title="Permalink to this headline">#</a></h3>
 <p>On se propose ici de voir comment déterminer un dipôle équivalent plus simple (une résistance ) à partir d’un maillage. Nous utilisons cette fois des transformations successives des circuits basés sur les résistances équivalentes établies précédemment.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -882,7 +1078,7 @@ U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
 </div>
 </div>
 <div class="section" id="determiner-un-modele-de-thevenin-equivalent">
-<h3>Déterminer un modèle de Thévenin équivalent<a class="headerlink" href="#determiner-un-modele-de-thevenin-equivalent" title="Permalink to this headline">¶</a></h3>
+<h3>Déterminer un modèle de Thévenin équivalent<a class="headerlink" href="#determiner-un-modele-de-thevenin-equivalent" title="Permalink to this headline">#</a></h3>
 <p>Cet exercice propose d’apprendre à montrer qu’un dispositif peut être remplacé par un modèle de Thévenin en déterminant ses caractéristiques. Nous étudierons deux méthodes: l’établissement de l’équation d’évolution comme utilisé précédemment pour la détermination d’un dipôle équivalent et le calcul de deux points particuliers.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -905,29 +1101,29 @@ U_{AB} = \frac{R_4 R_2 - R_3 R_1}{(R_3+R_4)(R_1+R_2)}
 <div class="figure align-center" id="fig-127">
 <img alt="../_images/elec_th_eq_exc_2.png" src="../_images/elec_th_eq_exc_2.png" />
 </div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>Orientation des grandeurs</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Orientation des grandeurs</strong>  <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="card-text">On a orienté i et u en convention générateur de manière à pouvoir identifier la relation u(i) à la relation attendue du modèle de Thévenin en convention <strong>générateur</strong> <span class="math notranslate nohighlight">\(u = E_{Th} - R_{Th} i\)</span></p></li>
-<li><p class="card-text">On a orienté <span class="math notranslate nohighlight">\(i_2\)</span> de cette façon pour que la résistance soit en convention récepteur. Le but est de pouvoir utiliser directement la loi d’Ohm (écrite en convention récepteur) sans se tromper dans les signes. Encore une fois, le choix de la convention étant arbitraire, on aurait pu choisir une convention générateur. Il est judicieux de choisir une convention récepteur, non pas pour des raisons physiques, mais pour ne pas se tromper dans les formules…</p></li>
+<li><p class="sd-card-text">On a orienté i et u en convention générateur de manière à pouvoir identifier la relation u(i) à la relation attendue du modèle de Thévenin en convention <strong>générateur</strong> <span class="math notranslate nohighlight">\(u = E_{Th} - R_{Th} i\)</span></p></li>
+<li><p class="sd-card-text">On a orienté <span class="math notranslate nohighlight">\(i_2\)</span> de cette façon pour que la résistance soit en convention récepteur. Le but est de pouvoir utiliser directement la loi d’Ohm (écrite en convention récepteur) sans se tromper dans les signes. Encore une fois, le choix de la convention étant arbitraire, on aurait pu choisir une convention générateur. Il est judicieux de choisir une convention récepteur, non pas pour des raisons physiques, mais pour ne pas se tromper dans les formules…</p></li>
 </ul>
 </div>
 </details><blockquote>
 <div><p>On réalise la mise en équation (nous utilisons ici les lois des mailles et des noeuds mais il est vivement conseillé de s’entraîner à cet exercice en appliquant la loi des noeuds en terme de potentiel):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-872b9242-a194-4c7a-84cd-f54fd52c8fbb">
-<span class="eqno">(9)<a class="headerlink" href="#equation-872b9242-a194-4c7a-84cd-f54fd52c8fbb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9a717a18-1773-4820-bcea-b21234ffe9a4">
+<span class="eqno">(9)<a class="headerlink" href="#equation-9a717a18-1773-4820-bcea-b21234ffe9a4" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_1 + i_0 &amp;= i + i_2\\
 E - u_1 - u &amp;= 0
 \end{align}\]</div>
 <p>Avec les deux lois d’Ohm <span class="math notranslate nohighlight">\(u_1 = R i_1\)</span> et <span class="math notranslate nohighlight">\(u = R i_2\)</span> on dispose de 4 équations donc d’autant d’équations que inconnues.</p>
 <p>La <strong>règle principale est d’éliminer les grandeurs qui ne nous intéresse pas ET DE GARDER JUSQU’AU BOUT LA GRANDEUR QU’ON VEUT CALCULER.</strong>. Ici, on va éliminer <span class="math notranslate nohighlight">\(u_1\)</span> et <span class="math notranslate nohighlight">\(i_2\)</span> en utilisant les lois d’Ohm. Il vient :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a975e8df-07e1-4226-8860-85c245fc5d10">
-<span class="eqno">(10)<a class="headerlink" href="#equation-a975e8df-07e1-4226-8860-85c245fc5d10" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ef35b105-fee3-4bc6-a116-b1e42180fe9e">
+<span class="eqno">(10)<a class="headerlink" href="#equation-ef35b105-fee3-4bc6-a116-b1e42180fe9e" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_1 + i_0 &amp;= i + \frac{u}{R}\\
 E - R i_1 - u &amp;= 0
 \end{align}\]</div>
@@ -939,8 +1135,8 @@ u = \frac{E + R i_0 - R i}{2}
 \]</div>
 <blockquote>
 <div><p>Par identification, on trouve:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a0b249be-10bd-481f-bd15-a62db16491b3">
-<span class="eqno">(11)<a class="headerlink" href="#equation-a0b249be-10bd-481f-bd15-a62db16491b3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4fefdc04-ef23-4456-894d-f2a14eb0fb5a">
+<span class="eqno">(11)<a class="headerlink" href="#equation-4fefdc04-ef23-4456-894d-f2a14eb0fb5a" title="Permalink to this equation">#</a></span>\[\begin{align}
 E_{Th} &amp;= \frac{E + R i_0}{2}\\
 R_{Th} &amp;= \frac{R}{2}
 \end{align}\]</div>
@@ -972,9 +1168,9 @@ La loi des noeuds s’écrit <span class="math notranslate nohighlight">\(i_1 + 
 </div>
 </div>
 <div class="section" id="etudes-energetiques">
-<h2>Etudes énergétiques<a class="headerlink" href="#etudes-energetiques" title="Permalink to this headline">¶</a></h2>
+<h2>Etudes énergétiques<a class="headerlink" href="#etudes-energetiques" title="Permalink to this headline">#</a></h2>
 <div class="section" id="determiner-les-comportements-recepteurs-generateurs-graphiquement">
-<h3>Déterminer les comportements récepteurs/générateurs graphiquement.<a class="headerlink" href="#determiner-les-comportements-recepteurs-generateurs-graphiquement" title="Permalink to this headline">¶</a></h3>
+<h3>Déterminer les comportements récepteurs/générateurs graphiquement.<a class="headerlink" href="#determiner-les-comportements-recepteurs-generateurs-graphiquement" title="Permalink to this headline">#</a></h3>
 <p>Il s’agit d’apprendre le principe de base de l’étude des comportements générateurs et récepteurs d’un dipôle et d’observer aussi que ces comportements peuvent changer en régime variable.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -994,23 +1190,23 @@ La loi des noeuds s’écrit <span class="math notranslate nohighlight">\(i_1 + 
 <div class="figure align-center" id="fig-106">
 <img alt="../_images/elec_comp_rg_graph_2.jpg" src="../_images/elec_comp_rg_graph_2.jpg" />
 </div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Remarque<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Remarque<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="card-text">Le dipôle ne se comporte toujours comme un récepteur ou un générateur, il peut passer d’un comportement à un autre.</p></li>
-<li><p class="card-text">Le signe des tensions et intensités ne détermine pas le comportement physique, c’est bien <strong>le signe du produit</strong> qui est important.</p></li>
-<li><p class="card-text">La durée des temps générateurs et récepteurs ne permet pas de dire seule si le dipôle fournit globalement (sur le temps long de toute l’expérience) de l’énergie ou s’il reçoit globalement de l’énergie. Il faudrait l’expression mathématique de u et i (ici vraisemblablement des sinusoïdes). Nous allons voir comme procéder pour déterminer des comportements globaux qui conduisent à une étude en énergie et non en puissance. Ici, on montrerait que le dipôle se comporte globalement comme un récepteur. Mais cela ne rend pas faux, le choix de la convention générateur.</p></li>
+<li><p class="sd-card-text">Le dipôle ne se comporte toujours comme un récepteur ou un générateur, il peut passer d’un comportement à un autre.</p></li>
+<li><p class="sd-card-text">Le signe des tensions et intensités ne détermine pas le comportement physique, c’est bien <strong>le signe du produit</strong> qui est important.</p></li>
+<li><p class="sd-card-text">La durée des temps générateurs et récepteurs ne permet pas de dire seule si le dipôle fournit globalement (sur le temps long de toute l’expérience) de l’énergie ou s’il reçoit globalement de l’énergie. Il faudrait l’expression mathématique de u et i (ici vraisemblablement des sinusoïdes). Nous allons voir comme procéder pour déterminer des comportements globaux qui conduisent à une étude en énergie et non en puissance. Ici, on montrerait que le dipôle se comporte globalement comme un récepteur. Mais cela ne rend pas faux, le choix de la convention générateur.</p></li>
 </ul>
 </div>
 </details></div>
 </div>
 <div class="section" id="determiner-analytiquement-les-comportements-generateurs-recepteurs">
-<h3>Déterminer analytiquement les comportements générateurs/récepteurs<a class="headerlink" href="#determiner-analytiquement-les-comportements-generateurs-recepteurs" title="Permalink to this headline">¶</a></h3>
+<h3>Déterminer analytiquement les comportements générateurs/récepteurs<a class="headerlink" href="#determiner-analytiquement-les-comportements-generateurs-recepteurs" title="Permalink to this headline">#</a></h3>
 <p>Il s’agit ici de voir comment déterminer une puissance instantanée puis l’énergie échangée durant une période donnée. Les équations données ici correspondent au dipôles étudiées précédemment.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -1050,19 +1246,19 @@ E = \frac{i_m u_m}{2} \cos(\frac{5 \pi}{6}) T &lt; 0
 \end{align*}\]</div>
 <p>Le dipôle fournit globalement une énergie négative, c’est-à-dire qu’il reçoit une énergie <span class="math notranslate nohighlight">\(\vert E \vert\)</span>: il est donc globalement récepteur.</p>
 </div></blockquote>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Remarque<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Attention, il faut se rappeler qu’il peut y avoir des temps où le dipôle possède un comportement générateur. Mais globalement, il reçoit de l’énergie plus qu’il n’en fournit.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Remarque<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Attention, il faut se rappeler qu’il peut y avoir des temps où le dipôle possède un comportement générateur. Mais globalement, il reçoit de l’énergie plus qu’il n’en fournit.</p>
 </div>
 </details></div>
 </div>
 <div class="section" id="determiner-les-comportements-de-dipoles-dans-un-circuit">
-<h3>Déterminer les comportements de dipôles dans un circuit<a class="headerlink" href="#determiner-les-comportements-de-dipoles-dans-un-circuit" title="Permalink to this headline">¶</a></h3>
+<h3>Déterminer les comportements de dipôles dans un circuit<a class="headerlink" href="#determiner-les-comportements-de-dipoles-dans-un-circuit" title="Permalink to this headline">#</a></h3>
 <p>On travaille ici en régime indépendant du temps de manière à pouvoir utiliser simplement les lois de Kirchhoff. On considère le circuit ci-après et on donne les caractéristiques suivantes :</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(D_2\)</span> et <span class="math notranslate nohighlight">\(D_4\)</span> sont des accumulateurs : leur tension est imposées de l’extérieur. La tension <span class="math notranslate nohighlight">\(U_1\)</span> aux bornes de <span class="math notranslate nohighlight">\(D_2\)</span> est connue et positive. La tension <span class="math notranslate nohighlight">\(U_2\)</span> est réglable (mais constante durant la manipulation) et de signe quelconque.</p></li>
@@ -1109,8 +1305,8 @@ i_3 = ?
 <p><em>Remarque : il arrive que certaines intensités ne soient pas exprimables en fonction des potentiels.</em></p>
 <p>*De plus  : <span class="math notranslate nohighlight">\(V_B = U_2 + V_M = U_2\)</span> et <span class="math notranslate nohighlight">\(V_A = U_1 + V_M = U_1\)</span>
 Il vient :</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cc27ece5-e5aa-411d-bade-7a06e2235e8e">
-<span class="eqno">(12)<a class="headerlink" href="#equation-cc27ece5-e5aa-411d-bade-7a06e2235e8e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-af29d014-fc74-4418-b356-5015c77ac8f4">
+<span class="eqno">(12)<a class="headerlink" href="#equation-af29d014-fc74-4418-b356-5015c77ac8f4" title="Permalink to this equation">#</a></span>\[\begin{equation}
  \frac{U_1- U_2}{R} =\frac{U_2}{R} + i_3
 \end{equation}\]</div>
 <p><em>Il convient de se demander que doit-on calculer. Cette étape est fondamentale car son absence est souvent cause de beaucoup d’erreurs. Elle peut être faite avant ou après le paramétrage et souvent avant même la mise en équation. (On la fait ici pour profiter des grandeurs nommées).</em></p>
@@ -1168,34 +1364,48 @@ Les puissances s’expriment comme : <span class="math notranslate nohighlight">
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="el_bases_ex.html" title="previous page">Maitriser les méthodes</a>
-    <a class='right-next' id="next-link" href="el_bases_meth_r.html" title="next page">Activité : Résistance d’entrée et résistance de sortie</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="el_bases_ex.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Maitriser les méthodes</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="el_bases_meth_r.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Activité : Résistance d’entrée et résistance de sortie</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By C. Lacpatia<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By C. Lacpatia<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

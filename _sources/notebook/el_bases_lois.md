@@ -15,6 +15,7 @@ kernelspec:
 ---
 # Étudier un circuit : les bases
 
+(kirchoff)=
 ## Lois de Kirchhoff
 
 ````{important} 
@@ -78,6 +79,7 @@ D'ailleurs, on rappelle que les intensités et les tensions sont des grandeurs _
 ```
 ````
 
+(puissance)=
 ### Puissance échangée entre un dipôle et le reste du circuit
 
 ````{sidebar} __Caractère algébrique de la puissance échangée__

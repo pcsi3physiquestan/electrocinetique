@@ -240,6 +240,7 @@ $$
 $$
 ````
 
+(dip_equiv)=
 ## Dipôles équivalents
 ### Dipôle équivalent par les équations d'évolution
 On se propose ici de voir comment déterminer un dipôle équivalent plus simple (une résistance ) à partir d'un maillage. On verra aussi l'utilisation des symétries.

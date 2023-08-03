@@ -70,6 +70,11 @@ On déterminera toutes les intensités et les tensions.
 >1. $i_L = - i_C = \frac{E}{R}$ et $i_E = 0$. $u_C = 0$ et $u_L = u_R = E$ (à orienter correctement).
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Conditions initiales](ci)._
+* _$\Longrightarrow$ [Régime indépendant du temps](rpit)._
+
+
 ## Circuits d'ordre 1 et 2
 ````{admonition} Circuit RL 
 :class: attention

@@ -26,6 +26,11 @@ On considère un dipôle RLC série alimenté par une tension sinusoïdale. On s
 1. On définit la bande coupée comme la bande de fréquence pour laquelle l'amplitude réelle $u_m(\omega)$ soit telle que $u_m(\omega) \leq \frac{u_{\max}}{\sqrt{2}}$. Préciser sa largeur.
 ````
 
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Etude d'un circuit en RSF_
+* _$\Longrightarrow$ Résonance et bande passante_
+
 ````{topic}  Eléments de réponse (sans justification)
 $\underline{u} = \frac{1-x^2}{1 - x^2 + j \frac{x}{Q}}E$ avec $x = \frac{\omega}{\omega_0}$, $\omega_0 = \sqrt{\frac{1}{LC}}$ et $Q = \frac{1}{R}\sqrt{\frac{L}{C}}$.
 
@@ -42,6 +47,11 @@ On considère un circuit constitué d'une résistance R en série avec un conden
 
 Déterminer la tension aux bornes du condensateur en régime forcé. Simplifier l'expression par approximation en utilisant les ordres de grandeurs des pulsations mises en jeu.
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Etude d'un circuit en RSF_
+* _$\Longrightarrow$ Réponse d'un filtre linéaire_
+* _$\Longrightarrow$ Manipulation des complexes_
 
 ````{topic}  Eléments de réponse (sans justification)
 * $u(t) = \frac{e_m}{2}\left ( \frac{1}{\sqrt{1 + 100.5^2}} \cos (2.01 \omega_2 t - arctan(100.5)) -  \frac{1}{\sqrt{1 + 0.5^2}} \cos (0.01 \omega_2 t - arctan(0.5))\right )$
@@ -62,6 +72,10 @@ On supposera de plus que les composants sont égaux deux à deux. Déterminer en
 :align: center
 ```
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Etude d'un circuit en RSF_
+* _$\Longrightarrow$ Manipulation des complexes_
 
 ````{topic}  Eléments de réponse (sans justification)
 $\underline{i_1} = \frac{\left (\frac{1}{jC \omega} + R + jL\omega \right) E}{{\left (\frac{1}{jC \omega} + R + jL\omega \right)}^2 - {(jM\omega)}^2}$
@@ -86,6 +100,11 @@ On considère le circuit ci-dessous. On veut que le dipôle composé des composa
 1. Déterminer dans les conditions précédentes la puissance instantanée puis la puissance moyenne reçue par le dipôle équivalent.
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Etude d'un circuit en RSF_
+* _$\Longrightarrow$ Manipulation des complexes_
+* _$\Longrightarrow$ Impédances usuelles_
+
 ````{topic} Eléments de réponse (sans justification)
 * Circuit 1  si $R_u >  R_g$. Il faut que $L = \frac{R_u}{\omega}\sqrt{\frac{R_g}{R_u - R_g}}$ et $C = \frac{1}{\omega R_g}\sqrt{\frac{R_g}{R_u - R_g}}$
 * Circuit 2  si $R_u <  R_g$. Il faut que $L = \frac{R_g}{\omega}\sqrt{\frac{R_u}{R_g - R_u}}$ et $C = \frac{1}{\omega R_u}\sqrt{\frac{R_u}{R_g - R_u}}$
@@ -108,6 +127,11 @@ On considère le circuit ci-dessous. L'amplificateur linéaire intégré est sup
 1. Déterminer par une étude rapide les comportements haute et basse fréquence du système pour la tension s.
 1. Déterminer la tension s en régime sinusoïdal forcé et faire son étude fréquentielle (amplitude réelle et déphasage avec l'entrée). On pensera à vérifier la cohérence avec l'étude rapide précédente et à mettre la représentation complexe de s sous forme canonique.
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Etude d'un circuit en RSF_
+* _$\Longrightarrow$ Manipulation des complexes_
+* _$\Longrightarrow$ Amplificateur linéaire intégré_
 
 ````{topic} Eléments de réponse (sans justification)
 * s et nulle à haute et basse fréquence.

@@ -46,6 +46,10 @@ On considère le circuit suivant où R est une résistance variable et les fem $
 Valeur critique de R: $R_{eq} = \frac{R_1 E_1}{E_1 - E_2}$. Pour $R_{eq} < R$, $E_2$ a un comportement récepteur et pour $R_{eq} > R$, $E_2$ a un comportement générateur. $E_1$ a toujours un comportement générateur.
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Ponts diviseurs](pont_div)._
+* _$\Longrightarrow$ [Lois de Kirchoff](kirchoff)._
+* _$\Longrightarrow$ [Puissance électrique](puissance)._
 
 ## Applications des lois de Kirchoff
 
@@ -67,6 +71,9 @@ On considère le circuit ci-dessous. Déterminer l'intensité i qui traverse la 
 $i = -\frac{R_1 E_2 + R_1 R_0 I_0 + (R_0 + R_2)E_1}{(R_0 + R_2) (R_1 + R) + R R_1}$
 
 ````
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Loi des noeuds en terme de potentiel](etude_lois)._
+* _$\Longrightarrow$ [Lois de Kirchoff](kirchoff)._
 
 ````{admonition} Ohmètre à tarage shunt 
 :class: attention
@@ -92,6 +99,10 @@ $R = R_2 + \frac{R_1 r}{R_1 + r}$
 
 $X = R \left(\frac{i_0}{i} - 1\right)$
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Ponts diviseurs](pont_div)._
+* _$\Longrightarrow$ [Lois de Kirchoff](kirchoff)._
 
 ## Dipôles équivalents
 
@@ -134,6 +145,10 @@ $R_{B_1 B_2} = \frac{3}{2}R$
 $R_{O B_2} = \frac{7}{8}R$
 
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Lois de Kirchoff](kirchoff)._
+* _$\Longrightarrow$ [Dipôles équivalents](dip_equiv)._
 
 ## Résistances d'entrée et de sortie
 

@@ -16,6 +16,7 @@ kernelspec:
 
 # Dipôles linéaires passifs
 
+(resistance)=
 ## Résistance ou conducteur ohmique
 
 ````{topic} Description physique  
@@ -48,6 +49,7 @@ __Utilisation et problèmes__
 * A l'inverse, dans de nombreux dispositifs électroniques, les résistances sont utilisées pour contrôler les caractéristiques du circuit et l'effet Joule est une effet supplémentaire non voulu qui tend à chauffer les composants au risque de les dégrader.
 ````
 
+(condensateur)=
 ## Condensateur
 
 ````{topic} Description physique  
@@ -115,6 +117,8 @@ p(t) = u(t) i(t) = C u(t) \frac{du}{dt}(t) = \frac{d}{dt}\left ( \frac{1}{2} C u
 $$
 (on a cherche une primitive à la fonction u(t) u'(t)).
 ````
+
+(bobine)=
 ## Bobine idéale et inductance
 
 ````{topic} Description physique

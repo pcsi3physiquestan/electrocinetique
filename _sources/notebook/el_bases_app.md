@@ -25,6 +25,9 @@ Cet exercice d'application directe est à faire à la suite du cours pour vérif
 On appelle résistance 1/4W, une résistance pouvant dissiper au maximum une puissance P=0.25W. Déterminer, en fonction de R et P la tension maximale qu'on peut mettre à ses bornes et estimer la gamme de valeur de tension pour des résistances usuelles.
 
 ````
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Puissance électrique](puissance)._
+
 
 ## Etude d'une source réelle
 
@@ -40,6 +43,12 @@ On appelle résistance 1/4W, une résistance pouvant dissiper au maximum une pui
 ```
 
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Puissance électrique](puissance)._
+* _$\Longrightarrow$ [Modèle de Thévenin](thevenin)._
+
+
 
 ## Résistances équivalentes
 
@@ -77,6 +86,9 @@ $R_e = \frac{3}{2} R$
 1. $R'$
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Association de dipoles](assoc_r)._
+
 ## Mise en équation
 
 ````{admonition} Exercice 
@@ -101,3 +113,5 @@ Exprimer le rendement $\eta$ du diviseur de tension représenté sur le circuit 
 $\eta = R \frac{{\left(\frac{r_1}{r_1 + R}\right)}^2}{\frac{r_1 R}{r_1 + R} + r_2}$
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ [Ponts diviseurs](pont_div)._

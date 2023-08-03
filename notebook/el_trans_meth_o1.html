@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exemple : Etude d’un système d’ordre 1 &#8212; Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,39 +19,38 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_trans_meth_o1.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -58,10 +58,27 @@
     <link rel="next" title="Exemple : Etude d’un système d’ordre 2" href="el_trans_meth_o2.html" />
     <link rel="prev" title="Maitriser les méthodes" href="el_trans_ex.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -70,10 +87,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">Electrocinétique</h1>
@@ -82,16 +101,17 @@
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../electrocinetique.html">
-   Electrocinétique
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../electrocinetique.html">
+                    Electrocinétique
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="el_bases.html">
    Bases de l’électrocinétique
@@ -177,6 +197,11 @@
      <li class="toctree-l3">
       <a class="reference internal" href="el_bases_td.html">
        Entrainement : Bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_num.html">
+       Capacités numériques
       </a>
      </li>
     </ul>
@@ -453,94 +478,181 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/notebook/el_trans_meth_o1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebook/el_trans_meth_o1.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_trans_meth_o1.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_trans_meth_o1.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebook/el_trans_meth_o1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/notebook/el_trans_meth_o1.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#etude-energetique">
    Etude énergétique
@@ -553,17 +665,45 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Exemple : Etude d’un système d’ordre 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-energetique">
+   Etude énergétique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#application-a-la-reponse-indicielle-d-un-circuit-rc">
+   Application à la réponse indicielle d’un circuit RC
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="exemple-etude-d-un-systeme-d-ordre-1">
-<span id="ex-o1"></span><h1>Exemple : Etude d’un système d’ordre 1<a class="headerlink" href="#exemple-etude-d-un-systeme-d-ordre-1" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="exemple-etude-d-un-systeme-d-ordre-1">
+<span id="ex-o1"></span><h1>Exemple : Etude d’un système d’ordre 1<a class="headerlink" href="#exemple-etude-d-un-systeme-d-ordre-1" title="Permalink to this headline">#</a></h1>
 <p>On se propose de retrouver les caractéristiques précédentes sur l’exemple suivant:</p>
 <div class="figure align-center" id="fig-167">
 <img alt="../_images/elec_rc_ordre1.png" src="../_images/elec_rc_ordre1.png" />
@@ -578,8 +718,8 @@
 <blockquote>
 <div><p>La loi des mailles s’écrit: <span class="math notranslate nohighlight">\(u_R + u_C = 0 = R i + u_C\)</span>.</p>
 <p>En utilisant l’équation d’évolution du condensateur, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab9d62af-afee-4ebd-b285-2cb53beb380f">
-<span class="eqno">(14)<a class="headerlink" href="#equation-ab9d62af-afee-4ebd-b285-2cb53beb380f" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-dbdd4781-a33f-47eb-8323-8fe24bb828ee">
+<span class="eqno">(14)<a class="headerlink" href="#equation-dbdd4781-a33f-47eb-8323-8fe24bb828ee" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = 0
 \end{equation}\]</div>
 <p>On a donc <span class="math notranslate nohighlight">\(\tau = RC\)</span></p>
@@ -601,8 +741,8 @@
 <p>Le condensateur étant assmilable à un interrupteur ouvert, l’intensite i est nulle donc la tension aux bornes de la résistance aussi. Il vient <span class="math notranslate nohighlight">\(u_C(t=0^-) = E\)</span></p>
 <p>Par continuité <span class="math notranslate nohighlight">\(u_C(t=0^+) = E\)</span>.</p>
 <p>La condition initiale permet d’écrire A = E soit:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-38f553bb-9159-4f89-b849-160b2db9f28a">
-<span class="eqno">(15)<a class="headerlink" href="#equation-38f553bb-9159-4f89-b849-160b2db9f28a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8f07c39c-547a-4de0-8007-92b6eadea86a">
+<span class="eqno">(15)<a class="headerlink" href="#equation-8f07c39c-547a-4de0-8007-92b6eadea86a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u_C(t) = E \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
@@ -611,8 +751,8 @@ u_C(t) = E \exp^{-t/\tau}
 <p class="topic-title">Correction - i(t)</p>
 <blockquote>
 <div><p>Pas besoin de tout réétudier. Il suffit d’utiliser la relation <span class="math notranslate nohighlight">\(i = C \frac{\rm{d}u_C}{\rm{dt}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-93dffa61-d874-441a-91d7-f1f7097d96a7">
-<span class="eqno">(16)<a class="headerlink" href="#equation-93dffa61-d874-441a-91d7-f1f7097d96a7" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-47b3c7c0-3407-44b4-80c9-b39f6a5a284a">
+<span class="eqno">(16)<a class="headerlink" href="#equation-47b3c7c0-3407-44b4-80c9-b39f6a5a284a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 i(t) = -\frac{E}{R} \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
@@ -631,7 +771,7 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 </div></blockquote>
 </div>
 <div class="section" id="etude-energetique">
-<h2>Etude énergétique<a class="headerlink" href="#etude-energetique" title="Permalink to this headline">¶</a></h2>
+<h2>Etude énergétique<a class="headerlink" href="#etude-energetique" title="Permalink to this headline">#</a></h2>
 <div class="important admonition">
 <p class="admonition-title">Bilan de puissance et d’énergie</p>
 <ol class="simple">
@@ -640,7 +780,7 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 </ol>
 </div>
 <div class="topic">
-<p class="topic-title"><strong>Bilan de puissance</strong></p>
+<p class="topic-title"><strong>Bilan de puissance</strong>  </p>
 <p><em>Faire un bilan de puisance revient à trouver une relations entre les différentes puissance mise en jeu à un instant. Il suffit en général de partir d’une des équations (loi des noeuds ou des mailles).</em></p>
 <blockquote>
 <div><ul class="simple">
@@ -662,16 +802,16 @@ i(t) = -\frac{E}{R} \exp^{-t/\tau}
 On peut calculer l’énergie fournie par le condensateur de deux manières: en intégrant la puissance qu’il fournit ou en utilisant la variation d’énergie stockée.</p></li>
 </ul>
 <p>S’il faut savoir faire les deux dans un cas simple comme un circuit d’ordre 1, il vaut mieux privilégier l’utilisation de l’énergie stockée si on a le choix. Ici, l’énergie fournie par le condensateur est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-70eceec4-bde7-4ad7-aa6a-b9dc1aa72cb0">
-<span class="eqno">(17)<a class="headerlink" href="#equation-70eceec4-bde7-4ad7-aa6a-b9dc1aa72cb0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-84d11724-139c-4161-a303-25a050009fd0">
+<span class="eqno">(17)<a class="headerlink" href="#equation-84d11724-139c-4161-a303-25a050009fd0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta E_C = E_L(0) - E_L(t=+\infty) = \frac{1}{2}C u_C(t=0)^2 - \frac{1}{2}C u_C(t=+\infty)^2 = \frac{C E^2}{2}
 \end{equation}\]</div>
 <ul class="simple">
 <li><p><strong>Energie dissipée par effet Joule dans R</strong><br />
 Pour la résistance, on n’a pas le choix, l’énergie dissipée ne peut se calculer qu’en intégrant la puissance reçue soit:</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-ac6474af-3783-4425-a9a0-b91a52ee61f0">
-<span class="eqno">(18)<a class="headerlink" href="#equation-ac6474af-3783-4425-a9a0-b91a52ee61f0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ea1d3c3f-4548-4e81-929f-d78c170b4cfa">
+<span class="eqno">(18)<a class="headerlink" href="#equation-ea1d3c3f-4548-4e81-929f-d78c170b4cfa" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E_J = \int_{t=0}^{t=+\infty} \frac{u_R^2(t)}{R} dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
 \end{equation}\]</div>
 <ul class="simple">
@@ -682,7 +822,7 @@ On observe que l’énergie fournie par le condensateur est entièrement dissip�
 </div>
 </div>
 <div class="section" id="application-a-la-reponse-indicielle-d-un-circuit-rc">
-<h2>Application à la réponse indicielle d’un circuit RC<a class="headerlink" href="#application-a-la-reponse-indicielle-d-un-circuit-rc" title="Permalink to this headline">¶</a></h2>
+<h2>Application à la réponse indicielle d’un circuit RC<a class="headerlink" href="#application-a-la-reponse-indicielle-d-un-circuit-rc" title="Permalink to this headline">#</a></h2>
 <p>Nous allons étudier la réponse indicielle qui permettra de rappeler la méthode pour la recherche de la solution particulière. Il est conseillé de s’entraîner à faire l’exercice avant de regarder les réponses.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -702,8 +842,8 @@ On peut considérer le système comme stable et le régime forcé sera indépend
 <p>Le condensateur se comporte alors comme un interrupteur ouvert et i=0. Il vient <span class="math notranslate nohighlight">\(u_C = E\)</span></p>
 <p><strong>Q2. Mise en équation</strong><br />
 Cette fois la loi des mailles s’écrit: <span class="math notranslate nohighlight">\(E - R i(t) - u_C(t) = 0\)</span>. On utilise à nouveau la relation tension-intensité du condensateur, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba4cae2a-3b19-46cc-b008-4f575e2192df">
-<span class="eqno">(19)<a class="headerlink" href="#equation-ba4cae2a-3b19-46cc-b008-4f575e2192df" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-34ce336f-c6b8-4728-b4d3-bfebc1ddea88">
+<span class="eqno">(19)<a class="headerlink" href="#equation-34ce336f-c6b8-4728-b4d3-bfebc1ddea88" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\rm{d}u_C}{\rm{dt}}(t) + \frac{1}{RC} u_C(t) = \frac{E}{RC}
 \end{equation}\]</div>
 <p>On doit déterminer les conditions initiales. Dans le régime forcé indépendant du temps avant t=0, on cherche la grandeur continue, ici la tension aux bornes du condensateur. Le condensateur se comporte comme un interrupteur ouvert donc l’intensité est nulle et donc <span class="math notranslate nohighlight">\(u_C(t=0^-) = u_R(t=0^-) = 0\)</span></p>
@@ -712,19 +852,19 @@ Cette fois la loi des mailles s’écrit: <span class="math notranslate nohighli
 <p>On cherche une solution particulière constante <span class="math notranslate nohighlight">\(U_0\)</span>. En l’introduisant dans l’équation différentielle, il vient <span class="math notranslate nohighlight">\(0 + \frac{U_0}{RC} = \frac{E}{RC}\)</span> soit <span class="math notranslate nohighlight">\(U_0 = E\)</span></p>
 <p>La solution est donc: <span class="math notranslate nohighlight">\(A \exp^{-t/RC} + E\)</span></p>
 <p>On utilise la condition initiale qui donne A = -E donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0d05b791-d9e7-478c-94cb-f1917ee590cd">
-<span class="eqno">(20)<a class="headerlink" href="#equation-0d05b791-d9e7-478c-94cb-f1917ee590cd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e270dde2-daa9-48d9-93ba-411f79d12251">
+<span class="eqno">(20)<a class="headerlink" href="#equation-e270dde2-daa9-48d9-93ba-411f79d12251" title="Permalink to this equation">#</a></span>\[\begin{equation}
 u_C(t) = E (1 - \exp^{-t/\tau})
 \end{equation}\]</div>
 <p><strong>Q3. Intensité</strong><br />
 Il suffit de dériver et de multiplier par C:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b72f896-4988-4800-b1e1-ee2c026d3e44">
-<span class="eqno">(21)<a class="headerlink" href="#equation-1b72f896-4988-4800-b1e1-ee2c026d3e44" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d48d2297-3754-4992-b79a-57c049a4d866">
+<span class="eqno">(21)<a class="headerlink" href="#equation-d48d2297-3754-4992-b79a-57c049a4d866" title="Permalink to this equation">#</a></span>\[\begin{equation}
 i(t) = \frac{E}{R} \exp^{-t/\tau}
 \end{equation}\]</div>
 </div></blockquote>
 <div class="margin sidebar">
-<p class="sidebar-title"><strong>Charge et décharge du condensateur</strong></p>
+<p class="sidebar-title"><strong>Charge et décharge du condensateur</strong>  </p>
 <p>Dans un tel montage, le condensateur reçoit de l’énergie. On parle de <strong>charge</strong> du condensateur.</p>
 <p>Lors d’un nouveau basculement de l’interrupteur vers le régime libre, le condensateur va, comme on l’a vu, perdre son énergie: on parlera de <strong>décharge</strong> du condensateur.</p>
 </div>
@@ -734,18 +874,18 @@ Bilan de puissance: la loi des mailles <span class="math notranslate nohighlight
 <p>On observe que la puissance fournie par le générateur va en partie est stockée par le condensateur et en partie dissipée par la résistance.</p>
 <p>Bilan énergétique:</p>
 <p>On commence par l’énergie fournie par le générateur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d48057d9-7cb8-49aa-a0ce-67184c7735c8">
-<span class="eqno">(22)<a class="headerlink" href="#equation-d48057d9-7cb8-49aa-a0ce-67184c7735c8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fa666864-2aa3-4b1e-8e99-9e251d549b2a">
+<span class="eqno">(22)<a class="headerlink" href="#equation-fa666864-2aa3-4b1e-8e99-9e251d549b2a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E_E= \int_{t=0}^{t=+\infty} Ei(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{t}{RC}} dt = CE^2
 \end{equation}\]</div>
 <p>Ensuite l’énergie dissipée par la résistance:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e7fcc853-df9f-4bda-805a-e0f57b316e76">
-<span class="eqno">(23)<a class="headerlink" href="#equation-e7fcc853-df9f-4bda-805a-e0f57b316e76" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-80989a0c-ed21-4b2b-b876-ede17e3a369c">
+<span class="eqno">(23)<a class="headerlink" href="#equation-80989a0c-ed21-4b2b-b876-ede17e3a369c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E_J = \int_{t=0}^{t=+\infty} R i^2(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} \exp^{-\frac{2t}{RC}} dt = \frac{CE^2}{2}
 \end{equation}\]</div>
 <p>Enfin l’énergie stockée par le condensateur:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f2707a3-3879-4ecd-81dd-f830bba448fb">
-<span class="eqno">(24)<a class="headerlink" href="#equation-2f2707a3-3879-4ecd-81dd-f830bba448fb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ca11fcc7-b80f-42cd-8acf-04eaeafcc07c">
+<span class="eqno">(24)<a class="headerlink" href="#equation-ca11fcc7-b80f-42cd-8acf-04eaeafcc07c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta E_C = E_C(t=+\infty) - E_C(t=0) = \frac{1}{2}C u_C(t=\infty)^2 - \frac{1}{2}C u_C(t=0)^2 = \frac{C E^2}{2}
 \end{equation}\]</div>
 </div></blockquote>
@@ -775,34 +915,48 @@ E_J = \int_{t=0}^{t=+\infty} R i^2(t) dt = \int_{t=0}^{t=+\infty} \frac{E^2}{R} 
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="el_trans_ex.html" title="previous page">Maitriser les méthodes</a>
-    <a class='right-next' id="next-link" href="el_trans_meth_o2.html" title="next page">Exemple : Etude d’un système d’ordre 2</a>
-
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="el_trans_ex.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Maitriser les méthodes</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="el_trans_meth_o2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exemple : Etude d’un système d’ordre 2</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By C. Lacpatia<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By C. Lacpatia<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
     </div>
-  </footer>
-</main>
+    
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  
+
   </body>
 </html>

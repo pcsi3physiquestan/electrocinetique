@@ -51,6 +51,7 @@ On appelle l'intensité qui la traverse __courant électromoteur (c.e.m.)__
 * La caractéristique statique d'une source idéale de courant de cem I est une droite horizontale d'équation i = I
 ````
 
+(thevenin)=
 ## Source réelle: Electromoteur
 
 ````{topic} Comportement réels des sources  

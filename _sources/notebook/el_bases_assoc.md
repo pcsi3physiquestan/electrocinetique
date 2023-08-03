@@ -13,6 +13,7 @@ kernelspec:
   language: python
   name: python3
 ---
+(assoc_r)=
 # Association de résistances
 
 ````{topic} Dipôle équivalent

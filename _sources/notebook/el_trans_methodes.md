@@ -24,6 +24,7 @@ Nous avons vu quelques caractéristiques du régime transitoire comme son temps 
 ## Mise en équation
 Un exemple de mise en équation est donné [ici](mise_eq). Nous verrons aussi par la suite la mise en équation de circuits RC et RLC série.
 
+(ci)=
 ## Détermination des conditions initiales
 
 ````{margin} Nombre de CI

@@ -34,6 +34,9 @@ Déterminer le module et la phase à l'origine des grandeurs réelles associées
 \end{align*}
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Manipulation des complexes._
+
 ````{admonition} Modélisation d'une impédance
 :class: attention
 
@@ -42,6 +45,12 @@ On considère un dipôle dont l'impédance se met sous la forme $\underline{Z} =
 1. Montrer que si X est positif, le dipôle peut être modélisé par une inductance en série avec une résistance donc on exprimera les valeurs en fonction de R, X et $\omega.$
 1. Montrer que si X est négatif, le dipôle peut être modélisé par un condensateur en parallèle avec une résistance donc on exprimera les valeurs en fonction de R, X et $\omega.$
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Manipulation des complexes._
+* _$\Longrightarrow$ Impédances usuelles._
+
+
 ````{topic} Eléments de réponse (sans justification)
 * Si X est positif, $R_{eq} = R$ et $L_{eq} = X / \omega$
 * Si X est négatif, $R_{eq} = R + \frac{X^2}{R}$ et $C_{eq} = -\frac{1}{\omega}\frac{X}{R^2 + X^2}$
@@ -110,6 +119,11 @@ On considère un dipôle constitué d'une résistance R et d'une bobine d'induct
 * Pour le cas des sinusoïdes, pensez qu'on peut prendre la partie imaginaire pour avoir une méthode simple d'étude.
 ````
 
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Etude d'un circuit en RSF_
+* _$\Longrightarrow$ Réponse d'un filtre linéaire_
+* _$\Longrightarrow$ Manipulation des complexes_
+
 ````{topic} Eléments de réponse (sans justification)
 $s(t) = \frac{\frac{\omega_1}{\omega_0}e_1}{\sqrt{1 + {\left ( \frac{\omega_1}{\omega_0}\right )}^2}} \cos {\left ( \omega_1 t - \arctan \frac{\omega_1}{\omega_0} + \frac{\pi}{2}\right )} + \frac{\frac{\omega_2}{\omega_0}e_1}{\sqrt{1 + {\left ( \frac{\omega_2}{\omega_0}\right )}^2}} \cos {\left ( \omega_2 t - \arctan \frac{\omega_2}{\omega_0} + \frac{\pi}{2} + \varphi\right )}$
 
@@ -128,6 +142,11 @@ On considère trois dipôles R, L et C branchés en parallèle. On alimente le d
 
 Étudier la réponse fréquentielle pour l'intensité circulant dans la bobine et la tension aux bornes du dipôle RLC.
 ````
+
+_Point utile pour cet exercice_
+* _$\Longrightarrow$ Etude d'un circuit en RSF_
+* _$\Longrightarrow$ Résonance et bande passante_
+
 
 ````{topic} Eléments de réponse (sans justification)
 Vous devez trouver un comportement "passe-bas" pour l'intensité dans la bobine et un comportement passe-bande pour la tension.
