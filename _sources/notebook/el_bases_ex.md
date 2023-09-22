@@ -16,6 +16,6 @@ kernelspec:
 # Maitriser les méthodes
 * Méthodes : Vision miscroscopie de la conduction, étude de circuit, dipôles équivalents et études énergétiques
 * Activités : Résistances d'entrée et de sortie
-* Applications : Exercice dans le polycopié et deux exercices en ligne ([questions de base](https://stanislas.edunao.com/mod/quiz/view.php?id=12828) et [manipulation de circuits](https://stanislas.edunao.com/mod/quiz/view.php?id=12829))
+* Applications : Exercice dans le polycopié et deux exercices en ligne ([questions de base](https://moodlecpge.stanislas.fr/mod/quiz/view.php?id=139) et [manipulation de circuits](https://moodlecpge.stanislas.fr/mod/quiz/view.php?id=140))
 * Entrainements : Dans le polycopié
-* Approfondissements : Pas d'approfondissement mais deux devoirs libres dont celui sur [l'Amplificateur opérationnel](https://stanislas.edunao.com/mod/resource/view.php?id=12833) qui fera office de cours et qui sera à traiter durant les vacances.
+* Approfondissements : Pas d'approfondissement mais deux devoirs libres dont celui sur l'Amplificateur opérationnel (fascicule) qui fera office de cours et qui sera à traiter durant les vacances.

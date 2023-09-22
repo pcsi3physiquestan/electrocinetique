@@ -17,4 +17,4 @@ kernelspec:
 * Méthodes : Etude d'un circuit en RSF et caractéristiques HF et BF
 * Activités : Etudes du RLC série
 * Applications
-* Entrainements : Un devoir libre est disponible [en ligne](https://stanislas.edunao.com/mod/resource/view.php?id=12842) sur le RSF.
+* Entrainements : Un devoir libre est disponible dans le fascicule.

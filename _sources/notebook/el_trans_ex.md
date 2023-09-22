@@ -16,6 +16,6 @@ kernelspec:
 # Maitriser les méthodes
 * Méthodes : Etude d'un régime transitoire et mise en équation
 * Activités : Etude des équations d'un même système, oscillateur harmonique, Temps caractéristique et énergie
-* Applications : En plus des applications du polycopié. Des interrogations de cours sont en ligne [ici](https://stanislas.edunao.com/mod/resource/view.php?id=12840) et [ici](https://stanislas.edunao.com/mod/resource/view.php?id=12841).
-* Entrainements : En plus des TDs, deux devoirs libres sont [en ligne](https://stanislas.edunao.com/mod/resource/view.php?id=12836). [Le second](https://stanislas.edunao.com/mod/resource/view.php?id=12838) nécessite d'avoir travaillé sur l'amplificateur opérationnel avant.
-* Approfondissements : Un approfondissement basé sur l'introduction de dipôles non linéaires dans les circuit est disponible [en ligne](https://stanislas.edunao.com/mod/resource/view.php?id=15006)
+* Applications : En plus des applications du polycopié. Des interrogations de cours sont en ligne [ici](https://moodlecpge.stanislas.fr/mod/resource/view.php?id=145) et [ici](https://moodlecpge.stanislas.fr/mod/resource/view.php?id=146).
+* Entrainements : En plus des TDs, un devoir libre est dans le fascicule.
+* Approfondissements : Un approfondissement basé sur l'introduction de dipôles non linéaires dans les circuit est disponible [en ligne](https://moodlecpge.stanislas.fr/mod/resource/view.php?id=153) et un autren plus abordable concernant [l'utilisation d'un ALI pour réaliser en pratique un oscillateur harmonique](https://moodlecpge.stanislas.fr/mod/resource/view.php?id=151).

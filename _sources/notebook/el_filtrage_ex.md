@@ -17,4 +17,4 @@ kernelspec:
 * Méthodes : Etude d'un filtre et de sa réponse
 * Activités : Typologie des filtres
 * Applications
-* Entrainements : En plus du polycopié, un [devoir libre sur les filtres](https://stanislas.edunao.com/mod/resource/view.php?id=12846)
+* Entrainements : En plus du polycopié, un devoir libre sur les filtres est dans le fascicule.
