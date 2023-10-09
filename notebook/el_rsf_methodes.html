@@ -764,13 +764,13 @@ title="Print to PDF"
 <div><p><strong>Méthode 1: Utilisation des lois de Kirchoff</strong><br />
 La lois des mailles s’écrit: <span class="math notranslate nohighlight">\(u_R + u_L + u_C = e\)</span> et reste vraie avec les représentations complexes.<br />
 En régime sinusoïdal forcé, on utilise les impédances: <span class="math notranslate nohighlight">\(\underline{u_R} = R \underline{i}; \underline{u_L} = j L \omega \underline{i}; \underline{u_C} = \frac{\underline{i}}{jC \omega}\)</span>. Il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-67ef81fb-1252-477b-9155-9ebb565ab1c0">
-<span class="eqno">(49)<a class="headerlink" href="#equation-67ef81fb-1252-477b-9155-9ebb565ab1c0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-09c62539-82da-4a32-a415-b2a94bc5e368">
+<span class="eqno">(49)<a class="headerlink" href="#equation-09c62539-82da-4a32-a415-b2a94bc5e368" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \left(R + j L \omega + \frac{1}{j C \omega}\right) \underline{i} = \underline{e} \Longrightarrow \underline{i} = \frac{\underline{e}}{R + j L \omega + \frac{1}{j C \omega}}
 \end{equation}\]</div>
 <p>On déduite la tension <span class="math notranslate nohighlight">\(u_C\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f30373c2-de96-4534-ba60-4b984dca6270">
-<span class="eqno">(50)<a class="headerlink" href="#equation-f30373c2-de96-4534-ba60-4b984dca6270" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e2e84ef6-3b15-401a-9088-d7bf878a1611">
+<span class="eqno">(50)<a class="headerlink" href="#equation-e2e84ef6-3b15-401a-9088-d7bf878a1611" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \underline{u_C} = \frac{\underline{i}}{jC \omega} = \frac{\underline{e}}{jRC \omega - LC \omega^2 + 1}
 \end{equation}\]</div>
 <p><strong>Méthode 2: Pont diviseur</strong><br />
@@ -790,13 +790,13 @@ On ne va travailler ici que sur l’intensité.</p>
 </div>
 <blockquote>
 <div><p>Amplitude réelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1fb8e417-4ba3-4f4c-8006-a134c3a3ceee">
-<span class="eqno">(51)<a class="headerlink" href="#equation-1fb8e417-4ba3-4f4c-8006-a134c3a3ceee" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2c20aa95-2709-4e50-97bb-bb39e27ce96f">
+<span class="eqno">(51)<a class="headerlink" href="#equation-2c20aa95-2709-4e50-97bb-bb39e27ce96f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 i_m = \left\vert \underline{i} \right\vert = \frac{e_m}{\sqrt{R^2 + {\left(L \omega - \frac{1}{C \omega}\right)}^2}}
 \end{equation}\]</div>
 <p>Phase à l’origine:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1a95c59d-0f3d-445b-8dca-cfcbe7f4b484">
-<span class="eqno">(52)<a class="headerlink" href="#equation-1a95c59d-0f3d-445b-8dca-cfcbe7f4b484" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3494a802-e143-47b7-b54e-584705458479">
+<span class="eqno">(52)<a class="headerlink" href="#equation-3494a802-e143-47b7-b54e-584705458479" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \phi_i = \arg \underline{i} = \arg \underline{e} - \arg \left(R + j \left(L \omega - \frac{1}{C \omega}\right)\right) = - \arctan \frac{1}{R}\left(L \omega - \frac{1}{C \omega}\right)
 \end{equation}\]</div>
 </div></blockquote>
@@ -884,13 +884,13 @@ On va écrire deux lois des noeuds en termes de potentiel: en B et en D.</p>
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p>On commence par exprimer l’équation sous forme <span class="math notranslate nohighlight">\(P(j\omega) \underline{s} = Q(j \omega) \underline{e}\)</span> où P et Q sous des polynômes en <span class="math notranslate nohighlight">\(j \omega\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-439f2fc4-6be3-4300-bb07-d5dc5e95809c">
-<span class="eqno">(53)<a class="headerlink" href="#equation-439f2fc4-6be3-4300-bb07-d5dc5e95809c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b3f9168a-741f-4ba4-a82a-99d323501329">
+<span class="eqno">(53)<a class="headerlink" href="#equation-b3f9168a-741f-4ba4-a82a-99d323501329" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \underline{s} - LC \omega^2 \underline{s} + j RC \omega \underline{s} = \underline{e} - jRC \omega \underline{e}
 \end{equation}\]</div>
 <p>On remplacer chaque terme en <span class="math notranslate nohighlight">\(j \omega\)</span> par une dérivée temporelle:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7d98c03c-2896-4f9a-a15b-4e4160765468">
-<span class="eqno">(54)<a class="headerlink" href="#equation-7d98c03c-2896-4f9a-a15b-4e4160765468" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cfc995e8-64d6-4e68-868b-37534c84a238">
+<span class="eqno">(54)<a class="headerlink" href="#equation-cfc995e8-64d6-4e68-868b-37534c84a238" title="Permalink to this equation">#</a></span>\[\begin{equation}
 s + LC \frac{\rm{d^2}s}{\rm{dt^2}} + RC \frac{\rm{d}s}{\rm{dt}} = e - RC \frac{\rm{d}e}{\rm{dt}}
 \end{equation}\]</div>
 </div></blockquote>

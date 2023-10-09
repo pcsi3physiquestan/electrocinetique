@@ -127,7 +127,7 @@ i(t) &= \exp^{-\lambda t}\left( -\lambda \frac{i_0}{\Omega} \sin^{\Omega t} + i_
 >
 >La pseudo période a pour expression $T = \frac{2\pi}{\Omega} = \frac{2 \pi}{\frac{\omega_0}{Q}\sqrt{4Q^2 - 1}}$. Il vient qu'on pourra observer un nombre de périodes:
 >\begin{equation}
-N_P = \frac{3 \tau_{carac}}{T} = \frac{3}{\pi}\sqrt{4Q^2 - 1}
+N_P = \frac{3 \tau_{carac}}{T} = \frac{3}{2\pi}\sqrt{4Q^2 - 1}
 \end{equation}
 >Pour $Q$ grand, il vient $N_P \approx Q$. On observe que plus le facteur de qualité est grand, plus on observe de pseudo-périodes car le régime transitoire dure plus longtemps.
 ````

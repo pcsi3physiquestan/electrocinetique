@@ -43,7 +43,7 @@ On considère le circuit suivant où R est une résistance variable et les fem $
 ```
 ````
 ````{topic} Réponse (sans justification)  
-Valeur critique de R: $R_{eq} = \frac{R_1 E_1}{E_1 - E_2}$. Pour $R_{eq} < R$, $E_2$ a un comportement récepteur et pour $R_{eq} > R$, $E_2$ a un comportement générateur. $E_1$ a toujours un comportement générateur.
+Valeur critique de R: $R_{eq} = \frac{R_1 E_2}{E_1 - E_2}$. Pour $R_{eq} < R$, $E_2$ a un comportement récepteur et pour $R_{eq} > R$, $E_2$ a un comportement générateur. $E_1$ a toujours un comportement générateur.
 ````
 
 _Point utile pour cet exercice_
