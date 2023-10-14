@@ -721,10 +721,72 @@ I_s\left(\exp \left(\frac{u}{V_D}\right) - 1\right) - \frac{E - u}{R} = 0
 \]</div>
 <blockquote>
 <div><ol class="simple">
-<li><p>On note <span class="math notranslate nohighlight">\(f\)</span> précédente dont <span class="math notranslate nohighlight">\(u\)</span> doit être racine. Tracer <span class="math notranslate nohighlight">\(u\)</span> pour <span class="math notranslate nohighlight">\(E = 1 \rm{V}\)</span> sur un intervalle où <span class="math notranslate nohighlight">\(f\)</span> s’annulle et estimer graphiquement la valeur de <span class="math notranslate nohighlight">\(u\)</span>.</p></li>
+<li><p>On note <span class="math notranslate nohighlight">\(f\)</span> la fonction précédente précédente dont <span class="math notranslate nohighlight">\(u\)</span> doit être racine. Tracer <span class="math notranslate nohighlight">\(u\)</span> pour <span class="math notranslate nohighlight">\(E = 1 \rm{V}\)</span> sur un intervalle où <span class="math notranslate nohighlight">\(f\)</span> s’annule et estimer graphiquement la valeur de <span class="math notranslate nohighlight">\(u\)</span>.</p></li>
 <li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">bisect</span></code> pour trouver <span class="math notranslate nohighlight">\(u\)</span> lorsque <span class="math notranslate nohighlight">\(E = 1 \rm{V}\)</span>.</p></li>
 </ol>
 </div></blockquote>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Réponses aux questions théoriques<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<ol class="simple">
+<li><p class="sd-card-text">et 2. Les deux dipôles <span class="math notranslate nohighlight">\(\{E+RS\}\)</span> et <span class="math notranslate nohighlight">\(D\)</span> étant branchés ensemble, l’intensité qui circule est la même dans les deux dipoles et la tension <span class="math notranslate nohighlight">\(u\)</span> sera la même <strong>à condition de prendre l’un en convention générateur et l’autre en convention récepteur.</strong> On prendra le générateur de Thévenin en convention générateur et la diode en convention récepteur. On cherche alors l’intersection entre une droite décroissante et une exponentielle.</p></li>
+</ol>
+<ul class="simple">
+<li><p class="sd-card-text">Quand <span class="math notranslate nohighlight">\(E &lt; 0\)</span>, l’intersection est proche de <span class="math notranslate nohighlight">\(i=0\)</span> (diode bloquée est assimilable à un interrupteur ouvert)</p></li>
+<li><p class="sd-card-text">Quand <span class="math notranslate nohighlight">\(E &gt; V_D\)</span>, l’intersection est proche de <span class="math notranslate nohighlight">\(u = V_D\)</span> (diode passante assimilable à une fem <span class="math notranslate nohighlight">\(V_D\)</span>)</p></li>
+</ul>
+<ol class="simple">
+<li><p class="sd-card-text">On égalise les deux expressions des intensités données par l’équation de la diode et celle du générateur de Thévenin.</p></li>
+</ol>
+</div>
+</details><div class="cell tag_hide-output tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">bisect</span>
+
+<span class="n">E</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">E</span> <span class="c1"># Car E va changer ensuite</span>
+    <span class="n">Is</span> <span class="o">=</span> <span class="mf">95e-6</span>
+    <span class="n">VD</span> <span class="o">=</span> <span class="mf">30e-3</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="k">return</span> <span class="n">Is</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">u</span> <span class="o">/</span> <span class="n">VD</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">E</span> <span class="o">-</span> <span class="n">u</span><span class="p">)</span> <span class="o">/</span> <span class="n">R</span>
+  
+<span class="sd">&quot;&quot;&quot;Tracé de f entre 0 et 0.2&quot;&quot;&quot;</span>
+<span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;u(V)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;i(A)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/el_bases_num_1_0.png" src="../_images/el_bases_num_1_0.png" />
+</div>
+</div>
+<div class="cell tag_hide-output tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Détermination de la racine&quot;&quot;&quot;</span>
+<span class="n">u_fonc</span> <span class="o">=</span> <span class="n">bisect</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u_fonc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.15558332601176517
+</pre></div>
+</div>
+</div>
+</div>
 <blockquote>
 <div><p><strong>Redressement monoalternance :</strong><br />
 On suppose maintenant que <span class="math notranslate nohighlight">\(E(t)\)</span> est une tension sinusoïdale:</p>
@@ -743,6 +805,52 @@ E(t) = E_0 \cos 2 \pi f t
 <li><p>Tracer <span class="math notranslate nohighlight">\(u_R(t)= R i(t)\)</span> grâce aux résultats précédents puis lui superposer <span class="math notranslate nohighlight">\(E(t)\)</span>. Pourquoi parle-t-on de redressement monoalternance ?</p></li>
 </ol>
 </div></blockquote>
+<div class="cell tag_hide-output tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Esource</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">E0</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">freq</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="k">return</span> <span class="n">E0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">freq</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">iThevenin</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Pour obtenir i à partir de u&quot;&quot;&quot;</span>
+    <span class="n">R</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">E</span> <span class="o">-</span> <span class="n">u</span><span class="p">)</span> <span class="o">/</span> <span class="n">R</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">freq</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">tk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">freq</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>  <span class="c1"># tk sur deux périodes</span>
+<span class="n">Ek</span> <span class="o">=</span> <span class="n">Esource</span><span class="p">(</span><span class="n">tk</span><span class="p">)</span>
+
+<span class="n">uk</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ik</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">E</span> <span class="ow">in</span> <span class="n">Ek</span><span class="p">:</span>
+    <span class="n">uk</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bisect</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  <span class="c1"># Recherche de uk sur intervalle plus grande à cause des valeurs négatives de E</span>
+    <span class="n">ik</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">iThevenin</span><span class="p">(</span><span class="n">uk</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>  <span class="c1"># Calcul des ik</span>
+
+<span class="sd">&quot;&quot;&quot;Tracé (non demandé) de uk(tk)&quot;&quot;&quot;</span>
+<span class="n">fig1</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;t(s)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;u(V)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tk</span><span class="p">,</span> <span class="n">uk</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="sd">&quot;&quot;&quot;Tracé de ik(tk)&quot;&quot;&quot;</span>
+
+<span class="n">fig2</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;t(s)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;uR(V)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tk</span><span class="p">,</span> <span class="n">R</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ik</span><span class="p">))</span>  <span class="c1"># On doit transformer la liste ik en vecteur numpy pour pouvoir multiplier simplement chaque terme par R</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/el_bases_num_4_0.png" src="../_images/el_bases_num_4_0.png" />
+<img alt="../_images/el_bases_num_4_1.png" src="../_images/el_bases_num_4_1.png" />
+</div>
+</div>
 </div>
 </div>
 
