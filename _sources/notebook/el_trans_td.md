@@ -85,7 +85,7 @@ _Point utile pour cet exercice_
 \begin{align*}
   E &= \int_{0}^{+\infty}\eta(t) u(t) dt  \\
   &= \int_{0}^{+\infty} L\eta(t) \frac{\rm{d}i}{\rm{dt}}(t) dt \\
-  &= \int_{0}^{t_0} L\lambda t (\lambda - \tau \lambda \tau e^{-t/tau}) dt + \int_{t_0}^{+\infty} LI_0 \frac{\rm{d}i}{\rm{dt}}(t) dt \\
+  &= \int_{0}^{t_0} L\lambda t (\lambda - \tau \lambda \tau e^{-t/\tau}) dt + \int_{t_0}^{+\infty} LI_0 \frac{\rm{d}i}{\rm{dt}}(t) dt \\
   &\approx \frac{1}{2}L I_0 ^2 + LI_0 (i(+\infty) - i(t_0)) \\
   &\approx \frac{1}{2}L I_0 ^2\\
 \end{align*}
@@ -138,4 +138,4 @@ _Point utile pour cet exercice_
 ````{topic} Eléments de réponse (sans justification)
 >* $u(t) \approx e^{\frac{-\omega_0 t}{2Q}} (- E \cos(\omega_0 t) + QE\sin \omega_0 t) + E$ (à fort facteur de qualité, on doit trouver que la pseudo-pulsation égale la pulsation propre en première approximation).
 >* $u_{\max} \approx QE$ La tension obtenue est très grande: risque d'arc électrique. Le condensateur en parallèle augmente la valeur de C et diminue la surtension.
-````
+````
