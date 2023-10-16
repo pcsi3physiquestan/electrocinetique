@@ -768,13 +768,22 @@ title="Print to PDF"
 <blockquote>
 <div><p>Toutes les intensités sont orientées vers le bas.</p>
 <ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(\frac{\rm{d}i}{\rm{dt}} + \frac{R}{L} i = \eta\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(i(t) = \lambda (t - \tau) + \lambda \tau e^{-t/tau}\)</span></p></li>
-<li><p>On doit comparer <span class="math notranslate nohighlight">\(t_0\)</span> à <span class="math notranslate nohighlight">\(\tau\)</span>.</p></li>
-<li><p>On peut considérer l’exponentielle négligeable dans la condition initiale en <span class="math notranslate nohighlight">\(t = t_0\)</span>. <span class="math notranslate nohighlight">\(i(t &gt; 0) \approx I_0 - \lambda \tau e^{\frac{t_0 - t}{\tau}}\)</span></p></li>
-<li><p>L’énergie trouvée est deux fois moins importante.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{\rm{d}i}{\rm{dt}}(t) + \frac{R}{L} i(t) = \frac{R}{L}\eta(t)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(i(t) = \lambda (t - \tau) + \lambda \tau e^{-t/tau}\)</span> _(On pose <span class="math notranslate nohighlight">\(i(t) = \alpha t + \beta\)</span> puis on introduit cette forme dans l’équation différentielle ce qui donne <span class="math notranslate nohighlight">\(\alpha t + (\alpha + \beta / \tau) = \lambda t\)</span> soit par identification <span class="math notranslate nohighlight">\(\alpha = \lambda\)</span> et <span class="math notranslate nohighlight">\(beta = -\lambda \tau\)</span>).</p></li>
+<li><p>On doit comparer <span class="math notranslate nohighlight">\(t_0\)</span> à <span class="math notranslate nohighlight">\(\tau\)</span>. si <span class="math notranslate nohighlight">\(t_0 \ll \tau\)</span>, l’exponentielle est devient presque négligeable et en <span class="math notranslate nohighlight">\(t=t_0\)</span>, il ne reste que le régime forcé <span class="math notranslate nohighlight">\(\lambda (t-\tau)\)</span>. Sinon, le régime transitoire représenté par l’exponentielle n’es tpas négligeable. <span class="math notranslate nohighlight">\(\lambda t_0 = I_0\)</span>.</p></li>
+<li><p>On peut considérer l’exponentielle négligeable dans la condition initiale en <span class="math notranslate nohighlight">\(t = t_0\)</span>. <span class="math notranslate nohighlight">\(i(t &gt; 0) \approx I_0 - \lambda \tau e^{\frac{t_0 - t}{\tau}}\)</span> car la solution générale de l’équation avec second member est <span class="math notranslate nohighlight">\(I_0 + A e^{-t/\tau}\)</span> et la condition initiale <span class="math notranslate nohighlight">\(i(t_0) \approx \lambda (t - \tau)\)</span> donne le résultat précédent. <em>Note : on pourrait presque considérer que <span class="math notranslate nohighlight">\(i(t=t_0)\approx I_0\)</span> et alors l’intensité reste constante pour <span class="math notranslate nohighlight">\(t&gt;t_0\)</span>.</em></p></li>
+<li><p>L’énergie trouvée est deux fois moins importante:</p></li>
 </ol>
 </div></blockquote>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+  E &amp;= \int_{0}^{+\infty}\eta(t) u(t) dt  \\
+  &amp;= \int_{0}^{+\infty} L\eta(t) \frac{\rm{d}i}{\rm{dt}}(t) dt \\
+  &amp;= \int_{0}^{t_0} L\lambda t (\lambda - \tau \lambda \tau e^{-t/tau}) dt + \int_{t_0}^{+\infty} LI_0 \frac{\rm{d}i}{\rm{dt}}(t) dt \\
+  &amp;\approx \frac{1}{2}L I_0 ^2 + LI_0 (i(+\infty) - i(t_0)) \\
+  &amp;\approx \frac{1}{2}L I_0 ^2\\
+\end{align*}\]</div>
+<p><em>L’exponentielle dans la première intégrale donne une valeur négligeable et <span class="math notranslate nohighlight">\(i(+\infty) - i(t_0) \approx 0\)</span>.</em></p>
 </div>
 </div>
 <div class="section" id="circuits-d-ordre-2">

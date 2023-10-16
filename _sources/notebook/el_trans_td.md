@@ -76,11 +76,20 @@ _Point utile pour cet exercice_
 
 ````{topic} Eléments de réponse (sans justification)
 >Toutes les intensités sont orientées vers le bas.
->1. $\frac{\rm{d}i}{\rm{dt}} + \frac{R}{L} i = \eta$.
->1. $i(t) = \lambda (t - \tau) + \lambda \tau e^{-t/tau}$
->1. On doit comparer $t_0$ à $\tau$.
->1. On peut considérer l'exponentielle négligeable dans la condition initiale en $t = t_0$. $i(t > 0) \approx I_0 - \lambda \tau e^{\frac{t_0 - t}{\tau}}$
->1. L'énergie trouvée est deux fois moins importante.
+>1. $\frac{\rm{d}i}{\rm{dt}}(t) + \frac{R}{L} i(t) = \frac{R}{L}\eta(t)$.
+>1. $i(t) = \lambda (t - \tau) + \lambda \tau e^{-t/tau}$ _(On pose $i(t) = \alpha t + \beta$ puis on introduit cette forme dans l'équation différentielle ce qui donne $\alpha t + (\alpha + \beta / \tau) = \lambda t$ soit par identification $\alpha = \lambda$ et $beta = -\lambda \tau$).
+>1. On doit comparer $t_0$ à $\tau$. si $t_0 \ll \tau$, l'exponentielle est devient presque négligeable et en $t=t_0$, il ne reste que le régime forcé $\lambda (t-\tau)$. Sinon, le régime transitoire représenté par l'exponentielle n'es tpas négligeable. $\lambda t_0 = I_0$.
+>1. On peut considérer l'exponentielle négligeable dans la condition initiale en $t = t_0$. $i(t > 0) \approx I_0 - \lambda \tau e^{\frac{t_0 - t}{\tau}}$ car la solution générale de l'équation avec second member est $I_0 + A e^{-t/\tau}$ et la condition initiale $i(t_0) \approx \lambda (t - \tau)$ donne le résultat précédent. _Note : on pourrait presque considérer que $i(t=t_0)\approx I_0$ et alors l'intensité reste constante pour $t>t_0$._
+>1. L'énergie trouvée est deux fois moins importante:
+
+\begin{align*}
+  E &= \int_{0}^{+\infty}\eta(t) u(t) dt  \\
+  &= \int_{0}^{+\infty} L\eta(t) \frac{\rm{d}i}{\rm{dt}}(t) dt \\
+  &= \int_{0}^{t_0} L\lambda t (\lambda - \tau \lambda \tau e^{-t/tau}) dt + \int_{t_0}^{+\infty} LI_0 \frac{\rm{d}i}{\rm{dt}}(t) dt \\
+  &\approx \frac{1}{2}L I_0 ^2 + LI_0 (i(+\infty) - i(t_0)) \\
+  &\approx \frac{1}{2}L I_0 ^2\\
+\end{align*}
+_L'exponentielle dans la première intégrale donne une valeur négligeable et $i(+\infty) - i(t_0) \approx 0$._
 ````
 
 ## Circuits d'ordre 2
@@ -129,4 +138,4 @@ _Point utile pour cet exercice_
 ````{topic} Eléments de réponse (sans justification)
 >* $u(t) \approx e^{\frac{-\omega_0 t}{2Q}} (- E \cos(\omega_0 t) + QE\sin \omega_0 t) + E$ (à fort facteur de qualité, on doit trouver que la pseudo-pulsation égale la pulsation propre en première approximation).
 >* $u_{\max} \approx QE$ La tension obtenue est très grande: risque d'arc électrique. Le condensateur en parallèle augmente la valeur de C et diminue la surtension.
-````
+````
