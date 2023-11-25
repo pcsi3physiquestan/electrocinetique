@@ -15,6 +15,19 @@ kernelspec:
 ---
 # Entrainement : Filtrage linéaire
 
+````{admonition} Pulsatino de coupure d'un filtre d'ordre 2
+:class: attention
+On considère un filtre passe-bas d'ordre 2 dont le facteur de qualité est $Q \leq \frac{1}{\sqrt{2}}$.
+
+1. Justifier que le gain réel est strictement décroissant en $x$. Que vaut alors $G_{\max}$ ?
+2. Définir et déterminer la pulsation de coupure du filtre pour le cas particulier $Q = 1/2$.
+````
+
+````{topic} Eléments de réponse (sans justification)
+1. Même méthode que pour la détermination de la résonance : on trouve que le dénominateur est monotone sous condition (réalisée) pour $Q$. $G_{\max} = H_0$
+2. $\omega_c = \omega_0 \sqrt{1 + \sqrt{2}}$
+````
+
 ````{admonition} Etude fréquentielle 
 :class: attention
 
