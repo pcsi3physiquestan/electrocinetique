@@ -15,19 +15,6 @@ kernelspec:
 ---
 # Entrainement : Filtrage linéaire
 
-````{admonition} Pulsatino de coupure d'un filtre d'ordre 2
-:class: attention
-On considère un filtre passe-bas d'ordre 2 dont le facteur de qualité est $Q \leq \frac{1}{\sqrt{2}}$.
-
-1. Justifier que le gain réel est strictement décroissant en $x$. Que vaut alors $G_{\max}$ ?
-2. Définir et déterminer la pulsation de coupure du filtre pour le cas particulier $Q = 1/2$.
-````
-
-````{topic} Eléments de réponse (sans justification)
-1. Même méthode que pour la détermination de la résonance : on trouve que le dénominateur est monotone sous condition (réalisée) pour $Q$. $G_{\max} = H_0$
-2. $\omega_c = \omega_0 \sqrt{1 + \sqrt{2}}$
-````
-
 ````{admonition} Etude fréquentielle 
 :class: attention
 
@@ -139,8 +126,8 @@ $$
 
 ````{topic} Eléments de réponse (sans justification)
 * $A_0 = R_1 s$, $\omega_0 = \frac{1}{\sqrt{LC}}$ et $Q = R\sqrt{\frac{C}{L}}$
-* $\delta_n = \frac{1}{\sqrt{1 + Q^2 (n^2 - \frac{1}{n^2})}}$
-* Q = 52
+* $\delta_n = \frac{1}{\sqrt{1 + Q^2 (n - \frac{1}{n})^2}}$
+* Q = 67
 * Le signal de sortie pour le créneau sera un sinusoïde presque parfait.
 
 _Note: L'ordre 2 permet, à la différence de l'ordre 1 d'approcher le résultat approché de manière relativement bonne. Le problème est la réalisation d'un circuit avec un aussi grand facteur de qualité. Pour contourner le problème, il faudrait utiliser un filtre d'ordre supérieur._

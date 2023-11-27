@@ -1,47 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exemples d’étude &#8212; Electrocinétique</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Exemples d’étude &#8212; Electrocinétique</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -51,58 +64,98 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/el_trans_exemples';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_trans_exemples.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Activités" href="el_trans_meth.html" />
     <link rel="prev" title="Exemple : Etude d’un système d’ordre 2" href="el_trans_meth_o2.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../electrocinetique.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Electrocinétique</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,653 +165,265 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="el_bases.html">
-   Bases de l’électrocinétique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="el_bases_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_conduction.html">
-       Décrire la conduction électrique à notre échelle : Courant et Tension
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_lois.html">
-       Étudier un circuit : les bases
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_gene.html">
-       Dipôles électriques: Généralités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_passif.html">
-       Dipôles linéaires passifs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_assoc.html">
-       Association de résistances
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_actif.html">
-       Dipôles linéaires actifs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_etude.html">
-       Etude d’un circuit linéaire
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="el_bases_ex.html">
-     Maitriser les méthodes
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_exemples.html">
-       Méthodes d’étude
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_meth_r.html">
-       Activité : Résistance d’entrée et résistance de sortie
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_app.html">
-       Activités d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_td.html">
-       Entrainement : Bases
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_bases_num.html">
-       Capacités numériques
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="el_trans.html">
-   Régime transitoire
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="el_trans_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_regimes.html">
-       Régime transitoire et régime forcé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_methodes.html">
-       Méthodes d’analyse d’un régime transitoire
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_stabilite.html">
-       Stabilité des systèmes linéaires d’ordre 1 et 2
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_ordre_1.html">
-       Caractéristiques d’un système d’ordre 1
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_ordre_2.html">
-       Caractéristiques d’un système d’ordre 2
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="el_trans_ex.html">
-     Maitriser les méthodes
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_meth_o1.html">
-       Exemple : Etude d’un système d’ordre 1
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_meth_o2.html">
-       Exemple : Etude d’un système d’ordre 2
-      </a>
-     </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Exemples d’étude
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="el_trans_meth.html">
-       Activités
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-      <label for="toctree-checkbox-7">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="el_trans_meth_eq.html">
-         Equations dans un même circuit.
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="el_trans_meth_oh.html">
-         Oscillateur harmonique
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="el_trans_meth_tps.html">
-         Temps caractéristique d’un système d’ordre 2
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="el_trans_meth_energie.html">
-         Etude énergétique
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_app.html">
-       Applications
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_trans_td.html">
-       Entrainement : Régimes de fonctionnements
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="el_rsf.html">
-   Régime sinusoïdal forcé
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="el_rsf_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-    <label for="toctree-checkbox-9">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_rsf_interet.html">
-       Intérêt de l’étude fréquentielle (en ligne)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_rsf_gene.html">
-       Régime sinusoïdal forcé
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="el_rsf_ex.html">
-     Maitriser les méthodes
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_rsf_methodes.html">
-       Méthodes : Etudier un circuit en RSF
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="el_rsf_meth.html">
-       Activités
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-      <label for="toctree-checkbox-11">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="el_rsf_meth_pbande.html">
-         Cas passe-bande
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="el_rsf_meth_pbas.html">
-         Cas passe-bas
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_rsf_app.html">
-       Application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_rsf_td.html">
-       Entrainement
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="el_filtrage.html">
-   Filtrage linéaire
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="el_filtrage_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_filtrage_def.html">
-       Filtre: définition et caractéristiques
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_filtrage_gene.html">
-       Caractéristiques générales
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_filtrage_cascade.html">
-       Mise en cascade des filtres (en ligne)
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="el_filtrage_ex.html">
-     Maitriser les méthodes
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_filtrage_methodes.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_filtrage_meth_typo.html">
-       Activités : Typologie des filtres
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="el_filtrage_td.html">
-       Entrainement : Filtrage linéaire
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="el_bases.html">Bases de l’électrocinétique</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="el_bases_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_conduction.html">Décrire la conduction électrique à notre échelle : Courant et Tension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_lois.html">Étudier un circuit : les bases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_gene.html">Dipôles électriques: Généralités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_passif.html">Dipôles linéaires passifs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_assoc.html">Association de résistances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_actif.html">Dipôles linéaires actifs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_etude.html">Etude d’un circuit linéaire</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="el_bases_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_exemples.html">Méthodes d’étude</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_meth_r.html">Activité : Résistance d’entrée et résistance de sortie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_app.html">Activités d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_td.html">Entrainement : Bases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_bases_num.html">Capacités numériques</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="el_trans.html">Régime transitoire</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="el_trans_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_regimes.html">Régime transitoire et régime forcé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_methodes.html">Méthodes d’analyse d’un régime transitoire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_stabilite.html">Stabilité des systèmes linéaires d’ordre 1 et 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_ordre_1.html">Caractéristiques d’un système d’ordre 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_ordre_2.html">Caractéristiques d’un système d’ordre 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="el_trans_ex.html">Maitriser les méthodes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="el_trans_meth_o1.html">Exemple : Etude d’un système d’ordre 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_meth_o2.html">Exemple : Etude d’un système d’ordre 2</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Exemples d’étude</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="el_trans_meth.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_eq.html">Equations dans un même circuit.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_oh.html">Oscillateur harmonique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_tps.html">Temps caractéristique d’un système d’ordre 2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_energie.html">Etude énergétique</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_app.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_trans_td.html">Entrainement : Régimes de fonctionnements</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="el_rsf.html">Régime sinusoïdal forcé</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="el_rsf_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="el_rsf_interet.html">Intérêt de l’étude fréquentielle (en ligne)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_rsf_gene.html">Régime sinusoïdal forcé</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="el_rsf_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="el_rsf_methodes.html">Méthodes : Etudier un circuit en RSF</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="el_rsf_meth.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="el_rsf_meth_pbande.html">Cas passe-bande</a></li>
+<li class="toctree-l4"><a class="reference internal" href="el_rsf_meth_pbas.html">Cas passe-bas</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="el_rsf_app.html">Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_rsf_td.html">Entrainement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="el_filtrage.html">Filtrage linéaire</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="el_filtrage_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="el_filtrage_def.html">Filtre: définition et caractéristiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_filtrage_gene.html">Caractéristiques générales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_filtrage_cascade.html">Mise en cascade des filtres (en ligne)</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="el_filtrage_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="el_filtrage_methodes.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_filtrage_meth_typo.html">Activités : Typologie des filtres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="el_filtrage_td.html">Entrainement : Filtrage linéaire</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_trans_exemples.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebook/el_trans_exemples.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/notebook/el_trans_exemples.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/notebook/el_trans_exemples.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etude-d-un-regime-independant-du-temps">
-   Etude d’un régime indépendant du temps.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#caracteristiques-d-un-regime-transitoire">
-   Caractéristiques d’un régime transitoire
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mise-en-equation-d-un-systeme">
-   Mise en équation d’un système
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#determiner-l-equation-differentielle-lois-de-kirchhoff">
-     Déterminer l’équation différentielle (Lois de Kirchhoff)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#determiner-des-conditions-initiales">
-     Déterminer des conditions initiales
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exemple-d-autres-etudes">
-     Exemple d’autres études
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Exemples d’étude</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etude-d-un-regime-independant-du-temps">
-   Etude d’un régime indépendant du temps.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#caracteristiques-d-un-regime-transitoire">
-   Caractéristiques d’un régime transitoire
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#mise-en-equation-d-un-systeme">
-   Mise en équation d’un système
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#determiner-l-equation-differentielle-lois-de-kirchhoff">
-     Déterminer l’équation différentielle (Lois de Kirchhoff)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#determiner-des-conditions-initiales">
-     Déterminer des conditions initiales
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exemple-d-autres-etudes">
-     Exemple d’autres études
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exemples d’étude</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-d-un-regime-independant-du-temps">Etude d’un régime indépendant du temps.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques-d-un-regime-transitoire">Caractéristiques d’un régime transitoire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-equation-d-un-systeme">Mise en équation d’un système</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determiner-l-equation-differentielle-lois-de-kirchhoff">Déterminer l’équation différentielle (Lois de Kirchhoff)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determiner-des-conditions-initiales">Déterminer des conditions initiales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-d-autres-etudes">Exemple d’autres études</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="exemples-d-etude">
-<h1>Exemples d’étude<a class="headerlink" href="#exemples-d-etude" title="Permalink to this headline">#</a></h1>
-<div class="section" id="etude-d-un-regime-independant-du-temps">
-<span id="etude-rpit"></span><h2>Etude d’un régime indépendant du temps.<a class="headerlink" href="#etude-d-un-regime-independant-du-temps" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="exemples-d-etude">
+<h1>Exemples d’étude<a class="headerlink" href="#exemples-d-etude" title="Permalink to this heading">#</a></h1>
+<section id="etude-d-un-regime-independant-du-temps">
+<span id="etude-rpit"></span><h2>Etude d’un régime indépendant du temps.<a class="headerlink" href="#etude-d-un-regime-independant-du-temps" title="Permalink to this heading">#</a></h2>
 <p>Cet exercice explique la méthode d’étude d’un régime indépendant du temps</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>Étudier le circuit suivant en régime indépendant du temps lorsque l’interrupteur est ouvert. On déterminera toutes les intensités.</p>
-<div class="figure align-center" id="fig-150">
+<figure class="align-center" id="fig-150">
 <img alt="../_images/elec_circuit_quelconque.png" src="../_images/elec_circuit_quelconque.png" />
+</figure>
 </div>
-</div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Mise en équation</strong><br />
@@ -766,45 +431,45 @@ On oriente toutes les intensités vers le haut dans chaque branche et on note re
 <p><strong>Dessiner le circuit équivalent en régime indépendant du temps</strong><br />
 Tout d’abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.</p>
 </div></blockquote>
-<div class="figure align-center" id="fig-151">
+<figure class="align-center" id="fig-151">
 <img alt="../_images/elec_circuit_quelconque_2.png" src="../_images/elec_circuit_quelconque_2.png" />
-</div>
+</figure>
 <blockquote>
 <div><p>Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_e = i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
 <p>On a donc <span class="math notranslate nohighlight">\(i_r + i_l = 0\)</span> et <span class="math notranslate nohighlight">\(R i_r - R i_l = 0\)</span> soit <span class="math notranslate nohighlight">\(i_l = i_r = 0\)</span></p>
 </div></blockquote>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">Tension aux bornes d’un condensateur</p>
 <p>Signalons que la <strong>tension aux bornes d’un interrupteur ouvert n’est a priori pas nulle.</strong></p>
-</div>
+</aside>
 <blockquote>
 <div><p>Remarquons que seules deux tensions sont non nulles: la tension de la source (E) et la tension aux bornes de l’interrupteur de gauche (E ou -E suivant l’orientation).</p>
 </div></blockquote>
-</div>
+</aside>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>Etudier le circuit précédent en régime indépendant du temps lorsque l’interrupteur est fermé. On déterminera toutes les intensités.</p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p>Tout d’abord, on redessine le circuit en utilisant les modèles équivalents au condensateur et à la bobine en régime indépendant du temps.</p>
 </div></blockquote>
-<div class="figure align-center" id="fig-152">
+<figure class="align-center" id="fig-152">
 <img alt="../_images/elec_circuit_quelconque_3.png" src="../_images/elec_circuit_quelconque_3.png" />
-</div>
+</figure>
 <blockquote>
 <div><p>Il suffit ensuite d’étudier le circuit. Il vient directement <span class="math notranslate nohighlight">\(i_c = 0\)</span> à cause des interrupteurs ouverts.</p>
 <p>Écrivons les lois de Kirchhoff (on pourrait aussi utiliser la loi des noeuds en terme de potentiels):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d2d0ddac-a05f-4779-b97d-8569a622b7f7">
-<span class="eqno">(35)<a class="headerlink" href="#equation-d2d0ddac-a05f-4779-b97d-8569a622b7f7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-64f6f06d-4131-4f80-aea8-c6b708589fea">
+<span class="eqno">(35)<a class="headerlink" href="#equation-64f6f06d-4131-4f80-aea8-c6b708589fea" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_e + i_r + i_l &amp;= 0\\
 E - R i_e + R i_r &amp;= 0\\
 R i_r - R i_l &amp;= 0
 \end{align}\]</div>
 <p>Il vient immédiatement <span class="math notranslate nohighlight">\(i_r = i_l\)</span> et donc <span class="math notranslate nohighlight">\(i_e = - 2 i_r\)</span>. La première loi des mailles s’écrivant alors <span class="math notranslate nohighlight">\(E + 3 R i_R = 0\)</span>, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c8cc0a3-b37d-4f40-b296-e21a43f37ed4">
-<span class="eqno">(36)<a class="headerlink" href="#equation-3c8cc0a3-b37d-4f40-b296-e21a43f37ed4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c3932e5e-86b5-4ebd-949f-8698d589bc9c">
+<span class="eqno">(36)<a class="headerlink" href="#equation-c3932e5e-86b5-4ebd-949f-8698d589bc9c" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_r &amp;= -\frac{E}{3R}\\
 i_l &amp;= -\frac{E}{3R}\\
 i_e &amp;= \frac{2E}{3R}\\
@@ -818,57 +483,57 @@ i_e &amp;= \frac{2E}{3R}\\
 <li><p>Sens physique: On a un pont diviseur de courant avec deux résistances identiques, on trouve logiquement l’égalité des intensités <span class="math notranslate nohighlight">\(i_l = i_r\)</span> et le fait que l’intensité <span class="math notranslate nohighlight">\(i_e\)</span> est le double des deux autres.</p></li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="caracteristiques-d-un-regime-transitoire">
-<h2>Caractéristiques d’un régime transitoire<a class="headerlink" href="#caracteristiques-d-un-regime-transitoire" title="Permalink to this headline">#</a></h2>
+</aside>
+</section>
+<section id="caracteristiques-d-un-regime-transitoire">
+<h2>Caractéristiques d’un régime transitoire<a class="headerlink" href="#caracteristiques-d-un-regime-transitoire" title="Permalink to this heading">#</a></h2>
 <div class="attention admonition">
 <p class="admonition-title">Régime apériodique - Temps de réponse</p>
 <p>Déterminer le temps de réponse à 95% pour le signal dont l’évolution est représentée ci-dessous.</p>
-<div class="figure align-center" id="fig-156">
+<figure class="align-center" id="fig-156">
 <img alt="../_images/elec_temps_reponse.png" src="../_images/elec_temps_reponse.png" />
+</figure>
 </div>
-</div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Détermination du temps de réponse</strong><br />
 On détermine dans un premier temps l’écart initial: on commence à 1V et on finit à 3V. L’écart de 5% est donc de <span class="math notranslate nohighlight">\((3 - 1 ) * 0.05 \% = 0.1V\)</span> on regarde donc quand l’écart entre le signal et la valeur finale reste inférieur à 0.1V soit compris 2.9V et 3.1V</p>
 <p>L’instant correspond est de 3.1s. La perturbation arrivant à 0s, le temps de réponse est de 3.1s</p>
 </div></blockquote>
-<div class="figure align-center" id="fig-157">
+<figure class="align-center" id="fig-157">
 <img alt="../_images/elec_temps_reponse_2.png" src="../_images/elec_temps_reponse_2.png" />
-</div>
-</div>
-</div>
-<div class="section" id="mise-en-equation-d-un-systeme">
-<h2>Mise en équation d’un système<a class="headerlink" href="#mise-en-equation-d-un-systeme" title="Permalink to this headline">#</a></h2>
-<div class="section" id="determiner-l-equation-differentielle-lois-de-kirchhoff">
-<span id="mise-eq"></span><h3>Déterminer l’équation différentielle (Lois de Kirchhoff)<a class="headerlink" href="#determiner-l-equation-differentielle-lois-de-kirchhoff" title="Permalink to this headline">#</a></h3>
+</figure>
+</aside>
+</section>
+<section id="mise-en-equation-d-un-systeme">
+<h2>Mise en équation d’un système<a class="headerlink" href="#mise-en-equation-d-un-systeme" title="Permalink to this heading">#</a></h2>
+<section id="determiner-l-equation-differentielle-lois-de-kirchhoff">
+<span id="mise-eq"></span><h3>Déterminer l’équation différentielle (Lois de Kirchhoff)<a class="headerlink" href="#determiner-l-equation-differentielle-lois-de-kirchhoff" title="Permalink to this heading">#</a></h3>
 <p>On se propose ici de voir comment déterminer l’équation différentielle qui régit l’évolution d’une grandeur au moyen des lois de Kirchhoff.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le circuit suivant. L’interrupteur est ouvert depuis un temps long. A t=0, on ferme l’interrupteur.</p>
 <p>Déterminer l’équation différentielle qui régit l’évolution de l’intensité qui circuledans la bobine pour <span class="math notranslate nohighlight">\(t&gt;0\)</span>.</p>
-<div class="figure align-center" id="fig-159">
+<figure class="align-center" id="fig-159">
 <img alt="../_images/elec_circuit_etude_t_1.png" src="../_images/elec_circuit_etude_t_1.png" />
+</figure>
 </div>
-</div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Paramétrage</strong><br />
 Comme d’habitude, on commence par paramétrer le système. Les grandeurs introduites sont présentées sur le graphique.</p>
 </div></blockquote>
-<div class="figure align-center" id="fig-160">
+<figure class="align-center" id="fig-160">
 <img alt="../_images/elec_circuit_etude.png" src="../_images/elec_circuit_etude.png" />
-</div>
+</figure>
 <blockquote>
 <div><p>Rappelons aussi que les deux noeuds du haut peuvent être “rassemblés en un seul, ce qui évite d’avoir à considérer l’intensité qui circule dans la branche du haut au milieu.</p>
 </div></blockquote>
-<div class="figure align-center" id="fig-161">
+<figure class="align-center" id="fig-161">
 <img alt="../_images/elec_circuit_etude_t_2.png" src="../_images/elec_circuit_etude_t_2.png" />
-</div>
+</figure>
 <blockquote>
 <div><p><strong>Mise en équation</strong><br />
 On utilise les lois de Kirchhoff. Les deux points à bien faire attention sont:</p>
@@ -879,14 +544,14 @@ On utilise les lois de Kirchhoff. Les deux points à bien faire attention sont:<
 <li><p>Il convient par contre de bien penser à faire la différence entre ce qui nous intéresse de ce qu’on veut éliminer.</p></li>
 </ul>
 </div></blockquote>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>On rappelle que les grandeurs connues sont E, R, L et C et que la grandeur qu’on cherche est <span class="math notranslate nohighlight">\(i_L\)</span>. Toutes les intensités sont à éliminer, ainsi que les autres tensions.</p>
 <p>Remarquons aussi qu’on a choisi trois mailles faisant directement intervenir <span class="math notranslate nohighlight">\(u_L\)</span> qui est facilement éliminé.</p>
-</div>
+</aside>
 <blockquote>
-<div><div class="amsmath math notranslate nohighlight" id="equation-aa902d79-7eb2-4b2f-8264-3c70e36bdefa">
-<span class="eqno">(37)<a class="headerlink" href="#equation-aa902d79-7eb2-4b2f-8264-3c70e36bdefa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div><div class="amsmath math notranslate nohighlight" id="equation-0774a363-c424-4c9a-854b-1e594435fc6a">
+<span class="eqno">(37)<a class="headerlink" href="#equation-0774a363-c424-4c9a-854b-1e594435fc6a" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
 E - R i_e + L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0 \\
 R i_r - L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0 \\
@@ -895,27 +560,27 @@ u_C -  L \frac{\rm{d}i_l}{\rm{dt}} &amp;= 0
 <p>On a 4 inconnues et 4 équations. Le système peut donc être résolu.</p>
 <p><strong>Manipulation du système</strong><br />
 Une fois le système mis en place, <strong>il convient de réfléchir à une stratégie avant de se lancer</strong> (on rappelle que les grandeurs à éliminer sont les deux intensités ert <span class="math notranslate nohighlight">\(u_C\)</span>). Remarquons que le choix des mailles a permis d’avoir un système simple car chacune des lois des mailles permet d’élminer une grandeurs:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d5fa607e-e143-41ed-b56a-e6ec90b4bc8e">
-<span class="eqno">(38)<a class="headerlink" href="#equation-d5fa607e-e143-41ed-b56a-e6ec90b4bc8e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a41d7477-5fd7-4ee4-8c16-85565e7e2647">
+<span class="eqno">(38)<a class="headerlink" href="#equation-a41d7477-5fd7-4ee4-8c16-85565e7e2647" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_e + i_r + C \frac{\rm{d}u_C}{\rm{dt}} + i_l &amp;= 0 \\
 i_e &amp;= \frac{E + L \frac{\rm{d}i_l}{\rm{dt}}}{R}\\
 i_r &amp;= \frac{L \frac{\rm{d}i_l}{\rm{dt}}}{R} \\
 u_C &amp;= L\frac{\rm{d}i_l}{\rm{dt}}
 \end{align}\]</div>
 <p>Il suffit ensuire de remplacer dans la loi des noeuds (première équation) les différentes grandeurs.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7dfa3d2c-7652-4c56-9aef-e3fb9d41974a">
-<span class="eqno">(39)<a class="headerlink" href="#equation-7dfa3d2c-7652-4c56-9aef-e3fb9d41974a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d3a8a4e7-7677-43f4-b77a-74c70aa3a74a">
+<span class="eqno">(39)<a class="headerlink" href="#equation-d3a8a4e7-7677-43f4-b77a-74c70aa3a74a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{E}{R} \frac{L}{R}\frac{\rm{d}i_L}{\rm{dt}}+ \frac{L}{R}\frac{\rm{d}i_L}{\rm{dt}} + LC \frac{\rm{d^2}i}{\rm{dt^2}} + i_l = 0
 \end{equation}\]</div>
 <p><strong>Organisation de l’équation</strong><br />
 Il convient d’organiser (en fonction des dérivées) l’équation correctement sous sa forme canonique.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2a366083-8e46-4a88-84fe-875136f1b07b">
-<span class="eqno">(40)<a class="headerlink" href="#equation-2a366083-8e46-4a88-84fe-875136f1b07b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f89abef5-da90-4abf-9e99-fe7aeb0a5548">
+<span class="eqno">(40)<a class="headerlink" href="#equation-f89abef5-da90-4abf-9e99-fe7aeb0a5548" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{\rm{d^2}i_L}{\rm{dt^2}} + \frac{2}{RC} \frac{\rm{d}i_L}{\rm{dt}} + \frac{1}{LC} i_L = -\frac{E}{RLC}
 \end{equation}\]</div>
 <p>Par identification avec la forme canonique, il vient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6306d67a-d7f7-48ee-bd1d-d9ca12fc426a">
-<span class="eqno">(41)<a class="headerlink" href="#equation-6306d67a-d7f7-48ee-bd1d-d9ca12fc426a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f79712e7-4099-4e9b-b542-f040c05aea79">
+<span class="eqno">(41)<a class="headerlink" href="#equation-f79712e7-4099-4e9b-b542-f040c05aea79" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \begin{cases}
 \omega_0 &amp;= \sqrt{\frac{1}{LC}}\\
 \frac{\omega_0}{Q} = \frac{2}{RC} \Longrightarrow Q &amp;= \frac{R}{2}\sqrt{\frac{C}{L}}
@@ -939,23 +604,23 @@ Il convient d’organiser (en fonction des dérivées) l’équation correctemen
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="determiner-des-conditions-initiales">
-<span id="eq-ci"></span><h3>Déterminer des conditions initiales<a class="headerlink" href="#determiner-des-conditions-initiales" title="Permalink to this headline">#</a></h3>
+</aside>
+</section>
+<section id="determiner-des-conditions-initiales">
+<span id="eq-ci"></span><h3>Déterminer des conditions initiales<a class="headerlink" href="#determiner-des-conditions-initiales" title="Permalink to this heading">#</a></h3>
 <p>Cet exercice explique comment déterminer les conditions initiales nécessaires à la résolution de l’équation différentielle. Il fait suite au précédent</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère le circuit. L’interrupteur est ouvert depuis un temps long. A t=0, on ferme l’interrupteur. On rappelle qu’on a déterminé l’équation différentielle pour <span class="math notranslate nohighlight">\(i_L\)</span> pour t &gt; 0 (prendre les notations précédentes). Déterminer les conditions initiales nécessaires à la résolution de l’équation précédente.</p>
-<div class="figure align-center" id="fig-163">
+<figure class="align-center" id="fig-163">
 <img alt="../_images/elec_circuit_etude_t_1.png" src="../_images/elec_circuit_etude_t_1.png" />
+</figure>
 </div>
-</div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title">Régime forcé et temps long</p>
 <p>Un élément important de l’énoncé est la notion de “temps long”. Elle signifie qu’on a atteint le régime forcé (ici indépendant du temps).</p>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p>On peut considérer qu’à <span class="math notranslate nohighlight">\(t = 0^-\)</span>, le système est dans un régime forcé (avec <strong>l’interrupteur ouvert</strong>).</p>
@@ -964,10 +629,10 @@ Le but n’est pas de caractériser entièrement l’ancien régime forcé mais 
 <p><strong>Etude en <span class="math notranslate nohighlight">\(t=0^-\)</span> :</strong>  L’étude de l’ancien régime permanent donne <span class="math notranslate nohighlight">\(u_C(t=0^-) = 0\)</span> (la bobine assimilable à un fil impose une tension nulle aux bornes du condensateur) et <span class="math notranslate nohighlight">\(i_l(t=0^-) = 0\)</span> (loi des noeuds avec <span class="math notranslate nohighlight">\(i_C(t=0^-)=0\)</span> (interrupteur ouvert) et <span class="math notranslate nohighlight">\(i_R(t=0^-)=\frac{u_C(t=0^-)}{R}=0\)</span>).</p>
 <p><strong>Ces grandeurs étant continues, il vient <span class="math notranslate nohighlight">\(\boxed{i_l(t=0^+)= 0}\)</span> et <span class="math notranslate nohighlight">\(\boxed{u_C(t=0^+) = 0}\)</span></strong></p>
 </div></blockquote>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"><strong>Lien entre grandeurs étudiés et grandeurs continues</strong></p>
 <p>IL N’Y EN A AUCUN… On calcule ces grandeurs <strong>parce qu’elles sont continues.</strong></p>
-</div>
+</aside>
 <blockquote>
 <div><p><strong>Etude du circuit à <span class="math notranslate nohighlight">\(t=0^+\)</span>.</strong><br />
 On chercher à obtenir la valeur de <span class="math notranslate nohighlight">\(i_l(t=0^+)\)</span> et de <span class="math notranslate nohighlight">\(\frac{\rm{d}i_l}{\rm{dt}}(t=0^+)\)</span> pour résoudre l’équation différentielle.</p>
@@ -977,10 +642,10 @@ On chercher à obtenir la valeur de <span class="math notranslate nohighlight">\
 </ul>
 <p>On dispose donc des deux conditions initiales pour résoudre l’équation.</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="exemple-d-autres-etudes">
-<span id="eq-autre"></span><h3>Exemple d’autres études<a class="headerlink" href="#exemple-d-autres-etudes" title="Permalink to this headline">#</a></h3>
+</aside>
+</section>
+<section id="exemple-d-autres-etudes">
+<span id="eq-autre"></span><h3>Exemple d’autres études<a class="headerlink" href="#exemple-d-autres-etudes" title="Permalink to this heading">#</a></h3>
 <p>Nous allons voir ici l’exemple d’autres études à partir soit de l’équation différentielle, soit de la forme temporelle. On rappelle qu’on peut aussi obtenir des information du circuit même (en régime forcé par exemple). Il est conseillé d’essayer de faire cet exercice avant de regarder la réponse.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -990,40 +655,40 @@ On chercher à obtenir la valeur de <span class="math notranslate nohighlight">\
 \frac{\rm{d^2} i_l}{\rm{dt}^2} + \frac{2}{RC} \frac{\rm{d} i_l}{\rm{dt}} + \frac{1}{LC} i_l = -\frac{E}{RLC}
 \]</div>
 <p>Conditions initiales: <span class="math notranslate nohighlight">\(i_l(t=0^+) = 0\)</span> et <span class="math notranslate nohighlight">\(\frac{\rm{d}i_l}{\rm{dt}}(t=0^+) = 0\)</span></p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Déterminer <span class="math notranslate nohighlight">\(i_l(t)\)</span> dans l’hypothèse <span class="math notranslate nohighlight">\(R &gt; \sqrt{\frac{L}{C}}\)</span>.</p></li>
 <li><p>En déduire la puissance reçue par le bobine p(t).</p></li>
 <li><p>Déterminer l’énergie reçue par la bobine entre <span class="math notranslate nohighlight">\(t=0\)</span> et <span class="math notranslate nohighlight">\(t=+\infty\)</span>.</p></li>
 </ol>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Q1. Résolution de l’équation différentielle.</strong><br />
 La solution générale de l’équation homogène est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-de8d8afa-07ae-4e1e-92e7-60cad02d1274">
-<span class="eqno">(42)<a class="headerlink" href="#equation-de8d8afa-07ae-4e1e-92e7-60cad02d1274" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d159cc25-a7dd-4efd-be7c-08ed782060d4">
+<span class="eqno">(42)<a class="headerlink" href="#equation-d159cc25-a7dd-4efd-be7c-08ed782060d4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 i_{l,0} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right)
 \end{equation}\]</div>
 <p>On cherche une solution particulière constante à l’équation avec second membre <span class="math notranslate nohighlight">\(i_{L,1}(t) = I_0\)</span>. L’équation à résoudre (les dérivées temporelles s’annulent):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-02bdabed-67cc-438f-85ec-afc3791df78f">
-<span class="eqno">(43)<a class="headerlink" href="#equation-02bdabed-67cc-438f-85ec-afc3791df78f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-09ba1082-c8cb-40ff-af6e-b61c074e2103">
+<span class="eqno">(43)<a class="headerlink" href="#equation-09ba1082-c8cb-40ff-af6e-b61c074e2103" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{1}{LC} I_0 = - \frac{E}{RLC} \Longrightarrow I_0 = -\frac{E}{R}
 \end{equation}\]</div>
 <p>La solution générale de l’équation avec second membre (identique à l’exercice précédent) est donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c31ac552-dc5f-4c9c-a47b-e58b49d5316f">
-<span class="eqno">(44)<a class="headerlink" href="#equation-c31ac552-dc5f-4c9c-a47b-e58b49d5316f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a85a0a56-7682-42ae-8faa-d5f574e3d598">
+<span class="eqno">(44)<a class="headerlink" href="#equation-a85a0a56-7682-42ae-8faa-d5f574e3d598" title="Permalink to this equation">#</a></span>\[\begin{equation}
 i_{l} (t) = {\exp}^{- \frac{t}{RC}} \left(A \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + B \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}
 \end{equation}\]</div>
 <p>Les conditions initiales donnent le système d’équations:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-34c86e90-8c9d-4605-a1dd-74353e4f9f93">
-<span class="eqno">(45)<a class="headerlink" href="#equation-34c86e90-8c9d-4605-a1dd-74353e4f9f93" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-32e43036-1e89-4fd5-b5bb-0a3b712e0b6f">
+<span class="eqno">(45)<a class="headerlink" href="#equation-32e43036-1e89-4fd5-b5bb-0a3b712e0b6f" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_{l} (t=0^+) = A - \frac{E}{R} = 0 &amp;\Longrightarrow A = \frac{E}{R}\\
 \frac{\rm{d}i_l}{\rm{dt}} (t=0^+) = -\frac{E}{R^2C} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} B = 0 &amp;\Longrightarrow B = \frac{E}{R^2C\frac{1}{LC} - \frac{1}{{(RC)}^2}}
 \end{align}\]</div>
 <p>On en déduit l’expression de l’intensité <span class="math notranslate nohighlight">\(i_l(t)\)</span> et de la tension <span class="math notranslate nohighlight">\(u_L(t)\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c8ee99a-c162-4b65-ba5c-4e7d05dfbb3f">
-<span class="eqno">(46)<a class="headerlink" href="#equation-3c8ee99a-c162-4b65-ba5c-4e7d05dfbb3f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-22b879d0-9ea8-46d0-8b53-667e1ee678a6">
+<span class="eqno">(46)<a class="headerlink" href="#equation-22b879d0-9ea8-46d0-8b53-667e1ee678a6" title="Permalink to this equation">#</a></span>\[\begin{align}
 i_{l} (t) &amp;= {\exp}^{- \frac{t}{RC}} \left(\frac{E}{R} \cos \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right) + \frac{E}{R^2C\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t \right)\right) - \frac{E}{R}\\
 u_{L} (t) &amp;= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}}} + \sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} \right) \sin \left(\sqrt{\frac{1}{LC} - \frac{1}{{(RC)}^2}} t  \right)
 \end{align}\]</div>
@@ -1035,31 +700,31 @@ u_{L} (t) &amp;= -\frac{EL}{R} {\exp}^{- \frac{t}{RC}} \left(\frac{1}{{(RC)}^2\s
 <blockquote>
 <div><p><strong>Q2. Puissance reçue</strong><br />
 Nous sommes en convention récepteur donc la puissance reçue est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9600a951-f5fa-409f-8cfd-9dbb743e7d7d">
-<span class="eqno">(47)<a class="headerlink" href="#equation-9600a951-f5fa-409f-8cfd-9dbb743e7d7d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b3edf2e8-0572-4902-8acb-168a9c48f72e">
+<span class="eqno">(47)<a class="headerlink" href="#equation-b3edf2e8-0572-4902-8acb-168a9c48f72e" title="Permalink to this equation">#</a></span>\[\begin{align}
 p(t) &amp;= i_{l}(t) \times u_L(t) \\
 &amp;= - L I_A^2 \left ({\exp}^{- \frac{2t}{\tau}} \left(\cos \left(\Omega t \right) + \frac{1}{\tau \Omega} \sin \left(\Omega t \right)\right)\left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right) - \right )\\
 &amp; \times {\exp}^{- \frac{t}{\tau}} \left(\frac{1}{\tau^2 \Omega} + \Omega \right ) \sin \left(\Omega t \right)
 \end{align}\]</div>
 <p>On a introduit les grandeurs suivantes : <span class="math notranslate nohighlight">\(\tau = RC\)</span> et <span class="math notranslate nohighlight">\(\Omega =\sqrt{ \frac{1}{LC} - \frac{1}{{(RC)}^2}}\)</span>. Ce dernier terme est d’ailleurs très utilisé, on l’appelle la pseudo-période. Nous en reparlerons par la suite.</p>
 </div></blockquote>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Cette méthode n’est pas possible avec une résistance: il faut intégrer la puissance pour avoir l’énergie dissipée.</p>
-</div>
+</aside>
 <blockquote>
 <div><p><strong>Q3. Variation d’énergie dans une bobine</strong><br />
 <em>Première méthode (mauvaise idée): intégrer l’expression précédente entre 0 et l’infini…  …  …  On attendra pas un calcul aussi lourd (bien qu’il soit faisable et très formateur !).</em></p>
 <p>Deuxième méthode (à appliquer) : Il faut se rappeler que l’énergie reçue par la bobine est stockée et qu’on connaît l’expression de cette énergie stockée. Ainsi, l’énergie reçue sera la différence entre l’énergie stockée au final et l’énergie stockée initialement.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-938dfcea-089c-4fbc-a9e1-93ccc6f74077">
-<span class="eqno">(48)<a class="headerlink" href="#equation-938dfcea-089c-4fbc-a9e1-93ccc6f74077" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cb5ce0aa-f0b7-47d4-9d5f-d10c1a9059c0">
+<span class="eqno">(48)<a class="headerlink" href="#equation-cb5ce0aa-f0b7-47d4-9d5f-d10c1a9059c0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta E_L = E_L(t=+\infty) - E_L(t=0) = \frac{1}{2}L I(t=\infty)^2 - \frac{1}{2}L I(t=0)^2 = \frac{L E^2}{2R^2}
 \end{equation}\]</div>
 </div></blockquote>
-</div>
-</div>
-</div>
-</div>
+</aside>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1073,7 +738,7 @@ p(t) &amp;= i_{l}(t) \times u_L(t) \\
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -1081,50 +746,108 @@ p(t) &amp;= i_{l}(t) \times u_L(t) \\
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="el_trans_meth_o2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Exemple : Etude d’un système d’ordre 2</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="el_trans_meth_o2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exemple : Etude d’un système d’ordre 2</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="el_trans_meth.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="el_trans_meth.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Activités</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-d-un-regime-independant-du-temps">Etude d’un régime indépendant du temps.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques-d-un-regime-transitoire">Caractéristiques d’un régime transitoire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-equation-d-un-systeme">Mise en équation d’un système</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determiner-l-equation-differentielle-lois-de-kirchhoff">Déterminer l’équation différentielle (Lois de Kirchhoff)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determiner-des-conditions-initiales">Déterminer des conditions initiales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-d-autres-etudes">Exemple d’autres études</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By C. Lacpatia<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By C. Lacpatia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
