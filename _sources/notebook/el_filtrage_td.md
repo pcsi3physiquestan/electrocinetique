@@ -19,7 +19,7 @@ kernelspec:
 :class: attention
 On considère un filtre passe-bas d'ordre 2 dont le facteur de qualité est $Q = 1/2$.
 1. Montrer que le gain réel est strictement décroissant. Que vaut le gain réel maximal ?
-2. Déterminer la pulsation de coupure du filtre et montrer que $\omega_c = \omega_0 \sqrt{1 + \sqrt{2}}$.
+2. Déterminer la pulsation de coupure du filtre et montrer que $\omega_c = \omega_0 \sqrt{-1 + \sqrt{2}}$.
 3. Reprendre le même exercice avec $Q = 1 / \sqrt{2}$.
 ````
 
