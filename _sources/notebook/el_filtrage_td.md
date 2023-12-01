@@ -15,6 +15,14 @@ kernelspec:
 ---
 # Entrainement : Filtrage linéaire
 
+````{admonition} Pulsation de coupure d'un filtre d'ordre 2
+:class: attention
+On considère un filtre passe-bas d'ordre 2 dont le facteur de qualité est $Q = 1/2$.
+1. Montrer que le gain réel est strictement décroissant. Que vaut le gain réel maximal ?
+2. Déterminer la pulsation de coupure du filtre et montrer que $\omega_c = \omega_0 \sqrt{1 + \sqrt{2}}$.
+3. Reprendre le même exercice avec $Q = 1 / \sqrt{2}$.
+````
+
 ````{admonition} Etude fréquentielle 
 :class: attention
 
@@ -61,8 +69,8 @@ Dans l'ordre:
 __Cet exercice traite un montage que vous DEVEZ reconnaître et savoir étudier comme une question de cours.__  
 
 1. Déterminer la relation entrée sortie du montage suivant en grandeur complexe puis la relation temporelle entrée-sortie. Justifier ainsi l'appelation du montage.
-1. Proposer une utilisation pratique de ce montage en sortie d'un capteur qu'on précisera. Quel problème ce montage risque-t-il de poser à basse fréquence ?
-1. Déterminer l'impédance d'entrée du montage.
+2. Proposer une utilisation pratique de ce montage en sortie d'un capteur qu'on précisera. Quel problème ce montage risque-t-il de poser à basse fréquence ?
+3. Déterminer l'impédance d'entrée du montage.
 
 ```{figure} ./images/elec_integrateur.png
 :name: fig_219
