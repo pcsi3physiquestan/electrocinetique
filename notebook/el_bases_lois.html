@@ -1,60 +1,47 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Étudier un circuit : les bases &#8212; Electrocinétique</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -64,98 +51,58 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/el_bases_lois';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_lois.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Dipôles électriques: Généralités" href="el_bases_gene.html" />
     <link rel="prev" title="Décrire la conduction électrique à notre échelle : Courant et Tension" href="el_bases_conduction.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../electrocinetique.html">
-  
-  
-  
-  
-  
-    <p class="title logo__title">Electrocinétique</p>
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -165,255 +112,634 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="el_bases.html">Bases de l’électrocinétique</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="el_bases_contxt.html">Connaître le contexte</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="el_bases_conduction.html">Décrire la conduction électrique à notre échelle : Courant et Tension</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Étudier un circuit : les bases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_gene.html">Dipôles électriques: Généralités</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_passif.html">Dipôles linéaires passifs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_assoc.html">Association de résistances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_actif.html">Dipôles linéaires actifs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_etude.html">Etude d’un circuit linéaire</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_bases_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_exemples.html">Méthodes d’étude</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_meth_r.html">Activité : Résistance d’entrée et résistance de sortie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_app.html">Activités d’application</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_td.html">Entrainement : Bases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_num.html">Capacités numériques</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="el_trans.html">Régime transitoire</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_trans_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_regimes.html">Régime transitoire et régime forcé</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_methodes.html">Méthodes d’analyse d’un régime transitoire</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_stabilite.html">Stabilité des systèmes linéaires d’ordre 1 et 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_ordre_1.html">Caractéristiques d’un système d’ordre 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_ordre_2.html">Caractéristiques d’un système d’ordre 2</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_trans_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_meth_o1.html">Exemple : Etude d’un système d’ordre 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_meth_o2.html">Exemple : Etude d’un système d’ordre 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_exemples.html">Exemples d’étude</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="el_trans_meth.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_eq.html">Equations dans un même circuit.</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_oh.html">Oscillateur harmonique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_tps.html">Temps caractéristique d’un système d’ordre 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_energie.html">Etude énergétique</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_app.html">Applications</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_td.html">Entrainement : Régimes de fonctionnements</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="el_rsf.html">Régime sinusoïdal forcé</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_rsf_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_interet.html">Intérêt de l’étude fréquentielle (en ligne)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_gene.html">Régime sinusoïdal forcé</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_rsf_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_methodes.html">Méthodes : Etudier un circuit en RSF</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="el_rsf_meth.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="el_rsf_meth_pbande.html">Cas passe-bande</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_rsf_meth_pbas.html">Cas passe-bas</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_app.html">Application</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_td.html">Entrainement</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="el_filtrage.html">Filtrage linéaire</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_filtrage_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_def.html">Filtre: définition et caractéristiques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_gene.html">Caractéristiques générales</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_cascade.html">Mise en cascade des filtres (en ligne)</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_filtrage_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_methodes.html">Méthodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_meth_typo.html">Activités : Typologie des filtres</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_td.html">Entrainement : Filtrage linéaire</a></li>
-</ul>
-</li>
-</ul>
-</li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_conduction.html">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_exemples.html">
+       Méthodes d’étude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_meth_r.html">
+       Activité : Résistance d’entrée et résistance de sortie
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_num.html">
+       Capacités numériques
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_trans.html">
+   Régime transitoire
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_regimes.html">
+       Régime transitoire et régime forcé
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_methodes.html">
+       Méthodes d’analyse d’un régime transitoire
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_stabilite.html">
+       Stabilité des systèmes linéaires d’ordre 1 et 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_1.html">
+       Caractéristiques d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_2.html">
+       Caractéristiques d’un système d’ordre 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o1.html">
+       Exemple : Etude d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o2.html">
+       Exemple : Etude d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_exemples.html">
+       Exemples d’étude
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_trans_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_eq.html">
+         Equations dans un même circuit.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_oh.html">
+         Oscillateur harmonique
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_tps.html">
+         Temps caractéristique d’un système d’ordre 2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_energie.html">
+         Etude énergétique
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_app.html">
+       Applications
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_td.html">
+       Entrainement : Régimes de fonctionnements
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_interet.html">
+       Intérêt de l’étude fréquentielle (en ligne)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_gene.html">
+       Régime sinusoïdal forcé
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_methodes.html">
+       Méthodes : Etudier un circuit en RSF
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_rsf_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbande.html">
+         Cas passe-bande
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbas.html">
+         Cas passe-bas
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_app.html">
+       Application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_td.html">
+       Entrainement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_filtrage.html">
+   Filtrage linéaire
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_def.html">
+       Filtre: définition et caractéristiques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_gene.html">
+       Caractéristiques générales
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_cascade.html">
+       Mise en cascade des filtres (en ligne)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_methodes.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_meth_typo.html">
+       Activités : Typologie des filtres
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_td.html">
+       Entrainement : Filtrage linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/notebook/el_bases_lois.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_bases_lois.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebook/el_bases_lois.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Étudier un circuit : les bases</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-kirchhoff">Lois de Kirchhoff</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-energetique-d-un-dipole">Étude énergétique d’un dipôle</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-generateur-et-recepteur-pour-un-dipole">Convention générateur et récepteur pour un dipôle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puissance-echangee-entre-un-dipole-et-le-reste-du-circuit">Puissance échangée entre un dipôle et le reste du circuit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comportement-generateur-et-recepteur-d-un-dipole">Comportement générateur et récepteur d’un dipôle</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/notebook/el_bases_lois.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lois-de-kirchhoff">
+   Lois de Kirchhoff
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-energetique-d-un-dipole">
+   Étude énergétique d’un dipôle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convention-generateur-et-recepteur-pour-un-dipole">
+     Convention générateur et récepteur pour un dipôle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#puissance-echangee-entre-un-dipole-et-le-reste-du-circuit">
+     Puissance échangée entre un dipôle et le reste du circuit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comportement-generateur-et-recepteur-d-un-dipole">
+     Comportement générateur et récepteur d’un dipôle
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Étudier un circuit : les bases</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lois-de-kirchhoff">
+   Lois de Kirchhoff
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-energetique-d-un-dipole">
+   Étude énergétique d’un dipôle
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convention-generateur-et-recepteur-pour-un-dipole">
+     Convention générateur et récepteur pour un dipôle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#puissance-echangee-entre-un-dipole-et-le-reste-du-circuit">
+     Puissance échangée entre un dipôle et le reste du circuit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comportement-generateur-et-recepteur-d-un-dipole">
+     Comportement générateur et récepteur d’un dipôle
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
-  <section class="tex2jax_ignore mathjax_ignore" id="etudier-un-circuit-les-bases">
-<h1>Étudier un circuit : les bases<a class="headerlink" href="#etudier-un-circuit-les-bases" title="Permalink to this heading">#</a></h1>
-<section id="lois-de-kirchhoff">
-<span id="kirchoff"></span><h2>Lois de Kirchhoff<a class="headerlink" href="#lois-de-kirchhoff" title="Permalink to this heading">#</a></h2>
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="etudier-un-circuit-les-bases">
+<h1>Étudier un circuit : les bases<a class="headerlink" href="#etudier-un-circuit-les-bases" title="Permalink to this headline">#</a></h1>
+<div class="section" id="lois-de-kirchhoff">
+<span id="kirchoff"></span><h2>Lois de Kirchhoff<a class="headerlink" href="#lois-de-kirchhoff" title="Permalink to this headline">#</a></h2>
 <div class="full-width admonition important">
 <p class="admonition-title">Important</p>
 <ul class="simple">
@@ -421,11 +747,11 @@ document.write(`
 <li><p><strong>Loi des noeuds</strong> : L’ensemble des courants entrant dans un noeud est égale à l’ensemble des courant sortant du même noeud.</p></li>
 </ul>
 </div>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">Remarque</p>
 <p>On peut réécrire cette loi en disant que la somme des intensités entrantes est nulle (on compte alors les intensités “sortantes” négativement). On rappelle que les intensités sont des grandeurs algébriques et que leur orientation est arbitraire. On a donc très bien pu orienter une intensité sortante mais où les électrons sortent (i &lt; 0), ce n’est pas faux. Il arrive même que l’intensité change de signe.</p>
-</aside>
-<aside class="topic">
+</div>
+<div class="topic">
 <p class="topic-title">Démonstration</p>
 <blockquote>
 <div><ul class="simple">
@@ -433,13 +759,13 @@ document.write(`
 <li><p>Loi des noeuds : Dans l’ARQS, il ne peut pas y avoir d’accumulation de charge au niveau du noeud, donc le débit entrant égale le débit sortant.</p></li>
 </ul>
 </div></blockquote>
-</aside>
+</div>
 <!-- TODO: Mettre plus tard un exercice sur Kirchoff et loi de noeus pootentiel-->
-</section>
-<section id="etude-energetique-d-un-dipole">
-<h2>Étude énergétique d’un dipôle<a class="headerlink" href="#etude-energetique-d-un-dipole" title="Permalink to this heading">#</a></h2>
+</div>
+<div class="section" id="etude-energetique-d-un-dipole">
+<h2>Étude énergétique d’un dipôle<a class="headerlink" href="#etude-energetique-d-un-dipole" title="Permalink to this headline">#</a></h2>
 <p><em>L’étude énergétique consiste à déterminer la puissance instantanée reçue ou fournie par un dipôle au reste du circuit puis en déduire l’énergie reçue ou fournie durant une durée <span class="math notranslate nohighlight">\(\Delta t\)</span>.</em></p>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Raisonnement</p>
 <p>Une telle étude demande:</p>
 <ul class="simple">
@@ -448,46 +774,46 @@ document.write(`
 <li><p>de savoir analyser le résultat obtenue : le signe de la grandeur calculée permet de savoir si le dipôle fournit (comportement générateur) ou reçoit (comportement récepteur) de la puissance ainsi calculée.</p></li>
 <li><p>de savoir intégrer l’expression établie pour faire des calculs d’énergie.</p></li>
 </ul>
-</aside>
-<section id="convention-generateur-et-recepteur-pour-un-dipole">
-<h3>Convention générateur et récepteur pour un dipôle<a class="headerlink" href="#convention-generateur-et-recepteur-pour-un-dipole" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
+</div>
+<div class="section" id="convention-generateur-et-recepteur-pour-un-dipole">
+<h3>Convention générateur et récepteur pour un dipôle<a class="headerlink" href="#convention-generateur-et-recepteur-pour-un-dipole" title="Permalink to this headline">#</a></h3>
+<div class="sidebar">
 <p class="sidebar-title">ATTENTION</p>
 <p><strong>Il s’agit d’une convention !</strong></p>
 <p>Il s’agit d’une convention (très mal nommée!), c’est-à-dire qu’on définit arbitrairement l’orientation du dipôle <strong>peu importe qu’il soit réellement un récepteur ou un générateur</strong>. D’ailleurs, nous rencontrerons des dipôles qui se comporteront alternativement comme des générateurs et des récepteurs (source de tension, condensateur, bobine).</p>
 <p>Donc <strong>orienter un dipôle qui se comporte comme un générateur en convention récepteur n’est pas faux</strong> (et l’inverse non plus).</p>
 <p>D’ailleurs, on rappelle que les intensités et les tensions sont des grandeurs <strong>algébriques</strong>. Comme nous allons le voir, c’est le signe relatifs de ces deux grandeurs, suivant leur orientation, qui va définir leur <strong>comportement récepteur ou générateur : c’est-à-dire leur tendance à fournir ou recevoir de l’énergie.</strong></p>
-</aside>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Convention générateur et récepteur</strong></p>
 <ul class="simple">
 <li><p>Pour un dipôle D, si l’on oriente l’intensité <span class="math notranslate nohighlight">\(I_1\)</span> qui le traverse et la tension <span class="math notranslate nohighlight">\(U_1\)</span> à ses bornes dans le même sens, on dit qu’il est orienté <strong>en convention générateur.</strong></p></li>
 </ul>
-<figure class="align-center" id="fig-101">
+<div class="figure align-center" id="fig-101">
 <img alt="../_images/elec_conv_gene.png" src="../_images/elec_conv_gene.png" />
-</figure>
+</div>
 <ul class="simple">
 <li><p>Pour un dipôle D, si l’on oriente l’intensité <span class="math notranslate nohighlight">\(I_1\)</span> qui le traverse et la tension <span class="math notranslate nohighlight">\(U_1\)</span> à ses bornes en sens contraire, on dit qu’il est orienté <strong>en convention récepteur.</strong></p></li>
 </ul>
-<figure class="align-center" id="fig-102">
+<div class="figure align-center" id="fig-102">
 <img alt="../_images/elec_conv_recep.png" src="../_images/elec_conv_recep.png" />
-</figure>
 </div>
-</section>
-<section id="puissance-echangee-entre-un-dipole-et-le-reste-du-circuit">
-<span id="puissance"></span><h3>Puissance échangée entre un dipôle et le reste du circuit<a class="headerlink" href="#puissance-echangee-entre-un-dipole-et-le-reste-du-circuit" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
+</div>
+</div>
+<div class="section" id="puissance-echangee-entre-un-dipole-et-le-reste-du-circuit">
+<span id="puissance"></span><h3>Puissance échangée entre un dipôle et le reste du circuit<a class="headerlink" href="#puissance-echangee-entre-un-dipole-et-le-reste-du-circuit" title="Permalink to this headline">#</a></h3>
+<div class="sidebar">
 <p class="sidebar-title"><strong>Caractère algébrique de la puissance échangée</strong></p>
 <p>La puissance échangée, comme toutes les grandeurs en électricité est algébrique. Ainsi, on peut se placer</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>en convention récepteur</p></li>
 <li><p>calculer la puissance échangée <span class="math notranslate nohighlight">\(P = ui\)</span></p></li>
 <li><p>trouver une puissance échangée négative</p></li>
 </ol>
 <p>Cela signifie que physiquement, le dipôle fournit l’énergie <span class="math notranslate nohighlight">\(\vert P \vert = - ui\)</span> au reste du circuit. Il se <strong>comporte</strong> donc comme un <strong>générateur</strong>.</p>
 <p>Mais avoir choisi une convention récepteur en premier n’est pas faux, puisqu’il s’agit d’un choix arbitraire. <strong>L’important c’est que l’analyse physique soit correcte.</strong></p>
-</aside>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Puissance instantanée échangée entre un dipôle et le reste du circuit</strong></p>
@@ -499,56 +825,56 @@ document.write(`
 <li><p>En convention générateur, elle correspond à la <strong>puissance que fournit</strong> le dipôle au reste du circuit.</p></li>
 </ul>
 </div>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Démonstration (pas à connaître)  </p>
 <blockquote>
 <div><p>Néanmoins, il est bon de comprendre le principe de cette démonstration qui pointe vers les études que nous ferons plus tard en mécanique.</p>
 <p>On se place du point de vue des charges q qui entrent et sortent du dipôle. Durant une durée <span class="math notranslate nohighlight">\(\Delta t\)</span>, il entre et sort une quantité de charge <span class="math notranslate nohighlight">\(\Delta q = I_1 \Delta t\)</span> soit un nombre de particules chargées <span class="math notranslate nohighlight">\(\Delta n = \frac{I_1 \Delta t}{q}\)</span> (en supposant qu’elles ont toutes la même charge q).</p>
 </div></blockquote>
-<figure class="align-center" id="fig-103">
+<div class="figure align-center" id="fig-103">
 <img alt="../_images/elec_conv_recep_2.png" src="../_images/elec_conv_recep_2.png" />
-</figure>
+</div>
 <blockquote>
 <div><p><strong>Considérons le cas d’une convention récepteur</strong> (comme sur le schéma ci-contre) et des charges <span class="math notranslate nohighlight">\(q\)</span> positives (le raisonnement est identique pour des charges négatives). Passant de A à B, une charge perd une énergie <span class="math notranslate nohighlight">\(E_1 = q (V_A- V_B) = q U_1\)</span>. Cette énergie est reçue par le dipôle. Donc l’énergie totale reçue par le dipôle pendant un temps <span class="math notranslate nohighlight">\(\Delta t\)</span> est :</p>
 <p><span class="math notranslate nohighlight">\(E = \Delta n E_1 = I_1 U_1 \Delta t\)</span>.</p>
 <p>Il vient que la puissance reçue par le dipôle est <span class="math notranslate nohighlight">\(P = \frac{E}{\Delta t} = I_1 U_1\)</span></p>
 </div></blockquote>
-<figure class="align-center" id="fig-104">
+<div class="figure align-center" id="fig-104">
 <img alt="../_images/elec_conv_gene_2.png" src="../_images/elec_conv_gene_2.png" />
-</figure>
+</div>
 <blockquote>
 <div><p><strong>En convention générateur</strong>, l’énergie perdue est toujours <span class="math notranslate nohighlight">\(E_1 = q (V_A - V_B) = - U_1\)</span>. Il vient donc que la puissance reçue par le dipôle est <span class="math notranslate nohighlight">\(P = - I_1 U_1\)</span>. Donc la puissance <span class="math notranslate nohighlight">\(P = U_1 I_1\)</span> est la puissance fournie par le dipôle.</p>
 </div></blockquote>
-</aside>
-</section>
-<section id="comportement-generateur-et-recepteur-d-un-dipole">
-<h3>Comportement générateur et récepteur d’un dipôle<a class="headerlink" href="#comportement-generateur-et-recepteur-d-un-dipole" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="comportement-generateur-et-recepteur-d-un-dipole">
+<h3>Comportement générateur et récepteur d’un dipôle<a class="headerlink" href="#comportement-generateur-et-recepteur-d-un-dipole" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Le <strong>comportement <strong>d’un dipôle n’est pas arbitraire mais exprime ce qui se passe physiquement dans le circuit. Ce dernier ne peut être choisi arbitrairement (contrairement aux conventions) et doit être déterminer par des calculs (nous en verrons par la suite) ou étude (graphique par exemple). C’est le calcul de la</strong> puissance échangée</strong> et l’<strong>étude de son signe</strong> qui déterminer le <strong>comportement du dipôle</strong>.</p></li>
 <li><p>Le <strong>comportement</strong> d’un dipôle peut changer au cours d’une expérience.</p></li>
 </ul>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head text-center"><p></p></th>
-<th class="head text-center"><p>Comportement récepteur</p></th>
-<th class="head text-center"><p>Comportement générateur</p></th>
+<tr class="row-odd"><th class="text-align:center head"><p></p></th>
+<th class="text-align:center head"><p>Comportement récepteur</p></th>
+<th class="text-align:center head"><p>Comportement générateur</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-center"><p>Convention générateur</p></td>
-<td class="text-center"><p>P &lt; 0</p></td>
-<td class="text-center"><p>P &gt; 0</p></td>
+<tr class="row-even"><td class="text-align:center"><p>Convention générateur</p></td>
+<td class="text-align:center"><p>P &lt; 0</p></td>
+<td class="text-align:center"><p>P &gt; 0</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>Convention récepteur</p></td>
-<td class="text-center"><p>P &gt; 0</p></td>
-<td class="text-center"><p>P &lt; 0</p></td>
+<tr class="row-odd"><td class="text-align:center"><p>Convention récepteur</p></td>
+<td class="text-align:center"><p>P &gt; 0</p></td>
+<td class="text-align:center"><p>P &lt; 0</p></td>
 </tr>
 </tbody>
 </table>
 <p><em>Il est conseillé de chercher à comprendre pourquoi on obtient tel signe à partir de l’interprétation de la puissance échangée établie précédemment.</em></p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -562,7 +888,7 @@ document.write(`
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -570,107 +896,50 @@ document.write(`
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="el_bases_conduction.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Décrire la conduction électrique à notre échelle : Courant et Tension</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="el_bases_conduction.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Décrire la conduction électrique à notre échelle : Courant et Tension</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="el_bases_gene.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="el_bases_gene.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Dipôles électriques: Généralités</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-kirchhoff">Lois de Kirchhoff</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-energetique-d-un-dipole">Étude énergétique d’un dipôle</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convention-generateur-et-recepteur-pour-un-dipole">Convention générateur et récepteur pour un dipôle</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#puissance-echangee-entre-un-dipole-et-le-reste-du-circuit">Puissance échangée entre un dipôle et le reste du circuit</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comportement-generateur-et-recepteur-d-un-dipole">Comportement générateur et récepteur d’un dipôle</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By C. Lacpatia
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2021.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
+            </footer>
+        </div>
     </div>
-  </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By C. Lacpatia<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>

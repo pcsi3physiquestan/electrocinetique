@@ -1,60 +1,47 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Décrire la conduction électrique à notre échelle : Courant et Tension &#8212; Electrocinétique</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -64,98 +51,58 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/el_bases_conduction';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/electrocinetique/notebook/el_bases_conduction.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Étudier un circuit : les bases" href="el_bases_lois.html" />
     <link rel="prev" title="Connaître le contexte" href="el_bases_contxt.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../electrocinetique.html">
-  
-  
-  
-  
-  
-    <p class="title logo__title">Electrocinétique</p>
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      
+      <h1 class="site-logo" id="site-title">Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -165,269 +112,733 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="el_bases.html">Bases de l’électrocinétique</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="el_bases_contxt.html">Connaître le contexte</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Décrire la conduction électrique à notre échelle : Courant et Tension</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_lois.html">Étudier un circuit : les bases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_gene.html">Dipôles électriques: Généralités</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_passif.html">Dipôles linéaires passifs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_assoc.html">Association de résistances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_actif.html">Dipôles linéaires actifs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_etude.html">Etude d’un circuit linéaire</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_bases_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_exemples.html">Méthodes d’étude</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_meth_r.html">Activité : Résistance d’entrée et résistance de sortie</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_app.html">Activités d’application</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_td.html">Entrainement : Bases</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_bases_num.html">Capacités numériques</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="el_trans.html">Régime transitoire</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_trans_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_regimes.html">Régime transitoire et régime forcé</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_methodes.html">Méthodes d’analyse d’un régime transitoire</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_stabilite.html">Stabilité des systèmes linéaires d’ordre 1 et 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_ordre_1.html">Caractéristiques d’un système d’ordre 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_ordre_2.html">Caractéristiques d’un système d’ordre 2</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_trans_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_meth_o1.html">Exemple : Etude d’un système d’ordre 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_meth_o2.html">Exemple : Etude d’un système d’ordre 2</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_exemples.html">Exemples d’étude</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="el_trans_meth.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_eq.html">Equations dans un même circuit.</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_oh.html">Oscillateur harmonique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_tps.html">Temps caractéristique d’un système d’ordre 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_trans_meth_energie.html">Etude énergétique</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_app.html">Applications</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_trans_td.html">Entrainement : Régimes de fonctionnements</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="el_rsf.html">Régime sinusoïdal forcé</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_rsf_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_interet.html">Intérêt de l’étude fréquentielle (en ligne)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_gene.html">Régime sinusoïdal forcé</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_rsf_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_methodes.html">Méthodes : Etudier un circuit en RSF</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="el_rsf_meth.html">Activités</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="el_rsf_meth_pbande.html">Cas passe-bande</a></li>
-<li class="toctree-l4"><a class="reference internal" href="el_rsf_meth_pbas.html">Cas passe-bas</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_app.html">Application</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_rsf_td.html">Entrainement</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="el_filtrage.html">Filtrage linéaire</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_filtrage_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_def.html">Filtre: définition et caractéristiques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_gene.html">Caractéristiques générales</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_cascade.html">Mise en cascade des filtres (en ligne)</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="el_filtrage_ex.html">Maitriser les méthodes</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_methodes.html">Méthodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_meth_typo.html">Activités : Typologie des filtres</a></li>
-<li class="toctree-l3"><a class="reference internal" href="el_filtrage_td.html">Entrainement : Filtrage linéaire</a></li>
-</ul>
-</li>
-</ul>
-</li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="el_bases.html">
+   Bases de l’électrocinétique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="el_bases_contxt.html">
+     Connaître le contexte
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Décrire la conduction électrique à notre échelle : Courant et Tension
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_lois.html">
+       Étudier un circuit : les bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_gene.html">
+       Dipôles électriques: Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_passif.html">
+       Dipôles linéaires passifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_assoc.html">
+       Association de résistances
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_actif.html">
+       Dipôles linéaires actifs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_etude.html">
+       Etude d’un circuit linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_bases_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_exemples.html">
+       Méthodes d’étude
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_meth_r.html">
+       Activité : Résistance d’entrée et résistance de sortie
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_app.html">
+       Activités d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_td.html">
+       Entrainement : Bases
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_bases_num.html">
+       Capacités numériques
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_trans.html">
+   Régime transitoire
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_regimes.html">
+       Régime transitoire et régime forcé
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_methodes.html">
+       Méthodes d’analyse d’un régime transitoire
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_stabilite.html">
+       Stabilité des systèmes linéaires d’ordre 1 et 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_1.html">
+       Caractéristiques d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_ordre_2.html">
+       Caractéristiques d’un système d’ordre 2
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_trans_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o1.html">
+       Exemple : Etude d’un système d’ordre 1
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_meth_o2.html">
+       Exemple : Etude d’un système d’ordre 2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_exemples.html">
+       Exemples d’étude
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_trans_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+      <label for="toctree-checkbox-7">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_eq.html">
+         Equations dans un même circuit.
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_oh.html">
+         Oscillateur harmonique
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_tps.html">
+         Temps caractéristique d’un système d’ordre 2
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_trans_meth_energie.html">
+         Etude énergétique
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_app.html">
+       Applications
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_trans_td.html">
+       Entrainement : Régimes de fonctionnements
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_rsf.html">
+   Régime sinusoïdal forcé
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_interet.html">
+       Intérêt de l’étude fréquentielle (en ligne)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_gene.html">
+       Régime sinusoïdal forcé
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_rsf_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_methodes.html">
+       Méthodes : Etudier un circuit en RSF
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="el_rsf_meth.html">
+       Activités
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+      <label for="toctree-checkbox-11">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbande.html">
+         Cas passe-bande
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="el_rsf_meth_pbas.html">
+         Cas passe-bas
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_app.html">
+       Application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_rsf_td.html">
+       Entrainement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="el_filtrage.html">
+   Filtrage linéaire
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_contxt.html">
+     Connaître le contexte
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_def.html">
+       Filtre: définition et caractéristiques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_gene.html">
+       Caractéristiques générales
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_cascade.html">
+       Mise en cascade des filtres (en ligne)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="el_filtrage_ex.html">
+     Maitriser les méthodes
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_methodes.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_meth_typo.html">
+       Activités : Typologie des filtres
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="el_filtrage_td.html">
+       Entrainement : Filtrage linéaire
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/notebook/el_bases_conduction.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/el_bases_conduction.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebook/el_bases_conduction.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Décrire la conduction électrique à notre échelle : Courant et Tension</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charge-electrique">Charge électrique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction-et-courant">Conduction et courant</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phenomene-de-conduction">Phénomène de conduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensite-et-intensite-moyenne">Intensité et intensité moyenne</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordres-de-grandeur-des-courants-electriques-en-ligne">Ordres de grandeur des courants électriques (en ligne)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiel-electrique-et-tension">Potentiel électrique et tension</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiel-electrique">Potentiel électrique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne">Analogie entre un circuit hydraulique et un circuit électrique (en ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordre-de-grandeurs-des-tensions-en-ligne">Ordre de grandeurs des tensions (en ligne)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires">Approximation des régimes quasi-stationnaires</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ondes-electriques-dans-les-circuits-en-ligne">Ondes électriques dans les circuits (en ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires-arqs">Approximation des régimes quasi-stationnaires (ARQS)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-utiles">Définitions utiles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensite-dans-une-branche-dans-l-arqs">Intensité dans une branche dans l’ARQS</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/notebook/el_bases_conduction.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#charge-electrique">
+   Charge électrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conduction-et-courant">
+   Conduction et courant
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phenomene-de-conduction">
+     Phénomène de conduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intensite-et-intensite-moyenne">
+     Intensité et intensité moyenne
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordres-de-grandeur-des-courants-electriques-en-ligne">
+     Ordres de grandeur des courants électriques (en ligne)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potentiel-electrique-et-tension">
+   Potentiel électrique et tension
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potentiel-electrique">
+     Potentiel électrique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne">
+     Analogie entre un circuit hydraulique et un circuit électrique (en ligne)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordre-de-grandeurs-des-tensions-en-ligne">
+     Ordre de grandeurs des tensions (en ligne)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires">
+   Approximation des régimes quasi-stationnaires
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ondes-electriques-dans-les-circuits-en-ligne">
+     Ondes électriques dans les circuits (en ligne)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires-arqs">
+     Approximation des régimes quasi-stationnaires (ARQS)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definitions-utiles">
+     Définitions utiles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intensite-dans-une-branche-dans-l-arqs">
+     Intensité dans une branche dans l’ARQS
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Décrire la conduction électrique à notre échelle : Courant et Tension</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#charge-electrique">
+   Charge électrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conduction-et-courant">
+   Conduction et courant
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phenomene-de-conduction">
+     Phénomène de conduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intensite-et-intensite-moyenne">
+     Intensité et intensité moyenne
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordres-de-grandeur-des-courants-electriques-en-ligne">
+     Ordres de grandeur des courants électriques (en ligne)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#potentiel-electrique-et-tension">
+   Potentiel électrique et tension
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#potentiel-electrique">
+     Potentiel électrique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne">
+     Analogie entre un circuit hydraulique et un circuit électrique (en ligne)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ordre-de-grandeurs-des-tensions-en-ligne">
+     Ordre de grandeurs des tensions (en ligne)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires">
+   Approximation des régimes quasi-stationnaires
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ondes-electriques-dans-les-circuits-en-ligne">
+     Ondes électriques dans les circuits (en ligne)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires-arqs">
+     Approximation des régimes quasi-stationnaires (ARQS)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definitions-utiles">
+     Définitions utiles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intensite-dans-une-branche-dans-l-arqs">
+     Intensité dans une branche dans l’ARQS
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
-  <section class="tex2jax_ignore mathjax_ignore" id="decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension">
-<h1>Décrire la conduction électrique à notre échelle : Courant et Tension<a class="headerlink" href="#decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension" title="Permalink to this heading">#</a></h1>
-<section id="charge-electrique">
-<h2>Charge électrique<a class="headerlink" href="#charge-electrique" title="Permalink to this heading">#</a></h2>
-<aside class="attention sidebar">
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension">
+<h1>Décrire la conduction électrique à notre échelle : Courant et Tension<a class="headerlink" href="#decrire-la-conduction-electrique-a-notre-echelle-courant-et-tension" title="Permalink to this headline">#</a></h1>
+<div class="section" id="charge-electrique">
+<h2>Charge électrique<a class="headerlink" href="#charge-electrique" title="Permalink to this headline">#</a></h2>
+<div class="attention sidebar">
 <p class="sidebar-title">Exemple de particules chargées</p>
 <p>Les particules chargées sont:</p>
 <ul class="simple">
@@ -435,23 +846,23 @@ document.write(`
 <li><p>les protons (charge e) et noyaux</p></li>
 <li><p>les ions (cations et anions)</p></li>
 </ul>
-</aside>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Charge électrique</strong></p>
 <ul class="simple">
 <li><p><strong>Définition</strong> : La charge électrique est une propriété fondamentale de la matière qui lui permet d’interagir avec les champs électromagnétiques. L’unité usuelle de mesure de la charge électrique est le Coulomb (C).</p></li>
 <li><p><strong>Conservation de la charge</strong> : La charge est une grandeur qui se conserve, c’est-à-dire qu’elle ne peut ni être détruire, ni être produite.</p></li>
-<li><p><strong>Quantification de la charge</strong> : On observe<a class="footnote-reference brackets" href="#milikan" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> que la charge Q de tout système est  un multiple entier de la charge élementaire <span class="math notranslate nohighlight">\(e = 1.609 \times 10^{-19} \rm{C}\)</span>.</p></li>
+<li><p><strong>Quantification de la charge</strong> : On observe<a class="footnote-reference brackets" href="#milikan" id="id1">1</a> que la charge Q de tout système est  un multiple entier de la charge élementaire <span class="math notranslate nohighlight">\(e = 1.609 \times 10^{-19} \rm{C}\)</span>.</p></li>
 </ul>
 </div>
-</section>
-<section id="conduction-et-courant">
-<h2>Conduction et courant<a class="headerlink" href="#conduction-et-courant" title="Permalink to this heading">#</a></h2>
-<section id="phenomene-de-conduction">
-<h3>Phénomène de conduction<a class="headerlink" href="#phenomene-de-conduction" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="conduction-et-courant">
+<h2>Conduction et courant<a class="headerlink" href="#conduction-et-courant" title="Permalink to this headline">#</a></h2>
+<div class="section" id="phenomene-de-conduction">
+<h3>Phénomène de conduction<a class="headerlink" href="#phenomene-de-conduction" title="Permalink to this headline">#</a></h3>
 <p><strong>Conduction</strong> : Le phénomène de conduction correspond au déplacement de charges dans un matériau (solide ou liquide).</p>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Charges de conduction</p>
 <p>Les charges de conduction peuvent être de natures diverses.</p>
 <ul class="simple">
@@ -459,31 +870,27 @@ document.write(`
 <li><p>des ions</p></li>
 <li><p>des lacunes électroniques, c’est-à-dire le déplacement de proche en proche d’un manque d’électrons.</p></li>
 </ul>
-<figure class="align-center" id="fig-conduction-par-lacune-electronique84">
+<div class="figure align-center" id="fig-conduction-par-lacune-electronique84">
 <img alt="../_images/elec_conduction_trou.gif" src="../_images/elec_conduction_trou.gif" />
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Conduction par lacune électronique</span><a class="headerlink" href="#fig-conduction-par-lacune-electronique84" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</aside>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Conduction par lacune électronique</span><a class="headerlink" href="#fig-conduction-par-lacune-electronique84" title="Permalink to this image">#</a></p>
+</div>
+</div>
 <div class="full-width admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Courant électrique et intensité.</strong></p>
 <p>Le courant électrique <strong>à travers</strong> une section S <strong>orienté arbitrairement</strong> correspond au passage des charges de conduction à travers cette section par unité de temps.</p>
 <p>La grandeur mesurant le courant électrique est l’<strong>intensité du courant</strong>. Elle se définit comme le débit de charge à travers la surface, c’est-à-dire la quantité de charge traversant la surface S par unité de temps.</p>
 </div>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title"><strong>Orientation de l’intensité</strong>  </p>
-<figure class="align-center" id="fig-representation-de-l-intensite-dans-un-circuit-normalise86">
+<div class="figure align-center" id="fig-representation-de-l-intensite-dans-un-circuit-normalise86">
 <img alt="../_images/elec_i_micro_macro.png" src="../_images/elec_i_micro_macro.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Représentation de l’intensité dans un circuit normalisé</span><a class="headerlink" href="#fig-representation-de-l-intensite-dans-un-circuit-normalise86" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Représentation de l’intensité dans un circuit normalisé</span><a class="headerlink" href="#fig-representation-de-l-intensite-dans-un-circuit-normalise86" title="Permalink to this image">#</a></p>
+</div>
 <p>L’orientation de la surface correspond dans les schémas électriques habituels à l’orientation de l’intensité. Cette orientation est <strong>arbitraire</strong>. C’est la personne qui fait l’étude (ou qui pose la question… ) qui choisit l’orientation. Il n’est pas nécessaire qu’elle correspondent au phénomène réel de conduction. Il n’y a donc pas à réfléchir physiquement à ce qui se passe dans le circuit pour orienter i. <strong>Trouver une intensité négative n’est PAS une erreur.</strong> Cela veut simplement dire que le débit de charge est positif dans l’autre sens.</p>
 <p>Dans ces représentations, on ne tient pas compte de l’épaisseur du fil.</p>
-</aside>
-<aside class="topic">
+</div>
+<div class="topic">
 <p class="topic-title">Caractère algébrique de la charge</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -495,20 +902,18 @@ document.write(`
 <p>d’où une intensité <span class="math notranslate nohighlight">\(i = \frac{Q_{Tot}}{\Delta t} = - 5.5 A\)</span>.</p>
 <p>Remarque : Cette valeur est très grandeur et les charges des porteurs de charge sont en réalité beaucoup plus faibles.</p>
 </div>
-<figure class="align-center" id="fig-caractere-algebrique-des-charges85">
+<div class="figure align-center" id="fig-caractere-algebrique-des-charges85">
 <img alt="../_images/elec_i_algebrique.png" src="../_images/elec_i_algebrique.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Caractère algébrique des charges</span><a class="headerlink" href="#fig-caractere-algebrique-des-charges85" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</aside>
-</section>
-<section id="intensite-et-intensite-moyenne">
-<h3>Intensité et intensité moyenne<a class="headerlink" href="#intensite-et-intensite-moyenne" title="Permalink to this heading">#</a></h3>
-<aside class="margin sidebar">
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Caractère algébrique des charges</span><a class="headerlink" href="#fig-caractere-algebrique-des-charges85" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="intensite-et-intensite-moyenne">
+<h3>Intensité et intensité moyenne<a class="headerlink" href="#intensite-et-intensite-moyenne" title="Permalink to this headline">#</a></h3>
+<div class="margin sidebar">
 <p class="sidebar-title"><strong>Intensité moyenne</strong>  </p>
 <p>L’intensité moyenne consiste à mesurer le débit de charge pendant un temps <span class="math notranslate nohighlight">\(\Delta t\)</span> fini. On divise alors la quantité de charge (algébrique) par la durée pour obtenir l’intensité moyenne.</p>
-</aside>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Intensité</strong></p>
@@ -519,10 +924,10 @@ i = \frac{\rm{d}q}{\rm{dt}}
 \]</div>
 <p>avec q la quantité de charge traversant la surface orientée.</p>
 </div>
-</section>
-<section id="ordres-de-grandeur-des-courants-electriques-en-ligne">
-<h3>Ordres de grandeur des courants électriques (en ligne)<a class="headerlink" href="#ordres-de-grandeur-des-courants-electriques-en-ligne" title="Permalink to this heading">#</a></h3>
-<aside class="topic">
+</div>
+<div class="section" id="ordres-de-grandeur-des-courants-electriques-en-ligne">
+<h3>Ordres de grandeur des courants électriques (en ligne)<a class="headerlink" href="#ordres-de-grandeur-des-courants-electriques-en-ligne" title="Permalink to this headline">#</a></h3>
+<div class="topic">
 <p class="topic-title">Ordre de grandeur</p>
 <p>Voici l’ordre de grandeur de intensités qu’on peut rencontrer :</p>
 <ul class="simple">
@@ -533,22 +938,22 @@ i = \frac{\rm{d}q}{\rm{dt}}
 <li><p>Radiateur électrique: 10A</p></li>
 <li><p>Eclair : 10-100kA</p></li>
 </ul>
-</aside>
-</section>
-</section>
-<section id="potentiel-electrique-et-tension">
-<h2>Potentiel électrique et tension<a class="headerlink" href="#potentiel-electrique-et-tension" title="Permalink to this heading">#</a></h2>
-<aside class="topic">
+</div>
+</div>
+</div>
+<div class="section" id="potentiel-electrique-et-tension">
+<h2>Potentiel électrique et tension<a class="headerlink" href="#potentiel-electrique-et-tension" title="Permalink to this headline">#</a></h2>
+<div class="topic">
 <p class="topic-title">Cause du mouvement des charges</p>
 <p>Sans excitation extérieur, ils n’y a pas de mouvement d’ensemble des charges, c’est-à-dire de conduction électrique. Pour ce faire, il faut mettre les charges en mouvement. Comme toujours en mécanique, la mise en mouvement nécessite une force. Ici c’est le <strong>champ électrique</strong> (créé directement ou indirectement par la source : un générateur ou une pile) qui exerce une force sur les charges de conduction.</p>
-</aside>
-<section id="potentiel-electrique">
-<h3>Potentiel électrique<a class="headerlink" href="#potentiel-electrique" title="Permalink to this heading">#</a></h3>
-<aside class="topic">
+</div>
+<div class="section" id="potentiel-electrique">
+<h3>Potentiel électrique<a class="headerlink" href="#potentiel-electrique" title="Permalink to this headline">#</a></h3>
+<div class="topic">
 <p class="topic-title">Action d’un champ électrique sur une particule chargée  </p>
-<p>Lorsqu’un champ électrique<a class="footnote-reference brackets" href="#champe" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <span class="math notranslate nohighlight">\(\overrightarrow{E}\)</span> est établi dans un milieu, les charges <span class="math notranslate nohighlight">\(q\)</span> du milieu subissent une force <span class="math notranslate nohighlight">\(\overrightarrow{F} = q \overrightarrow{E}\)</span>.</p>
-</aside>
-<aside class="sidebar">
+<p>Lorsqu’un champ électrique<a class="footnote-reference brackets" href="#champe" id="id2">2</a> <span class="math notranslate nohighlight">\(\overrightarrow{E}\)</span> est établi dans un milieu, les charges <span class="math notranslate nohighlight">\(q\)</span> du milieu subissent une force <span class="math notranslate nohighlight">\(\overrightarrow{F} = q \overrightarrow{E}\)</span>.</p>
+</div>
+<div class="sidebar">
 <p class="sidebar-title"><strong>Indépendance vis-à-vis des charges.</strong>  </p>
 <p>Le potentiel électrique dépend du point du circuit considéré et évidemment des composants du circuit. Mais il ne <strong>dépend pas</strong> de la charge qui assure la conduction. Ainsi, on peut parler du potentiel électrique d’un point <em>du circuit</em> et non <em>de la charge</em>.</p>
 <p>Ce point est important car il permet de commencer à étudier un circuit grâce à deux paramètres accessibles à notre échelle (l’échelle macroscopique) <strong>sans se préoccuper des phénomènes microscopiques</strong> et de leur complexité :</p>
@@ -557,90 +962,84 @@ i = \frac{\rm{d}q}{\rm{dt}}
 <li><p>le potentiel électrique de chaque point du circuit.</p></li>
 </ul>
 <p>Comme nous le verrons par la suite, nous pourrons encore diminuer le nombre de paramètres nécessaires.</p>
-</aside>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Potentiel électrique</strong></p>
-<figure class="align-center" id="fig-88">
+<div class="figure align-center" id="fig-88">
 <img alt="../_images/elec_v_energie.png" src="../_images/elec_v_energie.png" />
-</figure>
+</div>
 <p>La force qu’exerce un champ électrique sur une charge <span class="math notranslate nohighlight">\(q\)</span> dérive d’une énergie potentielle. Si l’on note <span class="math notranslate nohighlight">\(E_{p,el}\)</span> l’énergie potentielle associée à cette force sur une charge q en un point A du circuit, on définit le <strong>potentiel électrique</strong> <span class="math notranslate nohighlight">\(V_A\)</span> du circuit au point A par <span class="math notranslate nohighlight">\(V_A = \frac{E_{p,el}}{q}\)</span>.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Référence des potentiels - Masse</strong></p>
 <p>Comme l’énergie potentielle, le potentiel est défini à une constante près. On peut donc choisir le point du circuit où le potentiel électrique est nul. On parle de <strong>référence des potentiels</strong> ou <strong>masse</strong>.</p>
-<figure class="align-center" id="fig-symbole-d-un-point-de-masse-dans-le-schema-d-un-circuit-electrique89">
+<div class="figure align-center" id="fig-symbole-d-un-point-de-masse-dans-le-schema-d-un-circuit-electrique89">
 <img alt="../_images/elec_masse.png" src="../_images/elec_masse.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Symbole d’un point de masse dans le schéma d’un circuit électrique</span><a class="headerlink" href="#fig-symbole-d-un-point-de-masse-dans-le-schema-d-un-circuit-electrique89" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Symbole d’un point de masse dans le schéma d’un circuit électrique</span><a class="headerlink" href="#fig-symbole-d-un-point-de-masse-dans-le-schema-d-un-circuit-electrique89" title="Permalink to this image">#</a></p>
 </div>
-<aside class="sidebar">
+</div>
+<div class="sidebar">
 <p class="sidebar-title"><strong>Interprétation de la tension.</strong>  </p>
 <p>Pour une charge <span class="math notranslate nohighlight">\(q\)</span> passant d’un point A à un point B sa variation d’énergie potentielle est <span class="math notranslate nohighlight">\(\Delta E_p = q (V_B - V_A) = - q U_{AB}\)</span> : il s’agit de l’énergie perdue (ou gagnée suivant les signes de q et <span class="math notranslate nohighlight">\(U_{AB}\)</span>) au passage dans un composant. Ce point de vue est important pour la suite car il permettra de décrire les échanges énergétiques entre un composant (on parlera de dipôle) et le reste du circuit.</p>
-</aside>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Tension (différence de potentiel)</strong></p>
-<figure class="align-center" id="fig-representation-d-une-tension-sur-un-circuit90">
+<div class="figure align-center" id="fig-representation-d-une-tension-sur-un-circuit90">
 <img alt="../_images/elec_v_tension_schema.png" src="../_images/elec_v_tension_schema.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Représentation d’une tension sur un circuit</span><a class="headerlink" href="#fig-representation-d-une-tension-sur-un-circuit90" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Représentation d’une tension sur un circuit</span><a class="headerlink" href="#fig-representation-d-une-tension-sur-un-circuit90" title="Permalink to this image">#</a></p>
+</div>
 <p>On appelle tension <span class="math notranslate nohighlight">\(U_{AB}\)</span> (ou différence de potentiel entre deux points A et B) la différence <span class="math notranslate nohighlight">\(U_{AB} = V_A - V_B\)</span>.</p>
 <p>Dans un schéma de circuit électrique, elle est représentée par une fléche pointant vers le premier point (ici A).</p>
 </div>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Additivité des tensions.  </p>
 <p>Considérons trois points du circuit A,B et C. On peut utiliser l’additivité des tensions : <span class="math notranslate nohighlight">\(U_{AC} = U_{AB} + U_{BC}\)</span> en effet <span class="math notranslate nohighlight">\(U_{AC} = V_A - V_C = V_A - V_B + V_B - V_C\)</span></p>
-</aside>
-</section>
-<section id="analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne">
-<h3>Analogie entre un circuit hydraulique et un circuit électrique (en ligne)<a class="headerlink" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne" title="Permalink to this heading">#</a></h3>
-<aside class="topic">
+</div>
+</div>
+<div class="section" id="analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne">
+<h3>Analogie entre un circuit hydraulique et un circuit électrique (en ligne)<a class="headerlink" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne" title="Permalink to this headline">#</a></h3>
+<div class="topic">
 <p class="topic-title">Analogie</p>
 <p>Pour comprendre le principe général d’un circuit électrique et le rôle de l’intensité et du potentiel électrique, on peut faire l’analogie entre un circuit d’eau entièrement fermé et un circuit électrique. Il ne s’agit poas d’un exercice à savoir refaire mais à comprendre.</p>
 <p>L’analogie est présentée sous forme d’exercices mais les méthodes utilisées ne sont pas à connaître. Il s’agit surtout de comprendre le fonctionnement physique d’un circuit électrique.</p>
-<figure class="align-center" id="fig-analogie-circuit-hydraulique-et-circuit-electrique91">
+<div class="figure align-center" id="fig-analogie-circuit-hydraulique-et-circuit-electrique91">
 <img alt="../_images/elec_hydro_elec.jpg" src="../_images/elec_hydro_elec.jpg" />
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Analogie circuit hydraulique et circuit électrique</span><a class="headerlink" href="#fig-analogie-circuit-hydraulique-et-circuit-electrique91" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Analogie circuit hydraulique et circuit électrique</span><a class="headerlink" href="#fig-analogie-circuit-hydraulique-et-circuit-electrique91" title="Permalink to this image">#</a></p>
+</div>
 <blockquote>
 <div><p><strong>Grandeurs analogue ?</strong><br />
 Questions :</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Comment appelle-t-on la grandeur qui caractérise le déplacement d’eau dans la conduite ?</p></li>
 <li><p>Dans un circuit hydraulique, quelle énergie est gagnée/perdue par les petits “blocs” d’eau lorsqu’ils se déplacent dans le circuit ?</p></li>
 </ol>
 <p>Réponses :</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Dans le circuit hydraulique, c’est le <strong>débit massique d’eau</strong> qui est analogue à <strong>l’intensité électrique</strong>.</p></li>
 <li><p>Dans le circuit hydraulique, les “blocs” d’eau (on parlera de particules de fluide) gagnent ou perdent de <strong>l’énergie potentielle de pesanteur</strong>. Elle est analogue à l’<strong>énergie potentielle électrique</strong> des charges. On pourra associer à cette énergie potentielle un potentiel de pesanteur (<span class="math notranslate nohighlight">\(E_{p,pes} / m = g z\)</span>) qui ne dépend que de la Terre (du champ de pesanteur terrestre) et de la position dans le circuit et pas de la masse d’eau considérée. Elle est analogue au potentiel électrique.</p></li>
 </ol>
 <p><strong>Échanges énergétiques</strong><br />
 Questions :</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Quel est le rôle de la pompe ?</p></li>
 <li><p>En circuit fermé et en régime stationnaire, comment évolue le débit d’eau le long du circuit ?</p></li>
 <li><p>En déduire un bilan d’énergie pour l’eau avant et après la turbine (composant à droite). Faire l’analogie avec la traversée du récepteur.</p></li>
 </ol>
 <p>Réponses :</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>La pompe prend de l’eau à faible hauteur pour l’amener à une hauteur importante : <strong>elle donne de l’énergie aux “blocs” d’eau</strong> mais ne crée pas de l’eau. De même un générateur ne crée pas des charges, <strong>il leur donne de l’énergie</strong>. Attention quand même, les électrons libérées au pôle (-) ne sont pas les mêmes que les électrons absorbées au pôle (+) (On pourra penser à une pile électrochimique). Le bilan se fait sur l’ensemble des électrons de conduction du circuit, pas sur un électron pris tout seul (un peu comme un circuit hydraulique où la pompe prélèverait et rendrait l’eau à une rivière).</p></li>
 <li><p>Le débit d’eau ne peut varier car l’eau est incompressible. Un volume qui avance dans la conduite pousse le volume qui le précède qui avance de la même manière : dans toutes les sections de la conduite, le débit étant le même, <strong>l’énergie cinétique ne varie pas le long du circuit</strong>. Il en est de même pour les charges électrique en régime stationnaire : l’intensité du courant est la même tout au long du circuit. Attention, cela suppose un circuit à une voie, il ne doit pas y avoir de bifurcation.</p></li>
 <li><p>En passant dans la turbine, l’eau garde la même énergie cinétique mais perd de l’énergie potentielle : elle perd donc de l’énergie. Cette énergie est apportée à la turbine pour la faire tourner : <strong>la turbine reçoit de l’énergie</strong> (qu’elle transforme en une autre forme d’énergie, ici de l’énergie cinétique). Si l’échange se fait avec le fluide du circuit, on peut faire abstraction du fluide et considérer qu’il y a un échange d’énergie entre la pompe et la turbine. Il en est de même dans un circuit électrique. Les électrons, au passage dans le récepteur perdent de l’énergie (puisque leur énergie potentielle <span class="math notranslate nohighlight">\(-eV\)</span> diminue - V augmente - et que leur énergie cinétique reste identique), <strong>cette énergie est reçue par le récepteur</strong>. On peut considérer que les électrons de conduction servent de transfert : <strong>le générateur fournit de l’énergie qui est reçue par le récepteur</strong>.</p></li>
 </ol>
 </div></blockquote>
-</aside>
-</section>
-<section id="ordre-de-grandeurs-des-tensions-en-ligne">
-<h3>Ordre de grandeurs des tensions (en ligne)<a class="headerlink" href="#ordre-de-grandeurs-des-tensions-en-ligne" title="Permalink to this heading">#</a></h3>
-<aside class="topic">
+</div>
+</div>
+<div class="section" id="ordre-de-grandeurs-des-tensions-en-ligne">
+<h3>Ordre de grandeurs des tensions (en ligne)<a class="headerlink" href="#ordre-de-grandeurs-des-tensions-en-ligne" title="Permalink to this headline">#</a></h3>
+<div class="topic">
 <p class="topic-title">Ordres de grandeurs</p>
 <p>Voici quelques ordres de grandeur des tensions qu’on peut rencontrer :</p>
 <ul class="simple">
@@ -650,12 +1049,12 @@ Questions :</p>
 <li><p>Ligne haute tension : 150 à 500 kV</p></li>
 <li><p>Foudre : 100000 à 500000 kV</p></li>
 </ul>
-</aside>
-</section>
-</section>
-<section id="approximation-des-regimes-quasi-stationnaires">
-<h2>Approximation des régimes quasi-stationnaires<a class="headerlink" href="#approximation-des-regimes-quasi-stationnaires" title="Permalink to this heading">#</a></h2>
-<aside class="topic">
+</div>
+</div>
+</div>
+<div class="section" id="approximation-des-regimes-quasi-stationnaires">
+<h2>Approximation des régimes quasi-stationnaires<a class="headerlink" href="#approximation-des-regimes-quasi-stationnaires" title="Permalink to this headline">#</a></h2>
+<div class="topic">
 <p class="topic-title">Régimes</p>
 <p>Nous avons vu que la description d’un circuit électrique passe par un nombre restreint de paramètres :</p>
 <ul class="simple">
@@ -663,10 +1062,10 @@ Questions :</p>
 <li><p>le potentiel électrique aux différents points du circuit</p></li>
 </ul>
 <p>Nous étudierons  des <strong>régimes indépendants du temps</strong>, c’est-à-dire dans lequel toutes les grandeurs (tensions et intensités) ne dépendant pas du temps. Néanmoins, souvent, des perturbations dans le circuit (allumage/extinction du générateur par exemple) pourront survenir et les grandeurs vont pouvoir varier dans le temps.</p>
-</aside>
-<section id="ondes-electriques-dans-les-circuits-en-ligne">
-<h3>Ondes électriques dans les circuits (en ligne)<a class="headerlink" href="#ondes-electriques-dans-les-circuits-en-ligne" title="Permalink to this heading">#</a></h3>
-<aside class="topic">
+</div>
+<div class="section" id="ondes-electriques-dans-les-circuits-en-ligne">
+<h3>Ondes électriques dans les circuits (en ligne)<a class="headerlink" href="#ondes-electriques-dans-les-circuits-en-ligne" title="Permalink to this headline">#</a></h3>
+<div class="topic">
 <p class="topic-title">Propagation des perturbations dans un circuit. Célérité.  </p>
 <p>Lorsqu’on perturbe un point du circuit (en modifiant par exemple le potentiel électrique ou l’intensité en un point du circuit), cette perturbation se transmet le long du circuit. On peut parler d’onde électrique.</p>
 <p>La célérité des ondes électriques dans un circuit est de l’ordre de la célérité de la lumière <span class="math notranslate nohighlight">\(c = 3 \times 10^8 m.s^{-1}\)</span>.</p>
@@ -682,14 +1081,13 @@ Réponse : Les circuits de TP ont une taille de l’ordre de 1m, donc la durée 
 <p>La célérité de l’onde à la surface (qui transporte l’information : “le bois est entré dans l’eau et a mis en mouvement la surface” comme l’onde électrique propagée de proche en proche dans le fil transporte l’information de la perturbation initiale) est en général beaucoup plus rapide que la vitesse de l’eau dans la rivière (qu’on peut matérialiser par le mouvement du bois et qui correspond au mouvement des électrons dans l’eau).</p>
 <p>Au passage, cette analogie peut continuer si l’on observe que le mouvement de l’eau se décompose en deux parties : le mouvement de dérive qui correspond à l’écoulement global de la rivière et un mouvement chaotique des petites molécules d’eau dans la rivière. Le premier est visible à l’oeil nu comme l’intensité électrique est mesurable (grâce à un ampèremètre) alors que le second est invisible à notre échelle (comme l’est l’agitation des électrons)</p>
 </div>
-</aside>
-</section>
-<section id="approximation-des-regimes-quasi-stationnaires-arqs">
-<h3>Approximation des régimes quasi-stationnaires (ARQS)<a class="headerlink" href="#approximation-des-regimes-quasi-stationnaires-arqs" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="approximation-des-regimes-quasi-stationnaires-arqs">
+<h3>Approximation des régimes quasi-stationnaires (ARQS)<a class="headerlink" href="#approximation-des-regimes-quasi-stationnaires-arqs" title="Permalink to this headline">#</a></h3>
 <div class="full-width admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Approximation des régimes quasi-stationnaires (ARQS)</strong>
-Un circuit dans lequel le temps de propagation des perturbations est <strong>très faible devant</strong> le temps de variation des grandeurs en un point du circuit est un circuit fonctionnant dans l’approximation des régimes quasi-stationnaires.</p>
+<p>Un circuit dans lequel le temps de propagation des perturbations est <strong>très faible devant</strong> le temps de variation des grandeurs en un point du circuit est un circuit fonctionnant dans l’approximation des régimes quasi-stationnaires.</p>
 <p>On peut alors considérer que les phénomènes de propagation sont instantanés et que les grandeurs du circuits (potentiel et intensités) varient en même temps sous l’effet d’une perturbation.</p>
 </div>
 <div class="admonition attention">
@@ -697,7 +1095,7 @@ Un circuit dans lequel le temps de propagation des perturbations est <strong>tr�
 <p>Le fait qu’elles varient en même temps ne signifie pas qu’elles varient de la même manière.</p>
 <p>C’est bien la variation <strong>spatiale</strong> associée à la propagation de l’onde électrique qui est négligée, pas la variation <strong>temporelle</strong> des grandeurs : en un point (et donc en tout point) du circuit, tension et intensité peuvent varier.</p>
 </div>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Analogie avec la voix</p>
 <p>Pour comprendre le principe de l’ARQS, on peut faire l’analogie avec le son. Considérons une classe dans laquelle le professeur parle près du tableau. Il s’adresse à l’ensemble de la classe : aux premiers rangs comme aux derniers rangs.</p>
 <p>Théoriquement, le son se propage à une vitesse finie (environ 340 m/s) donc les premier rangs entendent et réagissent (!!) aux paroles de l’enseignant avant les élèves du derniers rangs. Néanmoins, on peut considérer que la réaction des élèves se fera à peu près en même temps (ou du moins qu’elle dépend des caractéristiques propre à l’élève comme son temps de réaction et non sa position dans la classe). On considère donc dans cet exemple que le temps de propagation du son est très petit devant :</p>
@@ -706,35 +1104,35 @@ Un circuit dans lequel le temps de propagation des perturbations est <strong>tr�
 <li><p>le temps de réaction de l’élève (… )</p></li>
 </ul>
 <p>On peut donc considérer que l’ARQS s’applique à une conversation dans une classe.</p>
-</aside>
-<aside class="topic">
+</div>
+<div class="topic">
 <p class="topic-title">ARQS dans un circuit de TP</p>
 <p>Question : En suivant l’analogie précédente, estimer les fréquences acceptables pour le spectre d’un signal électrique (tension, intensité) tel qu’on puisse négliger la propagation et se placer dans l’ARQS.<br />
 Réponse : On a vu que la durée de propagation dans un circuit de TP est de l’ordre de <span class="math notranslate nohighlight">\(10^{-9} \rm{s}\)</span>, donc tant que les temps caractéristiques associées à chaque composante spectrale sont grands devant ce temps, on peut considérer qu’on est dans l’ARQS. Soit des fréquences très inférieures à 1GHz.</p>
 <p>Remarque : En TP, on dépassera rarement le MHz en terme de fréquence.</p>
-</aside>
-<aside class="topic">
+</div>
+<div class="topic">
 <p class="topic-title">Exercice ARQS ou pas</p>
 <p>On peut considérer un autre exemple où l’ARQS s’applique et …  ne s’applique pas suivant ce qu’on considère : l’orage.</p>
 <ul class="simple">
 <li><p>Considérons l’éclair, donc la propagation d’une onde lumineuse. La vitesse de la lumière dans l’air est de l’ordre de <span class="math notranslate nohighlight">\(3 \times 10^8 \rm{m/s}\)</span>. Pour un éclair qui se produit à quelques kilomètres, le temps qu’il arrive à notre oeil est de l’ordre de <span class="math notranslate nohighlight">\(10^{-5} \rm{s}\)</span>: ce temps est très faible devant la persistance rétinienne (<span class="math notranslate nohighlight">\(10^{-1} \rm{s}\)</span>). On peut donc appliquer l’ARQS et considérer que le moment où l’éclair se produit coïncide avec le moment où on le voit.</p></li>
 <li><p>Considérons le tonnerre (qui accompagne l’éclair), donc la propagation d’une onde sonore. Cette fois, la vitesse du son est de l’ordre de <span class="math notranslate nohighlight">\(340 \rm{m/s}\)</span>. Pour le tonnerre qui se produit à quelques kilomètres, le temps de propagation du son est de l’autre de 1 à 10 secondes. Ce temps est de l’ordre (voire plus grand) que le temps de réaction humain au son. Donc cette fois, on doit tenir compte de la propagation et on ne peut pas se placer dans l’ARQS.</p></li>
 </ul>
-</aside>
-</section>
-<section id="definitions-utiles">
-<h3>Définitions utiles<a class="headerlink" href="#definitions-utiles" title="Permalink to this heading">#</a></h3>
-<aside class="sidebar">
+</div>
+</div>
+<div class="section" id="definitions-utiles">
+<h3>Définitions utiles<a class="headerlink" href="#definitions-utiles" title="Permalink to this headline">#</a></h3>
+<div class="sidebar">
 <p class="sidebar-title">Fil de connexion</p>
-<figure class="align-center" id="fig-92">
+<div class="figure align-center" id="fig-92">
 <img alt="../_images/elec_v_fil_nombre.png" src="../_images/elec_v_fil_nombre.png" />
-</figure>
+</div>
 <p>Dans ce circuit : <span class="math notranslate nohighlight">\(V_A = V_C = V_D\)</span>. <strong>Conséquence : Cela réduit énormément le nombre d’inconnues</strong>.</p>
 <blockquote>
 <div><p><strong>Question</strong> : Combien y a-t-il de points de potentiel différents dans le circuit ci-contre ? Combien sont inconnus ?</p>
 <p><strong>Réponse</strong> : Il y a 3 points de potentiels différents. Il y a donc 2 potentiels inconnus. En effet, le potentiel étant défini à une constante près, on peut choisir l’origine des potentiels électriques (par exemple poser <strong><span class="math notranslate nohighlight">\(v_E = 0\)</span></strong>, <em>ce choix est arbitraire</em>).</p>
 </div></blockquote>
-</aside>
+</div>
 <div class="note admonition">
 <p class="admonition-title"><strong>Définitions utiles</strong></p>
 <p>Voici quelques éléments de vocabulaire utiles quand étudie un circuit électrique.</p>
@@ -746,16 +1144,14 @@ Réponse : On a vu que la durée de propagation dans un circuit de TP est de l�
 <li><p>Noeud : Un noeud est un point où se rencontrent au moins trois fils : le débit d’électrons se sépare (ou converge) donc en ce point.</p></li>
 </ul>
 </div>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Exemple</p>
 <p>Sur le circuit <a class="reference internal" href="#fig-93"><span class="std std-ref">ci-après</span></a>, il y a trois mailles différentes, quatre dipôles, trois points de potentiels différents et deux noeuds.</p>
-<figure class="align-center" id="fig-93">
+<div class="figure align-center" id="fig-93">
 <img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Dans ce circuit : On peut dessiner 3 mailles différentes. Il y a 2 noeuds et trois points de potentiel différents.</span><a class="headerlink" href="#fig-93" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</aside>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Dans ce circuit : On peut dessiner 3 mailles différentes. Il y a 2 noeuds et trois points de potentiel différents.</span><a class="headerlink" href="#fig-93" title="Permalink to this image">#</a></p>
+</div>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Dipôles en série et en parallèle</strong></p>
@@ -765,11 +1161,11 @@ Réponse : On a vu que la durée de propagation dans un circuit de TP est de l�
 <li><p>Un ensemble de dipôles en série forme une <strong>branche</strong>.</p></li>
 </ul>
 </div>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Exemple : Dipôles en série et en parallèle</p>
-<figure class="align-center" id="fig-94">
+<div class="figure align-center" id="fig-94">
 <img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
-</figure>
+</div>
 <p>Dans le circuit ci-conctre :</p>
 <ul class="simple">
 <li><p>D1 et D2 sont en série</p></li>
@@ -777,27 +1173,27 @@ Réponse : On a vu que la durée de propagation dans un circuit de TP est de l�
 <li><p>D1 et D4 ne sont pas série ni en parallèle (D2 et D4 non plus)</p></li>
 <li><p>D3 et D4 sont en parallèle</p></li>
 </ul>
-</aside>
-</section>
-<section id="intensite-dans-une-branche-dans-l-arqs">
-<h3>Intensité dans une branche dans l’ARQS<a class="headerlink" href="#intensite-dans-une-branche-dans-l-arqs" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="intensite-dans-une-branche-dans-l-arqs">
+<h3>Intensité dans une branche dans l’ARQS<a class="headerlink" href="#intensite-dans-une-branche-dans-l-arqs" title="Permalink to this headline">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Intensité dans une branche dans l’ARQS</strong>
 Dans l’ARQS, l’intensité  est la même en tout point d’une même branche (c’est-à-dire d’un ensemble de dipôles et fils de connexion sans  noeud).</p>
 </div>
-<aside class="topic">
+<div class="topic">
 <p class="topic-title">Démonstration</p>
 <blockquote>
 <div><p>L’ARQS suppose qu’il n’y a pas de phénomène de propagation. Une conséquence est l’absence de phénomène d’accumulation de charge en un point (car sinon cela produirait un phénomène de rééquilibrage et donc une réponse du circuit différente en chaque point).</p>
 <p>Cela signifie que pour une portion de fil, le débit de charge entrant (l’intensité en entrée) égale le débit de charge sortant (l’intensité en sortie). Comme on peut prendre n’importe quelle portion de fil, il vient que l’intensité est la même en tout point du fil et par extension en tout point d’une branche.</p>
 </div></blockquote>
-</aside>
-<aside class="topic attention">
+</div>
+<div class="attention topic">
 <p class="topic-title">Exemple</p>
-<figure class="align-center" id="fig-95">
+<div class="figure align-center" id="fig-95">
 <img alt="../_images/elec_maille.png" src="../_images/elec_maille.png" />
-</figure>
+</div>
 <p>Dans ce circuit en ARQS, il y a donc :</p>
 <ul class="simple">
 <li><p>2 potentiels inconnus (ou trois tensions à déterminer)</p></li>
@@ -808,19 +1204,19 @@ Dans l’ARQS, l’intensité  est la même en tout point d’une même branche 
 <li><p>les équations qui relient les grandeurs de mêmes types (tensions/potentiel ou intensité). Ce seront les lois fondamentales de l’électrocinétique : les lois de Kirchhoff.</p></li>
 <li><p>les équations qui relient l’intensité qui circule dans un dipôle à la tension à ses bornes. On parle d’équation d’évolution d’un dipôles. Elles sont propres à un type de dipôle (source de tension, résistance, bobine… ) et seront traitées dans le chapitre suivant.</p></li>
 </ul>
-</aside>
+</div>
 <hr class="footnotes docutils" />
-<aside class="footnote brackets" id="milikan" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p><strong>Expérience de Millikan</strong> —La quantification de la charge a été observée par Millikan (1909) en étudiant la suspension de gouttes d’huile sous l’effet d’un champ électrostatique.</p>
-</aside>
-<aside class="footnote brackets" id="champe" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p><strong>Origine du champ électrique</strong> —Dans un circuit électrique, une source (pile ou générateur) créé un champ électrique. Le lien entre la source et le champ électrique crée est très complexe et sa compréhension n’est pas nécessaire ici.</p>
-</aside>
-</section>
-</section>
-</section>
+<dl class="footnote brackets">
+<dt class="label" id="milikan"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><strong>Expérience de Millikan</strong> —La quantification de la charge a été observée par Millikan (1909) en étudiant la suspension de gouttes d’huile sous l’effet d’un champ électrostatique.</p>
+</dd>
+<dt class="label" id="champe"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><strong>Origine du champ électrique</strong> —Dans un circuit électrique, une source (pile ou générateur) créé un champ électrique. Le lien entre la source et le champ électrique crée est très complexe et sa compréhension n’est pas nécessaire ici.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -834,7 +1230,7 @@ Dans l’ARQS, l’intensité  est la même en tout point d’une même branche 
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -842,120 +1238,50 @@ Dans l’ARQS, l’intensité  est la même en tout point d’une même branche 
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="el_bases_contxt.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Connaître le contexte</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="el_bases_contxt.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Connaître le contexte</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="el_bases_lois.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="el_bases_lois.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Étudier un circuit : les bases</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#charge-electrique">Charge électrique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction-et-courant">Conduction et courant</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phenomene-de-conduction">Phénomène de conduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensite-et-intensite-moyenne">Intensité et intensité moyenne</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordres-de-grandeur-des-courants-electriques-en-ligne">Ordres de grandeur des courants électriques (en ligne)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiel-electrique-et-tension">Potentiel électrique et tension</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#potentiel-electrique">Potentiel électrique</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analogie-entre-un-circuit-hydraulique-et-un-circuit-electrique-en-ligne">Analogie entre un circuit hydraulique et un circuit électrique (en ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordre-de-grandeurs-des-tensions-en-ligne">Ordre de grandeurs des tensions (en ligne)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires">Approximation des régimes quasi-stationnaires</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ondes-electriques-dans-les-circuits-en-ligne">Ondes électriques dans les circuits (en ligne)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approximation-des-regimes-quasi-stationnaires-arqs">Approximation des régimes quasi-stationnaires (ARQS)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-utiles">Définitions utiles</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensite-dans-une-branche-dans-l-arqs">Intensité dans une branche dans l’ARQS</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By C. Lacpatia
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2021.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
+            </footer>
+        </div>
     </div>
-  </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By C. Lacpatia<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>
